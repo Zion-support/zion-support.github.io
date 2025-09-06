@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
@@ -6,46 +7,85 @@ import { MessageSquare } from "lucide-react",
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
+=======
+import {Link, useLocation} from "react-router-dom";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare} from "lucide-react";
+interface MainNavigationProps {
+  isAdmin?: boolean;
+  unreadCount?: number;
+>>>>>>> main
   className?: string
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
+<<<<<<< HEAD
   const { user } = useAuth(),
   const isAuthenticated = !!user,
   const location = useLocation(),
+=======
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation();
+>>>>>>> main
   
   const links = [
     {
       name: "Home",
       href: "/",
       matches: (path: string) => path === "/"
+<<<<<<< HEAD
     },
+=======
+    };
+>>>>>>> main
     {
       name: "Marketplace",
       href: "/marketplace",
       matches: (path: string) => path.startsWith("/marketplace")
+<<<<<<< HEAD
     },
+=======
+    };
+>>>>>>> main
     {
       name: "Categories",
       href: "/categories",
       matches: (path: string) => path.startsWith("/categories")
+<<<<<<< HEAD
     },
+=======
+    };
+>>>>>>> main
     {
       name: "Talent",
       href: "/talent",
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
+<<<<<<< HEAD
     },
+=======
+    };
+>>>>>>> main
     {
       name: "Equipment",
       href: "/equipment",
       matches: (path: string) => path.startsWith("/equipment")
+<<<<<<< HEAD
     },
+=======
+    };
+>>>>>>> main
     {
       name: "Community",
       href: "/community",
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     }
+<<<<<<< HEAD
   ],
+=======
+  ];
+>>>>>>> main
   
   // Add authenticated-only links
   if (isAuthenticated) {
@@ -73,6 +113,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to={link.href}
               className={cn(
+<<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan"
@@ -160,13 +201,30 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           </li>;
         ))}
 ;
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}
+            >
+              {link.name}
+            </Link>
+          </li>
+        ))}
+        
+>>>>>>> main
         {/* Messages link with unread counter */}
         {isAuthenticated && (
           <li>
             <Link
               to="/messages"
               className={cn(
+<<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
+>>>>>>> main
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
@@ -177,6 +235,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {unreadCount}
+<<<<<<< HEAD
                 </span>;
               )}
             </Link>;
@@ -185,5 +244,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </ul>;
     </nav>;
   );
+=======
+                </span>
+              )}
+            </Link>
+          </li>
+        )}
+      </ul>
+    </nav>
+  )
+>>>>>>> main
 }
 ;

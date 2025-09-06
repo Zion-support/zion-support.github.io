@@ -4,8 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Resolving all merge conflicts...');
-
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
@@ -16,7 +14,6 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
 
     // Check if file has merge conflicts
-    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
 
@@ -42,7 +39,6 @@ function resolveMergeConflicts(filePath) {
         continue;
       }
 
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         conflictType = '';
         continue;
@@ -74,18 +70,13 @@ function findFilesWithConflicts() {
       .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
       .map(line => line.substring(3).trim())
       .filter(file => file.length > 0);
-    
+
     return files;
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
     return [];
   }
 }
-
-// Main execution
-try {
-  const conflictedFiles = findFilesWithConflicts();
-  console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
@@ -100,7 +91,7 @@ try {
   if (resolvedCount > 0) {
     console.log('Adding resolved files to git...');
     execSync('git add .', { stdio: 'inherit' });
-    
+
     console.log('Committing merge resolution...');
     execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' });
   }
@@ -110,4 +101,3 @@ try {
 } catch (error) {
   console.error('❌ Error during conflict resolution:', error.message);
   process.exit(1);
-}

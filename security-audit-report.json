@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-06T00:07:28.790Z",
   "vulnerabilities": [
     {
@@ -183,4 +184,16 @@
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  "timestamp": "2025-09-06T00:32:21.706Z",
+  "vulnerabilities": 11,
+  "recommendations": [
+
+    "Run \"npm audit fix\" to resolve dependency vulnerabilities",
+    "Review and remove any hardcoded secrets",
+    "Update outdated dependencies",
+    "Implement proper environment variable management",
+    "Add security headers to Next.js configuration"
+  ]
+>>>>>>> main
 }

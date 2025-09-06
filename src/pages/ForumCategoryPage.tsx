@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -27,12 +28,24 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Briefcase"
   },
+=======
+// Mock category data
+const categoriesInfo: Record<string, ForumCategoryInfo> = {
+  "getting-hired": {
+    id: "getting-hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    adminOnly: false,
+    icon: "Briefcase"
+  };
+>>>>>>> main
   "project-help": {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"
+<<<<<<< HEAD
   },
   "ai-tools": {
     id: "ai-tools",
@@ -41,13 +54,27 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Code"
   },
+=======
+  };
+  "ai-tools": {
+    id: "ai-tools",
+    name: "AI Tools Discussion",
+    description: "Discuss AI tools, frameworks, and best practices.";
+    adminOnly: false,
+    icon: "Code"
+  };
+>>>>>>> main
   "feedback": {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
     icon: "FileText"
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> main
   "announcements": {
     id: "announcements",
     name: "Announcements",
@@ -55,6 +82,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
+<<<<<<< HEAD
 },
 
 const iconMap = {
@@ -69,12 +97,29 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
+=======
+};
+
+const iconMap = {
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
+  "Megaphone": Megaphone
+};
+
+function CategoryContent({
+  categoryId;
+  category;
+  IconComponent;
+>>>>>>> main
   user}: {
   categoryId: string,
   category: ForumCategoryInfo,
   IconComponent: React.ComponentType<any>,
   user: any
 }) {
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
@@ -86,6 +131,19 @@ function CategoryContent({
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   ),
+=======
+  const [searchQuery, setSearchQuery] = useState("");
+  const { featuredPosts, recentPosts } = useCommunity();
+
+  // Filter posts by category from context data
+  const categoryPosts = [
+    ...featuredPosts.filter(post => post.categoryId === categoryId);
+    ...recentPosts.filter(post => post.categoryId === categoryId)
+  ].filter((post, index, self,) => 
+    // Remove duplicates by id
+    index === self.findIndex(p => p.id === post.id)
+  );
+>>>>>>> main
 
   // Apply search filter
   const filteredPosts = searchQuery 
@@ -94,16 +152,25 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
+<<<<<<< HEAD
     : categoryPosts,
 
   const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
+=======
+    : categoryPosts;
+
+  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin');
+  const { isFollowed, follow, unfollow } = useFollowedCategories();
+  const { toast } = useToast();
+>>>>>>> main
 
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -350,3 +417,20 @@ export default function ForumCategoryPage() {;
   );
 }
 ;
+=======
+    }
+    if (isFollowed(categoryId)) {
+      unfollow(categoryId)
+    } else {
+      follow(categoryId)
+    }
+  };
+
+  logInfo('CategoryContent - categoryId:', { data: categoryId }),
+  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
+  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
+  const category = categoryId ? categoriesInfo[categoryId] : null;
+  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
+
+}
+>>>>>>> main

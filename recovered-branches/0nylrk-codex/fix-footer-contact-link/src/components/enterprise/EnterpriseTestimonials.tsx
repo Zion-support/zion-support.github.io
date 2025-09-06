@@ -1,4 +1,14 @@
+import React from "react";
+import { Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
+<<<<<<< HEAD
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -27,6 +37,34 @@ const testimonials = [
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
+=======
+const testimonials = [
+  {
+    quote:
+      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",
+    author: "Sarah Johnson",
+    title: "VP of Talent Acquisition",
+    company: "TechGlobal Inc.",
+    image: "/placeholder.svg",
+  },
+  {
+    quote:
+      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",
+    author: "Michael Chen",
+    title: "Director of HR",
+    company: "InnovateCorp",
+    image: "/placeholder.svg",
+  },
+  {
+    quote:
+      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
+    author: "Elena Rodriguez",
+    title: "CTO",
+    company: "FutureTech Systems",
+    image: "/placeholder.svg",
+  },
+];
+>>>>>>> main
 
 export function EnterpriseTestimonials() {
   return (
@@ -53,6 +91,7 @@ export function EnterpriseTestimonials() {
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
                       <img
+<<<<<<< HEAD
                         src={testimonial.image}
                         alt={testimonial.author}
                         className="h-full w-full object-cover"
@@ -112,20 +151,22 @@ export function EnterpriseTestimonials() {;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
+=======
+>>>>>>> main
                         src={testimonial.image}
                         alt={testimonial.author}
-                        className="h-full w-full object-cover";
-                      />;
-                    </div>;
-                    <div>;
-                      <p className="font-bold">{testimonial.author}</p>;
-                      <p className="text-sm text-muted-foreground">;
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="font-bold">{testimonial.author}</p>
+                      <p className="text-sm text-muted-foreground">
                         {testimonial.title}, {testimonial.company}
-                      </p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </CarouselItem>;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
             ))}
           </CarouselContent>
           <div className="flex justify-center gap-2 mt-8">
@@ -135,6 +176,10 @@ export function EnterpriseTestimonials() {;
         </Carousel>
       </div>
     </section>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> main
 }
 ;

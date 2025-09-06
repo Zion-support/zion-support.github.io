@@ -7,12 +7,11 @@ let content = fs.readFileSync('eslint.config.js', 'utf8');
 
 // Remove all merge conflict markers and keep the appropriate content
 const fixes = [
-  // Remove merge conflict markers and keep the content after =======
-  { from: /<<<<<<< HEAD\n=======\n([\s\S]*?)>>>>>>> [^\n]+/g, to: '$1' },
+  // Remove merge conflict markers and keep the content after 
+  { from: /\n([\s\S]*?)
   // Remove any remaining conflict markers
-  { from: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, to: '' },
-  { from: /<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, to: '' },
-  { from: /=======[\s\S]*?>>>>>>> [^\n]+/g, to: '' },
+  { from: /[\s\S]*?
+  { from: /[\s\S]*?
 ];
 
 // Apply fixes

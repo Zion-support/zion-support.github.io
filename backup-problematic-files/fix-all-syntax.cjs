@@ -84,5 +84,3 @@ fixes.forEach(fix => {
 
 // Write the fixed content back
 fs.writeFileSync('enhanced-automation-suite.cjs', content);
-
-console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');

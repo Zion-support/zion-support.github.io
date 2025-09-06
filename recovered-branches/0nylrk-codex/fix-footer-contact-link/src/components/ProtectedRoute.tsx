@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -8,10 +9,22 @@ export interface ProtectedRouteProps {
   children: React.ReactNode,
   adminOnly?: boolean,
   tenantAdminAllowed?: boolean,
+=======
+import React from 'react';
+import {Navigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+export interface ProtectedRouteProps {
+  children: React.ReactNode,
+  adminOnly?: boolean;
+  tenantAdminAllowed?: boolean;
+>>>>>>> main
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+<<<<<<< HEAD
   children,
   adminOnly = false,
   tenantAdminAllowed = false,
@@ -19,9 +32,18 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 }) => {
   const { user, isLoading } = useAuth(),
   const { tenant } = useWhitelabel(),
+=======
+  children;
+  adminOnly = false;
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {
+  const { user, isLoading } = useAuth();
+  const { tenant } = useWhitelabel();
+>>>>>>> main
   const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),
   
-  const isCheckingPermissions = isLoading || isCheckingTenantAdmin,
+  const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
@@ -37,7 +59,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   // Check for admin access if required
   if (adminOnly) {
-    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin),
+    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin);
     
     if (!hasAdminAccess) {
       return <Navigate to="/unauthorized" />
@@ -47,6 +69,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
 import React from 'react',;
 import { Navigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -97,3 +120,11 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
   return <>{children}</>;
 };
 export default ProtectedRoute;
+=======
+  }
+
+  return <>{children}</>
+};
+
+export default ProtectedRoute;
+>>>>>>> main

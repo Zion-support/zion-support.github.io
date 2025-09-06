@@ -1,13 +1,40 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const postmanCollection = {
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+
+function toPostman() {
+  return {
+>>>>>>> main
     info: {
-      name: 'Zion OS API',
+      name: 'Zion Tech Group API',
+      description: 'Postman collection for Zion Tech Group API',
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
-    item: [],
-    variable: []
+    item: [
+      {
+        name: 'Health Check',
+        request: {
+          method: 'GET',
+          header: [],
+          url: {
+            raw: '{{baseUrl}}/api/health',
+            host: ['{{baseUrl}}'],
+            path: ['api', 'health']
+          }
+        }
+      }
+    ],
+    variable: [
+      {
+        key: 'baseUrl',
+        value: 'https://api.ziontechgroup.com'
+      }
+    ]
   };
+<<<<<<< HEAD
   res.status(200).json(postmanCollection);
   } catch (error) {
     console.error("Error:", error);
@@ -86,4 +113,17 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(toPostman());
+    return;
+  }
+
+  res.setHeader('Allow', 'GET');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> main
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -10,6 +11,15 @@ type EmptyStateCardProps = {
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
   
+=======
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+
+type EmptyStateCardProps = {
+  type: 'active' | 'archived'
+};
+
+>>>>>>> main
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -26,6 +36,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
         <p className="text-zion-slate-light max-w-md mx-auto">
           {isActive 
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
+<<<<<<< HEAD
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -57,4 +68,12 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
       </CardContent>;
     </Card>;
   );
+=======
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
+          }
+        </p>
+      </CardContent>
+    </Card>
+  )
+>>>>>>> main
 };

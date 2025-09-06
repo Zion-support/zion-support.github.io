@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const DataAnalyticsImplementation: NextPage = () => {
@@ -7,11 +8,22 @@ const DataAnalyticsImplementation: NextPage = () => {
         <title>DataAnalyticsImplementation - Zion Tech Solutions</title>
         <meta name="description" content="DataAnalyticsImplementation page" />
       </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+>>>>>>> main
       <main>
         <h1>DataAnalyticsImplementation</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
   )
 },
 export default DataAnalyticsImplementation,
+=======
+  ),
+};
+
+export default DataAnalyticsImplementation;
+>>>>>>> main

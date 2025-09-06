@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
+=======
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+>>>>>>> main
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -9,7 +14,11 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Engineering",
     price: 150,
     currency: "$",
+<<<<<<< HEAD
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
+=======
+    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
+>>>>>>> main
     author: {
       name: "Alexandra Chen",
       id: "alexandra-chen",
@@ -22,11 +31,19 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-2",
     title: "DevOps Specialist",
+<<<<<<< HEAD
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",
     category: "DevOps",
     price: 135,
     currency: "$",
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"],
+=======
+    description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.";
+    category: "DevOps",
+    price: 135,
+    currency: "$",
+    tags: ["Kubernetes", "Docker", "AWS", "Terraform"];
+>>>>>>> main
     author: {
       name: "Michael Reynolds",
       id: "michael-reynolds",
@@ -39,11 +56,19 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-3",
     title: "Data Scientist",
+<<<<<<< HEAD
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.",
     category: "Data Science",
     price: 145,
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
+=======
+    description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
+    category: "Data Science",
+    price: 145,
+    currency: "$",
+    tags: ["Statistical Analysis", "Python", "R", "Tableau"];
+>>>>>>> main
     author: {
       name: "Priya Sharma",
       id: "priya-sharma"},
@@ -55,11 +80,19 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-4",
     title: "Cybersecurity Expert",
+<<<<<<< HEAD
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",
     category: "Security",
     price: 165,
     currency: "$",
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
+=======
+    description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
+    category: "Security",
+    price: 165,
+    currency: "$",
+    tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
+>>>>>>> main
     author: {
       name: "James Wilson",
       id: "james-wilson",
@@ -76,7 +109,11 @@ const TALENT_LISTINGS: ProductListing[] = [
     category: "Development",
     price: 125,
     currency: "$",
+<<<<<<< HEAD
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
+=======
+    tags: ["React", "Node.js", "TypeScript", "MongoDB"];
+>>>>>>> main
     author: {
       name: "David Martinez",
       id: "david-martinez"},
@@ -88,11 +125,19 @@ const TALENT_LISTINGS: ProductListing[] = [
   {
     id: "talent-6",
     title: "AI Ethics Consultant",
+<<<<<<< HEAD
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",
     category: "Consulting",
     price: 180,
     currency: "$",
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
+=======
+    description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
+    category: "Consulting",
+    price: 180,
+    currency: "$",
+    tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
+>>>>>>> main
     author: {
       name: "Sarah Johnson",
       id: "sarah-johnson",
@@ -118,6 +163,7 @@ export default function TalentsPage() {
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
+<<<<<<< HEAD
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 // Sample talent listings;
@@ -243,3 +289,11 @@ export default function TalentsPage() {;
   );
 }
 ;
+=======
+      listings={TALENT_LISTINGS}
+      categoryFilters={TALENT_FILTERS}
+      initialPrice={{ min: 100, max: 200 }}
+    />
+  )
+}
+>>>>>>> main

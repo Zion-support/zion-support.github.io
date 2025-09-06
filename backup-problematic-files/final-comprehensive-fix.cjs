@@ -3,57 +3,43 @@ function fixSyntaxErrors(content) {
   // Fix extra commas in JSX attributes
   content = content.replace(/className="[^"]*"\s*,\s*>/g, (match) => {
     return match.replace(/,\s*$/, '')});
-  
   // Fix malformed function "declarations": {, -> {
   content = content.replace(/\{\s*,/g, '{');
-  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
-  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*</g, '><');
-  
   // Fix malformed function "declarations": ) {, -> ) {
   content = content.replace(/\)\s*\{\s*,/g, ') {');
-  
   // Fix malformed JSX "elements": >, -> >
   content = content.replace(/>\s*,\s*$/gm, '>');
-  
   // Fix missing closing braces in for loops
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
-  
   // Fix missing closing braces in for loops (alternative pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
-  
   // Fix malformed JSON "objects": {, -> {
   content = content.replace(/JSON\.stringify\(\{\s*,/g, 'JSON.stringify({');
-  
   // Fix missing closing braces in for loops (CLS pattern)
   content = content.replace(/for \(const entry of list\.getEntries\(\)\) \{\s*if \([^}]+\) \{\s*[^}]+\s*\}\s*\}\s*console\.log\('"CLS": ', clsValue\);\s*\}\);/g, (match) => {
     return match.replace(/\}\);/g, '}\n      });')});
-  
   return content}
-
 // Function to process a file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8';);
     const fixedContent = fixSyntaxErrors(conten;t;);
-    
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
       fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      
       return true}
     return false} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false}
 }
 console.log('🔧 Applying final comprehensive fixes...');
-
 // Fix SEO.tsx - remove everything after the return statement
 const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
@@ -122,7 +108,6 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
       totalFixed++}
   }
 }
-
 }
 
 if ( {

@@ -23,6 +23,7 @@ function updateIconImportsInFile(filePath) {
     // Only write if changes were made
     if (content !== updatedContent) {
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
+<<<<<<< HEAD
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
 /**;
@@ -54,6 +55,16 @@ function updateIconImportsInFile(filePath) {;
   } catch (err) {;
     console.error(`❌ Error processing ${filePath}:`, err),;
     return false;
+=======
+      console.log(`✅ Updated imports in ${filePath}`),
+      return true
+    }
+    
+    return false
+  } catch (err) {
+    console.error(`❌ Error processing ${filePath}:`, err),
+    return false
+>>>>>>> main
   }
 }
 
@@ -66,6 +77,7 @@ files.forEach(file => {
   if (updated) updatedFiles++
 }),
 
+<<<<<<< HEAD
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
@@ -78,3 +90,7 @@ files.forEach(file => {;
 }),;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
+=======
+console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
+console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
+>>>>>>> main

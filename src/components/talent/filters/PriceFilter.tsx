@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",
@@ -24,10 +25,38 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from '@/components/ui/slider';
+import { PriceFilterProps } from '@/types/filters';
+
+  return (
+    <div className='mb-6 border-b border-zion-blue-light pb-6'>
+      <button
+
+      >
+        <span>Hourly Rate</span>
+        {expanded ? (
+          <ChevronUp className='h-4 w-4 text-zion-slate-light' />
+        ) : (
+          <ChevronDown className='h-4 w-4 text-zion-slate-light' />
+        )}
+      </button>
+
+      {expanded && (
+        <div className='mt-6'>
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>${priceRange[0]}/hr</span>
+            <span>${priceRange[1]}/hr</span>
+          </div>
+          <Slider
+            aria-label='Hourly rate range'            value={[priceRange[0], priceRange[1]]}
+
+>>>>>>> main
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
           <Slider
+<<<<<<< HEAD
             aria-label="Hourly rate range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider",;
@@ -58,10 +87,16 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <Slider;
             aria-label="Hourly rate range";
             value={[priceRange[0], priceRange[1]]}
+=======
+
+            value={[priceRange[0], priceRange[1]]}
+
+>>>>>>> main
             min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
+<<<<<<< HEAD
             className="mt-6"
           />
         </div>
@@ -70,3 +105,16 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   );
 }
 ;
+=======
+            className='mt-6'          />
+
+            className="mt-6"
+
+          />
+
+        </div>
+      )}
+    </div>
+  );
+}
+>>>>>>> main

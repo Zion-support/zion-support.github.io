@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -111,3 +112,12 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
+=======
+logErrorToProduction('Categories API error:', { data: response.statusText }),
+      return CATEGORIES as CategoryType[];
+    fallbackData: initialCategories}),
+  const categories = data || [];
+  const isLoading = !data && !error;
+
+}
+>>>>>>> main

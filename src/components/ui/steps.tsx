@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -7,24 +8,43 @@ interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
+=======
+interface StepProps {
+  status: "incomplete" | "current" | "complete",
+  label: string,
+  description?: string;
+>>>>>>> main
   className?: string
 }
 
 export function Step({
+<<<<<<< HEAD
   status,
   label,
   description,
+=======
+  status;
+  label;
+  description;
+>>>>>>> main
   className}: StepProps) {
   return (
     <li
       className={cn(
+<<<<<<< HEAD
         "relative flex items-center",
         {
           "opacity-60": status === "incomplete"},
+=======
+        "relative flex items-center";
+        {
+          "opacity-60": status === "incomplete"};
+>>>>>>> main
         className
       )}
     >
       <div
+<<<<<<< HEAD
         className={cn(
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
           {
@@ -34,12 +54,23 @@ export function Step({
               status === "current",
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
+=======
+
+          {
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
+              status === "incomplete";
+            "bg-zion-blue border-zion-cyan text-white":
+              status === "current";
+            "bg-zion-purple border-zion-purple text-white":
+              status === "complete",}
+>>>>>>> main
         )}
       >
         {status === "complete" ? (
           <CheckIcon className="h-5 w-5" />
         ) : (
           <span>
+<<<<<<< HEAD
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { CheckIcon } from 'lucide-react';
@@ -82,13 +113,21 @@ export function Step({;
           <span>;
             {/* Step number would go here */}
           </span>;
+=======
+            {/* Step number would go here */}
+          </span>
+>>>>>>> main
         )}
       </div>
 
       <div className="ml-4 min-w-0">
         <h3
           className={cn("text-sm font-medium", {
+<<<<<<< HEAD
             "text-zion-slate-light": status === "incomplete",
+=======
+            "text-zion-slate-light": status === "incomplete";
+>>>>>>> main
             "text-white": status === "current" || status === "complete"})}
         >
           {label}
@@ -96,6 +135,7 @@ export function Step({;
         {description && (
           <p className="text-sm text-zion-slate-light">{description}</p>
         )}
+<<<<<<< HEAD
       </div>;
     </li>;
   );
@@ -125,11 +165,41 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         })}
       </ol>
       
+=======
+      </div>
+    </li>
+  )
+}
+
+interface StepsProps {
+  currentStep: number,
+  className?: string;
+  children: React.ReactNode
+}
+
+export function Steps({ currentStep, className, children }: StepsProps) {
+  const childrenArray = React.Children.toArray(children);
+
+  return (
+    <div className={cn("w-full", className)}>
+      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
+
+          let status: "incomplete" | "current" | "complete" = "incomplete",
+          if (index < currentStep) status = "complete";
+          if (index === currentStep) status = "current";
+
+          return React.cloneElement(child as React.ReactElement<StepProps>, {
+            status});
+        })}
+      </ol>
+
+>>>>>>> main
       <div className="hidden md:flex md:mt-4">
         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+<<<<<<< HEAD
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -158,3 +228,14 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
   );
 }
 ;
+=======
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+          />
+        </div>
+      </div>
+    </div>
+  );
+
+}/> </div> </div> </div>) ;
+}"
+>>>>>>> main

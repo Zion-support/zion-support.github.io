@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Star } from 'lucide-react'
@@ -79,3 +80,48 @@ export const CommunityTrust: React.FC = () => {;
     </section>
   )
 },
+=======
+import React from 'react';import { Star } from 'lucide-react';
+
+  ];
+
+  return (
+    <section className='py-16 bg-zion-blue'>
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-12'>
+          <h2 className='text-3xl md:text-4xl font-bold text-white'>
+            Trusted by the{' '}
+            <span className='text-zion-cyan'>Tech Community</span>
+          </h2>
+          <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
+            Join thousands of professionals who are already using the Zion
+            mobile app to connect, hire, and work
+          </p>
+        </div>
+
+        {/* Stats Grid */}
+
+            </div>
+          ))}
+        </div>
+
+        {/* Rating display */}
+
+            ))}
+          </div>
+          <blockquote className='text-center text-lg text-white italic mb-4'>
+            "The Zion app has completely changed how I find tech talent. The AI
+            matching is spot on and I can manage everything from anywhere."
+          </blockquote>
+          <div className='text-center'>
+            <div className='font-semibold text-zion-cyan'>Sarah Johnson</div>
+            <div className='text-sm text-zion-slate-light'>CTO at TechFlow</div>          </div>
+        </div>
+      </div>
+    </section>
+
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> main

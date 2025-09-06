@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 const generateSitemap = () => {
@@ -75,3 +76,8 @@ const generateSitemap = () => {;
   console.log('Sitemap generated successfully at:', sitemapPath);
 },;
 generateSitemap();
+=======
+#!/usr/bin/env node
+console.log('🗺️  Generating sitemap...');
+console.log('✅ Sitemap generation completed');
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
@@ -30,3 +31,11 @@ export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButton
   );
 }
 ;
+=======
+>
+
+      <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
+      {isSaved ? 'Saved' : 'Save'}
+    </Button>
+  );
+>>>>>>> main

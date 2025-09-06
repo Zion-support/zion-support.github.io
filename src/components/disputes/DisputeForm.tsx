@@ -1,22 +1,31 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { Button } from "@/components/ui/button",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> main
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form",
 import { Textarea } from "@/components/ui/textarea",
+=======
+
+>>>>>>> main
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
+<<<<<<< HEAD
   SelectValue} from "@/components/ui/select",
 import { Input } from "@/components/ui/input",
 import { disputeReasonLabels } from "@/types/disputes",
@@ -47,10 +56,35 @@ export function DisputeForm({
   const { createDispute } = useDisputes(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [files, setFiles] = useState<File[]>([]),
+=======
+
+const formSchema = z.object({
+  reason_code: z
+    .string()
+    .min(1, { message: 'Please select a reason for the dispute' }),
+  description: z
+    .string()
+    .min(20, { message: 'Description must be at least 20 characters' }),
+  attachments: z.array(z.any()).optional(),
+});
+
+type DisputeFormProps = {
+
+export function DisputeForm({
+  projectId,
+  milestoneId,
+  onDisputeCreated,
+  onCancel,
+}: DisputeFormProps) {
+  const { createDispute } = useDisputes();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [files, setFiles] = useState<File[]>([]);
+>>>>>>> main
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+<<<<<<< HEAD
       reason_code: "",
       description: "",
       attachments: []}}),
@@ -252,19 +286,106 @@ export function DisputeForm({;
             control={form.control}
             name="description"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "description"> }) => (
+=======
+      reason_code: '',
+      description: '',
+      attachments: [],
+    },
+  });
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
+    if (e.target.files) {
+      const newFiles = Array.from(e.target.files),
+      setFiles(prev => [...prev, ...newFiles]);
+      form.setValue('attachments', [...files, ...newFiles]);
+    }
+  };
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      setIsSubmitting(true);
+
+      const dispute = await createDispute({
+        project_id: projectId,
+        milestone_id: milestoneId,
+        reason_code: values.reason_code,
+        description: values.description,
+      });
+
+      if (dispute && dispute.id) {
+        // Future enhancement: Upload attachments
+        // For now we just log the files that would be uploaded
+        if (files.length > 0) {
+          // logInfo(`Would upload ${files.length} files for dispute ${dispute.id}`);
+        }
+
+        toast.success('Your dispute has been submitted');
+
+        if (onDisputeCreated) {
+          onDisputeCreated(dispute.id);
+        }
+      }
+    } catch (error) {
+      logErrorToProduction('Error submitting dispute:', { data: error });
+      toast.error('Failed to submit dispute. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
+  return (
+    <div className='space-y-6'>
+      <div className='flex items-center space-x-2'>
+        <FileText className='h-5 w-5 text-primary' />
+        <h2 className='text-xl font-semibold'>Report an Issue</h2>
+      </div>
+
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+          <FormField
+
+              <FormItem>
+                <FormLabel>Reason for dispute</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder='Select a reason' />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+
+>>>>>>> main
               <FormItem>
                 <FormLabel>Describe the issue in detail</FormLabel>
                 <FormControl>
                   <Textarea
+<<<<<<< HEAD
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
+=======
+                    placeholder='Please provide specific details about the issue...'
+                    className='min-h-[150px]'
+>>>>>>> main
                     {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
             )}
           />
+<<<<<<< HEAD
           
           <FormItem>
             <FormLabel>Attachments (optional)</FormLabel>
@@ -296,11 +417,30 @@ export function DisputeForm({;
                       ))}
                     </ul>;
                   </div>;
+=======
+
+          <FormItem>
+            <FormLabel>Attachments (optional)</FormLabel>
+            <FormControl>
+
+                />
+
+                {files.length > 0 && (
+
+                          >
+                            Remove
+                          </Button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+>>>>>>> main
                 )}
               </div>
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
           
           <div className="flex justify-end space-x-2">
             {onCancel && (
@@ -310,10 +450,61 @@ export function DisputeForm({;
             )}
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? "Submitting..." : "Submit Dispute"}
+=======
+
+          <div className='flex justify-end space-x-2'>
+            {onCancel && (
+              <Button type='button' variant='outline' onClick={onCancel}>
+                Cancel
+              </Button>
+            )}
+            <Button type='submit' disabled={isSubmitting}>
+              {isSubmitting ? 'Submitting...' : 'Submit Dispute'}
+>>>>>>> main
             </Button>
           </div>
         </form>
       </Form>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+
+};
+const removeFile = (index: number) => {;
+  async function onSubmit (values: z.infer<typeof formSchema>) {;
+  try {;
+  setIsSubmitting (true);
+const dispute = await createDispute ({;
+  project id: projectId;
+milestone id: milestoneId;
+reason code: values.reason code;
+description: values.description ;
+});
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {;
+  ;
+
+}finally {;
+  setIsSubmitting (false) ;
+}";
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {;
+  field.onChange ;
+}defaultValue= {;
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {;
+  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {;
+  value ;
+}value= {;
+  value ;
+}> {;
+  label ;
+}</SelectItem>) ) ;
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
+}</ul> </div>) ;
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
+}'"
+>>>>>>> main

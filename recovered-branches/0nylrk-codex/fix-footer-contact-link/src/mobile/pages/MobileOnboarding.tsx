@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -10,6 +11,19 @@ type OnboardingStep = "language" | "role" | "signup",
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
+=======
+import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {LanguageThemeSelector} from "../components/onboarding/LanguageThemeSelector";
+import {RolePicker} from "../components/onboarding/RolePicker";
+import {SignUpForm} from "../components/onboarding/SignUpForm";
+type OnboardingStep = "language" | "role" | "signup";
+
+export function MobileOnboarding() {
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
+  const navigate = useNavigate();
+>>>>>>> main
   
   const goToNextStep = () => {
     if (currentStep === "language") {
@@ -19,11 +33,19 @@ export function MobileOnboarding() {
     } else {
       navigate("/mobile")
     }
+<<<<<<< HEAD
   },
   
   const handleRoleSelect = () => {
     setCurrentStep("signup")
   },
+=======
+  };
+  
+  const handleRoleSelect = () => {
+    setCurrentStep("signup")
+  };
+>>>>>>> main
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -71,6 +93,7 @@ export function MobileOnboarding() {
             
             <SignUpForm />
           </div>
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -140,3 +163,10 @@ export function MobileOnboarding() {;
   );
 }
 ;
+=======
+        )}
+      </div>
+    </div>
+  )
+}
+>>>>>>> main

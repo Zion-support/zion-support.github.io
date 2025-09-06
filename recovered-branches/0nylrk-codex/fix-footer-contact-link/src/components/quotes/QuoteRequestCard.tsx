@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { format } from "date-fns",
 import { 
@@ -12,16 +13,33 @@ import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
+=======
+import React from "react";
+import {format} from "date-fns";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
+import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
+import type { QuoteRequest } from "@/types/quotes";
+>>>>>>> main
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
   onToggleArchive: (id: string, isArchived: boolean) => void
+<<<<<<< HEAD
 },
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
   onViewDetails,
+=======
+};
+
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+  quote;
+  onViewDetails;
+>>>>>>> main
   onMarkAsResponded,
   onToggleArchive
 }) => {
@@ -32,7 +50,11 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> main
 
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -94,6 +116,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
+<<<<<<< HEAD
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -191,3 +214,13 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
+=======
+              )}
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  )
+};
+>>>>>>> main

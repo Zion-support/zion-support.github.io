@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
 import { TalentGrid } from "@/components/talent/TalentGrid",
+=======
+import React from "react";
+import {TalentProfile} from "@/types/talent";
+import {ActiveFilters} from "@/components/talent/ActiveFilters";
+import {ResultsHeader} from "@/components/talent/ResultsHeader";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+>>>>>>> main
 interface TalentResultsProps {
   filteredTalents: TalentProfile[],
   isLoading: boolean,
@@ -19,6 +27,7 @@ interface TalentResultsProps {
     toggleAvailability: (availability: string) => void,
     selectedRegions: string[],
     toggleRegion: (region: string) => void,
+<<<<<<< HEAD
     priceRange: [number, number],
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
@@ -88,6 +97,39 @@ export function TalentResults({;
       />;
       {/* Talents grid */}
       <TalentGrid;
+=======
+    priceRange: [number, number];
+    setPriceRange: (range: [number, number]) => void;
+    experienceRange: [number, number];
+    setExperienceRange: (range: [number, number]) => void;
+    clearFilters: () => void
+  }
+}
+
+export function TalentResults({
+  filteredTalents;
+  isLoading;
+  viewProfile;
+  handleRequestHire;
+  savedTalents;
+  handleToggleSave;
+  isAuthenticated;
+  activeFiltersProps
+}: TalentResultsProps) {
+  return (
+    <div className="flex-1">
+      {/* Active filters */}
+      <ActiveFilters {...activeFiltersProps} />
+      
+      {/* Results count */}
+      <ResultsHeader 
+        isLoading={isLoading} 
+        resultCount={filteredTalents.length} 
+      />
+      
+      {/* Talents grid */}
+      <TalentGrid 
+>>>>>>> main
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
@@ -97,8 +139,15 @@ export function TalentResults({;
         onToggleSave={handleToggleSave}
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
+<<<<<<< HEAD
       />;
     </div>;
   );
 }
 ;
+=======
+      />
+    </div>
+  )
+}
+>>>>>>> main

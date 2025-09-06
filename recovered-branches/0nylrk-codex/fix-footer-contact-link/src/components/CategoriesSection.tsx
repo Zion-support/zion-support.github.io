@@ -1,24 +1,42 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
+=======
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+>>>>>>> main
 
 const categories = [
   {
     title: "Services",
+<<<<<<< HEAD
     description: "On-demand IT support, consulting, development, and more",
+=======
+    description: "On-demand IT support, consulting, development, and more";
+>>>>>>> main
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services",
     color: "from-purple-500 to-indigo-600"},
   {
     title: "Talents",
+<<<<<<< HEAD
     description: "Connect with AI experts, developers, and tech specialists",
+=======
+    description: "Connect with AI experts, developers, and tech specialists";
+>>>>>>> main
     icon: <Users className="w-10 h-10" />,
     link: "/talent",
     color: "from-cyan-500 to-blue-600"},
   {
     title: "Equipment",
+<<<<<<< HEAD
     description: "Rent or buy specialized hardware, servers, and devices",
+=======
+    description: "Rent or buy specialized hardware, servers, and devices";
+>>>>>>> main
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
@@ -33,6 +51,7 @@ const specialServices = [
   {
     title: "IT Onsite Services",
     link: "/it-onsite-services"
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
@@ -69,6 +88,13 @@ const specialServices = [;
 ];
 interface CategoriesSectionProps {;
   showTitle?: boolean;
+=======
+  }
+];
+
+interface CategoriesSectionProps {
+  showTitle?: boolean
+>>>>>>> main
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
@@ -114,7 +140,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
-              </Link>;
+              </Link>
             ))}
           </div>
         </div>
@@ -130,6 +156,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>
   )
+<<<<<<< HEAD
           </div>;
         </div>;
         <div className="mt-12 flex justify-center">;
@@ -143,5 +170,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>;
     </section>;
   );
+=======
+>>>>>>> main
 }
 ;

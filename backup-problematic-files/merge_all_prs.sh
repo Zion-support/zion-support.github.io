@@ -10,107 +10,100 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
-# Configuration
-MAIN_BRANCH="main"
-LOG_FILE="merge_operations.log"
-CONFLICT_LOG="merge_conflicts.log"
-SUCCESS_LOG="merge_success.log"
+# Set GitHub token
+export GH_TOKEN=ghs_v5EHCNRCCjgCQX6fSeu6jdZDz16uJb3AGWKD
 
-# Initialize logs
-echo "=== PR Merge Operations Started at $(date) ===" > $LOG_FILE
-echo "=== Merge Conflicts Log ===" > $CONFLICT_LOG
-echo "=== Successful Merges Log ===" > $SUCCESS_LOG
-
-# Logging functions
-log() {
+# Function to print colored output
+print_status() {
     echo -e "${BLUE}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
-    echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1" >> $LOG_FILE
 }
 
-success() {
-    echo -e "${GREEN}✅ $1${NC}"
-    echo "SUCCESS: $1" >> $SUCCESS_LOG
+print_success() {
+    echo -e "${GREEN}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
-warning() {
-    echo -e "${YELLOW}⚠️  $1${NC}"
-    echo "WARNING: $1" >> $LOG_FILE
+print_warning() {
+    echo -e "${YELLOW}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
-error() {
-    echo -e "${RED}❌ $1${NC}"
-    echo "ERROR: $1" >> $LOG_FILE
+print_error() {
+    echo -e "${RED}[$(date +'%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
-info() {
-    echo -e "${CYAN}ℹ️  $1${NC}"
-}
-
-# Function to check if branch exists
-branch_exists() {
-    local branch_name="$1"
-    git show-ref --verify --quiet "refs/heads/$branch_name" || git show-ref --verify --quiet "refs/remotes/origin/$branch_name"
-}
-
-# Function to merge a single branch
-merge_branch() {
-    local branch_name="$1"
-    local pr_number="$2"
-    local pr_title="$3"
+# Function to merge a single PR
+merge_pr() {
+    local pr_number=$1
+    local pr_title=$2
     
-    log "Attempting to merge branch: $branch_name (PR #$pr_number: $pr_title)"
+    print_status "Processing PR #$pr_number: $pr_title"
     
-    # Check if branch exists
-    if ! branch_exists "$branch_name"; then
-        warning "Branch $branch_name does not exist, skipping..."
+    # Get PR details
+    local pr_details=$(gh pr view "$pr_number" --json headRefName,title,state)
+    local branch_name=$(echo "$pr_details" | jq -r '.headRefName')
+    local state=$(echo "$pr_details" | jq -r '.state')
+    
+    if [ "$state" != "OPEN" ]; then
+        print_warning "PR #$pr_number is not open (state: $state), skipping..."
+        return 0
+    fi
+    
+    print_status "Branch: $branch_name"
+    
+    # Fetch the branch
+    git fetch origin "$branch_name"
+    
+    if [ $? -ne 0 ]; then
+        print_error "Failed to fetch branch $branch_name"
         return 1
     fi
     
-    # Fetch the latest changes
-    git fetch origin "$branch_name" || {
-        error "Failed to fetch branch $branch_name"
-        return 1
-    }
+    # Try to merge the PR
+    print_status "Attempting to merge PR #$pr_number..."
     
-    # Checkout the branch
-    git checkout "$branch_name" || {
-        error "Failed to checkout branch $branch_name"
-        return 1
-    }
+    # Use GitHub CLI to merge the PR
+    gh pr merge "$pr_number" --merge --delete-branch
     
-    # Pull latest changes
-    git pull origin "$branch_name" || {
-        error "Failed to pull latest changes for $branch_name"
-        return 1
-    }
-    
-    # Switch back to main
-    git checkout "$MAIN_BRANCH" || {
-        error "Failed to checkout main branch"
-        return 1
-    }
-    
-    # Attempt to merge
-    if git merge "$branch_name" --no-ff -m "Merge PR #$pr_number: $pr_title"; then
-        success "Successfully merged $branch_name (PR #$pr_number)"
+    if [ $? -eq 0 ]; then
+        print_success "Successfully merged PR #$pr_number"
         return 0
     else
-        error "Merge conflict in $branch_name (PR #$pr_number)"
-        echo "CONFLICT: $branch_name (PR #$pr_number) - $pr_title" >> $CONFLICT_LOG
+        print_warning "Failed to merge PR #$pr_number automatically, trying manual merge..."
         
-        # Try to resolve conflicts automatically
-        if resolve_conflicts "$branch_name" "$pr_number" "$pr_title"; then
-            success "Resolved conflicts and merged $branch_name (PR #$pr_number)"
+        # Try manual merge
+        git checkout main
+        git pull origin main
+        
+        # Try to merge the branch
+        git merge "origin/$branch_name" --no-edit
+        
+        if [ $? -eq 0 ]; then
+            print_success "Successfully merged PR #$pr_number manually"
+            git push origin main
             return 0
         else
-            error "Could not resolve conflicts for $branch_name (PR #$pr_number)"
-            # Abort the merge
-            git merge --abort || true
-            return 1
+            print_error "Failed to merge PR #$pr_number - conflicts detected"
+            
+            # Try to resolve conflicts automatically
+            print_status "Attempting to resolve conflicts automatically..."
+            
+            # Use our automation to fix conflicts
+            ./pm2-automation.sh quick-fix
+            
+            # Check if conflicts are resolved
+            git status --porcelain | grep -q "^UU\|^AA\|^DD"
+            if [ $? -ne 0 ]; then
+                print_success "Conflicts resolved automatically"
+                git add .
+                git commit -m "Resolve merge conflicts for PR #$pr_number"
+                git push origin main
+                return 0
+            else
+                print_error "Could not resolve conflicts automatically for PR #$pr_number"
+                git merge --abort
+                return 1
+            fi
         fi
     fi
 }
@@ -127,8 +120,7 @@ resolve_conflicts() {
     local conflicts=$(git diff --name-only --diff-filter=U)
     
     for file in $conflicts; do
-        log "Resolving conflicts in $file"
-        
+        log "Resolving conflicts in $file"        
         # Use git checkout to take our version for most conflicts
         git checkout --ours "$file" || true
         

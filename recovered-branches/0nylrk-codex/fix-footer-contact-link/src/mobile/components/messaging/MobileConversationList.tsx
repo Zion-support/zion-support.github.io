@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -10,10 +11,24 @@ interface Conversation {
   id: string,
   name: string,
   avatar?: string,
+=======
+import React from "react";
+import {Card} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
+interface Conversation {
+  id: string,
+  name: string,
+  avatar?: string;
+>>>>>>> main
   lastMessage: string,
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
+<<<<<<< HEAD
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -40,6 +55,19 @@ interface MobileConversationListProps {;
 export function MobileConversationList({
   conversations,
   activeConversation,
+=======
+}
+
+interface MobileConversationListProps {
+  conversations: Conversation[],
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void
+}
+
+export function MobileConversationList({
+  conversations;
+  activeConversation;
+>>>>>>> main
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -68,7 +96,11 @@ export function MobileConversationList({
           <div
             key={conversation.id}
             className={cn(
+<<<<<<< HEAD
               "px-4",
+=======
+              "px-4";
+>>>>>>> main
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -99,7 +131,7 @@ export function MobileConversationList({
                   {conversation.unreadCount > 0 && (
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
-                    </Badge>;
+                    </Badge>
                   )}
                 </div>
               </div>
@@ -107,8 +139,14 @@ export function MobileConversationList({
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}
+<<<<<<< HEAD
       </div>;
     </div>;
   );
+=======
+      </div>
+    </div>
+  )
+>>>>>>> main
 }
 ;

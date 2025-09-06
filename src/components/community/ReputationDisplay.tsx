@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
@@ -98,3 +99,15 @@ export const ReputationDisplay = ({;
   );
 };
 export default ReputationDisplay;
+=======
+import { Trophy } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+
+interface ReputationDisplayProps {
+  reputation: number;
+  size?: 'sm' | 'md' | 'lg';
+
+export const ReputationDisplay = ({
+  reputation,
+  size = 'md',}: ReputationDisplayProps) => {
+>>>>>>> main

@@ -3,19 +3,18 @@ const fs = require('fs')
 const path = require('path')      return size}}
 
     totalSize = getDirectorySize(buildDir);
+    totalSize = getDirectorySize(buildDir);
 
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
-
     return {) {
      { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
-
     return {}
       "totalSize": totalSize,
       "jsSize": jsSize,
@@ -23,7 +22,6 @@ const path = require('path')      return size}}
       "recommendations": recommendations
     }}
 }
-
 if (require.main === module) {
   const runner = new SimpleAutomationRunner();
   runner.run().catch(error => {
@@ -31,6 +29,10 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+
+module.exports = { runSimpleAutomation }) {
+     {
+  runSimpleAutomation().catch(console.error)}
 
 module.exports = { runSimpleAutomation }) {
      {
@@ -58,4 +60,5 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
+        "status"
         "status"

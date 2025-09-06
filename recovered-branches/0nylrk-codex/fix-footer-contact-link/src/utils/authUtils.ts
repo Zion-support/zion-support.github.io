@@ -1,18 +1,28 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
+=======
+import {supabase} from "@/integrations/supabase/client";
+import type { UserDetails } from "@/types/auth";
+>>>>>>> main
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
 export const cleanupAuthState = () => {
   // Remove standard auth tokens
+<<<<<<< HEAD
   localStorage.removeItem('supabase.auth.token'),
+=======
+  localStorage.removeItem('supabase.auth.token');
+>>>>>>> main
   
   // Remove all Supabase auth keys from localStorage
   Object.keys(localStorage).forEach((key) => {
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
       localStorage.removeItem(key)
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -35,6 +45,18 @@ export const cleanupAuthState = () => {;
     }
   })
 },
+=======
+    }
+  });
+  
+  // Remove from sessionStorage if in use
+  Object.keys(sessionStorage || {}).forEach((key) => {
+    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
+      sessionStorage.removeItem(key)
+    }
+  })
+};
+>>>>>>> main
 
 /**
  * Utility function to check new user registration and schedule welcome emails
@@ -47,7 +69,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .select("id")
       .eq("user_id", user.id)
       .eq("campaign_type", "welcome_series")
+<<<<<<< HEAD
       .maybeSingle(),
+=======
+      .maybeSingle();
+>>>>>>> main
       
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
@@ -55,6 +81,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
       await supabase
         .from("scheduled_jobs")
         .insert({
+<<<<<<< HEAD
           job_type: "send_retention_email",
           scheduled_for: new Date().toISOString(),
           status: "pending",
@@ -65,11 +92,24 @@ export const checkNewRegistration = async (user: UserDetails) => {
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
         }),
+=======
+          job_type: "send_retention_email";
+          scheduled_for: new Date().toISOString();
+          status: "pending";
+          payload: {
+            user_id: user.id;
+            email_type: "welcome_series";
+            user_type: user.userType || "unknown",
+            display_name: user.displayName || user.email?.split("@")[0] || "User"
+          }
+        });
+>>>>>>> main
         
       // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
         .insert({
+<<<<<<< HEAD
           user_id: user.id,
           campaign_type: "welcome_series",
           template_name: "welcome_email",
@@ -129,3 +169,20 @@ export const checkNewRegistration = async (user: UserDetails) => {;
     console.error("Error checking or scheduling welcome email:", error);
   }
 };
+=======
+          user_id: user.id;
+          campaign_type: "welcome_series";
+          template_name: "welcome_email";
+          template_data: {
+            user_id: user.id;
+            email_type: "welcome_series";
+            user_type: user.userType || "unknown",
+            display_name: user.displayName || user.email?.split("@")[0] || "User"
+          }
+        })
+    }
+  } catch (error) {
+    console.error("Error checking or scheduling welcome email:", error)
+  }
+};
+>>>>>>> main

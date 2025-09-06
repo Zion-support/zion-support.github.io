@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button',
 import Link from 'next/link',
 import { useSelector, useDispatch } from 'react-redux',
@@ -451,3 +452,12 @@ export default function CartPage() {;
   );
 }
 ;
+=======
+shipping_address: details?.address}),
+
+      const sessionId = data.sessionId as string | undefined;
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const total = subtotal + tax + shipping;
+
+}
+>>>>>>> main

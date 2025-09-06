@@ -39,6 +39,7 @@ class SecurityScanner {}
     try {}
       this.log('Scanning dependencies for vulnerabilities...');
       
+      
       // Run npm audit;
       const auditResult = execSync('npm audit --json', { })
         encoding: 'utf8',
@@ -47,11 +48,15 @@ class SecurityScanner {}
       }
 });
 
+
       const auditData = JSON.parse(auditResult);
       const vulnerabilities = auditData.vulnerabilities || {};
       const criticalCount = Object.values(vulnerabilities).filter(v => v.severity === 'critical').length;
       const highCount = Object.values(vulnerabilities).filter(v => v.severity === 'high').length;
       const moderateCount = Object.values(vulnerabilities).filter(v => v.severity === 'moderate').length;
+
+      this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
+
 
       this.log(`Found ${criticalCount} critical, ${highCount} high, ${moderateCount} moderate vulnerabilities`);
 
@@ -90,6 +95,7 @@ class SecurityScanner {}
         /token\s*=\s*['"][^'"]+['"]/gi;
       ];
 
+
       const sourceFiles = this.getSourceFiles();
       for (const file of sourceFiles) {}
         try {}
@@ -112,6 +118,7 @@ class SecurityScanner {}
       };
       this.log(`Found ${securityIssues.length} potential security issues in code`);
 
+
       return {}
         scanned: true,
         issues: securityIssues,
@@ -129,6 +136,7 @@ class SecurityScanner {}
     };
     try {}
       this.log('Scanning configuration files...');
+      
       
       const configFiles = []
         'package.json',
@@ -166,6 +174,7 @@ class SecurityScanner {}
       };
       this.log(`Found ${configIssues.length} configuration security issues`);
 
+
       return {}
         scanned: true,
         issues: configIssues,
@@ -180,12 +189,14 @@ class SecurityScanner {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx', '.vue', '.svelte'];
     const sourceFiles = [];
 
+
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+          
           
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
@@ -197,6 +208,7 @@ class SecurityScanner {}
         // Skip directories that can't be read;
       };
     };
+
 
     scanDir(process.cwd());
     return sourceFiles;
@@ -238,6 +250,7 @@ class SecurityScanner {}
       } else {}
         this.log(`Security scan completed - found ${totalIssues} issues`);
         
+        
         if (report.dependencyScan.critical > 0 && this.alertOnCritical) {}
           this.log('ALERT: Critical vulnerabilities detected!');
         };
@@ -252,4 +265,5 @@ if (require.main === module) {}
   const securityScanner = new SecurityScanner();
   securityScanner.start().catch(console.error);
 };
+module.exports = SecurityScanner;module.exports = SecurityScanner;
 module.exports = SecurityScanner;module.exports = SecurityScanner;

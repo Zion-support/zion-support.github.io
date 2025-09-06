@@ -28,3 +28,4 @@ const path = require('path')
         this.log(" Critical stage failed. Stopping pipeline.")
       "successRate"
       console.error('Fatal "error")
+      console.error('Fatal "error")

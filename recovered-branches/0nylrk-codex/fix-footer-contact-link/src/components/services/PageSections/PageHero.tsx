@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from "lucide-react",
+=======
+import {GradientHeading} from "@/components/GradientHeading";
+import {Clock, Map, DollarSign} from "lucide-react";
+>>>>>>> main
 
 export function PageHero() {
   return (
@@ -37,6 +42,7 @@ export function PageHero() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Clock, Map, DollarSign } from "lucide-react";
 export function PageHero() {;
@@ -73,3 +79,6 @@ export function PageHero() {;
   );
 }
 ;
+=======
+}
+>>>>>>> main

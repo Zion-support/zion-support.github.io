@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { ChatBotPanel } from "./ChatBotPanel",
@@ -22,9 +23,23 @@ export function SupportWidget() {;
   const { theme } = useTheme();
   return (;
     <>;
+=======
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {ChatBotPanel} from "./ChatBotPanel";
+import {MessageSquare, Info, X} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useTheme} from "@/hooks/useTheme";
+export function SupportWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  
+  return (
+    <>
+>>>>>>> main
       {/* Fixed button in the bottom right */}
-      {!isOpen && (;
-        <Button;
+      {!isOpen && (
+        <Button
           onClick={() => setIsOpen(true)}
           size="icon"
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"
@@ -33,12 +48,20 @@ export function SupportWidget() {;
           <MessageSquare className="h-6 w-6" />
         </Button>
       )}
+<<<<<<< HEAD
 ;
+=======
+      
+>>>>>>> main
       {/* Support panel */}
       {isOpen && (
         <div 
           className={cn(
+<<<<<<< HEAD
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
+=======
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
+>>>>>>> main
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
               : "bg-white border border-gray-200"
@@ -77,7 +100,12 @@ export function SupportWidget() {;
           <ChatBotPanel />
         </div>
       )}
+<<<<<<< HEAD
     </>;
   );
+=======
+    </>
+  )
+>>>>>>> main
 }
 ;

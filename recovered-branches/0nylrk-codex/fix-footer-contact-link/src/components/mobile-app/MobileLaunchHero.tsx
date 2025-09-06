@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Smartphone } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { AppStoreButtons } from "./AppStoreButtons",
 import { Card, CardContent } from "@/components/ui/card",
+=======
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, Smartphone} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {AppStoreButtons} from "./AppStoreButtons";
+import {Card, CardContent} from "@/components/ui/card";
+>>>>>>> main
 
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
@@ -27,6 +36,7 @@ export const MobileLaunchHero: React.FC = () => {
             
             <div className="mb-8">
               <AppStoreButtons 
+<<<<<<< HEAD
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -118,3 +128,46 @@ export const MobileLaunchHero: React.FC = () => {;
     </section>;
   );
 };
+=======
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+              />
+            </div>
+            
+            <div className="flex flex-wrap gap-4">
+              <Link to="/open-app">
+                <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
+                  Open App
+                  <ArrowRight size={20} />
+                </Button>
+              </Link>
+              
+              <Link to="#features">
+                <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
+                  See Features
+                </Button>
+              </Link>
+            </div>
+          </div>
+          
+          <div className="flex-1 flex justify-center md:justify-end">
+            <div className="relative">
+              {/* Phone mockup with glow effect */}
+              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
+              
+              <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
+                <CardContent className="p-0">
+                  <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
+                    <Smartphone className="w-40 h-40 text-white opacity-40" />
+                    {/* In production, replace with actual app screenshot */}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+};
+>>>>>>> main

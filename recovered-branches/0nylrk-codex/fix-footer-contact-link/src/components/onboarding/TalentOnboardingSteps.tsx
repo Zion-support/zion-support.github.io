@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
@@ -8,6 +9,17 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
+=======
+import React from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
+import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
+import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
+
+export function TalentOnboardingSteps() {
+  const { user } = useAuth();
+  const onboardingStatus = useOnboardingStatus();
+>>>>>>> main
   
   const steps: OnboardingStep[] = [
     {
@@ -36,6 +48,7 @@ export function TalentOnboardingSteps() {
       action: "View Matches"}],
   
   return <OnboardingTracker steps={steps} />
+<<<<<<< HEAD
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
@@ -70,5 +83,7 @@ export function TalentOnboardingSteps() {;
       link: "/talent-dashboard";
       action: "View Matches"}];
   return <OnboardingTracker steps={steps} />;
+=======
+>>>>>>> main
 }
 ;

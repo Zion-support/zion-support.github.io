@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {;
   useState,;
   useEffect,;
@@ -287,3 +288,6 @@ export function ChatAssistant({;
   );
 }
 ;
+=======
+}
+>>>>>>> main

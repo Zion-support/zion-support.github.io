@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -26,10 +27,40 @@ const formSchema = z.object({
   additionalClauses: z.array(z.string()).default([])}),
 
 export type ContractFormValues = z.infer<typeof formSchema>,
+=======
+import {useState, useEffect} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Loader2} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Form} from "@/components/ui/form";
+import {DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {useToast} from "@/hooks/use-toast";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {generateContract} from "../utils/contractUtils";
+import {ProjectDetailsFields} from "./ProjectDetailsFields";
+import {PaymentTermsFields} from "./PaymentTermsFields";
+import {AdditionalClausesFields} from "./AdditionalClausesFields";
+import {DeploymentOptions} from "@/types/smart-contracts";
+const formSchema = z.object({
+  projectName: z.string().min(1, "Project name is required");
+  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
+  startDate: z.date({
+    required_error: "Start date is required"}),
+  endDate: z.date().optional(),
+  paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
+  paymentAmount: z.string().min(1, "Payment amount is required");
+  additionalClauses: z.array(z.string()).default([])}),
+
+export type ContractFormValues = z.infer<typeof formSchema>;
+>>>>>>> main
 
 interface ContractFormProps {
   talent: TalentProfile,
   clientName: string,
+<<<<<<< HEAD
   initialValues?: ContractFormValues,
   onFormValuesChange?: (values: ContractFormValues) => void,
   onContractGenerated: (contractContent: string) => void,
@@ -142,6 +173,58 @@ export function ContractForm({;
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]),
+=======
+  initialValues?: ContractFormValues;
+  onFormValuesChange?: (values: ContractFormValues) => void,
+  onContractGenerated: (contractContent: string) => void,
+  deployOptions?: DeploymentOptions;
+  onDeployOptionsChange?: (options: DeploymentOptions) => void
+}
+
+export function ContractForm({
+  talent;
+  clientName;
+  initialValues;
+  onFormValuesChange;
+  onContractGenerated;
+  deployOptions;
+  onDeployOptionsChange
+}: ContractFormProps) {
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const { toast } = useToast();
+
+  const form = useForm<ContractFormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: initialValues || {
+      projectName: "",
+      scopeSummary: "",
+      startDate: new Date(),
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
+      additionalClauses: ["nda", "ip"]}});
+  
+  // Update form when initialValues change
+  useEffect(() => {
+    if (initialValues) {
+      Object.keys(initialValues).forEach((key) => {
+        const typedKey = key as keyof ContractFormValues;
+        form.setValue(typedKey, initialValues[typedKey])
+      })
+    }
+  }, [initialValues, form]);
+  
+  // Track form values for template saving
+  useEffect(() => {
+    if (onFormValuesChange) {
+      const subscription = form.watch((value) => {
+        onFormValuesChange(value as ContractFormValues)
+      });
+      
+      return () => subscription.unsubscribe()
+    }
+  }, [form, onFormValuesChange]);
+>>>>>>> main
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones),
@@ -149,6 +232,7 @@ export function ContractForm({;
     // If payment terms isn't already set to milestone, update it
     if (form.getValues("paymentTerms") !== "milestone") {
       form.setValue("paymentTerms", "milestone")
+<<<<<<< HEAD
     }
     
     toast({
@@ -212,6 +296,42 @@ export function ContractForm({;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
+=======
+    }
+    
+    toast({
+      title: "Milestones Generated",
+      description: `${milestones.length} milestones have been generated and will be included in the contract.`})
+  };
+  
+  const onSubmit = async (values: ContractFormValues) => {
+    setIsGenerating(true),
+    try {
+      const contract = await generateContract(
+        values, 
+        talent, 
+        clientName, 
+        generatedMilestones
+      );
+      
+      onContractGenerated(contract)
+    } catch (error) {
+      console.error("Error generating contract:", error);
+      toast({
+        title: "Contract Generation Failed",
+        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
+        variant: "destructive"})
+    } finally {
+      setIsGenerating(false)
+    }
+  };
+  
+  return (
+    <>
+      <DialogHeader>
+        <DialogTitle className="text-xl">Contract Builder</DialogTitle>
+        <DialogDescription>
+>>>>>>> main
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
@@ -226,8 +346,14 @@ export function ContractForm({;
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
           />;
           <AdditionalClausesFields;
+=======
+          />
+          
+          <AdditionalClausesFields 
+>>>>>>> main
             form={form}
           />
           
@@ -253,6 +379,7 @@ export function ContractForm({;
           variant="outline" 
           onClick={() => form.reset()}
           disabled={isGenerating}
+<<<<<<< HEAD
         >;
           Reset Form;
         </Button>;
@@ -261,3 +388,12 @@ export function ContractForm({;
   );
 }
 ;
+=======
+        >
+          Reset Form
+        </Button>
+      </DialogFooter>
+    </>
+  )
+}
+>>>>>>> main

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> main
 const EquipmentPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
@@ -14,6 +18,12 @@ const EquipmentPage = () => {
       </div>
     </div>
   )
+<<<<<<< HEAD
 },
 
 export default EquipmentPage,
+=======
+};
+
+export default EquipmentPage;
+>>>>>>> main

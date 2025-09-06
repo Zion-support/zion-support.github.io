@@ -1,20 +1,33 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
+=======
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Filter, X, Star} from "lucide-react";
+import {FilterOptions} from "@/types/search";
+>>>>>>> main
 interface FilterSidebarProps {
   filters: {
     selectedProductTypes: string[],
     selectedLocations: string[],
     selectedAvailability: string[],
     selectedRating: number | null
+<<<<<<< HEAD
   },
+=======
+  };
+>>>>>>> main
   filterOptions: FilterOptions,
   onFilterChange: (filterType: string, value: string) => void,
   onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void
+<<<<<<< HEAD
 }
 
 export function FilterSidebar({
@@ -74,6 +87,33 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+=======
+}
+
+export function FilterSidebar({
+  filters;
+  filterOptions;
+  onFilterChange;
+  onRatingChange;
+  onClearFilters
+}: FilterSidebarProps) {
+  return (
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white flex items-center">
+          <Filter className="mr-2 h-5 w-5" /> Filters
+        </h3>
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+          onClick={onClearFilters}
+        >
+          Clear All
+        </Button>
+      </div>
+      
+>>>>>>> main
       {/* Product Type Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -93,11 +133,20 @@ export function FilterSidebar({;
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
                 {type.label}
+<<<<<<< HEAD
               </label>;
             </div>;
           ))}
         </div>;
       </div>;
+=======
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+>>>>>>> main
       {/* Location Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -117,11 +166,20 @@ export function FilterSidebar({;
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
                 {location.label}
+<<<<<<< HEAD
               </label>;
             </div>;
           ))}
         </div>;
       </div>;
+=======
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+>>>>>>> main
       {/* Availability Filter */}
       <div className="mb-6">
         <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -141,6 +199,7 @@ export function FilterSidebar({;
                 className="text-sm text-zion-slate-light cursor-pointer hover:text-white"
               >
                 {availability.label}
+<<<<<<< HEAD
               </label>;
             </div>;
           ))}
@@ -180,5 +239,47 @@ export function FilterSidebar({;
       </div>;
     </div>;
   );
+=======
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Rating Filter */}
+      <div className="mb-6">
+        <label className="text-sm font-medium text-zion-slate-light block mb-2">
+          Minimum Rating
+        </label>
+        <div className="flex flex-wrap gap-2">
+          {[null, ...filterOptions.ratingOptions].map((rating) => (
+            <Button
+              key={rating === null ? 'any' : rating}
+              variant="outline"
+              size="sm"
+              onClick={() => onRatingChange(rating)}
+              className={`${
+                filters.selectedRating === rating 
+                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple" 
+                  : "border-zion-blue-light text-zion-slate-light"
+              }`}
+            >
+              {rating === null ? (
+                "Any"
+              ) : (
+                <div className="flex items-center">
+                  {[...Array(rating)].map((_, i) => (
+                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
+                  ))}
+                  <span className="ml-1">& Up</span>
+                </div>
+              )}
+            </Button>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+>>>>>>> main
 }
 ;

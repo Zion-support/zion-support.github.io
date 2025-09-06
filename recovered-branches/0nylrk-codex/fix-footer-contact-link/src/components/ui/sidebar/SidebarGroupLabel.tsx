@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
+=======
+import React from "react";
+import {cn} from "@/lib/utils";
+interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string;
+>>>>>>> main
   children?: React.ReactNode
 }
 
@@ -10,6 +17,7 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
   return (
     <div 
       className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
+<<<<<<< HEAD
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -26,5 +34,12 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
       {children}
     </div>;
   );
+=======
+      {...props}
+    >
+      {children}
+    </div>
+  )
+>>>>>>> main
 }
 ;

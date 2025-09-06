@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -290,3 +291,6 @@ export function FraudDetectionSettings() {;
   );
 }
 ;
+=======
+}
+>>>>>>> main

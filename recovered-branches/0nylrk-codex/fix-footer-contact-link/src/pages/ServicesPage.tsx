@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
@@ -6,6 +7,15 @@ import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
 import { Globe } from "lucide-react",
+=======
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+import {AppLayout} from "@/layout/AppLayout";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Globe} from "lucide-react";
+>>>>>>> main
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -15,7 +25,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Development",
     price: 5000,
     currency: "$",
+<<<<<<< HEAD
     tags: ["AI Integration", "Machine Learning", "Enterprise"],
+=======
+    tags: ["AI Integration", "Machine Learning", "Enterprise"];
+>>>>>>> main
     author: {
       name: "TechSolutions Inc.",
       id: "tech-solutions",
@@ -28,11 +42,19 @@ const SERVICE_LISTINGS: ProductListing[] = [
   {
     id: "service-2",
     title: "Cloud Infrastructure Management",
+<<<<<<< HEAD
     description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
     category: "Management",
     price: 3000,
     currency: "$",
     tags: ["Cloud", "DevOps", "Security"],
+=======
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
+    category: "Management",
+    price: 3000,
+    currency: "$",
+    tags: ["Cloud", "DevOps", "Security"];
+>>>>>>> main
     author: {
       name: "CloudPro Experts",
       id: "cloud-pro"},
@@ -48,7 +70,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Analytics",
     price: 4500,
     currency: "$",
+<<<<<<< HEAD
     tags: ["Big Data", "Analytics", "Business Intelligence"],
+=======
+    tags: ["Big Data", "Analytics", "Business Intelligence"];
+>>>>>>> main
     author: {
       name: "DataMind Solutions",
       id: "datamind",
@@ -65,7 +91,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Security",
     price: 6000,
     currency: "$",
+<<<<<<< HEAD
     tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
+=======
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
+>>>>>>> main
     author: {
       name: "SecureNet Team",
       id: "secure-net"},
@@ -77,11 +107,19 @@ const SERVICE_LISTINGS: ProductListing[] = [
   {
     id: "service-5",
     title: "IT Infrastructure Modernization",
+<<<<<<< HEAD
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
     category: "Consulting",
     price: 8500,
     currency: "$",
     tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
+=======
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
+    category: "Consulting",
+    price: 8500,
+    currency: "$",
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
+>>>>>>> main
     author: {
       name: "ModernizeIT Consulting",
       id: "modernize-it"},
@@ -97,7 +135,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Strategy",
     price: 7500,
     currency: "$",
+<<<<<<< HEAD
     tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+=======
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
+>>>>>>> main
     author: {
       name: "AI Future Consulting",
       id: "ai-future",
@@ -142,6 +184,7 @@ export default function ServicesPage() {
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
+<<<<<<< HEAD
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -292,3 +335,13 @@ export default function ServicesPage() {;
   );
 }
 ;
+=======
+        listings={SERVICE_LISTINGS}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 3000, max: 10000 }}
+      />
+      <TrustedBySection />
+    </AppLayout>
+  )
+}
+>>>>>>> main

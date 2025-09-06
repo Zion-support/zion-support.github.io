@@ -27,3 +27,4 @@ const fs = require(,"}),"
         "stdio"
       const commitMessage = ` ${message}\n\nFiles "changed": \n${files.map(f => `- ${f}``)
         "stdio"        "stdio"
+        "stdio"        "stdio"

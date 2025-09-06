@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -58,6 +59,73 @@ export function ResumeWizard() {;
   const handleResumeChange = (resumeId: string) => {
     fetchResume(resumeId)
   },
+=======
+import {useState, useEffect} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {useResume} from '@/hooks/useResume';
+import {Tabs} from '@/components/ui/tabs';
+import {Card, CardContent} from '@/components/ui/card';
+import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
+import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Resume} from '@/types/resume';
+// Import components
+import {ResumeProgress} from './ResumeProgress';
+import {EmptyResumeState} from './EmptyResumeState';
+import {CreateResumeForm} from './CreateResumeForm';
+import {ResumeSteps} from './ResumeSteps';
+import {ResumeStepContent} from './ResumeStepContent';
+import {useResumeProgress} from './useResumeProgress';
+import {ResumeVersionSelector} from './ResumeVersionSelector';
+import {RESUME_STEPS} from './constants';
+export function ResumeWizard() {
+  const { user } = useAuth();
+  const { 
+    isLoading;
+    error, 
+    resume, 
+    fetchResume;
+    createResume
+  } = useResume();
+  
+  const [activeTab, setActiveTab] = useState('basic-info');
+  const [showNewResumeForm, setShowNewResumeForm] = useState(false);
+  
+  // Use the extracted hook for progress calculation
+  const progress = useResumeProgress(resume);
+  
+  useEffect(() => {
+    if (user) {
+      fetchResume()
+    }
+  }, [user, fetchResume]);
+  
+  const handleCreateNewResume = async (title: string) => {
+    const resumeId = await createResume({ title: title.trim() }),
+    if (resumeId) {
+      await fetchResume(resumeId);
+      setShowNewResumeForm(false)
+    }
+  };
+  
+  const nextStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex < RESUME_STEPS.length - 1) {
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
+    }
+  };
+  
+  const prevStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex > 0) {
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
+    }
+  };
+
+  const handleResumeChange = (resumeId: string) => {
+    fetchResume(resumeId)
+  };
+>>>>>>> main
   
   if (isLoading) {
     return (
@@ -76,6 +144,7 @@ export function ResumeWizard() {;
       </Alert>
     )
   }
+<<<<<<< HEAD
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -89,6 +158,21 @@ export function ResumeWizard() {;
         isLoading={isLoading}
       />;
     );
+=======
+  
+  if (!resume && !showNewResumeForm) {
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
+  }
+  
+  if (showNewResumeForm) {
+    return (
+      <CreateResumeForm 
+        onCreateResume={handleCreateNewResume}
+        onCancel={() => setShowNewResumeForm(false)}
+        isLoading={isLoading}
+      />
+    )
+>>>>>>> main
   }
   
   return (
@@ -97,7 +181,11 @@ export function ResumeWizard() {;
         <h1 className="text-2xl font-bold">Resume Builder</h1>
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+<<<<<<< HEAD
           <Button;
+=======
+          <Button 
+>>>>>>> main
             onClick={() => setShowNewResumeForm(true)}
             variant="outline"
             size="sm"
@@ -129,8 +217,9 @@ export function ResumeWizard() {;
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
-              />;
+              />
             )}
+<<<<<<< HEAD
           </Tabs>;
         </CardContent>;
       </Card>;
@@ -138,3 +227,11 @@ export function ResumeWizard() {;
   );
 }
 ;
+=======
+          </Tabs>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
+>>>>>>> main

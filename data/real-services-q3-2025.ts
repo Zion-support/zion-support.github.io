@@ -12,15 +12,23 @@ export interface Q3Service {
   icon: string;
   color: string;
   textColor: string;
+<<<<<<< HEAD
   link: string;
   marketPosition?: string;
+=======
+  link: string;  marketPosition?: string;
+>>>>>>> main
   targetAudience?: string;
   trialDays?: number;
   setupTime?: string;
   category: string;
+<<<<<<< HEAD
   realService: boolean;
   technology?: string[];
   integrations?: string[];
+=======
+  realService: boolean;  technology?: string[];  integrations?: string[];
+>>>>>>> main
   useCases?: string[];
   roi?: string;
   competitors?: string[];
@@ -30,17 +38,29 @@ export interface Q3Service {
   customers?: number;
   rating?: number;
   reviews?: number;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> main
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'
+=======
+  website: 'https://ziontechgroup.com',};
+
+export const realServicesQ32025: Q3Service[] = [
+  {
+
+>>>>>>> main
 };
 
 export const realServicesQ32025: Q3Service[] = [
   {
+<<<<<<< HEAD
     id: 'subscription-analytics-revenue-optimization',
     name: 'Subscription Analytics & Revenue Optimization',
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
@@ -175,3 +195,7 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact
   }
 ];
+=======
+
+];
+>>>>>>> main

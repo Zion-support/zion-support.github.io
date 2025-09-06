@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ invoices: [] });
@@ -35,4 +36,23 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+import { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../../../../utils/data/enterpriseStore';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { companyId } = req.query;
+  
+  if (!companyId || Array.isArray(companyId)) {
+    return res.status(400).json({ error: 'Invalid company ID' });
+  }
+
+  if (req.method === 'GET') {
+    const invoices = store.listInvoices(companyId);
+    return res.status(200).json(invoices);
+  }
+
+  res.setHeader('Allow', 'GET');
+  res.status(405).end('Method Not Allowed');
+>>>>>>> main
 }

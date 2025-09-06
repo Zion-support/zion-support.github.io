@@ -132,7 +132,7 @@ export default function SecurityAudit() {;
     <div className="space-y-4">;
       <h2 className="text-2xl font-bold">Security Audit Report</h2>;
       <div className="grid gap-4">;
-        {issues.map((issue) => (;
+        {issues.map((issue) => (
           <div key={issue.id} className="border rounded-lg p-4">;
             <h3 className="font-semibold">{issue.title}</h3>;
             <p className="text-gray-600">{issue.description}</p>;
@@ -291,7 +291,6 @@ export default function SystemHealthMonitor() {;
 ;
     }
 }
-;
 // Run the improvements;
 const improvements = new SimpleAppImprovements();
 improvements.runImprovements().then(() => {;

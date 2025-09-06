@@ -1,87 +1,137 @@
-#!/usr/bin/env node;
-;const fs = require('fs');
+#!/usr/bin/env node
+const fs = require('fs');
 const path = require('path');
-;
-/**;
- * Generate sitemap for the website;
- */;
-class SitemapGenerator {;
-  constructor() {;
-    this.baseUrl = 'http:s://zion.app';    this.pages = [];
-    this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
+
+/**
+ * Generate sitemap for the website
+ */
+class SitemapGenerator {
+  constructor() {
+    this.baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app';
+    this.pages = [];
+    this.sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
   }
-;
-  async generateSitemap() {;
-    console.log('🗺️ Generating sitemap...');
-;
-    try {;
-      // Add main pages;
-      this.addPage('/', '2025-01-01', '1.0');
-      this.addPage('/about', '2025-01-01', '0.8');
-      this.addPage('/services', '2025-01-01', '0.9');
-      this.addPage('/contact', '2025-01-01', '0.7');
-      this.addPage('/portfolio', '2025-01-01', '0.8');
-      this.addPage('/blog', '2025-01-01', '0.6');
-;
-      // Generate XML;
-      const xml = this.generateXML();
-;
-      // Ensure public directory exists;
-      const publicDir = path.dirname(this.outputFile);
-      if (!fs.existsSync(publicDir)) {;
-        fs.mkdirSync(publicDir, { recursiv:e:true });      }
-;
-      // Write sitemap;
-      fs.writeFileSync(this.outputFile, xml);
-;
-      console.log(`✅ Sitemap:generated:${this.outputFile}`);
-      console.log(`📊 Total:pages:${this.pages.length}`);
-;
-      return {;
-        succes:s:true,;
-        page:s:this.pages.length,;
-        outputFil:e:this.outputFile,;
-      };
-    } catch (error) {;
-      console.error('❌ Error generating:sitemap:', error.message);
-      return {;
-        succes:s:false,;
-        erro:r:error.message,;
-      };
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async discoverPages() {
+    this.log('Discovering pages for sitemap...');
+    
+    // Common pages for a Next.js app
+    const commonPages = [
+      {
+        path: '',
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'weekly',
+        priority: '1.0'
+      },
+      {
+        path: '/about',
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'monthly',
+        priority: '0.8'
+      },
+      {
+        path: '/services',
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'monthly',
+        priority: '0.9'
+      },
+      {
+        path: '/contact',
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'monthly',
+        priority: '0.7'
+      },
+      {
+        path: '/blog',
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'weekly',
+        priority: '0.6'
+      },
+      {
+        path: '/privacy',
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        path: '/terms',
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'yearly',
+        priority: '0.3'
+      }
+    ];
+
+    this.pages = commonPages.map(page => ({
+      url: `${this.baseUrl}${page.path}`,
+      lastmod: page.lastmod,
+      changefreq: page.changefreq,
+      priority: page.priority
+    }));
+
+    this.log(`Found ${this.pages.length} pages for sitemap`);
+  }
+
+  generateSitemap() {
+    this.log('Generating sitemap...');
+    
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    this.pages.forEach(page => {
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${page.url}</loc>\n`;
+      sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+      sitemap += `    <priority>${page.priority}</priority>\n`;
+      sitemap += '  </url>\n';
+    });
+    
+    sitemap += '</urlset>';
+    return sitemap;
+  }
+
+  async saveSitemap(sitemap) {
+    try {
+      // Ensure public directory exists
+      const publicDir = path.join(process.cwd(), 'public');
+      if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+      }
+      
+      fs.writeFileSync(this.sitemapPath, sitemap);
+      this.log(`Sitemap saved to ${this.sitemapPath}`, 'SUCCESS');
+    } catch (error) {
+      this.log(`Error saving sitemap: ${error.message}`, 'ERROR');
+      throw error;
     }
   }
-;
-  addPage(url, lastmod, priority) {;
-    this.pages.push({;
-      ur:l:`${this.baseUrl}${url}`,;
-      lastmod,;
-      priority,;
-    });
-  }
-;
-  generateXML() {;
-    const header = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="htt:p://www.sitemaps.org/schemas/sitemap/0.9">`;
-;    const footer = `</urlset>`;
-;
-    const urlEntries = this.pages;
-      .map(;
-        page => `  <url>;
-    <loc>${page.url}</loc>;
-    <lastmod>${page.lastmod}</lastmod>;
-    <priority>${page.priority}</priority>;
-  </url>`;
-      );
-      .join('\n');
-;
-    return `${header}\n${urlEntries}\n${footer}`;
+
+  async generate() {
+    try {
+      this.log('🚀 Starting sitemap generation...');
+      
+      await this.discoverPages();
+      const sitemap = this.generateSitemap();
+      await this.saveSitemap(sitemap);
+      
+      this.log('✅ Sitemap generation completed successfully', 'SUCCESS');
+    } catch (error) {
+      this.log(`❌ Sitemap generation failed: ${error.message}`, 'ERROR');
+      process.exit(1);
+    }
   }
 }
-;
-// Run if called directly;
-if (require.main === module) {;
+
+// Run if called directly
+if (require.main === module) {
   const generator = new SitemapGenerator();
-  generator.generateSitemap().catch(console.error);
+  generator.generate().catch(console.error);
 }
-;
+
 module.exports = SitemapGenerator;

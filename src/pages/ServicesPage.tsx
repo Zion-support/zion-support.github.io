@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { useRouter } from 'next/router',
@@ -300,3 +301,8 @@ export default function ServicesPage() {;
   );
 }
 ;
+=======
+let filteredServices = allServices;
+
+}
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -11,11 +12,16 @@ import { useIsMounted } from "@/hooks/useIsMounted",
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
 const listingSchema = z.object({
+=======
+const listingSchema = z.object({
+
+>>>>>>> main
   id: z.string(),
   title: z.string(),
   category: z.string(),
   image: z.string().optional()}),
 
+<<<<<<< HEAD
 const listingsSchema = z.array(listingSchema),
 
 interface ServiceTypeStepProps {
@@ -312,3 +318,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   );
 }
 ;
+=======
+      const maxRetries = 3;
+
+}
+>>>>>>> main

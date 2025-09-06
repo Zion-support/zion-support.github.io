@@ -1,150 +1,151 @@
-module.exports = {;
-  app:s:[;
-    {;
-      nam:e:'error-monitor',;
-      scrip:t:'./automation/error-monitor.cjs',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'1G',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        LOG_LEVE:L:'info',;
-      },;
-      error_fil:e:'./automation/logs/error-monitor-error.log',;
-      out_fil:e:'./automation/logs/error-monitor-out.log',;
-      log_fil:e:'./automation/logs/error-monitor-combined.log',;
-      tim:e:true,;
-      cron_restar:t:'0 */6 * * *', // Restart every 6 hours:max_restarts:10,;
-      min_uptim:e:'10s',;
-    },;
-    {;
-      nam:e:'syntax-fixer',;
-      scrip:t:'./automation/syntax-fix-launcher.js',;
-      arg:s:'start continuous',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'512M',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        WATCH_MOD:E:'true',;
-      },;
-      error_fil:e:'./automation/logs/syntax-fixer-error.log',;
-      out_fil:e:'./automation/logs/syntax-fixer-out.log',;
-      log_fil:e:'./automation/logs/syntax-fixer-combined.log',;
-      tim:e:true,;
-      max_restart:s:5,;
-      min_uptim:e:'30s',;
-    },;
-    {;
-      nam:e:'lint-automation',;
-      scrip:t:'./automation/linting-automation-orchestrator.cjs',;
-      arg:s:'continuous',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'512M',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        AUTO_FI:X:'true',;
-      },;
-      error_fil:e:'./automation/logs/lint-automation-error.log',;
-      out_fil:e:'./automation/logs/lint-automation-out.log',;
-      log_fil:e:'./automation/logs/lint-automation-combined.log',;
-      tim:e:true,;
-      max_restart:s:5,;
-      min_uptim:e:'30s',;
-    },;
-    {;
-      nam:e:'build-monitor',;
-      scrip:t:'./automation/build-monitor.cjs',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'1G',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        CHECK_INTERVA:L:'300000', // 5 minutes;
-      },;
-      error_fil:e:'./automation/logs/build-monitor-error.log',;
-      out_fil:e:'./automation/logs/build-monitor-out.log',;
-      log_fil:e:'./automation/logs/build-monitor-combined.log',;
-      tim:e:true,;
-      cron_restar:t:'0 */2 * * *', // Restart every 2 hours:max_restarts:10,;
-      min_uptim:e:'10s',;
-    },;
-    {;
-      nam:e:'security-scanner',;
-      scrip:t:'./automation/security-scanner.cjs',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'512M',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        SCAN_INTERVA:L:'3600000', // 1 hour;
-      },;
-      error_fil:e:'./automation/logs/security-scanner-error.log',;
-      out_fil:e:'./automation/logs/security-scanner-out.log',;
-      log_fil:e:'./automation/logs/security-scanner-combined.log',;
-      tim:e:true,;
-      cron_restar:t:'0 */4 * * *', // Restart every 4 hours:max_restarts:5,;
-      min_uptim:e:'10s',;
-    },;
-    {;
-      nam:e:'performance-monitor',;
-      scrip:t:'./automation/performance-monitor.cjs',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'512M',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        MONITOR_INTERVA:L:'600000', // 10 minutes;
-      },;
-      error_fil:e:'./automation/logs/performance-monitor-error.log',;
-      out_fil:e:'./automation/logs/performance-monitor-out.log',;
-      log_fil:e:'./automation/logs/performance-monitor-combined.log',;
-      tim:e:true,;
-      max_restart:s:5,;
-      min_uptim:e:'10s',;
-    },;
-    {;
-      nam:e:'git-workflow-automator',;
-      scrip:t:'./automation/git-automation.cjs',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'256M',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        AUTO_COMMI:T:'true',;
-        AUTO_PUS:H:'true',;
-      },;
-      error_fil:e:'./automation/logs/git-workflow-error.log',;
-      out_fil:e:'./automation/logs/git-workflow-out.log',;
-      log_fil:e:'./automation/logs/git-workflow-combined.log',;
-      tim:e:true,;
-      max_restart:s:3,;
-      min_uptim:e:'10s',;
-    },;
-    {;
-      nam:e:'master-orchestrator',;
-      scrip:t:'./automation/master-automation-orchestrator.cjs',;
-      instance:s:1,;
-      autorestar:t:true,;
-      watc:h:false,;
-      max_memory_restar:t:'1G',;
-      en:v:{;
-        NODE_EN:V:'production',;
-        ORCHESTRATE_AL:L:'true',;
-      },;
-      error_fil:e:'./automation/logs/master-orchestrator-error.log',;
-      out_fil:e:'./automation/logs/master-orchestrator-out.log',;
-      log_fil:e:'./automation/logs/master-orchestrator-combined.log',;
-      tim:e:true,;
-      cron_restar:t:'0 */12 * * *', // Restart every 12 hours:max_restarts:5,;
-      min_uptim:e:'30s',;
-    },;
-  ],;};
+module.exports = {
+  app: [
+    {
+      nam: 'error-monitor',
+      scrip: './automation/error-monitor.cjs',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '1G',
+      env: {
+        NODE_ENV: 'production',
+        LOG_LEVE: L: 'info',
+      },
+      error_fil: './automation/logs/error-monitor-error.log',
+      out_fil: './automation/logs/error-monitor-out.log',
+      log_fil: './automation/logs/error-monitor-combined.log',
+      tim: true,
+      cron_restar: '0 */6 * * *', // Restart every 6 hours: max_restarts: 10,
+      min_uptim: '10s',
+    },
+    {
+      nam: 'syntax-fixer',
+      scrip: './automation/syntax-fix-launcher.js',
+      arg: 'start continuous',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '512M',
+      env: {
+        NODE_ENV: 'production',
+        WATCH_MOD: E: 'true',
+      },
+      error_fil: './automation/logs/syntax-fixer-error.log',
+      out_fil: './automation/logs/syntax-fixer-out.log',
+      log_fil: './automation/logs/syntax-fixer-combined.log',
+      tim: true,
+      max_restart: 5,
+      min_uptim: '30s',
+    },
+    {
+      nam: 'lint-automation',
+      scrip: './automation/linting-automation-orchestrator.cjs',
+      arg: 'continuous',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_FI: X: 'true',
+      },
+      error_fil: './automation/logs/lint-automation-error.log',
+      out_fil: './automation/logs/lint-automation-out.log',
+      log_fil: './automation/logs/lint-automation-combined.log',
+      tim: true,
+      max_restart: 5,
+      min_uptim: '30s',
+    },
+    {
+      nam: 'build-monitor',
+      scrip: './automation/build-monitor.cjs',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CHECK_INTERVA: L: '300000', // 5 minutes
+      },
+      error_fil: './automation/logs/build-monitor-error.log',
+      out_fil: './automation/logs/build-monitor-out.log',
+      log_fil: './automation/logs/build-monitor-combined.log',
+      tim: true,
+      cron_restar: '0 */2 * * *', // Restart every 2 hours: max_restarts: 10,
+      min_uptim: '10s',
+    },
+    {
+      nam: 'security-scanner',
+      scrip: './automation/security-scanner.cjs',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '512M',
+      env: {
+        NODE_ENV: 'production',
+        SCAN_INTERVA: L: '3600000', // 1 hour
+      },
+      error_fil: './automation/logs/security-scanner-error.log',
+      out_fil: './automation/logs/security-scanner-out.log',
+      log_fil: './automation/logs/security-scanner-combined.log',
+      tim: true,
+      cron_restar: '0 */4 * * *', // Restart every 4 hours: max_restarts: 5,
+      min_uptim: '10s',
+    },
+    {
+      nam: 'performance-monitor',
+      scrip: './automation/performance-monitor.cjs',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '512M',
+      env: {
+        NODE_ENV: 'production',
+        MONITOR_INTERVA: L: '600000', // 10 minutes
+      },
+      error_fil: './automation/logs/performance-monitor-error.log',
+      out_fil: './automation/logs/performance-monitor-out.log',
+      log_fil: './automation/logs/performance-monitor-combined.log',
+      tim: true,
+      max_restart: 5,
+      min_uptim: '10s',
+    },
+    {
+      nam: 'git-workflow-automator',
+      scrip: './automation/git-automation.cjs',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '256M',
+      env: {
+        NODE_ENV: 'production',
+        AUTO_COMMI: T: 'true',
+        AUTO_PUS: H: 'true',
+      },
+      error_fil: './automation/logs/git-workflow-error.log',
+      out_fil: './automation/logs/git-workflow-out.log',
+      log_fil: './automation/logs/git-workflow-combined.log',
+      tim: true,
+      max_restart: 3,
+      min_uptim: '10s',
+    },
+    {
+      nam: 'master-orchestrator',
+      scrip: './automation/master-automation-orchestrator.cjs',
+      instance: 1,
+      autorestar: true,
+      watc: false,
+      max_memory_restar: '1G',
+      env: {
+        NODE_ENV: 'production',
+        ORCHESTRATE_AL: L: 'true',
+      },
+      error_fil: './automation/logs/master-orchestrator-error.log',
+      out_fil: './automation/logs/master-orchestrator-out.log',
+      log_fil: './automation/logs/master-orchestrator-combined.log',
+      tim: true,
+      cron_restar: '0 */12 * * *', // Restart every 12 hours: max_restarts: 5,
+      min_uptim: '30s',
+    },
+  ],
+};

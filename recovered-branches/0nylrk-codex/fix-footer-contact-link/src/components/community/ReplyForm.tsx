@@ -1,4 +1,17 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Button } from "@/components/ui/button",
@@ -52,6 +65,34 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       setIsSubmitting(false);
     }
   },
+=======
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string;
+}
+
+interface ReplyFormValues {
+  content: string;
+}
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: "",
+    },
+  });
+
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true);
+    try {
+      (await onSubmit(values.content), form.reset());
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+>>>>>>> main
 
   return (
     <Card>
@@ -65,6 +106,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
                 <FormItem>
                   <FormControl>
                     <Textarea
+<<<<<<< HEAD
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
                       className="min-h-[100px] resize-y"
                       {...field}
@@ -72,6 +114,19 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
+=======
+                      placeholder={
+                        parentId
+                          ? "Write your reply..."
+                          : "Join the discussion..."
+                      }
+                      className="min-h-[100px] resize-y"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+>>>>>>> main
               )}
             />
             <div className="mt-4 flex justify-end">
@@ -83,7 +138,14 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 },
 
 export default ReplyForm,
+=======
+  );
+};
+
+export default ReplyForm;
+>>>>>>> main

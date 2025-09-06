@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/utils/email.ts
 import fs from 'fs-extra',;
 import path from 'path',;
 export interface WarningEmailPayload {;
@@ -13,4 +14,14 @@ export async function sendWarningEmail(payload: WarningEmailPayload): Promise<vo
   await fs.ensureDir(logDir);
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
   await fs.appendFile(logPath, line, 'utf8');
+=======
+export async function sendWarningEmail(record: any): Promise<void> {
+  console.log('Sending warning email for fraud record:', record.id);
+  // Implementation would send actual email
+}
+
+export async function sendNotificationEmail(to: string, subject: string, body: string): Promise<void> {
+  console.log('Sending notification email to:', to);
+  // Implementation would send actual email
+>>>>>>> main:utils/email.ts
 }

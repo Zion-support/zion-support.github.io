@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
@@ -68,6 +69,44 @@ export function ReviewForm({
   defaultValues,
   isSubmitting}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0),
+=======
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {useForm} from "react-hook-form";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Switch} from "@/components/ui/switch";
+import {Review} from "@/types/reviews";
+interface ReviewFormValues {
+  rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
+  is_anonymous?: boolean
+}
+
+interface ReviewFormProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  onSubmit: (data: any) => Promise<boolean>, 
+  defaultValues?: Review;
+  isSubmitting: boolean
+}
+
+export function ReviewForm({
+  projectId;
+  revieweeId;
+  revieweeName;
+  onSubmit;
+  defaultValues;
+  isSubmitting}: ReviewFormProps) {
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
+>>>>>>> main
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -85,6 +124,7 @@ export function ReviewForm({
       timeliness_rating: undefined,
       would_work_again: undefined,
       is_anonymous: false}
+<<<<<<< HEAD
   }),;
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
@@ -98,17 +138,37 @@ export function ReviewForm({
   },
   
   const watchRating = form.watch("rating"),
+=======
+  });
+  
+  const handleSubmit = async (values: ReviewFormValues) => {
+    const formattedData = {
+      ...values,
+      project_id: projectId,
+      reviewee_id: revieweeId},
+    
+    const success = await onSubmit(formattedData);
+    if (success) {
+      form.reset()
+    }
+  };
+  
+  const watchRating = form.watch("rating");
+>>>>>>> main
   
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+<<<<<<< HEAD
   },;
   const watchRating = form.watch("rating"),;
   return (;
     <Form {...form}>;
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+=======
+>>>>>>> main
         {/* Main Rating */}
-        <FormField;
+        <FormField
           control={form.control}
           name="rating"
           rules={{ required: "Rating is required" }}
@@ -134,8 +194,8 @@ export function ReviewForm({
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         } transition-colors`}
-                      />;
-                    </button>;
+                      />
+                    </button>
                   ))}
                 </div>
               </FormControl>
@@ -144,9 +204,14 @@ export function ReviewForm({
               </div>
             </FormItem>
           )}
+<<<<<<< HEAD
         />;
+=======
+        />
+        
+>>>>>>> main
         {/* Review Text */}
-        <FormField;
+        <FormField
           control={form.control}
           name="review_text"
           rules={{
@@ -162,19 +227,24 @@ export function ReviewForm({
                   placeholder="Share your experience and feedback..."
                   className="min-h-24 resize-none"
                   {...field}
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
           )}
+<<<<<<< HEAD
         />;
+=======
+        />
+        
+>>>>>>> main
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
             
             {/* Communication */}
-            <FormField;
+            <FormField
               control={form.control}
               name="communication_rating"
               render={({ field }) => (
@@ -184,10 +254,10 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -196,6 +266,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
+<<<<<<< HEAD
                           </FormLabel>;
                         </FormItem>;
                       ))}
@@ -205,8 +276,20 @@ export function ReviewForm({
                 </FormItem>;
               )}
             />;
+=======
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+>>>>>>> main
             {/* Quality */}
-            <FormField;
+            <FormField
               control={form.control}
               name="quality_rating"
               render={({ field }) => (
@@ -216,10 +299,10 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -228,6 +311,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
+<<<<<<< HEAD
                           </FormLabel>;
                         </FormItem>;
                       ))}
@@ -237,8 +321,20 @@ export function ReviewForm({
                 </FormItem>;
               )}
             />;
+=======
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+>>>>>>> main
             {/* Timeliness */}
-            <FormField;
+            <FormField
               control={form.control}
               name="timeliness_rating"
               render={({ field }) => (
@@ -248,10 +344,10 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4";
-                    >;
-                      {[1, 2, 3, 4, 5].map((value) => (;
-                        <FormItem;
+                      className="flex flex-wrap gap-4"
+                    >
+                      {[1, 2, 3, 4, 5].map((value) => (
+                        <FormItem
                           key={value}
                           className="flex items-center space-x-2"
                         >
@@ -260,6 +356,7 @@ export function ReviewForm({
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
                             {value}
+<<<<<<< HEAD
                           </FormLabel>;
                         </FormItem>;
                       ))}
@@ -269,8 +366,20 @@ export function ReviewForm({
                 </FormItem>;
               )}
             />;
+=======
+                          </FormLabel>
+                        </FormItem>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+>>>>>>> main
             {/* Would Work Again */}
-            <FormField;
+            <FormField
               control={form.control}
               name="would_work_again"
               render={({ field }) => (
@@ -292,12 +401,19 @@ export function ReviewForm({
                   <FormMessage />
                 </FormItem>
               )}
+<<<<<<< HEAD
             />;
           </div>;
         )}
 ;
+=======
+            />
+          </div>
+        )}
+        
+>>>>>>> main
         {/* Anonymous Review */}
-        <FormField;
+        <FormField
           control={form.control}
           name="is_anonymous"
           render={({ field }) => (
@@ -332,4 +448,7 @@ export function ReviewForm({
     </Form>
   )
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> main

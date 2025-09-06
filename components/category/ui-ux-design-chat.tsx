@@ -1,0 +1,9 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+const UiUxDesignChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>UiUxDesignChat - Zion Tech Solutions</title>

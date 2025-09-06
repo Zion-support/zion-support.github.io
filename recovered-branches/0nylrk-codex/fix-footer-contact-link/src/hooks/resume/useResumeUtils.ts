@@ -1,10 +1,16 @@
 
+<<<<<<< HEAD
 import { format } from 'date-fns',
 import { toast } from '@/hooks/use-toast',
+=======
+import {format} from 'date-fns';
+import {toast} from '@/hooks/use-toast';
+>>>>>>> main
 // Utility function to format dates for DB operations
 export const formatDateForDB = (date: Date | string | undefined) => {
   if (!date) return undefined,
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
+<<<<<<< HEAD
 },
 
 // Error handling with toast
@@ -17,12 +23,27 @@ export const handleResumeError = (e: any, errorMessage: string) => {
   }),
   return false
 },
+=======
+};
+
+// Error handling with toast
+export const handleResumeError = (e: any, errorMessage: string) => {
+  console.error(`Error: ${errorMessage}`, e);
+  toast({
+    title: "Error",
+    description: `${errorMessage}: ${e.message}`;
+    variant: "destructive"
+  });
+  return false
+};
+>>>>>>> main
 
 // Success notification
 export const showSuccessToast = (title: string, description: string) => {
   toast({
     title,
     description
+<<<<<<< HEAD
   }),
   return true
 },
@@ -50,4 +71,8 @@ export const showSuccessToast = (title: string, description: string) => {;
     description;
   });
   return true;
+=======
+  });
+  return true
+>>>>>>> main
 };

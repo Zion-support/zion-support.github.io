@@ -13,3 +13,4 @@ import { execSync, spawn } from;
   'npm outdated --json', { "stdio"}
         "type": ';outdated, '}))    } "catch"
             "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"
+            "type": ';outdated, '}))} "catch"            "type": ';outdated, '}))} "catch"

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
@@ -10,6 +11,19 @@ interface EducationListProps {;
 export function EducationList({ educationEntries, onEdit, onDelete }: EducationListProps) {;
   if (!educationEntries || educationEntries.length === 0) {;
     return null;
+=======
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+interface EducationListProps {
+  educationEntries: Education[],
+  onEdit: (education: Education) => void,
+  onDelete: (id: string) => void
+}
+
+export function EducationList({ educationEntries, onEdit, onDelete }: EducationListProps) {
+  if (!educationEntries || educationEntries.length === 0) {
+    return null
+>>>>>>> main
   }
 
   return (
@@ -23,7 +37,12 @@ export function EducationList({ educationEntries, onEdit, onDelete }: EducationL
           onDelete={onDelete} 
         />
       ))}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+  )
+>>>>>>> main
 }
 ;

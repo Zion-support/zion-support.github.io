@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -18,6 +19,20 @@ interface ProjectDetailsFieldProps {;
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {;
   return (;
     <FormField;
+=======
+import React from "react";
+import {UseFormReturn} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Textarea} from "@/components/ui/textarea";
+import {FormValues} from "./useHireRequestForm";
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn<FormValues>
+}
+
+export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
+  return (
+    <FormField
+>>>>>>> main
       control={form.control}
       name="projectOverview"
       render={({ field }) => (
@@ -33,7 +48,12 @@ export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {;
           <FormMessage className="text-red-400" />
         </FormItem>
       )}
+<<<<<<< HEAD
     />;
   );
+=======
+    />
+  )
+>>>>>>> main
 }
 ;

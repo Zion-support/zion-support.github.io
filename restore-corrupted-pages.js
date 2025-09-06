@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -181,3 +182,5 @@ module.exports = {;
   restoreAllCorruptedPages,;
   findBestBackup;
 };
+=======
+>>>>>>> main

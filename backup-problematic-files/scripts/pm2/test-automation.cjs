@@ -46,6 +46,7 @@ class TestAutomation {}
       const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
       this.log(`Running tests: ${testCommand}`);
       
+      
       const result = execSync(testCommand, { })
         encoding: 'utf8',
         stdio: 'pipe',
@@ -82,6 +83,7 @@ class TestAutomation {}
   async checkCoverage() {}
     try {}
       this.log('Checking test coverage...');
+      
       
       // Try to run coverage command;
       const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
@@ -152,4 +154,5 @@ if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
 };
+module.exports = TestAutomation;module.exports = TestAutomation;
 module.exports = TestAutomation;module.exports = TestAutomation;

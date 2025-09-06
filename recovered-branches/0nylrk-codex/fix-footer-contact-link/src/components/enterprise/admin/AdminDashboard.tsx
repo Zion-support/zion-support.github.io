@@ -1,4 +1,12 @@
+import React from "react";
+import { AdminHeader } from "./AdminHeader";
+import { TeamManagement } from "./TeamManagement";
+import { UsageStats } from "./UsageStats";
+import { RoleManagement } from "./RoleManagement";
+import { TeamActivity } from "./TeamActivity";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+<<<<<<< HEAD
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
@@ -11,11 +19,17 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 
+=======
+>>>>>>> main
 export function AdminDashboard() {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
       <AdminHeader />
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> main
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -23,6 +37,7 @@ export function AdminDashboard() {
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
         </TabsList>
+<<<<<<< HEAD
         
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
@@ -36,11 +51,27 @@ export function AdminDashboard() {
           <UsageStats />
         </TabsContent>
         
+=======
+
+        <TabsContent value="team" className="space-y-8">
+          <TeamManagement />
+        </TabsContent>
+
+        <TabsContent value="roles" className="space-y-8">
+          <RoleManagement />
+        </TabsContent>
+
+        <TabsContent value="usage" className="space-y-8">
+          <UsageStats />
+        </TabsContent>
+
+>>>>>>> main
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>
     </div>
+<<<<<<< HEAD
   )
 import React from "react",;
 import { AdminHeader } from "./AdminHeader",;
@@ -81,3 +112,7 @@ export function AdminDashboard() {;
   );
 }
 ;
+=======
+  );
+}
+>>>>>>> main

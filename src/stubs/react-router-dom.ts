@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',;
 export const BrowserRouter = ({ children }: { children: any }) => children,;
 export const Routes = ({ children }: { children: any }) => children,;
@@ -24,3 +25,21 @@ export default {;
   useLocation,;
   useParams;
   useSearchParams};
+=======
+import React from 'react';
+
+export default {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  NavLink,
+  Navigate,
+  MemoryRouter,
+  Outlet,
+  useNavigate,
+  useLocation,
+  useParams,
+  useSearchParams,
+};
+>>>>>>> main

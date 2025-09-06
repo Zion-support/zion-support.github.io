@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",
+=======
+import {useState, useEffect} from "react";
+import {useAuth} from "./useAuth";
+import {supabase} from "@/integrations/supabase/client";
+>>>>>>> main
 interface OnboardingStatus {
   profileCompleted: boolean,
   skillsAdded: boolean,
@@ -13,7 +19,11 @@ interface OnboardingStatus {
 }
 
 export function useOnboardingStatus() {
+<<<<<<< HEAD
   const { user } = useAuth(),
+=======
+  const { user } = useAuth();
+>>>>>>> main
   const [status, setStatus] = useState<OnboardingStatus>({
     profileCompleted: false,
     skillsAdded: false,
@@ -22,11 +32,19 @@ export function useOnboardingStatus() {
     jobPosted: false,
     inviteSent: false,
     responseReceived: false
+<<<<<<< HEAD
   }),
   
   useEffect(() => {
     const fetchOnboardingStatus = async () => {
       if (!user) return,
+=======
+  });
+  
+  useEffect(() => {
+    const fetchOnboardingStatus = async () => {
+      if (!user) return;
+>>>>>>> main
       
       try {
         // Get user onboarding progress from database
@@ -34,6 +52,7 @@ export function useOnboardingStatus() {
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
+<<<<<<< HEAD
           .single(),
           
         if (error) {
@@ -100,3 +119,33 @@ export function useOnboardingStatus() {;
   return status;
 }
 ;
+=======
+          .single();
+          
+        if (error) {
+          console.error("Error fetching onboarding status:", error);
+          return
+        }
+        
+        if (data) {
+          setStatus({
+            profileCompleted: data.profile_completed || false,
+            skillsAdded: data.skills_added || false,
+            availabilitySet: data.availability_set || false,
+            matchReceived: data.match_received || false,
+            jobPosted: data.job_posted || false,
+            inviteSent: data.talent_invited || false,
+            responseReceived: data.quote_received || false
+          })
+        }
+      } catch (err) {
+        console.error("Error in onboarding status hook:", err)
+      }
+    };
+    
+    fetchOnboardingStatus()
+  }, [user]);
+  
+  return status
+}
+>>>>>>> main

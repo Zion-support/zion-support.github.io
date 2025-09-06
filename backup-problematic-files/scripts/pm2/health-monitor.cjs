@@ -50,6 +50,7 @@ const checkSystemHealth = () => {}
   };
 };
 
+
 const generateHealthReport = (results) => {}
   const report = {}
     timestamp: new Date().toISOString(),
@@ -58,6 +59,7 @@ const generateHealthReport = (results) => {}
       status: results.system.overall ? 'HEALTHY' : 'UNHEALTHY'
     };
   };
+  
   
   // Save report;
   const reportPath = 'logs/pm2/health-report.json';
@@ -80,6 +82,9 @@ const main = async () => {}
   
   const report = generateHealthReport(results);
   
+  
+  const report = generateHealthReport(results);
+  
   if (report.overall.status === 'HEALTHY') {}
     log('System health check passed: All systems operational');
   } else {}
@@ -88,6 +93,7 @@ const main = async () => {}
   log('Health Monitor Process completed');
 };
 
+
 // Handle process termination;
 process.on('SIGINT', () => {}
   log('Health Monitor Process interrupted');
@@ -95,15 +101,18 @@ process.on('SIGINT', () => {}
 }
 });
 
+
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
   process.exit(0);
 }
 });
 
+
 // Run the main function;
 main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
+});});
 });});

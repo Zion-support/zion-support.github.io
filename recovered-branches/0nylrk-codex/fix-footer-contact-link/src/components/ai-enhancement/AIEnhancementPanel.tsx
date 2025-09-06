@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -35,6 +36,46 @@ export function AIEnhancementPanel({;
       setGeneratedContent(result);
     }
   },
+=======
+import React, { useState } from 'react';
+import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
+import {Textarea} from '@/components/ui/textarea';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
+import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
+
+interface AIEnhancementPanelProps {
+  title: string,
+  defaultOptions: AIEnhancementOptions,
+  onApply: (content: string) => void,
+  onClose?: () => void;
+  showInstructions?: boolean;
+  initialContent?: string
+}
+
+export function AIEnhancementPanel({
+  title;
+  defaultOptions;
+  onApply;
+  onClose;
+  showInstructions = true;
+  initialContent = ''
+}: AIEnhancementPanelProps) {
+  const [options, setOptions] = useState<AIEnhancementOptions>({
+    ...defaultOptions;
+    content: initialContent || defaultOptions.content}),
+  const [generatedContent, setGeneratedContent] = useState<string>('');
+  const [copied, setCopied] = useState(false);
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+
+  const handleGenerate = async () => {
+    const result = await enhanceContent(options);
+    if (result) {
+      setGeneratedContent(result)
+    }
+  };
+>>>>>>> main
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -43,6 +84,7 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options,
       [field]: e.target.value})
+<<<<<<< HEAD
   },
 
   const handleApply = () => {
@@ -55,6 +97,20 @@ export function AIEnhancementPanel({;
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
+=======
+  };
+
+  const handleApply = () => {
+    onApply(generatedContent);
+    if (onClose) onClose()
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000)
+  };
+>>>>>>> main
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -73,8 +129,14 @@ export function AIEnhancementPanel({;
             className="min-h-[100px]"
             value={options.content}
             onChange={(e) => handleInputChange(e, 'content')}
+<<<<<<< HEAD
           />;
         </div>;
+=======
+          />
+        </div>
+
+>>>>>>> main
         {/* Context input */}
         <div className="space-y-2">
           <label className="text-sm font-medium">Context (optional)</label>
@@ -83,8 +145,14 @@ export function AIEnhancementPanel({;
             className="min-h-[60px]"
             value={options.context}
             onChange={(e) => handleInputChange(e, 'context')}
+<<<<<<< HEAD
           />;
         </div>;
+=======
+          />
+        </div>
+
+>>>>>>> main
         {/* Instructions input (optional) */}
         {showInstructions && (
           <div className="space-y-2">
@@ -93,10 +161,10 @@ export function AIEnhancementPanel({;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={(e) => handleInputChange(e, 'instructions')}
-            />;
-          </div>;
+            />
+          </div>
         )}
-;
+
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
@@ -114,7 +182,12 @@ export function AIEnhancementPanel({;
               Generate Enhanced Content
             </>
           )}
+<<<<<<< HEAD
         </Button>;
+=======
+        </Button>
+
+>>>>>>> main
         {/* Output area */}
         {generatedContent && (
           <div className="space-y-2 mt-4">
@@ -151,6 +224,7 @@ export function AIEnhancementPanel({;
               Cancel
             </Button>
           )}
+<<<<<<< HEAD
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
@@ -158,5 +232,14 @@ export function AIEnhancementPanel({;
       )}
     </Card>;
   );
+=======
+          <Button onClick={handleApply}>
+            Apply to Form
+          </Button>
+        </CardFooter>
+      )}
+    </Card>
+  )
+>>>>>>> main
 }
 ;

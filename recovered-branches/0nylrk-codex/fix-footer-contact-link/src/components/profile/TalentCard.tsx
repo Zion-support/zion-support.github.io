@@ -1,9 +1,17 @@
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
 import { Link } from "react-router-dom",
 import { TalentProfile } from "@/types/talent",
+=======
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
+import {Link} from "react-router-dom";
+import {TalentProfile} from "@/types/talent";
+>>>>>>> main
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -11,6 +19,7 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
@@ -55,6 +64,42 @@ export function TalentCard({;
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
+=======
+}
+
+export function TalentCard({
+  talent;
+  onViewProfile;
+  onRequestHire;
+  isSaved;
+  onToggleSave;
+  isAuthenticated
+}: TalentCardProps) {
+  const handleViewProfile = () => {
+    if (onViewProfile) {
+      onViewProfile(talent.id)
+    }
+  };
+
+  const handleRequestHire = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation(),
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
+  };
+
+  const handleToggleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation(),
+    if (onToggleSave) {
+      onToggleSave(talent.id, !isSaved)
+    }
+  };
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [];
+>>>>>>> main
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
@@ -80,7 +125,12 @@ export function TalentCard({;
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
               </div>
             )}
+<<<<<<< HEAD
           </div>;
+=======
+          </div>
+          
+>>>>>>> main
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
@@ -98,6 +148,7 @@ export function TalentCard({;
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
             
             {/* Location & Availability */}
+<<<<<<< HEAD
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent.location && (;
                 <div className="flex items-center text-zion-slate-light">;
@@ -145,6 +196,56 @@ export function TalentCard({;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+=======
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
+              {talent.location && (
+                <div className="flex items-center text-zion-slate-light">
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
+              )}
+              {talent.availability_type && (
+                <div className="flex items-center text-zion-slate-light">
+                  <Clock className="h-4 w-4 mr-1" />
+                  <span>{talent.availability_type}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        
+        {/* Skills */}
+        {skills.length > 0 && (
+          <div className="mt-4">
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill, index) => (
+                <span 
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
+                >
+                  {skill}
+                </span>
+              ))}
+              {(talent.skills?.length || 0) > 5 && (
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
+                  +{(talent.skills?.length || 0) - 5} more
+                </span>
+              )}
+            </div>
+          </div>
+        )}
+        
+        {/* Hourly Rate & Actions */}
+        <div className="mt-5 flex items-center justify-between">
+          <div>
+            {talent.hourly_rate ? (
+              <div className="text-white font-bold">
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>
+              </div>
+            ) : (
+              <div className="text-zion-slate-light">Rate not specified</div>
+>>>>>>> main
             )}
           </div>
           
@@ -163,6 +264,7 @@ export function TalentCard({;
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
+<<<<<<< HEAD
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
@@ -172,5 +274,16 @@ export function TalentCard({;
       </div>;
     </Card>;
   );
+=======
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+            >
+              View <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  )
+>>>>>>> main
 }
 ;

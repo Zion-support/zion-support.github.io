@@ -1,4 +1,10 @@
+import { SEO } from './SEO';
+// Map sitemap paths to their actual routes in the application
+// Note: This pathMap might need to be updated based on Next.js page structure
+const pathMap: Record<string, string> = {
+  '/about': '/content/about/blog': '/blog/careers': '/careers/green-it': '/content/green-it/sitemap-page': '/content/sitemap-page/talent-onboarding': '/talent-onboarding/forgot-password': '/forgot-password/signup/talent': '/auth/signup/talent/signup/client': '/auth/signup/client/talent-dashboard': '/talent-dashboard/client-dashboard': '/client-dashboard/hiring-tracker': '/dashboard/hiring-tracker/messages': '/dashboard/messages/notifications': '/dashboard/notifications/project/:projectId/room': '/dashboard/project/:projectId/room/post-job': '/marketplace/post-job'};
 
+<<<<<<< HEAD
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import Link from 'next/link',
@@ -11,6 +17,9 @@ const pathMap: Record<string string> = {
 
 const resolvePath = (path: string): string => pathMap[path] ?? path,
 
+=======
+const resolvePath = (path: string): string => pathMap[path] ?? path,
+>>>>>>> main
 export const SitemapPage: React.FC = () => {
   return (
     <>
@@ -22,7 +31,11 @@ export const SitemapPage: React.FC = () => {
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> main
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -33,17 +46,31 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> main
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+>>>>>>> main
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -57,17 +84,31 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> main
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+>>>>>>> main
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -81,17 +122,31 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> main
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+>>>>>>> main
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -105,17 +160,31 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> main
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+>>>>>>> main
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
@@ -128,23 +197,41 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
+<<<<<<< HEAD
                       href={resolvePath(route.path)}
+=======
+                      href = {resolvePath(route.path),}
+>>>>>>> main
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ));
+              }
+            </ul>
+          </div>
+
+>>>>>>> main
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
+<<<<<<< HEAD
               {Object.entries(dynamicPaths).map(([key, path]) => (
+=======
+              {Object.entries(dynamicPaths).map(([key, path],) => (
+>>>>>>> main
                 <li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
@@ -152,6 +239,7 @@ export const SitemapPage: React.FC = () => {
                   </div>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>;
           </div>;
         </div>;
@@ -159,3 +247,11 @@ export const SitemapPage: React.FC = () => {
     </>;
   );
 };
+=======
+            </ul>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+>>>>>>> main

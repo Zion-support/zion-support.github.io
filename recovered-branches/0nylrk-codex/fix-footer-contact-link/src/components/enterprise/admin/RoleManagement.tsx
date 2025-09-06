@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import {
   Table,
@@ -16,6 +17,15 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
+=======
+import React from "react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Switch} from "@/components/ui/switch";
+import {toast} from "@/hooks/use-toast";
+import {InfoIcon} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+>>>>>>> main
 
 export function RoleManagement() {
   // Mock team members data
@@ -74,6 +84,7 @@ export function RoleManagement() {
     toast({
       title: "Permission updated",
       description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+<<<<<<< HEAD
   },
 
   const roleDescriptions: Record<string string> = {
@@ -81,6 +92,15 @@ export function RoleManagement() {
     "Recruiter": "Can manage candidates and job postings",
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
+=======
+  };
+
+  const roleDescriptions: Record<string, string> = {
+    "Admin": "Full access to all features and settings";
+    "Recruiter": "Can manage candidates and job postings";
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"};
+>>>>>>> main
 
   return (
     <div className="space-y-6">
@@ -238,6 +258,7 @@ export function RoleManagement() {
                     checked={member.permissions.viewBilling} 
                     onCheckedChange={(checked) => 
                       handlePermissionChange(member.id, "viewBilling", checked)
+<<<<<<< HEAD
 import React from "react",;
 import {;
   Table,;
@@ -482,5 +503,17 @@ export function RoleManagement() {;
       </div>;
     </div>;
   );
+=======
+                    }
+                  />
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+>>>>>>> main
 }
 ;

@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { CategoriesSection } from "@/components/CategoriesSection",
 import { GradientHeading } from "@/components/GradientHeading",
+=======
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {GradientHeading} from "@/components/GradientHeading";
+>>>>>>> main
 export default function Categories() {
   return (
     <>
@@ -19,6 +26,7 @@ export default function Categories() {
             </p>
           </div>
           
+<<<<<<< HEAD
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { CategoriesSection } from "@/components/CategoriesSection",;
@@ -45,5 +53,14 @@ export default function Categories() {;
       <Footer />;
     </>;
   );
+=======
+          {/* Reuse the Categories Section component */}
+          <CategoriesSection showTitle={false} />
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+>>>>>>> main
 }
 ;

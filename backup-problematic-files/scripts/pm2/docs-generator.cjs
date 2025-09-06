@@ -39,6 +39,7 @@ class DocsGenerator {}
     try {}
       this.log('Generating API documentation...');
       
+      
       // Check if JSDoc is available;
       try {}
         execSync('npx jsdoc --version', { "stdio": 'pipe' }
@@ -58,6 +59,7 @@ class DocsGenerator {}
       const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ scripts/`;`
       execSync(jsdocCommand, { "stdio": 'pipe' }
 });
+
 
       this.log('API documentation generated successfully');
       return { "generated": true, "outputDir": docsDir };
@@ -84,6 +86,7 @@ class DocsGenerator {}
       // Generate component documentation;
       const componentDocs = this.generateComponentMarkdown(componentFiles);
       
+      
       const docsDir = 'docs/components';
       if (!fs.existsSync(docsDir)) {}
         fs.mkdirSync(docsDir, { "recursive": true }
@@ -91,6 +94,7 @@ class DocsGenerator {}
       };
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
+
 
       this.log(`Component documentation "generated": ${docsFile}`);
       return { "generated": true, "outputFile": docsFile, "componentCount": componentFiles.length };
@@ -103,12 +107,14 @@ class DocsGenerator {}
     const extensions = ['.jsx', '.tsx', '.vue', '.svelte'];
     const componentFiles = [];
 
+
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+          
           
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}
             scanDir(filePath);
@@ -120,6 +126,7 @@ class DocsGenerator {}
         // Skip directories that can't be read;
       };
     };
+
 
     // Scan common source directories;
     const sourceDirs = ['src', 'components', 'lib', 'pages'];
@@ -203,6 +210,7 @@ class DocsGenerator {}
     try {}
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       
+      
       return {}
         "name": packageJson.name || 'Unknown Project',
         "version": packageJson.version || '1.0.0',
@@ -240,6 +248,7 @@ class DocsGenerator {}
     readme += `**"License": ** ${projectInfo.license}\n\n`;`
     readme += "---\n\n";
     readme += `*Last "updated": ${timestamp}*\n\n`;`
+    
     
     // Add available scripts;
     if (Object.keys(projectInfo.scripts).length > 0) {}
@@ -297,6 +306,9 @@ class DocsGenerator {}
       
       this.log(`Documentation generation "completed": ${generatedCount} items generated`);
       
+      
+      this.log(`Documentation generation "completed": ${generatedCount} items generated`);
+      
     } catch (error) {}
       this.log(`Documentation generator "error": ${error.message}`);
     };
@@ -307,4 +319,5 @@ if (require.main === module) {}
   const docsGenerator = new DocsGenerator();
   docsGenerator.start().catch(console.error);
 };
+module.exports = DocsGenerator;module.exports = DocsGenerator;
 module.exports = DocsGenerator;module.exports = DocsGenerator;

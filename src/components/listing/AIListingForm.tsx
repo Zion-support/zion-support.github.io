@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -28,10 +29,19 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [category, setCategory] = useState(initialValues.category || ""),
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+=======
+isLoading: boolean,
+
+  initialValues?: {
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+>>>>>>> main
 
   const handleSubmit = () => {
     if (!title || !category) {
       toast({
+<<<<<<< HEAD
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
@@ -186,10 +196,51 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         disabled={isLoading || !title || !category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
+=======
+
+        />
+      </div>
+      <div className='space-y-2'>
+        <label
+          htmlFor='category'
+          className='text-sm font-medium text-zion-slate-light'
+        >
+          Category
+        </label>
+        <Input
+
+        />
+      </div>
+      <div className='space-y-2'>
+        <label
+          htmlFor='keyFeatures'
+          className='text-sm font-medium text-zion-slate-light'
+        >
+          Key Features (Optional)
+        </label>
+        <Textarea
+
+        />
+      </div>
+      <div className='space-y-2'>
+        <label
+          htmlFor='targetAudience'
+          className='text-sm font-medium text-zion-slate-light'
+        >
+          Target Audience (Optional)
+        </label>
+        <Input
+
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
+
+      >
+
+>>>>>>> main
         {isLoading ? (
           <>Generating Optimized Content...</>
         ) : (
           <>
+<<<<<<< HEAD
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
           </>
@@ -199,3 +250,25 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   );
 }
 ;
+=======
+            <Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content
+
+            Generate Optimized Content
+
+          </>
+        )}
+      </Button>
+    </div>
+  );
+
+}: AIListingFormProps) {;
+  if (!title || !category) {;
+  toast ({;
+  return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ;
+}</Button> </div>) ;
+}'"
+
+}
+>>>>>>> main

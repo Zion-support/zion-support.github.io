@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
@@ -5,6 +6,9 @@ import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { logWarn } from '@/utils/productionLogger',
+=======
+import { logWarn } from '@/utils/productionLogger';
+>>>>>>> main
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
@@ -12,6 +16,7 @@ interface ServiceStatus {
   lastChecked: string
 }
 
+<<<<<<< HEAD
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -395,3 +400,6 @@ export default function Status() {;
   );
 }
 ;
+=======
+}
+>>>>>>> main

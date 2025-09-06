@@ -1,16 +1,30 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
+=======
+import {GradientHeading} from "./GradientHeading";
+import {FeatureCard} from "./FeatureCard";
+import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
+>>>>>>> main
 
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
+<<<<<<< HEAD
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
     icon: <Bot className="w-8 h-8" />},
   {
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
+=======
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
+    icon: <Bot className="w-8 h-8" />},
+  {
+    title: "Global Availability",
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
+>>>>>>> main
     icon: <Globe className="w-8 h-8" />},
   {
     title: "24/7 Support",
@@ -35,6 +49,7 @@ export function BenefitsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <FeatureCard
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -68,6 +83,8 @@ export function BenefitsSection() {;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
           {benefits.map((benefit, index) => (;
             <FeatureCard;
+=======
+>>>>>>> main
               key={index}
               title={benefit.title}
               description={benefit.description}
@@ -75,9 +92,16 @@ export function BenefitsSection() {;
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
   );
+=======
+        </div>
+      </div>
+    </section>
+  )
+>>>>>>> main
 }
 ;

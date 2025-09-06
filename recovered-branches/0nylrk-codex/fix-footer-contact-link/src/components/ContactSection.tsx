@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
+=======
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+>>>>>>> main
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -10,7 +16,12 @@ export function ContactSection() {
           <div>
             <GradientHeading>Get In Touch</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl mb-8">
+<<<<<<< HEAD
               We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.
+=======
+              We have the equipment, the parts, and the maintenance services
+              ready for you — right now. Contact us today.
+>>>>>>> main
             </p>
             <div className="flex items-center mb-6">
               <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">
@@ -18,9 +29,18 @@ export function ContactSection() {
               </div>
               <div>
                 <p className="text-white font-semibold">Email Us</p>
+<<<<<<< HEAD
                 <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">
                   commercial@ziontechgroup.com
                 </Link>
+=======
+                <a
+                  href="mailto:commercial@ziontechgroup.com"
+                  className="text-zion-cyan hover:text-zion-purple transition-colors"
+                >
+                  commercial@ziontechgroup.com
+                </a>
+>>>>>>> main
               </div>
             </div>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -30,11 +50,24 @@ export function ContactSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>
             <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">
+<<<<<<< HEAD
               <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">
+=======
+              <h3 className="text-xl font-bold mb-6 text-white">
+                Send Us a Message
+              </h3>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-zion-slate-light mb-1"
+                    >
+>>>>>>> main
                       Name
                     </label>
                     <input
@@ -44,7 +77,14 @@ export function ContactSection() {
                     />
                   </div>
                   <div>
+<<<<<<< HEAD
                     <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
+=======
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-zion-slate-light mb-1"
+                    >
+>>>>>>> main
                       Email
                     </label>
                     <input
@@ -55,7 +95,14 @@ export function ContactSection() {
                   </div>
                 </div>
                 <div>
+<<<<<<< HEAD
                   <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
+=======
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+>>>>>>> main
                     Subject
                   </label>
                   <input
@@ -65,11 +112,19 @@ export function ContactSection() {
                   />
                 </div>
                 <div>
+<<<<<<< HEAD
                   <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">
+=======
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+>>>>>>> main
                     Message
                   </label>
                   <textarea
                     id="message"
+<<<<<<< HEAD
                     rows={4}
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                   ></textarea>
@@ -172,6 +227,23 @@ export function ContactSection() {;
         </div>;
       </div>;
     </section>;
+=======
+                    rows={4}
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                  ></textarea>
+                </div>
+                <div>
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                    Send Message
+                  </Button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> main
   );
 }
 ;

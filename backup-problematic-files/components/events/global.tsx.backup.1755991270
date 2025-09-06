@@ -1,7 +1,17 @@
 import dynamic from 'next/dynamic';
 
+<<<<<<< HEAD:backup-problematic-files/components/events/global.tsx.backup.1755991270
 const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false });
 
 export default function GlobalEventRoute() {
+=======
+const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), {
+  ssr: false,
+});
+
+export default function GlobalEventRoute() {
+  return <ExpoPage />;const ExpoPage = dynamic(() => import('../../components/expo/ExpoPage'), { ssr: false }),
+export default function GlobalEventRoute() {
+>>>>>>> main:components/events/global.tsx
   return <ExpoPage />;
 }

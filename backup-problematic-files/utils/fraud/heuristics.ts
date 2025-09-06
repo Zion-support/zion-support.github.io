@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/utils/fraud/heuristics.ts
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',;
 const suspiciousLinkHosts = [;
   'paypal.mecash.appvenmo.comwa.met.metelegram.mewhatsapp.comwesternunion.com',;
@@ -68,3 +69,5 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     reasons;
     severity}
 }
+=======
+>>>>>>> main:utils/fraud/heuristics.ts

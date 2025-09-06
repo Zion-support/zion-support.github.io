@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import Link from "next/link",
 import { 
@@ -17,10 +18,13 @@ interface ApplicationActionsProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 
+=======
+>>>>>>> main
 export function ApplicationActions({
   application,
   processingId,
   onViewApplication,
+<<<<<<< HEAD
   onStatusChange
 }: ApplicationActionsProps) {
   return (
@@ -68,21 +72,67 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
+=======
+  onStatusChange,
+}: ApplicationActionsProps) {
+  return (
+
+      >
+        <Eye className='h-4 w-4' />
+      </Button>
+
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+
+          >
+            {processingId === application.id ? (
+              <Loader2 className='h-4 w-4 animate-spin' />
+            ) : (
+              <>
+                Status <ChevronDown className='h-4 w-4 ml-1' />
+              </>
+            )}
+          </Button>
+        </DropdownMenuTrigger>
+
+          >
+            Hire
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, 'rejected')}
+            className='text-red-600'          >
+
+          >
+
+>>>>>>> main
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
       
+=======
+
+      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
+
+>>>>>>> main
       <Button 
         variant="default" 
         size="sm"
         asChild
       >
+<<<<<<< HEAD
         <Link href={`/messages?talentId=${application.talent_id}`}>
+=======
+
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+
+>>>>>>> main
           Contact
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
   )
 import Link from "next/link",;
 import {;
@@ -168,3 +218,7 @@ export function ApplicationActions({;
   );
 }
 ;
+=======
+  );
+}
+>>>>>>> main

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -7,6 +8,16 @@ interface VideoCallRoomProps {
   token?: string,
   serverUrl?: string,
   onDisconnect?: () => void,
+=======
+import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+interface VideoCallRoomProps {
+  room?: string;
+  token?: string;
+  serverUrl?: string;
+  onDisconnect?: () => void;
+>>>>>>> main
   className?: string
 }
 
@@ -27,6 +38,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 import React from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -55,5 +67,7 @@ export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className 
       </CardContent>;
     </Card>;
   );
+=======
+>>>>>>> main
 }
 ;

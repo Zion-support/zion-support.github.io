@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -26,6 +27,24 @@ export default function ProfileDetail() {
       try {
         if (!profileId) {
           setError("Profile ID is missing."),
+=======
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect((,) => {
+    const fetchProfile = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        if (!profileId) {
+          setError("Profile ID is missing.");
+>>>>>>> main
           return
         }
 
@@ -33,14 +52,22 @@ export default function ProfileDetail() {
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
           .single(),
+=======
+          .single();
+>>>>>>> main
 
         if (error) {
           throw new Error(error.message)
         }
 
         if (!data) {
+<<<<<<< HEAD
           setError("Profile not found."),
+=======
+          setError("Profile not found.");
+>>>>>>> main
           return
         }
 
@@ -54,10 +81,17 @@ export default function ProfileDetail() {
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
     },
 
     fetchProfile()
   }, [profileId]),
+=======
+    };
+
+    fetchProfile()
+  }, [profileId]);
+>>>>>>> main
 
   if (isLoading) {
     return (
@@ -81,6 +115,7 @@ export default function ProfileDetail() {
         <p>Profile not found.</p>
       </div>
     )
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -167,6 +202,15 @@ export default function ProfileDetail() {;
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
+=======
+  }
+
+  return (
+    <>
+      <SEO
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+>>>>>>> main
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
@@ -215,9 +259,16 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
+<<<<<<< HEAD
                 </div>;
               </CardContent>;
             </Card>;
+=======
+                </div>
+              </CardContent>
+            </Card>
+
+>>>>>>> main
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -235,7 +286,11 @@ export default function ProfileDetail() {;
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                   {profileData.skills?.map((skill: string, index: number) => (
+=======
+                  {profileData.skills?.map((skill: string, index: number,) => (
+>>>>>>> main
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>
@@ -249,7 +304,11 @@ export default function ProfileDetail() {;
               </CardHeader>
               <CardContent>
                 {profileData.experience ? (
+<<<<<<< HEAD
                   profileData.experience.map((exp: any, index: number) => (
+=======
+                  profileData.experience.map((exp: any, index: number,) => (
+>>>>>>> main
                     <div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
                       <p className="text-zion-cyan">{exp.company}</p>
@@ -260,8 +319,14 @@ export default function ProfileDetail() {;
                 ) : (
                   <p className="text-zion-slate-light">No experience provided.</p>
                 )}
+<<<<<<< HEAD
               </CardContent>;
             </Card>;
+=======
+              </CardContent>
+            </Card>
+
+>>>>>>> main
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -270,25 +335,43 @@ export default function ProfileDetail() {;
               <CardContent>
                 {profileData.portfolio_links ? (
                   <div className="flex flex-col gap-3">
+<<<<<<< HEAD
                     {profileData.portfolio_links.map((link: any, index: number) => (
                       <a
                         key={index}
                         href={link.url}
+=======
+                    {profileData.portfolio_links.map((link: any, index: number,) => (
+                      <a
+                        key = {index,}
+                        href = {link.url,}
+>>>>>>> main
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
                         {link.title || link.url}
+<<<<<<< HEAD
                       </Link>
+=======
+                      </a>
+>>>>>>> main
                     ))}
                   </div>
                 ) : (
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
+<<<<<<< HEAD
               </CardContent>;
             </Card>;
           </div>;
+=======
+              </CardContent>
+            </Card>
+          </div>
+
+>>>>>>> main
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
@@ -296,9 +379,15 @@ export default function ProfileDetail() {;
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
               }}
             />;
+=======
+                hourly_rate: profileData?.hourly_rate || 0,
+              }}
+            />
+>>>>>>> main
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
@@ -306,7 +395,11 @@ export default function ProfileDetail() {;
                 {profileData.email && (
                   <div className="flex items-center gap-2 text-zion-slate-light">
                     <Mail className="h-4 w-4" />
+<<<<<<< HEAD
                     <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
+=======
+                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</a>
+>>>>>>> main
                   </div>
                 )}
                 {profileData.phone && (
@@ -320,18 +413,31 @@ export default function ProfileDetail() {;
                     <Globe className="h-4 w-4" />
                     <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
                       Website
+<<<<<<< HEAD
                     </Link>
                   </div>
                 )}
               </div>;
             </div>;
+=======
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+
+>>>>>>> main
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
               <div className="flex flex-col space-y-3">
                 {profileData.github_url && (
                   <a
+<<<<<<< HEAD
                     href={profileData.github_url}
+=======
+                    href = {profileData.github_url,}
+>>>>>>> main
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -340,11 +446,19 @@ export default function ProfileDetail() {;
                   >
                     <Github className="h-4 w-4" />
                     GitHub
+<<<<<<< HEAD
                   </Link>
                 )}
                 {profileData.twitter_url && (;
                   <a;
                     href={profileData.twitter_url}
+=======
+                  </a>
+                )}
+                {profileData.twitter_url && (
+                  <a
+                    href = {profileData.twitter_url,}
+>>>>>>> main
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -353,11 +467,19 @@ export default function ProfileDetail() {;
                   >
                     <Twitter className="h-4 w-4" />
                     Twitter
+<<<<<<< HEAD
                   </Link>
                 )}
                 {profileData.linkedin_url && (;
                   <a;
                     href={profileData.linkedin_url}
+=======
+                  </a>
+                )}
+                {profileData.linkedin_url && (
+                  <a
+                    href = {profileData.linkedin_url,}
+>>>>>>> main
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
@@ -366,6 +488,7 @@ export default function ProfileDetail() {;
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
+<<<<<<< HEAD
                   </Link>
                 )}
               </div>;
@@ -377,3 +500,47 @@ export default function ProfileDetail() {;
   );
 }
 ;
+=======
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+
+};
+}, [profileId]);
+<p>Error: {;
+  error ;
+}</p> </div>) ;
+}return (<> <SEO) : (<AvatarFallback> {;
+  profileData.full name?.charAt (0) ;
+}</AvatarFallback>) ;
+}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {;
+  profileData.hourly rate ";
+}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
+}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) ";
+}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
+}</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) ;
+}</CardContent> </Card> </div> <HireNowCTA talentProfile= {;
+  {;
+  id: profileData?.id || '', full name: profileData?.full name || '',  professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 ;
+
+}/> Website </Link> </div>) ;
+}</div> </div> <a href= {;
+  profileData.github url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub" > <Github className="h-4 w-4" /> GitHub </Link>) ;
+}{;
+  profileData.twitter url && (<a href= {;
+  profileData.twitter url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter" > <Twitter className="h-4 w-4" /> Twitter </Link>) ;
+}{;
+  profileData.linkedin url && (<a href= {;
+  profileData.linkedin url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
+}</div> </div> </div> </div> </div> </>) ;
+}'"
+>>>>>>> main

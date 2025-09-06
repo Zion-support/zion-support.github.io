@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { useMessaging } from '@/context/MessagingContext',
 import Link from 'next/link',
@@ -139,3 +140,7 @@ export function AppHeader() {
   );
 }
 ;
+=======
+)
+}
+>>>>>>> main

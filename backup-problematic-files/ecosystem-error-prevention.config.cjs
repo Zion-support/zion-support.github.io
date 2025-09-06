@@ -16,7 +16,6 @@ module.exports = {}
       "out_file": 'automation/logs/intelligent-error-fixer-out.log',
       "error_file": 'automation/logs/intelligent-error-fixer-error.log'
     },
-
     // Continuous Build Monitor - Runs every 5 minutes;
     {}
       "name": 'build-monitor',
@@ -34,7 +33,6 @@ module.exports = {}
       "out_file": 'automation/logs/build-monitor-out.log',
       "error_file": 'automation/logs/build-monitor-error.log'
     },
-
     // Dependency Health Checker - Runs every hour;
     {}
       "name": 'dependency-health-checker',
@@ -52,7 +50,6 @@ module.exports = {}
       "out_file": 'automation/logs/dependency-health-checker-out.log',
       "error_file": 'automation/logs/dependency-health-checker-error.log'
     },
-
     // Code Quality Monitor - Runs every 2 hours;
     {}
       "name": 'code-quality-monitor',
@@ -70,7 +67,6 @@ module.exports = {}
       "out_file": 'automation/logs/code-quality-monitor-out.log',
       "error_file": 'automation/logs/code-quality-monitor-error.log'
     },
-
     // File Watcher for Real-time Error Detection;
     {}
       "name": 'file-watcher',
@@ -87,7 +83,6 @@ module.exports = {}
       "out_file": 'automation/logs/file-watcher-out.log',
       "error_file": 'automation/logs/file-watcher-error.log'
     },
-
     // Error Report Aggregator - Runs every 6 hours;
     {}
       "name": 'error-report-aggregator',
@@ -106,7 +101,6 @@ module.exports = {}
       "error_file": 'automation/logs/error-report-aggregator-error.log'
     };
   ],
-
   "deploy": {}
     production: {}
       user: 'node',

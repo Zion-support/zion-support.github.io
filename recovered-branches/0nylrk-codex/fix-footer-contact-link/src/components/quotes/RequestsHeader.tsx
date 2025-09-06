@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { 
@@ -9,18 +10,33 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes",
+=======
+import React from "react";
+import {Badge} from "@/components/ui/badge";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import type { QuoteStatus } from "@/types/quotes";
+>>>>>>> main
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
   setStatusFilter: (value: QuoteStatus | 'all') => void,
   archiveFilter: 'active' | 'archived' | 'all',
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+<<<<<<< HEAD
 },
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount,
   statusFilter,
   setStatusFilter,
+=======
+};
+
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
+  unreadCount;
+  statusFilter;
+  setStatusFilter;
+>>>>>>> main
   archiveFilter,
   setArchiveFilter
 }) => {
@@ -74,6 +90,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
 },
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -147,4 +164,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
       </div>;
     </div>;
   );
+=======
+>>>>>>> main
 };

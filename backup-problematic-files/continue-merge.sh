@@ -16,7 +16,7 @@ echo "🔄 Processing remaining open PRs..."
 grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" | while read -r branch_name; do
     if [ -n "$branch_name" ]; then
         echo ""
-        echo ""
+        echo "        echo ""
         echo "🔄 Processing branch: $branch_name"
         echo ""
         
@@ -53,6 +53,11 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
                         # Remove conflict markers
                         if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
                             echo "📦 Critical file detected, keeping main version..."
+                            sed -i '//,/                        elif [[ "$file" == *".tsx" || "$file" == *".ts" || "$file" == *".js" || "$file" == *".jsx" ]]; then
+                            echo "📱 Code file detected, keeping incoming version..."
+                            sed -i '//,/                        else
+                            echo "📝 Regular file, attempting to merge both versions..."
+                            sed -i '//,/                        fi
                             sed -i '//,//d' "$file"
                             sed -i '/                        elif [[ "$file" == *".tsx" || "$file" == *".ts" || "$file" == *".js" || "$file" == *".jsx" ]]; then
                             echo "📱 Code file detected, keeping incoming version..."
@@ -80,7 +85,7 @@ grep '"ref":' prs.json | sed 's/.*"ref": "\([^"]*\)".*/\1/' | grep -v "^main$" |
             fi
         fi
         
-        echo ""
+        echo "        echo ""
         echo ""
         
         # Push changes every 3 successful merges to avoid losing work

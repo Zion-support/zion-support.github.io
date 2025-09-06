@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -12,6 +13,21 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+=======
+import React from 'react';
+import {User} from 'lucide-react';
+import {Conversation} from '@/types/messaging';
+import {ConversationItem} from './ConversationItem';
+interface ConversationsListProps {
+  conversations: Conversation[],
+  activeConversation: Conversation | null,
+  setActiveConversation: (conversation: Conversation) => void,
+  markAsRead: (conversationId: string) => Promise<void>
+}
+
+export function ConversationsList({ 
+  conversations;
+>>>>>>> main
   activeConversation, 
   setActiveConversation, 
   markAsRead 
@@ -37,6 +53,7 @@ export function ConversationsList({
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
+<<<<<<< HEAD
               onClick={() => {;
                 setActiveConversation(conversation);
                 markAsRead(conversation.id);
@@ -47,5 +64,17 @@ export function ConversationsList({
       )}
     </div>;
   );
+=======
+              onClick={() => {
+                setActiveConversation(conversation);
+                markAsRead(conversation.id)
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+>>>>>>> main
 }
 ;

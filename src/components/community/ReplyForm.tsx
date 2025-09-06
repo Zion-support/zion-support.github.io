@@ -1,4 +1,10 @@
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { Button } from "@/components/ui/button",
@@ -90,13 +96,56 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
             <div className="mt-4 flex justify-end">
               <Button type="submit" disabled={isSubmitting}>
                 {isSubmitting ? "Submitting..." : "Post Reply"}
+=======
+interface ReplyFormValues {
+  content: string;
+
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: '',
+    },
+  });
+
+    try {
+      await onSubmit(values.content);
+      form.reset();
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <Card>
+      <CardContent className='pt-6'>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
+            <FormField
+
+                <FormItem>
+                  <FormControl>
+                    <Textarea className='min-h-[100px] resize-y' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className='mt-4 flex justify-end'>
+              <Button type='submit' disabled={isSubmitting}>
+                {isSubmitting ? 'Submitting...' : 'Post Reply'}
+>>>>>>> main
               </Button>
             </div>
           </form>
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 },
 
 export default ReplyForm,
+=======
+  );
+};
+export default ReplyForm;
+>>>>>>> main

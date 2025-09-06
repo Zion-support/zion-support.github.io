@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -164,3 +165,11 @@ export const NotificationCenter: React.FC = () => {;
     </Popover>;
   );
 };
+=======
+unreadCount, 
+    markAsRead, 
+
+  const handleFilterChange = (newFilter: FilterType,) => {
+    setFilter(newFilter as any)
+  };
+>>>>>>> main

@@ -25,8 +25,34 @@ class RobustSyntaxFixer {;}
       content = content.replace(/""\s*$/gm, "");
       content = content.replace(/"\s*>/gm, "">");
       content = content.replace(/""\s*,/gm ", ");
+const fs = require("fs")
+const path = require("path")
+class RobustSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd()
+    this.fixedFiles = []
+    this.errors = [],,
+}
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`),,
+}
+  fixFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, "utf8")
+      let originalContent = content;
+      // Fix merge conflicts;
+      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, "")
+      content = content.replace(/      ;
+      // Fix unterminated strings;
+      content = content.replace(/&apos;s\s*""\s*>/gm, "&apos;s>")
+      content = content.replace(/&apos;s\s*"\s*,/gm "&apos;s",")
+      // Fix unterminated strings in general;
+      content = content.replace(/""\s*$/gm, "")
+      content = content.replace(/"\s*>/gm, "">")
+      content = content.replace(/""\s*,/gm ",")
       // Fix missing semicolons;
-      content = content.replace(/([^}])\n\s*}/g, "$1;\n}");
+      content = content.replace(/([^}])\n\s*}/g, "$1;\n}")
       // Fix specific syntax errors we"ve seen;
       content = content.replace(/import Head from "next\/head;/g, import Head from "next/head"");
       content = content.replace(/";/g, "");

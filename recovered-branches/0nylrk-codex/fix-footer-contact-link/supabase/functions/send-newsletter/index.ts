@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 const corsHeaders = {
@@ -9,6 +10,18 @@ interface SendNewsletterRequest {
   subject: string,
   previewText: string,
   body: string,
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {Resend} from "npm: resend@2.0.0";
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
+
+interface SendNewsletterRequest {
+  subject: string;
+  previewText: string;
+  body: string;
+>>>>>>> main
   testMode?: boolean,
   testEmail?: string
 }
@@ -19,17 +32,27 @@ serve(async (req) => {
   }
 
   try {
+<<<<<<< HEAD
     const resendApiKey = Deno.env.get("RESEND_API_KEY"),
+=======
+    const resendApiKey = Deno.env.get("RESEND_API_KEY");
+>>>>>>> main
     if (!resendApiKey) {
       throw new Error("Resend API key is not set in environment variables")
     }
 
+<<<<<<< HEAD
     const resend = new Resend(resendApiKey),
     const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest,
+=======
+    const resend = new Resend(resendApiKey);
+    const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest;
+>>>>>>> main
 
     // If test mode, send to test email only
     if (testMode && testEmail) {
       const emailResponse = await resend.emails.send({
+<<<<<<< HEAD
         from: "Zion Marketplace <newsletter@ziontechgroup.com>",
         to: [testEmail],
         subject: `[TEST] ${subject}`,
@@ -38,6 +61,16 @@ serve(async (req) => {
 
       return new Response(JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
+=======
+        from: "Zion Marketplace <newsletter@ziontechgroup.com>";
+        to: [testEmail],
+        subject: `[TEST] ${subject}`;
+        html: body,
+        text: previewText});
+
+      return new Response(JSON.stringify(emailResponse), {
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+>>>>>>> main
         status: 200})
     } 
     
@@ -47,6 +80,7 @@ serve(async (req) => {
     const emailResponse = {
       id: "test-email-id",
       message: "Email would be sent to all subscribers in production"
+<<<<<<< HEAD
     },
 
     return new Response(JSON.stringify(emailResponse), {
@@ -113,3 +147,18 @@ serve(async (req) => {;
       status: 500});
   }
 });
+=======
+    };
+
+    return new Response(JSON.stringify(emailResponse), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+      status: 200})
+  } catch (error) {
+    console.error("Error in send-newsletter function:", error);
+    
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+      status: 500})
+  }
+});
+>>>>>>> main

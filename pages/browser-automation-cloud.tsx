@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import {Check, ExternalLink} from 'lucide-react';
+
+>>>>>>> main
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -44,6 +51,7 @@ export default function BrowserAutomationCloudPage() {
 			</main>
 		</>
 	)
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -97,3 +105,6 @@ export default function BrowserAutomationCloudPage(req, res) {
   }
 }
 ;
+=======
+}
+>>>>>>> main

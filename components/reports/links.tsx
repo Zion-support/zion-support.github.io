@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+<<<<<<< HEAD
 export default function LinksReportRedirect(req, res) {
   try {
   useEffect(() => {;
@@ -16,3 +17,20 @@ export default function LinksReportRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('/reports/links/index.html');
+    }
+  }, []);
+  return null;export default function LinksReportRedirect() {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.location.replace('/reports/links/index.html')
+    }
+  }, []);
+  return null
+}
+>>>>>>> main

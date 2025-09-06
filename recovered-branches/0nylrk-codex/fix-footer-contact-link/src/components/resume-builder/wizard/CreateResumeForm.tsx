@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -15,6 +16,24 @@ export const CreateResumeForm = ({
     if (!newResumeTitle.trim()) return,
     await onCreateResume(newResumeTitle)
   },
+=======
+import {useState} from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {CreateResumeFormProps} from "./types";
+export const CreateResumeForm = ({ 
+  onCreateResume;
+  onCancel;
+  isLoading 
+}: CreateResumeFormProps) => {
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+
+  const handleSubmit = async () => {
+    if (!newResumeTitle.trim()) return;
+    await onCreateResume(newResumeTitle)
+  };
+>>>>>>> main
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -28,6 +47,7 @@ export const CreateResumeForm = ({
               type="text"
               placeholder="Resume Title (e.g. 'AI Engineer Resume')"
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+<<<<<<< HEAD
 import { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -58,6 +78,12 @@ export const CreateResumeForm = ({;
               onChange={(e) => setNewResumeTitle(e.target.value)}
             />;
             <Button;
+=======
+              value={newResumeTitle}
+              onChange={(e) => setNewResumeTitle(e.target.value)}
+            />
+            <Button 
+>>>>>>> main
               onClick={handleSubmit}
               disabled={!newResumeTitle.trim() || isLoading}
             >
@@ -77,4 +103,8 @@ export const CreateResumeForm = ({;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 },
+=======
+};
+>>>>>>> main

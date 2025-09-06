@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -182,11 +183,96 @@ export default function ProfileDetail() {;
         <p>Profile not found.</p>;
       </div>;
     );
+=======
+import {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {SEO} from "@/components/SEO";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react";
+import {HireNowCTA} from "@/components/profile/HireNowCTA";
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const { profileId } = useParams();
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        if (!profileId) {
+          setError("Profile ID is missing.");
+          return
+        }
+
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+          .single();
+
+        if (error) {
+          throw new Error(error.message)
+        }
+
+        if (!data) {
+          setError("Profile not found.");
+          return
+        }
+
+        setProfileData(data)
+      } catch (err: any) {
+        setError(err.message || "Failed to fetch profile."),
+        toast({
+          title: "Error",
+          description: err.message || "Failed to fetch profile.",
+          variant: "destructive"})
+      } finally {
+        setIsLoading(false)
+      }
+    };
+
+    fetchProfile()
+  }, [profileId]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Loading profile...</p>
+      </div>
+    )
   }
-;
-  return (;
-    <>;
-      <SEO;
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Error: {error}</p>
+      </div>
+    )
+  }
+
+  if (!profileData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Profile not found.</p>
+      </div>
+    )
+>>>>>>> main
+  }
+
+  return (
+    <>
+      <SEO
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
       />
@@ -237,9 +323,16 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
+<<<<<<< HEAD
                 </div>;
               </CardContent>;
             </Card>;
+=======
+                </div>
+              </CardContent>
+            </Card>
+
+>>>>>>> main
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -282,8 +375,14 @@ export default function ProfileDetail() {;
                 ) : (
                   <p className="text-zion-slate-light">No experience provided.</p>
                 )}
+<<<<<<< HEAD
               </CardContent>;
             </Card>;
+=======
+              </CardContent>
+            </Card>
+
+>>>>>>> main
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -302,15 +401,26 @@ export default function ProfileDetail() {;
                       >
                         <LinkIcon className="h-4 w-4" />
                         {link.title || link.url}
+<<<<<<< HEAD
                       </Link>
+=======
+                      </a>
+>>>>>>> main
                     ))}
                   </div>
                 ) : (
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
+<<<<<<< HEAD
               </CardContent>;
             </Card>;
           </div>;
+=======
+              </CardContent>
+            </Card>
+          </div>
+
+>>>>>>> main
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
@@ -320,7 +430,7 @@ export default function ProfileDetail() {;
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
               }}
-            />;
+            />
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
@@ -328,7 +438,11 @@ export default function ProfileDetail() {;
                 {profileData.email && (
                   <div className="flex items-center gap-2 text-zion-slate-light">
                     <Mail className="h-4 w-4" />
+<<<<<<< HEAD
                     <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</Link>
+=======
+                    <a href={`mailto:${profileData.email}`} className="hover:text-zion-cyan">{profileData.email}</a>
+>>>>>>> main
                   </div>
                 )}
                 {profileData.phone && (
@@ -336,6 +450,7 @@ export default function ProfileDetail() {;
                     <Phone className="h-4 w-4" />
                     <span>{profileData.phone}</span>
                   </div>
+<<<<<<< HEAD
                 )}
                 {profileData.website && (
                   <div className="flex items-center gap-2 text-zion-slate-light">
@@ -347,6 +462,20 @@ export default function ProfileDetail() {;
                 )}
               </div>;
             </div>;
+=======
+                )}
+                {profileData.website && (
+                  <div className="flex items-center gap-2 text-zion-slate-light">
+                    <Globe className="h-4 w-4" />
+                    <a href={profileData.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan">
+                      Website
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+
+>>>>>>> main
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
@@ -355,18 +484,27 @@ export default function ProfileDetail() {;
                   <a href={profileData.github_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
                     <Github className="h-4 w-4" />
                     GitHub
+<<<<<<< HEAD
                   </Link>
+=======
+                  </a>
+>>>>>>> main
                 )}
                 {profileData.twitter_url && (
                   <a href={profileData.twitter_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
                     <Twitter className="h-4 w-4" />
                     Twitter
+<<<<<<< HEAD
                   </Link>
+=======
+                  </a>
+>>>>>>> main
                 )}
                 {profileData.linkedin_url && (
                   <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
+<<<<<<< HEAD
                   </Link>
                 )}
               </div>;
@@ -379,3 +517,16 @@ export default function ProfileDetail() {;
   );
 }
 ;
+=======
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+>>>>>>> main

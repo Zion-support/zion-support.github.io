@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { completeSitemap, dynamicPaths } from '@/config/sitemap',
 import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',
+=======
+import React from 'react';
+import {completeSitemap, dynamicPaths} from '@/config/sitemap';
+import {Link} from 'react-router-dom';
+import {ChevronRight} from 'lucide-react';
+import {SEO} from './SEO';
+import {AppLayout} from '@/layout/AppLayout';
+>>>>>>> main
 export const SitemapPage: React.FC = () => {
   return (
     <AppLayout>
@@ -32,12 +41,22 @@ export const SitemapPage: React.FC = () => {
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          
+>>>>>>> main
           {/* Talent Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
@@ -56,12 +75,22 @@ export const SitemapPage: React.FC = () => {
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          
+>>>>>>> main
           {/* Client Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
@@ -80,12 +109,22 @@ export const SitemapPage: React.FC = () => {
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          
+>>>>>>> main
           {/* Shared Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
@@ -104,12 +143,22 @@ export const SitemapPage: React.FC = () => {
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          
+>>>>>>> main
           {/* Admin Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
@@ -127,12 +176,22 @@ export const SitemapPage: React.FC = () => {
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
+<<<<<<< HEAD
                     </Link>;
                   </li>;
                 ));
               }
             </ul>;
           </div>;
+=======
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          
+>>>>>>> main
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
@@ -146,6 +205,7 @@ export const SitemapPage: React.FC = () => {
                   </div>
                 </li>
               ))}
+<<<<<<< HEAD
             </ul>;
           </div>;
         </div>;
@@ -153,3 +213,12 @@ export const SitemapPage: React.FC = () => {
     </AppLayout>;
   );
 };
+=======
+            </ul>
+          </div>
+        </div>
+      </div>
+    </AppLayout>
+  )
+};
+>>>>>>> main

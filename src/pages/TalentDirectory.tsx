@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -370,3 +371,9 @@ export default function TalentDirectory() {;
   );
 }
 ;
+=======
+const paginatedTalents = filteredTalents;
+
+  )
+}
+>>>>>>> main

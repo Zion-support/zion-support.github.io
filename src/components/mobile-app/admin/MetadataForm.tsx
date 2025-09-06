@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -9,10 +10,13 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Badge } from "@/components/ui/badge",
 import { X } from 'lucide-react'
 
+=======
+>>>>>>> main
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
+<<<<<<< HEAD
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form,
   const keywords = watch("keywords"),
@@ -217,3 +221,17 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
     </Card>;
   );
 };
+=======
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>,) => {
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault();
+      const value = e.currentTarget.value.trim();
+
+      if (value && !keywords.includes(value)) {
+        setValue("keywords", [...keywords, value]);
+        e.currentTarget.value = ""
+      }
+    }
+
+  };
+>>>>>>> main

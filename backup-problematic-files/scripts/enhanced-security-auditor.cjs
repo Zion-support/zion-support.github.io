@@ -1,4 +1,5 @@
 #!/usr/bin/env node;#!/usr/bin/env node;
+#!/usr/bin/env node;#!/usr/bin/env node;
 const fs = require("fs")";const path = require("path")""
     this.reportFile = path.join(this.projectRoot, "security-audit-report.json");"}"
     console.log(`[${new Date().toISOString()}] ${message}`);

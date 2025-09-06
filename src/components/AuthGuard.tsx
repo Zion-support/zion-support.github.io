@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -261,3 +262,8 @@ export function useAuthGuard() {;
     isLoading}
 }
 ;
+=======
+if (!requireAuth({ showToast: false })) return false,
+
+    const userRoles = user?.role ? [user.role] : [];
+>>>>>>> main

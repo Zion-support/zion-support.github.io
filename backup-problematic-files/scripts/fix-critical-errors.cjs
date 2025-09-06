@@ -3,6 +3,7 @@
  * Fix Critical Errors - Comprehensive fix for all critical syntax errors;
  */
 
+
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -31,4 +32,5 @@ const path = require('path')
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
     this.log(" Total "Errors": ${report.totalErrors}")
+      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")

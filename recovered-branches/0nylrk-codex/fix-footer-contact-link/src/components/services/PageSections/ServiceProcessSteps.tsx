@@ -31,6 +31,7 @@ export function ServiceProcessSteps() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 export function ServiceProcessSteps() {;
   return (;
     <div className="my-20">;
@@ -61,3 +62,6 @@ export function ServiceProcessSteps() {;
   );
 }
 ;
+=======
+}
+>>>>>>> main

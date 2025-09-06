@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -13,11 +14,28 @@ export function useJobSuggestions(talentId?: string) {
       
       try {
         setIsLoading(true),
+=======
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchSuggestedJobs = async () => {
+      if (!talentId) return;
+      
+      try {
+        setIsLoading(true);
+>>>>>>> main
         
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
+<<<<<<< HEAD
             *,
             job:job_id (*)
           `)
@@ -31,29 +49,61 @@ export function useJobSuggestions(talentId?: string) {
         console.error("Error fetching job matches:", error),
         toast({
           title: "Error",
+=======
+            *;
+            job:job_id (*)
+          `)
+          .eq("talent_id", talentId)
+          .order("created_at", { ascending: false });
+          
+        if (error) throw error;
+        
+        setJobMatches(data || [])
+      } catch (error) {
+        console.error("Error fetching job matches:", error);
+        toast({
+          title: "Error";
+>>>>>>> main
           description: "Failed to load job suggestions",
           variant: "destructive"})
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
     },
     
     fetchSuggestedJobs()
   }, [talentId]),
+=======
+    };
+    
+    fetchSuggestedJobs()
+  }, [talentId]);
+>>>>>>> main
 
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status,
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
+<<<<<<< HEAD
       },
+=======
+      };
+>>>>>>> main
       
       const { error } = await supabase
         .from("job_talent_matches")
         .update(updates)
+<<<<<<< HEAD
         .eq("id", matchId),
         
       if (error) throw error,
+=======
+        .eq("id", matchId);
+        
+      if (error) throw error;
+>>>>>>> main
       
       // Update local state
       setJobMatches(matches => 
@@ -62,7 +112,11 @@ export function useJobSuggestions(talentId?: string) {
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
+<<<<<<< HEAD
       ),
+=======
+      );
+>>>>>>> main
       
       // Show appropriate message
       if (status === 'applied') {
@@ -77,6 +131,7 @@ export function useJobSuggestions(talentId?: string) {
         })
       }
     } catch (error) {
+<<<<<<< HEAD
       console.error("Error updating job match status:", error),
       toast({
         title: "Error",
@@ -170,6 +225,31 @@ export function useJobSuggestions(talentId?: string) {;
       viewedMatches;
       appliedMatches;
       declinedMatches;
+=======
+      console.error("Error updating job match status:", error);
+      toast({
+        title: "Error";
+        description: "Failed to update job status",
+        variant: "destructive"})
+    }
+  };
+
+  // Filter matches by status
+  const newMatches = jobMatches.filter(match => match.status === 'new');
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
+
+  return {
+    jobMatches;
+    isLoading;
+    updateJobMatchStatus;
+    categorizedMatches: {
+      newMatches;
+      viewedMatches;
+      appliedMatches,
+      declinedMatches
+>>>>>>> main
     }
   }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -18,19 +19,29 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication) => void
 }
 
+=======
+>>>>>>> main
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
   onStatusChange,
+<<<<<<< HEAD
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Unknown",
+=======
+  onViewScore,
+}: ApplicationRowProps) {
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = application.talent_profile?.full_name || 'Unknown';
+>>>>>>> main
 
   return (
     <TableRow key={application.id}>
       <TableCell>
+<<<<<<< HEAD
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
@@ -53,20 +64,49 @@ export function ApplicationRow({
             </div>
             <div className="text-xs text-muted-foreground">
               {application.talent_profile?.professional_title || "Talent"}
+=======
+        <div className='flex items-center gap-3'>
+          <AvatarPrimitive className='h-9 w-9'>
+            {' '}
+            {/* Using renamed AvatarPrimitive */}
+            {application.talent_profile?.profile_picture_url && !avatarError ? (
+              <Image
+
+              />
+            ) : (
+              <User className='h-5 w-5 text-gray-400' />
+            )}
+          </AvatarPrimitive>
+          <div>
+            <div className='font-medium'>{talentName}</div>
+            <div className='text-xs text-muted-foreground'>
+              {application.talent_profile?.professional_title || 'Talent'}
+>>>>>>> main
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
+=======
+        <div className='flex items-center gap-1'>
+          <Calendar className='h-4 w-4 text-muted-foreground' />
+          <span>
+            {formatDistanceToNow(new Date(application.created_at), {
+              addSuffix: true,
+            })}
+          </span>
+>>>>>>> main
         </div>
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
         <Button 
           variant="ghost" 
           size="sm" 
@@ -74,11 +114,17 @@ export function ApplicationRow({
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
+=======
+
+        >
+          <BarChart className='h-4 w-4 mr-1' />
+>>>>>>> main
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
       <TableCell>
         {application.resume ? (
+<<<<<<< HEAD
           <Button variant="ghost" size="sm" asChild>
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4 mr-1" /> View
@@ -190,3 +236,28 @@ export function ApplicationRow({;
   );
 }
 ;
+=======
+          <Button variant='ghost' size='sm' asChild>
+            <a
+              href={application.resume.file_url || '#'}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FileText className='h-4 w-4 mr-1' /> View
+            </a>
+          </Button>
+        ) : (
+          <span className='text-muted-foreground text-sm'>No resume</span>
+        )}
+      </TableCell>
+      <TableCell className='text-right'>
+        <ApplicationActions
+          application = {application,}
+          processingId = {processingId,}
+          onViewApplication = {onViewApplication,}
+          onStatusChange = {onStatusChange,}
+        />
+      </TableCell>
+    </TableRow>
+  );
+>>>>>>> main

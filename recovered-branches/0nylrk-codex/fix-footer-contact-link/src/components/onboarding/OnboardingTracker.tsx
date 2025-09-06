@@ -1,15 +1,24 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+=======
+import React from "react";
+import {CheckCircle, Circle, ArrowRight} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+>>>>>>> main
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
   action?: string
+<<<<<<< HEAD
 import React from "react",;
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -36,6 +45,23 @@ export function OnboardingTracker({
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
+=======
+}
+
+interface OnboardingTrackerProps {
+  steps: OnboardingStep[],
+  title?: string;
+  className?: string
+}
+
+export function OnboardingTracker({ 
+  steps;
+  title = "Complete Your Profile", 
+  className 
+}: OnboardingTrackerProps) {
+  const completedSteps = steps.filter(step => step.completed).length;
+  const progress = Math.round((completedSteps / steps.length) * 100);
+>>>>>>> main
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -48,6 +74,7 @@ export function OnboardingTracker({
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+<<<<<<< HEAD
 ;
 export function OnboardingTracker({;
   steps,;
@@ -69,6 +96,12 @@ export function OnboardingTracker({;
           style={{ width: `${progress}%` }}
         ></div>;
       </div>;
+=======
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+      
+>>>>>>> main
       {/* Steps list */}
       <div className="space-y-3">
         {steps.map((step) => (
@@ -95,6 +128,7 @@ export function OnboardingTracker({;
                 </Link>
               </Button>
             )}
+<<<<<<< HEAD
           </div>;
         ))}
       </div>;
@@ -102,3 +136,11 @@ export function OnboardingTracker({;
   );
 }
 ;
+=======
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+>>>>>>> main

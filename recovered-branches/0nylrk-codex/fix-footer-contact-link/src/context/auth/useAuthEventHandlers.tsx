@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
 import { useNavigate } from 'react-router-dom',
+=======
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import {checkNewRegistration} from "@/utils/authUtils";
+import {useNavigate} from 'react-router-dom';
+>>>>>>> main
 /**
  * Custom hook for auth event handling
  */
@@ -22,6 +29,7 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
+<<<<<<< HEAD
       }
     }, 0),
 
@@ -88,6 +96,32 @@ export function useAuthEventHandlers(;
   return {;
     handleSignedIn;
     handleSignedOut;
+=======
+      }
+    }, 0);
+
+    // Check if user needs to complete onboarding
+    if (!mappedUser.profileComplete && navigate) {
+      setOnboardingStep('profile');
+      toast({
+        title: "Complete your profile",
+        description: "Please complete your profile information to get started",
+        variant: "default"}),
+      navigate('/onboarding')
+    }
+  };
+
+  const handleSignedOut = () => {
+    toast({
+      title: "Signed out",
+      description: "You have been successfully logged out",
+      variant: "default"})
+  };
+
+  return {
+    handleSignedIn;
+    handleSignedOut
+>>>>>>> main
   }
 }
 ;

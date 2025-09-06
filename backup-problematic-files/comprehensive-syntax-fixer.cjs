@@ -1,5 +1,6 @@
-#!/usr/bin/env node;
-;const fs = require('fs');
+#!/usr/bin/env node
+
+const fs = require('fs');
 const path = require('path');
 ;
 function fixSyntaxErrors(filePath) {;
@@ -91,7 +92,104 @@ for (const file of files) {;
     fixedCount++;
   }
 }
-;
-console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-console.log('🎉 Syntax error fixing complete!');console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-console.log('🎉 Syntax error fixing complete!');
+
+// Run the fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.fixAllSyntaxErrors().catch(console.error);
+}
+
+    this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
+    for (const file of problematicFiles) {;
+  const result = await this.fixFile(file);
+      if (result.fixed) {;
+  this.fixedFiles++;,
+}
+    }
+
+    this.log(`🎉 Fixed syntax in ${this.fixedFiles} files`);
+    if (this.errors.length > 0) {;
+  this.log(`⚠️  ${this.errors.length} errors occurred:`);
+      this.errors.forEach(error => {;
+  this.log(`   - ${error.file}: ${error.error}`);,
+});,
+}
+
+    return {;
+  totalFiles: allFiles.length,
+      fixedFiles: this.fixedFiles.length,
+      errors: this.errors.length,
+      fixedFileList: this.fixedFiles,
+      errorList: this.errors;,
+}
+  }
+
+  generateReport(results) {;
+  const report = {;
+  timestamp: new Date().toISOString(),
+      summary: results,
+      fixedFiles: this.fixedFiles,
+      errors: this.errors;,
+}
+      fixed: this.fixedFiles,
+      errors: this.errors,
+      totalFiles: problematicFiles.length;,
+}
+  }
+
+  async createCleanESLintConfig() {;
+  this.log("🔧 Creating clean ESLint configuration...");
+    const eslintConfig = `module.exports = {;
+  extends: [ "next/core-web-vitals",
+    "eslint: recommended",
+    "@typescript-eslint/recommended" ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {;
+  "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn";,
+},
+  ignorePatterns: ["node_modules/", ".next/", "out/"];,
+};`;
+    try {;
+  fs.writeFileSync(".eslintrc.js", eslintConfig);
+      this.log("✅ Created clean ESLint configuration");,
+} catch (error) {;
+  this.log(`❌ Error creating ESLint config: ${error.message}`);,
+}
+  }
+
+  async run() {;
+  try {;
+  // Fix syntax issues;
+      const fixResult = await this.fixAllFiles();
+      // Create clean ESLint config;
+      await this.createCleanESLintConfig();
+      this.log("🎉 Comprehensive syntax fixing completed successfully");
+      return fixResult;,
+} catch (error) {;
+  this.log(`💥 Syntax fixing failed: ${error.message}`);
+      throw error;,
+}
+  }
+}
+
+// Run the syntax fixer if this file is executed directly;
+if (require.main === module) {;
+  const fixer = new ComprehensiveSyntaxFixer();
+  fixer.run();
+    .then((result) => {;
+  console.log("✅ Syntax fixing completed");
+      console.log(`📊 Fixed ${result.fixed} files`);
+      if (result.errors.length > 0) {;
+  console.log(`⚠️  ${result.errors.length} errors occurred`);,
+}
+      process.exit(0);,
+});
+    .catch((error) => {;
+  console.error("❌ Syntax fixing failed: ", error.message);
+      process.exit(1);,
+});,
+}
+
+module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))

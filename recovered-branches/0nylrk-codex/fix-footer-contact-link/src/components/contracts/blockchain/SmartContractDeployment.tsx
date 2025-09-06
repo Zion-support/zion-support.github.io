@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -9,10 +10,23 @@ import { Switch } from "@/components/ui/switch",
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
 import { Loader2, ShieldCheck, Download } from "lucide-react",
 import { toast } from "sonner",
+=======
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
+import {Loader2, ShieldCheck, Download} from "lucide-react";
+import {toast} from "sonner";
+>>>>>>> main
 interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,
   isDeploying: boolean
+<<<<<<< HEAD
 }
 
 export function SmartContractDeployment({ 
@@ -150,6 +164,75 @@ export function SmartContractDeployment({;
               onCheckedChange={(checked) => setDeploymentOptions({;
                 ...deploymentOptions,;
                 deployToChain: checked;
+=======
+}
+
+export function SmartContractDeployment({ 
+  solidityCode;
+  onDeploy;
+  isDeploying
+}: SmartContractDeploymentProps) {
+  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
+    network: 'none',
+    useEscrow: true,
+    deployToChain: false,
+    walletAddress: ''
+  });
+
+  const handleDeployContract = async () => {
+    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
+      toast.error("Please enter a wallet address for blockchain deployment");
+      return
+    }
+    
+    try {
+      await onDeploy(deploymentOptions)
+    } catch (error) {
+      console.error("Deployment error:", error)
+    }
+  };
+  
+  const handleDownloadSolidity = () => {
+    // Create a blob from the Solidity code
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),
+    const url = URL.createObjectURL(blob);
+    
+    // Create a temporary anchor to trigger download
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+    
+    toast.success("Solidity contract downloaded")
+  };
+
+  return (
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <ShieldCheck className="h-5 w-5 text-primary" />
+          Smart Contract Deployment
+        </CardTitle>
+        <CardDescription>
+          Deploy your agreement as a smart contract for enhanced security and automation
+        </CardDescription>
+      </CardHeader>
+      
+      <CardContent className="space-y-6">
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <Switch 
+              id="deploy-blockchain"
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({
+                ...deploymentOptions;
+                deployToChain: checked
+>>>>>>> main
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
@@ -161,9 +244,15 @@ export function SmartContractDeployment({;
                 <Label>Select blockchain network</Label>
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
+<<<<<<< HEAD
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
+=======
+                  onValueChange={(value) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    network: value as BlockchainNetwork
+>>>>>>> main
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -184,9 +273,15 @@ export function SmartContractDeployment({;
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
                   onChange={(e) => setDeploymentOptions({;
                     ...deploymentOptions;
                     walletAddress: e.target.value;
+=======
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    walletAddress: e.target.value
+>>>>>>> main
                   })}
                 />
               </div>
@@ -195,9 +290,15 @@ export function SmartContractDeployment({;
                 <Switch 
                   id="use-escrow"
                   checked={deploymentOptions.useEscrow}
+<<<<<<< HEAD
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
+=======
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    useEscrow: checked
+>>>>>>> main
                   })}
                 />
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>
@@ -229,9 +330,17 @@ export function SmartContractDeployment({;
           ) : (
             'Deploy Contract'
           )}
+<<<<<<< HEAD
         </Button>;
       </CardFooter>;
     </Card>;
   );
 }
 ;
+=======
+        </Button>
+      </CardFooter>
+    </Card>
+  )
+}
+>>>>>>> main

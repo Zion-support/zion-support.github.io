@@ -102,6 +102,36 @@ function processFile(filePath) {
   
   searchDirectory('/workspace');
   return files;
+      // Remove any remaining conflict markers;
+      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, "")
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, "utf8")
+        this.resolvedFiles.push(filePath)
+        this.log(`✅ Resolved conflicts in ${filePath}`),,
+}
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message })
+      this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
+}
+  }
+  cleanupBuildArtifacts() {
+    this.log("🧹 Cleaning up build artifacts...")
+    const artifactsToRemove = [
+      ".next",
+      "node_modules/.cache",
+      "dist",
+      "build",
+      "*.log",
+      "package-lock.json"]
+    for (const artifact of artifactsToRemove) {
+      try {
+        if (fs.existsSync(artifact)) {
+          execSync(`rm -rf ${artifact}`, { cwd: this.projectRoot })
+          this.log(`🗑️ Removed ${artifact}`),,
+}
+      } catch (error) {
+        this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
 
 // Main execution

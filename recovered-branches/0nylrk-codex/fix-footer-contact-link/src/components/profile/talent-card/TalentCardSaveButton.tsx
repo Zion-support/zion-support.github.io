@@ -1,14 +1,22 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Heart } from "lucide-react",
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
+=======
+import React from "react";
+import {Heart} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useToast} from "@/hooks/use-toast";
+>>>>>>> main
 interface TalentCardSaveButtonProps {
   profileId: string,
   profileName: string,
   isSaved: boolean,
   onToggleSave?: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+<<<<<<< HEAD
 }
 
 export function TalentCardSaveButton({ 
@@ -68,16 +76,53 @@ export function TalentCardSaveButton({;
     setLocalIsSaved(!localIsSaved),;
     if (onToggleSave) {;
       onToggleSave(profileId, !localIsSaved);
+=======
+}
+
+export function TalentCardSaveButton({ 
+  profileId, 
+  profileName;
+  isSaved, 
+  onToggleSave;
+  isAuthenticated 
+}: TalentCardSaveButtonProps) {
+  const { toast } = useToast();
+  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
+  
+  // Handle save toggle
+  const handleSaveToggle = (e: React.MouseEvent) => {
+    e.stopPropagation(),
+    
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
+        variant: "destructive"
+      });
+      return
+    }
+    
+    setLocalIsSaved(!localIsSaved);
+    if (onToggleSave) {
+      onToggleSave(profileId, !localIsSaved)
+>>>>>>> main
     }
     
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
         ? `${profileName} has been removed from your favorites` 
+<<<<<<< HEAD
         : `${profileName} has been added to your favorites`,
       variant: "default"
     })
   },
+=======
+        : `${profileName} has been added to your favorites`;
+      variant: "default"
+    })
+  };
+>>>>>>> main
 
   return (
     <button 
@@ -93,6 +138,7 @@ export function TalentCardSaveButton({;
       />
     </button>
   )
+<<<<<<< HEAD
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -116,5 +162,7 @@ export function TalentCardSaveButton({;
       />;
     </button>;
   );
+=======
+>>>>>>> main
 }
 ;

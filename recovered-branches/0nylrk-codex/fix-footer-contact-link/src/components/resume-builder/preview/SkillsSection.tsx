@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -16,6 +17,25 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
   }, {} as Record<string Skill[]>),
 
   if (skills.length === 0) return null,
+=======
+import {Skill} from '@/types/resume';
+interface SkillsSectionProps {
+  skills: Skill[]
+}
+
+export function SkillsSection({ skills }: SkillsSectionProps) {
+  // Group skills by category
+  const skillsByCategory = skills.reduce((acc, skill) => {
+    const category = skill.category || 'Other';
+    if (!acc[category]) {
+      acc[category] = []
+    }
+    acc[category].push(skill);
+    return acc
+  }, {} as Record<string, Skill[]>);
+
+  if (skills.length === 0) return null;
+>>>>>>> main
   
   return (
     <div className="mb-6">
@@ -26,11 +46,17 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
             <h3 className="text-sm font-medium">{category}</h3>
             <p className="text-sm">
               {skills.map(skill => skill.name).join(', ')}
-            </p>;
-          </div>;
+            </p>
+          </div>
         ))}
+<<<<<<< HEAD
       </div>;
     </div>;
   );
+=======
+      </div>
+    </div>
+  )
+>>>>>>> main
 }
 ;

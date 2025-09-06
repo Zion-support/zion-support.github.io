@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -24,6 +25,33 @@ export default function Marketplace() {
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
+=======
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {Grid3X3, ListFilter} from "lucide-react";
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {FilterSidebar} from "@/components/search/FilterSidebar";
+import {ActiveFiltersBar} from "@/components/search/ActiveFiltersBar";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions} from "@/data/marketplaceData";
+import {toast} from "@/hooks/use-toast";
+import {useNavigate} from "react-router-dom";
+import {SearchSuggestion} from "@/types/search";
+import {AppLayout} from "@/layout/AppLayout";
+export default function Marketplace() {
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const filterOptions = generateFilterOptions();
+>>>>>>> main
   
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
@@ -32,6 +60,7 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -90,10 +119,40 @@ export default function Marketplace() {;
   
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
+=======
+    }
+    
+    // Product type filter
+    if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+      return false
+    }
+    
+    // Location filter
+    if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+      return false
+    }
+    
+    // Availability filter
+    if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+      return false
+    }
+    
+    // Rating filter
+    if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
+      return false
+    }
+    
+    return true
+  });
+  
+  const handleFilterChange = (filterType: string, value: string) => {
+    console.log(`Filter changed: ${filterType} = ${value}`),
+>>>>>>> main
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev => 
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+<<<<<<< HEAD
         ),
         break,
       case 'location':
@@ -116,6 +175,30 @@ export default function Marketplace() {;
     setSelectedAvailability([]),
     setSelectedRating(null)
   },
+=======
+        );
+        break;
+      case 'location':
+        setSelectedLocations(prev => 
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break;
+      case 'availability':
+        setSelectedAvailability(prev => 
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        );
+        break
+    }
+  };
+  
+  const clearAllFilters = () => {
+    setSearchQuery("");
+    setSelectedProductTypes([]);
+    setSelectedLocations([]);
+    setSelectedAvailability([]);
+    setSelectedRating(null)
+  };
+>>>>>>> main
   
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
@@ -125,7 +208,11 @@ export default function Marketplace() {;
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
       }),
+=======
+      });
+>>>>>>> main
       
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
@@ -136,6 +223,7 @@ export default function Marketplace() {;
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0]
+<<<<<<< HEAD
 ;
     return true;
   }),;
@@ -188,6 +276,13 @@ export default function Marketplace() {;
       });
     }
   },
+=======
+          }
+        }
+      })
+    }
+  };
+>>>>>>> main
 
   return (
     <AppLayout>
@@ -225,11 +320,19 @@ export default function Marketplace() {;
         {/* Main layout with sidebar and results */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Filters */}
+<<<<<<< HEAD
           <div className="lg:col-span-1">
             <FilterSidebar
               filters={{
                 selectedProductTypes,
                 selectedLocations,
+=======
+          <div className="lg: col-span-1">
+            <FilterSidebar
+              filters={{
+                selectedProductTypes;
+                selectedLocations;
+>>>>>>> main
                 selectedAvailability,
                 selectedRating
               }}
@@ -237,12 +340,22 @@ export default function Marketplace() {;
               onFilterChange={handleFilterChange}
               onRatingChange={setSelectedRating}
               onClearFilters={clearAllFilters}
+<<<<<<< HEAD
             />;
           </div>;
           {/* Main content */}
           <div className="lg:col-span-3">
             {/* Active filters display */}
             <ActiveFiltersBar;
+=======
+            />
+          </div>
+          
+          {/* Main content */}
+          <div className="lg:col-span-3">
+            {/* Active filters display */}
+            <ActiveFiltersBar 
+>>>>>>> main
               selectedProductTypes={selectedProductTypes}
               selectedLocations={selectedLocations}
               selectedAvailability={selectedAvailability}
@@ -251,7 +364,12 @@ export default function Marketplace() {;
               onRemoveFilter={handleFilterChange}
               onRemoveRating={() => setSelectedRating(null)}
               onClearSearch={() => setSearchQuery("")}
+<<<<<<< HEAD
             />;
+=======
+            />
+
+>>>>>>> main
             {/* Results count */}
             <div className="mb-6">
               <p className="text-zion-slate-light">
@@ -261,6 +379,7 @@ export default function Marketplace() {;
             </div>
             
             {/* Display actual marketplace listings */}
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               {filteredListings.length > 0 ? (;
                 filteredListings.map((listing) => (;
@@ -277,13 +396,32 @@ export default function Marketplace() {;
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.;
                   </p>;
                   <Button;
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filteredListings.length > 0 ? (
+                filteredListings.map((listing) => (
+                  <ProductListingCard 
+                    key={listing.id} 
+                    listing={listing}
+                    onRequestQuote={handleRequestQuote}
+                  />
+                ))
+              ) : (
+                <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
+                  <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">
+                    We couldn't find any listings matching your filters. Try adjusting your search criteria.
+                  </p>
+                  <Button 
+>>>>>>> main
                     onClick={clearAllFilters}
-                    className="bg-zion-purple hover:bg-zion-purple-dark";
-                  >;
-                    Clear Filters;
-                  </Button>;
-                </div>;
+                    className="bg-zion-purple hover:bg-zion-purple-dark"
+                  >
+                    Clear Filters
+                  </Button>
+                </div>
               )}
+<<<<<<< HEAD
             </div>;
           </div>;
         </div>;
@@ -292,3 +430,12 @@ export default function Marketplace() {;
   );
 }
 ;
+=======
+            </div>
+          </div>
+        </div>
+      </main>
+    </AppLayout>
+  )
+}
+>>>>>>> main

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -8,14 +9,31 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+=======
+import React from 'react';
+import {format} from 'date-fns';
+import {cn} from '@/lib/utils';
+import {Conversation} from '@/types/messaging';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+
+interface ConversationItemProps {
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
+>>>>>>> main
 }
 
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
     <div 
       className={cn(
+<<<<<<< HEAD
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+=======
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
+>>>>>>> main
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -42,16 +60,25 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         {conversation.context_data?.title && (
           <div className="text-xs mt-1 text-zion-cyan truncate">
             Re: {conversation.context_data.title}
+<<<<<<< HEAD
           </div>;
+=======
+          </div>
+>>>>>>> main
         )}
       </div>
       
       {conversation.unread_count > 0 && (
         <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">
           {conversation.unread_count}
-        </div>;
+        </div>
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+  )
+>>>>>>> main
 }
 ;

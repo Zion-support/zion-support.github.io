@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -108,4 +109,40 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+import fs from 'fs';
+import path from 'path';
+
+async function fetchFromGitHub() {
+  try {
+    const response = await fetch('https://api.github.com/repos/ziontechgroup/site/contents/data/homepage.json');
+    if (!response.ok) return null;
+    
+    const data = await response.json();
+    return JSON.parse(Buffer.from(data.content, 'base64').toString());
+  } catch {
+    return null;
+  }
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    // Try to read local file first
+    const localPath = path.join(process.cwd(), 'data', 'homepage.json');
+    if (fs.existsSync(localPath)) {
+      const localData = JSON.parse(fs.readFileSync(localPath, 'utf8'));
+      return res.status(200).json(localData);
+    }
+  } catch {
+    // fall back to remote
+  }
+
+  const remote = await fetchFromGitHub();
+  if (remote) return res.status(200).json(remote);
+  return res.status(200).json(null);
+>>>>>>> main
 }

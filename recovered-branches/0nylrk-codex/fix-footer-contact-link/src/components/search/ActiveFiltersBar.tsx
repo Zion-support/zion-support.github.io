@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
+=======
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+>>>>>>> main
 interface ActiveFiltersBarProps {
   selectedProductTypes: string[],
   selectedLocations: string[],
@@ -11,6 +17,7 @@ interface ActiveFiltersBarProps {
   onRemoveFilter: (filterType: string, value: string) => void,
   onRemoveRating: () => void,
   onClearSearch: () => void
+<<<<<<< HEAD
 }
 
 export function ActiveFiltersBar({
@@ -78,10 +85,43 @@ export function ActiveFiltersBar({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={onClearSearch}
         >;
+=======
+}
+
+export function ActiveFiltersBar({
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
+  onClearSearch
+}: ActiveFiltersBarProps) {
+  const hasActiveFilters = 
+    selectedProductTypes.length > 0 || 
+    selectedLocations.length > 0 || 
+    selectedAvailability.length > 0 || 
+    selectedRating !== null ||
+    !!searchQuery;
+    
+  if (!hasActiveFilters) return null;
+  
+  return (
+    <div className="flex flex-wrap gap-2 items-center mb-4">
+      <span className="text-sm text-zion-slate-light">Active filters:</span>
+      
+      {searchQuery && (
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onClearSearch}
+        >
+>>>>>>> main
           Search: {searchQuery}
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+<<<<<<< HEAD
 ;
       {selectedProductTypes.map(type => (;
         <ClickableBadge;
@@ -89,10 +129,20 @@ export function ActiveFiltersBar({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('productTypes', type)}
         >;
+=======
+      
+      {selectedProductTypes.map(type => (
+        <ClickableBadge 
+          key={`type-${type}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => onRemoveFilter('productTypes', type)}
+        >
+>>>>>>> main
           {type}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
+<<<<<<< HEAD
 ;
       {selectedLocations.map(location => (;
         <ClickableBadge;
@@ -100,10 +150,20 @@ export function ActiveFiltersBar({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('locations', location)}
         >;
+=======
+      
+      {selectedLocations.map(location => (
+        <ClickableBadge 
+          key={`location-${location}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => onRemoveFilter('locations', location)}
+        >
+>>>>>>> main
           {location}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
+<<<<<<< HEAD
 ;
       {selectedAvailability.map(availability => (;
         <ClickableBadge;
@@ -111,6 +171,15 @@ export function ActiveFiltersBar({;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => onRemoveFilter('availability', availability)}
         >;
+=======
+      
+      {selectedAvailability.map(availability => (
+        <ClickableBadge 
+          key={`availability-${availability}`}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => onRemoveFilter('availability', availability)}
+        >
+>>>>>>> main
           {availability}
           <X className="h-3 w-3" />
         </ClickableBadge>
@@ -125,7 +194,12 @@ export function ActiveFiltersBar({;
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+<<<<<<< HEAD
     </div>;
   );
+=======
+    </div>
+  )
+>>>>>>> main
 }
 ;

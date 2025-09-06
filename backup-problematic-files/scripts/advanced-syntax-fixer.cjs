@@ -1,8 +1,7 @@
 #!/usr/bin/env node;
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
-;
-  processDirectory(dirPath);
+  processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
 ;
 function main() {;

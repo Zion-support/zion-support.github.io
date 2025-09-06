@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 export default async function handler(req, res) {
   try {
   if (req.method === 'GET') {
@@ -28,11 +29,25 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     return res.status(200).json({
       route: "/multiverse/hub",
+=======
+import { readState } from '../../../utils/sync/storage';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const state = readState();
+
+  if (req.method === 'GET') {
+    return res.status(200).json({
+      route: '/multiverse/hub',
+>>>>>>> main
       instanceId: state.config.instanceId,
       peers: state.config.peers,
       scope: state.config.scope,
       optIn: state.config.optIn,
       paused: state.config.paused,
+<<<<<<< HEAD
       lastSyncedAt: state.lastSyncedAt})
     } catch (error) {
     console.error("Error:", error);
@@ -89,4 +104,12 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+      lastSyncedAt: state.lastSyncedAt,
+    });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+
+>>>>>>> main
 }
