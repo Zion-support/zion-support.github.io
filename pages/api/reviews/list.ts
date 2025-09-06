@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           x.approved &&
           !x.removed
       );
-      return counterpartExists
+      return counterpartExists;
     });
 
     // Map to public reviews (mask anonymous author)
