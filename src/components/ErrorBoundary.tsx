@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -23,11 +21,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-    console.error('Error caught by boundary:', error, errorInfo);
-=======
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
     this.setState({
       error,
       errorInfo
@@ -76,7 +70,6 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
->>>>>>> origin/fix-website-loading-errors-final
         </div>
       );
     }
