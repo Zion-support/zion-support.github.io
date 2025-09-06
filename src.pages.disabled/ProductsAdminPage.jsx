@@ -2,6 +2,8 @@ import React from 'react';
 interface ProductsAdminPageProps {
   // Add props here as needed
 
+
+
 export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
   return (
     <div>
@@ -10,10 +12,10 @@ export default function ProductsAdminPage({ }: ProductsAdminPageProps) {
     </div>
   );
 
-:src.pages.disabled/ProductsAdminPage.jsx
+
+
 }
-}
-}
-}
-}
+
+=======
+
 

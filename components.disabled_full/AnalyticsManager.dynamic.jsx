@@ -5,6 +5,8 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
 });
 export default AnalyticsManager;
 
+;,
+
 import dynamic from 'next/dynamic';';,
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
   "loading": () => null,",
@@ -17,4 +19,6 @@ const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
   "loading": () => null,
   "ssr": 'false'});
 export default AnalyticsManager;
+
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
 

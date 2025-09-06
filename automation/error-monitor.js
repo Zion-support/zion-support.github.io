@@ -37,6 +37,10 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -70,8 +74,10 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
 
-        timestamp: new Date().toISOString()
 
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString(),
       });
     }
@@ -145,6 +151,9 @@ class ErrorMonitor {
       'src/pages/index.tsx',
     ];
 
+
+     is missing`,
+
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -155,35 +164,39 @@ class ErrorMonitor {
     const errors = [];
     const lines = output.split('\n');
 
+
             timestamp: new Date().toISOString(),
           });
-
     );
-
         }
       }
     }
 
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return errors;
   }
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
 
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
+
+=======
 
     );
       }
     }
-
           timestamp: new Date().toISOString(),
         });
       }
     }
 
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return errors;
   }
   updateHealthStatus() {
@@ -205,10 +218,12 @@ class ErrorMonitor {
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 
+
+=======
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -226,8 +241,8 @@ class ErrorMonitor {
       const automation = new ErrorFixerAutomation();
       await automation.run();
 
-      console.log('✅ Error fixer completed');
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -235,8 +250,10 @@ class ErrorMonitor {
         type: 'error_fixer_failure',
         message: error.message,
 
-        timestamp: new Date().toISOString()
 
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString(),
       });
     }
@@ -263,6 +280,10 @@ class ErrorMonitor {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -302,8 +323,13 @@ class ErrorMonitor {
     process.exit(0);
   }
 
+
+
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
+
+
+module.exports = ErrorMonitor;
 

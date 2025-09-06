@@ -2,6 +2,8 @@ import React from 'react';
 interface AccessibilityProps {
   // Add props here as needed
 
+
+
 export default function Accessibility({ }: AccessibilityProps) {
   return (
     <div>
@@ -10,10 +12,10 @@ export default function Accessibility({ }: AccessibilityProps) {
     </div>
   );
 
-:src.pages.disabled/Accessibility.jsx
+
+
 }
-}
-}
-}
-}
+
+=======
+
 

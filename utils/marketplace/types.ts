@@ -1,14 +1,25 @@
 
 
-export interface Offer {;
 
+
+=======
+export interface Offer {;
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   createdAtIso: string;
   clientId: string;
   talentSlug: string;
   startDateIso: string;
+
   scopeSummary: string;
   paymentTerms: PaymentTerms;
+
+
+
 
   id: string;
   title: string;
@@ -17,16 +28,7 @@ export interface Offer {;
   talentSlug: string;
   startDateIso: string;
 
-  id: string;
-  name: string;
-  url?: string;
-  uploadedAtIso: string;
-}
 
-  id: string;
-  authorId: string;
-  authorRole: string;
-  content: string;
-  createdAtIso: string;
-}
+
+
 

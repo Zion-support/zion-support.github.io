@@ -29,6 +29,7 @@ import Link from 'next/link';
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 const whitePapers = [;
   {}
@@ -104,6 +105,28 @@ const whitePapers = [;
     pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf""
 import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+<<<<<<< HEAD
+
+import React from 'react';
+
+import React from 'react';
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+import { motion } from 'framer-motion';
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -315,6 +338,7 @@ const stats = [
   { number: '10K+', label: 'Downloads' },
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
+<<<<<<< HEAD
 =======
 >>>>>>> main
 import Head from 'next/head';
@@ -723,6 +747,8 @@ title="White Papers - Zion Tech Group"
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 
               </p>
+<<<<<<< HEAD
+=======
               
               <div className="mb-4">
                 <div className="flex items-center text-sm text-gray-600 mb-2">
@@ -790,6 +816,7 @@ title="White Papers - Zion Tech Group"
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               </p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </motion.div>
           </div>
         </section>

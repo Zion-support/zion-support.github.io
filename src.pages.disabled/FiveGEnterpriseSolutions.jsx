@@ -2,6 +2,8 @@ import React from 'react';
 interface FiveGEnterpriseSolutionsProps {
   // Add props here as needed
 
+
+
 export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsProps) {
   return (
     <div>
@@ -10,10 +12,10 @@ export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsPr
     </div>
   );
 
-:src.pages.disabled/FiveGEnterpriseSolutions.jsx
+
+
 }
-}
-}
-}
-}
+
+=======
+
 

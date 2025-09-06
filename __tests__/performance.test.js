@@ -1,4 +1,6 @@
 
+=======
+
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -45,10 +47,12 @@ test.describe('Performance Tests', () => {
     
     await page.waitForTimeout(2000);
 
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     expect(consoleMessages.length).toBe(0);
-  });
-  
-  test('memory usage check', async ({ page }) => {
+  });'
+  test('memory usage check', async ({ page }) => {'
     await page.goto('/');
     const metrics = await page.evaluate(() => {
       if (performance.memory) {
@@ -60,10 +64,32 @@ test.describe('Performance Tests', () => {
       }
       return null;
     });
-    
     if (metrics) {
       expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
     }
   });
+<<<<<<< HEAD
+});'
+=======
 });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+const { test, expect } = require('@playwright/test')'
+test && test.describe('"Performance"'"
+  test('"page"
+    "await"
+    "await"
+            "output"'"
+  test('"bundle"
+    "await"'"
+    page && page.on('console', "msg"
+              "output"
+<<<<<<< HEAD
+          resolve({ "error"'"
+=======
+          resolve({ "error"
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

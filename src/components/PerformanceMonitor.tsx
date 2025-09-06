@@ -1,99 +1,40 @@
+import React, { useEffect, useState } from 'react';
+import { Activity } from 'lucide-react';
 
-export default function PerformanceMonitor() {
+export const PerformanceMonitor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only show in development mode
+    if (import.meta.env.DEV) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  if (!isVisible) return null;
+
   return (
-    <div className="performance-monitor">
-      <p>Performance Monitor</p>
+    <div className="fixed bottom-4 right-4 w-80 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl z-50">
+      <div className="p-4 border-b border-gray-700">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-white flex items-center">
+            <Activity className="w-5 h-5 mr-2 text-cyan-400" />
+            Performance Monitor
+          </h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+
+      <div className="p-4">
+        <p className="text-gray-400 text-sm">
+          Performance monitoring is active. This component will be enhanced with detailed metrics in future updates.
+        </p>
+      </div>
     </div>
   );
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = process.env.NODE_ENV === 'development',
-  logToConsole = true,
-  sendToAnalytics = false
-}) => {
-  const { measurePerformance, logPerformance } = usePerformance();
-
-  useEffect(() => {
-    if (!enabled) return;
-
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        // Re-measure performance when page becomes visible
-        setTimeout(logPerformance, 1000);
-      }
-    };
-
-    const handleBeforeUnload = () => {
-      // Log final performance metrics before page unload
-      logPerformance();
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [enabled, logPerformance]);
-
-  // Monitor Core Web Vitals
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
-
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (logToConsole) {
-          console.log(`Performance Entry: ${entry.name}`, {
-            duration: entry.duration,
-            startTime: entry.startTime,
-            entryType: entry.entryType
-          });
-        }
-
-        if (sendToAnalytics) {
-          // Send to analytics service
-          // analytics.track('performance_entry', {
-          //   name: entry.name,
-          //   duration: entry.duration,
-          //   startTime: entry.startTime,
-          //   entryType: entry.entryType
-          // });
-        }
-      }
-    });
-
-    try {
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint', 'largest-contentful-paint'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
-    }
-  }, [location.pathname]),;
-,;
-  // Show performance issues,;
-  useEffect(() => {,;
-    const hasPerformanceIssues =,;
-      metrics.pageLoadTime > 3000 || // > 3 seconds,;
-      metrics.memoryUsage > 100 || // > 100 MB,;
-      !metrics.isOnline,;
-,;
-    if (hasPerformanceIssues) {,;
-      setIsVisible(true),;
-      // Auto-hide after 10 seconds,;
-      const timer = setTimeout(() => setIsVisible(false), 10000),;
-      return () => clearTimeout(timer);
-    }
-  }, [metrics]),;
-,;
-  if (!isVisible) return null,;
-,;
-  return (,;
-    <div className="fixed bottom-4 right-4 z-50">,;
-      <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 shadow-xl">,;
-        <div className="flex items-center gap-3 mb-3">,;
-          <BarChart3 className="w-5 h-5 text-blue-400" />,;
-          <span className="text-sm font-medium text-white">Performance Monitor</span>,;
-          <button,;
-            onClick={() => setIsVisible(false)},;
-
+};

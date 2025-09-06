@@ -2,6 +2,8 @@ import React from 'react';
 interface TestimonialsProps {
   // Add props here as needed
 
+
+
 export default function Testimonials({ }: TestimonialsProps) {
   return (
     <div>
@@ -10,10 +12,10 @@ export default function Testimonials({ }: TestimonialsProps) {
     </div>
   );
 
-:src.pages.disabled/Testimonials.jsx
+
+
 }
-}
-}
-}
-}
+
+=======
+
 

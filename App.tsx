@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -10,27 +12,48 @@ import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
-export default function App(): React.JSX.Element {
+=======
+import React, { JSX } from 'react';
+
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Header />
-          <div className="flex">
-            <Sidebar />
-            <main className="flex-1 p-6">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-              </Routes>
-            </main>
-          </div>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+
+    <main>
+      <h1>Hello App</h1>
+    </main>
+
+=======
+export default function App() {;
+  return (
+    <ErrorBoundary>;
+      <Router>;
+        <div className="min-h-screen bg-gray-50">;
+          <Header />;
+          <Sidebar />;
+          <main className="flex-1 lg:ml-80">;
+            <Routes>;
+              <Route path="/" element={<HomePage />} />;
+              <Route path="/about" element={<AboutPage />} />;
+              <Route path="/contact" element={<ContactPage />} />;
+              <Route path="/services" element={<ServicesPage />} />;
+              <Route path="/pricing" element={<PricingPage />} />;
+            </Routes>;
+          </main>;
+          <Footer />;
+        </div>;
+      </Router>;
+    </ErrorBoundary>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
+=======
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return (
+    <main>;
+      <h1 > Hello App</h1>;
+    </main>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

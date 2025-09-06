@@ -2,6 +2,8 @@ import React from 'react';
 interface EnhancedServicesPageProps {
   // Add props here as needed
 
+
+
 export default function EnhancedServicesPage({ }: EnhancedServicesPageProps) {
   return (
     <div>
@@ -10,10 +12,10 @@ export default function EnhancedServicesPage({ }: EnhancedServicesPageProps) {
     </div>
   );
 
-:src.pages.disabled/EnhancedServicesPage.jsx
+
+
 }
-}
-}
-}
-}
+
+=======
+
 

@@ -1,4 +1,5 @@
 
+=======
 
 console.log('Testing Next.js installation...'),;
 try {;

@@ -1,5 +1,12 @@
 
 
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+
+
 export default function AiHrAnalyticsPlatform() {
 	return (
 		<ServiceLanding
@@ -7,11 +14,6 @@ export default function AiHrAnalyticsPlatform() {
 			description="Understand attrition, performance, and workforce planning with AI. Combine HRIS, ATS, and engagement data for proactive people decisions."
 			subtitle="People insights that drive outcomes"
 
-			pricePerMonthUSD={199  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 			implementationWeeks="1-2 weeks"
 			roiNote="HR teams report measurable gains in retention and hiring yield"
@@ -25,26 +27,5 @@ export default function AiHrAnalyticsPlatform() {
 				"Compensation benchmarking and ranges",
 				"Engagement drivers and action suggestions"
 
-			]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
-		/>
-	)
-			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform";
-		/>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

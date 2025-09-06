@@ -2,6 +2,8 @@ import React from 'react';
 interface QuantumComputingProps {
   // Add props here as needed
 
+
+
 export default function QuantumComputing({ }: QuantumComputingProps) {
   return (
     <div>
@@ -10,10 +12,10 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
     </div>
   );
 
-:src.pages.disabled/QuantumComputing.jsx
+
+
 }
-}
-}
-}
-}
+
+=======
+
 

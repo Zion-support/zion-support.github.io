@@ -18,11 +18,23 @@ module.exports = (nextConfig = {}) => {
             "openAnalyzer": true})
         )}
 
-      return config}}})}
-const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
 
       return config;
   }},
   })}
       return config}}})}
 
+
+      return config;
+  }},
+  })}
+      return config}}})}
+
+const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
+
+=======
+
+const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

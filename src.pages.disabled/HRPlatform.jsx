@@ -2,6 +2,8 @@ import React from 'react';
 interface HRPlatformProps {
   // Add props here as needed
 
+
+
 export default function HRPlatform({ }: HRPlatformProps) {
   return (
     <div>
@@ -10,10 +12,10 @@ export default function HRPlatform({ }: HRPlatformProps) {
     </div>
   );
 
-:src.pages.disabled/HRPlatform.jsx
+
+
 }
-}
-}
-}
-}
+
+=======
+
 

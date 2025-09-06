@@ -1,5 +1,9 @@
 
 
+=======
+
+=======
+
 }}}};
 ;
 ;
@@ -8,12 +12,17 @@
 }
 }
 
-export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
-  sendMessage: (message: any) => {},
-  receiveMessage: (callback: any) => {},
+},;
+,;
 
+=======
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -26,6 +35,32 @@ export const messageChannelHandler: MessageHandler = {
     // No-op: placeholder for message listener registration
   }
 
+};
+
+};
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+};
+};
+};
+,
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Message channel handler for real-time communication
 export class MessageChannelHandler {;
   private channels: Map<string, MessageChannel> = new Map();
@@ -50,8 +85,22 @@ export class MessageChannelHandler {;
 }
 export default MessageChannelHandler;
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 }}}};
 ;
+
 },;
 ,;
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

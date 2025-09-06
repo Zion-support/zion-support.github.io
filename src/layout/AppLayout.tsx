@@ -1,8 +1,8 @@
-
-
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
+
+
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -17,10 +17,10 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 			</main>
 			{!hideFooter && <Footer />}
 
+
 		</div>
 	)
 }
-
 import React from "react";
 
 interface AppLayoutProps {
@@ -38,7 +38,7 @@ export function AppLayout({ children }: AppLayoutProps) {
   );
 }
 
+
 		</div>;
 	);
 }'"
-

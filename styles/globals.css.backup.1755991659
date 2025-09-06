@@ -559,6 +559,8 @@ code { @apply font-mono; }
   border-radius: 16px;
   padding: 24px;
   transition: all var(--animation-normal) ease;
+<<<<<<< HEAD
+=======
 =======
   border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 16px;
@@ -603,22 +605,22 @@ code { @apply font-mono; }
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: relative;
   border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 16px;
   padding: 24px;
   transition: all var(--animation-normal) ease;  position: relative;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-  border: 1px solid rgba(6, 182, 212, 0.2);
+
+border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 16px;
   padding: 24px;
   transition: all var(--animation-normal) ease;  position: relative;
+<<<<<<< HEAD
+
+  position: relative;
+
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1040,17 +1042,14 @@ code { @apply font-mono; }
 <<<<<<< HEAD
 >>>>>>> main
   background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
-=======
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #06b6d4);
-  border-radius: inherit;
-  z-index: -1;
-  animation: quantum-rotate 3s linear infinite;
-}
 
+<<<<<<< HEAD
+  -webkit-background-clip: text;
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));  -webkit-background-clip: text;
+
+  -webkit-background-clip: text;
+
+=======
 @keyframes quantum-rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -1544,6 +1543,9 @@ code { @apply font-mono; }
   outline: none;
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1849
 <<<<<<< HEAD
 =======

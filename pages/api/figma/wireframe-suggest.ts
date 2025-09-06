@@ -1,6 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
+;
+  try {;
+    const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`;
+    const completion = await openai.chat.completions.create({;
+      model: 'gpt-4o-mini',;
+
+=======
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -120,41 +127,19 @@ export default async function handler(req, res) {
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini';
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
+<<<<<<< HEAD
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
     res.status(200).json({ suggestion });
 
-  } catch (error) {
-    const message = process.env.OPENAI_API_KEY ? (e?.message || 'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
-    res.status(500).json({ error: message });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 
   }
-}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
