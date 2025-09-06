@@ -155,12 +155,7 @@ class PerformanceOptimizer {
         optimizationOpportunities: []
       };
 
-      for (const file of sourceFiles) {
-        const analysis = await this.analyzeFile(file);
-        codeAnalysis.totalLines += analysis.lines;
-        codeAnalysis.performanceIssues.push(...analysis.issues);
-        codeAnalysis.optimizationOpportunities.push(...analysis.opportunities);
-      }
+      
 
       this.optimizations.code = codeAnalysis;
       this.log(`🔍 Code analysis completed - ${sourceFiles.length} files, ${codeAnalysis.performanceIssues.length} issues found`);
@@ -380,17 +375,7 @@ class PerformanceOptimizer {
       // Find image files
       const imageFiles = this.findFiles(['.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp']);
       
-      for (const file of imageFiles) {
-        const stats = fs.statSync(file);
-        const sizeKB = Math.round(stats.size / 1024 * 100) / 100;
-        
-        if (sizeKB > 100) { // Files larger than 100KB
-          imageOptimizations.push({
-            file: path.relative(this.projectRoot, file),
-            currentSize: sizeKB,
-            recommendation: 'Consider compressing or converting to WebP format',
-            priority: sizeKB > 500 ? 'high' : 'medium'
-          });
+      );
         }
       }
       
@@ -411,19 +396,7 @@ class PerformanceOptimizer {
     try {
       const cssFiles = this.findFiles(['.css', '.scss', '.sass', '.less']);
       
-      for (const file of cssFiles) {
-        const content = fs.readFileSync(file, 'utf8');
-        const size = content.length;
-        
-        // Check for unused CSS
-        const unusedSelectors = this.findUnusedCSS(content);
-        if (unusedSelectors.length > 0) {
-          cssOptimizations.push({
-            file: path.relative(this.projectRoot, file),
-            unusedSelectors: unusedSelectors.length,
-            recommendation: 'Remove unused CSS selectors',
-            priority: 'medium'
-          });
+      );
         }
         
         // Check for CSS optimization opportunities
@@ -468,17 +441,7 @@ class PerformanceOptimizer {
     try {
       const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
       
-      for (const file of jsFiles) {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check for minification opportunities
-        if (content.includes('  ') || content.includes('\n\n')) {
-          jsOptimizations.push({
-            file: path.relative(this.projectRoot, file),
-            issue: 'Whitespace',
-            recommendation: 'Minify JavaScript files for production',
-            priority: 'low'
-          });
+      );
         }
         
         // Check for dead code
@@ -659,12 +622,10 @@ class PerformanceOptimizer {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
   optimizer.run();
-}
 
 module.exports = PerformanceOptimizer;

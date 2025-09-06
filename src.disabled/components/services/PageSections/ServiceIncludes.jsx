@@ -1,7 +1,7 @@
 import React from 'react';
 interface ServiceIncludesProps {
   // Add props here as needed
-}
+
 export default function ServiceIncludes({ }: ServiceIncludesProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function ServiceIncludes({ }: ServiceIncludesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

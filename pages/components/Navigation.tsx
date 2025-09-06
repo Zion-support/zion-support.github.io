@@ -76,7 +76,7 @@ import {
   Target as Goal,
   TrendingUp as Growth,
   Clock as Time,
-  DollarSign as Money
+  DollarSign as Money;
 } from 'lucide-react';
 
 const navigationItems = [
@@ -606,4 +606,3 @@ export default function Navigation() {
       </div>
     </nav>
   );
-}

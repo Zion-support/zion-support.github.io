@@ -29,7 +29,7 @@ import {;
 ;
 interface FooterProps {;
   className?: string;
-}
+
 ';
 export default function Footer({ className=" }: FooterProps) {;
   const currentYear = new Date().getFullYear(),;

@@ -1,7 +1,7 @@
 import React from 'react';
 interface Enhanced404PageProps {
   // Add props here as needed
-}
+
 export default function Enhanced404Page({ }: Enhanced404PageProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function Enhanced404Page({ }: Enhanced404PageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

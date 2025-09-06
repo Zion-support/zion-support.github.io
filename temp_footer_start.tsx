@@ -17,7 +17,7 @@ import {
   Twitter,
   Linkedin,
   Github,
-  Youtube
+  Youtube;
 } from 'lucide-react';
 
 const services = {

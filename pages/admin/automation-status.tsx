@@ -5,9 +5,10 @@ const AutomationStatus: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>Automation Status - Zion Tech Solutions</title>
-        <meta name="description" content="Automation Status page" />
+        <title>AutomationStatus - Zion Tech Solutions</title>
+        <meta name='description' content='AutomationStatus page' />
       </Head>
+
       <main>
         <h1>Automation Status</h1>
         <p>This page is under construction.</p>

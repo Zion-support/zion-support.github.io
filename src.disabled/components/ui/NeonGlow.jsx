@@ -1,7 +1,7 @@
 import React from 'react';
 interface NeonGlowProps {
   // Add props here as needed
-}
+
 export default function NeonGlow({ }: NeonGlowProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function NeonGlow({ }: NeonGlowProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

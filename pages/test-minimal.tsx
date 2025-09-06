@@ -7,4 +7,4 @@ export default function TestMinimal() {
       <p>If you can see this page, Next.js is working correctly.</p>
     </div>
   )
-}
+;

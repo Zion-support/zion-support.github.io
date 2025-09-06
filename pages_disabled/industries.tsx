@@ -55,11 +55,7 @@ const industries = [
 ];
 
 export default function IndustriesPage() {
-  return (
-    <Layout
-      title="Industries We Serve - Zion Tech Group"
-      description="Discover how we help businesses across various industries transform with innovative technology solutions."
-      keywords="industries, healthcare, finance, e-commerce, manufacturing, education, government"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -181,4 +177,3 @@ export default function IndustriesPage() {
       </div>
     </Layout>
   );
-}

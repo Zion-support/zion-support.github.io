@@ -16,11 +16,9 @@ class DeploymentAutomation {
       console.error('❌ Deployment failed:', error.message);
     }
   }
-}
 
 if (require.main === module) {
   const deployment = new DeploymentAutomation();
   deployment.deploy().catch(console.error);
-}
 
 module.exports = DeploymentAutomation;

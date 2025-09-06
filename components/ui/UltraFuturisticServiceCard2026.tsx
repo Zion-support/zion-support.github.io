@@ -5,7 +5,7 @@
   switch (variant) {
   case 'ai': return {
   
-}
+
 };
 {
   /* Popular Badge */ 
@@ -17,18 +17,18 @@
 }</motion.div>) ) 
 }</div> 
 }</div>) 
-}
+
 }</div>) 
 }</div>) ) 
 }</div> </div>) 
 }<motion.button whileHover= {
   {
   scale: 1.02 
-}
+
 }whileTap= {
   {
   scale: 0.98 
-}
+
 }className= {
   `w-full py-3 px-6 rounded-lg bg-gradient-to-r $ {
   styles.gradient 

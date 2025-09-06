@@ -28,7 +28,7 @@ import {
   Mail,
   MapPin,
   FileText,
-  Cpu
+  Cpu;
 } from 'lucide-react';
 
 const itServices = [
@@ -311,11 +311,7 @@ const stats = [
 ];
 
 export default function ITServices() {
-  return (
-    <Layout 
-      title="IT Services - Zion Tech Group" 
-      description="Comprehensive IT services including managed IT, cloud migration, cybersecurity, data management, and infrastructure solutions. Expert IT support for businesses of all sizes."
-      keywords="IT services, managed IT, cloud migration, cybersecurity, data backup, network management, IT support"
+  
     >
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
@@ -612,4 +608,3 @@ export default function ITServices() {
       </section>
     </Layout>
   );
-}

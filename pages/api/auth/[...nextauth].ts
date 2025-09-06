@@ -5,7 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).end();
     return;
   }
-  
+
   // TODO: Implement authentication logic here
-  res.status(200).json({ message: 'Auth endpoint' });
-}
+  res.status(200).json({ message: 'Auth endpoint placeholder' });

@@ -1,7 +1,7 @@
 import React from 'react';
 interface ReviewsModerationProps {
   // Add props here as needed
-}
+
 export default function ReviewsModeration({ }: ReviewsModerationProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function ReviewsModeration({ }: ReviewsModerationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

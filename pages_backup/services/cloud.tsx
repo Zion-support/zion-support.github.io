@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-=======
-=======
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -52,10 +42,6 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
-=======
-=======
-=======
 
 const cloudServices = [
   {
@@ -96,12 +82,7 @@ const cloudServices = [
 ];
 
 export default function CloudServicesPage() {
-<<<<<<< HEAD
-=======
-  return (
-    <Layout
-      title="Cloud Solutions - Zion Tech Group"
-      description="Comprehensive cloud solutions including migration, infrastructure, security, and optimization services."
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -111,10 +92,6 @@ export default function CloudServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -127,10 +104,6 @@ export default function CloudServicesPage() {
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
-=======
-=======
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -143,10 +116,6 @@ export default function CloudServicesPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -188,10 +157,6 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
-=======
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -232,8 +197,6 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
@@ -256,4 +219,3 @@ export default function CloudServicesPage() {
       </div>;
     </Layout>;
   );
-}

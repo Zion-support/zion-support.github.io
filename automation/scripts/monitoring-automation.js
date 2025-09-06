@@ -15,11 +15,9 @@ class MonitoringAutomation {
       console.error('❌ Monitoring failed:', error.message);
     }
   }
-}
 
 if (require.main === module) {
   const monitoring = new MonitoringAutomation();
   monitoring.monitor().catch(console.error);
-}
 
 module.exports = MonitoringAutomation;

@@ -1,5 +1,5 @@
 #!/usr/bin/env node,
-import fs from 'fs;
+import fs from 'fs;';
 import path from 'path';
 import { execSync } from child_process';
 ;
@@ -69,10 +69,7 @@ const main = () => {,
   let resolvedCount = 0,
   let failedCount = 0,
 ,
-  for (const file of conflictedFiles) {,
-    if (resolveConflicts(file)) {,
-      resolvedCount++
-    } else {,
+   else {,
       failedCount++
     };
   };

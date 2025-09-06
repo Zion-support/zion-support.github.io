@@ -1,73 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+import React from 'react';
 
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
-  title: string;
   message: string;
-  duration?: number;
-}
+  title?: string;
 
 interface NotificationSystemProps {
   notifications: Notification[];
-  onRemove: (id: string) => void;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-}
+  onDismiss?: (notificationId: string) => void;
+  className?: string;
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications,
-  onRemove,
-  position = 'top-right'
+  notifications;
+  onDismiss;
+  className
 }) => {
   const getNotificationStyles = (type: Notification['type']) => {
-    const baseStyles = 'border-l-4';
     switch (type) {
       case 'success':
-        return `${baseStyles} border-green-500 bg-green-50 text-green-800`;
+        return 'bg-green-50 border-green-200 text-green-800';
       case 'error':
-        return `${baseStyles} border-red-500 bg-red-50 text-red-800`;
+        return 'bg-red-50 border-red-200 text-red-800';
       case 'warning':
-        return `${baseStyles} border-yellow-500 bg-yellow-50 text-yellow-800`;
+        return 'bg-yellow-50 border-yellow-200 text-yellow-800';
       case 'info':
-        return `${baseStyles} border-blue-500 bg-blue-50 text-blue-800`;
+        return 'bg-blue-50 border-blue-200 text-blue-800';
       default:
-        return `${baseStyles} border-gray-500 bg-gray-50 text-gray-800`;
-    }
-  };
-
-  const getIcon = (type: Notification['type']) => {
-    switch (type) {
-      case 'success':
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-      case 'error':
-        return <AlertCircle className="h-5 w-5 text-red-500" />;
-      case 'warning':
-        return <AlertTriangle className="h-5 w-5 text-yellow-500" />;
-      case 'info':
-        return <Info className="h-5 w-5 text-blue-500" />;
-      default:
-        return <Info className="h-5 w-5 text-gray-500" />;
-    }
-  };
-
-  const getPositionClasses = () => {
-    switch (position) {
-      case 'top-left':
-        return 'top-4 left-4';
-      case 'top-right':
-        return 'top-4 right-4';
-      case 'bottom-left':
-        return 'bottom-4 left-4';
-      case 'bottom-right':
-        return 'bottom-4 right-4';
-      default:
-        return 'top-4 right-4';
+        return 'bg-gray-50 border-gray-200 text-gray-800';
     }
   };
 
   return (
-    <div className={`fixed ${getPositionClasses()} z-50 space-y-2`}>
+    <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
         <div
           key={notification.id}
@@ -75,18 +40,21 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <div className="flex items-center space-x-2 mb-1">
-                {getIcon(notification.type)}
-                <h4 className="font-semibold text-sm">{notification.title}</h4>
-              </div>
-              <p className="text-sm opacity-90">{notification.message}</p>
+              {notification.title && (
+                <h4 className="font-medium mb-1">{notification.title}</h4>
+              )}
+              <p className="text-sm">{notification.message}</p>
             </div>
-            <button
-              onClick={() => onRemove(notification.id)}
-              className="ml-2 text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              <X className="h-4 w-4" />
-            </button>
+            {onDismiss && (
+              <button
+                onClick={() => onDismiss(notification.id)}
+                className="ml-4 text-gray-400 hover:text-gray-600"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
           </div>
         </div>
       ))}

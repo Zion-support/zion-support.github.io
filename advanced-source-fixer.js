@@ -29,17 +29,7 @@ class AdvancedSourceFixer {
     if (!fs.existsSync(dir)) return;
 
     const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules"
-      ) {
-        await this.fixDirectory(fullPath);
-      } else if (
+     else if (
         item.endsWith(".ts") ||
         item.endsWith(".tsx") ||
         item.endsWith(".js") ||
@@ -158,7 +148,7 @@ class AdvancedSourceFixer {
       if (
         !fixed.includes("import React") &&
         !fixed.includes("import * as React")
-      ) {
+      ) {;
         fixed = "import React from 'react';\n" + fixed;
       }
     }
@@ -199,7 +189,7 @@ class AdvancedSourceFixer {
       if (original.length !== fixed.length) {
         fixes.push("Content length changed");
       }
-      if (fixed.includes("import React")) {
+      if (fixed.includes("import React")) {;
         fixes.push("Added React import");
       }
       if (fixed.includes("export default")) {
@@ -224,11 +214,9 @@ class AdvancedSourceFixer {
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
   }
-}
 
 if (require.main === module) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
-}
 
 module.exports = AdvancedSourceFixer;

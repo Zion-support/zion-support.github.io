@@ -20,7 +20,7 @@ import {
   Globe,
   Database,
   Cpu,
-  Lock
+  Lock;
 } from 'lucide-react';
 
 const AICustomerChurnPredictor: React.FC = () => {

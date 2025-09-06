@@ -32,7 +32,7 @@ import {
   Eye,
   Phone,
   Mail,
-  MapPin
+  MapPin;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -135,12 +135,7 @@ const stats = [
 ];
 
 export default function NewsPage() {
-  return (
-    <Layout
-      title="News & Updates - Zion Tech Group"
-      description="Stay updated with the latest news, product launches, partnerships, and industry insights from Zion Tech Group."
-      keywords="news, updates, company news, product launches, partnerships, industry insights, technology news"
-      canonical="https://ziontechgroup.com/news"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -374,4 +369,3 @@ export default function NewsPage() {
       </div>
     </Layout>
   );
-}

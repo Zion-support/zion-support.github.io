@@ -1,7 +1,7 @@
 import React from 'react';
 interface MobileNavigationProps {
   // Add props here as needed
-}
+
 export default function MobileNavigation({ }: MobileNavigationProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function MobileNavigation({ }: MobileNavigationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

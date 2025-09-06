@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {';
   variant?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'error';
   fullScreen?: boolean;
   className?: string;
-}
+
 ;
 const sizeClasses = {';
   sm: 'w-4 h-4',';

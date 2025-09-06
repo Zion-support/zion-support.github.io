@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Building, 
   Shield, 
@@ -15,8 +15,8 @@ import {
   Phone,
   Mail
 } from 'lucide-react'
-import Layout from '../../components/Layout'
-
+import Layout from '../../components/Layout';
+;
 const services = [
   {
     title: 'Citizen Service Portals',
@@ -88,10 +88,7 @@ const benefits = [
 ];
 
 export default function GovernmentPage() {
-  return (
-    <Layout
-      title="Government Technology Solutions - Zion Tech Group"
-      description="Transform government operations with secure, efficient technology solutions including citizen portals, data analytics, cybersecurity, and digital transformation."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
@@ -216,4 +213,3 @@ export default function GovernmentPage() {
       </div>
     </Layout>
   )
-}

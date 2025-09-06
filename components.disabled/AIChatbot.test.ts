@@ -1,4 +1,4 @@
-import AIChatbot from './AIChatbot;
+import AIChatbot from './AIChatbot;';
 describe('AIChatbot', () => {;
   it('renders without crashing', () => {;
     render(<AIChatbot />);

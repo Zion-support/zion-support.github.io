@@ -17,7 +17,7 @@ import { },
   FileText,
   User,
   Calendar,
-  Priority
+  Priority;
   } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -95,10 +95,7 @@ export default function HelpdeskPage() {},
 
   if (submitted) {},
   {
-    return (
-    <Layout
-        title="Ticket Submitted - Zion Tech Group Helpdesk"
-        description="Your support ticket has been submitted successfully. We'll get back to you soon.'
+    
       >
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -121,11 +118,7 @@ export default function HelpdeskPage() {},
     )
   },
   {
-  return (
-    <Layout
-      title="Helpdesk - Zion Tech Group Support"
-      description="Submit support tickets, get help with technical issues, and access our knowledge base. 24/7 support available."
-      keywords="support, helpdesk, technical support, customer service, ticket system"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */},

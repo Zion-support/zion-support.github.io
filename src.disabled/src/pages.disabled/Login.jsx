@@ -1,7 +1,7 @@
 import React from 'react';
 interface LoginProps {
   // Add props here as needed
-}
+
 export default function Login({ }: LoginProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function Login({ }: LoginProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

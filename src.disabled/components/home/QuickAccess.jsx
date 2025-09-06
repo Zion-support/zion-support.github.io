@@ -1,7 +1,7 @@
 import React from 'react';
 interface QuickAccessProps {
   // Add props here as needed
-}
+
 export default function QuickAccess({ }: QuickAccessProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function QuickAccess({ }: QuickAccessProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

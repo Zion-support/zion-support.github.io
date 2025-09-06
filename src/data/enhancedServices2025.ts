@@ -5,8 +5,8 @@ export interface ServiceTier {,;
   includes: string[],;
   features: string[];
 };
-export interface ServiceItem {,;
-  slug: string,;
+export interface ServiceItem {,;";
+  slug: string,;'
   title: string,';
   category: 'Micro SaaS' | AI Services' | 'IT Services | 'Quantum Computing' | Blockchain' | 'IoT & Edge,;
   subcategory: string,;

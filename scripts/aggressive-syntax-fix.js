@@ -35,7 +35,7 @@ new winston.transports.File ({
   
 }` 
 }return report;
-}
+
 }//Main execution module.exports = AggressiveSyntaxFixer;
 //Graceful shutdown handling //Add cleanup logic here process.exit (0) 
 });

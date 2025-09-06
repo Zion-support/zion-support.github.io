@@ -15,7 +15,7 @@ import {
   Coffee,
   Laptop,
   BookOpen,
-  Target
+  Target;
 } from 'lucide-react';
 
 const benefits = [
@@ -47,10 +47,7 @@ const benefits = [
 ];
 
 export default function CareersPage() {
-  return (
-    <MainLayout
-      title="Careers - Zion Tech Group"
-      description="Join our team and help build the future of technology. Explore career opportunities at Zion Tech Group."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
@@ -85,14 +82,7 @@ export default function CareersPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+                
                   >
                     <div className="text-green-600 mb-4">
                       <IconComponent className="w-10 h-10" />
@@ -112,4 +102,3 @@ export default function CareersPage() {
       </div>
     </MainLayout>
   );
-}

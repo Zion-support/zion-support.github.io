@@ -43,6 +43,6 @@ export interface ComprehensiveService {;
   testimonials?: string[],;
   caseStudies?: string[];
 };
-}
+
 ;
 export const COMPREHENSIVE_SERVICES_2025: ComprehensiveService[] = [];

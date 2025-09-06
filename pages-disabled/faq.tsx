@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import MainLayout from '../components/layout/MainLayout'
+import React, { useState } from 'react';
+import MainLayout from '../components/layout/MainLayout';
 import { motion, AnimatePresence } from 'framer-motion;
-import {}
+import {};
   // TODO: Implement;
 };
   ChevronDown, 
@@ -9,8 +9,8 @@ import {}
   HelpCircle,
   Search,
   Filter,
-  MessageCircle,
-  Phone,
+  MessageCircle,";
+  Phone,'
   Mail;'
 } from 'lucide-react;
 const faqCategories = [']

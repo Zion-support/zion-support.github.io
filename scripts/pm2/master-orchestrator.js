@@ -330,12 +330,10 @@ class MasterOrchestrator {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const orchestrator = new MasterOrchestrator();
   orchestrator.run();
-}
 
 module.exports = MasterOrchestrator;

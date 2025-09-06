@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ServiceRecommendations.jsProps {
   // Add props here as needed
-}
 
 export default function ServiceRecommendations.js({ }: ServiceRecommendations.jsProps) {
   return (
@@ -11,4 +10,3 @@ export default function ServiceRecommendations.js({ }: ServiceRecommendations.js
       <p>This component is currently under development.</p>
     </div>
   );
-}

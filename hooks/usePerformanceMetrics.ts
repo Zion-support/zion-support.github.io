@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
-import { PerformanceMetrics } from '../types';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
 
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -13,20 +19,20 @@ export function usePerformanceMetrics() {
     setIsSupported(true);
 
     const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
+      const navigation = (performance as any).getEntriesByType('navigation')[0] as any;
+      const paintEntries = (performance as any).getEntriesByType('paint');
       
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as any;
+      const fcp = paintEntries.find((entry: any) => entry.name === 'first-contentful-paint');
+      const lcp = (performance as any).getEntriesByType('largest-contentful-paint')[0] as any;
       
-      const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => {
-        return acc + (entry as any).value;
+      const cls = (performance as any).getEntriesByType('layout-shift').reduce((acc: number, entry: any) => {
+        return acc + (entry.value || 0);
       }, 0);
 
-      const fid = performance.getEntriesByType('first-input')[0] as PerformanceEventTiming;
+      const fid = (performance as any).getEntriesByType('first-input')[0] as any;
 
       setMetrics({
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
         firstContentfulPaint: fcp ? fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         cumulativeLayoutShift: cls,
@@ -41,4 +47,3 @@ export function usePerformanceMetrics() {
   }, []);
 
   return { metrics, isSupported };
-}

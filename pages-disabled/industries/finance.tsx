@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   DollarSign, 
   Brain, 
@@ -15,8 +15,8 @@ import {
   FileText,
   Users
 } from 'lucide-react'
-import Layout from '../../components/Layout'
-
+import Layout from '../../components/Layout';
+;
 const services = [
   {
     title: 'Blockchain Solutions',
@@ -88,10 +88,7 @@ const benefits = [
 ];
 
 export default function FinancePage() {
-  return (
-    <Layout
-      title="Financial Technology Solutions - Zion Tech Group"
-      description="Transform your financial services with cutting-edge technology solutions including blockchain, AI trading, analytics, and payment processing."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white py-20">
@@ -216,4 +213,3 @@ export default function FinancePage() {
       </div>
     </Layout>
   )
-}

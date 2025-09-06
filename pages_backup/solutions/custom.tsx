@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
-=======
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
 
 const features = [;
   {}
@@ -305,4 +297,3 @@ export default function CustomDevelopmentPage() {
       </div>;
     </Layout>;
   );
-}

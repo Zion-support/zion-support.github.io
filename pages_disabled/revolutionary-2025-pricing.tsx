@@ -540,4 +540,3 @@ export default function Revolutionary2025Pricing() {
       </UltraQuantumHolographicBackground>
     </Layout>
   );
-}

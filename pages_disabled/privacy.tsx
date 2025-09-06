@@ -5,12 +5,7 @@ import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
 import Layout from './components/Layout';
 
 export default function PrivacyPage() {
-  return (
-    <Layout
-      title="Privacy Policy - Zion Tech Group"
-      description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
-      keywords="privacy policy, data protection, personal information, GDPR compliance"
-      canonical="https://ziontechgroup.com/privacy"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -148,4 +143,3 @@ export default function PrivacyPage() {
       </div>
     </Layout>
   );
-}

@@ -2,7 +2,6 @@ import React from 'react';
 
 interface IoTEdgeProps {
   // Add props here as needed
-}
 
 export default function IoTEdge({ }: IoTEdgeProps) {
   return (
@@ -11,13 +10,6 @@ export default function IoTEdge({ }: IoTEdgeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+
+
+

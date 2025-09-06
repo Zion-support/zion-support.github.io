@@ -3,7 +3,7 @@
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
   
-}
+
 }) 
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
@@ -13,16 +13,14 @@ if (newMetrics.loadTime > 3000) {
 if (ms < 1000) return `$ {
   Math.round (ms) 
 }ms`;
-return `$ {
-  (ms /1000) .toFixed (2) 
-}s` 
+
 };
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
 case 'tablet': return Tablet;
 default: return Laptop;
-}
+
 };
 const getPerformanceScore = () => {
   let score = 0;
@@ -51,7 +49,7 @@ if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
 else score += 25 
-}
+
 };
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
@@ -74,5 +72,5 @@ else score += 25
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
-return 'Poor' 
+
 };

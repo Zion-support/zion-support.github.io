@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion;
-import {}
+import {};
   // TODO: Implement;
 };
   Calendar, 
@@ -13,8 +13,8 @@ import {}
   ExternalLink,
   Play,
   Download,
-  Users,
-  Award,
+  Users,";
+  Award,'
   CheckCircle;'
 } from 'lucide-react;
 const webinars = []

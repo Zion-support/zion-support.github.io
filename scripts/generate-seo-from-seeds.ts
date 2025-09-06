@@ -6,12 +6,8 @@ const outDir = path.join (process.cwd (), 'datapage-metadataseo');
 fs.mkdirSync (outDir, {
   recursive: true 
 });
-for (const s of seeds) {
-  const gen = await post (`$ {
-  HOST 
-}/api/seo/generate`, s);
+/api/seo/generate`, s);
 if (gen?.slug && gen?.payload) {
   
-}
-}
-}
+
+

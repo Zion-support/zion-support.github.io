@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion;
-import {}
+import {};
   // TODO: Implement;
 };
   Search, 
@@ -14,8 +14,8 @@ import {}
   FileText, 
   Video,
   Download,
-  ExternalLink,
-  ChevronDown,
+  ExternalLink,";
+  ChevronDown,'
   ChevronRight;'
 } from 'lucide-react;
 const helpCategories = []

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   // TODO: Implement
-}
+
   BarChart3, 
   Shield, 
   Users, 
@@ -17,7 +17,7 @@ import {
   GraduationCap,
   Home,
   Award,
-  Target,
+  Target,;
   Globe;'
 } from 'lucide-react';
 const industries = [
@@ -128,10 +128,7 @@ const caseStudies = [
 ];
 
 export default function IndustrySolutionsPage() {
-  return (
-    <MainLayout"
-      title="Industry Solutions - Zion Tech Group"
-      description="Specialized technology solutions for specific industries with deep domain expertise and compliance requirements."
+  
     >
 </$1>
       <div className="min-h-screen bg-gray-50">"
@@ -433,4 +430,3 @@ export default function IndustrySolutionsPage() {
         </section>
       </div>
     </$1>
-}

@@ -1,13 +1,14 @@
- interface QuickReplyButtonProps {
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+
+interface QuickReplyButtonProps {
   text: string;
-onClick: () => void 
-}text, onClick 
-}: QuickReplyButtonProps) {
-  return (<Button variant="outline" size="sm" className= {
-  cn () 
-}onClick= {
-  onClick 
-}> {
-  text 
-}</Button>) 
-}
+  onClick: () => void;
+
+export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
+  
+    >
+      {text}
+    </Button>
+  );

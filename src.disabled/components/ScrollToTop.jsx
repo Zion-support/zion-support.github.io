@@ -1,7 +1,7 @@
 import React from 'react';
 interface ScrollToTopProps {
   // Add props here as needed
-}
+
 export default function ScrollToTop({ }: ScrollToTopProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function ScrollToTop({ }: ScrollToTopProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

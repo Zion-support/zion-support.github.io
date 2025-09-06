@@ -21,7 +21,6 @@ try {
   }
 } catch (error) {
   console.log('❌ Failed to run npm audit:', error.message);
-}
 
 // Check for sensitive data in files
 console.log('\n🔍 Scanning for sensitive data...');
@@ -72,7 +71,6 @@ if (sensitiveResults.length > 0) {
   });
 } else {
   console.log('✅ No sensitive data patterns found');
-}
 
 // Check for outdated dependencies
 console.log('\n📅 Checking for outdated dependencies...');
@@ -90,7 +88,6 @@ try {
   }
 } catch (error) {
   console.log('✅ All dependencies are up to date');
-}
 
 // Generate security report
 const securityReport = {

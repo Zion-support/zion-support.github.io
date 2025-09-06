@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-  Calendar, 
+  Calendar, ;
 import React, { useState } from 'react';
 import Head from 'next/head';';
 import Link from 'next/link';';
@@ -28,7 +28,7 @@ import {
   Search,
   Filter,
   ChevronDown,
-  ChevronUp
+  ChevronUp;
 } from 'lucide-react';
 
 const webinars = [
@@ -145,7 +145,7 @@ import {
   BookOpen,
   Brain,
   Cloud,
-  Shield
+  Shield;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -256,11 +256,7 @@ export default function WebinarsPage() {
     return matchesCategory && matchesLevel && matchesSearch;
   });
 
-  return (
-    <MainLayout
-      title="Webinars - Zion Tech Group"
-      description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and more. Learn from industry leaders and gain practical insights for your business."
-      keywords="webinars, online events, AI training, cloud computing, cybersecurity, business education, technology learning"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -302,11 +298,7 @@ export default function WebinarsPage() {
     ? pastWebinars 
     : pastWebinars.filter(w => w.category === selectedCategory);
 
-  return (
-    <Layout 
-      title="Webinars - Zion Tech Group"
-      description="Join our expert-led webinars on AI, cloud computing, cybersecurity, and digital transformation. Learn from industry leaders and stay ahead of technology trends."
-      keywords="webinars, technology education, AI training, cloud computing, cybersecurity, digital transformation, online learning"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -642,13 +634,7 @@ export default function WebinarsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredUpcoming.map((webinar, index) => {
                   const IconComponent = webinar.icon;
-                  return (
-                    <motion.div
-                      key={webinar.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  
                     >
                       <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center relative">
                         <IconComponent className="w-16 h-16 text-white" />
@@ -708,13 +694,7 @@ export default function WebinarsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPast.map((webinar, index) => {
                   const IconComponent = webinar.icon;
-                  return (
-                    <motion.div
-                      key={webinar.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                  
                     >
                       <div className="h-48 bg-gradient-to-r from-gray-500 to-gray-600 flex items-center justify-center relative">
                         <IconComponent className="w-16 h-16 text-white" />
@@ -841,4 +821,3 @@ export default function WebinarsPage() {
     </MainLayout>
     </Layout>
   );
-}

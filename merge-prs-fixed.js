@@ -11,7 +11,6 @@ try {
 } catch (error) {
     console.error('❌ Not in a git repository'),
     process.exit(1)
-}
 
 try {
     // Ensure clean working directory
@@ -43,9 +42,7 @@ try {
             
             // Resolve conflicts by accepting our version
             const files = conflictFiles.trim().split('\n'),
-            for (const file of files) {
-                if (file.trim()) {
-                    console.log(`Resolving conflicts in: ${file}`),
+            `),
                     try {
                         execSync(`git checkout --ours "${file}"`)
                     } catch (e) {
@@ -71,10 +68,7 @@ try {
     branchList.forEach(branch => console.log(`  - ${branch}`)),
 
     // Merge each branch
-    for (const branch of branchList) {
-        try {
-            const branchName = branch.replace('origin/', ''),
-            console.log(`\n🔄 Merging branch: ${branchName}`),
+    `),
             
             // Checkout the branch
             execSync(`git checkout ${branchName}`),
@@ -102,4 +96,3 @@ try {
 } catch (error) {
     console.error('❌ Error during merge process:', error.message),
     process.exit(1)
-}

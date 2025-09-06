@@ -34,18 +34,17 @@ case 'customers': return (<> <Head> <title>Revolutionary 2025 Services Showcase 
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation. </p> Call Now → </Link> </div> Send Email → </Link> </div> Get Directions → </Link> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" > <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Start Your Transformation </button> </Link> 
-}

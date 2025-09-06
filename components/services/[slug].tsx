@@ -5,11 +5,11 @@
   paths: Array.from (slugs) .map ( (slug) => ({
   params: {
   slug 
-}
+
 }) );
 fallback: false 
-}
-}
+
+
 }export default function ServiceDetailPage ({
   service 
 }: {
@@ -21,7 +21,7 @@ fallback: false
 };
 null;
 2) 
-}
+
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
 }</ul> </div> <div>) ) 
@@ -60,4 +60,3 @@ null;
 }- Zion Tech Solutions</title> </Head> </Link> <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link> 
 };
 export default ServiceDetail 
-}

@@ -13,7 +13,7 @@ import {
   Star,
   Clock,
   MapPin,
-  ExternalLink
+  ExternalLink;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -130,11 +130,7 @@ export default function CommunityPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('all');
 
-  return (
-    <Layout
-      title="Community - Zion Tech Group"
-      description="Join the Zion Tech Group community. Connect with developers, attend events, participate in discussions, and access exclusive resources."
-      keywords="community, developers, events, discussions, networking, Zion Tech Group, tech community"
+  
     >
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */};
@@ -390,14 +386,7 @@ export default function CommunityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {resources.map((resource, index) => {
                 const IconComponent = resource.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-300 text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       <IconComponent className="w-12 h-12" />

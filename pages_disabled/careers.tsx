@@ -17,7 +17,7 @@ import {
   Target,
   Award,
   Building,
-  Rocket
+  Rocket;
 } from 'lucide-react';
 
 const jobOpenings = [
@@ -287,14 +287,7 @@ export default function CareersPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {companyValues.map((value, index) => {
                 const IconComponent = value.icon;
-                return (
-                  <motion.div
-                    key={value.title}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-lg shadow-lg p-6 text-center"
+                
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="w-8 h-8 text-white" />
@@ -474,4 +467,3 @@ export default function CareersPage() {
       </div>
     </MainLayout>
   );
-}

@@ -22,7 +22,6 @@ function runCommand(command, description) {
     console.log(`⚠️ ${description} had issues: ${error.message}`);
     return null;
   }
-}
 
 // Function to create performance optimization
 function createPerformanceOptimizations() {
@@ -88,7 +87,6 @@ export class PerformanceMonitor {
   getMetrics() {
     return Object.fromEntries(this.metrics);
   }
-}
 
 export const performanceMonitor = new PerformanceMonitor();`,
     
@@ -120,7 +118,6 @@ export const memoize = (fn) => {
     console.log(`✅ Created ${filename}`);
   }
 });
-}
 
 // Function to create security enhancements
 function createSecurityEnhancements() {
@@ -178,7 +175,6 @@ export const cspConfig = {
     console.log(`✅ Created ${filename}`);
   }
 });
-}
 
 // Function to create testing utilities
 function createTestingUtilities() {
@@ -210,12 +206,12 @@ export const mockNextRouter = () => ({
   pathname: '/',
   query: {},
   asPath: '/',
-}
+
 });
 
 export const createMockProps = (overrides = {}) => ({
   ...overrides
-}
+
 });`,
     
     'performance-test.js': `// Performance testing utilities
@@ -242,7 +238,6 @@ export const measurePerformance = (fn, iterations = 1000) => {
     console.log(`✅ Created ${filename}`);
   }
 });
-}
 
 // Main execution
 async function main() {
@@ -268,6 +263,5 @@ async function main() {
     console.error('❌ Error during automation:', error.message);
     process.exit(1);
   }
-}
 
 main();

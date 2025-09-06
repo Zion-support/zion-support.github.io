@@ -1,38 +1,29 @@
-import React from 'react';
-import Image from 'next/image';
-
-interface OptimizedImageProps {
-  src: string;
+import React from 'react,;
   alt: string;
   width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  height?: number,
+  priority?: boolean,
+  className?: string,
+  sizes?: string";
+};'
+export const "OptimizedImage": React.FC<OptimizedImageProps> = ({,
   src,
   alt,
-  width = 800,
-  height = 600,
-  className = '',
+  width,
+  height,
   priority = false,
-  quality = 75,
-}) => {
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      priority={priority}
-      quality={quality}
-      placeholder="blur"
-      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-    />
-  );
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+}) => {,
+  return (,
+    <Image,
+      src={src},
+  alt={alt},
+  width={width},
+  height={height},
+  priority={priority},
+  className={className},
+  sizes={sizes},
+  quality={85};
+    />)
 };
-
-export default OptimizedImage;
+export default OptimizedImage,

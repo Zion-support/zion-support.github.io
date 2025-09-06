@@ -3,10 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function AccessibilityPage() {
-  return (
-    <Layout 
-      title="Accessibility Statement - Zion Tech Group"
-      description="Learn about our commitment to web accessibility and how we ensure our website is accessible to all users."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -24,4 +21,3 @@ export default function AccessibilityPage() {
       </div>
     </Layout>
   );
-}

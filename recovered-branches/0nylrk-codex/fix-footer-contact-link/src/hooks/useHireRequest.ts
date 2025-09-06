@@ -1,4 +1,9 @@
- export interface HireRequestData {
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { TalentProfile } from '@/types/talent';
+
+export interface HireRequestData {
   talent: {
   id: string;
 full name: string;
@@ -15,35 +20,67 @@ project: {
 timeline: string;
 budgetMin: number;
 budgetMax: number 
-}
-}export function useHireRequest () {
-  const [isSubmitting, setIsSubmitting] = useState (false);
-const [error, setError] = useState<string | null> (null);
-const submitHireRequest = async (requestData: HireRequestData) => {
-  setIsSubmitting (true);
-setError (null);
-try {
-  //Call the edge function to process the hire request const {
-  data: response, error 
-}= await supabase.functions.invoke ('process-hire-request', {
-  body: requestData 
-});
-// Show success message return {
-  success: true, requestId: response?.request id 
-}
-}catch (error) {
-  ? error.message : "There was a problem submitting your request. Please try again.";
-toast ({
+
+export function useHireRequest() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const submitHireRequest = async (requestData: HireRequestData) => {
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      // Call the edge function to process the hire request
+      const { data: response, error } = await supabase.functions.invoke(
+        'process-hire-request',
+        {
+          body: requestData,
+        }
+      );
+
+      if (error) throw error;
+
+      // Show success message
+      toast({
+        title: 'Request Submitted',
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`,
+      });
+
+      return { success: true, requestId: response?.request_id };
+    } catch (error) {
+      console.error('Error submitting hire request:', error);
+
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : 'There was a problem submitting your request. Please try again.';
+
+      setError(errorMessage);
+
+      toast({
+        title: 'Error',
+        description: errorMessage,
+        variant: 'destructive',
+      });
+
+      return { success: false, error: errorMessage };
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return {
-  success: false, error: errorMessage 
-}
+    submitHireRequest,
+    isSubmitting,
+    error,
+  };
+
 }finally {
   setIsSubmitting (false) 
-}
+
 };
-return {
+
   submitHireRequest;
 isSubmitting;
 error 
-}
-}
+

@@ -1,7 +1,7 @@
 import React from 'react';
 interface CategoryDetailProps {
   // Add props here as needed
-}
+
 export default function CategoryDetail({ }: CategoryDetailProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function CategoryDetail({ }: CategoryDetailProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

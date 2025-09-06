@@ -1,6 +1,6 @@
-import React from 'react'
-import MainLayout from '../components/layout/MainLayout'
-import { motion } from 'framer-motion'
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+import { motion } from 'framer-motion';
 import {
   Shield, 
   Settings, 
@@ -40,7 +40,7 @@ const cookieTypes = [
     required: false,
     examples: ["Advertising", "Social media", "Retargeting", "Personalized content"],
     icon: Globe
-  }
+  };
 ];
 
 const cookieDetails = [
@@ -77,10 +77,7 @@ const cookieDetails = [
 ];
 
 export default function CookiesPage() {
-  return (
-    <MainLayout
-      title="Cookie Policy - Zion Tech Group"
-      description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience and analyze website usage."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
@@ -240,4 +237,3 @@ export default function CookiesPage() {
       </div>
     </MainLayout>
   )
-}

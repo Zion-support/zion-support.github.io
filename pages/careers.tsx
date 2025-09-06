@@ -3,10 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function CareersPage() {
-  return (
-    <Layout 
-      title="Careers - Zion Tech Group"
-      description="Join our team of innovative developers, engineers, and designers building the future of technology."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -24,4 +21,3 @@ export default function CareersPage() {
       </div>
     </Layout>
   );
-}

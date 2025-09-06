@@ -21,6 +21,5 @@ export class PerformanceMonitor {
   getMetrics() {
     return Object.fromEntries(this.metrics);
   }
-}
 
 export const performanceMonitor = new PerformanceMonitor();

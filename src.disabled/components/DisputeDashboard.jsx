@@ -1,7 +1,7 @@
 import React from 'react';
 interface DisputeDashboardProps {
   // Add props here as needed
-}
+
 export default function DisputeDashboard({ }: DisputeDashboardProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function DisputeDashboard({ }: DisputeDashboardProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

@@ -1,4 +1,4 @@
-import AICodeGenerator from './AICodeGenerator;
+import AICodeGenerator from './AICodeGenerator;';
 describe('AICodeGenerator', () => {;
   it('renders without crashing', () => {;
     render(<AICodeGenerator />);

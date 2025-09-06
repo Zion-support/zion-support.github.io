@@ -1,7 +1,4 @@
- return (<nav className= {
-  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
-  isScrolled ? "bg-black/90 backdrop-blur-md border-b border-white/20 shadow-lg" : "bg-black/80 backdrop-blur-md border-b border-white/10" 
-}` 
+ 
 }role="navigation" aria-label="Main navigation" > <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center justify-between h-16"> {
   /* Logo */ 
 }<div className="flex items-center"> <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity" aria-label="Zion OS Home"> <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"> <span className="text-white font-bold text-sm">Z</span> </div> <span className="text-xl font-bold gradient-text">Zion Tech Group</span> </Link> </div> {
@@ -86,4 +83,3 @@
 }> Documentation </a> <a href="/multiverse/launch" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-colors" onClick= {
   () => setIsMobileMenuOpen (false) 
 }> Launch </a> <button className="w-full mt-4 btn-primary text-sm"> Get Started </button> </div> </div> </div> </div> </nav>) 
-}

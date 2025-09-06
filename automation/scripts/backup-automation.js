@@ -33,12 +33,7 @@ class BackupAutomation {
     if (fs.existsSync(srcDir)) {
       const walkDir = (dir) => {
         const items = fs.readdirSync(dir);
-        for (const item of items) {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          if (stat.isDirectory()) {
-            walkDir(fullPath);
-          } else {
+         else {
             files.push(fullPath);
           }
         }
@@ -47,11 +42,9 @@ class BackupAutomation {
     }
     return files;
   }
-}
 
 if (require.main === module) {
   const backup = new BackupAutomation();
   backup.backup().catch(console.error);
-}
 
 module.exports = BackupAutomation;

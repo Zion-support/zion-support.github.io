@@ -17,7 +17,7 @@ import {
   Video,
   BookOpen,
   Code,
-  Lightbulb
+  Lightbulb;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -475,4 +475,3 @@ export default function Community() {
       </div>
     </Layout>
   );
-}

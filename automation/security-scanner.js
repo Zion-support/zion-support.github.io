@@ -180,11 +180,9 @@ class SecurityScanner {
       this.saveResults();
     }
   }
-}
 
 if (require.main === module) {
   const scanner = new SecurityScanner();
   scanner.run();
-}
 
 module.exports = SecurityScanner;

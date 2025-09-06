@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ServiceComparison.jsProps {
   // Add props here as needed
-}
 
 export default function ServiceComparison.js({ }: ServiceComparison.jsProps) {
   return (
@@ -11,4 +10,3 @@ export default function ServiceComparison.js({ }: ServiceComparison.jsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ServiceInnovationHub.jsProps {
   // Add props here as needed
-}
 
 export default function ServiceInnovationHub.js({ }: ServiceInnovationHub.jsProps) {
   return (
@@ -11,4 +10,3 @@ export default function ServiceInnovationHub.js({ }: ServiceInnovationHub.jsProp
       <p>This component is currently under development.</p>
     </div>
   );
-}

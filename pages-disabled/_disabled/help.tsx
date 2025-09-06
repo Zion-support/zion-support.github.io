@@ -1,6 +1,6 @@
-import React from 'react'
-import Header from '../components/Header'
-
+import React from 'react';
+import Header from '../components/Header';
+;
 export default function HelpPage() {
 	return (
 		<div className="min-h-screen bg-white">
@@ -11,4 +11,3 @@ export default function HelpPage() {
 			</main>
 		</div>
 	)
-}

@@ -1,7 +1,7 @@
 import React from 'react';
 interface TalentsPageProps {
   // Add props here as needed
-}
+
 export default function TalentsPage({ }: TalentsPageProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function TalentsPage({ }: TalentsPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

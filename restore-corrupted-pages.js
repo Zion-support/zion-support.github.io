@@ -1,22 +1,65 @@
-#!/usr/bin/env node if (files.length === 0) return null;
-//Sort by timestamp (newest first) and find the first valid one //Check if this backup has proper content if (content.includes ('export default') && (content.includes ('function') || content.includes ('const') || content.includes ('class') ) && content.includes ('return') && content.length > 100) {
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+// Function to find the best backup file for a given page
+function findBestBackup(pagePath) {
+  const dir = path.dirname(pagePath);
+  const baseName = path.basename(pagePath, path.extname(pagePath));
+  const ext = path.extname(pagePath);
+
+  // Look for backup files
+  const backupPattern = new RegExp(`^${baseName}\\.tsx\\.backup\\.\\d+$`);
+  const files = fs.readdirSync(dir).filter(file => backupPattern.test(file));
+
+  if (files.length === 0) return null;
+
+  // Sort by timestamp (newest first) and find the first valid one
+  files.sort((a, b) => {
+    const timestampA = parseInt(a.match(/\.backup\.(\d+)$/)[1]);
+    const timestampB = parseInt(b.match(/\.backup\.(\d+)$/)[1]);
+    return timestampB - timestampA;
+  });
+
   
-}
-}return null;
-}//Function to restore a corrupted page //Check if the page is corrupted const isCorrupted = !currentContent.includes ('export default') || currentContent.length < 100 || !currentContent.includes ('return');
-if (!isCorrupted) {
-  
-}//Clean up the content backupContent = backupContent.trim ();
-//Ensure it has proper structure //Restore the page fs.writeFileSync (pagePath, backupContent);
-}
-}//Function to scan and restore all corrupted pages 
-}results.details.push ({
-  file: fullPath;
-...result 
-}) 
-}
-}
-}//Save detailed report const reportPath = path.join (process.cwd (), 'page-restoration-report.json');
-fs.writeFileSync (reportPath, JSON.stringify (results, null, 2) );
-return results;
-}// Run the restoration if this script is executed directly 
+    } catch (error) {
+      console.log(`Error reading backup ${backupPath}:`, error.message);
+    }
+  }
+
+  return null;
+
+// Function to restore a corrupted page
+function restorePage(pagePath) {
+  try {
+    const currentContent = fs.readFileSync(pagePath, 'utf8');
+
+    // Check if the page is corrupted
+    const isCorrupted =
+      !currentContent.includes('export default') ||
+      currentContent.length < 100 ||
+      !currentContent.includes('return');
+
+    if (!isCorrupted) {
+      return { restored: false, reason: 'Page is not corrupted' };
+    }
+
+    // Find backup
+    const backupPath = findBestBackup(pagePath);
+    if (!backupPath) {
+      return { restored: false, reason: 'No valid backup found' };
+    }
+
+    // Read backup content
+    let backupContent = fs.readFileSync(backupPath, 'utf8');
+
+    // Handle merge conflicts by taking the content after the conflict markers
+    if (backupContent.includes('')) {
+      const parts = backupContent.split('}
+
+module.exports = {
+  restorePage,
+  restoreAllCorruptedPages,
+  findBestBackup,
+};

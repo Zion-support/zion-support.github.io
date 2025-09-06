@@ -14,7 +14,7 @@
         content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),
 ,
         if (content !== fs.readFileSync(file, "utf8")) {,
-          modified = true
+          modified = true;
         };
 ,
         if (modified) {,

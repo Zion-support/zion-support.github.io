@@ -6,7 +6,7 @@ interface ViewModeContextValue {;
 	viewMode: ViewMode;
 	setViewMode: (mode: ViewMode) => void;
 	toggle: () => void;
-}
+
 ;
 const ViewModeContext = createContext<ViewModeContextValue | undefined>(undefined);
 
@@ -24,7 +24,7 @@ export const ViewModeProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 			{children}
 		</ViewModeContext.Provider>;
 	);
-}
+
 ;
 export function useViewMode(): ViewModeContextValue {;
 	const ctx = useContext(ViewModeContext);

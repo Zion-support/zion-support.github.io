@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface Jest.setupProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
 
 export default function Jest.setup({ }: Jest.setupProps) {
   return (
@@ -13,20 +10,7 @@ export default function Jest.setup({ }: Jest.setupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
-=======
-}}},
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-=======
+
 };
 export default function Jest.setup({ }: Jest.setupProps) {;
   return (,
@@ -37,4 +21,3 @@ export default function Jest.setup({ }: Jest.setupProps) {;
 };
 };
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-226f

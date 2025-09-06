@@ -53,6 +53,5 @@ export class MemoryCache {
     this.cache.clear();
     this.accessTimes.clear();
   }
-}
 
 export const memoryCache = new MemoryCache();

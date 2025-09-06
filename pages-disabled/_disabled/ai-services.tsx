@@ -25,10 +25,7 @@ const aiServices = [
 ];
 
 export default function AIServicesPage() {
-  return (
-    <MainLayout
-      title="AI Services - Zion Tech Group"
-      description="Comprehensive AI services and solutions for businesses of all sizes."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -63,14 +60,7 @@ export default function AIServicesPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => {
                 const IconComponent = service.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+                
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-blue-600">
@@ -117,4 +107,3 @@ export default function AIServicesPage() {
       </div>
     </MainLayout>
   );
-}

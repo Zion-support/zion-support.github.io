@@ -1,7 +1,7 @@
 import React from 'react';
 interface ProfileProjectsProps {
   // Add props here as needed
-}
+
 export default function ProfileProjects({ }: ProfileProjectsProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function ProfileProjects({ }: ProfileProjectsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

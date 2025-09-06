@@ -68,7 +68,6 @@ function fixSpecificSyntax(content) {
   content = fixedLines.join('\n');
   
   return content;
-}
 
 // Function to process a file
 function processFile(filePath) {
@@ -86,7 +85,6 @@ function processFile(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Process the specific files that have errors
 const errorFiles = [

@@ -5,6 +5,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', ['POST']);
     return res.status(405).end('Method Not Allowed');
   }
-  
-  res.status(200).json({ message: 'Email confirmed' });
-}
+
+  // TODO: Implement confirmation logic here
+  res.status(200).json({ message: 'Confirm endpoint placeholder' });

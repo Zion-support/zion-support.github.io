@@ -34,7 +34,7 @@ import {
   TrendingUp,
   Calendar,
   Download,
-  ExternalLink
+  ExternalLink;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -151,12 +151,7 @@ const stats = [
 ];
 
 export default function TutorialsPage() {
-  return (
-    <Layout
-      title="Tutorials - Zion Tech Group"
-      description="Learn from our comprehensive collection of tutorials covering AI, web development, cloud computing, cybersecurity, and more."
-      keywords="tutorials, learning, AI, web development, cloud computing, cybersecurity, programming, technology education"
-      canonical="https://ziontechgroup.com/tutorials"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -417,4 +412,3 @@ export default function TutorialsPage() {
       </div>
     </Layout>
   );
-}

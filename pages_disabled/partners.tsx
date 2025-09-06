@@ -32,7 +32,7 @@ import {
   Home,
   Phone,
   Mail,
-  MapPin
+  MapPin;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -116,12 +116,7 @@ const stats = [
 ];
 
 export default function PartnersPage() {
-  return (
-    <Layout
-      title="Partners - Zion Tech Group"
-      description="Join our partner ecosystem and expand your reach with Zion Tech Group. Strategic partnerships for technology companies, solution providers, and industry leaders."
-      keywords="partners, partnerships, technology partners, strategic alliances, business partners, technology ecosystem"
-      canonical="https://ziontechgroup.com/partners"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -271,4 +266,3 @@ export default function PartnersPage() {
       </div>
     </Layout>
   );
-}

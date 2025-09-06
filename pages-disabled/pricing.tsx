@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react;
-const plans = []
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react;";
+const plans = []'
   {'}
     name: "Starter",
     price: "$2,000",

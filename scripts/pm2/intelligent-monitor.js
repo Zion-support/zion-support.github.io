@@ -187,14 +187,7 @@ class IntelligentMonitor {
         const files = fs.readdirSync(logDir);
         const errorFiles = files.filter(file => file.includes('error'));
         
-        for (const file of errorFiles) {
-          try {
-            const content = fs.readFileSync(path.join(logDir, file), 'utf8');
-            const lines = content.split('\n').filter(line => 
-              line.includes('ERROR') || line.includes('error') || line.includes('Error')
-            );
-            errorLogs.push(...lines.slice(-10)); // Last 10 errors
-          } catch (error) {
+         catch (error) {
             // Skip files that can't be read
           }
         }
@@ -404,12 +397,10 @@ class IntelligentMonitor {
     console.log(`\n📄 Metrics saved to: ${this.metricsFile}`);
     console.log(`🔮 Predictions saved to: ${this.predictionsFile}`);
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const monitor = new IntelligentMonitor();
   monitor.run();
-}
 
 module.exports = IntelligentMonitor;

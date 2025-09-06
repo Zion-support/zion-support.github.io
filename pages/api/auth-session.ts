@@ -5,6 +5,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', ['GET']);
     return res.status(405).end('Method Not Allowed');
   }
-  
-  res.status(200).json({ session: null });
-}
+  res.status(200).json({ message: 'OK' });

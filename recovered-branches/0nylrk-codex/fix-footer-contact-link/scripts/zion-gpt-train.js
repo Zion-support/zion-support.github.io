@@ -17,7 +17,7 @@ completion: stripPii (job.description)
 }`;
 completion: stripPii (resume.summary) 
 }) 
-}
+
 }return pairs;
 }const uploadRes = await fetch ('https://api.openai.com/v1/files', {
   method: 'POST', headers: {

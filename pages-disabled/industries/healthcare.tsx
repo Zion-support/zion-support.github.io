@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   Heart, 
   Brain, 
@@ -18,8 +18,8 @@ import {
   Camera,
   FileText
 } from 'lucide-react'
-import Layout from '../../components/Layout'
-
+import Layout from '../../components/Layout';
+;
 const services = [
   {
     title: 'AI-Powered Medical Diagnostics',
@@ -91,10 +91,7 @@ const benefits = [
 ];
 
 export default function HealthcarePage() {
-  return (
-    <Layout
-      title="Healthcare Technology Solutions - Zion Tech Group"
-      description="Transform healthcare delivery with secure, efficient technology solutions including AI diagnostics, EHR systems, telemedicine, and healthcare analytics."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-red-900 via-pink-900 to-purple-900 text-white py-20">
@@ -219,4 +216,3 @@ export default function HealthcarePage() {
       </div>
     </Layout>
   )
-}

@@ -7,7 +7,6 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-}
 
 export default function SEO({
   title = "Zion Tech Group - Advanced AI Solutions",
@@ -35,4 +34,3 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
-}

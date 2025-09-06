@@ -33,7 +33,6 @@ function renderPage() {
       </MemoryRouter>
     </QueryClientProvider>
   );
-}
 
 test('renders profile data from API', async () => {
   renderPage();

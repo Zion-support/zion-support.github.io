@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   // TODO: Implement
-}
+
   Settings, 
   Code, 
   Wrench, 
@@ -16,7 +16,7 @@ import {
   Award,
   Shield,
   Zap,
-  Globe,
+  Globe,;
   BarChart3;'
 } from 'lucide-react';
 const services = [
@@ -141,10 +141,7 @@ const caseStudies = [
 ];
 
 export default function CustomSolutionsPage() {
-  return (
-    <MainLayout"
-      title="Custom Development Solutions - Zion Tech Group"
-      description="Bespoke software solutions built specifically for your unique business requirements. Full-stack development, mobile apps, and API development."
+  
     >
 </$1>
       <div className="min-h-screen bg-gray-50">"
@@ -509,4 +506,3 @@ export default function CustomSolutionsPage() {
         </section>
       </div>
     </$1>
-}

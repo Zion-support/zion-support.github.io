@@ -1,9 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Brain, CheckCircle, ArrowRight } from 'lucide-react'
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Brain, CheckCircle, ArrowRight } from 'lucide-react';
+;
 const aiServices = [
   {
     title: 'AI-Powered Email Responder',
@@ -92,14 +92,7 @@ export default function AIServicesPage() {
                   </motion.div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => {
-              return (
-                <motion.div
-                  key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-blue-600 group-hover:text-purple-600 transition-colors">
                       <IconComponent className="w-10 h-10" />
@@ -157,14 +150,7 @@ export default function AIServicesPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />
@@ -200,14 +186,7 @@ export default function AIServicesPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-blue-600" />

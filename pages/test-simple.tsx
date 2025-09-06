@@ -6,4 +6,4 @@ export default function TestSimple() {
       <p>This is a simple test page to check if Next.js is working.</p>
     </div>
   )
-}
+;

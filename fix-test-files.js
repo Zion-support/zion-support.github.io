@@ -47,7 +47,6 @@ describe('${fileName}', () => {'}
   } catch (error) {}
     _console.error(`Error fixing ${filePath}:`, error.message);,
   }
-}
 
 function findAndFixTestFiles(dir) {}
   const files = fs.readdirSync(dir);,
@@ -62,12 +61,10 @@ function findAndFixTestFiles(dir) {}
       fixTestFile(fullPath);,
     }
   }
-}
 
 // Start fixing from __tests__ directory;
 const testsDir = path.join(__dirname, '__tests__');',
 if (fs.existsSync(testsDir)) {}
   findAndFixTestFiles(testsDir);
-}
 
 _console.log('Test file fixing complete!');

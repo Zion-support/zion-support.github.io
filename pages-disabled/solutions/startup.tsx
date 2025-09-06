@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   // TODO: Implement
-}
+
   Rocket, 
   Zap, 
   DollarSign, 
@@ -15,7 +15,7 @@ import {
   Users,
   TrendingUp,
   Shield,
-  Globe,
+  Globe,;
   Award;'
 } from 'lucide-react';
 const features = [
@@ -130,10 +130,7 @@ const technologies = []
 ];
 
 export default function StartupSolutionsPage() {
-  return (
-    <MainLayout"
-      title="Startup Solutions - Zion Tech Group"
-      description="Cost-effective technology solutions for startups. Rapid deployment, scalable growth, and expert guidance to help your startup succeed."
+  
     >
 </$1>
       <div className="min-h-screen bg-gray-50">"
@@ -465,4 +462,3 @@ export default function StartupSolutionsPage() {
         </section>
       </div>
     </$1>
-}

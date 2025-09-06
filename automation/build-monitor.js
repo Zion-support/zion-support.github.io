@@ -218,7 +218,6 @@ class BuildMonitor {
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR')}
   }
-}
 
 // Main execution
 if (require.main === module) {

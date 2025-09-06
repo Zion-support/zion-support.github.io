@@ -10,12 +10,12 @@ fallback: true
 return result;
 }catch (error) {
   console.error ('Fallback execution error:', error);
-return {
+
   statusCode: 500;
 body: JSON.stringify ({
   error: 'Fallback execution failed';
 message: error.message 
 }) 
-}
-}
+
+
 };

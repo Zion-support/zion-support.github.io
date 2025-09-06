@@ -16,7 +16,7 @@ import {
   Shield,
   Zap,
   Award,
-  ChevronRight
+  ChevronRight;
 } from 'lucide-react';
 
 const caseStudyCategories = [
@@ -44,10 +44,7 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  return (
-    <MainLayout
-      title="Case Studies - Zion Tech Group"
-      description="Explore our successful projects and client transformations across various industries."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
@@ -121,4 +118,3 @@ export default function CaseStudiesPage() {
       </div>
     </MainLayout>
   );
-}

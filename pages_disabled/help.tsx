@@ -15,7 +15,7 @@ import {
   ExternalLink,
   ChevronDown,
   ChevronRight,
-  ArrowRight
+  ArrowRight;
 } from 'lucide-react';
 const helpCategories = [
   {
@@ -510,4 +510,3 @@ export default function HelpPage() {
       </section>
     </div>
   );
-}

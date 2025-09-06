@@ -1,10 +1,10 @@
 import React from "react";
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { FileText, Download, Calendar, User, ArrowRight, Tag, ExternalLink } from 'lucide-react;
-const whitePapers = []
-  {}
+const whitePapers = []";
+  {}'
     id: 1,'
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
     description: "Explore how artificial intelligence is transforming enterprise operations and what businesses need to know to stay competitive.",

@@ -1,7 +1,11 @@
- function Skeleton ({
-  className, ...props 
+import { cn } from '@/lib/utils';
+
+function Skeleton({
+  className,
+  ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
-  return (<div />) 
-}export {
-  Skeleton 
-}
+  
+    />
+  );
+
+export { Skeleton };

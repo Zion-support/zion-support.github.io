@@ -190,15 +190,7 @@ class BackupManager {
       fs.mkdirSync(destDir, { recursive: true });
       const items = fs.readdirSync(sourceDir);
       
-      for (const item of items) {
-        const sourcePath = path.join(sourceDir, item);
-        const destPath = path.join(destDir, item);
-        const stat = fs.statSync(sourcePath);
-        
-        // Check if path should be excluded
-        if (this.shouldExcludePath(sourcePath)) {
-          continue;
-        }
+      
         
         if (stat.isDirectory()) {
           const result = await this.copyDirectory(sourcePath, destPath);
@@ -310,10 +302,7 @@ class BackupManager {
       let deletedCount = 0;
       let deletedSize = 0;
       
-      for (const backup of backups) {
-        if (backup.mtime < cutoffDate) {
-          try {
-            execSync(`rm -rf "${backup.path}"`, { stdio: 'pipe' });
+      "`, { stdio: 'pipe' });
             deletedCount++;
             deletedSize += backup.size;
             this.log(`🗑️ Deleted old backup: ${backup.name}`);
@@ -491,12 +480,10 @@ class BackupManager {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const manager = new BackupManager();
   manager.run();
-}
 
 module.exports = BackupManager;

@@ -44,7 +44,6 @@ export class HealthChecker {
       timestamp: new Date().toISOString()
     };
   }
-}
 
 export const healthChecker = new HealthChecker();`,
     
@@ -102,7 +101,6 @@ export class PerformanceTracker {
     
     return alerts;
   }
-}
 
 export const performanceTracker = new PerformanceTracker();`,
     
@@ -147,7 +145,6 @@ export class ErrorTracker {
         .slice(0, 10)
     };
   }
-}
 
 export const errorTracker = new ErrorTracker();
 
@@ -261,7 +258,6 @@ export class MemoryCache {
     this.cache.clear();
     this.accessTimes.clear();
   }
-}
 
 export const redisCache = new RedisCache();
   `,
@@ -310,7 +306,6 @@ export class MemoryCache {
       .sort((a, b) => a[1] - b[1])[0][0];
     this.delete(oldestKey);
   }
-}
 
 export const memoryCache = new MemoryCache();
   `
@@ -323,7 +318,6 @@ export const memoryCache = new MemoryCache();
     console.log(`[OK] Created ${filename}`);
   });
 });
-}
 
 // Create API optimization utilities
 function createAPIOptimization() {
@@ -368,7 +362,6 @@ export class RateLimiter {
     
     return Math.max(0, this.maxRequests - recentRequests.length);
   }
-}
 
 export const rateLimiter = new RateLimiter();`,
     
@@ -418,7 +411,6 @@ export class ResponseOptimizer {
     }
     return \`"\${Math.abs(hash).toString(16)}"\`;
   }
-}
 
 export const responseOptimizer = new ResponseOptimizer();
   };
@@ -430,7 +422,6 @@ export const responseOptimizer = new ResponseOptimizer();
     console.log(`[OK] Created ${filename}`);
   });
 });
-}
 
 // Create database optimization utilities
 function createDatabaseOptimization() {
@@ -499,7 +490,6 @@ export class QueryOptimizer {
     
     return recommendations;
   }
-}
 
 export const queryOptimizer = new QueryOptimizer();`,
     
@@ -565,7 +555,6 @@ export class ConnectionPool {
       max: this.maxConnections
     };
   }
-}
 
 export const connectionPool = new ConnectionPool();
   };
@@ -577,7 +566,6 @@ export const connectionPool = new ConnectionPool();
     console.log(`[OK] Created ${filename}`);
   });
 });
-}
 
 // Main execution
 async function main() {
@@ -635,6 +623,5 @@ async function main() {
     console.error('❌ Error during advanced improvements:', error.message);
     process.exit(1);
   }
-}
 
 main();

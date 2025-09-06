@@ -19,4 +19,3 @@ try {
 } catch (error) {
   console.error('[continuous-automation-improvement-system] Error:', error.message);
   process.exit(1);
-}

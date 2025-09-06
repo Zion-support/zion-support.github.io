@@ -17,15 +17,9 @@ console.log ('📄 Main pages:', pages.filter (p => p.includes ('index') || p.in
 }//Check for any problematic files console.log ('🔍 Checking for problematic files...');
 const problematicFiles = [];
 const allFiles = getAllFiles ('.', ['.tsx.ts.jsx.js']);
-for (const file of allFiles) {
-  try {
-  const content = fs.readFileSync (file, 'utf8');
-if (content.includes ('<<<<<<< HEAD') || content.includes ('=======') || content.includes ('>>>>>>>') ) {
-  problematicFiles.push (file) 
-}
-}catch (error) {
+catch (error) {
   //Skip files that can't be read 
-}
+
 }console.log ('⚠️ Files with merge conflicts:', problematicFiles.length);
 if (problematicFiles.length > 0) {
   console.log ('Files:', problematicFiles.slice (0, 10) ) 
@@ -33,15 +27,10 @@ if (problematicFiles.length > 0) {
   let files = [];
 try {
   const items = fs.readdirSync (dir);
-for (const item of items) {
-  const fullPath = path.join (dir, item);
-const stat = fs.statSync (fullPath);
-if (stat.isDirectory () && !item.startsWith ('.') && item !== 'node modules') {
-  files = files.concat (getAllFiles (fullPath, extensions) ) 
-}else if (extensions.some (ext => item.endsWith (ext) ) ) {
+else if (extensions.some (ext => item.endsWith (ext) ) ) {
   files.push (fullPath) 
-}
-}
+
+
 }catch (error) {
   // Skip directories that can't be read 
 }return files;

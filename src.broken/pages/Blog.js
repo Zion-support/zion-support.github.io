@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -112,9 +112,7 @@ export default function Blog() {
               </Select>
             </div>
           </div>
-=======
 import React from 'react';
->>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
 
 export default function Blog() {
     return (
@@ -156,10 +154,7 @@ export default function Blog() {
                 </div>
             </div>
         </div>
-<<<<<<< HEAD:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
       </div>
     </>);
-=======
     );
->>>>>>> origin/chore/fix-build-nav-links:src/pages/Blog.js
-}

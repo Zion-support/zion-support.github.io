@@ -511,12 +511,10 @@ class HealthDashboard {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const dashboard = new HealthDashboard();
   dashboard.run();
-}
 
 module.exports = HealthDashboard;

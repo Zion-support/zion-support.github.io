@@ -1,17 +1,16 @@
 #!/usr/bin/env node
-import fs from "fs;
+import fs from "fs;';
 import path from "path";
 import { execSync } from child_process";
 import { fileURLToPath } from "url;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename),
-  class ErrorFixer {
-  constructor() {
+  class ErrorFixer {";
+  constructor() {'
     this.logFile = path.join(__dirname, "logs", error-fixer.log"),
   this.fixesApplied = [],
   this.ensureDirectories()
-}
 
   ensureDirectories() {
     const logDir = path.dirname(this.logFile),
@@ -80,12 +79,10 @@ const __dirname = path.dirname(__filename),
       this.log(`❌ Error Fixer failed: ${error.message}`, ERROR");
     }
   }
-}
 
 // Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new ErrorFixer(),
   fixer.run().catch(console.error)
-}
 
 export default ErrorFixer;

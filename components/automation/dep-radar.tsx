@@ -2,4 +2,3 @@
   outdated.map (o => (</tr>) ) 
 }</tbody> </table> </div>) 
 }</div>) 
-}

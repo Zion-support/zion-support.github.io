@@ -11,7 +11,7 @@ import {
   Code, 
   Database, 
   Cloud, 
-  Shield 
+  Shield ;
 } from 'lucide-react';
 
 const tutorialCategories = [
@@ -194,4 +194,3 @@ export default function TutorialsPage() {
       </div>
     </>
   );
-}

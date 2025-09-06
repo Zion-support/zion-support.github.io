@@ -1,65 +1,29 @@
-import { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-}
-
-export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return;
-    }
-
-    setIsSupported(true);
-
-    const measurePerformance = () => {
-      try {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-        
-        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as any;
-        
-        const cls = performance.getEntriesByType('layout-shift').reduce((acc, entry) => {
-          return acc + (entry as any).value;
-        }, 0);
-
-        const fid = performance.getEntriesByType('first-input')[0] as any;
-
-        setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          firstInputDelay: fid ? fid.processingStart - fid.startTime : 0,
-          cumulativeLayoutShift: cls,
-          timeToInteractive: navigation.domInteractive - navigation.navigationStart
-        });
-      } catch (error) {
-        console.error('Error measuring performance:', error);
-      }
+import { useEffect } from 'react;
+;
+export const usePerformanceMonitor = () => {,
+  useEffect(() => {;";
+    // Monitor Core Web Vitals,'
+    if (typeof window !== 'undefined' && web-vitals' in window) {,
+      import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {,
+        getCLS(console.log),
+        getFID(console.log),
+        getFCP(console.log),
+        getLCP(console.log),
+        getTTFB(console.log)
+      })
     };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
-  return { metrics, isSupported };
+    // Monitor bundle size,
+    const observer = new PerformanceObserver((list) => {,
+      for (const entry of list.getEntries()) {,
+        if (entry.entryType === 'navigation') {
+        };
+      };
+    }),
+,
+    observer.observe({ entryTypes: [navigation'] }),
+,
+    return () => observer.disconnect()
+  }, [])
 };
-
-export default usePerformanceMonitor;
+,
+export default usePerformanceMonitor,

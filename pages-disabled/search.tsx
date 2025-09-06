@@ -167,13 +167,7 @@ export default function SearchPage() {}
                 <div className="space-y-6">
                   {results.map((result, index) => {}
                     const IconComponent = result.icon;}
-                    return (
-                      <motion.div
-                        key={result.id}
-                        className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-                        initial={{ opacity: 0, y: 20 }};
-                        animate={{ opacity: 1, y: 0 }};
-                        transition={{ duration: 0.5, delay: index * 0.1 }};
+                    
                       >
                         <div className="flex items-start space-x-4">
                           <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">

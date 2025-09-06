@@ -55,11 +55,7 @@ export default function MicroSAAS() {
     }
   ];
 
-  return (
-    <Layout 
-      title="Micro SaaS Solutions - Zion Tech Group" 
-      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, easy-to-use tools. From AI-powered invoicing to smart scheduling, we have the perfect solution for your needs."
-      keywords="micro SaaS, business tools, AI solutions, productivity software, automation tools, business software"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -187,4 +183,3 @@ export default function MicroSAAS() {
       </div>
     </Layout>
   );
-}

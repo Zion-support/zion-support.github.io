@@ -164,9 +164,7 @@ class DeploymentPipeline {
       const testScripts = ['test', 'test:unit', 'test:integration', 'test:e2e'];
       let testCommand = null;
 
-      for (const script of testScripts) {
-        try {
-          execSync(`npm run ${script} --dry-run`, {
+       --dry-run`, {
             cwd: this.projectRoot,
             stdio: 'pipe'
           });
@@ -605,12 +603,10 @@ class DeploymentPipeline {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const pipeline = new DeploymentPipeline();
   pipeline.run();
-}
 
 module.exports = DeploymentPipeline;

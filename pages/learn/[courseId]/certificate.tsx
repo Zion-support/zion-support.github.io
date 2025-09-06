@@ -1,11 +1,8 @@
 import React from 'react';
 export default function Page() {
   return (
-    <main className="min-h-screen bg-black text-zinc-100 p-8">
-      <section className="prose prose-invert max-w-3xl mx-auto">
-        <h1>learn [courseId] certificate</h1>
-        <p>Auto-healed placeholder. Replace with real content.</p>
-      </section>
-    </main>
+    <div className='space-y-4'>
+      <h1 className='text-2xl font-semibold'>Certificate</h1>
+      <CertificatePreview courseId={courseId} />
+    </div>
   );
-}

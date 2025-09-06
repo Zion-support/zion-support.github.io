@@ -2,7 +2,6 @@ import React from 'react';
 
 interface EducationSolutionsProps {
   // Add props here as needed
-}
 
 export default function EducationSolutions({ }: EducationSolutionsProps) {
   return (
@@ -11,13 +10,6 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+
+
+

@@ -167,5 +167,5 @@ export function NewsletterSection() {';
         </motion.div>;
       </div>;
     </section>);
-}
+
 '"

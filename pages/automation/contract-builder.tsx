@@ -24,4 +24,3 @@ body: JSON.stringify (body)
 </div> </div>) 
 }</div> <div> </label> </div> </div> <div> </article> </div>) 
 }</div>) 
-}

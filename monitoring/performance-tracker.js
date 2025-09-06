@@ -52,6 +52,5 @@ export class PerformanceTracker {
     
     return alerts;
   }
-}
 
 export const performanceTracker = new PerformanceTracker();
