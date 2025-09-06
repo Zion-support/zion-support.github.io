@@ -6,10 +6,7 @@ import Button from './Button';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
-export default function Header() {
   return (
-
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -22,26 +19,26 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-                 <nav className="hidden md:flex items-center space-x-8">
-                   <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                     Home
-                   </Link>
-                   <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                     Services
-                   </Link>
-                   <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
-                     Pricing
-                   </Link>
-                   <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                     About
-                   </Link>
-                   <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                     Contact
-                   </Link>
-                   <Button variant="outline" size="small">
-                     Get Started
-                   </Button>
-                 </nav>
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+              Pricing
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <Button variant="outline" size="small">
+              Get Started
+            </Button>
+          </nav>
 
           {/* Mobile Menu Button */}
           <button

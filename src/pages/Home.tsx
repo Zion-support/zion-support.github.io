@@ -13,9 +13,7 @@ import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { usePerformance } from '../hooks/usePerformance';
 const Home: React.FC = () => {
-  usePerformance();
 
 
   return (
@@ -203,8 +201,6 @@ const Home: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
-
->>>>>>> origin/fix-website-loading-errors-final
           </div>
         </div>
       </div>
@@ -286,9 +282,8 @@ const Home: React.FC = () => {
       </div>
     </>
   );
+};
 
-
-
-
+export default Home;
 
 
