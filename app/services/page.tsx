@@ -19,33 +19,46 @@ export default function ServicesOverviewPage() {
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS"
-          description="End-to-end product development with billing,auth,and analytics"
+          description="End-to-end product development with billing, auth, and analytics"
           bullets={[
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
           ]}
           icon="🚀"
-        />{" "}
+        />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-          description="LLM applications,RAG systems,and MLOps pipelines"
+          description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
           icon="🤖"
-        />{" "}
+        />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
-          description="Cloud migration,DevOps,and security solutions"
+          description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
-        />{" "}
+        />
+        <ServiceCard
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi protocols, NFTs, smart contracts, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "NFT marketplaces"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/mobile-development"
+          title="Mobile Development"
+          description="iOS, Android, and cross-platform mobile applications"
+          bullets={["Native development", "Cross-platform", "App store optimization"]}
+          icon="📱"
+        />
       </div>{" "}
       <CTA />{" "}
     </div>
