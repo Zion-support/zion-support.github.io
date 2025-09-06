@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from 'react'
+>>>>>>> main
 
 export default function Footer() {
   return (
+<<<<<<< HEAD
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -46,3 +51,14 @@ export default function Footer() {
     </footer>
   );
 }
+=======
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="container mx-auto px-4 text-center">
+        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
+>>>>>>> main

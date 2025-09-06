@@ -25,8 +25,8 @@ export default function ServicesOverviewPage() {
           title="Micro SaaS"
           description="End-to-end product development with billing, auth, and analytics"
           bullets={[
-            "Foundational architecture"
-            "Billing + subscriptions"
+            "Foundational architecture",
+            "Billing + subscriptions", 
             "Growth analytics"
           ]}
           icon="🚀"
@@ -46,22 +46,29 @@ export default function ServicesOverviewPage() {
           icon="⚙️"
         />
         <ServiceCard
-          href="/services/blockchain"
-          title="Blockchain"
-          description="Smart contracts, DeFi protocols, and Web3 applications"
-          bullets={["Smart contracts", "DeFi protocols", "NFT platforms"]}
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi, NFTs, smart contracts, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
           icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/automation-solutions"
+          title="Automation Solutions"
+          description="RPA, workflow automation, and AI-powered automation"
+          bullets={["Process automation", "Workflow optimization", "AI automation"]}
+          icon="⚡"
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
-          description="Business intelligence, predictive modeling, and real-time analytics"
-          bullets={["BI dashboards", "Predictive analytics", "Real-time insights"]}
+          description="Business intelligence, predictive analytics, and data engineering"
+          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
           icon="📊"
         />
       </div>
       <CTA />{" "}
-    </div>;
+    </div>
   );
 }
 function ServiceCard({

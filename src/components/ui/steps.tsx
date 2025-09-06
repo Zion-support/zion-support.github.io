@@ -1,0 +1,362 @@
+
+
+  status;
+  label;
+  description;
+  className}: StepProps) {;
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  className?: string
+}
+export function Step({
+
+
+  className}: StepProps) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <li
+
+      className={cn(
+
+
+        "relative flex items-center",
+        {
+          "opacity-60": status === "incomplete"},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        className
+      )}>;
+      <div
+        className={cn(
+
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
+
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
+              status === "incomplete"
+            "bg-zion-blue border-zion-cyan text-white":
+              status === "current"
+            "bg-zion-purple border-zion-purple text-white":
+              status === "complete",}
+        )}>;
+=======
+
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
+          {
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
+              status === "incomplete",
+            "bg-zion-blue border-zion-cyan text-white":
+              status === "current",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            "bg-zion-purple border-zion-purple text-white":
+              status === "complete"}
+        )}
+      >
+        {status === "complete" ? (
+          <CheckIcon className="h-5 w-5" />
+        ) : (
+          <span>
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import { CheckIcon } from 'lucide-react';
+interface StepProps {;
+  status: "incomplete" | "current" | "complete",;
+  label: string,;
+  description?: string,;
+  className?: string;
+}
+;
+export function Step({;
+  status,;
+  label,;
+  description,;
+  className}: StepProps) {;
+  return (;
+    <li;
+      className={cn(;
+        "relative flex items-center",;
+        {;
+          "opacity-60": status === "incomplete"},;
+        className;
+      )}
+    >;
+      <div;
+        className={cn(;
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",;
+          {;
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":;
+              status === "incomplete",;
+            "bg-zion-blue border-zion-cyan text-white":;
+              status === "current",;
+            "bg-zion-purple border-zion-purple text-white":;
+              status === "complete"}
+        )}
+      >;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {status === "complete" ? (;
+          <CheckIcon className="h-5 w-5" />;
+        ) : (;
+          <span>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Step number would go here */}
+          </span>;
+        )}
+
+
+            "text-zion-slate-light": status === "incomplete",
+=======
+=======
+            "text-zion-slate-light": status === "incomplete",
+
+
+            "text-white": status === "current" || status === "complete"})}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        >
+=======
+      </div>;
+
+      <div className="ml-4 min-w-0">;
+        <h3
+          className={cn("text-sm font-medium", {
+            "text-zion-slate-light": status === "incomplete"
+            "text-white": status === "current" || status === "complete"})}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          {label}
+        </h3>;
+        {description && (;
+          <p className="text-sm text-zion-slate-light">{description}</p>;
+        )}
+      </div>;
+    </li>;
+  );
+}
+
+
+
+
+
+interface StepsProps {
+  currentStep: number
+  className?: string
+  children: React.ReactNode
+}
+export function Steps({ currentStep, className, children }: StepsProps) {
+  const childrenArray = React.Children.toArray(children)
+
+=======
+;
+interface StepsProps {;
+  currentStep: number,;
+  className?: string,;
+  children: React.ReactNode;
+}
+
+export function Steps({ currentStep, className, children }: StepsProps) {
+  const childrenArray = React.Children.toArray(children),
+  
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <div className={cn("w-full", className)}>
+      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
+        {React.Children.map(childrenArray, (child, index) => {
+
+
+
+=======
+          if (!React.isValidElement(child)) return null,
+          
+          let status: "incomplete" | "current" | "complete" = "incomplete",
+          if (index < currentStep) status = "complete",
+          if (index === currentStep) status = "current",
+          
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          return React.cloneElement(child as React.ReactElement<StepProps>, {
+            status})
+        })}
+      </ol>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      <div className="hidden md:flex md:mt-4">
+        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
+          <div
+            className="h-full bg-zion-purple transition-all"
+            style={{
+
+
+interface StepsProps {;
+  currentStep: number,;
+  className?: string;
+  children: React && React.ReactNode;
+}
+
+export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React && React.Children.toArray(children);
+
+  return (
+=======
+
+}/> </div> </div> </div>) 
+}"};
+;
+
+=======
+;
+export function Steps({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React.Children.toArray(children),;
+  return (;
+
+    <div className={cn("w-full", className)}>;
+      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
+        {React && React.Children.map(childrenArray, (child, index) => {;
+          if (!React && React.isValidElement(child)) return null;          ;
+          let status: "incomplete" | "current" | "complete" = "incomplete",;
+          if (index < currentStep) status = "complete";
+          if (index === currentStep) status = "current";
+
+          return React && React.cloneElement(child as React && React.ReactElement<StepProps>, {;
+            status});
+        })}
+      </ol>;
+
+      <div className="hidden md:flex md:mt-4">;
+        <div className="ml-[18px] w-[calc(100%-36px)] h-0 && 0.5 bg-zion-blue-light">;
+          <div
+            className="h-full bg-zion-purple transition-all"
+            style={{
+              width: `${(currentStep / (childrenArray && childrenArray.length - 1)) * 100}%`}}
+          />;
+        </div>;
+      </div>;
+    </div>;
+  );
+
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          // Check condition
+if (status = "complete") {
+  $2
+}
+          // Check condition
+if (status = "current") {
+  $2
+}
+interface StepProps {
+  status: "incomplete" | "current" | "complete",
+  label: string,
+  description?: string;
+  class_name?: string;
+}
+export /**
+ * Step - Function description
+ */
+function Step() {
+  return (
+    <li;
+      className={cn (
+        "relative flex items - center";
+        {
+          "opacity - 60": status === "incomplete"}
+        class_name)}
+    >;
+      <div;
+        className={cn (
+          "shrink - 0 h - 9 w - 9 rounded - full border flex items - center justify - center text - center font - medium" {
+            "bg - zion - blue - dark border - zion - blue - light text - zion - slate - light":;
+              status === "incomplete";
+            "bg - zion - blue border - zion - cyan text - white":;
+              status === "current";
+            "bg - zion - purple border - zion - purple text - white":;
+              status === "complete", }
+        )}
+      >;
+        {status === "complete" ? (
+          <CheckIcon className="h - 5 w - 5" />) : (
+          <span>;
+            {/* Step number would go here */}
+          </span>)}
+      </div>;
+      <div className="ml - 4 min - w-0">;
+        <h3;
+          className={cn ("text - sm font - medium", {
+            "text - zion - slate - light": status === "incomplete";
+            "text - white": status === "current" || status === "complete"})}
+        >;
+          {label}
+        </h3>;
+        {description && (
+          <p className="text - sm text - zion - slate - light">{description}</p>)}
+      </div>;
+    </li>);
+}
+interface StepsProps {
+  current_step: number,
+  class_name?: string;
+  children: React.ReactNode;
+}
+export /**
+ * Steps - Function description
+ */
+function Steps() {
+  const children_array = React.Children.to_array (children);
+  return (
+    <div className={cn ("w - full", class_name)}>;
+      <ol className="space - y-6 md:flex md:space - y-0 md:space - x-16">;
+        {React.Children.map (children_array, (child, index) => {
+          if () return null) {
+  $2
+}
+          let status: "incomplete" | "current" | "complete" = "incomplete",
+          // Check condition
+if (status = "complete") {
+  $2
+}
+          // Check condition
+if (status = "current") {
+  $2
+}
+          return React.clone_element (child as React.ReactElement < StepProps>, {
+            status});
+        })}
+      </ol>;
+      <div className="hidden md:flex md:mt - 4">;
+        <div className="ml-[18px] w-[calc (100%-36px)] h - 0.5 bg - zion - blue - light">;
+          <div;
+            className="h - full bg - zion - purple transition - all";
+            style={{
+              width: `${(current_step / (children_array.length - 1)) * 100}%`}}
+          />;
+        </div>;
+      </div>;
+    </div>);
+}/> </div> </div> </div>);
+}"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

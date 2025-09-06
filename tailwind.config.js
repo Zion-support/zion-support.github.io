@@ -4,7 +4,8 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}'
+    './src/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
@@ -13,13 +14,7 @@ module.exports = {
           50: '#eff6ff',
           500: '#3b82f6',
           600: '#2563eb',
-<<<<<<< HEAD
           700: '#1d4ed8'
-=======
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         },
         gray: {
           50: '#f9fafb',
@@ -85,12 +80,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-<<<<<<< HEAD
     require('@tailwindcss/aspect-ratio')
   ]
 }
-=======
-    require('@tailwindcss/aspect-ratio'),
-  ],
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
