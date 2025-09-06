@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,9 +30,9 @@ const Header: React.FC = () => {
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
-            <Button variant="primary" size="small">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started
-            </Button>
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -64,9 +62,9 @@ const Header: React.FC = () => {
               <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
                 Contact
               </Link>
-              <Button variant="primary" size="small" className="w-full">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full">
                 Get Started
-              </Button>
+              </button>
             </nav>
           </div>
         )}
@@ -76,33 +74,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-=======
-import React from 'react';
-
-export const Header: React.FC = () => {
-  return (
-    <header className="bg-white shadow-md">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <h1 className="text-2xl font-bold text-gray-800">Zion Tech Group</h1>
-          </div>
-          <nav className="hidden md:flex space-x-8">
-            <a href="/" className="text-gray-600 hover:text-gray-800">Home</a>
-            <a href="/about" className="text-gray-600 hover:text-gray-800">About</a>
-            <a href="/services" className="text-gray-600 hover:text-gray-800">Services</a>
-            <a href="/contact" className="text-gray-600 hover:text-gray-800">Contact</a>
-          </nav>
-          <div className="md:hidden">
-            <button className="text-gray-600 hover:text-gray-800">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

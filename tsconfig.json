@@ -22,7 +22,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -50,41 +50,17 @@
         "./types/*"
       ]
     },
-<<<<<<< HEAD
-    "allowSyntheticDefaultImports": true,
-    "tsBuildInfoFile": ".tsbuildinfo"
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "next-env.d.ts",
-    "types/global.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "apps/**",
-    "apps.backup/**",
-    "api-backup/**",
-    "backup-merge-conflicts/**",
-    "browserstack.config.ts",
-    "cypress.config.ts",
-    "jest.config.*",
-    "*.config.ts",
-    "netlify/**",
-    "temp_exclude/**",
-    "node_modules",
     "dist",
-    ".next",
-    "out",
-    "backup-problematic-files",
-    "temp_exclude",
-    "src_backup",
-    "recovered-branches"
+    "build"
   ]
 }
-=======
-    "allowSyntheticDefaultImports": true
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
