@@ -1,6 +1,18 @@
 import React, { useState, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 import { HelmetProvider } from 'react-helmet-async';
+=======
+import Header from './components/Header';
+import { Footer } from './components/Footer';
+import Sidebar from './components/layout/Sidebar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Pricing from './pages/Pricing';
+import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
+>>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,6 +20,7 @@ import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
 import LoadingSpinner from './components/LoadingSpinner';
+<<<<<<< HEAD
 import ScrollToTop from './components/ScrollToTop';
 import SEOHead from './components/SEOHead';
 import Pricing from './pages/Pricing';
@@ -131,6 +144,12 @@ const About = () => (
     </div>
   </div>
 );
+=======
+import PerformanceMonitor from './components/PerformanceMonitor';
+import { ThemeProvider } from './context/ThemeContext';
+import { NotificationProvider } from './context/NotificationContext';
+import { initAnalytics } from './utils/analytics';
+>>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -139,7 +158,13 @@ function App() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Initialize analytics
+  React.useEffect(() => {
+    initAnalytics();
+  }, []);
+
   return (
+<<<<<<< HEAD
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
@@ -162,6 +187,36 @@ function App() {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
+=======
+    <ThemeProvider>
+      <NotificationProvider>
+        <ErrorBoundary>
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 dark:from-black dark:via-gray-900 dark:to-blue-900 light:from-gray-50 light:via-blue-50 light:to-purple-50">
+              <Header />
+              <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+              
+              <main className="pt-20">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              
+              <Footer />
+              <PerformanceMonitor />
+            </div>
+          </Router>
+        </ErrorBoundary>
+      </NotificationProvider>
+    </ThemeProvider>
+>>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
   );
 }
 

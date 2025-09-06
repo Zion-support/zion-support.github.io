@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
+=======
+import { useToast } from '../components/ui/use-toast';
+import { useNotifications } from '../context/NotificationContext';
+import { motion } from 'framer-motion';
+
+const Contact: React.FC = () => {
+  const { toast } = useToast();
+  const { addNotification } = useNotifications();
+>>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,12 +30,69 @@ const Contact = () => {
     });
   };
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
+=======
+  const validateForm = () => {
+    const errors: string[] = [];
+    
+    if (!formData.name.trim()) errors.push('Name is required');
+    if (!formData.email.trim()) errors.push('Email is required');
+    if (!formData.message.trim()) errors.push('Message is required');
+    
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.push('Please enter a valid email address');
+    }
+    
+    if (formData.message && formData.message.length < 10) {
+      errors.push('Message must be at least 10 characters long');
+    }
+    
+    return errors;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const errors = validateForm();
+    if (errors.length > 0) {
+      toast({
+        title: "Validation Error",
+        description: errors.join(', '),
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Show success notification
+      addNotification({
+        type: 'success',
+        title: 'Message sent successfully!',
+        message: 'Thank you for your message. We\'ll get back to you within 24 hours.',
+        duration: 5000,
+        action: {
+          label: 'View Services',
+          onClick: () => window.location.href = '/services'
+        }
+      });
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. We'll get back to you within 24 hours.",
+      });
+      
+>>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
       setFormData({
         name: '',
         email: '',
@@ -34,7 +101,27 @@ const Contact = () => {
         service: '',
         message: ''
       });
+<<<<<<< HEAD
     }, 3000);
+=======
+    } catch (error) {
+      // Show error notification
+      addNotification({
+        type: 'error',
+        title: 'Error sending message',
+        message: 'There was an error sending your message. Please try again.',
+        duration: 7000
+      });
+      
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+>>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
   };
 
   const contactInfo = [
