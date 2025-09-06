@@ -3,6 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
+  keywords: "AI services, micro SaaS, IT services, FinTech, HealthTech, EdTech, cloud migration, DevOps, SRE, enterprise software, blockchain, cybersecurity"
 };
 
 export default function ServicesOverviewPage() {
@@ -44,133 +45,90 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
 
-      {/* Core Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS Solutions"
           description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
           bullets={[
-            "15+ specialized micro SaaS tools",
+            "40+ specialized micro SaaS tools",
             "End-to-end development & deployment",
-            "Revenue optimization & scaling"
+            "Revenue optimization & scaling",
+            "AI-powered features included"
           ]}
           icon="🚀"
-          pricing="From $2,999/month"
+          pricing="From $599/month"
         />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
           bullets={[
-            "15+ AI service categories",
+            "25+ AI service categories",
             "Custom LLM development",
-            "Enterprise AI integration"
+            "Enterprise AI integration",
+            "Production-ready solutions"
           ]}
           icon="🤖"
-          pricing="From $5,000/project"
-        />
-        <ServiceCard
-          href="/services/ai-email-optimizer"
-          title="AI Email Optimizer"
-          description="AI-powered email optimization with smart subject lines, content personalization, and A/B testing automation"
-          bullets={[
-            "40% higher open rates",
-            "Smart content personalization",
-            "Automated A/B testing"
-          ]}
-          icon="📧"
-          pricing="From $99/month"
-        />
-        <ServiceCard
-          href="/services/ai-social-media-scheduler"
-          title="AI Social Media Scheduler"
-          description="Intelligent social media management with AI content generation, optimal timing, and hashtag optimization"
-          bullets={[
-            "3x more engagement",
-            "AI content generation",
-            "Multi-platform support"
-          ]}
-          icon="📱"
-          pricing="From $29/month"
-        />
-        <ServiceCard
-          href="/services/ai-customer-support-automation"
-          title="AI Customer Support"
-          description="24/7 AI-powered customer support with chatbots, sentiment analysis, and multilingual capabilities"
-          bullets={[
-            "95% accuracy rate",
-            "50+ language support",
-            "60% cost reduction"
-          ]}
-          icon="🎧"
-          pricing="From $199/month"
-        />
-        <ServiceCard
-          href="/services/ai-invoice-generator"
-          title="AI Invoice Generator"
-          description="Automated invoicing with AI data extraction, smart categorization, and payment processing"
-          bullets={[
-            "10+ hours saved/week",
-            "99% accuracy",
-            "30% faster payments"
-          ]}
-          icon="📄"
-          pricing="From $49/month"
-        />
-        <ServiceCard
-          href="/services/ai-project-management-suite"
-          title="AI Project Management"
-          description="Intelligent project management with AI task automation, resource optimization, and risk prediction"
-          bullets={[
-            "40% productivity boost",
-            "Smart resource allocation",
-            "Risk prediction AI"
-          ]}
-          icon="📋"
-          pricing="From $99/month"
-        />
-        <ServiceCard
-          href="/services/ai-healthcare-analytics"
-          title="AI Healthcare Analytics"
-          description="Advanced healthcare AI for predictive diagnostics, treatment optimization, and clinical decision support"
-          bullets={[
-            "25% better outcomes",
-            "HIPAA compliant",
-            "Predictive diagnostics"
-          ]}
-          icon="🏥"
-          pricing="From $2,999/month"
-        />
-        <ServiceCard
-          href="/services/ai-fintech-solutions"
-          title="AI Fintech Solutions"
-          description="AI-powered financial services including fraud detection, risk assessment, and algorithmic trading"
-          bullets={[
-            "99.9% fraud detection",
-            "40% cost reduction",
-            "Bank-level security"
-          ]}
-          icon="💳"
-          pricing="From $1,999/month"
+          pricing="From $8,000/project"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
           description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
           bullets={[
-            "15+ IT service categories",
+            "30+ IT service categories",
             "Cloud migration & optimization",
-            "24/7 monitoring & support"
+            "24/7 monitoring & support",
+            "Enterprise-grade security"
           ]}
           icon="⚙️"
-          pricing="From $3,000/month"
+          pricing="From $2,000/month"
+        />
+        <ServiceCard
+          href="/services/fintech"
+          title="FinTech Solutions"
+          description="Complete financial technology solutions including digital banking, payment processing, and trading platforms"
+          bullets={[
+            "15+ FinTech service categories",
+            "Bank-grade security & compliance",
+            "Real-time payment processing",
+            "Regulatory compliance"
+          ]}
+          icon="💳"
+          pricing="From $25,000/project"
+        />
+        <ServiceCard
+          href="/services/healthtech"
+          title="HealthTech Solutions"
+          description="Healthcare technology solutions including EHR systems, telemedicine platforms, and medical AI"
+          bullets={[
+            "15+ HealthTech service categories",
+            "HIPAA-compliant solutions",
+            "Medical AI & diagnostics",
+            "Patient data security"
+          ]}
+          icon="🏥"
+          pricing="From $40,000/project"
+        />
+        <ServiceCard
+          href="/services/edtech"
+          title="EdTech Solutions"
+          description="Educational technology platforms including LMS systems, virtual classrooms, and AI-powered learning"
+          bullets={[
+            "15+ EdTech service categories",
+            "Personalized learning AI",
+            "Multi-platform compatibility",
+            "Student progress tracking"
+          ]}
+          icon="🎓"
+          pricing="From $30,000/project"
         />
         <ServiceCard
           href="/services/blockchain-solutions"
           title="Blockchain Solutions"
           description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
-          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
+          bullets={["Smart contracts", "DeFi protocols", "Web3 apps", "Security auditing"]}
           icon="⛓️"
           pricing="From $15,000/project"
         />
@@ -178,9 +136,17 @@ export default function ServicesOverviewPage() {
           href="/services/automation-solutions"
           title="Automation Solutions"
           description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
-          bullets={["Process automation", "Workflow optimization", "AI automation"]}
+          bullets={["Process automation", "Workflow optimization", "AI automation", "ROI tracking"]}
           icon="⚡"
           pricing="From $2,500/month"
+        />
+        <ServiceCard
+          href="/services/data-analytics"
+          title="Data Analytics"
+          description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
+          bullets={["BI dashboards", "Predictive analytics", "Data engineering", "Real-time insights"]}
+          icon="📊"
+          pricing="From $4,000/month"
         />
       </div>
       
@@ -197,7 +163,7 @@ export default function ServicesOverviewPage() {
             <StatCard
               number="500+"
               label="Successful Projects"
-              description="Delivered across 15+ industries"
+              description="Delivered across 20+ industries"
             />
             <StatCard
               number="$2B+"
