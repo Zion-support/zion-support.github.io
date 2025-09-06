@@ -79,6 +79,7 @@ export default function App(): JSX.Element {
     },
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 <<<<<<< HEAD
@@ -111,6 +112,9 @@ export default function App(): JSX.Element {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
@@ -182,6 +186,7 @@ export default function App(): JSX.Element {
       <ScrollToTop />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
@@ -189,6 +194,8 @@ export default function App(): JSX.Element {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf89
   );
 }
 <<<<<<< HEAD
