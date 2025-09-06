@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
 module.exports = {
   darkMode: "class",
   content: [
@@ -7,15 +6,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ],
   theme: {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
-<<<<<<< HEAD
           100: '#dbeafe',
           200: '#bfdbfe',
           300: '#93c5fd',
@@ -27,7 +23,6 @@ module.exports = {
           900: '#1e3a8a',
           950: '#172554',
         },
-<<<<<<< HEAD
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',
@@ -95,12 +90,3 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 };
-=======
-      },
-    },
-  },
-  plugins: [],
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
