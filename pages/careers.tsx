@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
   return (

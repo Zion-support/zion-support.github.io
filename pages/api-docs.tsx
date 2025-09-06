@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 import { 
   Code, 
   Book, 

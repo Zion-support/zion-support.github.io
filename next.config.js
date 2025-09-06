@@ -1,25 +1,31 @@
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-<<<<<<< HEAD
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', 'framer-motion']
   },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
   images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif']
+    domains: [
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com',
+    ],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
   },
   async headers() {
     return [
@@ -41,22 +47,6 @@ const nextConfig = {
         ]
       }
     ]
-  }
-}
-=======
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  trailingSlash: true,
-  images: {
-    domains: [
-      'localhost',
-      'ziontechgroup.com',
-      'images.unsplash.com',
-      'via.placeholder.com',
-    ],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000,
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
@@ -111,6 +101,5 @@ const nextConfig = {
     return config;
   }
 };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
 module.exports = nextConfig
