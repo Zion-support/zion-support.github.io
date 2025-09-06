@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { describe, it, expect } = require("@jest/globals");
 describe("smoke", () => {
   it("runs", () => {
@@ -17,3 +18,8 @@ import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('
 import { describe,it,expect } from '@jest/globals' describe('smoke',() => { it('runs',() => { expect(1 + 1).toBe(2) }) })''
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+const { describe, it, expect } = require("@jest/globals"
+describe("smoke"
+  it("runs"
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480

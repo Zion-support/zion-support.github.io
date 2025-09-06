@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -70,3 +71,16 @@ import { test,expect } from '@playwright/test'; test.describe('Performance Tests
   });
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import { test, expect } from '@playwright/test'
+test.describe('Performance Tests'
+  test('homepage loads within 3 seconds'
+    await page.goto('/'
+    await page.waitForLoadState('networkidle'
+  test('LCP is under 2.5 seconds'
+    await page.goto('/'
+          resolve(lastEntry.startTime)}).observe({ "entryTypes"
+          resolve(firstEntry.processingStart - firstEntry.startTime)}).observe({ "entryTypes"
+          resolve(clsValue)}).observe({ "entryTypes"
+          resolve(clsValue)}).observe({ "entryTypes"
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480

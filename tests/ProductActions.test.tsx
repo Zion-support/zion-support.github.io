@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 interface ProductActions.testProps {
@@ -52,3 +53,6 @@ describe('ProductActions', () => {
   });
 });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import React from 'react'
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480

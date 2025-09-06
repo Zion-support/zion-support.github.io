@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 interface AddToCart.testProps {
   // Add props here as needed
@@ -27,3 +28,6 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+import React from 'react'
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480

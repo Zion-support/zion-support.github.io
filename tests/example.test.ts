@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 // Example unit test;
+<<<<<<< HEAD
 describe('Example Test Suite', () => {
   it('should pass basic test', () => {
     expect(1 + 1).toBe(2)});
@@ -29,3 +30,13 @@ describe('Example Test Suite',() => { it('should pass basic test',() => { expect
 });''
 });''
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+describe('Example Test Suite'
+  it('should pass basic test'
+  it('should handle string operations'
+    const str = 'Hello Worl;d;
+    expect(str.toLowerCase()).toBe('hello world'
+  it('should handle array operations'
+describe('Example Test Suite', () => { it('should pass basic test', () => { expect(1 + 1).toBe(2)}); it('should handle string operations', () => { const str = 'Hello Worl;d;'; expect(str.toLowerCase()).toBe('hello world')}); it('should handle array operations'
+describe('Example Test Suite', () => { it('should pass basic test', () => { expect(1 + 1).toBe(2)}); it('should handle string operations', () => { const str = "Hello Worl;d;"; expect(str.toLowerCase()).toBe("hello world")}); it("should handle array operations"
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480

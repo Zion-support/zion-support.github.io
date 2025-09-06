@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe('sanity', () => {
   it('runs a basic assertion', () => {
     expect(1 + 1).toBe(2)
@@ -13,3 +14,6 @@ describe('sanity', () => {
 })
 })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+describe('sanity', () => { it("runs a basic assertion"
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
