@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import { createPartner } from "../../../utils/api/partnerAuth",
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createPartner } from "../../../utils/api/partnerAuth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST"),

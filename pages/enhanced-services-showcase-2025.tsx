@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -8,9 +8,9 @@ import {
   Zap, Database, Cloud, Lock, Code,
   Sparkles, Target, Award, Lightbulb
 } from 'lucide-react',
-import { innovative2025Services } from '../data/innovative-2025-services',
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services',
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 export default function EnhancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),

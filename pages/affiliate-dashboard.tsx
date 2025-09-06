@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react',
+import { useEffect, useMemo, useState } from 'react';
 
 function getRefCode(): string {
   if (typeof window === 'undefined') return '',

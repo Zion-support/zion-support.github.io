@@ -1,12 +1,12 @@
-import { useRouter } from 'next/router', // Changed from useParams
-import { useEffect, useState } from 'react',
-import Image from 'next/image',
-import { Button } from '@/components/ui/button',
-import { NEW_PRODUCTS } from '@/data/newProductsData',
-import { useCart } from '@/context/CartContext',
-import { toast } from '@/hooks/use-toast',
-import { SEO } from '@/components/SEO',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useRouter } from 'next/router'; // Changed from useParams
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { NEW_PRODUCTS } from '@/data/newProductsData';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
+import { SEO } from '@/components/SEO';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ProductPage() {
 
   const router = useRouter(),

@@ -1,5 +1,5 @@
 
-import { GradientHeading } from "./GradientHeading",
+import { GradientHeading } from "./GradientHeading";
 import {
   Accordion,
   AccordionContent,

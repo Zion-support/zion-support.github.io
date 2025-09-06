@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from 'react',
-import { useRouter } from 'next/router',
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
   const router = useRouter(),
   const [query, setQuery] = useState(''),

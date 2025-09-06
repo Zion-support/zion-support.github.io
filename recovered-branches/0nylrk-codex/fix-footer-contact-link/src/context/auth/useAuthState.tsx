@@ -1,6 +1,6 @@
 
-import React, { useState } from "react",
-import type { UserProfile } from "@/types/auth",
+import React, { useState } from "react";
+import type { UserProfile } from "@/types/auth";
 /**
  * Custom hook to manage auth state
  */

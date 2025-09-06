@@ -1,5 +1,5 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react';
+import Link from 'next/link';
 interface ContentCardProps {
   title: string,
   description: string,

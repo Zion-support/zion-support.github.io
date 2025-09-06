@@ -1,4 +1,4 @@
-import React, { useState } from 'react',
+import React, { useState } from 'react';
 
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]

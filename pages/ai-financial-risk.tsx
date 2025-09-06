@@ -1,8 +1,8 @@
-import NextHead from 'next/head',
-import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import Button from '../components/ui/Button',
-import { innovativeAIServices } from '../data/innovative-ai-services',
+import NextHead from 'next/head';
+import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
   const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk')),
   const contactInfo = {

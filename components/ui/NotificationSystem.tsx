@@ -47,8 +47,8 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
             {onDismiss && (,
               <button,
                 onClick={() => onDismiss(notification.id)},
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react',
-import { AnimatePresence, motion } from 'framer-motion',
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
 

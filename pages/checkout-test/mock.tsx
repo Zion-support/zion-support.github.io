@@ -1,7 +1,7 @@
-import React from 'react',
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { Button } from '@/components/ui/button',
+import React from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { CheckCircle, ArrowRight } from 'lucide-react'
 
 export default function MockCheckoutPage() {

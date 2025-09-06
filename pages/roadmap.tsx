@@ -1,5 +1,5 @@
-import Head from 'next/head',
-import React, { useMemo, useState } from 'react',
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
 
 type RoadmapInputs = {
   milestones: string,

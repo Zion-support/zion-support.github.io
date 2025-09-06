@@ -1,15 +1,15 @@
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import { 
   getTalentRateSuggestion,
   PricingSuggestion,
   TalentRateParams,
   trackPricingSuggestion
 } from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox",
-import { useAuth } from "@/hooks/useAuth",
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from 'lucide-react'
 
 interface TalentRateRecommenderProps {

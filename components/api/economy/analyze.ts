@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
   operatorPrompt: string,
   context?: Record<string, unknown>

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { randomUUID } from 'crypto',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto';
 type Note = {
   id: string,
   targetType: string,

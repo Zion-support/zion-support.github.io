@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import { Quote } from 'lucide-react'
 import {
   Carousel,

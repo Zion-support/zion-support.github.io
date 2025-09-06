@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import { Milestone } from '../../utils/types/milestones',
+import React, { useState } from 'react';
+import { Milestone } from '../../utils/types/milestones';
 type Props = {
   milestone: Milestone,
   projectId: string,

@@ -1,5 +1,5 @@
-import useSWR from 'swr',
-import Link from 'next/link',
+import useSWR from 'swr';
+import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 
 export default function ClientDashboard() {

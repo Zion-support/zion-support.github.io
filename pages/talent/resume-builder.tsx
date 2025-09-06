@@ -1,7 +1,7 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import React, { useMemo, useState } from 'react',
-import AIAssistant from '../../components/ui/AIAssistant',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
+import AIAssistant from '../../components/ui/AIAssistant';
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist'),
   const [experienceYears, setExperienceYears] = useState(5),

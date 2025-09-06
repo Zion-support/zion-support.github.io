@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react',
+import React, { useEffect, useRef } from 'react';
 
 interface UltraAdvancedFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high',

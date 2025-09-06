@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react';
 
 export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),

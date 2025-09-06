@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
-import { getGitStatus, requireRoles } from "../../../utils/devAccess",
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
+import { getGitStatus, requireRoles } from "../../../utils/devAccess";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),

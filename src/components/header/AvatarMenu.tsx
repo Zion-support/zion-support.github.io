@@ -1,7 +1,7 @@
-import React from 'react',
-import Link from 'next/link',
-import { useAuth } from '@/hooks/useAuth',
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
+import React from 'react';
+import Link from 'next/link';
+import { useAuth } from '@/hooks/useAuth';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuLabel} from '@/components/ui/dropdown-menu',
 import { User as UserIcon, Package } from 'lucide-react'
-import { LogOut } from 'lucide-react', // Assuming lucide-react is used
+import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
 
 export const AvatarMenu: React.FC = () => {
   const { user, logout, avatarUrl } = useAuth(),

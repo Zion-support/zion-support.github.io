@@ -1,6 +1,6 @@
 
-import React from "react",
-import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+import React from "react";
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
 
 interface BadgeEarnedProps {
   badge: BadgeKey,

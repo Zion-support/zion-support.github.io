@@ -1,5 +1,5 @@
-import React from 'react',
-import { ApiDocsSpec, Visibility } from '../../data/api-docs/types',
+import React from 'react';
+import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
 
 interface SidebarProps {
   spec: ApiDocsSpec,

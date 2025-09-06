@@ -1,8 +1,8 @@
-import dynamic from 'next/dynamic',
-import React, { useEffect, useState } from 'react',
-import { useWallet } from '../../hooks/useWallet',
-import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins',
-import { CHAINS } from '../../utils/chains',
+import dynamic from 'next/dynamic';
+import React, { useEffect, useState } from 'react';
+import { useWallet } from '../../hooks/useWallet';
+import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 
 export default function TokenIntegrationsPage() {

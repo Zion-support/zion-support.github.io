@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
   const featuredNews = [
     {
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
@@ -51,7 +51,7 @@ import React from 'react',
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react',
-import Link from 'next/link',
+import Link from 'next/link';
   return (
     <UltraFuturisticBackground>
       <div className="min-h-screen">
@@ -136,7 +136,7 @@ export default function News() {
       readTime: '5 min read',
       image: '/api/placeholder/600/400',
       tags: ['AIQuantum ComputingInnovation'],
-import Head from 'next/head',
+import Head from 'next/head';
 export default function NewsPage() {
   const newsArticles = [
     {
@@ -370,14 +370,14 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Search, Calendar, Clock, User, Tag, 
   ArrowRight, ExternalLink, TrendingUp, 
   BookOpen, Globe, Video
 } from 'lucide-react',
-import Link from 'next/link',
+import Link from 'next/link';
 export default function News() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),

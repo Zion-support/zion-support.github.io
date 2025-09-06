@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { 
 	Menu,
 	X, 
@@ -52,7 +52,7 @@ import {
 	FlaskConical,
 	Link as LinkIcon
 } from 'lucide-react',
-import Button from '../ui/Button',
+import Button from '../ui/Button';
 export default function NeoFuturisticNavigation() {
 	const [isOpen, setIsOpen] = useState(false),
 	const [isScrolled, setIsScrolled] = useState(false),

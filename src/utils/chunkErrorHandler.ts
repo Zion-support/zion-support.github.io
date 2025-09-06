@@ -3,7 +3,7 @@
  * Handles automatic retry, cache clearing, and graceful degradation
  */
 
-import { logErrorToProduction } from './productionLogger',
+import { logErrorToProduction } from './productionLogger';
 interface ChunkErrorStats {
   errorCount: number,
   lastErrorTime: number,

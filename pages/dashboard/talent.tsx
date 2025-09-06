@@ -1,6 +1,6 @@
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import { useEffect, useState } from 'react',
+import EnhancedCard from '../../components/ui/EnhancedCard';
+import EnhancedButton from '../../components/ui/EnhancedButton';
+import { useEffect, useState } from 'react';
 
 const STEPS = [
   { key: 'profile', label: 'Profile completed' },

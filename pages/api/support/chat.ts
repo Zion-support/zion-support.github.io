@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
-import { readJson } from '../../../utils/fsDb',
-import { HelpArticle, matchIntent } from '../../../utils/support',
-import { logSupportEventToOperator } from '../../../utils/operator',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+import { readJson } from '../../../utils/fsDb';
+import { HelpArticle, matchIntent } from '../../../utils/support';
+import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`,
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

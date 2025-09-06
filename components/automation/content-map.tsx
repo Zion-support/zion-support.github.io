@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import type { GetStaticProps } from 'next',
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
 type Entry = { route: string, file: string },
 interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
 

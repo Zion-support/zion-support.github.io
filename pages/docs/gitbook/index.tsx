@@ -1,6 +1,6 @@
-import fs from 'fs',
-import path from 'path',
-import Link from 'next/link',
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
 function list(dir: string, baseDir: string) {
   const items = fs.readdirSync(dir),
   return items.map((name) => {

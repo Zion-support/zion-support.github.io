@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react',
-import Head from 'next/head',
+import React, { useMemo, useState } from 'react';
+import Head from 'next/head';
 type DistributionItem = { label: string, percent: number },
 
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,

@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml'),
 

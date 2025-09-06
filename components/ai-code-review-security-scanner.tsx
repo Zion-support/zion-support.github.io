@@ -1,6 +1,6 @@
-import React from 'react',
-import SEO from '../components/SEO',
-import { motion } from 'framer-motion',
+import React from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Code, CheckCircle, Zap, 
   ArrowRight, Star, TrendingUp, Users, 

@@ -85,7 +85,7 @@ CardFooter.displayName = "CardFooter";
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 =======
-import React from 'react',
+import React from 'react';
 interface CardProps {
   children: React.ReactNode,
   className?: string,

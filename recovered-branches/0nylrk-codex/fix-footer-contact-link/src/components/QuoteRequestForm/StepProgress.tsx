@@ -1,7 +1,7 @@
 
-import { QuoteRequestSteps } from "../QuoteRequestForm",
-import { CheckIcon } from "@/components/icons",
-import { cn } from "@/lib/utils",
+import { QuoteRequestSteps } from "../QuoteRequestForm";
+import { CheckIcon } from "@/components/icons";
+import { cn } from "@/lib/utils";
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }

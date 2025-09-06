@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from 'react',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket,
   Brain, Globe, Lock, Code, Database, Cloud
 } from 'lucide-react',
-import Button from '../ui/Button',
+import Button from '../ui/Button';
 interface Service {
   id: string,
   name: string,

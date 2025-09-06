@@ -1,8 +1,8 @@
 
-import React, { useState } from "react",
-import { Dispute, DisputeStatus } from "@/types/disputes",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
+import React, { useState } from "react";
+import { Dispute, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Table,
   TableBody,
@@ -10,10 +10,10 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Skeleton } from "@/components/ui/skeleton",
-import { formatDistanceToNow } from "date-fns",
-import { ShieldAlert } from "lucide-react",
-import { Link } from "react-router-dom",
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { ShieldAlert } from "lucide-react";
+import { Link } from "react-router-dom";
 type DisputesListProps = {
   disputes: Dispute[],
   isLoading: boolean

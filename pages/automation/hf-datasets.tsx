@@ -1,6 +1,6 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
-import data from '../../data/hf-datasets.json',
+import data from '../../data/hf-datasets.json';
 export default function HfDatasetsPage() {
   const items: any[] = (data?.items || []).slice(0, 60),
   return (

@@ -119,7 +119,7 @@ class AggressiveSyntaxFixer {
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
         
         if (ext === '.tsx' || ext === '.jsx') {
-            return `import React from 'react',
+            return `import React from 'react';
 default function ${validFileName}() {
   return (
     <div>

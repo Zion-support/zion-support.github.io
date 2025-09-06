@@ -1,7 +1,7 @@
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
-import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { format } from "date-fns";
+import { JobApplication } from "@/types/jobs";
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar"; // Renamed
+import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { 
   Table,
   TableBody,
@@ -10,13 +10,13 @@ import {
   TableHeader,
   TableRow
 } from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
+import { ApplicationActions } from "./ApplicationActions";
+import { StatusBadge } from "./StatusBadge";
 import { Briefcase, User } from 'lucide-react'
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-import React, { useState } from "react", // Import React and useState
-import { toast } from "@/hooks/use-toast",
-import Image from 'next/image', // Import next/image
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
+import React, { useState } from "react"; // Import React and useState
+import { toast } from "@/hooks/use-toast";
+import Image from 'next/image'; // Import next/image
 
 interface ApplicationsTableProps {
   applications: JobApplication[],

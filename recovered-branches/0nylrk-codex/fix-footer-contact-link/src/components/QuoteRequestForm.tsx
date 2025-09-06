@@ -1,18 +1,18 @@
 
-import { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { GradientHeading } from "@/components/GradientHeading",
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",
-import { QuoteFormData } from "@/types/quotes",
-import { Sparkles } from "lucide-react",
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { GradientHeading } from "@/components/GradientHeading";
+import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
+import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
+import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep";
+import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep";
+import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
+import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
+import { QuoteFormData } from "@/types/quotes";
+import { Sparkles } from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
 
 export function QuoteRequestForm() {

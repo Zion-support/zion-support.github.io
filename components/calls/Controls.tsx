@@ -1,5 +1,5 @@
-import React from 'react',
-import type { Room } from 'livekit-client',
+import React from 'react';
+import type { Room } from 'livekit-client';
 type Props = {
   room: Room | null,
   onLeave: () => void,

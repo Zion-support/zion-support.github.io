@@ -1,7 +1,7 @@
-import React from 'react',
-import type { NextPage, GetServerSideProps } from 'next',
-import ReviewForm from '../../components/reviews/ReviewForm',
-import { findProjectById } from '../../utils/dataStore',
+import React from 'react';
+import type { NextPage, GetServerSideProps } from 'next';
+import ReviewForm from '../../components/reviews/ReviewForm';
+import { findProjectById } from '../../utils/dataStore';
 type Props = {
   projectId: string,
   fromRole: 'client' | 'talent',

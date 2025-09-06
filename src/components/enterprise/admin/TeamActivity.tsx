@@ -1,5 +1,5 @@
 
-import React from "react",
+import React from "react";
 import {
   Table,
   TableBody,
@@ -7,10 +7,10 @@ import {
   TableHead,
   TableHeader,
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 export function TeamActivity() {
   // Mock activity data
   const activities = [

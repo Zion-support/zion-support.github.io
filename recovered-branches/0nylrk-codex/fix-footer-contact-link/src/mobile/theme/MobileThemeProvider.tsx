@@ -1,6 +1,6 @@
 
-import React from "react",
-import { useTheme } from "@/hooks/useTheme",
+import React from "react";
+import { useTheme } from "@/hooks/useTheme";
 interface MobileThemeProviderProps {
   children: React.ReactNode
 }

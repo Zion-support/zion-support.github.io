@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types',
-import { v4 as uuidv4 } from 'uuid',
-import { supabase as client } from '../../../utils/supabase/client',
-import { MOCK_DATA } from '../../../utils/admin/mockData',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types';
+import { v4 as uuidv4 } from 'uuid';
+import { supabase as client } from '../../../utils/supabase/client';
+import { MOCK_DATA } from '../../../utils/admin/mockData';
 function isSupabaseConfigured() {
   return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co'
 }

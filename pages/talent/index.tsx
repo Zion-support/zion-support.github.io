@@ -1,8 +1,8 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useMemo, useState } from 'react',
-import Pagination from '../../components/ui/Pagination',
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useMemo, useState } from 'react';
+import Pagination from '../../components/ui/Pagination';
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 
 interface Talent {
   id: string,

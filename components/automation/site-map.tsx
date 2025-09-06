@@ -1,5 +1,5 @@
-import fs from 'fs',
-import path from 'path',
+import fs from 'fs';
+import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
 
 export async function getServerSideProps() {

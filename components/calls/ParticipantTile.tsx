@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react',
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client',
+import React, { useEffect, useRef } from 'react';
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant,

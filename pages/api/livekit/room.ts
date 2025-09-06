@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
 
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '',
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '',

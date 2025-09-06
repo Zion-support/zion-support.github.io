@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { cn } from '@/lib/utils',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 interface OptimizedImageProps {
   src: string,
   alt: string,

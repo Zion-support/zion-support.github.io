@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react",
-import Head from "next/head",
+import { useEffect, useState } from "react";
+import Head from "next/head";
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState(""),
   const [token, setToken] = useState<string | null>(null),

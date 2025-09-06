@@ -1,8 +1,8 @@
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect } from 'react',
-import { ContactInfo } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false),
   const [selectedCategory, setSelectedCategory] = useState('all'),

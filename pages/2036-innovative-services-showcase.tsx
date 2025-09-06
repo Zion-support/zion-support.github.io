@@ -1,15 +1,15 @@
-import React, { useState } from 'react',
-import SEO from '../components/SEO',
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import { 
   Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
   Star, TrendingUp, Users, Building, Lightbulb,
   ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
 } from 'lucide-react',
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

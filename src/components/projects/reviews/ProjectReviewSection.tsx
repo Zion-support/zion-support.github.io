@@ -1,12 +1,12 @@
-import { Project } from '@/types/projects',
-import { useState } from "react",
+import { Project } from '@/types/projects';
+import { useState } from "react";
 import { Star } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews",
-import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
+import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
   project: Project
 }

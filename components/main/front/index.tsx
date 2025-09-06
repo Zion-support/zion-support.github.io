@@ -1,8 +1,8 @@
-import Head from 'next/head',
-import Link from 'next/link',
-import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react',
-import { motion, useScroll, useSpring } from 'framer-motion',
-import { useEffect, useState } from 'react',
+import Head from 'next/head';
+import Link from 'next/link';
+import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function MainFrontIndex() {
   const { scrollYProgress } = useScroll(),

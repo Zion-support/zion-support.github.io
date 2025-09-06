@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
 

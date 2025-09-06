@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react',
-import { translateTextViaAI } from '../utils/translation',
+import { useEffect, useMemo, useState } from 'react';
+import { translateTextViaAI } from '../utils/translation';
 export type UseAutoTranslateResult = {
   translations: Record<string, string>,
   loading: boolean,

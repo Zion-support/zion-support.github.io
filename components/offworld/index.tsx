@@ -1,5 +1,5 @@
-import { useState } from 'react',
-import Head from 'next/head',
+import { useState } from 'react';
+import Head from 'next/head';
 export default function OffworldConsole() {
   const [chat, setChat] = useState(''),
   const [voteChoice, setVoteChoice] = useState('yes'),

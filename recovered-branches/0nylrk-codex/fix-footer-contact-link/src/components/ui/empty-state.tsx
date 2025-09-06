@@ -1,8 +1,8 @@
 
-import React from "react",
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
+import React from "react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 interface EmptyStateProps {
   icon: React.ReactNode,
   title: string,

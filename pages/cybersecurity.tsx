@@ -1,7 +1,7 @@
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
 
 export default function CybersecurityPage() {
   const features = [

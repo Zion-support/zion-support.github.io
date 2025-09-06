@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react',
-import Link from 'next/link',
+import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
 
 type Usage = { monthlyJobPosts: number, budgetCapUsd: number },

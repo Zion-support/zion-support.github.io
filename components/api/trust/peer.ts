@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { TrustPeerReview } from '../../../utils/types/trust',
-import { supabase } from '../../../utils/supabase/client',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { TrustPeerReview } from '../../../utils/types/trust';
+import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST'),

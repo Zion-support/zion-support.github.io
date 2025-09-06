@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   HelpCircle, MessageCircle, Phone, Mail, Clock, 
   BookOpen, Video, FileText, Search, Filter,

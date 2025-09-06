@@ -1,28 +1,28 @@
-import { Button } from '@/components/ui/button',
-import Link from 'next/link',
-import { useSelector, useDispatch } from 'react-redux',
-import { useState, useEffect } from 'react',
-import axios from 'axios',
-import { useAuth } from '@/hooks/useAuth',
-import type { RootState, AppDispatch } from '@/store',
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useAuth } from '@/hooks/useAuth';
+import type { RootState, AppDispatch } from '@/store';
 import {
   removeItem as removeItemAction,
   updateQuantity as updateQuantityAction} from '@/store/cartSlice',
-import {logErrorToProduction} from '@/utils/productionLogger',
-import { CartItem as CartItemComponent } from '@/components/cart/CartItem',
-import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal',
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
-// import { CartItem as CartItemType } from '@/types/cart',
+// import { CartItem as CartItemType } from '@/types/cart';
 // safeStorage is no longer needed here for reading
-// import { safeStorage } from '@/utils/safeStorage',
-import { getStripe } from '@/utils/getStripe',
-import { useTranslation } from 'react-i18next',
-import { motion } from 'framer-motion',
+// import { safeStorage } from '@/utils/safeStorage';
+import { getStripe } from '@/utils/getStripe';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist',
-import { toast } from '@/hooks/use-toast',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
+import { useWishlist } from '@/hooks/useWishlist';
+import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 export default function CartPage() {
   const { t } = useTranslation(),
   const items = useSelector((s: RootState) => s.cart.items),

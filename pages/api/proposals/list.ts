@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { listProposals } from '../../../utils/data/proposals',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const proposals = listProposals(),

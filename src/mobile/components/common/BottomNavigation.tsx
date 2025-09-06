@@ -1,8 +1,8 @@
-import React from "react",
-import { useRouter } from "next/router",
-import Link from "next/link",
+import React from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 export function BottomNavigation() {
   const router = useRouter(),
   

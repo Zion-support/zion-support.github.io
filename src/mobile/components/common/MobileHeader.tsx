@@ -1,8 +1,8 @@
-import React from "react",
-import { useRouter } from 'next/router',
+import React from "react";
+import { useRouter } from 'next/router';
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean,

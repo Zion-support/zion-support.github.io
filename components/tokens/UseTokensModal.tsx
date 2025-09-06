@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react',
-import { connectMetaMask, getAccounts } from '../../utils/wallet',
+import React, { useEffect, useState } from 'react';
+import { connectMetaMask, getAccounts } from '../../utils/wallet';
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
 

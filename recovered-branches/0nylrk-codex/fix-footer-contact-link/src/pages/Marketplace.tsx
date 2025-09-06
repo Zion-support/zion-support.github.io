@@ -1,19 +1,19 @@
 
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { Grid3X3, ListFilter } from "lucide-react",
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { FilterSidebar } from "@/components/search/FilterSidebar",
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { useNavigate } from "react-router-dom",
-import { SearchSuggestion } from "@/types/search",
-import { AppLayout } from "@/layout/AppLayout",
+import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Grid3X3, ListFilter } from "lucide-react";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { FilterSidebar } from "@/components/search/FilterSidebar";
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import { SearchSuggestion } from "@/types/search";
+import { AppLayout } from "@/layout/AppLayout";
 export default function Marketplace() {
   const navigate = useNavigate(),
   const [searchQuery, setSearchQuery] = useState(""),

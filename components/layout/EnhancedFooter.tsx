@@ -6,8 +6,8 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 =======
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react';
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, 
   Twitter, Linkedin, Facebook, Instagram,

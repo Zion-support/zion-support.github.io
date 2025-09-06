@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react',
-import type { NextPage } from 'next',
-import type { Review } from '../../types/reviews',
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
 const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
 
 const AdminReviewsPage: NextPage = () => {

@@ -1,8 +1,8 @@
 
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
 import { Check } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string,
   style?: React.CSSProperties

@@ -1,7 +1,7 @@
-import React from 'react',
-import { useRouter } from 'next/router',
-import TalentGrid from '../../components/seo/TalentGrid',
-import FAQ from '../../components/seo/FAQ',
+import React from 'react';
+import { useRouter } from 'next/router';
+import TalentGrid from '../../components/seo/TalentGrid';
+import FAQ from '../../components/seo/FAQ';
 export type LandingPayload = {
   title: string,
   h1: string,

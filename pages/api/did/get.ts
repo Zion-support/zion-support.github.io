@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 

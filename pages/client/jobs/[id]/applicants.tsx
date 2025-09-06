@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router',
-import useSWR from 'swr',
-import { TALENT_PROFILES } from '../../../../data/talent',
-import Link from 'next/link',
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
+import { TALENT_PROFILES } from '../../../../data/talent';
+import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 
 export default function JobApplicantsPage() {

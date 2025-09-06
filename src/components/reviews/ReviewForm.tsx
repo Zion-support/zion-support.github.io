@@ -1,9 +1,9 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { Star } from 'lucide-react'
-import { useForm } from "react-hook-form",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
+import { useForm } from "react-hook-form";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
 import {
   RadioGroup,
   RadioGroupItem} from "@/components/ui/radio-group",
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
+import { Switch } from "@/components/ui/switch";
+import { Review } from "@/types/reviews";
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,

@@ -1,6 +1,6 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),

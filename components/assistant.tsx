@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react',
+import { useEffect, useMemo, useState } from 'react';
 
 interface Message { role: 'user' | 'assistant', content: string }
 

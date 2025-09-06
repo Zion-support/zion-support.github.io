@@ -1,6 +1,6 @@
 
-import React from 'react',
-import { Button } from '@/components/ui/button',
+import React from 'react';
+import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {
   unreadCount: number,
   onMarkAllAsRead: () => Promise<void>

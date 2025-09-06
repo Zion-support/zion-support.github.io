@@ -1,17 +1,17 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
 } from 'lucide-react',
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations',
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas',
-import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027',
-import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027',
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
+import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),

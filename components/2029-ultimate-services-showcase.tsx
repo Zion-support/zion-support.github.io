@@ -1,7 +1,7 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Crown, Star, TrendingUp, ArrowRight,
@@ -10,12 +10,12 @@ import {
   Building, Factory, Camera, Video, Music, Gamepad2, Eye,
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon
 } from 'lucide-react',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
-import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas',
-import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions',
-import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services',
-import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+import { cuttingEdge2028MicroSaas } from '../data/2028-cutting-edge-micro-saas';
+import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-solutions';
+import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services';
+import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
 export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),

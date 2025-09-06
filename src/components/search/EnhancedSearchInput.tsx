@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef, useMemo } from "react",
-import { useTranslation } from "react-i18next",
+import React, { useState, useEffect, useRef, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useRouter } from "next/router",
-import { slugify } from "@/lib/slugify",
-import { debounce } from "lodash",
-import { logInfo, logWarn } from '@/utils/productionLogger',
+import { Input } from "@/components/ui/input";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useRouter } from "next/router";
+import { slugify } from "@/lib/slugify";
+import { debounce } from "lodash";
+import { logInfo, logWarn } from '@/utils/productionLogger';
 
 
 interface EnhancedSearchInputProps {

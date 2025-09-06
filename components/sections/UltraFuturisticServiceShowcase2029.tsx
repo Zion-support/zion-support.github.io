@@ -1,7 +1,7 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 
 interface Service {
   id: string,

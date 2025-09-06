@@ -1,13 +1,13 @@
 
-import { useState, useEffect } from "react",
-import { useNavigate, useLocation } from "react-router-dom",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { LockKeyhole } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { LockKeyhole } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Form,
   FormControl,
@@ -15,10 +15,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from "@/components/ui/form",
-import { toast } from "@/hooks/use-toast",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { cleanupAuthState } from "@/utils/authUtils",
+import { toast } from "@/hooks/use-toast";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { cleanupAuthState } from "@/utils/authUtils";
 // Form validation schema
 const updatePasswordSchema = z
   .object({

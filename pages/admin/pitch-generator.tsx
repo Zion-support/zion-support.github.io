@@ -1,8 +1,8 @@
-import React, { useCallback, useMemo, useState } from 'react',
-import Head from 'next/head',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import { GetServerSideProps } from 'next',
-import { requireAdminRole } from '../../utils/auth',
+import React, { useCallback, useMemo, useState } from 'react';
+import Head from 'next/head';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { GetServerSideProps } from 'next';
+import { requireAdminRole } from '../../utils/auth';
 export type Slide = {
   id: string,
   title: string,

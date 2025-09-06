@@ -1,5 +1,5 @@
-import React from 'react',
-import EnhancedButton from './EnhancedButton',
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
 export type PaginationProps = {
   page: number,
   pageSize: number,

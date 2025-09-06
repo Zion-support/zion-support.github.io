@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { 
   Brain, Zap, Target, BarChart3, Users, TrendingUp, 
   MessageSquare, Mail, Phone, MapPin, ArrowRight,

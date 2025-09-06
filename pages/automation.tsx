@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
 
 
 export default function AutomationPage() {

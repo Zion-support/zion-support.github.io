@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import path from 'path',
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb',
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import path from 'path';
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
 
 export const config = {
   api: { bodyParser: { sizeLimit: '20mb' } }},

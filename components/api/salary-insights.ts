@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent',
-import OpenAI from 'openai',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
+import OpenAI from 'openai';
 type RequestBody = {
   roleTitle: string,
   skills: string[],

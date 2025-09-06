@@ -1,11 +1,11 @@
-import React from "react",
-import { useRouter } from "next/router",
-import Link from "next/link",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { useWishlist } from "@/hooks/useWishlist",
-import { useCart } from '@/context/CartContext',
-import { logWarn } from '@/utils/productionLogger',
+import React from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { useWishlist } from "@/hooks/useWishlist";
+import { useCart } from '@/context/CartContext';
+import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 
 interface MobileBottomNavProps {

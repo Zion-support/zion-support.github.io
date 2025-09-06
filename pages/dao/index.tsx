@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string },
 

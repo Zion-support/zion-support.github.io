@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState } from "../../../utils/sync/storage",
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState } from "../../../utils/sync/storage";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
 

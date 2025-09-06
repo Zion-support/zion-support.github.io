@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react',
+import React, { useMemo, useState } from 'react';
 
 export type LegalStructure = 'Cayman Foundation' | 'Swiss Verein' | 'US 501(c)(6)' | 'DAO-native Wrapper',
 

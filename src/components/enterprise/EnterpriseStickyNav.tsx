@@ -1,6 +1,6 @@
-import { useState } from "react",
+import { useState } from "react";
 import { Menu } from 'lucide-react'
-import Link from "next/link",
+import Link from "next/link";
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
   return (

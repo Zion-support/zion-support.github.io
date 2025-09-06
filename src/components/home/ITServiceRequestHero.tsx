@@ -1,14 +1,14 @@
-import React, { useState } from "react",
-import Image from "next/image",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { useToast } from "@/hooks/use-toast",
-import axios from "axios",
+import React, { useState } from "react";
+import Image from "next/image";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import axios from "axios";
 import { Loader2 } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
 export function ITServiceRequestHero() {
 
   const [name, setName] = useState(""),

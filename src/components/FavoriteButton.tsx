@@ -1,10 +1,10 @@
-import React from 'react',
+import React from 'react';
 import { Heart } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { useWishlist } from '@/hooks/useWishlist',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { cn } from '@/lib/utils';
+import { useWishlist } from '@/hooks/useWishlist';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { LoginModal } from '@/components/auth/LoginModal';
 import {
   Tooltip,
   TooltipContent,

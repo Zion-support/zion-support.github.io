@@ -1,6 +1,6 @@
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">

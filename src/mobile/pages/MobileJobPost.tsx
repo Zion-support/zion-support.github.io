@@ -1,11 +1,11 @@
 
-import React, { useState } from "react",
-import { MobileHeader } from "@/mobile/components/common/MobileHeader",
-import { BottomNavigation } from "@/mobile/components/common/BottomNavigation",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Label } from "@/components/ui/label",
+import React, { useState } from "react";
+import { MobileHeader } from "@/mobile/components/common/MobileHeader";
+import { BottomNavigation } from "@/mobile/components/common/BottomNavigation";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { 
   Select,
   SelectContent,
@@ -14,8 +14,8 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
 const client = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null,
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

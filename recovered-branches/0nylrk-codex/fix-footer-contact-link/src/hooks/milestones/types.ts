@@ -1,5 +1,5 @@
 
-import { supabase } from '@/integrations/supabase/client',
+import { supabase } from '@/integrations/supabase/client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved',
 
 export interface Milestone {

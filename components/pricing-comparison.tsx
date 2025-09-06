@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 export default function PricingComparisonPage() {
   const serviceComparisons = [

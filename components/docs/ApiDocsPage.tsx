@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react',
-import Sidebar from './Sidebar',
-import EndpointDetail from './EndpointDetail',
-import v1 from '../../data/api-docs/v1',
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later

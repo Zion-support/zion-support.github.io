@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 type ProgressBarProps = { value: number },
 
 export default function ProgressBar({ value }: ProgressBarProps) {

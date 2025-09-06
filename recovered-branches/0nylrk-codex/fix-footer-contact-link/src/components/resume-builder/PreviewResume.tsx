@@ -1,5 +1,5 @@
 
-import { Resume } from '@/types/resume',
+import { Resume } from '@/types/resume';
 import {
   PreviewHeader,
   ResumeBasicInfoSection,

@@ -1,6 +1,6 @@
 
-import { WorkExperience } from '@/types/resume',
-import { format } from 'date-fns',
+import { WorkExperience } from '@/types/resume';
+import { format } from 'date-fns';
 interface WorkExperienceSectionProps {
   workExperience: WorkExperience[]
 }

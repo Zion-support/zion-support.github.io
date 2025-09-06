@@ -1,5 +1,5 @@
 
-import { LucideIcon } from "lucide-react",
+import { LucideIcon } from "lucide-react";
 import {
   BadgeCheck, // publishing a listing
   Award,      // top contributor

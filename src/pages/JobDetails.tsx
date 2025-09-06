@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react',
-import { useRouter } from 'next/router', // Changed from useParams, useNavigate
-import { Header } from '@/components/Header',
-import { Button } from '@/components/ui/button',
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
+import { Header } from '@/components/Header';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react'
-import { formatDistanceToNow } from 'date-fns',
-import { toast } from 'sonner',
-import { useAuth } from '@/hooks/useAuth',
-import useJobDetails from '@/hooks/useJobDetails',
-import { ApplyToJobModal } from '@/components/messaging/job-application',
-import { SEO } from '@/components/SEO',
-import { useWhitelabel } from '@/context/WhitelabelContext',
-import { JobDetailsSkeleton } from '@/components/jobs',
+import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import useJobDetails from '@/hooks/useJobDetails';
+import { ApplyToJobModal } from '@/components/messaging/job-application';
+import { SEO } from '@/components/SEO';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+import { JobDetailsSkeleton } from '@/components/jobs';
 interface Job {
   id: string,
   title: string,

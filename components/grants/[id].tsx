@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react',
-import { useRouter } from 'next/router',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import type { GrantApplication } from '../../types/grants',
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication } from '../../types/grants';
 export default function GrantDetailPage() {
   const router = useRouter(),
   const { id } = router.query as { id: string },

@@ -1,8 +1,8 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-import Card from '../../components/ui/Card',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Card from '../../components/ui/Card';
 const posts = [
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },

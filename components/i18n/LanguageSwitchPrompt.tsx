@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react',
-import { useTranslation } from 'react-i18next',
-import i18n, { supportedLocales, isRtl } from '../../utils/i18n',
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
 
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',

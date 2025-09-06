@@ -1,7 +1,7 @@
-import { GetStaticPaths, GetStaticProps } from 'next',
-import { useState } from 'react',
-import { readJson } from '../../utils/fsDb',
-import type { HelpArticle } from '../../utils/support',
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []),
   return {

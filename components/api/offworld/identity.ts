@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { buildIdentityProfile } from '@/utils/offworld/identity',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { buildIdentityProfile } from '@/utils/offworld/identity';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { address } = req.query as { address?: string },

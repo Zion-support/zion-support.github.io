@@ -1,14 +1,14 @@
 
-import { useState } from "react",
-import { useParams, Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { SEO } from "@/components/SEO",
-import { AppLayout } from "@/layout/AppLayout",
-import PostCard from "@/components/community/PostCard",
-import { ForumPost, ForumCategoryInfo } from "@/types/community",
-import { Badge } from "@/components/ui/badge",
-import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { SEO } from "@/components/SEO";
+import { AppLayout } from "@/layout/AppLayout";
+import PostCard from "@/components/community/PostCard";
+import { ForumPost, ForumCategoryInfo } from "@/types/community";
+import { Badge } from "@/components/ui/badge";
+import { useAuth } from "@/hooks/useAuth";
 import {
   MessageSquare,
   Briefcase,

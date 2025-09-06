@@ -1,10 +1,10 @@
-import React from 'react',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import { getServiceById } from '../../data/micro-saas-services',
-import ServiceDetail from '../../components/sections/ServiceDetail',
-import Button from '../../components/ui/Button',
-import { ArrowLeft, ExternalLink } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { getServiceById } from '../../data/micro-saas-services';
+import ServiceDetail from '../../components/sections/ServiceDetail';
+import Button from '../../components/ui/Button';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 export default function ServiceDetailPage() {
   const router = useRouter(),

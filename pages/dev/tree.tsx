@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react",
-import Tree, { TreeNode } from "../../components/ui/Tree",
+import React, { useEffect, useState } from "react";
+import Tree, { TreeNode } from "../../components/ui/Tree";
 
 interface ApiResponse {
   nodes: TreeNode[],

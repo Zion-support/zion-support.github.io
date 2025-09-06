@@ -1,14 +1,14 @@
-import Link from 'next/link',
-import { useRouter } from 'next/router',
-import { Button } from '@/components/ui/button',
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Button } from '@/components/ui/button';
 import { Clipboard } from 'lucide-react'
-import Skeleton from '@/components/ui/skeleton',
-import { useGetOrderQuery } from '@/hooks/useOrder',
-import { generateInvoicePdf } from '@/utils/generateInvoicePdf',
-import { useAuth } from '@/hooks/useAuth',
-import { supabase } from '@/integrations/supabase/client',
-import { toast } from '@/hooks/use-toast',
-import { OrderTimeline } from '@/components/orders/OrderTimeline',
+import Skeleton from '@/components/ui/skeleton';
+import { useGetOrderQuery } from '@/hooks/useOrder';
+import { generateInvoicePdf } from '@/utils/generateInvoicePdf';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+import { OrderTimeline } from '@/components/orders/OrderTimeline';
 export default function OrderDetailPage() {
   const router = useRouter(),
   const { orderId } = router.query as { orderId?: string },

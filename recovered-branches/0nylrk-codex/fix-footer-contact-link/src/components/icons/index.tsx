@@ -1,5 +1,5 @@
-import React from 'react',
-import * as LucideIcons from 'lucide-react',
+import React from 'react';
+import * as LucideIcons from 'lucide-react';
 // Alias for missing icons or for icons with different names
 const iconAliases: Record<string, keyof typeof LucideIcons> = {
   // Grid views
@@ -197,4 +197,4 @@ export const {
   Tag} = iconExports,
 
 // Also export all original icons from lucide-react
-export * from 'lucide-react',
+export * from 'lucide-react';

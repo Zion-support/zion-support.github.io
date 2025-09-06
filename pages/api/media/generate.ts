@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { buildPressRelease } from '../../../utils/mediaKit',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { buildPressRelease } from '../../../utils/mediaKit';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { type = 'launch', companyName = 'Zion', date = new Date().toISOString().substring(0,10), raiseAmount, tokenName } = req.body || {},

@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth",
+import type { NextApiRequest, NextApiResponse } from "next";
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {

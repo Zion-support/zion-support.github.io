@@ -1,7 +1,7 @@
 
-import { useState } from "react",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { useJobApplications } from "@/hooks/useJobApplications",
+import { useState } from "react";
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
+import { useJobApplications } from "@/hooks/useJobApplications";
 import {
   ApplicationsTable,
   EmptyState,

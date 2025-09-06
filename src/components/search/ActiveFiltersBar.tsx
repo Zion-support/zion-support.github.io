@@ -1,7 +1,7 @@
-import React from 'react',
+import React from 'react';
 import { X } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
   types: string[],
   category: string,

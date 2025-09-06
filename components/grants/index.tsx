@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react',
-import Link from 'next/link',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants',
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],

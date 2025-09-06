@@ -1,6 +1,6 @@
-import React from 'react',
-import Link from 'next/link',
-import { CheckCircle2, Circle, PartyPopper } from 'lucide-react',
+import React from 'react';
+import Link from 'next/link';
+import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 
 export type OnboardingStep = {
   id: string,

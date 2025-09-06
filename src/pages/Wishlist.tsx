@@ -1,15 +1,15 @@
-import { useFavorites } from '@/hooks/useFavorites',
+import { useFavorites } from '@/hooks/useFavorites';
 import { X } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',
-import { TALENT_PROFILES } from '@/data/talentData',
-import { ProductListingCard } from '@/components/ProductListingCard',
-import { TalentCard } from '@/components/talent/TalentCard',
-import { Button } from '@/components/ui/button',
-import { useCart } from '@/context/CartContext',
-import { toast } from '@/hooks/use-toast',
-import { useAuth } from '@/hooks/useAuth',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { useEffect } from 'react', // Added useEffect
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { Button } from '@/components/ui/button';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
+import { useAuth } from '@/hooks/useAuth';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import { useEffect } from 'react'; // Added useEffect
 
 export default function WishlistPage() {
   const { favorites, loading, toggleFavorite } = useFavorites(),

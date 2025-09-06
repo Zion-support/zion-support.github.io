@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react',
-import DatePicker from 'react-datepicker',
-import { useRouter } from 'next/router',
+import React, { useEffect, useMemo, useState } from 'react';
+import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/router';
 type PaymentType = 'hourly' | 'fixed',
 
 export default function ContractBuilderPage() {

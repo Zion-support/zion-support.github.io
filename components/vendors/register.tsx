@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react',
+import { FormEvent, useState } from 'react';
 
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false),

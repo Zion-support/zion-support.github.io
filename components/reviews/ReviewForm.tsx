@@ -1,5 +1,5 @@
-import React, { useState } from 'react',
-import StarRating from './StarRating',
+import React, { useState } from 'react';
+import StarRating from './StarRating';
 export type ReviewFormValues = {
   projectId: string,
   fromRole: 'client' | 'talent',

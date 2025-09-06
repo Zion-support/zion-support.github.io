@@ -1,15 +1,15 @@
 
-import { Resume } from '@/types/resume',
-import { jsPDF } from 'jspdf',
+import { Resume } from '@/types/resume';
+import { jsPDF } from 'jspdf';
 import 'jspdf-autotable',
-import { getPdfThemeColors } from './themeConfig',
-import { loadCustomFonts, FontFamily } from './fontConfig',
-import { addBasicInfoSection } from './sections/basicInfoSection',
-import { addSkillsSection } from './sections/skillsSection',
-import { addWorkExperienceSection } from './sections/workExperienceSection',
-import { addEducationSection } from './sections/educationSection',
-import { addCertificationsSection } from './sections/certificationsSection',
-import { addPortfolioSection } from './sections/portfolioSection',
+import { getPdfThemeColors } from './themeConfig';
+import { loadCustomFonts, FontFamily } from './fontConfig';
+import { addBasicInfoSection } from './sections/basicInfoSection';
+import { addSkillsSection } from './sections/skillsSection';
+import { addWorkExperienceSection } from './sections/workExperienceSection';
+import { addEducationSection } from './sections/educationSection';
+import { addCertificationsSection } from './sections/certificationsSection';
+import { addPortfolioSection } from './sections/portfolioSection';
 export interface ExportOptions {
   theme: 'light' | 'dark',
   includePortfolio?: boolean,

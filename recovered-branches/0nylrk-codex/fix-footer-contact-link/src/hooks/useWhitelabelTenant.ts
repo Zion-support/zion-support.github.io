@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react',
-import { supabase } from '@/integrations/supabase/client',
+import { useState, useEffect } from 'react';
+import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
   id: string,
   brand_name: string,

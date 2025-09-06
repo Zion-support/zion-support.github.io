@@ -1,12 +1,12 @@
-import { useState } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from '@hookform/resolvers/zod',
-import { z } from 'zod',
-import { Button } from '@/components/ui/button',
-import { Textarea } from '@/components/ui/textarea',
-import { Input } from '@/components/ui/input',
-import { Checkbox } from '@/components/ui/checkbox',
-import { format } from 'date-fns',
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { format } from 'date-fns';
 import {
   Form,
   FormControl,
@@ -14,12 +14,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage} from '@/components/ui/form',
-import { WorkExperience } from '@/types/resume',
-import { Loader2, Edit, Trash2 } from 'lucide-react',
-import { useResume } from '@/hooks/useResume',
-import { Alert, AlertDescription } from '@/components/ui/alert',
-import { Card, CardContent } from '@/components/ui/card',
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',
+import { WorkExperience } from '@/types/resume';
+import { Loader2, Edit, Trash2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Card, CardContent } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),

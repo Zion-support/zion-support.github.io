@@ -1,4 +1,4 @@
-import Link from 'next/link',
+import Link from 'next/link';
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },

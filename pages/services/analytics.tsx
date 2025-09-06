@@ -1,12 +1,12 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   BarChart3, Database, Zap, Shield, Rocket, Cpu, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AnalyticsServicesPage() {
   const services = [
     {

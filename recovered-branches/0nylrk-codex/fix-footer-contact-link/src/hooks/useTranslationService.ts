@@ -1,7 +1,7 @@
 
-import { useState } from 'react',
-import { supabase } from '@/integrations/supabase/client',
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 
 type ContentType = 'job' | 'profile' | 'service' | 'general',
 

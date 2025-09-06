@@ -1,12 +1,12 @@
-import { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { GradientHeading } from "@/components/GradientHeading";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
 
 // Example listing type
 interface Listing {

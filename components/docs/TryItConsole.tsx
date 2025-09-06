@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react',
+import React, { useMemo, useState } from 'react';
 
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',

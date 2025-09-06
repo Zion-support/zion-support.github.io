@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
-import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3',
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 export default function ServicesShowcase2026V3() {
   const contactInfo = {
     mobile: '+1 302 464 0950',

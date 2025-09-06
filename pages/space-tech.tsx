@@ -1,7 +1,7 @@
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { Satellite, CheckCircle, Globe2 } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
 
 export default function SpaceTechPage() {
   const features = [

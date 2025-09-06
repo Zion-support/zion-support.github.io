@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next",
-import { revokeTokens } from "../../../../utils/token/service",
+import type { NextApiRequest, NextApiResponse } from "next";
+import { revokeTokens } from "../../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const { userId, amount, reason } = req.body || {},

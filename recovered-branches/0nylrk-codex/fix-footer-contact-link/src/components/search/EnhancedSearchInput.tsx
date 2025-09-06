@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect, useRef } from "react",
-import { Search, X } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
+import React, { useState, useEffect, useRef } from "react";
+import { Search, X } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,

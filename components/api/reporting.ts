@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { authenticateRequest } from '@/utils/auth',
-import { readJsonFile, updateJsonFile } from '@/utils/fileDb',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { authenticateRequest } from '@/utils/auth';
+import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 
 interface ReportingData {
   byTenant: Record<string, {

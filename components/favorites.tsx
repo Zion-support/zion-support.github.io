@@ -1,7 +1,7 @@
-import { useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { TALENT_PROFILES } from '../data/talent',
+import { useEffect, useMemo, useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { TALENT_PROFILES } from '../data/talent';
 function useFavorites() {
   const storageKey = 'zion_favorites',
   const [favorites, setFavorites] = useState<string[]>([]),

@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 export type PdfExportButtonProps = {
   targetRef: React.RefObject<HTMLDivElement>,
   fileName?: string,

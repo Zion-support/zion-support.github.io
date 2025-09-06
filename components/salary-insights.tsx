@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from 'react',
-import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts',
+import React, { useEffect, useMemo, useState } from 'react';
+import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 
 type InsightResponse = {
   recommendedHourlyUsd: number,

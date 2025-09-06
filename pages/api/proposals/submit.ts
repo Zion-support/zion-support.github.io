@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import nodemailer from 'nodemailer',
-import crypto from 'crypto',
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import nodemailer from 'nodemailer';
+import crypto from 'crypto';
+import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
   const host = process.env.EMAIL_HOST,

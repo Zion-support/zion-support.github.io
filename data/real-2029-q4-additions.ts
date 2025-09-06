@@ -1,4 +1,4 @@
-import { RealMarketService } from './real-market-services',
+import { RealMarketService } from './real-market-services';
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',

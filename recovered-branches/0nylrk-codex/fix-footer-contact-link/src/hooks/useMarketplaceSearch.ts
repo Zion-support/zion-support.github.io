@@ -1,8 +1,8 @@
 
-import { useState, useMemo } from "react",
-import { ProductListing } from "@/types/listings",
-import { SearchSuggestion, FilterOptions } from "@/types/search",
-import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+import { useState, useMemo } from "react";
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 
 export function useMarketplaceSearch() {
   // Search state

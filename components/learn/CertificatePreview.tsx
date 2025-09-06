@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`,
   return (

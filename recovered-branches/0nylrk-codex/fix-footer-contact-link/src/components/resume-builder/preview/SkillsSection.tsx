@@ -1,5 +1,5 @@
 
-import { Skill } from '@/types/resume',
+import { Skill } from '@/types/resume';
 interface SkillsSectionProps {
   skills: Skill[]
 }

@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json'),
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

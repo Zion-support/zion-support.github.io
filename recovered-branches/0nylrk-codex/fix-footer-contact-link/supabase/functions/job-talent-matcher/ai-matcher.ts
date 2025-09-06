@@ -1,5 +1,5 @@
 
-import { JobData, TalentProfile, MatchResult } from "./types.ts",
+import { JobData, TalentProfile, MatchResult } from "./types.ts";
 
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",

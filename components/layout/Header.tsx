@@ -29,9 +29,9 @@ import {
 } from 'lucide-react';
 
 =======
-import React from 'react',
-import Link from 'next/link',
-import Button from '../ui/Button',
+import React from 'react';
+import Link from 'next/link';
+import Button from '../ui/Button';
 >>>>>>> pr-11992
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

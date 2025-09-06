@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import type { GrantApplication, Milestone } from '../../types/grants',
+import { useEffect, useMemo, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import type { GrantApplication, Milestone } from '../../types/grants';
 
 export default function GrantsAdminPage() {
   const [token, setToken] = useState(''),
