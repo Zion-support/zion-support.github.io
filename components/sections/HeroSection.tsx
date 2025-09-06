@@ -219,10 +219,18 @@ const HeroSection: React.FC = () => {;
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -258,9 +266,17 @@ const HeroSection: React.FC = () => {;
 
           </motion.div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Main Heading */}
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -269,10 +285,18 @@ const HeroSection: React.FC = () => {;
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Subtitle */}
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -285,14 +309,36 @@ const HeroSection: React.FC = () => {;
 
             in the modern technology landscape.          </motion.p>
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+          </motion.p>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+          </motion.p>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* CTA Buttons */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
@@ -345,16 +391,32 @@ const HeroSection: React.FC = () => {;
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -443,12 +505,20 @@ const HeroSection: React.FC = () => {;
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
 
+<<<<<<< HEAD
                 className='text-center group'
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -457,11 +527,19 @@ const HeroSection: React.FC = () => {;
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ))}
 
           </motion && motion.div>;
@@ -471,10 +549,18 @@ const HeroSection: React.FC = () => {;
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -519,11 +605,33 @@ const HeroSection: React.FC = () => {;
       </motion.div>;
     </section>);
 }
+<<<<<<< HEAD
 ;
 export default HeroSection;        className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2";
       >;
         <motion.div;
           animate={{ coordinate_y: [0, 10, 0] }}
+=======
+export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+=======
+};
+
+<<<<<<< HEAD
+export default HeroSection;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+=======
+export default HeroSection;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           transition={{ duration: 2, repeat: Infinity }}
           className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'          className="w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center";
         >;
@@ -541,5 +649,18 @@ export default HeroSection);
 }
 ;
 export default HeroSection;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+
+=======
+    </section>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </section>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

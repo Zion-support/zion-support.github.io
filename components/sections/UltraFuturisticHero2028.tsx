@@ -4,7 +4,12 @@ import React from 'react';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {
   Rocket,
   Brain,
@@ -24,8 +29,12 @@ import {
   Clock,
   Target,;
   Crown,;} from 'lucide-react';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import {
   Rocket
@@ -47,12 +56,22 @@ import {
   Target
   Crown;} from 'lucide-react';
 export default function UltraFuturisticHero2028() {
+<<<<<<< HEAD
 
 
   const features = [import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
 
+=======
+<<<<<<< HEAD
+  const features = [import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+=======
+  const features = [import {;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
 export default function UltraFuturisticHero2028() {
@@ -73,16 +92,31 @@ export default function UltraFuturisticHero2028() {
       color: 'from-blue-500 to-cyan-500'
     }
     {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      icon: Shield
+      text: 'Quantum Internet Security'
+      color: 'from-red-500 to-orange-500'
+    },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' }
+    { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' }
+    { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       icon: Shield,
       text: 'Quantum Internet Security',
       color: 'from-red-500 to-orange-500',;
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
   const stats = [
     { value: '50+', label: 'Cutting-Edge Services', icon: Rocket }
@@ -207,16 +241,32 @@ import { motion } from 'framer-motion';
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Main Heading */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight'>
             <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent'>
@@ -247,17 +297,33 @@ import { motion } from 'framer-motion';
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -315,17 +381,58 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Features Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className='bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm'>
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+                  >
+                    <feature.icon className='w-8 h-8 text-white' />
+                  </div>
+<<<<<<< HEAD
+                  <h3 className='text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors'>                    {feature.text}              >
+                <div className="bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors">
+                    {feature.text}
+=======
+                  <h3 className='text-lg font-semibold text-white text-center group-hover:text-cyan-400 transition-colors'>                    {feature.text}
+
+                    {feature.text}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </h3>
                 </div>
               </motion.div>
@@ -339,17 +446,60 @@ import { motion } from 'framer-motion';
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              >
+                <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>
+                  <stat.icon className='w-10 h-10 text-cyan-400' />
+                </div>
+                <div className='text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+                  {stat.value}
+                </div>
+<<<<<<< HEAD
+                <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}              >
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300">
+                  <stat.icon className="w-10 h-10 text-cyan-400" />
+                </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors">
+                  {stat.label}
+=======
+                <div className='text-sm text-cyan-400/70 group-hover:text-cyan-300 transition-colors'>                  {stat.label}
+
+                  {stat.label}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -362,16 +512,33 @@ import { motion } from 'framer-motion';
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Trust Indicators */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+        >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -432,16 +599,32 @@ import { motion } from 'framer-motion';
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm'>
             <div className='flex items-center space-x-2'>
@@ -484,17 +667,33 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       >
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -520,10 +719,26 @@ import { motion } from 'framer-motion';
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+<<<<<<< HEAD
+=======
+          />
+        </motion.div>
+      </motion.div>
+    </section>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 =======
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -625,3 +840,8 @@ import { motion } from 'framer-motion';
     </section>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

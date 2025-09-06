@@ -107,16 +107,35 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       priority={priority}
       sizes={sizes}
+<<<<<<< HEAD
 
 
 
 =======
+<<<<<<< HEAD
+quality={quality}
+      style={style}
+<<<<<<< HEAD
+  );
+}
+export default OptimizedImage;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       quality={quality}
       style={style}
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 };
 

@@ -58,6 +58,7 @@ function VendorsPage() {
 
 
         ))}
+<<<<<<< HEAD
       </div>;
       <div className='text-center text-xs text-gray-500'>;
         Powered by Zion • Co-brand available;
@@ -66,6 +67,33 @@ function VendorsPage() {
   );
 
 
+=======
+      </div>
+      <div className='text-center text-xs text-gray-500'>
+        Powered by Zion • Co-brand available
+      </div>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+  return { props: { vendors } }
+};      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
@@ -74,8 +102,14 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 
   return { props: { vendors } }
 };  return { props: { vendors } }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
+<<<<<<< HEAD
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
@@ -158,3 +192,19 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+};
+
+<<<<<<< HEAD
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {JobApplication} from "@/types/jobs";
@@ -9,8 +15,31 @@ import {Link} from "react-router-dom";
 import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
+<<<<<<< HEAD
 interface ApplicationCardProps {;
   application: JobApplication;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",
+import { Link } from "react-router-dom",
+import { StatusBadge } from "./StatusBadge",
+<<<<<<< HEAD
+import { ApplicationProgress } from "./ApplicationProgress";
+import { toast } from "sonner";
+=======
+import { ApplicationProgress } from "./ApplicationProgress",
+import { toast } from "sonner",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface ApplicationCardProps {
+  application: JobApplication
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
@@ -25,14 +54,26 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
     switch (application && application.status) {;
 
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ApplicationCardProps {
   application: JobApplication
 }
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+export function ApplicationCard({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -260,10 +301,18 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         )}
 
       </CardContent>;
@@ -277,12 +326,32 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           <div className="flex gap-2">;
             {renderActionButtons()}
             <Button
+<<<<<<< HEAD
 
 
         <Button 
           variant="secondary" 
 
 
+=======
+              variant="outline"
+              size="sm"
+              asChild
+            >
+              <Link to={`/jobs/${application.job_id}`}>
+                <ExternalLink className="h-4 w-4 mr-1" /> View Job
+              </Link>
+            </Button>
+          </div>
+        </div>
+<<<<<<< HEAD
+        <Button
+          variant="secondary"
+=======
+        <Button 
+          variant="secondary" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           size="sm"
           className="w-full"
           asChild

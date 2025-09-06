@@ -1,5 +1,116 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat => ({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ...cat
+import { GradientHeading } from "./GradientHeading"
+import Link from "next/link"
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils"
+import { useTranslation } from "react-i18next"
+<<<<<<< HEAD
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string
+  name: string
+  description?: string
+=======
+=======
+        ...cat;
+import { GradientHeading } from "./GradientHeading";
+import Link from "next/link";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+=======
+import { GradientHeading } from "./GradientHeading",
+import Link from "next/link",
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// This is the type definition copied from Categories.tsx for consistency.
+// Ideally, this would be in a shared types file.
+interface CategoryType {
+  id: string,
+  name: string,
+<<<<<<< HEAD
+  description?: string,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  description?: string
+=======
+  description?: string,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  iconName?: string, // Example field if categories have icons
+  itemCount?: number, // Example field for number of items in a category
+  // Add a 'link' property if your API provides it, or construct it.
+  link?: string
+<<<<<<< HEAD
+ * CategoriesSection function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+const categories = [{
+    title: "AI Services"
+    description: "Cutting - edge AI solutions, chatbots, and machine learning"
+    icon: "🤖"
+    link: "/ai - services"
+    color: "from - purple - 500 to - indigo - 600",
+}
+  {
+    title: "Micro SAAS"
+    description: "Cloud - based software solutions for modern businesses"
+    icon: "☁️"
+    link: "/micro - saas"
+    color: "from - cyan - 500 to - blue - 600",
+}
+  {
+    title: "IT Services"
+    description: "Infrastructure, security, and technical consulting"
+    icon: "⚡"
+    link: "/all - services"
+    color: "from - amber - 500 to - orange - 600",
+}
+  {
+    title: "Digital Transformation"
+    description: "Business modernization and digital strategy"
+    icon: "📈"
+    link: "/all - services"
+    color: "from - emerald - 500 to - green - 600",
+}
+]
+const specialServices = [{
+    title: "IT Onsite Services"
+    link: "/it - onsite - services"
+<<<<<<< HEAD
+=======
+},
+  {
+    title: "Comprehensive Services",
+    link: "/comprehensive - services"
+},
+  {
+    title: "Services Comparison",
+    link: "/services - comparison"
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   {
     title: "Comprehensive Services"
@@ -25,9 +136,17 @@ const getDefaultCategories = (t: any) => [
 
 
   },
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   {
     id: "talents"
     name: t('categories.talents')
@@ -249,9 +368,17 @@ export function CategoriesSection({
   const { t } = useTranslation(),
   const defaultCategories = getDefaultCategories(t),
   
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -263,14 +390,28 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+        ...cat
+<<<<<<< HEAD
+        title: cat.name
+        icon: getIcon(cat.iconName)}))
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ...cat,
 =======
 =======
         ...cat,
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -287,6 +428,7 @@ export function CategoriesSection({
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -402,6 +544,14 @@ const getSpecialServices = (t: any,) => [;
   {;
     title: t('categories && categories.it_onsite_services'),;
     link: "/it-onsite-services";
+=======
+<<<<<<< HEAD
+          </p>
+        </div>
+      </section>
+    )
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
 
@@ -446,14 +596,26 @@ export function CategoriesSection(): any ({;
           <p className="text-zion-slate-light text-md">;
             {t('home && home.no_categories_support')}
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </p>;
         </div>;
       </section>;
     );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -475,7 +637,19 @@ export function CategoriesSection(): any ({;
 
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+          {displayCategories.map((category) => (
+=======
+<<<<<<< HEAD
+          {displayCategories.map((category,) => (
+=======
+          {displayCategories.map((category) => (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <Link
               key={category.id}
               href={category.link || '#'}
@@ -497,9 +671,17 @@ export function CategoriesSection(): any ({;
 
 
         </div>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
@@ -518,23 +700,68 @@ export function CategoriesSection(): any ({;
           </div>
         </div>
         
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className="mt-12 flex justify-center">
           <Link
             href="/categories/all"
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             {t('home.view_all_categories')}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+  switch (iconName) {
+}
+const getSpecialServices = (t: any) => [ {
+  title: t ('categories.it onsite services')
+link: "/it-onsite-services"
+}]
+interface CategoriesSectionProps {
+  showTitle?: boolean
+className?: string
+style?: React.CSSProperties
+categories?: CategoryType[], //Accept categories as a prop
+}export function CategoriesSection ({
+  showTitle = true
+className
+style
+categories: fetchedCategories, //Rename prop for clarity
+}: CategoriesSectionProps) {
+  const {
+<<<<<<< HEAD
+  t
+}= useTranslation ()
+const defaultCategories = getDefaultCategories (t)
+//Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   t ;
 }= useTranslation ();
 const defaultCategories = getDefaultCategories (t);
 //Use fetchedCategories if provided, otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {
@@ -756,7 +983,15 @@ if ( {) {
 =======
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

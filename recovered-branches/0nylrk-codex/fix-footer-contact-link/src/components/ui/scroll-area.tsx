@@ -31,9 +31,17 @@ const ScrollArea = React.forward_ref<;
 
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {children}
 
 
@@ -52,6 +60,7 @@ const ScrollArea = React.forward_ref<;
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
+<<<<<<< HEAD
 
     </ScrollAreaPrimitive.Viewport>;
     <ScrollBar />;
@@ -78,13 +87,21 @@ const ScrollBar = React.forward_ref<;
   </ScrollAreaPrimitive.ScrollAreaScrollbar>));
 ScrollBar.display_name = ScrollAreaPrimitive.ScrollAreaScrollbar.display_name;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export { ScrollArea, ScrollBar }
 =======
 
 
 export { ScrollArea, ScrollBar }
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export { ScrollArea, ScrollBar };
 =======
@@ -93,4 +110,7 @@ export { ScrollArea, ScrollBar }
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

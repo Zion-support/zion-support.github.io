@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 
 
 interface SafeImageProps {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client',
+
+import Image from 'next/image';
+import { useState } from 'react';
+=======
+'use client'
+import Image from 'next/image'
+import { useState } from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { ImageIcon } from 'lucide-react'
+interface SafeImageProps {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 
@@ -21,10 +37,19 @@ interface SafeImageProps {
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
+<<<<<<< HEAD
 
 ;
     />;
 
+=======
+<<<<<<< HEAD
+    />
+=======
+;
+    />;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );        aria-label={alt}
 =======
 'use client',;
@@ -115,18 +140,34 @@ export function SafeImage({
         style={{ width, height }}
         role="img"
         aria-label={alt}
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       >
         <ImageIcon className="w-6 h-6" />
       </div>
     )
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     />
   ); return (
 =======
@@ -161,6 +202,7 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+<<<<<<< HEAD
 
 
 } 
@@ -170,10 +212,27 @@ export function SafeImage({
 
 }
 =======
+    />
+  )
+<<<<<<< HEAD
+=======
+} 
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
     />;
   );
+<<<<<<< HEAD
 
 
+=======
+} ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   src: string,
   alt: string,
@@ -249,4 +308,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

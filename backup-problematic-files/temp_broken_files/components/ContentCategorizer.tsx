@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:components/ContentCategorizer.tsx
+<<<<<<< HEAD
+import React, { useState, useEffect, useMemo } from 'react';
+import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -37,8 +50,15 @@ interface ContentItem {
   tags: string[],
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 interface ContentCategory {id: string;
@@ -49,7 +69,21 @@ interface ContentCategory {id: string;
   count: number;
   subcategories?: string[];
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:components/ContentCategorizer.tsx
+<<<<<<< HEAD
+const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
+  const [selectedDateRange, setSelectedDateRange] = useState('all');
+  const [selectedRelevance, setSelectedRelevance] = useState('all');
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
 const ContentCategorizer: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState(''),;
@@ -60,7 +94,11 @@ const ContentCategorizer: React.FC = () => {;
   const [selectedRelevance, setSelectedRelevance] = useState('all'),;
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -75,7 +113,12 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['seojson-ldschemaaudit'];
       source: 'autonomous-auditor';
       type: 'report';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     },;
     {;
       id: '2',;
@@ -141,7 +184,11 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['analyticsuser-behaviorengagementoptimization'],;
       source: 'behavior-analyzer',;
       type: 'insight';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 const ContentCategorizer: React.FC = () => {
@@ -232,8 +279,15 @@ const contentItems: ContentItem[] = [
       tags: ['analyticsuser-behaviorengagementoptimization'],
       source: 'behavior-analyzer',
       type: 'insight'
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     {id: '2';
@@ -375,7 +429,22 @@ const contentItems: ContentItem[] = [
     { id: 'high', name: 'High Priority', color: 'text-green-400' }
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD:components/ContentCategorizer.tsx
+<<<<<<< HEAD
+  ];
+  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
+      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
+      const matchesType = selectedType === 'all' |item.type === selectedType;
+      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ],;
   const filteredItems = useMemo(() => {;
     const filtered = contentItems.filter(item => {;
@@ -386,7 +455,11 @@ const contentItems: ContentItem[] = [
       const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,;
       const matchesType = selectedType === 'all' || item.type === selectedType,;
       const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -395,8 +468,21 @@ const contentItems: ContentItem[] = [
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+        case 'relevance':;
+          const relevanceOrder = { high: 3, medium: 2, low: 1 }
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
+          break;
+        case 'title':;
+          comparison = a.title.localeCompare(b.title);
+          break;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   ],
 
@@ -425,8 +511,15 @@ filtered.sort((a, b) => {
           break,        case 'title':
           comparison = a.title.localeCompare(b.title),
           break
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       return sortOrder === 'asc' ? comparison : -comparison;
@@ -482,7 +575,14 @@ value={selectedCategory}
                 setSelectedSubcategory('all')
               }}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
@@ -495,7 +595,14 @@ value={selectedCategory}
 
           {_/* Subcategory Filter */}
           <div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
@@ -514,7 +621,14 @@ value={selectedSubcategory}
 
           {_/* Content Type Filter */}
           <div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
@@ -532,7 +646,14 @@ value={selectedType}
 
           {_/* Relevance Filter */}
           <div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
@@ -549,7 +670,14 @@ value={selectedRelevance}
         </div>;
 
 ;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
@@ -576,7 +704,14 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
           <button,
 onClick={clearAllFilters}
             className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Clear All Filters
           </button>
@@ -604,7 +739,14 @@ key={category.id}
         </div>;
       </div>;
 ;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
@@ -614,9 +756,17 @@ key={category.id}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD:components/ContentCategorizer.tsx
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {item.type}
                 </div>;
               </div>;
@@ -660,8 +810,15 @@ key={category.id}
                 </div>;
               </div>;
 ;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
@@ -672,7 +829,14 @@ key={category.id}
               </p>;
 
 ;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
@@ -688,7 +852,14 @@ key={category.id}
                 )}
               </div>;
 ;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
@@ -706,11 +877,23 @@ key={category.id}
                 <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
                 </span>
+<<<<<<< HEAD
 
                 <a 
                   href={item.href} 
 
 
+=======
+<<<<<<< HEAD:components/ContentCategorizer.tsx
+<<<<<<< HEAD
+                <a
+                  href={item.href}
+=======
+                <a 
+                  href={item.href} 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         })}
       </div>;
 =======
@@ -732,8 +915,15 @@ href={item.href}
         })}
       </div>;
 ;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* No Results */}
 {filteredItems.length === 0 && (

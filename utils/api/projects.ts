@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 } from '../types/milestones';
@@ -8,6 +9,34 @@ import { CurrentUser } from './auth';
 import { v4 as uuidv4 } from 'uuid';
 
 export interface Project {
+=======
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
+<<<<<<< HEAD
+  Project,
+  Milestone,
+  MilestoneStatus,
+<<<<<<< HEAD
+=======
+  Project
+  Milestone
+  MilestoneStatus
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+  isMilestoneStatus
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+export interface Milestone {
+=======
+  isMilestoneStatus,;
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+export interface Milestone {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   title: string;
   summary: string;
@@ -37,6 +66,7 @@ export interface Project {
   createdAt: string;
   updatedAt: string;
 }
+<<<<<<< HEAD
 
 
 =======
@@ -58,6 +88,12 @@ export interface Milestone {
   updated_at: string;
 }
 
+=======
+// Mock storage
+const projects: Project[] = [];
+<<<<<<< HEAD
+export function getProjectById(id: string): Project | null {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return projects.find(p => p.id === id) |null;
 
 =======
@@ -66,23 +102,37 @@ export interface Milestone {
 }
 export function getAllProjects(): Project[] {
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function getProjectById(id: string): Project | null {;
   return projects.find(p => p.id === id) || null;
 }
 
 export function getAllProjects(): Project[] {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
+<<<<<<< HEAD
 
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
+=======
+<<<<<<< HEAD
+    ...project
+    id: `project_${Date.now()}`
+    createdAt: new Date().toISOString()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -90,8 +140,12 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -102,8 +156,12 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
@@ -119,7 +177,17 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    ...milestone
+    id: `milestone_${Date.now()}`
+    status: 'pending'
+    createdAt: new Date().toISOString()
+    updatedAt: new Date().toISOString()
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -129,8 +197,12 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     createdAt: new Date().toISOString(),
 
     updatedAt: new Date().toISOString();
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   };
 
 =======
@@ -150,12 +222,21 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return newMilestone;
 }
+<<<<<<< HEAD
 
 
 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
 
 
+=======
+<<<<<<< HEAD
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
+=======
+
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
 
@@ -172,12 +253,21 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return milestone;
 }
+<<<<<<< HEAD
 
 
 
 export function deleteMilestone(project: Project, milestoneId: string): boolean {;
 
 
+=======
+<<<<<<< HEAD
+export function deleteMilestone(project: Project, milestoneId: string): boolean {
+=======
+
+export function deleteMilestone(project: Project, milestoneId: string): boolean {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
 
@@ -433,7 +523,15 @@ if (return false) {
 =======
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

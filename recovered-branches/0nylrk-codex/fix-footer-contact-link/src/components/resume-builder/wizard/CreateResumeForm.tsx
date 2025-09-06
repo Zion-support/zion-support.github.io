@@ -1,19 +1,42 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {CreateResumeFormProps} from "./types";
+<<<<<<< HEAD
 
 
 export const CreateResumeForm = ({ ;
   onCreateResume;
   onCancel;
 
+=======
+<<<<<<< HEAD
+export const CreateResumeForm = ({
+  onCreateResume;
+  onCancel;
+  isLoading
+}: CreateResumeFormProps) => {
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+=======
+export const CreateResumeForm = ({ ;
+  onCreateResume;
+  onCancel;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
@@ -88,9 +111,17 @@ export const CreateResumeForm = ({;
               type="text";
               placeholder="Resume Title (e.g. 'AI Engineer Resume')";
               className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm";
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               value={newResumeTitle}
 
 
@@ -113,6 +144,7 @@ export const CreateResumeForm = ({;
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
               onChange={(e) => setNewResumeTitle(e && e.target.value)}
             />;
@@ -190,3 +222,18 @@ export const CreateResumeForm = ({
 }
 ;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

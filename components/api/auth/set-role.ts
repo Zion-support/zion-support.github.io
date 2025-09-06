@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
   const { role = "guest", talent } = req.query as {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     role?: string;
     talent?: string;
   }

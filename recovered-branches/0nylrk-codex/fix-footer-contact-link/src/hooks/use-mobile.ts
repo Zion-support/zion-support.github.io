@@ -1,8 +1,17 @@
 
+<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+=======
+import {useState, useEffect} from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
@@ -23,6 +32,7 @@ export function useIsMobile() {
   }, []);
 
   return isMobile
+<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 export /**
@@ -40,6 +50,9 @@ function useIsMobile() {
     // Check condition
 if ( {) {
   $2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
       window.addEventListener ('resize', handle_resize);
       return () => window.removeEventListener ('resize', handle_resize);
@@ -47,8 +60,12 @@ if ( {) {
     return undefined;
   }, []);
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
@@ -66,9 +83,16 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

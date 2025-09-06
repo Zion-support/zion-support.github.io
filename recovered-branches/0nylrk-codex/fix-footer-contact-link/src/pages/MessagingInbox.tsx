@@ -1,6 +1,7 @@
 
 
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 
 import {MessageSquare, Video} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
@@ -10,6 +11,70 @@ import {useIsMobile} from '@/hooks / use - mobile';
 import {toast} from 'sonner';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+import { MessageSquare, Video  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { toast  } from 'sonner';
+import { Button  } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+export default function MessagingInbox() {
+  const {
+    conversations;
+
+    activeConversation
+    setActiveConversation
+
+    markAsRead;
+    fetchConversations;
+    isLoading
+  } = useMessaging();
+
+  const isMobile = useIsMobile();
+  const navigate = useNavigate();
+  const [activeCall, setActiveCall] = useState<string | null>(null);
+=======
+import {MessageSquare, Video} from 'lucide-react';
+import {useMessaging} from '@/context/MessagingContext';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components/messaging';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {toast} from 'sonner';
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+export default function MessagingInbox() {
+  const { ;
+    conversations;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useEffect, useState } from 'react',
+import { MessageSquare, Video } from 'lucide-react',
+import { useMessaging } from '@/context/MessagingContext',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ConversationsList, ConversationDetailView } from '@/components/messaging',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { toast } from 'sonner',
+import { Button } from '@/components/ui/button',
+import { useNavigate } from 'react-router-dom',
+export default function MessagingInbox() {
+  const { 
+    conversations,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    activeConversation, 
+    setActiveConversation, 
+    markAsRead,
+    fetchConversations,
+    isLoading
+  } = useMessaging(),
+  const isMobile = useIsMobile(),
+  const navigate = useNavigate(),
+  const [activeCall, setActiveCall] = useState<string | null>(null),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -242,12 +307,20 @@ if ( {) {
                   <div className="animate - pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                 <ConversationsList;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}

@@ -1,15 +1,32 @@
 
+<<<<<<< HEAD
 
 import {supabase} from "@/integrations/supabase/client";
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";
+=======
+import {supabase} from "@/integrations/supabase/client";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { UserDetails } from "@/types/auth";
 =======
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -36,17 +53,28 @@ export const cleanupAuthState = () => {
     }
   });
   // Remove from sessionStorage if in use
+<<<<<<< HEAD
 
   Object && Object.keys(sessionStorage || {}).forEach((key) => {
     if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
       sessionStorage && sessionStorage.removeItem(key)
 
+=======
+  Object.keys(sessionStorage |{}).forEach((key) => {
+    if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
+      sessionStorage.removeItem(key)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   })
 }
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
@@ -67,8 +95,14 @@ export const cleanupAuthState = () => {;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
       sessionStorage.removeItem(key);
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   })
@@ -183,9 +217,29 @@ if ( {) {
           campaign_type: "welcome_series",
           template_name: "welcome_email",
           template_data: {
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+            user_id: user.id;
+            email_type: "welcome_series";
+            user_type: user.userType |"unknown"
+            display_name: user.displayName |user.email?.split("@")[0] |"User"
+          }
+        })
+    }
+  } catch (error) {
+    console.error("Error checking or scheduling welcome email:", error)
+<<<<<<< HEAD
+  }
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
@@ -249,10 +303,17 @@ export const checkNewRegistration = async (user: UserDetails) => {;
     console.error("Error checking or scheduling welcome email:", error)
   } catch (error) {;
     console.error("Error checking or scheduling welcome email:", error);
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 

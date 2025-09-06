@@ -1,13 +1,25 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from "react";
+import { Link } from "react-router-dom";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",
 import { Link } from "react-router-dom",
@@ -25,9 +37,17 @@ import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -36,6 +56,11 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -59,9 +84,18 @@ export function ApplicationActions(): any ({;
   onStatusChange;
 }: ApplicationActionsProps) {;
 =======
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function ApplicationActions({
+  application,
+  processingId,
+  onViewApplication,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onStatusChange
 }: ApplicationActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -89,12 +123,48 @@ export function ApplicationActions(): any ({;
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
+<<<<<<< HEAD
 
 
       <Button 
         variant="default" 
 
 
+=======
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "shortlisted")}
+          >
+            Shortlist
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "interview")}
+          >
+            Schedule Interview
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "hired")}
+          >
+            Hire
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "rejected")}
+            className="text-red-600"
+          >
+            Reject
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+<<<<<<< HEAD
+      <Button
+        variant="default"
+=======
+      <Button 
+        variant="default" 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         size="sm"
         asChild
       >
@@ -221,9 +291,18 @@ function ApplicationActions() {
       </Button>;
     </div>);
 }
+<<<<<<< HEAD
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

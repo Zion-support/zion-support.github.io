@@ -294,6 +294,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     .slice(0, 8);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Tags
 
   const undersupplied = (skills || []).some(s =>
@@ -356,6 +364,7 @@ if ( {  } catch {) {
     return undefined;
   }
 }
+<<<<<<< HEAD
 export default async /**
  * handler - Function description
  */
@@ -363,6 +372,15 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+=======
+
+<<<<<<< HEAD
+=======
+
+  // Tags
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -496,4 +514,16 @@ if ( {) {
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+}
+}
+}
+}
+=======
+  // Tags
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,14 +1,26 @@
 
+<<<<<<< HEAD
 
 import { format } from "date-fns",
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { format } from "date-fns";
+=======
+import { format } from "date-fns",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {format} from "date-fns";
 =======
 import { format } from "date-fns",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 /**
  * Formats a date string into a readable format
  * @param dateString ISO date string to format
@@ -28,14 +40,26 @@ export const format_date = (date_string: string): string => {
   try {
     return format (new Date (date_string), 'PP');
   } catch (e) {
+<<<<<<< HEAD
 
 ;
+=======
+    return dateString
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
     return dateString
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { format } from "date-fns",;
 /**;

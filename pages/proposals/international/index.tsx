@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function InternationalProposals() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       const res = await fetch('/api/proposals/list');
       const data = await res.json();
@@ -7,6 +19,10 @@
     })()
   }, [])
   async function updateStatus(id: string, status: string) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })
     const res = await fetch('/api/proposals/list')
     const data = await res.json()
@@ -40,8 +56,43 @@ function update_status() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 =======
+<<<<<<< HEAD
 
 
+=======
+=======
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
+    const res = await fetch('/api/proposals/list'),
+    const data = await res.json(),
+    setItems(data.proposals || [])
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function InternationalProposals(req, res) {
+  try {
+  const [items, setItems] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    (async () => {;
+      const res = await fetch('/api/proposals/list');
+      const data = await res.json();
+      setItems(data.proposals || []);
+      setLoading(false);
+    })();
+  }, []),;
+  async function updateStatus(id: string, status: string) {;
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),;
+    const res = await fetch('/api/proposals/list');
+    const data = await res.json();
+    setItems(data.proposals || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -72,9 +123,17 @@ function update_status() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs">
                 <button onClick={() => updateStatus(p.id, 'Under Review')} className="px-2 py-1 border rounded">Mark Under Review</button>
@@ -82,6 +141,7 @@ function update_status() {
                 <button onClick={() => updateStatus(p.id, 'Rejected')} className="px-2 py-1 border rounded">Mark Rejected</button>
               </div>
             </div>
+<<<<<<< HEAD
 
 =======
 }
@@ -118,12 +178,23 @@ function update_status() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+<<<<<<< HEAD
+          ))}
+          {!items.length && <div className="opacity-70">No proposals yet.</div>}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>
       )}
     </div>
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           ))  } catch (error) {
     console.error("Error:", error);
@@ -148,8 +219,17 @@ function update_status() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 
 
 import { Button  } from '@/components / ui / button';
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface Contract {
 
   id: string;
@@ -10,6 +19,7 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
+<<<<<<< HEAD
 
 
 interface RecentContractsTableProps {;
@@ -19,6 +29,38 @@ interface RecentContractsTableProps {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+interface RecentContractsTableProps {
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",
+interface Contract {
+  id: string,
+  title: string,
+  client: string,
+  talent: string,
+  date: string,
+  isSmartContract: boolean
+import { Button } from "@/components/ui/button",;
+interface Contract {;
+  id: string,;
+  title: string,;
+  client: string,;
+  talent: string,;
+  date: string,;
+  isSmartContract: boolean;
+}
+;
+interface RecentContractsTableProps {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -95,6 +137,7 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                   <Button
                     variant="ghost"
                     size="sm"
+<<<<<<< HEAD
                     onClick={() => onViewContract(contract && contract.id)}
 =======
 interface RecentContractsTableProps {
@@ -185,15 +228,39 @@ function RecentContractsTable() {
 
 
 =======
+                    onClick={() => onViewContract(contract.id)}
+                  >
+                    View
+                  </Button>
+                </td>
+              </tr>
+            ))}
+<<<<<<< HEAD
+          </tbody>
+        </table>
+      </div>
+<<<<<<< HEAD
+    </>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
           </tbody>;
         </table>;
       </div>;
     </>;
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
               </tr>))}

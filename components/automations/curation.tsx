@@ -1,9 +1,28 @@
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+=======
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type Experiment = {
 =======
 class ErrorBoundary extends React.Component {
@@ -51,6 +70,10 @@ export default /**
 function CurationPage() {
 
   return (type Experiment = {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   title: string
 =======
 import React from "react";
@@ -62,8 +85,12 @@ type Experiment = {
 =======
 
   title: string,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -102,6 +129,7 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
           next run.;
         </p>;
       )}
+<<<<<<< HEAD
 
   impact?: number;
 }
@@ -138,6 +166,15 @@ function CurationPage() {
 
       <div className='mt-6 space-y-4'>;
         {items && items.map((exp, idx) => (;
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      <div className='mt-6 space-y-4'>
+        {items.map((exp, idx) => (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div
             key={idx}
             className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>;
@@ -204,6 +241,19 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  return (
+
+};
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             )}
           </div>
@@ -212,9 +262,16 @@ export default function CurationPage({ updatedAt, items }: Props) {
           <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
 =======
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             )}
           </div>
@@ -238,10 +295,27 @@ export default function CurationPage({ updatedAt, items }: Props) {
 
 export async function getStaticProps() {
   try {
+<<<<<<< HEAD
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
 
     const parsed = JSON.parse(raw);
+=======
+    const filePath = path.join(
+<<<<<<< HEAD
+      process.cwd()
+      'data'
+      'ai-curation'
+      'growth-experiments.json'
+=======
+      process.cwd(),
+      'data',
+      'ai-curation',
+      'growth-experiments.json';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    );
+    const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return {
       props: {
         updatedAt: parsed.updatedAt || null,
@@ -315,6 +389,7 @@ function getStaticProps() {
   } catch {
     return {
       props: {
+<<<<<<< HEAD
 
 
 
@@ -372,6 +447,17 @@ export async function getStaticProps() {;
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        updatedAt: null
+        items: []
+      }
+      revalidate: 300
+    }
+  }        items: []}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
         updatedAt: null,
         items: [],
       },
@@ -381,6 +467,7 @@ export async function getStaticProps() {;
 
       revalidate: 300}
 }
+<<<<<<< HEAD
 
         updatedAt: null,
 
@@ -396,3 +483,15 @@ export async function getStaticProps() {;
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+}
+=======
+        updatedAt: null,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+        updatedAt: null,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

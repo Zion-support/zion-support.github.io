@@ -22,10 +22,18 @@ export type IntegrationProviderId =;
   | 'workable';
   | 'bamboohr';
 export interface IntegrationProviderMeta {
+<<<<<<< HEAD
 
   id: IntegrationProviderId, name: string,;
 
 
+=======
+<<<<<<< HEAD
+  id: IntegrationProviderId, name: string
+=======
+  id: IntegrationProviderId, name: string,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
@@ -46,8 +54,20 @@ export interface SyncRules {
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
+<<<<<<< HEAD
 
 
+=======
+  autoUploadResumes?: boolean;
+<<<<<<< HEAD
+export interface ProviderConnection {
+=======
+
+export interface ProviderConnection {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  providerId: IntegrationProviderId;
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
@@ -60,10 +80,15 @@ export interface SyncLogEntry {
   provider_id: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
+<<<<<<< HEAD
 
   details?: Record < string, any>;
 ;
 
+=======
+  details?: Record<string, any>;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface ManualOverride {
   job_id: string;
   disableCrmSync?: boolean;
@@ -81,7 +106,10 @@ export interface ZapierEvent {
 
 export interface IntegrationsState {
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export interface ManualOverride {;
   jobId: string;
@@ -89,21 +117,38 @@ export interface ManualOverride {;
   disableAtsSync?: boolean;
 
 export interface ZapierEvent {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
+<<<<<<< HEAD
 
 
 export interface IntegrationsState {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+export interface IntegrationsState {
+=======
+
+export interface IntegrationsState {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   lastError?: string | null
 }
@@ -133,6 +178,7 @@ export interface IntegrationsState {
 }
 
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -141,3 +187,13 @@ export interface IntegrationsState {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

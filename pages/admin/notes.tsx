@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
@@ -11,6 +17,7 @@
 
 
 =======
+<<<<<<< HEAD
   id: string,
   target_type: string,
   target_id: string,
@@ -48,6 +55,16 @@ if (return, ) {
 
 =======
 
+=======
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+;
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type Note = {
   id: string;
   targetType: string;
@@ -106,6 +123,7 @@ export default function AdminNotesConsole(req, res) {
               <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
+<<<<<<< HEAD
 
 =======
 }
@@ -143,3 +161,39 @@ export default function AdminNotesConsole(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

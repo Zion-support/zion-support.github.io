@@ -65,9 +65,19 @@ declare module 'lovable-tagger' {;
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 declare let __dirname: string,
 declare let process: {
@@ -83,9 +93,16 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

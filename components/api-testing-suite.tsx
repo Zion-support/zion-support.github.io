@@ -41,11 +41,30 @@ import {
   ArrowRight,
   Play,
   AlertTriangle,
+<<<<<<< HEAD
+=======
+  Clock,;
+  Database,;
+<<<<<<< HEAD
+} from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
+<<<<<<< HEAD
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+export default function APITestingSuitePage() {;
+=======
+} from 'lucide-react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function APITestingSuitePage() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -357,6 +376,7 @@ function APITestingSuitePage() {
           },
         ],
 
+<<<<<<< HEAD
 
 
         recommendations: [
@@ -430,6 +450,66 @@ function APITestingSuitePage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        recommendations: [
+          'Consider implementing response caching for better performance'
+          'Monitor response times during peak usage'
+          'Implement rate limiting headers for better API documentation'
+        ]
+      });
+      setIsTesting(false);
+    }, 3000);  };        recommendations: [
+          'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
+        ]
+      });
+      setIsTesting(false)
+    }, 3000)
+  }
+  return (
+    <>
+      <Head>
+        <title>
+          API Testing Suite - Zion Tech Group | Comprehensive API Testing &
+          Monitoring Tool
+        </title>
+        <meta
+          name='description'
+          content='Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs.'
+        />
+        <meta
+          property='og:title'
+          content='API Testing Suite - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Comprehensive API testing tool with functional, performance, and security testing capabilities.'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>
+      {/* Hero Section */}
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]' />
+        <div className='absolute inset-0 bg-grid opacity-10' />
+        <div className='relative z-10 container-cursor text-center'>
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
+            <Code className='w-4 h-4 mr-2' />
+            Professional API Testing
+          </div>
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>
+            API Testing Suite
+          </h1>
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>
+            Test, monitor, and optimize your APIs with our comprehensive testing
+            suite. Functional, performance, and security testing for REST
+            GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
+            secure.
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -686,6 +766,14 @@ function APITestingSuitePage() {
                 className="card-hover group border-gradient-indigo"
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </p>
                   </div>
                 </div>
@@ -694,18 +782,34 @@ function APITestingSuitePage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Test Types Section */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -779,6 +883,7 @@ function APITestingSuitePage() {
                 key={index}
                 className="card-hover border-gradient-indigo"
 
+<<<<<<< HEAD
 
                       {test}
                     </li>;
@@ -792,6 +897,13 @@ function APITestingSuitePage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Demo Test Results */}
       {testResults && (
 
@@ -922,26 +1034,50 @@ function APITestingSuitePage() {
 
                       </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Performance Metrics */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -1007,9 +1143,17 @@ function APITestingSuitePage() {
 
                   </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 ))}
               </div>
             </Card>
@@ -1018,6 +1162,14 @@ function APITestingSuitePage() {
       )}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1311,6 +1463,7 @@ function APITestingSuitePage() {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
 
 
                 <div className='text-center mb-8'>;
@@ -1328,6 +1481,27 @@ function APITestingSuitePage() {
 
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-4'>
+                    {plan.name}
+                  </h3>
+                  <div className='mb-6'>
+                    <span className='text-4xl font-bold text-white'>
+                      {plan.price}
+                    </span>
+                    <span className='text-gray-400'>{plan.period}</span>
+                  </div>
+                  <p className='text-gray-400'>{plan.description}</p>
+                </div>
+                <ul className='space-y-4 mb-8'>
+                  {plan.features.map((feature, featureIndex) => (
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'>;
@@ -1343,9 +1517,19 @@ function APITestingSuitePage() {
                       {feature}
                     </li>;
 =======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1383,6 +1567,7 @@ function APITestingSuitePage() {
 
                 </Button>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1399,6 +1584,26 @@ function APITestingSuitePage() {
       {/* CTA Section */}
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1407,7 +1612,14 @@ function APITestingSuitePage() {
 
 
             Ready to Test Your APIs?
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1427,6 +1639,7 @@ function APITestingSuitePage() {
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1445,3 +1658,29 @@ function APITestingSuitePage() {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'            >              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
+              Schedule Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

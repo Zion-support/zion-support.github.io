@@ -3,10 +3,23 @@
   reputation: number;
   size?: 'sm' | 'md' | 'lg'
 
+<<<<<<< HEAD
 
 
 
 
+=======
+export const ReputationDisplay = ({
+  reputation
+<<<<<<< HEAD
+  size = 'md',}: ReputationDisplayProps) => {
+export const ReputationDisplay = ({
+  reputation
+  size = 'md'
+}: ReputationDisplayProps,) => {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 import { Trophy } from 'lucide-react'
@@ -18,11 +31,18 @@ interface ReputationDisplayProps {
 
 export const ReputationDisplay = ({ 
   reputation,
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
@@ -34,12 +54,23 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
+<<<<<<< HEAD
 
 
       container: 'text-xs',
       icon: 'w-3 h-3',
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      container: 'text-xs'
+      icon: 'w-3 h-3'
+=======
+      container: 'text-xs',
+      icon: 'w-3 h-3',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
@@ -61,10 +92,18 @@ export const ReputationDisplay = ({
       container: "text-base",
       icon: "w-5 h-5",
       progress: "h-3"
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     md: {
       container: "text-sm"
@@ -139,9 +178,17 @@ import { Progress } from "@/components/ui/progress",;
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export default ReputationDisplay;
@@ -160,6 +207,7 @@ export default ReputationDisplay;
 
   }
   return (
+<<<<<<< HEAD
     <div className='space - y-1'>;
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
         <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;
@@ -173,6 +221,25 @@ export default ReputationDisplay;
       </div>;
     </div>);
 }
+=======
+    <div className='space-y-1'>
+      <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
+        <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
+        <span className='font-semibold'>{reputation}</span>
+        <span className='text-muted-foreground'>rep</span>
+      </div>
+      <Progress value={progress} className={sizeClasses[size].progress} />
+      <div className='text-xs text-muted-foreground'>
+        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level
+        up
+      </div>
+    </div>
+  )
+<<<<<<< HEAD
+}
+export default ReputationDisplay
+'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export const ReputationDisplay = ({;
   reputation,;
@@ -231,6 +298,7 @@ export const ReputationDisplay = ({ ;
 };
 
 export default ReputationDisplay;
+<<<<<<< HEAD
 ';
     },;
     md: {;
@@ -258,9 +326,15 @@ export default ReputationDisplay;
 =======
 
 =======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 };
 export default ReputationDisplay;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

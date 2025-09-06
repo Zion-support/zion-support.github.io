@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 
 
 import { 
@@ -43,8 +44,34 @@ import {
   Phone,
   Mail,
   ExternalLink;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+  ExternalLink
+=======
+import { 
+  X, 
+  Building2, 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Shield, 
+  Zap,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+  Phone,
+  Mail,
+  ExternalLink;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
@@ -377,5 +404,17 @@ export default Sidebar;
 };
 
 export default Sidebar;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

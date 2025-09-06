@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState, useEffect } from "react";
 import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
@@ -7,6 +13,7 @@ interface SmartAppBannerProps {;
 
   appName?: string;
 =======
+<<<<<<< HEAD
 import React, { useState, useEffect } from './react';
 import { X, ArrowRight } from './lucide-react';
 import { Link } from './react-router-dom';
@@ -16,6 +23,22 @@ import { useIsMobile } from '@/hooks / use - mobile';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from "react",
+import { X, ArrowRight } from "lucide-react",
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
+=======
+import { Link } from "react-router-dom",
+import { useIsMobile } from "@/hooks/use-mobile",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface SmartAppBannerProps {
   app_name?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -24,7 +47,22 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string;
   delay?: number, // Delay in milliseconds before showing the banner;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
+  appName = "Zion Marketplace";
+  appIconSrc;
+  appStoreUrl = "/download";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -123,6 +161,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -134,11 +173,50 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
+      <div className="flex items-center">
+        <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">
+          {appIconSrc ? (
+            <img src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" />
+          ) : (
+            <div className="text-zion-cyan font-bold text-lg">Z</div>
+          )}
+        </div>
+        <div className="flex-1">
+          <h4 className="font-semibold text-white">{appName}</h4>
+          <p className="text-xs text-gray-300">Get our app for the best experience</p>
+        </div>
+        <div className="flex items-center gap-3">
+          <Link
+            to="/open-app"
+            className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
+          >
+            View
+            <ArrowRight className="w-3 h-3 ml-1" />
+          </Link>
+          <button onClick={dismissBanner} className="text-gray-400" aria-label="Dismiss">
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 },
 import React, { useState, useEffect } from "react",;
@@ -225,6 +303,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   );
 };
 
+<<<<<<< HEAD
 export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
   app_name = "Zion Marketplace";
   appIconSrc;
@@ -302,9 +381,17 @@ if ( {) {
 ;
 
 =======
+export default SmartAppBanner;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 export default SmartAppBanner;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

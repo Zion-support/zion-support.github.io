@@ -1,3 +1,89 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useDebounce } from '@/hooks/useDebounce'
+import { GradientHeading } from '@/components/GradientHeading'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardFooter } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import {
+  Select
+  SelectValue
+  SelectTrigger
+  SelectContent
+  SelectItem
+} from '@/components/ui/select'
+import { BlogPost } from '@/types/blog'
+import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost'
+import { BLOG_POSTS } from '@/data/blog-posts'
+
+import { Search } from 'lucide-react'
+<<<<<<< HEAD
+import { fetchWithRetry  } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+import { fetchWithRetry } from '@/utils/fetchWithRetry'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import { useDebounce } from "@/hooks/useDebounce"
+import { GradientHeading } from "@/components/GradientHeading"
+import { SEO } from "@/components/SEO"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select"
+import { BlogPost } from "@/types/blog"
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost"
+import { BLOG_POSTS } from "@/data/blog-posts"
+// Categories for filtering
+const CATEGORIES = [
+  'All Categories',
+  'Trends',
+  'Marketing',
+  'Sustainability',
+  'Ethics',
+  'Recruitment',
+  'Infrastructure',
+]
+export interface BlogProps {
+  posts?: BlogPost[]
+export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts })
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All Categories')
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts])
+  const query = useDebounce(searchQuery, 300)
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState, useEffect } from "react",
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useDebounce } from "@/hooks/useDebounce",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog",
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
+import { BLOG_POSTS } from "@/data/blog-posts",
+import { Search } from 'lucide-react'
+import { fetchWithRetry } from '@/utils/fetchWithRetry',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 // Categories for filtering
@@ -26,7 +112,14 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
@@ -52,7 +145,14 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setPosts(data)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -61,8 +161,17 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       } finally {
         setIsLoading (false);
       }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    }
+    fetchPosts()
+  }, [query])
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     },
 
     fetchPosts()
@@ -74,15 +183,25 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      selectedCategory === 'All Categories' |
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       post.category === selectedCategory
     return matchesCategory
   })
@@ -90,8 +209,13 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const featuredPosts = posts.filter(post => post.isFeatured)
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
 =======
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     },
 
     fetchPosts()
@@ -101,7 +225,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -112,9 +240,17 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>
       <SEO
@@ -128,8 +264,141 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
+              Expert perspectives on artificial intelligence, tech innovation
+              and digital transformation
+            </p>
+          </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {/* Featured Post Section - Only show if there are featured posts */}
+          {featuredPosts.length > 0 &&
+            (() => {
+              const featuredPost = featuredPosts[0]
+              if (!featuredPost) return null
+              return (
+                <div className='mb-16'>
+                  <h2 className='text-2xl font-bold text-white mb-6'>
+                    Featured Article
+                  </h2>
+                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                    <div className='aspect-video overflow-hidden rounded-lg'>
+                      <img
+                        src={featuredPost.featuredImage}
+                        alt={
+                          featuredPost.featuredImageAlt |featuredPost.title
+                        }
+                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
+                        onError={e => {
+                          const target = e.currentTarget as HTMLImageElement
+                          target.src = '/images/blog-placeholder.svg'
+                        }}
+                      />
+                    </div>
+                    <div className='flex flex-col justify-center'>
+                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>
+                        {featuredPost.category}
+                      </span>
+                      <h3 className='text-3xl font-bold text-white mb-4'>
+                        {featuredPost.title}
+                      </h3>
+                      <p className='text-zion-slate-light mb-6'>
+                        {featuredPost.excerpt}                      </p>
+                      <div className='flex items-center mb-6'>
+                        <img
+                          src={featuredPost.author.avatarUrl}
+                          alt={featuredPost.author.name}
+                          className='w-10 h-10 rounded-full mr-3'
+                          onError={e => {
+                            const target = e.currentTarget as HTMLImageElement
+                            target.src = '/images/blog-placeholder.svg'
+                          }}
+                        />
+                        <div>
+                          <p className='text-white font-medium'>
+                            {featuredPost.author.name}
+                          </p>
+                          <p className='text-sm text-zion-slate-light'>
+                            {featuredPost.publishedDate} •{' '}
+                            {featuredPost.readTime}
+                          </p>
+                        </div>
+                      </div>
+                      <Button
+                        asChild
+                        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'
+                      >
+                        <Link href={`/blog/${featuredPost.slug}`}>
+                          Read Article
+                        </Link>
+                      </Button>
+=======
+<<<<<<< HEAD
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
+            </p>
+          </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          
+          {/* Featured Post Section - Only show if there are featured posts */}
+          {featuredPosts.length > 0 && (() => {
+            const featuredPost = featuredPosts[0],
+            if (!featuredPost) return null,
+            
+            return (
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <img
+                    src={featuredPost.featuredImage}
+                    alt={featuredPost.featuredImageAlt || featuredPost.title}
+                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement,
+                      target.src = "/images/blog-placeholder.svg"
+                    }}
+                  />
+                </div>
+                <div className="flex flex-col justify-center">
+                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
+                    {featuredPost.category}
+                  </span>
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    {featuredPost.title}
+                  </h3>
+                  <p className="text-zion-slate-light mb-6">
+                    {featuredPost.excerpt}
+                  </p>
+                  <div className="flex items-center mb-6">
+                    <img
+                      src={featuredPost.author.avatarUrl}
+                      alt={featuredPost.author.name}
+                      className="w-10 h-10 rounded-full mr-3"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg"
+                      }}
+                    />
+                    <div>
+                      <p className="text-white font-medium">{featuredPost.author.name}</p>
+                      <p className="text-sm text-zion-slate-light">
+                        {featuredPost.publishedDate} • {featuredPost.readTime}
+                      </p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </div>
                   </div>
                   <Button 
@@ -456,10 +725,18 @@ if (return null) {
                       value={category}
                       className='text-white'>                      {category}
                     </SelectItem>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   ))}
                 </SelectContent>;
               </Select>;
@@ -481,8 +758,16 @@ if (return null) {
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
@@ -523,9 +808,17 @@ if (return null) {
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       />
                     </div>
 
@@ -732,9 +1025,17 @@ if (return null) {
                   </CardFooter>;
                   </Link>;
                 </Card>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ))}
             </div>;
           ) : null}
@@ -867,8 +1168,30 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
                     className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
                   >;
                     {category.name}
+<<<<<<< HEAD
 
 
+=======
+                  </span>
+export default function Blog() {
+  const blogPosts = [], image: "/api/placeholder/600/400"
+  {"
+      id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions","
+      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen","
+      date: "2025-01-15", readTime: "8 min read","
+      category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400"
+      featured: true}, { id: 2}, {
+<<<<<<< HEAD
+      id: 2
+      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot
+      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot
+      author: &quot,Prof. Michael Rodriguez&quot
+      date: &quot,2025-01-12&quot
+      readTime: &quot,12 min read&quot
+      category: &quot,Quantum Computing&quot
+      tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -877,8 +1200,12 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
       readTime: &quot,12 min read&quot,;
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -1599,6 +1926,7 @@ key = "{post && post.id}
                         <spanclassName="&quottext-sm" text-gray-400&quot>{category && category.count}&quot;</span>;
                       </Link>;
                     ))}
+<<<<<<< HEAD
 
                   </div>;
                 {/* comment */}";
@@ -1614,6 +1942,50 @@ key = "{post && post.id}
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">;
                    />;";
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
+=======
+                  </div>
+                {/* comment */}"
+                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;"
+                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;"
+                  <p className="text-gray-300 mb-4">
+                    Get the latest technology insights delivered to your inbox.
+                  </p>;"
+                  <div className="space-y-3">
+                    <input;"
+                      type="email";"
+                      placeholder="Enter your email";"
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">
+                   />;"
+                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                      Subscribe
+                    </button>
+                  </div>
+    </>"
+                <div className="&quot;bg-gradient-to-br" from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot;>&quot
+                  <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Stay Updated&quot </h3>"
+                  <p className="&quot,text-gray-300" mb-4&quot,>
+                    Get the latest technology insights delivered to your inbox.&quot
+                  </p>"
+                  <div className="&quot;space-y-3&quot;">&quot
+                    <input type="&quot;email&quot
+                      placeholder="&quot;Enter" your email&quot;"
+                      className="&quot;w-full" px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500&quot,>
+                   />&quot,"
+                    <button className = "&quot,w-full" px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r: to-purple-700 transition-all duration-200&quot,>
+                      Subscribe&quot,"
+                      type="email
+                      placeholder="Enter your email
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500" />"
+                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                      Subscribe
+                    </button>
+                  </div>
+</>
+  )
+  )})))))))))
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     <>";
       <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News & quot;";
@@ -1982,7 +2354,11 @@ key = "{post.id}
 =======
 
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                 variant="outline"
                 onClick={() => {
@@ -2010,7 +2386,15 @@ key = "{post.id}
   );
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

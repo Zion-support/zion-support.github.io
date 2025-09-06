@@ -1,9 +1,52 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from 'react';
+import Head from 'next/head';
+interface Slide {
+  id: string;
+  title: string;
+  content: string;
+  chart?: {
+    type: string;
+    data: Array<{ label: string; value: number }>;
+  }
+function SlidePreview({
+  slide
+  isActive
+  onClick
+}: {
+  slide: Slide;
+  isActive: boolean;
+  onClick: () => void;
+}) {
+    >
+      <div className='font-semibold text-sm line-clamp-2'>
+        {slide.title |'Untitled'}
+      </div>
+      <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>
+        {slide.content |'—'}
+      </div>
+    </button>
+  );
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async ctx => {
+=======
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
+<<<<<<< HEAD
 
 };
 
@@ -17,6 +60,18 @@ export default function PitchGenerator() {;
     assets: [],;
 
 =======
+}
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({
+<<<<<<< HEAD
+    mission: ''
+    fundingStage: ''
+    vision: ''
+    roundType: ''
+    targetRaise: ''
+    assets: []
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
     mission: '',
     fundingStage: '',
@@ -24,8 +79,12 @@ export default function PitchGenerator() {;
     roundType: '',
     targetRaise: '',
     assets: [],;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -110,9 +169,27 @@ export default function PitchGenerator() {
 
   );
   const autoFetchMetrics = useCallback(async () => {;
+<<<<<<< HEAD
 =======
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
+      return data;
+<<<<<<< HEAD
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false);    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }, []);
 
   const prevent = (e: React.DragEvent) => {
@@ -320,9 +397,17 @@ if (return) {
 }
   }, [slides]),;
   const addSlide = useCallback(async () => {;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
@@ -381,6 +466,7 @@ if (return) {
     } finally {;
       setLoading(false);    }
   }, [slides, versionTag]);
+<<<<<<< HEAD
 
   const exportGoogleSlides = useCallback(async () => {;
     setLoading(true);
@@ -415,6 +501,45 @@ if (return) {
     if (!slide && slide.chart) return null,;
     const { type, data } = slide && slide.chart;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+  const updateActiveSlide = (updates: Partial<Slide>) => {
+    setSlides(arr =>
+      arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
+    );  }
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null
+    const { type, data } = slide.chart;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [slides, versionTag]),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const updateActiveSlide = (updates: Partial<Slide>) => {
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
+  },
+  const renderChartPreview = (slide: Slide) => {
+    if (!slide.chart) return null,
+    const { type, data } = slide.chart,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return (
 
 
@@ -445,9 +570,17 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -455,6 +588,7 @@ if (return) {
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
+<<<<<<< HEAD
 
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'>;
@@ -632,15 +766,27 @@ if (return null, ) {
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
 =======
+=======
+<<<<<<< HEAD
+              ))}
+            </div>
+          )}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>
       </div>
     )
   };
 
+<<<<<<< HEAD
   return (
 =======
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
               ))  } catch (error) {
     console.error("Error:", error);
@@ -653,9 +799,16 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>
       </div>
     )
@@ -692,10 +845,18 @@ if (return null, ) {
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -703,11 +864,23 @@ if (return null, ) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
+<<<<<<< HEAD
 
 
                 Version: {versionTag || '—'}
 
 
+=======
+<<<<<<< HEAD
+            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
+              <div className='font-medium mb-2'>History</div>
+              <div className='text-xs text-gray-500 dark:text-gray-400'>
+<<<<<<< HEAD
+                Version: {versionTag |'—'}
+=======
+                Version: {versionTag || '—'}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -1041,15 +1214,29 @@ if (return null, ) {
               </div>
 
             )}
+<<<<<<< HEAD
 
 
 =======
 
+=======
+          </div>
+        </div>
+</main>
+    </>
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
@@ -1198,7 +1385,15 @@ if (return null, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -33,9 +33,17 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 
@@ -97,6 +105,7 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
+<<<<<<< HEAD
 
   const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
   fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
@@ -142,6 +151,39 @@ if ( {) {
 }
     fs.writeFileSync (summary_path, '# Weekly Feedback Analysis\n\n_no thumbs - down feedback this week.'),
     console.log ('No low - rated feedback to analyze.'),
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
+=======
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  console.log('Analysis written to', summaryPath)
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+
+<<<<<<< HEAD
+=======
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+=======
+main().catch((e) => { console.error(e), process.exit(1) }),;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // // // console.log('Analysis written to', summaryPath)
+  const all = readAll(),;
+  const recent = all.filter(lastNDays(7)),;
+  const downs = recent.filter((r) => r.rating === 'down'),;
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
+  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),;
+  const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),;
+  if (downs.length === 0) {;
+    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
+    // // // console.log('No low-rated feedback to analyze.'),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return;
   }
   const prompt = `You are an AI QA analyst. Analyze the following low - rated AI responses feedback entries and propose concrete prompt - base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system / user prompts\n\n_entries (JSON):\n${JSON.stringify (downs.slice (-100), null, 2)}`,
@@ -160,6 +202,7 @@ if ( {) {
   fs.writeFileSync (baseline_path, `${current}\n\n## ${new Date ().toISOString ()}\n${text}\n`),
   console.log ('Analysis written to', summary_path);
 }
+<<<<<<< HEAD
 main ().catch ((e) => { console.error (e), process.exit (1) }),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -168,3 +211,12 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+main().catch((e) => { console.error(e), process.exit(1) }),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,11 +1,22 @@
 
+<<<<<<< HEAD
 
 export interface InnovativeNewService2025 {
 =======
+import { ServiceVariant  } from "../types/service-variants";
+<<<<<<< HEAD
+export interface InnovativeNewService2025 {
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 export interface InnovativeNewService2025 {;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   name: string;
   tagline: string;
@@ -289,6 +300,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
     
     },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
@@ -296,8 +308,44 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.9,
     reviews: 6;
 =======
+=======
+    }
+    realImplementation: true
+    implementationDetails:
+<<<<<<< HEAD
+      'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.'
+    launchDate: '2025-01-08'
+    customers: 12
+    rating: 4.9
+    reviews: 6
+  }
+=======
+      'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
+    launchDate: '2025-01-08',
+    customers: 12,
+    rating: 4.9,
+    reviews: 6,
+  },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+    rating: 4.9
+
+    reviews: 6
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
@@ -561,10 +609,17 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     customers: 12,;
     rating: 4.9;
     reviews: 6;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
 

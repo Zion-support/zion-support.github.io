@@ -1,12 +1,30 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+// Data store utilities
+export const dataStore = {
+  // Add data store functionality here
+<<<<<<< HEAD
+  getData: () => []
+  setData: (data: any) => null
+  updateData: (id: string, data: any) => null
+  deleteData: (id: string) => null
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 interface Project {
   id: string;
@@ -65,7 +83,15 @@ export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) => store.getReviewsByProject(projectId);
 export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

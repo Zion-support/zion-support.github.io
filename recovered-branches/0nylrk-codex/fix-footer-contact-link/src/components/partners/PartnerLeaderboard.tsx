@@ -1,9 +1,26 @@
 
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Badge } from '@/components / ui / badge';
 import { Crown, Medal, Trophy } from './lucide-react';
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Crown, Medal, Trophy} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { Crown, Medal, Trophy } from "lucide-react";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface LeaderboardEntry {
 
   id: string
@@ -12,7 +29,14 @@ interface LeaderboardEntry {
   avatar?: string;
 
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -33,6 +57,7 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
+<<<<<<< HEAD
 
 
       referrals: 178,
@@ -40,6 +65,30 @@ export function PartnerLeaderboard() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+      referrals: 178
+      earnings: 4500
+
+=======
+      referrals: 178,
+      earnings: 4500,
+<<<<<<< HEAD
+      badges: ["gold", "trending"];
+    };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      badges: ["gold", "trending"]
+<<<<<<< HEAD
+    }
+=======
+    },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
 
       id: "2"
@@ -82,14 +131,64 @@ export function PartnerLeaderboard() {
       badges: []
 
 
+<<<<<<< HEAD
+=======
+      badges: ["newcomer"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  ];
+  // Function to render rank badge
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Badge} from "@/components/ui/badge";
 import {Crown, Medal, Trophy} from "lucide-react";
 
+=======
+  return (
+    <div className="space-y-6">
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Crown className="h-5 w-5 text-yellow-500" />
+            Top Partners
+          </CardTitle>
+          <CardDescription>This month's top-performing partners</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {leaderboard.length > 0 ? (
+              leaderboard.map(entry => (
+                <div
+                  key={entry.id}
+                  className={`flex items-center justify-between p-3 rounded-md ${
+                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
+=======
+<<<<<<< HEAD
+    },
+    {
+      id: "5",
+      rank: 5,
+      name: "Deep Learning Daily",
+      avatar: "",
+      referrals: 87,
+      earnings: 2175,
+      badges: ["newcomer"]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Crown, Medal, Trophy } from "lucide-react",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -242,10 +341,26 @@ function PartnerLeaderboard() {
           <CardDescription > This month's top - performing partners</CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
 
 
+=======
+          <div className="space-y-4">;
+            {leaderboard.length > 0 ? (;
+              leaderboard.map(entry => (;
+                <div;
+                  key={entry.id} ;
+                  className={`flex items-center justify-between p-3 rounded-md ${;
+                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -354,10 +469,18 @@ function PartnerLeaderboard() {
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             )}
 
           </div>;

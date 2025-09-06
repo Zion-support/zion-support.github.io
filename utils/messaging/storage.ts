@@ -26,13 +26,21 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }>;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface Conversation {
 =======
 
 
 export interface Conversation {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -48,7 +56,13 @@ export interface Conversation {;
 
     tags?: string[]
   }
+<<<<<<< HEAD
 
+=======
+}
+<<<<<<< HEAD
+export interface MessageThread {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     project_id?: string;
     tags?: string[],
@@ -59,8 +73,12 @@ export interface Conversation {;
 
 
 export interface MessageThread {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id: string;
   conversation_id: string;
   rootMessageId: string;
@@ -74,11 +92,20 @@ export interface MessageSearchResult {
 =======
   updatedAtIso: string
 }
+<<<<<<< HEAD
 
 
 export interface MessageSearchResult {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+export interface MessageSearchResult {
+=======
+
+export interface MessageSearchResult {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -1077,10 +1104,19 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 =======
   return messagingStorage.getMessage(id)
 }
+<<<<<<< HEAD
 
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
 
+=======
+<<<<<<< HEAD
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+=======
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return messagingStorage.updateMessage(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -1133,16 +1169,37 @@ export async function searchMessages(query: string, userId: string, limit?: numb
 =======
   return messagingStorage.markAsRead(id)
 }
+<<<<<<< HEAD
 
 
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
 
+=======
+<<<<<<< HEAD
+export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {
+=======
+
+export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
   return messagingStorage.getConversation(id)
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
+  return messagingStorage.updateConversation(id, updates);
+}
+export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {
+  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+}
+export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
@@ -1153,22 +1210,75 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 }
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.getUnreadMessageCount(userId)
 }
+<<<<<<< HEAD
 
 
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
 
+=======
+<<<<<<< HEAD
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+=======
+
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return messagingStorage.searchMessages(query, userId, limit);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Utility functions
+<<<<<<< HEAD
 
 
+=======
+export function createMessageData(
+  conversationId: string
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
+  return {
+<<<<<<< HEAD
+    conversationId
+    senderId
+    recipientId
+    body
+    ...additionalData
+  }
+=======
+    conversationId,
+    senderId,
+    recipientId,
+    body,
+    ...additionalData;
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export function createConversationData(
+  participants: string[]
+  additionalData?: Partial<Conversation>
+): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
+  return {
+<<<<<<< HEAD
+    participants
+    lastMessageAtIso: new Date().toISOString()
+    isArchived: false
+    isMuted: false
+    ...additionalData
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function generateMessageId(): string {
   return `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 }
@@ -1193,7 +1303,10 @@ export function formatMessageTime(isoString: string): string {
   } else {
     return date && date.toLocaleDateString();
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1211,7 +1324,11 @@ export function generateConversationId(): string {;
 }
 
 export function formatMessageTime(isoString: string): string {;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const date = new Date(isoString);
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
@@ -1225,10 +1342,18 @@ export function formatMessageTime(isoString: string): string {;
     return date.toLocaleDateString();
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
 

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -7,15 +8,44 @@ import {TalentProfile} from "@/types/talent";
 import {UserProfile} from "@/types/auth";
 
 =======
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+import {
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+} from "@/components/ui/dialog";
+import { HireRequestForm } from "./HireRequestForm";
+
+import { TalentProfile } from "@/types/talent";
+import { UserProfile } from "@/types/auth";
+=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {HireRequestForm} from "./HireRequestForm";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import React from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
 import { UserProfile } from "@/types/auth",
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
@@ -30,10 +60,21 @@ export function HireRequestModal({
   userDetails
 }: HireRequestModalProps) {
   const handleClose = () => {
+<<<<<<< HEAD
 
 
   };
 
+=======
+<<<<<<< HEAD
+    onClose();
+<<<<<<< HEAD
+  }
+  if (!talent) return null;
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     onClose()
   },
@@ -110,14 +151,29 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle className="text-xl font-bold text-white">;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+        <HireRequestForm
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}

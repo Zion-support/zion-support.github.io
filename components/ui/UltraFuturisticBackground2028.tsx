@@ -4,6 +4,7 @@
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
 /> {
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,11 +28,22 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 =======
+  /* Floating Circles */
+}<motion.div
+export default function UltraFuturisticBackground2028({
+<<<<<<< HEAD
+  children
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import React, { useEffect, useRef } from 'react';
 =======
 
   children,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -285,12 +297,24 @@ if (return) {
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
+<<<<<<< HEAD
 
       />;
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Gradient Overlays */}  }, []);
+=======
+      />
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Gradient Overlays */}  }, []);
+=======
+      {/* Gradient Overlays */}  }, []);
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">;
       {/* Animated Background Canvas */}
@@ -481,6 +505,16 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut'
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Gradient Overlays */}
+
+        style={{ zIndex: 0 }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       />
 
       {/* Gradient Overlays */}
@@ -501,6 +535,18 @@ if ( {) {
           animate={{
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ease: 'easeInOut',          }}
         />;
         <motion.div;
@@ -565,6 +611,7 @@ if ( {) {
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           transition={{
+<<<<<<< HEAD
 
             duration: 12,
             repeat: Infinity,
@@ -578,6 +625,36 @@ if ( {) {
 
           }}
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            duration: 12
+            repeat: Infinity
+=======
+            duration: 12,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+=======
+<<<<<<< HEAD
+            duration: 12,
+            repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          }}
+
+        />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -699,14 +776,28 @@ if ( {) {
             y: [0, -15, 0]
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25]
           transition={{
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             duration: 5,
             repeat: Infinity,
 
           }}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             duration: 5,
             repeat: Infinity,
@@ -714,9 +805,14 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       </div>
 =======
@@ -727,6 +823,15 @@ if ( {) {
       {/* Energy Waves */}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <motion.div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{
             y: [0, 1000]
@@ -828,6 +933,7 @@ if ( {) {
 =======
             y: [0, 1000];
             opacity: [0, 1, 0]
+<<<<<<< HEAD
 =======
         />;
         <motion.div;
@@ -849,6 +955,11 @@ if ( {) {
             opacity: [0, 1, 0]
           transition={{
 
+=======
+          transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             duration: 8
             repeat: Infinity
             ease: 'linear'
@@ -863,7 +974,11 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             duration: 8,
             repeat: Infinity,
@@ -871,9 +986,14 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       </div>
 =======
@@ -884,6 +1004,14 @@ if ( {) {
       {/* Quantum Particles */}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -936,10 +1064,19 @@ if ( {) {
               scale: [0, 1, 0]
               opacity: [0, 1, 0]
             }}
+<<<<<<< HEAD
 
               duration: 3 + Math && Math.random() * 2,
               repeat: Infinity,
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 3
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
 
@@ -948,7 +1085,10 @@ if ( {) {
           />;
 =======
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
 
@@ -958,6 +1098,7 @@ if ( {) {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+<<<<<<< HEAD
 
 
 
@@ -965,15 +1106,43 @@ if ( {) {
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',            }}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+            }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>
@@ -1020,7 +1189,11 @@ if ( {) {
   )
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <div className='relative' style={{ z_index: 10 }}>        {children}
       </div>;
@@ -1028,6 +1201,7 @@ if ( {) {
         {children}
       </div>;
       {/* Bottom Glow */}
+<<<<<<< HEAD
       <div;
         className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none';
         style={{ z_index: 5 }}
@@ -1036,3 +1210,23 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+
+      {/* Bottom Glow */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

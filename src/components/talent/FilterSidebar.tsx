@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
+=======
+import { Filter } from 'lucide-react'
+import { SearchFilter } from './filters/SearchFilter'
+import { SortFilter } from './filters/SortFilter'
+import { SkillsFilter } from './filters/SkillsFilter'
+import { AvailabilityFilter } from './filters/AvailabilityFilter'
+import { RegionFilter } from './filters/RegionFilter'
+import { ExperienceFilter } from './filters/ExperienceFilter'
+import { PriceFilter } from './filters/PriceFilter'
+import { FilterSidebarProps } from '@/types/filters'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 import { Filter } from 'lucide-react'
@@ -7,6 +26,7 @@ import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -65,15 +85,106 @@ export function FilterSidebar(): any ({;
   setSortOption;
   clearFilters;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { PriceFilter } from "./filters/PriceFilter";
+import { FilterSidebarProps } from "@/types/filters";
+export function FilterSidebar({
+
+  searchTerm
+  setSearchTerm
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  expandedSections
+  toggleSection
+  sortOption
+  setSortOption
+  clearFilters
+=======
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isMobileFilterOpen,}: FilterSidebarProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
     <>;
       {/* Filter header */}
+<<<<<<< HEAD
 
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 
+=======
+      <div className='flex items-center justify-between mb-6'>
+        <h3 className='text-lg font-semibold text-white flex items-center'>
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm
+  setSearchTerm
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  expandedSections
+  toggleSection
+  sortOption
+  setSortOption
+  clearFilters
+  isMobileFilterOpen
+  return (
+    <>
+      {/* Filter header */}
+      <div className='flex items-center justify-between mb-6'>
+        <h3 className='text-lg font-semibold text-white flex items-center'>
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />
+          Filters
+        </h3>
+        <Button
+          variant='ghost'
+          size='sm'
+          onClick={clearFilters}
+          className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'        >
+          Clear All
+        </Button>
+      </div>
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           Filters
         </h3>
         <Button
@@ -125,7 +236,11 @@ export function FilterSidebar({
   clearFilters,
 =======
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -134,8 +249,14 @@ export function FilterSidebar({
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Filters
         </h3>
@@ -201,9 +322,17 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -405,6 +534,7 @@ function FilterSidebar() {
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
       {isMobileFilterOpen && (
+<<<<<<< HEAD
         <Button;
           on_click={() =>;
             window.dispatch_event (new CustomEvent ('closeMobileFilter'));
@@ -424,21 +554,38 @@ function FilterSidebar() {
         toggle_skill={toggle_skill}
         expanded={expanded_sections.skills}
         toggle_section={() => toggle_section ('skills')}
+=======
+<<<<<<< HEAD
+        <Button
+=======
+        <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         isMobileFilterOpen={isMobileFilterOpen}
       />;
 
       {isMobileFilterOpen && (;
         <Button;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
+<<<<<<< HEAD
 
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
@@ -503,6 +650,16 @@ function FilterSidebar() {
           Apply Filters;
         </Button>;
       )}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </>
+  )
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </>;
   );
 }
@@ -530,6 +687,14 @@ function FilterSidebar() {
 
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   FormField,
   FormItem,
@@ -15,6 +16,20 @@ interface PersonalInfoFieldsProps {
 }
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+import { UseFormReturn } from "react-hook-form";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -24,7 +39,11 @@ import {FormValues} from "./useHireRequestForm";
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
@@ -39,10 +58,17 @@ import { UseFormReturn } from "react-hook-form",;
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
@@ -90,9 +116,15 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
+<<<<<<< HEAD
 
       />;
     </>;
+=======
+      />
+    </>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 }
 
@@ -144,5 +176,9 @@ function PersonalInfoFields() {
   )
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

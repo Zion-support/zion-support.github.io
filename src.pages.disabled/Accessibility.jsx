@@ -34,6 +34,7 @@ export default function Accessibility({ }: AccessibilityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
 
 
@@ -42,3 +43,25 @@ export default function Accessibility({ }: AccessibilityProps) {
 =======
 
 
+=======
+<<<<<<< HEAD:src.pages.disabled/Accessibility.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+:src.pages.disabled/Accessibility.jsx
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/Accessibility.jsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

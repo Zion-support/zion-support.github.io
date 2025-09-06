@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -9,6 +10,11 @@ interface ApplyToJobFormProps {
 
   onSuccess?: () => void
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -23,15 +29,62 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
+<<<<<<< HEAD
 interface ApplyToJobFormProps {;
   job: Job,;
   onSuccess?: () => void;
 }
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useResume } from "@/hooks/useResume",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle, FileText, Loader2 } from "lucide-react",
+import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
+=======
+import { Job } from "@/types/jobs",
+import { toast } from "sonner",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
+<<<<<<< HEAD
   const { resumes, isLoading: isResumesLoading } = useResume(),;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+<<<<<<< HEAD
+  const { user } = useAuth();
+  const { applyToJob } = useJobApplications();
+
+  const { resumes, isLoading: isResumesLoading } = useResume()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const navigate = useNavigate();
 
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
@@ -404,8 +457,19 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>;
 
       <div className="flex justify-end gap-2">;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <Button;
+          type="button";
+          variant="outline";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();

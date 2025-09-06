@@ -1,5 +1,40 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from 'react'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { toast } from 'sonner'
+=======
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
+
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { toast } from "sonner",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
 
@@ -50,6 +85,7 @@ export function ZapierIntegration() {;
               <h3 className='text-lg font-semibold'>Zapier Connection</h3>;
               <Badge variant='outline' className='bg-blue-100 text-blue-800'>;
 =======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -107,6 +143,24 @@ function ZapierIntegration() {
 
 
 
+=======
+            
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Your Zion API Key</label>
+                <div className="flex gap-2">
+                  <Input 
+                    value={apiKey} 
+                    readOnly 
+                    className="font-mono text-sm" 
+                  />
+                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </Button>
@@ -117,10 +171,18 @@ function ZapierIntegration() {
 
 
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -152,10 +214,18 @@ function ZapierIntegration() {
                 <span>Sync completed projects to accounting</span>
               </li>
               <li className="flex items-center gap-2">
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <Check className="h-4 w-4 text-green-500" />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <span>Create calendar events for interviews</span>
@@ -165,10 +235,18 @@ function ZapierIntegration() {
           <CardFooter>
 
             <Button variant="outline" className="w-full gap-1">
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <ExternalLink className="h-4 w-4" />
               <span>Explore Zion Zaps</span>
             </Button>
@@ -192,6 +270,14 @@ function ZapierIntegration() {
           </p>
 
       
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -216,16 +302,38 @@ function ZapierIntegration() {
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            <div className='border rounded-md p-4'>
+              <h4 className='font-medium mb-2'>Contract Signed</h4>
+              <p className='text-xs text-muted-foreground mb-3'>
+                Triggers when a contract is signed by all parties.
+              </p>
+              <Button size='sm' variant='outline'>
+                Set Up Trigger
+              </Button>            </div>              <Button size="sm" variant="outline">Set Up Trigger</Button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </div>
           </div>
         </CardContent>
@@ -234,7 +342,11 @@ function ZapierIntegration() {
   );
 };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
             
@@ -244,24 +356,42 @@ function ZapierIntegration() {
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
 
 =======
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
 =======
-
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -392,11 +522,23 @@ export function ZapierIntegration() {;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 
 
+=======
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

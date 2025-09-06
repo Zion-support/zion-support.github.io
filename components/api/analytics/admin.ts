@@ -77,6 +77,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
+<<<<<<< HEAD
 
 
     const totalUsers = usersData && usersData.length;
@@ -97,6 +98,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     const categoryCounts: Record<string, number> = {};
 
+=======
+<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {}
+=======
+
+<<<<<<< HEAD
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    usersData.forEach(u => {
+      geoCounts[u.country |'Unknown'] =
+        (geoCounts[u.country |'Unknown'] |0) + 1;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     });
   } catch (e: any) {
 
@@ -150,6 +163,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ],
     });
   }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -158,3 +172,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

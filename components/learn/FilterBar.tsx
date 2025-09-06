@@ -1,5 +1,41 @@
+<<<<<<< HEAD
 
 
+=======
+import React from 'react';
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Props = {
+  category: string;
+  level: string;
+  isFree: string;
+  onChange: (next: { category: string; level: string; isFree: string }) => void;
+}
+export default function FilterBar({
+  category
+  level
+  isFree
+  onChange
+}: Props) {
+  return (
+    <div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>
+      <select
+        className='border rounded px-3 py-2 bg-white dark:bg-black'
+        value={category}
+        onChange={e => onChange({ category: e.target.value, level, isFree })}
+      >
+        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
+<<<<<<< HEAD
+  category: string
+  level: string
+  isFree: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
 =======
@@ -11,6 +47,10 @@
   isFree: string,;
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -28,6 +68,7 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }
+<<<<<<< HEAD
 ;
 export default /**
  * FilterBar - Function description
@@ -45,6 +86,10 @@ function FilterBar() {
   level: string,
   is_free: string,
   on_change: (next: { category: string, level: string, is_free: string }) => void;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 export default /**
@@ -97,11 +142,20 @@ function FilterBar() {
 }
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

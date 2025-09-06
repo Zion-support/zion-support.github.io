@@ -1,4 +1,28 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useResume  } from '@/hooks/useResume';
+import { Tabs  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Resume  } from '@/types/resume';
+// Import components
+import { ResumeProgress  } from './ResumeProgress';
+import { EmptyResumeState  } from './EmptyResumeState';
+import { CreateResumeForm  } from './CreateResumeForm';
+import { ResumeSteps  } from './ResumeSteps';
+import { ResumeStepContent  } from './ResumeStepContent';
+import { useResumeProgress  } from './useResumeProgress';
+import { ResumeVersionSelector  } from './ResumeVersionSelector';
+import { RESUME_STEPS } from './constants';
+export function ResumeWizard() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 =======
@@ -25,9 +49,14 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
+<<<<<<< HEAD
 
 
 
+=======
+export function ResumeWizard() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -42,10 +71,47 @@ import {RESUME_STEPS} from './constants';
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
 
+<<<<<<< HEAD
+=======
+  const progress = useResumeProgress(resume);
+  useEffect(() => {
+    if (user) {
+      fetchResume()
+    }
+  }, [user, fetchResume]);
+  const handleCreateNewResume = async (title: string) => {
+    const resumeId = await createResume({ title: title.trim() })
+    if (resumeId) {
+      await fetchResume(resumeId);
+      setShowNewResumeForm(false)
+    }
+  }
+  const nextStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex < RESUME_STEPS.length - 1) {
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
+    }
+  }
+  const prevStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex > 0) {
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
+    }
+<<<<<<< HEAD
+  }
+  const handleResumeChange = (resumeId: string) => {
+    fetchResume(resumeId)
+  }
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -106,6 +172,14 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
+<<<<<<< HEAD
+=======
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   },
 
@@ -146,10 +220,23 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  }
+  if (!resume && !showNewResumeForm) {
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   if (showNewResumeForm) {
 =======

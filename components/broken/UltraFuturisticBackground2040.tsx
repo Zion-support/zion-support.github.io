@@ -136,18 +136,32 @@ if (return) {
             ctx.stroke()
 
           }
+<<<<<<< HEAD
         }
       }
 =======
 
 
 =======
+<<<<<<< HEAD
+        }
+      }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
             ctx.stroke();          }
 
           }
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
@@ -691,10 +705,18 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Floating Elements */}
       <div className='absolute inset-0'>;
         {/* Animated Grid Pattern */}
@@ -921,6 +943,59 @@ if ( {) {
             duration: 12
             repeat: Infinity
             ease: 'linear',          }}
+<<<<<<< HEAD
+=======
+        />
+        <motion.div
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
+          animate={{
+            rotate: [45, 405];
+            scale: [1, 1.15, 1];
+            opacity: [0.2, 0.3, 0.2]
+          }}
+          transition={{
+<<<<<<< HEAD
+            duration: 12
+            repeat: Infinity
+            ease: 'linear'
+=======
+            duration: 12,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+        />
+        {/* Additional Floating Elements */}
+        <motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
+          animate={{
+            rotate: [12, 372]
+            scale: [1, 1.1, 1]
+            opacity: [0.15, 0.25, 0.15],          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear',          }}
+        />
+        {/* Additional Floating Elements */}
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
+          animate={{
+            rotate: [12, 372];
+            scale: [1, 1.1, 1];
+            opacity: [0.15, 0.25, 0.15]
+=======
+<<<<<<< HEAD
+            duration: 8,
+            repeat: Infinity,
+            ease: 'linear',
+
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
             rotate: [360, 0];
             scale: [1, 1.2, 1];
@@ -984,9 +1059,20 @@ if ( {) {
             ease: "linear"
           }}
 
+<<<<<<< HEAD
         {/* Additional Floating Elements */}
         <motion&& motion.div
           className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear'
+          }}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         />;
         {/* Additional Floating Elements */}
@@ -999,6 +1085,7 @@ if ( {) {
           transition={{
             duration: 15,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'linear',          }}
         />;
 
@@ -1007,6 +1094,14 @@ if ( {) {
         <motion.div;
           className="absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+            ease: 'linear',
+          }}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        />
+        <motion.div
+          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           animate={{
 
 
@@ -1020,6 +1115,7 @@ if ( {) {
             opacity: [0.15, 0.25, 0.15];
           }}
           transition={{
+<<<<<<< HEAD
             duration: 15,
             repeat: Infinity,
             ease: "linear"
@@ -1048,6 +1144,18 @@ if ( {) {
             repeat: Infinity
             ease: 'linear'
 
+=======
+<<<<<<< HEAD
+            duration: 18
+            repeat: Infinity
+            ease: 'linear'
+=======
+            duration: 18,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
 
         />;
@@ -1072,8 +1180,24 @@ if ( {) {
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
+<<<<<<< HEAD
 
 
+=======
+            y: [0, -20, 0];
+            opacity: [0.4, 0.8, 0.4]
+=======
+<<<<<<< HEAD
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
           transition={{
 
@@ -1175,9 +1299,20 @@ if ( {) {
 
           }}
           transition={{
+<<<<<<< HEAD
             duration: 4,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut'
+=======
+            duration: 5,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             repeat: Infinity,
             ease: "easeInOut",
+<<<<<<< HEAD
             delay: 1
           }}
 
@@ -1188,6 +1323,16 @@ if ( {) {
 
           animate={{
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            delay: 2
+          }}
+        />
+      </div>
+<<<<<<< HEAD
+            ease: "easeInOut"
+            delay: 2
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
           transition={{
 
@@ -1196,7 +1341,18 @@ if ( {) {
             duration: 5,
             repeat: Infinity,
 
+<<<<<<< HEAD
 
+=======
+      {/* CSS Animations */}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+
+      {/* CSS Animations */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <style jsx>{`
         @keyframes gridMove {
           0% {
@@ -1300,6 +1456,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default UltraFuturisticBackground2040;
 
+<<<<<<< HEAD
 
       `}</style>;
     </div>);
@@ -1311,6 +1468,11 @@ export default UltraFuturisticBackground2040;
 }  );
 }
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default UltraFuturisticBackground2040;
 ;
 
@@ -1324,4 +1486,7 @@ export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

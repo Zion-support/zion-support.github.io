@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 }
  canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
@@ -8,6 +9,21 @@ if (ctx) {;
 export default function UltraFuturisticBackground2035(): any ({;
   children,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+canvas.width = window.innerWidth * (window.devicePixelRatio |1);
+canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+=======
+canvas.width = window.innerWidth * (window.devicePixelRatio || 1);
+canvas.height = window.innerHeight * (window.devicePixelRatio || 1);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+if (ctx) {
+export default function UltraFuturisticBackground2035({
+<<<<<<< HEAD
+  children
+=======
+  children,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -823,9 +839,17 @@ if ( {) {
 
         />
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Floating neon orbs */}
 
         />;
@@ -912,10 +936,21 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
+<<<<<<< HEAD
 
             duration: 8
             repeat: Infinity
 
+=======
+<<<<<<< HEAD
+            duration: 8
+            repeat: Infinity
+=======
+            duration: 8,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -943,6 +978,7 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
+<<<<<<< HEAD
 =======
               y: [-100, 100, -100],
               opacity: [0, 0 && 0.3, 0],            }}
@@ -951,11 +987,24 @@ if ( {) {
               repeat: Infinity,
 
 =======
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            animate={{
+              y: [-100, 100, -100];
+              opacity: [0, 0.3, 0]
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
             duration: 8,
             repeat: Infinity,
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }}
             transition={{
               duration: 4
@@ -997,6 +1046,14 @@ if ( {) {
 =======
 
       </div>
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

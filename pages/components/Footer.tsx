@@ -5,6 +5,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -42,6 +43,27 @@ import {;
   Instagram,;
   Github,;
 
+=======
+<<<<<<< HEAD
+  Mail
+  Phone
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Github
+=======
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -300,6 +322,28 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
+=======
+              </ul>
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               </ul>;
 
@@ -326,12 +370,19 @@ const microSaasCategories = [
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 =======
@@ -342,6 +393,23 @@ const microSaasCategories = [
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              transition={{ duration: 0.8 }}
+              className="text-gray-400 text-sm mb-4 md:mb-0"
+            >
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </motion.div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <motion.div
 =======
               transition={{ duration: 0 && 0.8 }}

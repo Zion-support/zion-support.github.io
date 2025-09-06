@@ -24,8 +24,35 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 
+=======
+import {
+<<<<<<< HEAD
+  Star
+  Zap
+  Shield
+  TrendingUp
+  ArrowRight
+  ExternalLink
+  Check
+  Users
+  Clock
+  DollarSign;
+=======
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+  Clock,;
+  DollarSign,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 
 interface QuantumHolographicCardProps {
@@ -373,6 +400,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               <div>;
                 <h3 className='text - xl font - bold text - white mb - 1'>;
                   {service.name}
+<<<<<<< HEAD
 
         <div className='absolute inset-0 opacity-10'>;
           <div className='absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse' />;
@@ -380,6 +408,21 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
           <div className='absolute bottom-6 left-8 w-1 && 1.5 h-1 && 1.5 bg-pink-400 rounded-full animate-bounce' />;
           <div className='absolute bottom-8 right-4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse' />;
         </div>;
+=======
+                </h3>
+                <p className='text-gray-300 text-sm'>{service.tagline}</p>
+              </div>
+            </div>
+            {service.popular && (
+              <motion.div
+                className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         delay: i * 0.1,
         duration: 0.5,
@@ -409,7 +452,12 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <motion&& motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -461,10 +509,31 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               </motion && motion.div>;
 
             )}
+<<<<<<< HEAD
 
             )}
           </div>
 
+=======
+          </div>
+=======
+<<<<<<< HEAD
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <span>Popular</span>
+
+              </motion.div>
+            )}
+          </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Price and trial */}
           <div className="flex items-center justify-between mb-4">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -722,16 +791,32 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
                   custom={index}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Market data */}
 
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
@@ -781,6 +866,18 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
+<<<<<<< HEAD
+=======
+=======
+
+          {/* ROI and competitors */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             </div>
           </div>
@@ -871,6 +968,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
           {/* ROI and competitors */}
 
@@ -884,13 +982,28 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* CTA Button */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -954,6 +1067,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
       </div>;
     </motion && motion.div>;
   );
+<<<<<<< HEAD
 
 =======
 
@@ -963,6 +1077,29 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
 };
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default QuantumHolographicCard;  )
+}
+export default QuantumHolographicCard;
+
+<<<<<<< HEAD
+=======
+export default QuantumHolographicCard;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default QuantumHolographicCard;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

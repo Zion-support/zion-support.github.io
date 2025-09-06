@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -27,12 +28,20 @@ import React from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+<<<<<<< HEAD
 
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -41,6 +50,9 @@ import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 import { TrustBadge, MicroTestimonial  } from '../../components / ui / Badges';
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const TalentProfile: NextPage = () => {
   const router = use_router ();
   const { slug } = router.query;
@@ -61,6 +73,7 @@ const TalentProfile: NextPage = () => {;
 
     ]);
   }
+<<<<<<< HEAD
   return (
     <div className="space-y-6 pb-20">;
       {" "}
@@ -92,6 +105,24 @@ const TalentProfile: NextPage = () => {;
 
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useRouter } from 'next/router',
+import { useState } from 'react',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const TalentProfile: NextPage = () => {
+  const router = useRouter(),
+  const { slug } = router.query,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
@@ -267,8 +298,15 @@ const TalentProfile: NextPage = () => {;
       </section>;
 
 },;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default TalentProfile;
 
 

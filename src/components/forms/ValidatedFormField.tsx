@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from 'react';
@@ -19,6 +20,40 @@ import {;
 } from '@/components/ui/select';import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from 'react'
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+<<<<<<< HEAD
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+=======
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,;
+  SelectValue;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
+import { cn } from '@/lib/utils'
+
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Button } from '@/components/ui/button';
 
 interface ValidationRule {;
@@ -27,8 +62,26 @@ interface ValidationRule {;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
+<<<<<<< HEAD
 
 
+=======
+  custom?: (value: any) => string | null
+interface ValidatedFormFieldProps {
+<<<<<<< HEAD
+  name: string;
+  label: string;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
+  placeholder?: string;
+  description?: string;
+  validation?: ValidationRule;
+  options?: { value: string, label: string }[],
+  form: any, // React Hook Form control
+  className?: string;
+  disabled?: boolean;
+  showValidIcon?: boolean;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   name: string
   label: string
   type?:
@@ -49,8 +102,12 @@ interface ValidationRule {;
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -92,6 +149,7 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 import {
@@ -261,6 +319,66 @@ if (return '') {
 
 
 =======
+    return () => {
+      if (timer) clearTimeout(timer)
+    }
+  }, [fieldValue, isTouched, debounceMs])
+  const validateField = (value: any): string | null => {
+    if (
+      validation.required &&
+      (!value |(typeof value === 'string' && value.trim() === ''))
+    ) {
+      return `${label} is required`
+    }
+    if (typeof value === 'string') {
+      if (validation.minLength && value.length < validation.minLength) {
+        return `${label} must be at least ${validation.minLength} characters`
+      }
+      if (validation.maxLength && value.length > validation.maxLength) {
+        return `${label} must not exceed ${validation.maxLength} characters`
+      }
+      if (validation.pattern && !validation.pattern.test(value)) {
+        return `${label} format is invalid`
+      }
+    }
+    if (validation.custom) {
+      return validation.custom(value)
+    }
+<<<<<<< HEAD
+    return null
+  }
+  const getValidationIcon = () => {
+    if (!showValidIcon |!isTouched |validationState === 'idle') return null
+    switch (validationState) {
+      case 'validating':
+        return (
+          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
+        )
+      case 'valid':
+        return <CheckCircle className='h-4 w-4 text-green-500' />
+      case 'invalid':
+        return <AlertCircle className='h-4 w-4 text-red-500' />
+      default:
+        return null
+    }
+  }
+  const getFieldClasses = () => {
+    if (!isTouched) return ''
+    switch (validationState) {
+      case 'valid':
+        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
+      case 'invalid':
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+      default:
+        return ''
+    }
+  }
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -376,6 +494,7 @@ export function ValidatedFormField(): any ({;
 
     return null
   },
+<<<<<<< HEAD
 
 
 
@@ -383,6 +502,91 @@ export function ValidatedFormField(): any ({;
   const getValidationIcon = () => {
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const getValidationIcon = () => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null
+    switch (validationState) {
+      case 'validating':
+        return (
+          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
+        )
+      case 'valid':
+        return <CheckCircle className='h-4 w-4 text-green-500' />
+      case 'invalid':
+        return <AlertCircle className='h-4 w-4 text-red-500' />
+      default:
+        return null
+    }
+  }
+  const getFieldClasses = () => {
+    if (!isTouched) return ''
+    switch (validationState) {
+      case 'valid':
+        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
+      case 'invalid':
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+      default:
+        return ''
+    }
+  }
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null,
+
+    switch (validationState) {
+      case 'validating':
+        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,
+      case 'valid':
+        return <CheckCircle className="h-4 w-4 text-green-500" />,
+      case 'invalid':
+        return <AlertCircle className="h-4 w-4 text-red-500" />,
+      default: return null
+;
+    return null;
+  },;
+  const getValidationIcon = () => {;
+    if (!showValidIcon || !isTouched || validationState === 'idle') return null,;
+    switch (validationState) {;
+      case 'validating':;
+        return <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />,;
+      case 'valid':;
+        return <CheckCircle className="h-4 w-4 text-green-500" />,;
+      case 'invalid':;
+        return <AlertCircle className="h-4 w-4 text-red-500" />,;
+      default: return null;
+    }
+  },;
+  const getFieldClasses = () => {;
+    if (!isTouched) return '',;
+    switch (validationState) {;
+      case 'valid':;
+        return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',;
+      case 'invalid':;
+        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20',;
+      default:;
+        return '';
+    }
+  },
+
+  const renderField = () => {
+    const baseClasses = cn(getFieldClasses(), className),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     switch (type) {
       case 'textarea':
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -394,9 +598,17 @@ export function ValidatedFormField(): any ({;
               disabled={disabled}
               className={baseClasses}
               rows={4}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
@@ -424,8 +636,16 @@ export function ValidatedFormField(): any ({;
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {option.label}
                   </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -434,9 +654,17 @@ export function ValidatedFormField(): any ({;
 
         ),
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       case 'checkbox':
 =======
               </SelectContent>;
@@ -461,9 +689,17 @@ export function ValidatedFormField(): any ({;
 
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {label}
             </label>;
             {getValidationIcon()}
@@ -471,9 +707,17 @@ export function ValidatedFormField(): any ({;
 
         ),
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       case 'password':
 =======
           </div>;
@@ -489,8 +733,16 @@ export function ValidatedFormField(): any ({;
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
@@ -504,7 +756,14 @@ export function ValidatedFormField(): any ({;
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
@@ -516,9 +775,17 @@ export function ValidatedFormField(): any ({;
 
         ),
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       default:
 =======
               </Button>;
@@ -563,17 +830,33 @@ export function ValidatedFormField(): any ({;
               <div className="space-y-1">
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {fieldError.message}
                   </FormMessage>
                 )}
                 {description && !fieldError && (
 
                   <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 )}
               </div>;
             )}
@@ -711,12 +994,21 @@ if ( {) {
               {fieldError && (
                 <FormMessage className="text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
+<<<<<<< HEAD
 
                 <p className="text-sm text-muted-foreground">{description}</p>
 
@@ -801,6 +1093,77 @@ export const common_validations = {
 
 
 =======
+<<<<<<< HEAD
+                <p className='text-sm text-muted-foreground'>{description}</p>
+=======
+                <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              )}
+            </div>
+          )}
+        </FormItem>
+      )}
+<<<<<<< HEAD
+    />
+  )
+// Validation helpers for common patterns
+export const validationPatterns = {
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/
+  phone: /^[\+]?[1-9][\d]{0,15}$/
+  url: /^https?:\/\/.+/
+  strongPassword:
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/
+}
+// Pre-configured validation rules
+export const commonValidations = {
+  required: { required: true }
+  email: {
+    required: true
+    pattern: validationPatterns.email
+    custom: (value: string,) => {
+      if (value && !validationPatterns.email.test(value)) {
+        return 'Please enter a valid email address'
+      }
+      return null
+    }
+  }
+  password: {
+    required: true
+    minLength: 8
+    custom: (value: string,) => {
+      if (value && !validationPatterns.strongPassword.test(value)) {
+        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
+      }
+      return null
+    }
+  }
+  phone: {
+    pattern: validationPatterns.phone
+    custom: (value: string,) => {
+      if (value && !validationPatterns.phone.test(value)) {
+        return 'Please enter a valid phone number'
+      }
+      return null
+    }
+  }
+}
+    }
+<<<<<<< HEAD
+  }}
+    }
+  }}
+
+=======
+  }},
+    };
+  }};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
     />;
   );
 
@@ -855,7 +1218,15 @@ export const commonValidations = {;
 =======
     }
   }};
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

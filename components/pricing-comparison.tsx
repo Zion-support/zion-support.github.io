@@ -23,8 +23,24 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            'Higher pricing'
+            'Limited customization'
+            'No unlimited plan'
+          ]
+          savings: 'Save $20/month with Zion'
+        },        {
+          name: 'Copy.ai'
+          pricing: '$36/month'
+          rating: '4.6/5'
+          pros: ['Unlimited words', 'Good value', 'Simple interface']
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
@@ -52,8 +68,12 @@ export default function PricingComparisonPage() {
           savings: 'Save $17/month with Zion',
         },          pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           savings: 'Save $17/month with Zion'
         },        {
           name: 'Writesonic'
@@ -500,18 +520,33 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
                     {insight.icon}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {insight.insight}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
@@ -711,9 +746,17 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
                             {[...Array(5)].map((_, i) => (
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -724,7 +767,15 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                               />;
                             ))}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -794,6 +845,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                       </Card>
                     </div>
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
                 </div>;
@@ -807,6 +859,13 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
         {/* CTA Section */}
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -814,7 +873,14 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
 
               Ready to Save Money and Get Better Features?
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
@@ -1045,6 +1111,42 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
               </Button>
 
               <Button
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                href='/cloud-monitoring'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/cloud-monitoring"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try Cloud Monitoring
+              </Button>
+              <Button
+                href='/devops-automation'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try DevOps Automation
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+);
+}
+=======
+              <Button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

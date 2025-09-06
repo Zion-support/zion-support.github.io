@@ -76,8 +76,30 @@ if ( {) {
 
   }
 
+<<<<<<< HEAD
 }),;
 
+=======
+    return true
+  }
+  if (message.type === 'post-job') {
+    chrome.tabs.create({ url: `${BASE_URL}/jobs/new` })
+  }
+  if (message.type === 'resume-search') {
+    chrome.tabs.create({ url: `${BASE_URL}/talent` })
+  }
+  if (message.type === 'view-notifications') {
+    chrome.tabs.create({ url: `${BASE_URL}/notifications` })
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+});
+
+=======
+}),;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 }),
 ;

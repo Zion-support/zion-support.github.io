@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -12,6 +13,27 @@ function BackToTopButton() {
   useEffect ((, ) => {
     const update_visibility = () =>: any {
       set_visible (window.scroll_y > 400);
+=======
+import { ArrowUp } from 'lucide-react'
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState } from "react";
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const updateVisibility = null;
+  return (
+    <button
+      aria-label="Back to top"
+=======
+import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
+export function BackToTopButton() {
+  const [visible, setVisible] = useState(false)
+  useEffect((,) => {
+    const updateVisibility = () => {
+      setVisible(window.scrollY > 400)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     update_visibility ();
     window.addEventListener ('scroll', update_visibility);
@@ -23,12 +45,21 @@ function BackToTopButton() {
     document.document_element.scroll_to (opts);
     document.body.scroll_to (opts);
   }
+<<<<<<< HEAD
       >;
       <ArrowUp className='h - 5 w - 5' />;
     </button>);
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+      >
+      <ArrowUp className='h-5 w-5' />
+    </button>;
+  );
+}"};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
@@ -63,6 +94,14 @@ export function BackToTopButton() {;
   );
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

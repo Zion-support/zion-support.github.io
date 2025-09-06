@@ -1,25 +1,64 @@
+<<<<<<< HEAD
 
 
+=======
+import { Moon, Sun } from 'lucide-react'
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button'
+import {
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+import { toast } from '@/hooks/use-toast'
+  darkModeMessages
+  lightModeMessages
+} from '@/utils/themeToggleMessages'
+// Use the ThemeProvider hook directly to ensure no conflicts
+import { useTheme } from '@/components/ThemeProvider'
+import { logIssue } from '@/utils/logIssue'
+import { useEffect, useState } from 'react'
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
+<<<<<<< HEAD
 
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+=======
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 =======
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 
+<<<<<<< HEAD
 
     setIsClient(true);
   }, []);
@@ -27,6 +66,24 @@ import { useEffect, useState } from "react"
   const resolvedTheme = (() => {;
 
 
+=======
+  const { theme, toggleTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
+  // Ensure we're on the client side to avoid hydration mismatches
+  useEffect(() => {
+<<<<<<< HEAD
+    setIsClient(true)
+  }, [])
+  // Determine the actual resolved theme for display purposes
+
+  const resolvedTheme = (() => {
+=======
+    setIsClient(true);
+  }, []);
+  // Determine the actual resolved theme for display purposes;
+  const resolvedTheme = (() => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -101,9 +158,16 @@ if ( {) {
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
+<<<<<<< HEAD
 
     
 
+=======
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 export function ModeToggle() {
@@ -180,8 +244,15 @@ export function ModeToggle() {
         disabled
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
@@ -321,9 +392,17 @@ export function ModeToggle() {;
           <Button;
             variant="ghost";
             size="icon";
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
@@ -356,8 +435,16 @@ export function ModeToggle() {;
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
           >
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
@@ -374,7 +461,14 @@ export function ModeToggle() {;
             
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </span>
           </Button>
@@ -522,6 +616,14 @@ if ( {") {
 =======
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { useRouter } from 'next/router';
@@ -5,6 +6,17 @@ import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui
 import { Input } from '@/components/ui/input'
 
 
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef } from 'react';
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+=======
+import { useRouter } from 'next/router';
+import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -28,6 +40,12 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
  */
 interface SearchBarProps {
   /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+   * The current value of the search input
+   */
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   value: string,
 
@@ -36,8 +54,12 @@ interface SearchBarProps {
    * The current value of the search input;
    */;
   value: string;  value: string,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
@@ -58,13 +80,27 @@ interface SearchBarProps {
   placeholder?: string
 }
 
+<<<<<<< HEAD
 
+=======
+export function SearchBar({
+<<<<<<< HEAD
+  value
+  onChange
+  onSelectSuggestion
+  placeholder = 'Search...'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   value,
   onChange,
   onSelectSuggestion,;
   placeholder = 'Search...';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
@@ -156,10 +192,58 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     inputRef.current?.blur()
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
+<<<<<<< HEAD
 =======
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+=======
+      aria-controls={listId}
+      data-testid='search-bar'    >
+      <div className='relative'>
+        <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate' />
+        <Input
+          ref={inputRef}
+          type='text'
+          id='main-search-input'
+          name='search'
+          value={value}
+          onChange={e => onChange(e.target.value)}
+          onFocus={e => {
+            setFocused(true);            // Ensure the input receives focus properly
+            e.target.setSelectionRange(
+              e.target.value.length
+              e.target.value.length
+            )
+          }}
+          onBlur={e => {
+            // Only blur if not clicking on suggestions
+            const relatedTarget = e.relatedTarget as HTMLElement
+<<<<<<< HEAD
+            if (
+              !relatedTarget |
+              !containerRef.current?.contains(relatedTarget)
+=======
+            if (true) {}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ) {
+              setFocused(false)
+              setHighlightedIndex(-1)
+            }          }}
+          className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate'
+          aria-autocomplete='list'
+          aria-activedescendant={
+            highlightedIndex !== -1
+              ? `suggestion-item-${highlightedIndex}`
+              : undefined
+          }
+          autoComplete='search'
+          onKeyDown={e => {            if (!focused |suggestions.length === 0) {
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
+=======
+import React, { useState, useEffect, useRef } from 'react',;
+import { useRouter } from 'next/router',;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -289,6 +373,7 @@ export function SearchBar(): any ({;
           id='main-search-input'
           name='search'
           value={value}
+<<<<<<< HEAD
 
 
             if (true) {}
@@ -327,10 +412,33 @@ export function SearchBar(): any ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          onChange={(e) => onChange(e.target.value)}
+          onFocus={(e) => {;
+            setFocused(true),;
+            // Ensure the input receives focus properly;
+            e.target.setSelectionRange(e.target.value.length, e.target.value.length);
+          }}
+          onBlur={(e) => {;
+            // Only blur if not clicking on suggestions;
+            const relatedTarget = e.relatedTarget as HTMLElement,;
+            if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {;
+              setFocused(false),;
+              setHighlightedIndex(-1);
+            }
+          }}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
+<<<<<<< HEAD
 
 
           autoComplete='search';
@@ -346,6 +454,19 @@ export function SearchBar(): any ({;
                 setFocused(false);
                 setHighlightedIndex(-1);
                 inputRef && inputRef.current?.blur();
+=======
+<<<<<<< HEAD
+            if (!focused |suggestions.length === 0) {
+              if (e.key === 'Escape') {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                e.preventDefault()
+                setFocused(false)
+                setHighlightedIndex(-1)
+                inputRef.current?.blur()
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
@@ -365,12 +486,76 @@ export function SearchBar(): any ({;
 
               }
               return;
+<<<<<<< HEAD
 =======
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
                 e.preventDefault();
                 setFocused(false);
                 setHighlightedIndex(-1);
+=======
+            }
+            switch (e.key) {
+              case 'ArrowDown':
+                e.preventDefault()
+                setHighlightedIndex(prev => (prev + 1) % suggestions.length)
+                break
+              case 'ArrowUp':
+                e.preventDefault()
+                setHighlightedIndex(
+                  prev => (prev - 1 + suggestions.length) % suggestions.length
+                );                break;              case 'Enter':
+                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                  e.preventDefault()
+                  handleSelect(suggestions[highlightedIndex])
+                } else if (value.trim()) {
+                  // This case should ideally be handled by the form's onSubmit,                  // but if SearchBar is used standalone, this provides a fallback.
+                setHighlightedIndex((prev) => (prev + 1) % suggestions.length)
+                break
+              case 'ArrowUp':
+                e.preventDefault()
+                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length)
+                setHighlightedIndex((prev) => (prev + 1) % suggestions.length)
+                break
+              case 'ArrowUp':
+                e.preventDefault()
+                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length)
+                break
+              case 'Enter':
+                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                  e.preventDefault()
+                  handleSelect(suggestions[highlightedIndex])
+                } else if (value.trim()) {
+                  // This case should ideally be handled by the form's onSubmit,                  handleSelect(suggestions[highlightedIndex])
+                } else if (value.trim()) {
+                  // This case should ideally be handled by the form's onSubmit
+                  // but if SearchBar is used standalone, this provides a fallback.
+                  e.preventDefault()
+                  fireEvent('search', { search_term: value })
+                  router.push(`/search?q=${encodeURIComponent(value)}`)
+                  setFocused(false)
+                  inputRef.current?.blur()
+                break
+              case 'Escape':
+                e.preventDefault()
+                setFocused(false)
+                setHighlightedIndex(-1)
+                inputRef.current?.blur()
+                break
+              default:
+                break }              default: break
+<<<<<<< HEAD
+
+=======
+            if (!focused || suggestions.length === 0) {
+              if (e.key === 'Escape') {
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                e.preventDefault(),
+                setFocused(false),
+                setHighlightedIndex(-1),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
@@ -430,6 +615,7 @@ export function SearchBar(): any ({;
                   setFocused(false);
                   inputRef && inputRef.current?.blur();
                 break;
+<<<<<<< HEAD
               case 'Escape':;
                 e && e.preventDefault();
                 setFocused(false);
@@ -444,13 +630,39 @@ export function SearchBar(): any ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              default: break;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }
           }}
         />;
         {value && (;
           <button
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
+            onClick={() => onChange('')}
+            aria-label='Clear search'          >
+            <X className='h-4 w-4' />          </button>
+            <X className="h-4 w-4" />
+            onClick={() => onChange('')}
+=======
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
+            onClick={() => onChange('')}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
@@ -458,15 +670,54 @@ export function SearchBar(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
+<<<<<<< HEAD
 
 =======
 
+=======
+<<<<<<< HEAD
+      </div>
+      <AutocompleteSuggestions
+        suggestions = {suggestions,}
+        searchTerm = {value,}
+        onSelectSuggestion = {handleSelect,}
+        visible = {focused,}
+        highlightedIndex = {highlightedIndex,}
+        listId = {listId,}
+      />
+    </div>
+  )
+}/> onClick={'
+  () => onChange ('') "
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
+}</div> <AutocompleteSuggestions suggestions= {
+  suggestions
+}searchTerm= {
+  value
+}onSelectSuggestion= {
+  handleSelect
+}visible= {
+  focused
+}highlightedIndex= {
+  highlightedIndex
+}listId= {
+  listId
+}/> </div>)
+}'"  )
+}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
 }
 }
 }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       </div>;
       <AutocompleteSuggestions;
@@ -499,9 +750,15 @@ export function SearchBar(): any ({;
 }/> </div>) ;
 }'"  );
 }
+<<<<<<< HEAD
 
 }
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { use_router } from 'next / router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components / ui / input'; import { Search, X } from 'lucide-react';
@@ -828,4 +1085,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

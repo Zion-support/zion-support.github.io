@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -26,6 +27,10 @@ export default function NotificationsPage() {
   );
 }
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -34,11 +39,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 
+<<<<<<< HEAD
 
 
 =======
 
 =======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -54,9 +64,16 @@ interface Notification {
   action_url?: string;
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
@@ -132,10 +149,18 @@ const getNotificationBadge = (type: string) =>: any {
   }
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

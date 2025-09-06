@@ -60,6 +60,21 @@ function GrantsPage() {
     region?: string;
     program?: string;
   }>({});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
+export default function GrantsPage() {
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+export default function GrantsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+  useEffect(() => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
       .catch(() => setItems([]));  }, [filters]);
@@ -111,6 +126,7 @@ function GrantsPage() {
   }, [filters]);
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>;
       <div className='flex items-center justify-between mb-6'>;
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>;
@@ -140,6 +156,32 @@ function GrantsPage() {
           onChange={e =>;
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <EnhancedLayout>
+<<<<<<< HEAD
+      <div className='flex items-center justify-between mb-6'>
+        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
+        <div className='flex gap-2'>
+          <Link href='/grants/apply'>
+            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>
+          </Link>
+          <Link href='/incubator'>
+            <a className='px-3 py-2 bg-purple-600 text-white rounded'>
+              Incubator
+            </a>
+          </Link>
+      </div>
+      <div className='grid md:grid-cols-4 gap-4 mb-6'>
+        <select
+          className='border rounded p-2'
+          value={filters.sector |''}
+          onChange={e =>
+            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }
         >;
           <option value=''>All Stages</option>;
@@ -249,8 +291,17 @@ function GrantsPage() {
           <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+    </EnhancedLayout>
+);
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
       <div className='grid gap-4'>;
         {items && items.map(g => (;
           <div
@@ -299,7 +350,15 @@ function GrantsPage() {
 
 
 =======
+  return (
+    <EnhancedLayout>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,8 +1,13 @@
 
+<<<<<<< HEAD
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -13,7 +18,11 @@ const corsHeaders = {
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -279,6 +288,7 @@ if ( {) {
     return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }});
   } catch (error) {
+<<<<<<< HEAD
     console.error ("Error in personalize - email function:", error);
     return new Response (JSON.stringify ({ error: error.message }), {
       status: 500,
@@ -286,6 +296,19 @@ if ( {) {
 =======
 
 
+=======
+    console.error("Error in personalize-email function:", error),
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500
+      headers: { ...corsHeaders, "Content-Type": "application/json" }})
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+});
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -386,10 +409,17 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 ;

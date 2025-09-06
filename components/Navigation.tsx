@@ -41,6 +41,16 @@ import SearchModal from "./SearchModal";
   BarChart3
 } from 'lucide-react;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> origin/automation-improvements-final
 
 
@@ -78,7 +88,11 @@ import SearchModal from "./SearchModal";
 export default function Navigation() {
 =======
 export default function Navigation() {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -768,7 +782,26 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 
+=======
+                </AnimatePresence>
+              </div>
+              <Link
+                href="/pricing"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Pricing
+              </Link>
+            </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
                 </AnimatePresence>;
@@ -784,6 +817,12 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button

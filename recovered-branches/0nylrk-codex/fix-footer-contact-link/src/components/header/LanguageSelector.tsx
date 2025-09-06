@@ -6,6 +6,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
+<<<<<<< HEAD
 
 import {;
   DropdownMenu,;
@@ -13,6 +14,14 @@ import {;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
 
+=======
+import {
+<<<<<<< HEAD
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
@@ -53,6 +62,7 @@ export function LanguageSelector() {;
     </DropdownMenu>;
   );
 =======
+<<<<<<< HEAD
 import React from './react';
 import { use_translation  } from './react - i18next';
 import { Button  } from '@/components / ui / button';
@@ -74,12 +84,23 @@ function LanguageSelector() {
 =======
 import {
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
 DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export function LanguageSelector() {;
+  const { t } = useTranslation();
+  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -105,8 +126,16 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
             className={`cursor-pointer ${;
               currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -119,7 +148,14 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
       </DropdownMenuContent>;
     </DropdownMenu>;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

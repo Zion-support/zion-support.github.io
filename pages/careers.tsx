@@ -12,7 +12,27 @@ import React from 'react';
 
 
 import {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  Users
+  MapPin
+  Clock
+  DollarSign
+  ArrowRight
+  Heart
+  Star
+  Award
+  Coffee
+  Zap
+  Shield
+  Briefcase
+  GraduationCap
+  Globe
+  CheckCircle
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Users,
   MapPin,
   Clock,
@@ -28,8 +48,12 @@ import {
   GraduationCap,
   Globe,
   CheckCircle,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -847,6 +871,7 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
@@ -875,4 +900,50 @@ function CareersPage() {
       </div>;
     </MainLayout>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Don't See Your Dream Job?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                We're always looking for talented individuals. Send us your
+                resume and let us know how you'd like to contribute to our team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
+                  Send Resume
+                </a>
+                <a
+                  href="/about"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Learn More About Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    </MainLayout>
+=======
+<<<<<<< HEAD
+    </MainLayout>
+=======
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    </MainLayout>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }

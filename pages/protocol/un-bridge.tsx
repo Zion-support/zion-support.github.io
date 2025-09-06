@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +29,22 @@ import React, { useState } from 'react';
     language: 'en',;
 
 
+=======
+    title: 'Zion DAO x Digital Labor Initiative'
+    targetInstitution: 'UN Development Programme'
+    type: 'Workforce Dev'
+    regionalScope: 'Global South'
+    budgetOrResolution: 'USD 3M over 24 months'
+    supportingMultiverses: 'Digital Labor, AI Ethics'
+    promptAssist:
+<<<<<<< HEAD
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+    language: 'en'
+=======
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -65,11 +82,21 @@ import React, { useState } from 'react';
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 
+<<<<<<< HEAD
 =======
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
 
+=======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export default function UNBridge(req, res) {
+  try {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative',;
     targetInstitution: 'UN Development Programme',;
@@ -159,6 +186,7 @@ import React, { useState } from 'react';
     }
 
   }
+<<<<<<< HEAD
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>;
@@ -336,6 +364,19 @@ import React, { useState } from 'react';
     </div>;
   );
 
+=======
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
@@ -392,9 +433,56 @@ import React, { useState } from 'react';
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
+              {translated}
+            </div>
+          )}
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={exportArtifacts}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Export PDF + Sign + IPFS
+            </button>
+            <button
+              onClick={() => submit(['email'])}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Submit (Email)
+            </button>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
+              {translated  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="flex items-center gap-2">
+            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
+            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
@@ -402,6 +490,7 @@ import React, { useState } from 'react';
               {result.meta.artifacts?.markdownPath && (
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
               )}
+<<<<<<< HEAD
               {result.meta.artifacts?.pdfPath && (
 
 export default /**
@@ -515,10 +604,27 @@ if (return) {
       set_loading (false);
     }
 =======
+              {result.meta.artifacts?.signature && (
+                <div>
+                  Signature: {result.meta.artifacts.signature.slice(0, 30)}…
+                </div>              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
@@ -704,7 +810,15 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

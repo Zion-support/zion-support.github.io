@@ -1,8 +1,47 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Search, Filter} from "lucide-react";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Search, Filter } from "lucide-react",
+<<<<<<< HEAD
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+=======
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -263,9 +302,17 @@ export default function SupportRequests() {;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -476,11 +523,23 @@ export default function SupportRequests() {;
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
+<<<<<<< HEAD
 
 
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
 
+=======
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+<<<<<<< HEAD
+              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
+=======
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -491,11 +550,19 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
 
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
 
+=======
+<<<<<<< HEAD
+              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
+=======
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -506,11 +573,19 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
 
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
 
+=======
+<<<<<<< HEAD
+              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
+=======
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -723,8 +798,16 @@ export default function SupportRequests() {;
                               ? 'secondary';
                               : 'outline';
                           }>;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             {request.status}
                           </Badge>
                         </TableCell>

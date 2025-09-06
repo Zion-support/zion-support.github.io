@@ -9,17 +9,28 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
+<<<<<<< HEAD
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
@@ -28,11 +39,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
+<<<<<<< HEAD
 
 
 ;
 
 
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const key = req.headers['x-admin-key'];
 =======
 

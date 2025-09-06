@@ -1,18 +1,30 @@
 
 
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import Head from 'next/head';
 
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react',
 =======
 import React from 'react';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function Update202508150406() {
 =======
 import React from 'react',;
@@ -37,9 +49,17 @@ export default function Update202508150406() {;
 
               <h2 className='text-2xl font-bold mb-4 text-yellow-400'>
                 Future Innovations
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </h2>
               <ul className='space-y-4'>
                 <li className='flex items-start'>
@@ -99,6 +119,7 @@ export default function Update202508150406() {;
         </main>
       </div>
     </>
+<<<<<<< HEAD
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -143,6 +164,12 @@ export default function Update202508150406() {;
 ;
 
 
+=======
+<<<<<<< HEAD
+  )
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import Head from 'next / head';
 import React from 'react',
@@ -284,4 +311,19 @@ function Update202508150406() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

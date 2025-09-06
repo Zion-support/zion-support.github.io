@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { SVGProps } from 'react'
 import { logWarn } from '@/utils/productionLogger'
 import {
@@ -604,7 +610,11 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   size?: number | string
   className?: string
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { SVGProps } from 'react',
 import { logWarn } from '@/utils/productionLogger',
@@ -1521,9 +1531,17 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   className?: string
 },
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
@@ -1820,18 +1838,56 @@ const iconMap = {
   'zap-off': LucideZapOff,
   zap: LucideZap,
   'zoom-in': LucideZoomIn,
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  'zoom-out': LucideZoomOut},
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  'zoom-out': LucideZoomOut,
+}
+=======
+  'zoom-out': LucideZoomOut},
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export const Icon: React.FC<IconProps> = ({
   name
   size = 24, // Default size
   className
   ...props
 }) => {
+<<<<<<< HEAD
 
 =======
 
 
+=======
+<<<<<<< HEAD
+  const LucideIconComponent = iconMap[name]
+  if (!LucideIconComponent) {
+    logWarn(`Icon "${name}" not found.`)
+    return null
+<<<<<<< HEAD
+  }
+  // Render the dynamically selected Lucide icon component
+  return <LucideIconComponent size={size} className={className} {...props} />
+}
+export default Icon; // Default export the Icon component
+export const Icons = iconMap; // Export the map if you need to refer to available icons
+
+export default Icon, // Default export the Icon component
+export const Icons = iconMap, // Export the map if you need to refer to available icons
+export default Icon, // Default export the Icon component
+export const Icons = iconMap, // Export the map if you need to refer to available icons
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   const LucideIconComponent = iconMap[name],
 
@@ -3712,6 +3768,14 @@ export const Icons = icon_map, // Export the map if you need to refer to availab
 =======
 export default Icon, // Default export the Icon component;
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

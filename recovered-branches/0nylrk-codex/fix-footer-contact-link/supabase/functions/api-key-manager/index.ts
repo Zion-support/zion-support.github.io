@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface CreateKeyRequest {
   name: string;
@@ -22,8 +27,26 @@ interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
+interface CreateKeyRequest {;
+  name: string,;
+  scopes: string[],;
+  expiresAt?: string | null;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 interface RegenerateKeyRequest {;
@@ -862,9 +885,17 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
@@ -875,11 +906,19 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
     const { data: logs, error: logsError, count } = await supabase
@@ -905,6 +944,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
+<<<<<<< HEAD
 =======
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
@@ -921,6 +961,13 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       headers: { 'Content-Type': 'application/json' }})
 
 
+=======
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     // Get logs for those keys;
@@ -946,10 +993,17 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response(JSON.stringify({ error: 'Internal server error' }), {;
       status: 500;
       headers: { 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 async /**

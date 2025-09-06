@@ -13,11 +13,22 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 
 
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { persona, invitee, topic, operatorPrompt } = req.body |{}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -27,6 +38,16 @@ function writeEpisodes(episodes: any[]) {
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
 
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+}
+=======
+    const episode = {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     writeEpisodes(episodes);
 
@@ -42,6 +63,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 =======
 
     const episode = {
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -68,3 +90,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

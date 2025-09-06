@@ -14,16 +14,25 @@ interface AIMilestoneGeneratorProps {;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 }
+<<<<<<< HEAD
 
 export function AIMilestoneGenerator(): any ({;
 
+=======
+<<<<<<< HEAD
+export function AIMilestoneGenerator({
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 
 export function AIMilestoneGenerator({;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   scope;
   startDate;
   endDate;
@@ -33,12 +42,63 @@ export function AIMilestoneGenerator({;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
+<<<<<<< HEAD
 
+=======
+  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
+  const handleGenerateMilestones = async () => {
+    if (!scope |!startDate |!projectType) {
+      return
+    }
+    const input: MilestoneInput = {
+      scope;
+      startDate;
+      endDate
+      projectType
+    }
+    await generateMilestones(input);
+    // Initially select all milestones
+    const initialSelection = {}
+    generatedMilestones.forEach((_, index) => {
+      initialSelection[index] = true
+    });
+    setSelectedMilestones(initialSelection)
+  }
+  const handleAddToProject = () => {
+    const selectedMilestonesList = generatedMilestones.filter((_, index) =>
+      selectedMilestones[index]
+    );
+    onAddMilestones(selectedMilestonesList);
+    clearGeneratedMilestones();
+    setSelectedMilestones({})
+  }
+  const toggleMilestoneSelection = (index: number) => {
+    setSelectedMilestones(prev => ({
+      ...prev
+      [index]: !prev[index]
+    }))
+  }
+  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
+    onAddMilestone(milestone)
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+<<<<<<< HEAD
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     }
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -123,9 +183,16 @@ export function AIMilestoneGenerator({;
     }
 
   },
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

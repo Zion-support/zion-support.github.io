@@ -1,16 +1,37 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 interface ProfileHeroProps {;
   name: string,;
   title: string,;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+import { Star } from "lucide-react";
+import { cn } from "@/lib/utils";
+interface ProfileHeroProps {
+
+  name: string
+  title: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   avatarUrl?: string;
   coverImageUrl?: string;
@@ -35,6 +56,15 @@ export function ProfileHero(): any ({;
   profileType;
 }: ProfileHeroProps) {;
 =======
+<<<<<<< HEAD
+=======
+import { Star } from "lucide-react",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -47,9 +77,37 @@ interface ProfileHeroProps {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   profileType: 'service' | 'talent'
 }
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ProfileHero({;
+  name;
+  title;
+  avatarUrl;
+  coverImageUrl;
+  location;
+  rating;
+  reviewCount;
+  aiScore;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function ProfileHero({
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   profileType
 }: ProfileHeroProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -105,9 +163,17 @@ export function ProfileHero({;
                 <AvatarImage src={avatarUrl} alt={name} />;
               ) : (;
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -118,6 +184,7 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
+<<<<<<< HEAD
 
     <div className="w-full overflow-hidden">;
       <div className="relative">;
@@ -152,17 +219,29 @@ export function ProfileHero({;
                   variant="outline" 
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan"
+=======
+<<<<<<< HEAD
+                    "ml-2 border-zion-purple/50 text-zion-cyan";
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
                     "ml-2 border-zion-purple/50 text-zion-cyan",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
                     "ml-2 border-zion-purple/50 text-zion-cyan",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
@@ -185,15 +264,28 @@ export function ProfileHero({;
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
 
                     )}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+                  </div>
+<<<<<<< HEAD
+                )}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </div>;
 =======
 =======
                   </div>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 )}
 
 

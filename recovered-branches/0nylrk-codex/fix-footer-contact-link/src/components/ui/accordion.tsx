@@ -1,13 +1,32 @@
+<<<<<<< HEAD
 
 
 
 =======
+<<<<<<< HEAD
+import * as React from 'react';
+import * as AccordionPrimitive from '@radix-ui/react-accordion';
+import {ChevronDown} from 'lucide-react';
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';
+const Accordion = AccordionPrimitive.Root;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import { cn } from "@/lib/utils"
 
@@ -85,14 +104,33 @@ const AccordionTrigger = React && React.forwardRef<;
     </AccordionPrimitive>  {...props}
     >;
       {children}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      <ChevronDown className='h-4 w-4 shrink-0 transition-transform duration-200' />
+<<<<<<< HEAD
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+const AccordionContent = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Content>
+  React.ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
 =======
 =======
       <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -126,6 +164,7 @@ const AccordionContent = React && React.forwardRef<;
 ))
 
 
+<<<<<<< HEAD
 AccordionContent && AccordionContent.displayName = AccordionPrimitive && AccordionPrimitive.Content.displayName;
 
 
@@ -164,9 +203,22 @@ const AccordionContent = React.forward_ref<;
 ;
 AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 ;
 
 =======
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+=======
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

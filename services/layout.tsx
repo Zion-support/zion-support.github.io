@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -35,5 +36,17 @@ export default /**
  */
 function ServicesLayout() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default function ServicesLayout({
+<<<<<<< HEAD
+  children
+}: {
+=======
+  children,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  children: React.ReactNode;
+}) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return <div>{children}</div>;
 }

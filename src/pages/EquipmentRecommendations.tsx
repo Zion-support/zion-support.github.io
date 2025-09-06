@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -94,6 +102,7 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
         .finally((,) => setLoading(false));
         .finally(() => setLoading(false));
 
+<<<<<<< HEAD
 =======
         .finally(() => setLoading(false))
 
@@ -106,6 +115,17 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
     return (
 
 
+=======
+  if (!isAuthenticated) {
+    return (
+      <Dialog open>
+        <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
@@ -113,9 +133,17 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
 
 
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
           </Button>
         </DialogContent>
@@ -134,9 +162,52 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+    <div className='min-h-screen bg-zion-blue py-8 px-4'>
+      <h1 className='text-2xl font-bold text-white mb-6'>
+        AI Equipment Recommendations
+      </h1>
+        <div className='flex justify-center py-20'>
+          <Loader2 className='h-8 w-8 animate-spin text-zion-purple' />
+        </div>
+      )}
+      {error && <ErrorState error='Failed to load recommendations.' />}
+      <div className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4'>
+        {listings.map(listing => (
+          <div key={listing.id} className='break-inside-avoid mb-4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        {listings.map((listing,) => (
+          <div key={listing.id} className="break-inside-avoid mb-4">
+<<<<<<< HEAD
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    <div className="min-h-screen bg-zion-blue py-8 px-4">
+      <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
+      {loading && (
+        <div className="flex justify-center py-20">
+          <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
+        </div>
+      )}
+      {error && <ErrorState error="Failed to load recommendations." />}
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        {listings.map((listing) => (
+          <div key={listing.id} className="break-inside-avoid mb-4">
+            <ProductListingCard listing={listing} />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ))}
 
       </div>;
@@ -240,6 +311,14 @@ if ( {) {
 
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

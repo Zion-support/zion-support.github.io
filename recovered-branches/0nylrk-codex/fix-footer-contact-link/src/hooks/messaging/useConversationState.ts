@@ -1,5 +1,19 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { Conversation, Message  } from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {
+  const [messages, setMessages] = useState<Message[]>([]),
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -8,8 +22,12 @@ import {Conversation, Message} from '@/types/messaging';
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
@@ -68,10 +86,18 @@ export function useConversationState() {;
     unreadCount,;
     setUnreadCount,;
     activeConversation,;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     setActiveConversation;
     is_loading;
     setIsLoading}

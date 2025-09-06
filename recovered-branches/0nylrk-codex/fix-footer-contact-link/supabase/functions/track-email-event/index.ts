@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 =======
@@ -12,6 +13,10 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -20,6 +25,26 @@ const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
+<<<<<<< HEAD
+=======
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Initialize Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
 
@@ -167,6 +192,7 @@ if ( {) {
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
+<<<<<<< HEAD
 =======
     return new Response ("Invalid event type", { status: 400 });
   } catch (error) {
@@ -188,6 +214,19 @@ if ( {) {
 =======
 
 
+=======
+        headers: {
+          Location: redirectUrl}})
+    }
+    return new Response("Error processing event", { status: 500 })
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+});
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -255,10 +294,17 @@ serve(async (req) => {;
     }
 ;
     return new Response("Error processing event", { status: 500 });
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 ;

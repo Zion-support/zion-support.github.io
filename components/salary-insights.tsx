@@ -23,7 +23,21 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 
+=======
+import {
+<<<<<<< HEAD
+  LineChart
+  BarChart
+  DonutChart;
+=======
+  LineChart,
+  BarChart,;
+  DonutChart,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../components/salary/InsightCharts';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type InsightResponse = {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -47,6 +61,7 @@ type InsightResponse = {;
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
+<<<<<<< HEAD
 
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 
@@ -78,11 +93,29 @@ type InsightResponse = {
 export default function SalaryInsightsPage() {;
 
 =======
+  gptRecommendation?: string;};  recommendedHourlyUsd: number
+  recommendedMonthlyUsd: number
+  medianHourlyUsd: number
+  minHourlyUsd: number
+  maxHourlyUsd: number
+  confidence: number
+  trendMonthly: { label: string, value: number }[]
+  regionalComparison: { region: string, medianHourlyUsd: number }[]
+  tags: string[]
+  gptRecommendation?: string
+<<<<<<< HEAD
+export default function SalaryInsightsPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 export default function SalaryInsightsPage() {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -191,6 +224,7 @@ function SalaryInsightsPage() {
     } finally {
       setLoading(false)
 
+<<<<<<< HEAD
     } catch (e: any) {;
       setError(e && e.message || 'Unexpected error');
     } finally {;
@@ -202,6 +236,13 @@ function SalaryInsightsPage() {
     } finally {;
       setLoading(false);
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 
@@ -372,6 +413,7 @@ if ( {) {
 
 
         alert('Insight saved locally');
+<<<<<<< HEAD
 
 
 
@@ -380,6 +422,20 @@ if ( {) {
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      } catch {}
+    })();
+  }
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       } catch {}
     })();
   }
@@ -1039,6 +1095,7 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
 
@@ -1053,6 +1110,28 @@ if (return [] as { label: string, value: number }[], ) {
 
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
+              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
+                {data.gptRecommendation}
+              </p>            </div>
+          )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -1117,6 +1196,7 @@ if (return [] as { label: string, value: number }[], ) {
     </div>;
   );
 }
+<<<<<<< HEAD
 
 =======
   );
@@ -1192,3 +1272,21 @@ if (return [] as { label: string, value: number }[], ) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {data && (
+
+            </div>
+          )}
+
+          {data && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

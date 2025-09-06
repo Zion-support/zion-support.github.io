@@ -314,7 +314,19 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
     >;
       <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm overflow - hidden">;
         {/* Enhanced Background Glow */}
+<<<<<<< HEAD
         <div className={`absolute inset - 0 bg - gradient - to - br ${styles.gradient} opacity - 5 group - hover:opacity - 10 transition - opacity duration - 300`}></div>;
+=======
+        <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+<<<<<<< HEAD
+=======
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Popular Badge */}
         {service.popular && (
           <motion.div;
@@ -385,9 +397,17 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
         
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -497,9 +517,17 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 
         
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -512,6 +540,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
+<<<<<<< HEAD
 
         {/* CTA Button */}
         <div className="relative z-10">;
@@ -535,9 +564,15 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default UltraFuturisticServiceCard2026;
 
 =======
+<<<<<<< HEAD
 
 export default UltraFuturisticServiceCard2026;
 =======
@@ -641,3 +676,10 @@ export default UltraFuturisticServiceCard2026;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+export default UltraFuturisticServiceCard2026;
+=======
+export default UltraFuturisticServiceCard2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

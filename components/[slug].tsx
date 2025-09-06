@@ -55,8 +55,18 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+export default function DynamicServicePage() {
+=======
+export default function DynamicServicePage() {;
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -555,6 +565,7 @@ function normalizeSlug(value: string): string {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
 
 
@@ -574,6 +585,37 @@ function collectAllServices(): any (): Svc[] {;
     newRealInnovations as Svc[],;
     realMarketServices as Svc[],;
     realVerifiedServices as unknown as Svc[];
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+// Static export support: generate root-level pages for service slugs;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Static export support: generate root-level pages for service slugs
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+type Svc = (typeof enhancedRealMicroSaasServices)[number];
+function collectAllServices(): Svc[] {
+  return enhancedRealMicroSaasServices.concat(
+    extraServices as Svc[]
+    additionalEnhancedServices as Svc[]
+    innovativeAIServices as Svc[]
+    quantumSpaceServices as Svc[]
+    enterpriseITServices as Svc[]
+    newRealServices as Svc[]
+    marketReadyServices as Svc[]
+    nextGenerationAIServices as Svc[]
+    emergingTechnologyServices as Svc[]
+    comprehensiveITSolutions as Svc[]
+    marketValidatedServices as Svc[]
+    newRealInnovations as Svc[]
+    realMarketServices as Svc[]
+    realVerifiedServices as unknown as Svc[]
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
@@ -601,11 +643,20 @@ function normalizeSlug(): any (value: string): string {;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
+<<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+=======
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export const getStaticPaths: GetStaticPaths = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const services = collectAllServices();
 
   const candidateSlugs = new Set<string>(),;
@@ -678,6 +729,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
           }
     }
   } catch {}
+<<<<<<< HEAD
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     for (const entry of entries) {
@@ -695,13 +747,26 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
   return {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -715,8 +780,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     fallback: true
   }
 }
@@ -732,6 +801,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
+<<<<<<< HEAD
 
 
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
@@ -811,3 +881,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+  return { props: {} }
+}
+
+=======
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return { props: {} };
+};
+=======
+
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

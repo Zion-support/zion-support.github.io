@@ -27,6 +27,7 @@ import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 
 import { useWallet } from '../../hooks/useWallet';
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -36,6 +37,32 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
 export default function TokenIntegrationsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {
+<<<<<<< HEAD
+  fetchDepinActivities
+  calculateRewards
+  DepinReward;
+=======
+  fetchDepinActivities,
+  calculateRewards,;
+  DepinReward,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = dynamic(
+  () => import('../../components/ui/BridgeForm')
+  { ssr: false }
+);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+<<<<<<< HEAD
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
+export default function TokenIntegrationsPage() {
+=======
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -72,6 +99,7 @@ export default function TokenIntegrationsPage() {;
       body: JSON && JSON.stringify({ region, stakeUsd: stake }),;
 
     });
+<<<<<<< HEAD
 
 
 
@@ -80,6 +108,20 @@ export default function TokenIntegrationsPage() {;
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const data = await res.json();
+    setSuggestion(data);
+  }
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     const data = await res.json();
     setSuggestion(data);
   }
@@ -125,6 +167,7 @@ export default function TokenIntegrationsPage() {;
     const data = await res.json();
     setSuggestion(data)
   }
+<<<<<<< HEAD
 
 
     setSuggestion(data)
@@ -243,6 +286,27 @@ export default function TokenIntegrationsPage() {;
               <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
 
 =======
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="space-y-8">
+      <section className="space-y-2">
+        <h1 className="text-2xl font-bold">ZION$ Integrations</h1>
+        <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>
+      </section>
+      <section className="space-y-4">
+        <ClientOnlyBridge />
+      </section>
+      <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
+        <h2 className="text-lg font-semibold">DePIN Hook</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>
+        <div className="flex gap-2">
+          <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
         {rewards && (
@@ -252,6 +316,17 @@ export default function TokenIntegrationsPage() {;
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
+<<<<<<< HEAD
+=======
+=======
+              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ))}
           </div>
         )}
@@ -322,13 +397,21 @@ export default function TokenIntegrationsPage() {;
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  );
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
 import dynamic from 'next / dynamic';
 import React, { useEffect, useState } from 'react';
 import { use_wallet } from '../../hooks / use_wallet';
@@ -531,3 +614,10 @@ function run_operator() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

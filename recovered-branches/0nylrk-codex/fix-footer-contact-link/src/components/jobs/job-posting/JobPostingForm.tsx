@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,6 +6,36 @@
 
 
 
+=======
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate  } from 'react-router-dom';
+=======
+
+=======
+
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react';
+import {useNavigate} from 'react-router-dom';
+import {toast} from "sonner";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Button} from "@/components/ui/button";
+import {Form} from "@/components/ui/form";
+import {useJobForm} from './useJobForm';
+import {BasicInfoFields} from './BasicInfoFields';
+import {DateFields} from './DateFields';
+import {DescriptionFields} from './DescriptionFields';
+import {useJobs} from "@/hooks/useJobs";
+import {JobSchemaType} from './validation';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect, useCallback } from 'react',
+import { useNavigate } from 'react-router-dom',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
@@ -18,9 +49,17 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface JobPostingFormProps {
 =======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
@@ -54,6 +93,7 @@ interface JobPostingFormProps {
   job_id?: string;
   on_success?: () => void;
 }
+<<<<<<< HEAD
 export /**
  * JobPostingForm - Function description
  */
@@ -63,9 +103,19 @@ function JobPostingForm() {
   const [isFormLoading, setIsFormLoading] = useState (false);
   const [editor_content, setEditorContent] = useState ("");
 ;
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -239,11 +289,19 @@ if ( {) {
                 } catch (e) {
 
                   // Skip fields that don't exist in our form;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                   // Skip fields that don't exist in our form;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 }
               }
             });
@@ -307,10 +365,18 @@ if ( {) {
         toast && toast.success("Job posted successfully!");
         form && form.reset();
         setEditorContent("");
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
 
 
@@ -343,12 +409,31 @@ if ( {) {
 
   }
   return (
+<<<<<<< HEAD
 
 
         <DateFields 
           startDate={startDate} 
 
 
+=======
+    <Form {...form}>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+        <div>
+          <h3 className="text-lg font-medium">Post a Job</h3>
+          <p className="text-sm text-muted-foreground">
+            Fill in the details below to create a job posting.
+          </p>
+        </div>
+        <BasicInfoFields control={form.control} />
+<<<<<<< HEAD
+        <DateFields
+          startDate={startDate}
+=======
+        <DateFields 
+          startDate={startDate} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
@@ -401,6 +486,7 @@ if ( {) {
               type="checkbox"
               id="isRemote"
               checked={isRemote}
+<<<<<<< HEAD
 
 
 
@@ -408,6 +494,28 @@ if ( {) {
               className="mr-2"
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              className="mr-2"
+              onChange={(e) => setIsRemote(e.target.checked)}
+            />
+            Remote
+          </Label>
+        </div>
+<<<<<<< HEAD
+        <DescriptionFields
+          control={form.control}
+          handleEditorChange={handleEditorChange}
+          editorContent={editorContent}
+        />
+        <Button type="submit" disabled={isSubmitting |isFormLoading}>
+          {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <DescriptionFields 
           control={form.control} 
           handleEditorChange={handleEditorChange}
@@ -415,8 +523,12 @@ if ( {) {
         />
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </Button>
       </form>
     </Form>
@@ -521,5 +633,17 @@ if ( {) {
 =======
 
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

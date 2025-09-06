@@ -1,11 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
+<<<<<<< HEAD
 
 
 =======
+import { requireSuperadminApi } from '../../../utils/api/auth';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+<<<<<<< HEAD
+
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 

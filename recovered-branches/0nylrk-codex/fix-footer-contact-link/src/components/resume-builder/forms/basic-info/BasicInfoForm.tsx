@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -10,7 +16,26 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+<<<<<<< HEAD
 
+=======
+  resumeId?: string;
+  initialData?: Partial<BasicInfoFormData>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, useEffect } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { Button } from "@/components/ui/button",
+import { Form } from "@/components/ui/form",
+import { Card } from "@/components/ui/card",
+import { RateOptimizationSection } from "../RateOptimizationSection",
+import { basicInfoSchema, BasicInfoFormData } from "./schema",
+<<<<<<< HEAD
+import { PersonalInfoFields } from "./PersonalInfoFields";
+import { ContactFields } from "./ContactFields";
+export interface BasicInfoFormProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
@@ -21,16 +46,34 @@ export interface BasicInfoFormProps {;
   yearsExperience?: number;
   onComplete?: () => void;
 }
+<<<<<<< HEAD
 
 
 export function BasicInfoForm(): any ({;
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function BasicInfoForm({;
+  resumeId;
+  initialData = {};
+  onSave;
+  skills = [];
+  yearsExperience = 0;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function BasicInfoForm({
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   resumeId;
 
   initialData = {}
   onSave;
   skills = [];
   yearsExperience = 0;
+<<<<<<< HEAD
 
 
 
@@ -41,6 +84,19 @@ export function BasicInfoForm(): any ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+  resumeId,
+  initialData = {},
+  onSave,
+  skills = [],
+  yearsExperience = 0,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
@@ -117,18 +173,42 @@ export function BasicInfoForm({;
         if (value !== undefined) {;
 
           form.setValue(key as keyof BasicInfoFormData, value as any);
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
       });
     }
+<<<<<<< HEAD
 
 
 =======
+<<<<<<< HEAD
+  }, [initialData, form]);
+  const handleSubmit = (data: BasicInfoFormData) => {
+    onSave(data)
+    if (onComplete) {
+      onComplete()
+    }
+<<<<<<< HEAD
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   }, [initialData, form]),;
 
@@ -140,10 +220,18 @@ export function BasicInfoForm({;
     }
 
   },
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   return (
 

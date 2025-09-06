@@ -7,8 +7,32 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  ArrowRight
+  Zap
+  Brain
+  Atom
+  Rocket
+  Star
+  TrendingUp
+  Shield
+  Globe
+  Cpu
+  Sparkles
+  Play
+  CheckCircle
+  Award
+  Users
+  Clock
+  Phone
+  Mail;} from 'lucide-react';import {
+  ArrowRight, Zap, Brain, Atom, Rocket, Star
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ArrowRight,
   Zap,
   Brain,
@@ -28,8 +52,12 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   TrendingUp, Shield, Globe, Cpu, Sparkles;
   Play, CheckCircle, Award, Users, Clock, Phone, Mail
 const contactInfo = {
@@ -84,6 +112,7 @@ export default function UltraFuturisticHero2030() {
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star }
 ];
 export default function UltraFuturisticHero2030() {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -134,6 +163,32 @@ import { motion } from 'framer-motion';
     description: 'Unbreakable encryption with quantum key distribution',;
   },];    description: 'Unbreakable encryption with quantum key distribution';
   }
+=======
+  return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+<<<<<<< HEAD
+      {/* Background Glow Effects */}
+      <div className='absolute inset-0 pointer-events-none'>
+        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl'></div>
+        <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl'></div>
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl'></div>
+      </div>
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}      {/* Background Glow Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Main Heading */}
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ];
 
 
@@ -145,13 +200,29 @@ import { motion } from 'framer-motion';
   return (
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+        {/* Main Heading */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -252,16 +323,32 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
@@ -313,16 +400,32 @@ import { motion } from 'framer-motion';
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Features Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           {features.map((feature, index) => (
             <motion.div
@@ -346,6 +449,7 @@ import { motion } from 'framer-motion';
               <p className="text-gray-400 text-sm">{feature && feature.description}</p>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
 =======
           transition={{ duration: 0.8, delay: 1.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
@@ -583,6 +687,13 @@ function UltraFuturisticHero2030() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <feature.icon className="w-6 h-6 text-white" />
@@ -600,15 +711,31 @@ function UltraFuturisticHero2030() {
           ))}
         </motion.div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Stats Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -644,9 +771,17 @@ function UltraFuturisticHero2030() {
               initial={{ opacity: 0, scale: 0 && 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
 
+<<<<<<< HEAD
 =======
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <stat.icon className="w-8 h-8 text-purple-400" />
@@ -664,15 +799,60 @@ function UltraFuturisticHero2030() {
           ))}
         </motion.div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+        >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <h3 className='text-2xl font-bold text-white mb-6'>
+            Ready to Transform Your Business?
+          </h3>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+            <div className='flex flex-col items-center'>
+              <Phone className='w-6 h-6 text-purple-400 mb-2' />
+              <span className='text-gray-300 text-sm'>Call Us</span>
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className='text-white font-semibold hover:text-purple-400 transition-colors'
+              >
+                {contactInfo.mobile}
+              </a>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Mail className='w-6 h-6 text-cyan-400 mb-2' />
+              <span className='text-gray-300 text-sm'>Email Us</span>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className='text-white font-semibold hover:text-cyan-400 transition-colors'
+              >
+                {contactInfo.email}
+              </a>
+            </div>
+            <div className='flex flex-col items-center'>
+              <Globe className='w-6 h-6 text-emerald-400 mb-2' />
+              <span className='text-gray-300 text-sm'>Visit Us</span>
+              <a
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 href={contactInfo.website}
                 className='text-white font-semibold hover:text-emerald-400 transition-colors'
               >                {contactInfo.website.replace('https://', '')}            <div className="flex flex-col items-center">
@@ -724,16 +904,32 @@ function UltraFuturisticHero2030() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Trust Indicators */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <p className='text-gray-400 text-sm mb-4'>
             Trusted by leading companies worldwide
@@ -1025,6 +1221,14 @@ function UltraFuturisticHero2030() {
 =======
 
     </section>
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,14 +1,109 @@
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage} from "@/components/ui/form"
+const profileSchema = z.object({
+  displayName: z.string().min(2, "Full Name must be at least 2 characters")
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters")
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")})
+type ProfileFormValues = z.infer<typeof profileSchema>
+<<<<<<< HEAD
+interface ProfileSetupProps {
+  onComplete: (data: ProfileFormValues,) => void
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from "react",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+
+const profileSchema = z.object({
+  displayName: z.string().min(2, "Full Name must be at least 2 characters"),
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
+
+type ProfileFormValues = z.infer<typeof profileSchema>,
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ProfileSetupProps {
+  onComplete: (data: ProfileFormValues) => void,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   userType: string
 }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      displayName: ""
+      bio: ""
+      headline: ""}})
+  const getTypeLabel = () => {
+    switch (userType) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      case "serviceProvider": return "Service Provider"
+      case "talent":
+        return "Talent"
+      case "client":
+        return "Client"
+      default:
+        return "User"
+    }
+  }
+=======
+<<<<<<< HEAD
+      displayName: "",
+      bio: "",
+      headline: ""}}),
+
+  const getTypeLabel = () => {
+    switch (userType) {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      case "serviceProvider": return "Service Provider",
+      case "talent":
+        return "Talent",
+      case "client":
+        return "Client",
+      default:
+        return "User"
+    }
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -26,7 +121,14 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       </div>
 
       
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
@@ -167,7 +269,14 @@ function ProfileSetup() {
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
@@ -280,8 +389,16 @@ function ProfileSetup() {
             control={form.control}
             name="bio"
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -316,7 +433,17 @@ function ProfileSetup() {
       </Form>
     </div>
   )
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+                  />;
+                </FormControl>;
+                <FormMessage className="text-red-400" />;
+              </FormItem>;
+            )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           />;
 
           <Button
@@ -328,6 +455,7 @@ function ProfileSetup() {
       </Form>;
     </div>;
   );
+<<<<<<< HEAD
 case "talent": return "Talent";";
 case "client": return "Client";
 default: ;
@@ -335,6 +463,16 @@ default: ;
 };
 getTypeLabel () ";
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Inputplaceholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+case "talent": return "Talent";"
+case "client": return "Client"
+default:
+}
+getTypeLabel () "
+}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ...field "
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <InputclassName="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
@@ -347,8 +485,17 @@ getTypeLabel () ";
 }"}
 
 =======
+<<<<<<< HEAD
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
+=======
+<<<<<<< HEAD
+                  />;
+                </FormControl>;
+                <FormMessage className="text-red-400" />;
+              </FormItem>;
+            )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           />;
           <Button;
             type="submit";
@@ -363,6 +510,7 @@ case "talent": return "Talent";";
 case "client": return "Client";
 default:;
 }
+<<<<<<< HEAD
 getTypeLabel () ";
 }Profile</h3> <p className="text - zion - slate - light mt - 2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
   ...field ";
@@ -378,8 +526,15 @@ getTypeLabel () ";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

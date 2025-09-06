@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from "react";
 import Link from "next/link";
+<<<<<<< HEAD
 import {;
   Phone,;
   Mail,;
@@ -34,12 +35,45 @@ import {;
   Instagram,;
   ArrowRight,;
 
+=======
+import {
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  ArrowRight
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  ArrowRight,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 
 import React from 'react;';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 export default function Footer() {
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+export default function Footer() {
+=======
+export default function Footer() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const currentYear = new Date().getFullYear();
   const footerLinks = {
     services: [
@@ -222,6 +256,7 @@ export default function Footer() {;
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
+<<<<<<< HEAD
 
           <div className="lg:col-span-2">;
             <Link href="/" className="text-2xl font-bold text-white mb-4 block">;
@@ -232,6 +267,20 @@ export default function Footer() {;
               cybersecurity, cloud infrastructure, quantum computing,;
               blockchain, IoT, and digital transformation services.;
             </p>;
+=======
+          <div className="lg:col-span-2">
+            <Link href="/" className="text-2xl font-bold text-white mb-4 block">
+              Zion Tech Group
+            </Link>
+            <p className="text-gray-300 mb-6 max-w-md">
+<<<<<<< HEAD
+<<<<<<< HEAD
+              Leading technology solutions provider specializing in AI,
+              cybersecurity, cloud infrastructure, quantum computing,
+              blockchain, IoT, and digital transformation services.
+            </p>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -247,6 +296,11 @@ export default function Footer() {;
               blockchain, IoT, and digital transformation services.
             </p>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Contact Info */}
 
 
@@ -388,7 +442,16 @@ const Footer: React.FC = () => {
                     {link.name}
                   </Link>
                 </li>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+              ))}
+            </ul>
+          </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -461,6 +524,12 @@ const Footer: React.FC = () => {
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
@@ -492,7 +561,17 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
                     href={link && link.href}
@@ -507,6 +586,12 @@ const Footer: React.FC = () => {
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Company & Resources */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
@@ -537,10 +622,24 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (

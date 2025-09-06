@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -24,14 +25,48 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+=======
+<<<<<<< HEAD
+import React from 'react',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
+  Shield, Database, Globe, ArrowRight, CheckCircle, Star
+ } from 'lucide-react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
 
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import {
+  Brain, BarChart3, TrendingUp, Users, Target, Zap,
+  Shield, Database, Globe, ArrowRight, CheckCircle, Star
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function AIBusinessIntelligencePage() {
 
   const features = [
@@ -157,6 +192,7 @@ const AIBusinessIntelligence: React.FC = () => {;
       period: '',;
       description: 'Full-scale solution for large organizations',;
       features: [;
+<<<<<<< HEAD
         'Everything in Professional',;
         'Custom AI models',;
         'Dedicated support team',;
@@ -350,6 +386,64 @@ const AIBusinessIntelligence: React.FC = () => {
                 href='#demo'
 
 
+=======
+        "Everything in Professional",;
+        "Custom AI models",;
+        "Dedicated support team",;
+        "Unlimited users",;
+        "On-premise deployment",;
+        "Custom training",;
+        "SLA guarantees";
+      ];
+      popular: false;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  return (;
+    <>;
+      <Head>;
+        <title>AI Business Intelligence - Zion Tech Group</title>;
+        <meta name="description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency." />;
+        <meta name="keywords" content="AI business intelligence, predictive analytics, business analytics, data insights, machine learning, business intelligence platform" />;
+        <meta property="og:title" content="AI Business Intelligence - Zion Tech Group" />;
+        <meta property="og:description" content="Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights." />;
+        <meta property="og:type" content="website" />;
+        <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence" />;
+      </Head>;
+      <EnhancedNavigation />;
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+        <div className="max-w-7xl mx-auto px-6">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -777,6 +871,350 @@ const AIBusinessIntelligence: React.FC = () => {
                     </li>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
+<<<<<<< HEAD
+=======
+=======
+      </section>
+      {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-white">;
+        <div className="max-w-7xl mx-auto px-6">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16";
+          >;
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Features</h2>;
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">;
+              Everything you need to transform your business data into strategic insights.;
+            </p>;
+          </motion.div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {features.map((feature, index) => (;
+              <motion.div;
+                key={feature.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2";
+              >;
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>;
+                  <feature.icon className="w-8 h-8 text-white" />;
+                </div>;
+                <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>;
+                <p className="text-slate-600 leading-relaxed">{feature.description}</p>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Benefits */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-slate-50">;
+        <div className="max-w-7xl mx-auto px-6">;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
+            <motion.div;
+              initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >;
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose AI Business Intelligence?</h2>;
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">;
+                Our AI-powered platform delivers measurable results that directly impact your bottom line.;
+                From increased revenue to reduced costs, see the difference data-driven decisions can make.;
+              </p>;
+              <div className="space-y-4">;
+                {benefits.map((benefit, index) => (;
+                  <motion.div;
+                    key={benefit  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="flex items-center space-x-3";
+                  >;
+                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />;
+                    <span className="text-slate-700">{benefit}</span>;
+                  </motion.div>;
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, x: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8";
+            >;
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">Key Metrics</h3>;
+              <div className="space-y-6">;
+                <div className="text-center">;
+                  <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>;
+                  <div className="text-slate-600">Prediction Accuracy</div>;
+                </div>;
+                <div className="text-center">;
+                  <div className="text-4xl font-bold text-green-600 mb-2">40%</div>;
+                  <div className="text-slate-600">Average Revenue Increase</div>;
+                </div>;
+                <div className="text-center">;
+                  <div className="text-4xl font-bold text-purple-600 mb-2">80%</div>;
+                  <div className="text-slate-600">Time Saved on Reporting</div>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Use Cases */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-white">;
+        <div className="max-w-7xl mx-auto px-6">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16";
+          >;
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>;
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">;
+              See how businesses across different industries are leveraging AI to transform their operations.;
+            </p>;
+          </motion.div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
+            {useCases.map((useCase, index) => (;
+              <motion.div;
+                key={useCase.industry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300";
+              >;
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{useCase.industry}</h3>;
+                <p className="text-slate-600 mb-4 leading-relaxed">{useCase.description}</p>;
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">;
+                  <p className="text-green-800 font-medium">Results: {useCase.results}</p>;
+                </div>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Pricing */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-slate-900">;
+        <div className="max-w-7xl mx-auto px-6">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16";
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>;
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">;
+              Choose the plan that fits your business needs. All plans include our core AI features.;
+            </p>;
+          </motion.div>;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+            {pricing.map((plan, index) => (;
+              <motion.div;
+                key={plan.plan  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`relative bg-white rounded-2xl p-8 ${;
+                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : '';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                {plan.popular && (;
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
+                    Most Popular;
+                  </div>;
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                <div className="text-center mb-8">;
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>;
+                  <div className="text-4xl font-bold text-slate-900 mb-2">;
+                    {plan.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <span className="text-lg text-slate-600">{plan.period}</span>;
+                  </div>;
+                  <p className="text-slate-600">{plan.description}</p>;
+                </div>;
+                <ul className="space-y-4 mb-8">;
+                  {plan.features.map((feature) => (;
+                    <li key={feature} className="flex items-center space-x-3">;
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />;
+                      <span className="text-slate-700">{feature}</span>;
+                    </li>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </ul>
 
                 <a
@@ -793,6 +1231,7 @@ const AIBusinessIntelligence: React.FC = () => {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
       {/* CTA */}
@@ -819,6 +1258,36 @@ const AIBusinessIntelligence: React.FC = () => {
 
 
 
+=======
+      {/* CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
+        <div className="max-w-4xl mx-auto px-6 text-center">;
+          <motion.div;
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -844,6 +1313,7 @@ const AIBusinessIntelligence: React.FC = () => {
       </section>
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
 
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Schedule Demo;
@@ -858,15 +1328,25 @@ const AIBusinessIntelligence: React.FC = () => {
   );
 
 =======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 }
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
   )
 }
+<<<<<<< HEAD
 
                     </span>;
                   </div>;
@@ -922,7 +1402,14 @@ const AIBusinessIntelligence: React.FC = () => {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 
 
+=======
+import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -7,6 +14,7 @@
 export default function CloudAutomationsPage() {;
 =======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CloudAutomationsPage() {
@@ -24,6 +32,9 @@ export default function CloudAutomationsPage() {;
       .catch(() => setData({ ok: false }));
 
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {

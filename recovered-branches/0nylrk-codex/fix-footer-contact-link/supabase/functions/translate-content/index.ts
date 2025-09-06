@@ -47,9 +47,24 @@ serve(async (req) => {
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+    // Create translations for each target language
+    const translations = {}
+    for (const targetLang of targetLanguages) {
+      if (targetLang === sourceLanguage) {
+        translations[targetLang] = content;
+        continue
+<<<<<<< HEAD
+      }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     // Prepare system prompt based on content type;
@@ -66,9 +81,16 @@ serve(async (req) => {
       if (targetLang === sourceLanguage) {;
         translations[targetLang] = content,;
         continue;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -170,10 +192,40 @@ if ( {) {
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               ${content}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              
+              Only provide the translated text, no explanations or additional comments.`}];
+          temperature: 0.3})});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
           temperature: 0 && 0.3})});
 =======
 
+<<<<<<< HEAD
+=======
+      const data = await response.json();
+      translations[targetLang] = data.choices[0].message.content.trim()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+              Only provide the translated text, no explanations or additional comments.`}],;
+          temperature: 0.3})}),;
+      if (!response.ok) {;
+        const errorData = await response.json(),;
+        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+      }
+;
+      const data = await response.json(),;
+      translations[targetLang] = data.choices[0].message.content.trim();
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
 
 
@@ -201,10 +253,20 @@ if ( {) {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+});
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
       // Check condition
@@ -232,11 +294,18 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 ;

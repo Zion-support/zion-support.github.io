@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -60,6 +61,25 @@ const Homepage2026: React.FC = () => {;
               animate={{ opacity: 1, y: 0 }}
 
 =======
+<<<<<<< HEAD
+  ArrowRight
+  Star
+  Brain
+  Atom
+  Shield
+  Zap
+  TrendingUp
+  Globe
+  MapPin
+  Users
+  Building
+  Rocket
+  CheckCircle
+  Phone
+  Mail;} from 'lucide-react';import {
+  ArrowRight, Star
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
@@ -90,8 +110,12 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Star, ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail;
 const Homepage2026: React.FC = () => {
@@ -99,12 +123,20 @@ const Homepage2026: React.FC = () => {
     <Layout>;
       {/* Main Content */}
 
+<<<<<<< HEAD
       <main className='relative z-10'>
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
@@ -134,17 +166,33 @@ const Homepage2026: React.FC = () => {
               className='space-y-6'              className="space-y-6"
             >
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 animate={{ opacity: 1, scale: 1 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
@@ -342,10 +390,18 @@ const Homepage2026: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -604,14 +660,29 @@ const Homepage2026: React.FC = () => {
 
               {/* AI Automation Services */}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className='text-5xl mb-6'>🤖</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -670,6 +741,7 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+<<<<<<< HEAD
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'>;
@@ -868,12 +940,27 @@ const Homepage2026: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* IT Infrastructure Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className='text-5xl mb-6'>🏗️</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -990,16 +1077,32 @@ const Homepage2026: React.FC = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Micro SAAS Solutions */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className='text-5xl mb-6'>🚀</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -1058,6 +1161,7 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+<<<<<<< HEAD
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
@@ -1190,12 +1294,27 @@ const Homepage2026: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Cutting-Edge AI Services */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className='text-5xl mb-6'>🧠</div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -1722,9 +1841,33 @@ export default Homepage2026;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
+<<<<<<< HEAD
 
 };
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default Homepage2026;  )
+}
+export default Homepage2026;
+
+<<<<<<< HEAD
+=======
+export default Homepage2026;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default Homepage2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

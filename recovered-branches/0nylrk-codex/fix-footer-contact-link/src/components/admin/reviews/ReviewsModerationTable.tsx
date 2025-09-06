@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -9,9 +17,21 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
@@ -20,9 +40,16 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import {
   Table,
@@ -54,10 +81,26 @@ interface ReviewsModerationTableProps {
 
   onRefresh: () => void
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ReviewsModerationTable({;
+  reviews;
+  isLoading;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function ReviewsModerationTable({
+  reviews,
+  isLoading,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
 
@@ -171,7 +214,36 @@ interface ReviewsModerationTableProps {
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
 
+<<<<<<< HEAD
 
+=======
+  return (
+    <>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Reviewer</TableHead>
+            <TableHead>Rating</TableHead>
+            <TableHead>Date</TableHead>
+            <TableHead>Status</TableHead>
+            <TableHead>Reports</TableHead>
+            <TableHead className="text-right">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {reviews.map((review) => (
+            <TableRow key={review.id}>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Avatar className="h-8 w-8">
+                    {review.reviewer_profile?.avatar_url ? (
+                      <AvatarImage
+<<<<<<< HEAD
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name |""}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
@@ -453,10 +525,17 @@ if ( {) {
 
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -662,9 +741,17 @@ if ( {) {
               </TableCell>;
 
             </TableRow>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           ))}
 
         </TableBody>;

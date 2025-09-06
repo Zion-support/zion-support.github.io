@@ -1,31 +1,53 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Briefcase, Users, Check} from "lucide-react";
+<<<<<<< HEAD
 
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
 import { Briefcase, Users, Check } from './lucide-react';
 ;
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type UserRole = "talent" | "client" | null;
 ;
 
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 type UserRole = "talent" | "client" | null,
@@ -35,7 +57,24 @@ type UserRole = "talent" | "client" | null,
 interface RolePickerProps {
   on_select: (role: UserRole) => void;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function RolePicker({ onSelect }: RolePickerProps) {;
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function RolePicker({ onSelect }: RolePickerProps) {
+<<<<<<< HEAD
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+=======
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -93,18 +132,29 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'talent' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
+<<<<<<< HEAD
 
             </div>;
           </CardContent>;
         </Card>;
 
 
+=======
+            </div>
+          </CardContent>
+        </Card>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Card
 =======
 
         <Card 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
@@ -201,9 +251,18 @@ interface RolePickerProps {;
 
     </div>);
 }
+<<<<<<< HEAD
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

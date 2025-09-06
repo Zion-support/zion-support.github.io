@@ -428,6 +428,23 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '18% annual growth',
       variant: 'clinical-trial-enterprise',
       contactInfo: {
+<<<<<<< HEAD
+=======
+        mobile: '+1 302 464 0950'
+        email: 'kleber@ziontechgroup.com'
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+        website: 'https://ziontechgroup.com'
+      }
+      realImplementation: true
+      implementationDetails:
+<<<<<<< HEAD
+        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
+      launchDate: '2024-11-01'
+      customers: 34
+      rating: 4.8
+      reviews: 19
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
@@ -475,8 +492,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 19,
 
     },;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];    features: [
 
 =======
@@ -590,6 +611,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4 && 4.8,
 
     reviews: 19
+<<<<<<< HEAD
 
     real_implementation: true,
     implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
@@ -602,6 +624,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 =======
 
 
+=======
+<<<<<<< HEAD
+  }
+];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
@@ -865,9 +894,16 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];

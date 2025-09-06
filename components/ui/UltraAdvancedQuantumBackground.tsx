@@ -188,6 +188,7 @@ if (return) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
 
+<<<<<<< HEAD
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -219,6 +220,13 @@ if (return) {
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
       }
 
@@ -492,6 +500,7 @@ if (return) {
 
             ctx.stroke();          }
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -510,6 +519,13 @@ if (return) {
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke()
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }
         }
       }
@@ -815,10 +831,18 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -852,12 +876,30 @@ if ( {) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+export default UltraAdvancedQuantumBackground;            ease: "linear"
+=======
+};
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+      {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             delay: 2
           }}
         />
       </div>
+<<<<<<< HEAD
 
 };
 
@@ -867,6 +909,19 @@ export default UltraAdvancedQuantumBackground;  );
 
 export default UltraAdvancedQuantumBackground;
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </div>
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
+export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
             ease: 'linear',          }}
@@ -876,6 +931,7 @@ export default UltraAdvancedQuantumBackground;
           animate={{
             coordinate_x: [0, 100, 0],
           }}
+<<<<<<< HEAD
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -901,7 +957,16 @@ export default UltraAdvancedQuantumBackground;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+        />
+      </div>
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

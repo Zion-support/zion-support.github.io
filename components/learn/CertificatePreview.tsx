@@ -7,12 +7,24 @@ import React from "react";
 
 import React from "react";
 export default function CertificatePreview({
+<<<<<<< HEAD
 
   courseId,
   userId = "demo-user",
 }: {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  courseId
+  userId = "demo-user"
+}: {
+=======
+  courseId,
+  userId = "demo-user",
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   courseId: string;
   userId?: string;
 }) {;
@@ -44,9 +56,21 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
         Download PDF
       </a>
     </div>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  );
+=======
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">;

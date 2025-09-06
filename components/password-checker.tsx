@@ -24,20 +24,42 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
   AlertTriangle,;
   ArrowRight,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 =======
+import {
+<<<<<<< HEAD
+  Lock
+  Shield
+  Eye
+  EyeOff
+  Copy
+  RefreshCw
+  CheckCircle
+  XCircle
+  AlertTriangle
+  ArrowRight;
+} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
+export default function PasswordCheckerPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PasswordCheckerPage() {;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -373,6 +395,7 @@ if (
     if (strength >= 50) return 'bg-yellow-400';
     if (strength >= 30) return 'bg-orange-400';
 
+<<<<<<< HEAD
 
   };
 
@@ -394,6 +417,13 @@ if (
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -757,10 +787,18 @@ if (return 'bg - orange - 400') {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {/* Generate Password */}
                 <div>;
                   <Button
@@ -769,10 +807,18 @@ if (return 'bg - orange - 400') {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {/* Generated Password Display */}
 
 =======
@@ -810,7 +856,14 @@ if (return 'bg - orange - 400') {
 
                       {generatedPassword}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
@@ -894,6 +947,7 @@ if (return 'bg - orange - 400') {
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
+<<<<<<< HEAD
 
 
 
@@ -901,6 +955,31 @@ if (return 'bg - orange - 400') {
 
                       <div 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+                    <div className='w-full bg-gray-700 rounded-full h-3'>
+                      <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
+                  {/* Strength Score */}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-gray-300">Password Strength:</span>
+                        {strengthText} ({strength}/100)
+                      </span>
+                    </div>
+                    <div className='w-full bg-gray-700 rounded-full h-3'>
+                      <div                    <div className="w-full bg-gray-700 rounded-full h-3">
+<<<<<<< HEAD
+                      <div
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      <div 
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
@@ -925,10 +1004,18 @@ if (return 'bg - orange - 400') {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {/* Security Checks */}
 
 
@@ -938,9 +1025,17 @@ if (return 'bg - orange - 400') {
 
                           >                            {key === 'length' && 'At least 8 characters'}
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -956,10 +1051,18 @@ if (return 'bg - orange - 400') {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {/* Suggestions */}
 
 
@@ -969,6 +1072,7 @@ if (return 'bg - orange - 400') {
 
                           </div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -985,6 +1089,41 @@ if (return 'bg - orange - 400') {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
+                  <div className='text-6xl mb-4'>🔒</div>
+                  <p className='text-gray-400'>
+                    Enter a password above to see the security analysis and get
+                    personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                  <div className="text-6xl mb-4">🔒</div>
+                  <p className="text-gray-400">
+                    Enter a password above to see the security analysis and get personalized suggestions.
+                </div>
+              )}
+            </Card>
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -1442,8 +1581,16 @@ if (return 'bg - orange - 400') {
 
 
             Ready to Secure Your Passwords?
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -1462,6 +1609,7 @@ if (return 'bg - orange - 400') {
               href='/pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1480,3 +1628,29 @@ if (return 'bg - orange - 400') {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-indigo-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

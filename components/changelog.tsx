@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 
   content: string | null,
   generated_at: string | null;
@@ -16,6 +17,36 @@ function ChangelogPage() {
       <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1>;
       {generated_at && (
         <p className='mt - 2 text - sm text - gray - 600'>Generated: {generated_at}</p>)}
+=======
+type Props = {
+  content: string | null;
+  generatedAt: string | null;}
+export default function ChangelogPage({ content, generatedAt }: Props) {
+  return (
+    <main className='mx-auto max-w-4xl px-4 py-12'>
+      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>type Props = {
+<<<<<<< HEAD
+  content: string | null
+  generatedAt: string | null
+}
+export default function ChangelogPage({ content, generatedAt }: Props) {
+  return (
+=======
+  content: string | null,
+  generatedAt: string | null;
+};
+
+export default function ChangelogPage({ content, generatedAt }: Props) {
+  return (
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <main className='mx-auto max-w-4xl px-4 py-12'>
+      <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
+<<<<<<< HEAD
+      {generatedAt && (
+        <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
+      )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {content ? (
         <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
           {content}
@@ -26,22 +57,63 @@ function ChangelogPage() {
       {content ? (
         <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm">;
 {content}
+<<<<<<< HEAD
         </pre>) : (
         <div className="mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600">;
           No changelog generated yet.;
         </div>)}
     </main>);
 }
+=======
+        </pre>
+      ) : (
+        <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
+          No changelog generated yet.
+        </div>
+      )}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 
+=======
+export default function ChangelogPage({ content, generatedAt }: Props) {
+  return (
+=======
+    </main>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          No changelog generated yet.
+
+        </div>
+      )}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 }
 
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
   } catch {
+<<<<<<< HEAD
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return { props: { content: null, generatedAt: null }, revalidate: 300 }
+=======
+    return { props: { content: null, generatedAt: null }, revalidate: 300 };
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
   } catch {
@@ -64,6 +136,7 @@ export async function getStaticProps() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
+<<<<<<< HEAD
 
 
 =======
@@ -83,6 +156,9 @@ function getStaticProps() {
   }    return { props: { content, generated_at: new Date ().toISOString () }, revalidate: 300 }
   } catch {
     return { props: { content: null, generated_at: null }, revalidate: 300 }
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -90,6 +166,15 @@ function getStaticProps() {
   } catch {
 
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
+<<<<<<< HEAD
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,8 +1,33 @@
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { ReactNode } from "react";
+import {cn} from "@/lib/utils";
+import {slugify} from "@/lib/slugify";
+import {Link} from "react-router-dom";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { ReactNode } from "react",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+import { slugify } from "@/lib/slugify";
+import { Link } from "react-router-dom";
+=======
+import { slugify } from "@/lib/slugify",
+import { Link } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CategoryCardProps {
 
   title: string
@@ -27,8 +52,19 @@ import {Link} from "react-router-dom";
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
 
   // Create a URL-friendly slug from the category title
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+  const slug = slugify(title),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const slug = slugify(title);
   return (
@@ -136,8 +172,16 @@ function CategoryCard() {
         className={cn(;
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
           !color && "text-zion-cyan";
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         style={color ? { color } : undefined}

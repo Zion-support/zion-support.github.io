@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -21,6 +22,31 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+=======
+<<<<<<< HEAD
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Button from '../../components/ui/Button',
+import Card from '../../components/ui/Card';
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {extraServices} from '../../data/extra-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {newRealServices} from '../../data/new-real-services';
+import {marketReadyServices} from '../../data/market-ready-services';
+type Service = (typeof enhancedRealMicroSaasServices)[number];
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 import React from 'react';
 
@@ -29,9 +55,18 @@ import React from 'react';
   } catch {;
     return null;
   }
+<<<<<<< HEAD
 
 
 export async function getStaticPaths() {;
+=======
+<<<<<<< HEAD
+export async function getStaticPaths() {
+=======
+
+export async function getStaticPaths() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const services = getAllServices();
   const slugs = new Set<string>();
 
@@ -40,6 +75,7 @@ export async function getStaticPaths() {;
     if (s && s.id) slugs && slugs.add(toSlug(s && s.id));
     else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
+<<<<<<< HEAD
 
   return {;
     paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
@@ -47,6 +83,21 @@ export async function getStaticPaths() {;
   };
 
 export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
+=======
+  return {
+<<<<<<< HEAD
+    paths: Array.from(slugs).map(slug => ({ params: { slug } }))
+    fallback: false
+  }
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+=======
+    paths: Array.from(slugs).map(slug => ({ params: { slug } })),
+    fallback: false,
+  };
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
@@ -288,10 +339,34 @@ function ServiceDetailPage() {
                     href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
+<<<<<<< HEAD
+=======
+                    className='text-xs hover:underline'
+                  >
+                    {contactInfo.address}
+                  </a>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </UltraFuturisticBackground>;
+  );
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                     className='text-xs hover:underline'>;
                     {contactInfo && contactInfo.address}
 =======
+<<<<<<< HEAD
                 </span>;
               </div>;
               <div className='text - sm text - gray - 400 mt - 2'>;
@@ -355,6 +430,9 @@ function ServiceDetailPage() {
 
 
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -504,6 +582,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	)
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </UltraFuturisticBackground>);
@@ -514,3 +593,10 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

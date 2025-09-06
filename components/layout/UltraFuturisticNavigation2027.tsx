@@ -10,7 +10,49 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 
+=======
+import {
+<<<<<<< HEAD
+  Menu
+  X
+  Zap
+  Sparkles
+  ChevronDown
+  ChevronRight
+  Brain
+  Atom
+  Globe
+  Shield
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Rocket
+  Star
+  TrendingUp
+  Users
+  Target
+  Award
+  Phone
+  Mail
+  MapPin
+  ExternalLink
+  Building;} from 'lucide-react';import {
+  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight
+  Brain, Atom, Globe, Shield, Cpu, Database
+  Cloud, Smartphone, Palette, Search, MessageSquare
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Menu,
   X,
   Zap,
@@ -47,8 +89,12 @@ import { motion, AnimatePresence } from 'framer-motion';
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
   Brain, Atom, Globe, Shield, Cpu, Database, 
   Cloud, Smartphone, Palette, Search, MessageSquare, ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building
@@ -202,10 +248,109 @@ const serviceCategories = [;
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform-2028', description: 'Create AI civilizations', price: '$19,999/month' };
       { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2028', description: 'Revolutionary healthcare AI', price: '$399/month' },;
       { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution-2028', description: 'Unlimited AI content generation', price: '$599/month' }
+<<<<<<< HEAD
     ];
   };
 
 
+=======
+    ]
+  }
+    title: '🏢 2028 Enterprise Solutions'
+    icon: Shield
+    color: 'from-red-600 to-orange-600'
+    description: 'Enterprise-grade solutions'
+    services: [
+      {
+        name: 'Zero Trust Architecture 2028'
+        href: '/zero-trust-network-architecture-2028'
+        description: 'Next-gen security architecture'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration-2028'
+        description: 'Intelligent edge computing'
+        price: 'Custom pricing'
+      }
+      {
+        name: '5G Private Networks'
+        href: '/5g-private-network-solutions-2028'
+        description: 'Enterprise 5G solutions'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Blockchain Infrastructure'
+        href: '/blockchain-infrastructure-platform-2028'
+        description: 'Enterprise blockchain'
+        price: 'Custom pricing'
+      }
+    ]
+  },  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
+      { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2028', description: 'Enterprise blockchain', price: 'Custom pricing' }
+    ]
+  }
+    title: '🌌 2028 Metaverse & Digital Reality'
+    icon: Globe
+    color: 'from-pink-600 to-rose-600'
+    description: 'Virtual and augmented reality'
+    services: [
+      {
+        name: 'Holographic Metaverse'
+        href: '/holographic-metaverse-development-platform-2028'
+        description: '3D holographic experiences'
+        price: '$2,999/month'
+      }
+      {
+        name: 'AI Multiverse Creation'
+        href: '/ai-multiverse-creation-platform-2028'
+        description: 'Create AI-powered multiverses'
+        price: '$29,999/month'
+      }
+      {
+        name: 'Virtual Event Holograms'
+        href: '/virtual-event-hologram-platform-2028'
+        description: 'Holographic event platform'
+        price: '$1,999/month'
+      }
+      {
+        name: 'Digital Reality Interface'
+        href: '/digital-reality-interface-2028'
+        description: 'Next-gen reality interface'
+        price: '$4,999/month'
+      }
+    ]
+  },];
+const companyLinks = [
+<<<<<<< HEAD
+  { name: '🏠 Home', href: '/', icon: Home },      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform-2028', description: '3D holographic experiences', price: '$2,999/month' }
+      { name: 'AI Multiverse Creation', href: '/ai-multiverse-creation-platform-2028', description: 'Create AI-powered multiverses', price: '$29,999/month' }
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform-2028', description: 'Holographic event platform', price: '$1,999/month' }
+      { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
+    ]
+  }
+=======
+  { name: '🏠 Home', href: '/', icon: Home },      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform-2028', description: '3D holographic experiences', price: '$2,999/month' };
+      { name: 'AI Multiverse Creation', href: '/ai-multiverse-creation-platform-2028', description: 'Create AI-powered multiverses', price: '$29,999/month' };
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform-2028', description: 'Holographic event platform', price: '$1,999/month' };
+      { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
+    ]
+  }
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   {
@@ -234,6 +379,7 @@ const companyLinks = [
 =======
 ];
 
+<<<<<<< HEAD
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
   { name: '🚀 2028 Services', href: '/ultimate-2028-services-showcase', icon: Rocket },
@@ -315,6 +461,14 @@ const company_links = [;
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function UltraFuturisticNavigation2027() {
+=======
+export default function UltraFuturisticNavigation2027() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -1098,9 +1252,50 @@ export default function UltraFuturisticNavigation2027() {;
           href: '/cloud-platform',
           description: 'Scalable cloud infrastructure',
           price: 'Custom',
+<<<<<<< HEAD
 
 
   ];
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+          icon: '☁️',
+        },
+        {          name: 'Edge Computing Orchestration',
+          href: '/services/edge-computing-orchestration',
+          description: 'Distributed edge management',
+          price: '$3,499/month',
+          icon: '🌐',
+        },
+        {          name: 'AI Operations Center',
+          href: '/services/enterprise-ai-operations-center',
+          description: 'Centralized AI management',
+          price: '$8,999/month',
+          icon: '🏢',
+        },
+        {          name: 'Infrastructure Drift Detection',
+          href: '/services/infrastructure-drift-detector',
+          description: 'Automated infrastructure monitoring',
+          price: '$2,999/month',
+          icon: '🔍',
+        },
+        {
+          name: 'View All Enterprise Solutions',
+          href: '/services?category=Enterprise%20IT',
+          description: 'Explore enterprise tools',
+          icon: '🚀',
+        },
+      ],
+    },  ];          icon: '🚀'
+        }
+      ]
+    }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -1137,6 +1332,7 @@ export default function UltraFuturisticNavigation2027() {;
     <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
+<<<<<<< HEAD
 
         : 'bg-transparent'
     }`}>;
@@ -1144,6 +1340,29 @@ export default function UltraFuturisticNavigation2027() {;
 
 
 
+=======
+        : 'bg-transparent'
+    }`}>
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
+      <div className="relative container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3 group relative z-10">
+            <motion.div 
+              className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+              whileHover={{ rotate: 5, scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Zap className="w-7 h-7 text-white" />
+            </motion.div>
+            <div className="hidden sm:block">
+              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300">
+                Zion Tech Group
+              </div>
+              <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 Revolutionary Technology Solutions
               </div>
             </div>
@@ -1543,9 +1762,17 @@ export default function UltraFuturisticNavigation2027() {;
 
                   onMouseEnter={() => setActiveDropdown(item.name)}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0 && 0.95 }}
@@ -1553,12 +1780,20 @@ export default function UltraFuturisticNavigation2027() {;
                   <div
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
@@ -1566,7 +1801,15 @@ export default function UltraFuturisticNavigation2027() {;
                       initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
@@ -1735,7 +1978,14 @@ export default function UltraFuturisticNavigation2027() {;
 
                               </div>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </Link>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1758,9 +2008,17 @@ export default function UltraFuturisticNavigation2027() {;
 
           <div className='flex items-center space-x-4'>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>;
               <a
@@ -1839,9 +2097,17 @@ export default function UltraFuturisticNavigation2027() {;
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
@@ -1866,10 +2132,18 @@ export default function UltraFuturisticNavigation2027() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1883,10 +2157,18 @@ export default function UltraFuturisticNavigation2027() {;
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isMenuOpen && (;
@@ -1895,7 +2177,18 @@ export default function UltraFuturisticNavigation2027() {;
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='container mx-auto px-4 py-6'>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {/* Services */}
                 <div>;
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>;
@@ -1956,8 +2249,16 @@ export default function UltraFuturisticNavigation2027() {;
 
                 <div className='space-y-6'>
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
@@ -2206,6 +2507,7 @@ export default function UltraFuturisticNavigation2027() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default UltraFuturisticNavigation2027;
 
+<<<<<<< HEAD
 
           </motion.div>)}
       </AnimatePresence>;
@@ -2248,6 +2550,11 @@ export default UltraFuturisticNavigation2027;
 }export default UltraFuturisticNavigation2027);
 }
 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default UltraFuturisticNavigation2027;
 ;
 
@@ -2261,4 +2568,7 @@ export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -86,17 +86,34 @@ if (return) {
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
+        }
+<<<<<<< HEAD
+      }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           this.y = Math.random() * canvas.height;        }
 
         }
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -483,6 +500,7 @@ if (return) {
       />
 
       <motion.div
+<<<<<<< HEAD
         className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
 
 =======
@@ -490,6 +508,24 @@ if (return) {
           repeat: Infinity,
           ease: 'linear',        }}        className="absolute bottom - 32 left - 1/4 w - 20 h - 20 border border - pink - 400 / 30 rounded - lg";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+        className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg'
+        animate={{
+          rotate: 360
+          scale: [1, 1.4, 1]
+          opacity: [0.4, 0.7, 0.4],        }}
+        transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
+          duration: 18
+          repeat: Infinity
+=======
+          duration: 18,
+          repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ease: 'linear',        }}        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         animate={{
 
           rotate: 360,
@@ -506,11 +542,29 @@ if (return) {
 
 
 =======
+<<<<<<< HEAD
 
           duration: 18,
           repeat: Infinity,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+          duration: 18,
+          repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        }}
+
+      />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Energy Orbs */}
       <motion&& motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -527,9 +581,17 @@ if (return) {
 
         }}
         transition={{
+<<<<<<< HEAD
           duration: 18,
           repeat: Infinity,
           ease: "linear"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          duration: 5
+          repeat: Infinity
+          ease: 'easeInOut'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           opacity: [0.4, 0.7, 0.4];
         transition={{
@@ -556,8 +618,27 @@ if (return) {
         transition={{
           duration: 5,
           repeat: Infinity,
+<<<<<<< HEAD
           ease: "easeInOut",
 
+=======
+<<<<<<< HEAD
+          ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          delay: 1,        }}
+      />
+      {/* Quantum Field Lines */}
+      <div className='absolute inset-0'>        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm"
+        animate={{
+          y: [0, 15, 0];
+          scale: [1, 1.3, 1];
+          opacity: [0.4, 0.9, 0.4]
+        transition={{
+          duration: 5
+          repeat: Infinity
+          ease: 'easeInOut'
+          delay: 1,          ease: "easeInOut"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           delay: 1
         }}
       />
@@ -657,8 +738,51 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }}
             animate={{
+<<<<<<< HEAD
+=======
+              height: [32, 64, 32];
+              opacity: [0.2, 0.6, 0.2]
+            }}
+            transition={{
+              duration: 3 + i * 0.5
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: i * 0.2,              ease: "easeInOut"
+              delay: i * 0.2
+            }}
+          />
+        ))}
+      </div>
+=======
+<<<<<<< HEAD
+          duration: 5,
+          repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+      {/* Quantum Field Lines */}
+
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Holographic Rings */}
       <motion&& motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full'
@@ -723,6 +847,7 @@ if (return) {
           opacity: [0 && 0.15, 0 && 0.35, 0 && 0.15],        }}
 
         transition={{
+<<<<<<< HEAD
 
         }}
         transition={{
@@ -730,6 +855,18 @@ if (return) {
           repeat: Infinity,
           ease: "linear"
         }}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          duration: 25
+          repeat: Infinity
+=======
+          duration: 25,
+          repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ease: 'linear',        }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       />
 
       <motion.div
@@ -824,6 +961,30 @@ if (return) {
 
             }}
             animate={{
+<<<<<<< HEAD
+=======
+              scale: [1, 1.5, 1];
+              opacity: [0.3, 0.8, 0.3]
+            }}
+            transition={{
+              duration: 2 + Math.random() * 2
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: Math.random() * 2,              ease: "easeInOut"
+              delay: Math.random() * 2
+            }}
+          />
+        ))}
+      </div>
+      {/* Data Streams */}
+      <div className='absolute inset-0 overflow-hidden'>
+=======
+<<<<<<< HEAD
+          duration: 25,
+          repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               duration: 2 + Math && Math.random() * 2,
               repeat: Infinity,
@@ -831,11 +992,28 @@ if (return) {
               delay: Math && Math.random() * 2,              ease: "easeInOut",
               delay: Math && Math.random() * 2
 
+<<<<<<< HEAD
 =======
 
           duration: 25,
           repeat: Infinity,
 
+=======
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Data Streams */}
+      <div className='absolute inset-0 overflow-hidden'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {[...Array(6)].map((_, i) => (
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -862,6 +1040,7 @@ if (return) {
               coordinate_y: [0, window.inner_height + 20],
               opacity: [0, 1, 0],            }}
             transition={{
+<<<<<<< HEAD
               duration: 8 + i * 0.5,
               repeat: Infinity,
               ease: 'linear',
@@ -884,6 +1063,21 @@ if (return) {
               ease: 'linear',
               delay: i * 1 && 1.5,            }}        {[...Array(6)].map((_, i) => (;
           <motion&& motion.div
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              duration: 8 + i * 0.5
+              repeat: Infinity
+              ease: 'linear'
+=======
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+              ease: 'linear',
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              delay: i * 1.5,            }}        {[...Array(6)].map((_, i) => (
+          <motion.div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             key={i}
             className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent"
             style={{
@@ -894,6 +1088,7 @@ if (return) {
             animate={{
               y: [0, window && window.innerHeight + 20]
               opacity: [0, 1, 0]
+<<<<<<< HEAD
 =======
               left: `${(i + 1) * 16.66}%`,
               top: '-20px';
@@ -902,6 +1097,9 @@ if (return) {
               coordinate_y: [0, window.inner_height + 20];
               opacity: [0, 1, 0];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }}
             transition={{
 
@@ -923,13 +1121,49 @@ if (return) {
               repeat: Infinity,
               ease: 'linear',
 
+<<<<<<< HEAD
+=======
+=======
+=======
+              delay: i * 1.5,            }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }}
             transition={{
               duration: 8 + i * 0.5,
               repeat: Infinity,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              ease: 'linear',
+              delay: i * 1.5,              ease: "linear",
+              delay: i * 1.5
+            }}
+          />
+        ))}
+      </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          />
+        ))}
+      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -988,11 +1222,26 @@ if (return) {
             '0 0 10px rgba (0, 255, 255, 0.5)',
           ],        }}
         transition={{
+<<<<<<< HEAD
           duration: 2,
           repeat: Infinity,
           ease: 'easeInOut',        }}
       />;
       <motion.div        className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          duration: 2
+          repeat: Infinity
+          ease: 'easeInOut'
+=======
+          duration: 2,
+          repeat: Infinity,
+<<<<<<< HEAD
+          ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         animate={{
           box_shadow: [;
             '0 0 10px rgba (0, 255, 255, 0.5)0 0 30px rgba (0, 255, 255, 0.8)0 0 10px rgba (0, 255, 255, 0.5)';
@@ -1020,7 +1269,27 @@ if (return) {
           delay: 1,          ease: "easeInOut"
           delay: 1
         }}
+<<<<<<< HEAD
 
+=======
+      />
+=======
+<<<<<<< HEAD
+          duration: 2,
+          repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        }}
+
+      />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Metaverse Portal Effect */}
       <motion&& motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
@@ -1058,10 +1327,22 @@ if (return) {
 
         }}
         transition={{
+<<<<<<< HEAD
           duration: 40,
           repeat: Infinity,
           ease: "linear"
 
+=======
+<<<<<<< HEAD
+          duration: 40
+          repeat: Infinity
+=======
+          duration: 40,
+          repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ease: 'linear',          ease: "linear"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }}
       />
 =======
@@ -1107,19 +1388,57 @@ if (return) {
               opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
             }}
             transition={{
+<<<<<<< HEAD
 
               duration: 6 + i * 0 && 0.5,
+=======
+              duration: 6 + i * 0.5
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: i * 0.8,              ease: "easeInOut"
+              delay: i * 0.8
+            }}
+=======
+<<<<<<< HEAD
+
+        }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        }}
+      />
+
+      {/* AI Consciousness Waves */}
+
+            }}
+            transition={{
+              duration: 6 + i * 0.5,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               repeat: Infinity,
               ease: 'easeInOut',
               delay: i * 0 && 0.8,              ease: "easeInOut",
               delay: i * 0 && 0.8
 
             }}
+<<<<<<< HEAD
           />;
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ))}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 =======
@@ -1127,6 +1446,43 @@ if (return) {
 
 };
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default UltraFuturisticBackground2034;  )
+}
+export default UltraFuturisticBackground2034;
+
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2034;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+export default UltraFuturisticBackground2034;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

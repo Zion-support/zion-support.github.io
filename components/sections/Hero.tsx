@@ -208,9 +208,18 @@ const Hero: React.FC<HeroProps> = ({;
           </h1>;
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">;
             {subtitle}
+<<<<<<< HEAD
 
 
 
+=======
+          </p>
+<<<<<<< HEAD
+          {/* Action Buttons */}
+          {(primaryAction |secondaryAction) && (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
@@ -238,6 +247,7 @@ const Hero: React.FC<HeroProps> = ({;
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
 
+<<<<<<< HEAD
 =======
 =======
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - black'>;
@@ -325,6 +335,15 @@ const Hero: React.FC < HeroProps> = ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                </Button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               )}
               {secondaryAction && (;
                 <Button
@@ -350,10 +369,18 @@ const Hero: React.FC < HeroProps> = ({
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Stats Section */}
         {stats && (;
           <div
@@ -451,9 +478,17 @@ const Hero: React.FC < HeroProps> = ({
 
                   {stat.label}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -537,6 +572,15 @@ const Hero: React.FC < HeroProps> = ({
 }
 export default Hero;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 }
@@ -603,7 +647,15 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

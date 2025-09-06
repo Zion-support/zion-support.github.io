@@ -1,5 +1,25 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import { useEffect, useState, FormEvent  } from 'react';
+import Link from 'next/link',
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+=======
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+=======
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
+=======
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -8,10 +28,25 @@ import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
+<<<<<<< HEAD
 
 import type {;
   AuthError,;
   User,;
+=======
+<<<<<<< HEAD
+import type {
+<<<<<<< HEAD
+  AuthError
+  User
+  AuthChangeEvent
+  Session;
+} from '@supabase/supabase-js';
+import {
+  logInfo
+  logWarn
+  logErrorToProduction;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   AuthError,
@@ -24,9 +59,13 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
@@ -41,14 +80,28 @@ import {;
 
 =======
 import {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from '@/components/ui/card';
 const LoginPage = () => {;
 
@@ -66,13 +119,22 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+<<<<<<< HEAD
 
+=======
+const LoginPage = () => {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 const LoginPage = () => {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -132,8 +194,16 @@ const LoginPage = () => {;
         if (mounted) {;
           setIsCheckingSession(false);
           setSessionChecked(true);
+<<<<<<< HEAD
           logInfo(;
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          logInfo(
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           );        }
       }
 
@@ -296,6 +366,7 @@ const LoginPage = () => {;
     }
   };
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       const data = await response && response.json();
@@ -303,6 +374,43 @@ const LoginPage = () => {;
         setProactiveResendMessage({;
           type: 'success',;
           text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`,;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      // Listener for auth state changes
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
+        if (!mounted) return,
+        logInfo('LoginPage: onAuthStateChange event:', {
+          event,
+          userId: session?.user?.id
+        }),
+        setUser(session?.user ?? null),
+        // If auth state changes after initial check, ensure sessionChecked is true
+        // This handles cases like login/logout in another tab.
+        if (!sessionChecked && event !== "INITIAL_SESSION") {
+           setSessionChecked(true),
+           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
+;
+      // Listener for auth state changes;
+      logInfo('LoginPage: Setting up onAuthStateChange listener.');
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {;
+        if (!mounted) return,;
+        logInfo('LoginPage: onAuthStateChange event:', {;
+          event,;
+          userId: session?.user?.id;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         });
       } else {;
         setProactiveResendMessage({;
@@ -318,6 +426,7 @@ const LoginPage = () => {;
 
       });
     } finally {;
+<<<<<<< HEAD
       setIsProactivelyResending(false);    }
 
 
@@ -397,6 +506,64 @@ const LoginPage = () => {;
             name: signInError && signInError.name || 'AuthApiError',;
             message: displayMessage,;
 
+=======
+      setIsResendingVerification(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },;
+  const handleProactiveResendVerification = async (e: FormEvent) => {;
+    e.preventDefault();
+    if (!proactiveResendEmail) {;
+      setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' });
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+    try {
+      const response = await fetch('/api/resend-verification-email', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ email: proactiveResendEmail });
+      }),;
+      const data = await response.json();
+      if (response.ok) {;
+        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` });
+      } else {;
+        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' });
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' });
+    } finally {;
+      setIsProactivelyResending(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const handleLogin = async (e: FormEvent) => {
+    e.preventDefault(),
+    setIsLoading(true),
+    setError(null),
+    setIsEmailUnverified(false),
+    setVerificationEmailSent(false),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
@@ -451,9 +618,87 @@ const LoginPage = () => {;
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+            if (
+              signInError.message
+                .toLowerCase()
+                .includes('invalid login credentials')
+            ) {
+              displayMessage = 'Invalid email or password. Please try again.';
+            } else if (
+              signInError.message
+                .toLowerCase()
+                .includes('network request failed')
+            ) {
+              displayMessage =
+                'Network error. Please check your internet connection and try again.';
+            } else if (
+              signInError.message.toLowerCase().includes('user disabled')
+            ) {
+              displayMessage =
+                'Your account has been disabled. Please contact support.';
+            }
+            // Add more specific checks here if needed for other Supabase error messages
+          }
+          setError({
+            name: signInError.name |'AuthApiError'
+            message: displayMessage
+          } as AuthError);
+        }
+      } else if (data.user) {
+        logInfo('Supabase sign-in successful, user:', { data: data.user });
+        setUser(data.user); // setUser to trigger useEffect for redirection        // Redirection is now handled by the useEffect hook
+      } else {
+        // Should not happen if signInError is null and data.user is null
+        logWarn('Supabase sign-in returned no error but no user.');
+        setError({
+          name: 'UnknownAuthError'
+          message: 'Login failed due to an unknown error. Please try again.'
+        } as AuthError);
+      }
+    } catch (catchedError: any) {
+      logErrorToProduction('Exception during Supabase sign-in:', {
+        data: catchedError
+      });
+      // Check if the caught error is a network error
+      let exceptionMessage = 'An unexpected error occurred. Please try again.';
+      if (
+        catchedError.message &&
+        catchedError.message
+          .toLowerCase()
+          .includes('networkerror when attempting to fetch resource')
+      ) {
+        exceptionMessage =
+          'Network error. Please check your internet connection and try again.';
+      } else if (catchedError.message) {
+        exceptionMessage = catchedError.message;
+      }
+      setError({
+        name: 'ExceptionError'
+        message: exceptionMessage
+      } as AuthError);
+    } finally {
+      setIsLoading(false);    }
+  }
+  // Auto-redirect to verification status page for unverified users after showing message
+  useEffect(() => {
+    if (isEmailUnverified && verificationEmailSent && email) {
+      const timer = setTimeout(() => {
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+    return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
@@ -856,10 +1101,18 @@ if ( {) {
 }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -916,9 +1169,98 @@ if ( {) {
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
       </div>
+<<<<<<< HEAD
 
 
   // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
+=======
+<<<<<<< HEAD
+    );  }
+=======
+    )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
+  if (sessionChecked && user && !isLoading) {
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
+          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
+        </div>
+      </div>
+<<<<<<< HEAD
+    );  }
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.
+  logInfo(
+    `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`
+  );
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.
+  // This is a safeguard against the component's content persisting on other auth routes.
+  if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
+    logWarn(
+      `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
+    );
+    return null; // Or a minimal loader/empty div  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    )
+    return undefined, // Explicitly return undefined if condition is not met;
+  }, [isEmailUnverified, verificationEmailSent, email, router]),;
+  // --- Rendering Logic ---;
+  // 1. Primary Loading State: During initial session check;
+  if (isCheckingSession) {;
+    logInfo('LoginPage: Rendering "Checking authentication..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <p className="text-gray-600">Checking authentication...</p>;
+          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  if (sessionChecked && user && !isLoading) {;
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>;
+          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading);
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.;
+  logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   // This is a safeguard against the component's content persisting on other auth routes.;
 
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
@@ -929,12 +1271,21 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     return null; // Or a minimal loader/empty div  }
@@ -942,6 +1293,16 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <Card className="w-full max-w-md">
+          <CardHeader>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -1002,6 +1363,7 @@ if ( {) {
                   Email
                 </label>
                 <Input
+<<<<<<< HEAD
 
 
                 />;
@@ -1014,6 +1376,22 @@ if ( {) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className='space-y-2'>
+                <label htmlFor='password' className='text-sm font-medium'>
+                  Password
+                </label>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <Input
                   id='password'
                   type='password'
@@ -1021,7 +1399,31 @@ if ( {) {
                   onChange={e => setPassword(e && e.target.value)}                  required;
 
 =======
+<<<<<<< HEAD
               
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  id="email"
+                  type="email"
+                  value={email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setEmail(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  required;
+                  disabled={isLoading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                />
+              </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -1046,10 +1448,18 @@ if ( {) {
                 Don't have an account?{' '}
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </Link>
               </p>
             </div>
@@ -1057,11 +1467,21 @@ if ( {) {
         </Card>
       </div>
     </>
+<<<<<<< HEAD
 
 
 =======
 
 
+=======
+<<<<<<< HEAD
+);
+};export default LoginPage;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   )
 },
@@ -1221,7 +1641,15 @@ if ( {) {
 =======
 },;
 export default LoginPage;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

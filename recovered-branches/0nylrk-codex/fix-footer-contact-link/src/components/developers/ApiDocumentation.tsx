@@ -1,7 +1,38 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {BookOpen, Code, Copy, Terminal} from "lucide-react";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {Badge} from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+=======
+import { Badge } from "@/components/ui/badge",
+import CodeBlock from "./CodeBlock",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function ApiDocumentation() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -70,10 +101,23 @@ function ApiDocumentation() {
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 
     'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'};
 
+=======
+<<<<<<< HEAD
+}
+response = requests.get(
+<<<<<<< HEAD
+    'https: //api.ziontechgroup.com/v1/jobs'
+    params={'limit': 10, 'category': 'development'}
+=======
+    'https: //api.ziontechgroup.com/v1/jobs',;
+    params={'limit': 10, 'category': 'development'};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     headers=headers
 )
 data = response.json()
@@ -193,10 +237,18 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }}
               response_examples={{
                 success: `{
@@ -237,8 +289,21 @@ print(data)`;
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  ];
+=======
+  ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   "meta": {
     "total": 42
     "page": 1
@@ -365,9 +430,17 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }}
               response_examples={{
                 success: `{
@@ -560,10 +633,21 @@ const data = await response.json(),
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 
 
 payload = {;
 
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+payload = {
+=======
+
+payload = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'budget': {
@@ -594,10 +678,18 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }}
               response_examples={{
                 success: `{
@@ -681,10 +773,23 @@ const data = await response.json(),
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
 
+=======
+<<<<<<< HEAD
+}
+response = requests.get(
+<<<<<<< HEAD
+    'https: //api.ziontechgroup.com/v1/talent'
+    params={'skills': 'react,typescript'}
+=======
+    'https: //api.ziontechgroup.com/v1/talent',;
+    params={'skills': 'react,typescript'};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     headers=headers
 )
 data = response.json()
@@ -772,10 +877,18 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }}
               response_examples={{
                 success: `{
@@ -804,8 +917,21 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  ],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  ];
+=======
+  ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   "meta": {
     "total": 28
     "page": 1
@@ -926,9 +1052,17 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               }}
               response_examples={{
                 success: `{
@@ -993,6 +1127,7 @@ print(data)`;
         "image_url": "https://example.com / portfolio / 123.jpg";
       }
     ];
+<<<<<<< HEAD
     "certifications": [;
       {
         "name": "AWS Certified Developer";
@@ -1005,6 +1140,13 @@ print(data)`;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }`;
               }}
@@ -1510,8 +1652,16 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   }
 }`
               }}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1615,6 +1765,15 @@ headers = {
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+payload = {
+=======
+payload = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -2182,7 +2341,25 @@ function EndpointSection(): any ({ ;
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;
         <div className="flex items-center">;
+<<<<<<< HEAD
 
+=======
+          <Badge;
+            variant="outline";
+            className={;
+              method === 'GET';
+                ? "border-green-500 text-green-400 font-mono";
+                : method === 'POST';
+                ? "border-blue-500 text-blue-400 font-mono";
+                : method === 'PUT';
+                ? "border-yellow-500 text-yellow-400 font-mono";
+                : "border-red-500 text-red-400 font-mono";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2341,6 +2518,7 @@ function EndpointSection() {
           />;
         </div>;
       )}
+<<<<<<< HEAD
 
 
       {responseExamples && (;
@@ -2402,16 +2580,44 @@ function EndpointSection() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+      {responseExamples && (
+        <div className="border-t border-zinc-800 p-4">
+          <h4 className="font-medium mb-2">Response</h4>
+          <CodeBlock
+            code={responseExamples.success}
+            language="json"
+          />
+        </div>
+      )}
+<<<<<<< HEAD
+    </div>
+  )
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

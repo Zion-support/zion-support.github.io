@@ -26,8 +26,32 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
     format: (format as any) || undefined,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
+<<<<<<< HEAD
+  };    search;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    sort;
+    order: (order as any) |'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
+<<<<<<< HEAD
+=======
+    filters,
+    format: (format as any) || undefined}
+}
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     filters
     format: (format as any) |undefined}
@@ -51,6 +75,7 @@ function toCsv(rows: any[]): string {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
 
 
@@ -64,6 +89,15 @@ export default async function handler(
   const type = (req.query.type as AdminType) || '';
 
 
+=======
+<<<<<<< HEAD
+) {
+  const type = (req.query.type as AdminType) |'';
+=======
+) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
 =======
@@ -81,6 +115,7 @@ export default async function handler(
   return lines && lines.join('\n')
 
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
@@ -90,6 +125,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const type = (req.query.type as AdminType) || '';
 
 
+=======
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const type = (req.query.type as AdminType) |'';
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
 
   try {
@@ -136,6 +181,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let filtered = all;
 
 
+<<<<<<< HEAD
+=======
+      }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -161,15 +215,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         );
 
         return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       }
 =======
 =======
 
       }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       return res.status(200).json({ items: pageItems, total });
     }
   }
@@ -214,18 +282,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
+<<<<<<< HEAD
   }
 
 
 
 =======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       return res.status(200).json({ item: updated });    }
 
     }
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -258,15 +340,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }return res && res.status (200) .send (toCsv (pageItems) );      return res && res.status(200).json({ ok: true })
     }
   }
+<<<<<<< HEAD
 
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+return res.status(405).json({ error: 'Method not allowed' });
+}return res.status (200) .send (toCsv (data |[]) );
+}return res.status (200) .send (toCsv (pageItems) );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
       const start = params.page * params.page_size;
       const end = start + params.page_size;
       const page_items = filtered.slice (start, end);
@@ -360,10 +454,19 @@ return res.status (405).json ({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
+
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

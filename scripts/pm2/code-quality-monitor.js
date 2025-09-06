@@ -62,6 +62,7 @@
 
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
+<<<<<<< HEAD
 
 
 =======
@@ -94,6 +95,43 @@ const monitor = new CodeQualityMonitor();
             message: 'Trailing spaces found',
             severity: 'low',
           }),
+=======
+monitor.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+};
+;
+  async analyzeFile(filePath) {;
+    try {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      const stats = fs.statSync(filePath);
+;
+      const analysis = {;
+        file: filePath;
+        size: stats.size;
+        lines: content.split('\n').length;
+        issues: [];
+      ;
+;
+      // Check for common code quality issues;
+      const lines = content.split('\n');
+;
+      lines.forEach((line, index) => {;
+        const lineNum = index + 1;
+;
+        // Trailing spaces;
+        if (line.match(/[ \t]+$/)) {;
+          analysis.issues.push({;
+            line: lineNum;
+            type: 'trailing-spaces';
+            message: 'Trailing spaces found';
+            severity: 'low';
+          });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         };
 ,
         // Long lines (over 120 characters),
@@ -478,9 +516,29 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 monitor.run().catch(error = > {; process.exit(1)});
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    } catch (error) {,;
+      this.log(`❌ Error running code quality: monitor: ${error.message}`),;
+      process.exit(1);
+    }
+  }
+},;
+,;
+// Run the code quality monitor,;
+const monitor = new CodeQualityMonitor(),;
+monitor.run().catch(error => {,;
+  process.exit(1);
+});
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

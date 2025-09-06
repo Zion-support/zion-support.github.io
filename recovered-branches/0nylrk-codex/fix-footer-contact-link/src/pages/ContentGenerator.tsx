@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -40,7 +46,41 @@ import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
+<<<<<<< HEAD
 
+=======
+  const { user, isLoading } = useAuth();
+  const navigate = useNavigate();
+  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
+  const [customPrompt, setCustomPrompt] = useState('');
+  const [topic, setTopic] = useState('');
+  const [autoPublish, setAutoPublish] = useState(false);
+  const [includeImage, setIncludeImage] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [previewContent, setPreviewContent] = useState<any>(null);
+  const [testEmail, setTestEmail] = useState('');
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { toast } from "sonner",
+import { Loader2 } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { useNavigate } from "react-router-dom";
+export default function ContentGenerator() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user, isLoading } = useAuth();
 
   const navigate = useNavigate();
@@ -61,11 +101,35 @@ export default function ContentGenerator() {;
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
+<<<<<<< HEAD
 
 
 =======
 
 
+=======
+<<<<<<< HEAD
+    }
+  }, [user, isLoading, navigate]);
+  const generateContent = async () => {
+    setIsGenerating(true);
+    setPreviewContent(null);
+    try {
+      const { data, error } = await supabase.functions.invoke('generate-content', {
+        body: {
+          contentType
+          prompt: customPrompt |undefined
+          topic: topic |undefined
+          autoPublish;
+          includeImage: contentType === 'blog' ? includeImage : false
+        }
+      });
+<<<<<<< HEAD
+      if (error) throw error;
+      setPreviewContent(data);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
@@ -133,9 +197,16 @@ export default function ContentGenerator() {;
     }
 
       }),
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       
       if (error) throw error,
       
@@ -161,12 +232,31 @@ export default function ContentGenerator() {;
     if (!previewContent) {
       toast.error("Generate newsletter content first");
       return
+<<<<<<< HEAD
 
   };
 
 =======
 
 
+=======
+<<<<<<< HEAD
+    }
+    try {
+      const { data, error } = await supabase.functions.invoke('send-newsletter', {
+        body: {
+          subject: previewContent.subject
+          previewText: previewContent.previewText
+          body: previewContent.body
+          testMode: true
+          testEmail
+        }
+      });
+<<<<<<< HEAD
+      if (error) throw error;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       }),;
       if (error) throw error,;
@@ -202,9 +292,16 @@ export default function ContentGenerator() {;
         }
 
       }),
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       
       if (error) throw error,
       
@@ -371,8 +468,16 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                         <Switch;
                           id="includeImage";
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

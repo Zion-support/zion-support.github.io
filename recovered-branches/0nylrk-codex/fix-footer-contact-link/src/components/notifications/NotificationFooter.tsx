@@ -4,11 +4,26 @@ import { Button  } from '@/components / ui / button';
 import { use_navigate  } from './react-router-dom';
 
 interface NotificationFooterProps {
+<<<<<<< HEAD
   on_close: () => void;
 }
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
+=======
+<<<<<<< HEAD
+  onClose: () => void;
+}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose
+}) => {
+  const navigate = useNavigate();
+  const handleViewAll = () => {
+    onClose();
+    navigate("/notifications");
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -17,7 +32,11 @@ import {useNavigate} from 'react-router-dom';
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -42,13 +61,29 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
         variant="link"
         size="sm"
         className="text-zion-slate-light text-xs"
+<<<<<<< HEAD
+=======
+        onClick={handleViewAll}
+<<<<<<< HEAD
+      >
+        View all notifications
+      </Button>
+    </div>
+<<<<<<< HEAD
+  );
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
         onClick={handleViewAll}>;
 =======
         onClick={handleViewAll}
 
   )
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       >;
 
@@ -56,11 +91,18 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

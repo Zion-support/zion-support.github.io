@@ -1,8 +1,35 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Card, CardContent} from "@/components/ui/card";
+import {useQuery} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {Skeleton} from "@/components/ui/skeleton";
+import {formatDistanceToNow} from "date-fns";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent } from "@/components/ui/card",
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+=======
+import { Skeleton } from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
 
@@ -111,8 +138,23 @@ import {formatDistanceToNow} from "date-fns";
         }
         icon={
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+        }
+      />
+    </div>
+  )
+<<<<<<< HEAD
+}
+interface StatCardProps {
+  title: string
+  value: React.ReactNode
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
@@ -311,10 +353,17 @@ if (throw lastEventError) {
       />;
     </div>;
   );
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 interface StatCardProps {;

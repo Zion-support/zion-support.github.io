@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 }
 import React from 'react';
@@ -58,6 +59,88 @@ import React from 'react';
 }</>) ;
 }{;
   /* Structured Data */ ;
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+{
+  /* Robots Meta */
+}{
+  noindex && <meta name="robots" content="noindex" />
+}{
+  nofollow && <meta name="robots" content="nofollow" />
+}{
+  !noindex && !nofollow && <meta name="robots" content="index, follow" />
+}{
+  /* Open Graph Meta Tags */
+}<meta property="og:title" content= {
+  fullTitle
+}/> <meta property="og:description" content= {
+  description
+}/> <meta property="og:type" content= {
+  type
+}/> <meta property="og:url" content= {
+  fullUrl
+}/> <meta property="og:image" content= {
+  fullImage
+}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
+  /* Twitter Card Meta Tags */
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
+  fullTitle
+}/> <meta name="twitter:description" content= {
+  description
+}/> <meta name="twitter:image" content= {
+  fullImage
+}/> {
+  /* Article Specific Meta Tags */
+}{
+  type === 'article' && (<> {
+  publishedTime && <meta property="article:published time" content= {
+<<<<<<< HEAD
+  publishedTime
+}/>
+}{
+  modifiedTime && <meta property="article:modified time" content= {
+  modifiedTime
+}/>
+}{
+  author && <meta property="article:author" content= {
+  author
+}/>
+}{
+  section && <meta property="article:section" content= {
+  section
+=======
+  publishedTime 
+}/>
+}{
+  modifiedTime && <meta property="article:modified time" content= {
+  modifiedTime 
+}/>
+}{
+  author && <meta property="article:author" content= {
+  author 
+}/>
+}{
+  section && <meta property="article:section" content= {
+  section 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}/>
+}{
+  tags.map ( (tag, index) => (<meta key= {
+  index
+}property="article:tag" content= {
+<<<<<<< HEAD
+  tag
+}/>
+}</>)
+=======
+  tag 
+}/>
+}</>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}{
+  /* Structured Data */
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }<script
 }] 
 
@@ -313,10 +396,18 @@ const SEO: React.FC < SEOProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -492,10 +583,18 @@ const SEO: React.FC < SEOProps> = ({
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon && favicon.ico' />;
       <link
@@ -560,11 +659,16 @@ export default SEO;  );
 
 
 export default SEO;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
     </Head>
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -680,3 +784,11 @@ export default SEO);
 export default SEO;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </Head>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

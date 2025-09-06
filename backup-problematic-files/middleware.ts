@@ -1,9 +1,18 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+<<<<<<< HEAD
 
 
 export function middleware(request: NextRequest) {;
 
+=======
+<<<<<<< HEAD
+export function middleware(request: NextRequest) {
+=======
+
+export function middleware(request: NextRequest) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const response = NextResponse.next();
 
 
@@ -49,7 +58,17 @@ return response;
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export const config = {
+<<<<<<< HEAD
 
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
 };
 
+=======
+<<<<<<< HEAD
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
+}
+=======
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

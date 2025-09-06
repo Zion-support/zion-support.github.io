@@ -1,12 +1,50 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Link, useLocation} from "react-router-dom";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { Link, useLocation } from "react-router-dom",
+import { Search } from "lucide-react",
+<<<<<<< HEAD
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+=======
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface ApiDocsLayoutProps {
+  children: React.ReactNode
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
+  const location = useLocation();
+  const currentPath = location.pathname;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const location = useLocation(),
@@ -151,8 +189,15 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 }
 
 ;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default ApiDocsLayout;
 
 =======

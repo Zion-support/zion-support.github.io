@@ -37,8 +37,16 @@ import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -53,10 +61,35 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
+<<<<<<< HEAD
 
   const { ;
     keys;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const {
+    keys;
+
+    loading
+    newApiKey;
+    fetchApiKeys
+    createApiKey
+    regenerateApiKey
+
+    revokeApiKey;
+    clearNewApiKey
+  } = useApiKeys();
+  const [showCreateDialog, setShowCreateDialog] = useState(false);
+
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
+=======
+  const { ;
+    keys;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   const { 
     keys,
@@ -193,7 +226,57 @@ export function ApiKeysManager() {
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                        <Checkbox
+                          id={scope.value}
+=======
+                        <Checkbox 
+                          id={scope.value} 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",;
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
+import { format } from "date-fns",;
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Label } from "@/components/ui/label",;
+import { Badge } from "@/components/ui/badge",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
+import CodeBlock from "./CodeBlock",;
+export function ApiKeysManager() {;
+  const {;
+    keys,;
+    loading,;
+    newApiKey,;
+    fetchApiKeys,;
+    createApiKey,;
+    regenerateApiKey,;
+    revokeApiKey,;
+    clearNewApiKey;
+  } = useApiKeys(),;
+  const [showCreateDialog, setShowCreateDialog] = useState(false),;
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
+  // Create key form state;
+  const [keyName, setKeyName] = useState(""),;
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
+  // Load keys on mount;
+  useState(() => {;
+    fetchApiKeys();
+  }),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
 
@@ -287,6 +370,7 @@ export function ApiKeysManager() {
                 <div className="space-y-2">;
                   <Label>Scopes</Label>;
                   <div className="grid gap-2 pt-2">;
+<<<<<<< HEAD
                     {scopeOptions && scopeOptions.map((scope) => (;
                       <div key={scope && scope.value} className="flex items-center space-x-2">;
                         <Checkbox
@@ -300,6 +384,17 @@ export function ApiKeysManager() {
                         <Checkbox 
                           id={scope.value} 
 
+=======
+                    {scopeOptions.map((scope) => (;
+                      <div key={scope.value} className="flex items-center space-x-2">;
+                        <Checkbox;
+                          id={scope.value} ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -551,6 +646,7 @@ function ApiKeysManager() {
                   <DropdownMenu>;
                     <DropdownMenuTrigger as_child>;
 
+<<<<<<< HEAD
                       <Button variant="ghost" size="icon">;
                         <MoreVertical size={16} />;
                       </Button>;
@@ -635,6 +731,13 @@ function ApiKeysManager() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}

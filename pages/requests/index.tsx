@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import EmptyState from '../../components / ui / EmptyState';
 export default /**
@@ -5,6 +6,12 @@ export default /**
  */
 function RequestsPage() {
 
+=======
+import EmptyState from '../../components/ui/EmptyState'
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default function RequestsPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div>;
       <h2 className=&quot;text - xl font - semibold mb - 2&quot;>Requests</h2>;
@@ -12,14 +19,21 @@ function RequestsPage() {
     </div>);
 }
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export default function RequestsPage() {
   return (;
     <div>;
       <h2 className=&quot;text-xl font-semibold mb-2&quot;>Requests</h2>
       <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Submit a quote or respond to invitations to see them here.&quot; ctaLabel=&quot;Submit a quote&quot; ctaHref=&quot;/dashboard&quot; />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export default function RequestsPage() {_return (
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

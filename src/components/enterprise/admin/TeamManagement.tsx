@@ -1,17 +1,222 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from 'react'; import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogFooter
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+=======
+import React, { useState } from 'react'; import {
+=======
+import {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+<<<<<<< HEAD
+  DialogTrigger,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Badge } from '@/components/ui/badge'
+import { Trash, Mail, UserPlus } from 'lucide-react'
+import { toast } from '@/hooks/use-toast'
+  DialogTrigger} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Badge } from "@/components/ui/badge"
+import { toast } from "@/hooks/use-toast"
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false)
+  const [newMemberEmail, setNewMemberEmail] = useState('')
+<<<<<<< HEAD
+  // Mock team members data
+  const teamMembers = [
+    {
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      status: 'active'
+      lastActive: '2 hours ago'
+    }
+    {
+      id: 2
+      name: 'Jamie Smith'
+      email: 'jamie@example.com'
+      role: 'Recruiter'
+      status: 'active'
+      lastActive: 'Yesterday'
+    }
+    {
+      id: 3
+      name: 'Sam Williams'
+      email: 'sam@example.com'
+      role: 'Manager'
+      status: 'pending'
+      lastActive: 'Never'
+    }
+    {
+      id: 4
+      name: 'Taylor Brown'
+      email: 'taylor@example.com'
+      role: 'Viewer'
+      status: 'active'
+      lastActive: '3 days ago'
+    }
+  ]
+=======
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,;
+} from '@/components/ui/table';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import React, { useState } from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Badge } from "@/components/ui/badge",
+import { Trash, Mail, UserPlus } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
+export function TeamManagement() {
+  const [isAddingMember, setIsAddingMember] = useState(false),
+  const [newMemberEmail, setNewMemberEmail] = useState(""),
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // Mock team members data
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
+      status: "active",
+      lastActive: "2 hours ago"},
+    {
+      id: 2,
+      name: "Jamie Smith",
+      email: "jamie@example.com",
+      role: "Recruiter",
+      status: "active",
+      lastActive: "Yesterday"},
+    {
+      id: 3,
+      name: "Sam Williams",
+      email: "sam@example.com",
+      role: "Manager",
+      status: "pending",
+      lastActive: "Never"},
+    {
+      id: 4,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      name: 'Taylor Brown',
+      email: 'taylor@example.com',
+      role: 'Viewer',
+      status: 'active',
+      lastActive: '3 days ago',
+    },
+  ]
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      name: "Taylor Brown",
+      email: "taylor@example.com",
+      role: "Viewer",
+      status: "active",
+      lastActive: "3 days ago"}],
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        title: 'Email required'
+        description: 'Please enter an email address for the new team member.'
+        variant: 'destructive'
+      })
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
 
 
       return
+<<<<<<< HEAD
     }
     toast({
 
@@ -20,6 +225,25 @@
       description: `An invitation has been sent to ${newMemberEmail}`,
 
 
+=======
+=======
+        title: 'Email required',
+        description: 'Please enter an email address for the new team member.',
+        variant: 'destructive',
+      })
+      return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    toast({
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: 'Invitation sent'
+      description: `An invitation has been sent to ${newMemberEmail}`
+=======
+      title: 'Invitation sent',
+      description: `An invitation has been sent to ${newMemberEmail}`,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -143,8 +367,13 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 =======
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -152,7 +381,11 @@ if ( {) {
     }
 
     toast({
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -174,9 +407,15 @@ if ( {) {
       description: `A new invitation has been sent to ${memberEmail}`})
   },
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
@@ -210,7 +449,14 @@ if ( {) {
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
@@ -240,7 +486,14 @@ if ( {) {
 
 
       <div className="rounded-md border">
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
           <TableHeader>
@@ -256,7 +509,14 @@ if ( {) {
 
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-2">
@@ -268,7 +528,14 @@ if ( {) {
                           .map((n) => n[0])
                           .join("")}
                       </span>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <div>
@@ -285,7 +552,14 @@ if ( {) {
 
                     variant={member.status === "active" ? "default" : "outline"}
                   >
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {member.status}
                   </Badge>
@@ -301,7 +575,14 @@ if ( {) {
                         onClick={() => handleResendInvite(member.email)}
                       >
                         <Mail className="h-4 w-4 mr-1" />
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         Resend
                       </Button>
@@ -553,10 +834,47 @@ export function TeamManagement() {;
                     </div>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                <TableCell>{member.role}</TableCell>;
+                <TableCell>;
+                  <Badge;
+                    variant={member.status === "active" ? "default" : "outline"}
+                  >;
+                    {member.status}
+                  </Badge>;
+                </TableCell>;
+                <TableCell>{member.lastActive}</TableCell>;
+                <TableCell className="text-right">;
+                  <div className="flex justify-end gap-2">;
+                    {member.status === "pending" ? (;
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+                        onClick={() => handleResendInvite(member.email)}
+                      >;
+                        <Mail className="h-4 w-4 mr-1" />;
+                        Resend;
+                      </Button>;
+                    ) : (;
+                      <Button;
+                        variant="ghost";
+                        size="sm";
+                        className="text-destructive hover:text-destructive";
+                        onClick={() => handleRemoveMember(member.id)}
+                      >;
+                        <Trash className="h-4 w-4" />;
+                      </Button>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     )}
                   </div>;
                 </TableCell>;
@@ -637,6 +955,14 @@ export function TeamManagement() {;
 =======
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

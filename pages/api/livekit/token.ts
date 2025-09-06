@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 
@@ -70,9 +78,54 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { AccessToken  } from './livekit - server - sdk';
+=======
+      canPublishData: true,
+      canSubscribe: true
+    });
+
+    const token = await at.toJwt();
+
+    return res.status(200).json({
+      token,
+      url: LIVEKIT_HOST
+    });
+  } catch (err: any) {
+<<<<<<< HEAD
+=======
+    console.error("Token error", err);
+    return res.status(500).json({ error: "Failed to create token" });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { AccessToken } from 'livekit-server-sdk';
+const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
+const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
+const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || "";
@@ -108,6 +161,7 @@ if ( {) {
       identity: String (identity),
       name: name ? String (name) : String (identity),
       ttl: 60 * 60, // 1 hour;
+<<<<<<< HEAD
     });
 
 ;
@@ -154,6 +208,28 @@ if ( {) {
 
   }
 
+=======
+    }),;
+    at.addGrant({;
+      roomJoin: true,;
+      room: String(roomName);
+      canPublish: audioOnly ? false : true,;
+      canPublishData: true,;
+      canSubscribe: true}),;
+    const token = await at.toJwt();
+    return res.status(200).json({;
+      token;
+      url: LIVEKIT_HOST});
+  } catch (error) {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    console.error('Token error', err);
+    return res.status(500).json({ error: 'Failed to create token' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+<<<<<<< HEAD
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
   } catch (error) {
     console.error("Error:", error);
@@ -174,5 +250,15 @@ if ( {) {
 
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

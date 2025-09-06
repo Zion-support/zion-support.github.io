@@ -1,9 +1,16 @@
 ' \' \' \' \' \' \'"export\": const MobileLaunchPage = () => {\'';
+<<<<<<< HEAD
 
 
 
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
 
+=======
+<<<<<<< HEAD:src.pages.disabled/MobileLaunchPage.jsx
+<<<<<<< HEAD
+' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 ' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}

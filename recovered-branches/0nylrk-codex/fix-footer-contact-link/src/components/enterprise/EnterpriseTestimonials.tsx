@@ -4,6 +4,7 @@
 
 import React from "react";
 import { Quote } from "lucide-react";
+<<<<<<< HEAD
 
 import {;
   Carousel,;
@@ -42,12 +43,21 @@ const testimonials = [;
 ];
 =======
 
+=======
+import {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -95,8 +105,32 @@ export function EnterpriseTestimonials() {;
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+                        {testimonial.title}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center gap-2 mt-8">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
+        </Carousel>
+      </div>
+    </section>;
+  );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",;
 import { Quote } from "lucide-react",;
@@ -150,6 +184,7 @@ export function EnterpriseTestimonials() {;
                   </blockquote>;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
+<<<<<<< HEAD
 
 import React from './react';
 import { Quote  } from './lucide-react';
@@ -165,6 +200,13 @@ import {
 
 
 
+=======
+                      <img;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

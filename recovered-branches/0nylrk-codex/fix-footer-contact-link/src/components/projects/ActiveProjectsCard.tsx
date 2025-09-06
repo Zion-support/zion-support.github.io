@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {BriefcaseIcon, Clock} from "lucide-react";
@@ -8,7 +14,24 @@ import {Badge} from "@/components/ui/badge";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ActiveProjectsCard() {;
+<<<<<<< HEAD
 
+=======
+  const { projects, isLoading } = useProjects();
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useEffect, useState } from "react",
+import { Link } from "react-router-dom",
+import { BriefcaseIcon, Clock } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+export function ActiveProjectsCard() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { projects, isLoading } = useProjects();
 
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
@@ -81,10 +104,18 @@ export function ActiveProjectsCard() {;
           <div className="space-y-2">;
             {[1, 2].map(idx => (;
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ))}
           </div>;
         </CardContent>;

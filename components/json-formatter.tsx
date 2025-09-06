@@ -22,8 +22,26 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 
+=======
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
+<<<<<<< HEAD
+  Code
+  Copy
+  RefreshCw
+  CheckCircle
+  XCircle
+  ArrowRight
+  Download
+  Upload
+  Settings
+  Eye;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
@@ -44,8 +62,12 @@ import {
 
   Settings,;
   Eye,;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
@@ -550,7 +572,15 @@ export default function JSONFormatterPage() {
                   size="sm"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </div>
 =======
                   }`}>;
@@ -589,10 +619,22 @@ export default function JSONFormatterPage() {
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -730,7 +772,15 @@ export default function JSONFormatterPage() {
                     <Button
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 )}
               </div>
             </Card>
@@ -738,19 +788,35 @@ export default function JSONFormatterPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Features */}
 
 
 
               Professional JSON Formatting Features
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -962,6 +1028,44 @@ export default function JSONFormatterPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-teal-100 mb-8'>
+            Join thousands of developers and professionals who trust our JSON
+            formatter for their data needs.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-teal-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-teal-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-teal-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1077,6 +1181,7 @@ export default function JSONFormatterPage() {
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
 =======
+<<<<<<< HEAD
             {/* Output Section */}
             <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
               <div className='flex items - center justify - between mb - 6'>;
@@ -1373,3 +1478,11 @@ export default function JSONFormatterPage() {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -7,8 +7,42 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
+  BookOpen, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Menu,
   X,
   ChevronDown,
@@ -39,8 +73,12 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -260,6 +298,7 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+<<<<<<< HEAD
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -296,6 +335,18 @@ import { motion, AnimatePresence } from 'framer-motion';
     color: 'from - teal - 600 to - cyan - 600',
     description: 'Healthcare innovation',
 
+=======
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -572,9 +623,22 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+
+  ];
+=======
+<<<<<<< HEAD
+=======
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const contactInfo = {
@@ -590,6 +654,7 @@ const UltraAdvancedNavigation2026 = () => {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
 
+<<<<<<< HEAD
 =======
         { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
         { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
@@ -801,6 +866,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
       description: 'Enterprise solutions and infrastructure',
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Logo */}
 
       sub_items: [;
@@ -931,6 +1003,16 @@ const UltraAdvancedNavigation2026 = () =>: any {
                                 onClick={() => setActiveDropdown(null)}
 
 
+<<<<<<< HEAD
+=======
+            {/* Desktop Navigation */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -979,7 +1061,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Quick Links */}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  All Services
+                </Link>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -1112,10 +1204,18 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -1129,10 +1229,18 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1157,7 +1265,14 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
             onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
@@ -1188,6 +1303,14 @@ const UltraAdvancedNavigation2026 = () =>: any {
                       <span className='font-medium'>{item && item.name}</span>;
                     </Link>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         >
                           {subItem.name}
                         </Link>
@@ -1463,15 +1586,47 @@ export default UltraAdvancedNavigation2026;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
+<<<<<<< HEAD
 
 };
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default UltraAdvancedNavigation2026;    </>
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+<<<<<<< HEAD
+=======
+export default UltraAdvancedNavigation2026;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraAdvancedNavigation2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,6 +1,53 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+  ArrowRight,
+  Check,
+  ExternalLink,
+  Slack,
+  Briefcase,
+  Users,
+} from 'lucide-react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+  ArrowRight
+  Check
+  ExternalLink
+  Slack
+  Briefcase
+  Users
+} from 'lucide-react'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface IntegrationCardProps {
   title: string
   description: string
@@ -8,6 +55,7 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending'
   href?: string
   onConnect?: () => void
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -28,7 +76,23 @@ import {;
   Users,;
 } from 'lucide-react';
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function IntegrationCard({
+  title
+  description
+  icon
+  status = 'disconnected'
+  href
+  onConnect
+}: IntegrationCardProps) {
+=======
+}
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -43,6 +107,10 @@ interface IntegrationCardProps {;
 
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function IntegrationCard({
   title,
   description,
@@ -138,10 +206,18 @@ interface IntegrationCardProps {;
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 export function IntegrationCard(): any ({;
@@ -241,6 +317,14 @@ export function IntegrationCards() {
   );
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
@@ -260,8 +344,16 @@ export function IntegrationCards() {
         description="Sync leads and opportunities with Salesforce."
 
         icon={<Briefcase className="h-5 w-5" />}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         onConnect={() => logDebug('Connect Salesforce clicked')}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
@@ -283,17 +375,30 @@ export function IntegrationCards() {
 
 
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       />;
     </div>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react';
 import { Button } from '@/components / ui / button';
@@ -466,4 +571,7 @@ function IntegrationCards() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

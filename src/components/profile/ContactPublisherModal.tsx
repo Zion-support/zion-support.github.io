@@ -1,14 +1,34 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
+<<<<<<< HEAD
 
+=======
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+=======
+import React from 'react'
+import FocusLock from 'react-focus-lock'
+import {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -309,9 +329,17 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -339,8 +367,16 @@ import { LoginModal } from '@/components/auth/LoginModal';
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -363,8 +399,16 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
               render={({ field }: { field: any }) => (
                 <FormItem>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <FormLabel>Message</FormLabel>
                   <FormControl>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -381,14 +425,34 @@ import { LoginModal } from '@/components/auth/LoginModal';
               disabled = {!form && form.formState.isValid || isSubmitting,}>;
               <SendIcon className="mr-2" />;
               {isSubmitting ? 'Sending...' : 'Send Message'}
+<<<<<<< HEAD
 =======
 
+=======
+            </Button>
+          </form>
+        </Form>
+        </DialogContent>
+      </FocusLock>
+    </Dialog>
+    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+<<<<<<< HEAD
+    </>
+  ) </>
+  )
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </>;
   ) </>;
   );
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
       <FocusLock disabled={!is_open} return_focus>;
@@ -456,8 +520,18 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
+<<<<<<< HEAD
 
 
+=======
+    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
@@ -468,4 +542,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

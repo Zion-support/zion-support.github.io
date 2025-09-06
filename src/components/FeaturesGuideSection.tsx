@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Link from "next/link",
+import { GradientHeading } from "./GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from "./ui/button",
+import { fireEvent } from '@/lib/analytics',
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -28,9 +44,29 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+      id: 'ai-matcher'
+      title: 'AI Matcher'
+      description:
+        'Find the perfect match for your project needs with our intelligent AI-powered matching system.'
+      icon: <Sparkles className='h-10 w-10 text-zion-cyan' />
+      instructions: [
+<<<<<<< HEAD
+        'Navigate to the AI Matcher page from the homepage or marketplace'
+        'Fill in your project requirements and specifications'
+        'Review the AI-recommended matches tailored to your needs'
+        'Connect with matched talents or services directly'
+      ]
+      link: '/match'
+      buttonText: 'Try AI Matcher'
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -301,7 +337,11 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -1346,9 +1386,17 @@ function FeaturesGuideSection() {
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {feature.title}
               </TabsTrigger>
             ))}
@@ -1367,9 +1415,17 @@ function FeaturesGuideSection() {
               <TabsTrigger 
                 key={feature.id} 
                 value={feature.id}
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -1542,6 +1598,7 @@ function FeaturesGuideSection() {
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
+<<<<<<< HEAD
 
                     ))}
                   </ol>;
@@ -1561,6 +1618,13 @@ function FeaturesGuideSection() {
               onClick = {() => fireEvent('explore_marketplace_click'),}
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     ))}
                   </ol>
                 </div>
@@ -1572,9 +1636,17 @@ function FeaturesGuideSection() {
 
         
         <div className="mt-12 text-center">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
@@ -1589,10 +1661,18 @@ function FeaturesGuideSection() {
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </Link>
           </Button>
         </div>
@@ -1683,6 +1763,18 @@ function FeaturesGuideSection() {
 
   )
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  )
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

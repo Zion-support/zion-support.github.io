@@ -1,5 +1,34 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+}
+export const MobileFeatureShowcase: React.FC = () => {
+  const features = [
+    {
+      icon: <Users className="h-8 w-8 text-zion-cyan" />
+      title: "Hire from Anywhere"
+      description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
+    }
+=======
+<<<<<<< HEAD
+import React from "react",
+import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+import React from "react",
+import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -7,9 +36,17 @@
 
 
     },
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
@@ -17,9 +54,17 @@
 
 
     },
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
@@ -27,9 +72,17 @@
 
 
     },
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
@@ -98,6 +151,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
   ],
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -106,15 +160,57 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <section id="features" className="py-16 bg-zion-blue">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+            Everything You Need On The Go
+          </h2>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+            The Zion mobile app brings the power of our AI marketplace to your pocket with these key features
+          </p>
+        </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {features.map((feature, index,) => (
+            <div
+              key={index}
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"            >
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
         
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={index} 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
+            >
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"            >
+=======
+              className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
+            >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <div className="mb-4">
 =======
     <section id="features" className="py - 16 bg - zion - blue">;
@@ -141,11 +237,30 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
+<<<<<<< HEAD
 
 '"},
 ;
 };
 
+=======
+<<<<<<< HEAD
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+<<<<<<< HEAD
+'"}
+}
+
+=======
+'"},
+;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
@@ -207,8 +322,13 @@ export const MobileFeatureShowcase: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -221,4 +341,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

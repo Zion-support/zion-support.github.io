@@ -13,6 +13,7 @@ export default function ApiDocsRedirect() {;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
+<<<<<<< HEAD
 
 
 
@@ -36,6 +37,23 @@ export default /**
  * ApiDocsRedirect - Function description
  */
 function ApiDocsRedirect() {
+=======
+<<<<<<< HEAD
+      destination: '/developers/docs'
+      permanent: true
+    }
+  };      permanent: true}}
+}
+=======
+      destination: '/developers/docs',
+      permanent: true,
+    },;
+  };      permanent: true}}
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export default function ApiDocsRedirect() {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return null;
 }
 
@@ -43,5 +61,9 @@ function ApiDocsRedirect() {
 
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

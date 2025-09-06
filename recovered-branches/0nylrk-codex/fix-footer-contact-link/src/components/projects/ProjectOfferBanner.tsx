@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -7,6 +13,24 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
+=======
+  const navigate = useNavigate();
+  const { projects, isLoading } = useProjects();
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Bell, Calendar, X } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+export function ProjectOfferBanner() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
@@ -21,8 +45,16 @@ export function ProjectOfferBanner() {;
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
 
+<<<<<<< HEAD
 
 
+=======
+    return null
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -55,9 +87,16 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

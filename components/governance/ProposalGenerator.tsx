@@ -29,17 +29,39 @@ export type ProposalType =;
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
+<<<<<<< HEAD
 
 
 export type ProposalForm = {;
 
 =======
+<<<<<<< HEAD
+export type ProposalForm = {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 export type ProposalForm = {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   targetInstitution: string;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  targetInstitution: string;
+  type: ProposalType;
+  regionalScope: string;
+  budgetOrGoals: string;
+  supportingMultiverses: string;
+  language?: string;
+  customPrompt?: string;};export type ProposalForm = {
+<<<<<<< HEAD
+  targetInstitution: string
+  type: ProposalType
+  regionalScope: string
+  budgetOrGoals: string
+  supportingMultiverses: string
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 export type ProposalForm = {
@@ -58,11 +80,29 @@ export type ProposalForm = {
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,;
+<<<<<<< HEAD
 
 
   language?: string;
   customPrompt?: string
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  language?: string;
+  customPrompt?: string
+}
+export default function ProposalGenerator() {
+  const [form, setForm] = useState<ProposalForm>({
+    targetInstitution: 'UNDP'
+    type: 'Workforce Dev'
+    regionalScope: 'Global'
+    budgetOrGoals: ''
+    supportingMultiverses: ''
+    language: 'English'
+    customPrompt:
+<<<<<<< HEAD
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = {
@@ -97,12 +137,16 @@ export default function ProposalGenerator() {;
     language: 'English',;
     customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
+<<<<<<< HEAD
 
 =======
 
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -151,6 +195,17 @@ export default function ProposalGenerator() {;
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
+<<<<<<< HEAD
+=======
+=======
+      setIsGenerating(false);    }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 =======
@@ -185,17 +240,30 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Export failed')
     }
+<<<<<<< HEAD
   }
 =======
 
 
 =======
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       setStatusMessage('Export failed');    }
 
     }
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
@@ -272,6 +340,7 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');    }
   }
   return (
+<<<<<<< HEAD
 
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -281,6 +350,28 @@ export default function ProposalGenerator() {;
       console && console.error(e);
       setStatusMessage('Submission failed');
 
+=======
+    <div className='space-y-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div className='space-y-4'>      const data = await res.json();
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
+    } catch (e) {
+      console.error(e);
+<<<<<<< HEAD
+
+      setStatusMessage('Submission failed')
+=======
+      setStatusMessage('Submission failed')
+=======
+        <div className='space-y-4'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
   return (
@@ -489,6 +580,7 @@ export default function ProposalGenerator() {;
 
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -507,6 +599,91 @@ export default function ProposalGenerator() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              onClick={handleGenerate}
+              disabled={isGenerating}
+            >
+              {isGenerating ? 'Generating...' : 'Generate Draft'}
+            </button>
+            <button
+              className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
+              onClick={handleExport}
+              disabled={!draftMarkdown}
+            >
+              Export (PDF/JSON/MD)
+            </button>
+            <button
+              className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
+              onClick={handleSubmitBridge}
+              disabled={!draftMarkdown}
+            >
+              Submit Bridge
+            </button>
+          </div>
+          {statusMessage && (
+            <p className='text-sm text-gray-600'>{statusMessage}</p>
+          )}
+          {exportLinks && (
+            <div className='text-sm space-y-1'>
+              {exportLinks.pdfUrl && (
+                <div>
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks.pdfUrl}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    PDF
+                  </a>                </div>
+              )}
+              {exportLinks.mdUrl && (
+                <div>          {exportLinks && (
+            <div className="text-sm space-y-1">
+              {exportLinks.pdfUrl && (
+                <div>
+                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
+                </div>
+              )}
+              {exportLinks.mdUrl && (
+                <div>
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks.mdUrl}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Markdown
+                  </a>                </div>
+              )}
+              {exportLinks.jsonUrl && (
+                <div>                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
+                </div>
+              )}
+              {exportLinks.jsonUrl && (
+                <div>
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks.jsonUrl}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    JSON
+                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
+                </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               )}
             </div>;
           )}
@@ -519,6 +696,7 @@ export default function ProposalGenerator() {;
 
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
+<<<<<<< HEAD
 
 
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
@@ -526,6 +704,17 @@ export default function ProposalGenerator() {;
         </div>;
       </div>;
     </div>;
+=======
+            onChange={(e) => setDraftMarkdown(e.target.value)}
+          />
+        </div>
+      </div>
+    </div>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
 
@@ -533,12 +722,16 @@ export default function ProposalGenerator() {;
 
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   custom_prompt?: string;
@@ -904,3 +1097,7 @@ function handleSubmitBridge() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

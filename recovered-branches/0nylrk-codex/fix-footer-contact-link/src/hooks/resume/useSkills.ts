@@ -1,13 +1,29 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Skill  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useSkills() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,9 +32,18 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to add skills')
       return false
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -33,9 +58,16 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to add skills'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -73,9 +105,25 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+  }
+  const deleteSkill = async (skillId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete skills')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -102,9 +150,16 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -130,9 +185,18 @@ export function useSkills() {;
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
 
 
 
+=======
+    deleteSkill
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -162,9 +226,16 @@ if ( {) {
     error;
     addSkill;
     deleteSkill;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

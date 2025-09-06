@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export const metadata = {;
   title: "About | Zion Tech Group",;
@@ -5,11 +6,22 @@ export const metadata = {;
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
 =======
+export const metadata = {
+  title: "About | Zion Tech Group",
+  description:
+<<<<<<< HEAD
+    "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
   description:
 
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 export default function AboutPage() {;
   return (

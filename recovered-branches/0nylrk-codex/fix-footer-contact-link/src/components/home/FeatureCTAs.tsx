@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
+<<<<<<< HEAD
 
 import React from './react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -22,6 +31,11 @@ export /**
  */
 function FeatureCTAs() {
   const features = [;
+=======
+<<<<<<< HEAD
+export function FeatureCTAs() {
+  const features = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       title: "AI Talent Matching",
       description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
@@ -43,9 +57,19 @@ function FeatureCTAs() {
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
+<<<<<<< HEAD
 
 
 
+=======
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
+      link: "/services"
+      badge: "New"
+      details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -66,9 +90,16 @@ import {
   Building,
   Clock
 } from "lucide-react",
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function FeatureCTAs() {
   const features = [
@@ -466,8 +497,16 @@ export function FeatureCTAs() {;
 
                   {feature.icon}
                   {feature.badge && (
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

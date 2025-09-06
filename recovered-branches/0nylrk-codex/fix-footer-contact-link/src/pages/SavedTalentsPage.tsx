@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -10,15 +16,51 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
+<<<<<<< HEAD
 
+=======
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { TalentCard } from "@/components/talent/TalentCard",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+import { toast } from "@/components/ui/use-toast";
+import { useNavigate } from "react-router-dom";
+export default function SavedTalentsPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+export default function SavedTalentsPage() {
+  const { user } = useAuth(),
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const navigate = useNavigate(),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   useEffect(() => {;
@@ -122,6 +164,7 @@ if ( {) {
 }
           throw error;
         }
+<<<<<<< HEAD
         // Check condition
 if ( {) {
   $2
@@ -136,6 +179,13 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       } catch (error) {
 
         console.error ("Error fetching saved talents:", error);
@@ -176,9 +226,27 @@ if ( {) {
       if (!user) {
         console.warn("User not authenticated.")
         return
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+      }
+      if (isCurrentlySaved) {
+        // Remove from saved talents
+        const { error } = await supabase
+          .from('saved_talents')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('talent_id', talentId);
+        if (error) {
+          throw error
+<<<<<<< HEAD
+        }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
@@ -217,9 +285,16 @@ if ( {) {
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -569,9 +644,17 @@ if ( {) {
 =======
             {savedTalents.map((talent) => (;
               <TalentCard;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 key={talent.id}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}

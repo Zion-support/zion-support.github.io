@@ -1,13 +1,29 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useCallback  } from 'react';
+import { PortfolioProject  } from '@/types/resume';
+import { supabase  } from '@/integrations/supabase/client';
+import { useAuth  } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+export function usePortfolio() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -126,9 +142,16 @@ export function usePortfolio() {;
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -218,6 +241,7 @@ if ( {) {
 
 
         variant: "destructive"
+<<<<<<< HEAD
 =======
           demo_url: project.demo_url,
           pdf_url: project.pdf_url;
@@ -251,6 +275,25 @@ if (throw error) {
       setIsLoading(false)
 
 
+=======
+      }),
+      return null
+    } finally {
+      setIsLoading(false)
+<<<<<<< HEAD
+    }
+  }
+  const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update a portfolio project')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -294,9 +337,16 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update a portfolio project'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -378,6 +428,7 @@ if ( {) {
 
 
         variant: "destructive"
+<<<<<<< HEAD
 =======
           demo_url: project.demo_url,
           pdf_url: project.pdf_url;
@@ -411,6 +462,25 @@ if (throw error) {
       setIsLoading(false)
 
 
+=======
+      }),
+      return false
+    } finally {
+      setIsLoading(false)
+<<<<<<< HEAD
+    }
+  }
+  const deleteProject = async (projectId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete a portfolio project')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -453,9 +523,16 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete a portfolio project'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -604,8 +681,16 @@ if (throw error) {
     addProject;
     updateProject;
     deleteProject;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

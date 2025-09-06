@@ -12,9 +12,83 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
+=======
+import {
+<<<<<<< HEAD
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Phone
+  Zap
+  DollarSign
+  Shield
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Sparkles
+  Globe
+  Atom
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Crown
+  Award
+  Target
+  Users
+  Clock
+  Globe2;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+
+=======
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Crown,
+  Award,
+  Target,
+  Users,
+  Clock,;
+  Globe2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
@@ -582,8 +656,16 @@ export default function Revolutionary2028Pricing() {
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     <Link
                       href={tier && tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
@@ -601,10 +683,18 @@ export default function Revolutionary2028Pricing() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Service Pricing */}
 
 
@@ -710,6 +800,7 @@ export default function Revolutionary2028Pricing() {
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                     viewport={{ once: true }}
 
+<<<<<<< HEAD
                     className="group relative">;
                     <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">;
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
@@ -742,6 +833,13 @@ export default function Revolutionary2028Pricing() {
                           <Link
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                           </div>
                         </div>
                       </div>
@@ -760,13 +858,29 @@ export default function Revolutionary2028Pricing() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Value Proposition */}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -893,16 +1007,32 @@ export default function Revolutionary2028Pricing() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -958,7 +1088,15 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1015,7 +1153,15 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1085,20 +1231,94 @@ export default function Revolutionary2028Pricing() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
+<<<<<<< HEAD
+=======
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                Get Started
+              </span>
+              ?
+            </h2>
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
+              Join hundreds of companies already leveraging our futuristic
+              services to gain competitive advantages and drive innovation.
+            </p>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+              <Link
+                href='/contact'
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'
+              >
+                <span>Start Free Trial</span>
+                <ArrowRight className='w-5 h-5' />
+              </Link>
+              <Link
+                href='/contact'
+                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
+              >
+                <span>Schedule Demo</span>
+                <Clock className='w-5 h-5' />
+              </Link>
+            </div>
+            <div className='flex items-center justify-center space-x-8 text-purple-300'>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>30-Day Free Trial</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />
+                <span>No Credit Card Required</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>Cancel Anytime</span>              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>Cancel Anytime</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <UltraFuturisticFooter2028 />
+<<<<<<< HEAD
+    </>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+    </>;
+);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
 =======
@@ -1264,7 +1484,13 @@ export default function Revolutionary2028Pricing() {
 
     </>
   );
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

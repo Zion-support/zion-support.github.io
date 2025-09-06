@@ -15,11 +15,19 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   try {
 
     const { content, enhancementType, context } = await req && req.json();
@@ -36,10 +44,18 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     if (!content) {
       throw new Error("Content is required")
@@ -211,12 +227,25 @@ if ( {) {
       JSON.stringify ({
         error: error.message});
       {
+<<<<<<< HEAD
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
 =======
 
 
+=======
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    )
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+});
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     // Determine the system prompt based on enhancement type;
@@ -275,10 +304,17 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 ;

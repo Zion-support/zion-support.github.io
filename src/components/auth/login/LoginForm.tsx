@@ -1,12 +1,51 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { useState } from "react";
+import { useRouter  } from 'next/router';
+=======
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useForm, ControllerRenderProps } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { LogIn, User, Eye, EyeOff } from 'lucide-react'
+import { fireEvent } from '@/lib/analytics'
+import { useAuth } from '@/context/auth/AuthProvider'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { useState } from "react"
+import { useForm, ControllerRenderProps } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+import { useAuth } from "@/context/auth/AuthProvider"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+
+import { useState } from "react",
+import { useRouter } from 'next/router',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { use_router } from 'next / router';
@@ -25,6 +64,24 @@ import { z  } from './zod';
 import { use_auth  } from '@/context / auth / AuthProvider';
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+=======
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {
   Form,
   FormControl,
@@ -32,6 +89,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
+<<<<<<< HEAD
 } from '@/components / ui / form';
 import { Alert, AlertDescription } from '@/components / ui / alert';
 import Link from 'next / link';
@@ -89,6 +147,30 @@ if ( {) {
             error_message =;
               'Your email is not confirmed. Please check your inbox for a confirmation link.';
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/form'
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import Link from 'next/link';
+import { Checkbox } from '@/components/ui/checkbox';// Form validation schema
+const loginSchema = z.object({
+  email: z
+    .string()
+    .email('Please enter a valid email')
+    .min(1, 'Email is required')
+  password: z.string().min(6, 'Password must be at least 6 characters')
+  rememberMe: z.boolean()
+})
+type LoginFormValues = z.infer<typeof loginSchema>
+export function LoginForm() {
+  const { isLoading, login } = useAuth()
+  const [showPassword, setShowPassword] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isResending, setIsResending] = useState(false)
+  const [verificationMessage, setVerificationMessage] = useState('')
+  const router = useRouter()
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -132,7 +214,11 @@ import {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -172,9 +258,35 @@ export function LoginForm() {
       // Pass email and password to the login function
 
       const result = await login(data.email, data.password, data.rememberMe),
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+<<<<<<< HEAD
+          if (
+            result.error.message.toLowerCase().includes('email not confirmed')
+          ) {
+            errorMessage =
+              'Your email is not confirmed. Please check your inbox for a confirmation link.'
+=======
+          if (result.error.message.toLowerCase().includes("email not confirmed")) {
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      if (result?.error) {
+        let errorMessage = "Login failed. Please try again.", // Default generic error
+        if (result?.error && result?.error?.message) {
+          if (result.error.message.toLowerCase().includes("email not confirmed")) {
+            errorMessage = "Your email is not confirmed. Please check your inbox for a confirmation link."
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           } else {
             error_message = result.error.message;
           }
@@ -338,6 +450,7 @@ export function LoginForm() {;
     router && router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   };
 
+<<<<<<< HEAD
 
         onSubmit={form && form.handleSubmit(onSubmit, errors => {;
           const firstError = Object && Object.keys(errors)[0] as keyof LoginFormValues;
@@ -378,6 +491,13 @@ if ( {) {
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -401,9 +521,17 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <FormControl>
                 <div className='relative'>
 =======
@@ -467,7 +595,14 @@ if ( {) {
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -494,7 +629,14 @@ if ( {) {
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </FormControl>
@@ -606,7 +748,18 @@ if ( {) {
         />;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
 
+=======
+          name="rememberMe"
+          render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <FormControl>
 =======
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
@@ -622,8 +775,16 @@ if ( {) {
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
                 />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
@@ -773,8 +934,16 @@ if ( {) {
             className="w-1/2 ml-2"
             onClick={handleCheckStatus}
           >
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Check status
           </Button>
         </div>
@@ -787,11 +956,33 @@ if ( {) {
       </form>
     </Form>
   )
+<<<<<<< HEAD
 
 
 return;
 
 
+=======
+<<<<<<< HEAD
+}else {
+  fireEvent ('login', {'
+  method: 'email'
+})
+}finally {
+  setIsSubmitting (false)
+}
+const handleResendEmail = async () => {'
+  const email = form.getValues ('email')
+if (!email) {'
+  form.setError ('root', {'
+  message: 'Please enter your email address.'
+})
+<<<<<<< HEAD
+return
+=======
+return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -820,11 +1011,19 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
+<<<<<<< HEAD
 
 
 return;
 
 
+=======
+<<<<<<< HEAD
+return
+=======
+return;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
@@ -972,7 +1171,15 @@ return;
 =======
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

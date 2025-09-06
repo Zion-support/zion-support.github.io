@@ -1,8 +1,21 @@
 
+<<<<<<< HEAD
 =======
 
 
 
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+import {
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+  DialogDescription;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -11,8 +24,12 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from 'react',
 import {
@@ -31,7 +48,14 @@ import { TalentProfile } from "@/types/talent",
 
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface MessageTalentModalProps {
 
@@ -41,9 +65,27 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function MessageTalentModal({;
+  talent;
+  isOpen;
+  onClose;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function MessageTalentModal({
+  talent,
+  isOpen,
+  onClose,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   jobTitle
 }: MessageTalentModalProps) {
 
@@ -306,9 +348,17 @@ export function MessageTalentModal({;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>

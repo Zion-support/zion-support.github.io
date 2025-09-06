@@ -1,12 +1,27 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 
 import {useState, useEffect} from 'react';
@@ -19,6 +34,7 @@ import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
 
 interface WizardStep {
+<<<<<<< HEAD
 
 import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib/utils';
@@ -48,6 +64,10 @@ export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }
   const { user } = useAuth();
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -69,7 +89,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
@@ -95,8 +119,30 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+    url: string
+  }
+  skipText?: string
+}
+interface OnboardingWizardProps {
+
+  type: 'client' | 'talent'
+  onComplete: () => void
+  onSkip: () => void
+
+  className?: string
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
 
@@ -256,9 +302,79 @@ function OnboardingWizard() {
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+        text: "Enable Matchmaking"
+        url: "/talent-dashboard"
+      }
+    }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ];
+  const steps = type === 'client' ? clientSteps : talentSteps;
+  // Navigate to the specified URL
+  const handleAction = () => {
+    if (currentStep < steps.length - 1) {
+      navigate(steps[currentStep].action.url);
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      navigate(steps[currentStep].action.url);
+      onComplete()
+    }
+  }
+  // Skip the current step
+  const handleSkip = () => {
+    if (currentStep < steps.length - 1) {
+      setCurrentStep(currentStep + 1)
+    } else {
+      // Last step
+      onSkip()
+    }
+<<<<<<< HEAD
+  }
+=======
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ],;
+  const steps = type === 'client' ? clientSteps : talentSteps,;
+  // Navigate to the specified URL;
+  const handleAction = () => {;
+    if (currentStep < steps.length - 1) {;
+      navigate(steps[currentStep].action.url),;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      navigate(steps[currentStep].action.url),;
+      onComplete();
+    }
+  },;
+  // Skip the current step;
+  const handleSkip = () => {;
+    if (currentStep < steps.length - 1) {;
+      setCurrentStep(currentStep + 1);
+    } else {;
+      // Last step;
+      onSkip();
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

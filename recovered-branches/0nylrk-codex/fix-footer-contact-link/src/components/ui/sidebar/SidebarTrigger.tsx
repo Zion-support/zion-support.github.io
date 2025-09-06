@@ -1,23 +1,41 @@
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
 import {useSidebar} from "./sidebar-context";
 import {cn} from "@/lib/utils";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from "lucide-react",
 import { useSidebar } from "./sidebar-context",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
@@ -32,10 +50,37 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
     <Button
       variant="ghost"
       size="icon"
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Menu, X } from "lucide-react",;
+import { useSidebar } from "./sidebar-context",;
+import { cn } from "@/lib/utils",;
+interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {;
+  className?: string;
+}
+;
+export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
+  const { open, toggleSidebar } = useSidebar();
+  return (;
+    <Button;
+      variant="ghost";
+      size="icon";
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;

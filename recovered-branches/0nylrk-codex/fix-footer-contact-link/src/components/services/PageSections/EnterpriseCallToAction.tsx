@@ -1,9 +1,20 @@
 
+<<<<<<< HEAD
 
 
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+=======
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -12,7 +23,10 @@ import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function EnterpriseCallToAction() {
   return (
     <div className="mt-12 text-center">
@@ -25,9 +39,25 @@ export function EnterpriseCallToAction() {
         Need volume pricing or custom SLAs? Contact our enterprise sales team.
       </p>
     </div>
+<<<<<<< HEAD
 
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+  )
+=======
+  )
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function EnterpriseCallToAction() {;
   return (
     <div className="mt-12 text-center">;
@@ -71,6 +101,13 @@ function EnterpriseCallToAction() {
 
 }
 ;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

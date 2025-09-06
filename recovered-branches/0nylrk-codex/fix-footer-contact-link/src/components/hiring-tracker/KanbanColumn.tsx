@@ -1,8 +1,35 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Droppable} from "react-beautiful-dnd";
+import {JobApplication} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {CandidateCard} from "./CandidateCard";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Droppable } from "react-beautiful-dnd",
+import { JobApplication } from "@/types/jobs",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { CandidateCard } from "./CandidateCard";
+=======
+import { Badge } from "@/components/ui/badge",
+import { CandidateCard } from "./CandidateCard",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface KanbanColumnProps {
 
   id: string
@@ -12,6 +39,11 @@ interface KanbanColumnProps {
 
   count: number
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
@@ -32,11 +64,22 @@ export function KanbanColumn(): any ({;
   title;
   description;
   applications;
+<<<<<<< HEAD
 
 
 
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function KanbanColumn({
+  id,
+  title,
+  description,
+  applications,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -162,7 +205,49 @@ function KanbanColumn() {
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+                <CandidateCard
+=======
+                <CandidateCard 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Droppable } from "react-beautiful-dnd",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { CandidateCard } from "./CandidateCard",;
+interface KanbanColumnProps {;
+  id: string,;
+  title: string,;
+  description: string,;
+  applications: JobApplication[],;
+  count: number;
+}
+;
+export function KanbanColumn({;
+  id,;
+  title,;
+  description,;
+  applications,;
+  count;
+}: KanbanColumnProps) {;
+  // Add color based on column type;
+  const getBadgeVariant = (columnId: string) => {;
+    switch (columnId) {;
+      case "new": return "secondary",;
+      case "shortlisted":;
+        return "outline",;
+      case "interview":;
+        return "default",;
+      case "hired":;
+        return "success",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       case "rejected":;
         return "destructive",
       default:;
@@ -199,12 +284,20 @@ function KanbanColumn() {
             >;
               {applications.map ((application, index) => (
                 <CandidateCard;
+<<<<<<< HEAD
 
 =======
 
                 <CandidateCard 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   key={application.id}
 =======
               ref={provided && provided.innerRef}

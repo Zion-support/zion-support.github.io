@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
@@ -27,13 +35,113 @@ type Props = {
 };
 
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        <p className="text-sm text-gray-600">
+          {reason |"You cannot submit a review for this project."}
+        </p>
+=======
+        <p className="text-sm text-gray-600">{reason || 'You cannot submit a review for this project.'}</p>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      </main>
+    )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <main className="max-w-2xl mx-auto p-6">
+      <h1 className="text-2xl font-semibold mb-6">Leave a review</h1>
+      <ReviewForm initial={{ projectId, fromRole, fromId }} />
+    </main>
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { projectId } = ctx.query as { projectId: string }
+  const { role, fromId } = ctx.query as {
+    role?: "client" | "talent";
+    fromId?: string;
+  }
+  if (!projectId |!role |!fromId) {
+    return {
+      props: {
+        projectId: projectId |""
+        fromRole: role |"client"
+        fromId: fromId |""
+        valid: false
+        reason: "Missing parameters"
+      }
+    }
+  }
+  const project = await findProjectById(projectId);
+  if (!project) {
+    return {
+      props: {
+        projectId
+        fromRole: role
+        fromId
+        valid: false
+        reason: "Project not found"
+      }
+    } as any;
+  }
+  if (project.status !== "Completed") {
+    return {
+      props: {
+        projectId
+        fromRole: role
+        fromId
+        valid: false
+        reason: "Project is not completed yet"
+      }
+    } as any;
+  }
+  const expectedFromId =
+    role === "client" ? project.clientId : project.talentSlug;
+  const valid = expectedFromId === fromId;
+  return {
+    props: {
+      projectId
+      fromRole: role
+      fromId
+      valid
+      reason: valid ? null : "Invalid reviewer for this project"
+    }
+  } as any;
+}
+export default ReviewSubmitPage;
+
+=======
+  )
+},
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { projectId } = ctx.query as { projectId: string },
+  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
+  if (!projectId || !role || !fromId) {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 
 
@@ -102,7 +210,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string },
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
   if (!projectId || !role || !fromId) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -134,10 +246,17 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const valid = expectedFromId === fromId;
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default ReviewSubmitPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

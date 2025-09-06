@@ -1,5 +1,39 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Facebook, Twitter, Loader2 } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Web3Login } from "./Web3Login",
+import { useState } from "react";
+import { openAuthPopup } from "@/api/authSocial";
+export function SocialLogin() {
+<<<<<<< HEAD
+  const [isLoading, setIsLoading] = useState(false);
+  const handleGoogle = null;
+=======
+  const [isLoading, setIsLoading] = useState(false)
+  const handleGoogle = () => {
+    setIsLoading(true)
+    window.location.href = '/auth/google'
+  }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+  const handleGoogle = () => {
+    setIsLoading(true),
+    window.location.href = '/auth/google'
+  },
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className='mt-6'>
       <div className='relative'>
@@ -75,8 +109,16 @@ function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -90,15 +132,41 @@ function SocialLogin() {
           )}
         </Button>;
         <Button
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => openAuthPopup('facebook')}
+          disabled={isLoading}        >
+          <span className='sr-only'>Sign in with Facebook</span>
+          <Facebook className='h-5 w-5' />
+        </Button>
+        <Button
+          type='button'
+          variant='outline'
+          className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => openAuthPopup('twitter')}
+          disabled={isLoading}        >
+          <span className='sr-only'>Sign in with Twitter</span>
+          <Twitter className='h-5 w-5' />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </Button>
         <Web3Login />
       </div>
     </div>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           type="button"
           variant="outline"
@@ -118,14 +186,22 @@ function SocialLogin() {
         >
           <span className="sr-only">Sign in with Twitter</span>
           <Twitter className="h-5 w-5" />
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </Button>
         <Web3Login />
       </div>
     </div>
   )
+<<<<<<< HEAD
 
           disabled={isLoading}        >;
           <span className='sr-only'>Sign in with Twitter</span>;
@@ -134,6 +210,14 @@ function SocialLogin() {
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;
@@ -202,8 +286,14 @@ export function SocialLogin() {;
   );
 
 }
+<<<<<<< HEAD
 
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -271,4 +361,7 @@ export function SocialLogin() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

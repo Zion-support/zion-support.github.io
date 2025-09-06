@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
 
 import {createClient} from '@supabase/supabase-js';
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { createClient  } from '@supabase/supabase-js';
+=======
+import {createClient} from '@supabase/supabase-js';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -13,8 +22,35 @@ const {
   SUPABASE_SERVICE_ROLE_KEY
   OPENAI_API_KEY
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+} = process.env
+if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
+  console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
+  process.exit(1)
+=======
+import { createClient } from '@supabase/supabase-js',;
+import fs from 'fs/promises',;
+import { createReadStream } from 'fs',;
+import path from 'path',;
+import FormData from 'form-data',;
+import fetch from 'node-fetch',;
+const {;
+  SUPABASE_URL,;
+  SUPABASE_SERVICE_ROLE_KEY,;
+  OPENAI_API_KEY;
+} = process.env,;
+if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
+  console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
+  process.exit(1);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -158,8 +194,51 @@ async function createFineTune(filePath) {
 =======
   }),
   const job = await jobRes.json(),
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  console.log('Fine-tune job created:', job.id)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  // // // console.log('Fine-tune job created:', job.id)
+;
+async function createFineTune(filePath) {;
+  const formData = new FormData(),;
+  formData.append('purposefine-tune'),;
+  formData.append('file', createReadStream(filePath), path.basename(filePath)),;
+  const uploadRes = await fetch('https://api.openai.com/v1/files', {;
+    method: 'POST',;
+    headers: {;
+      Authorization: `Bearer ${OPENAI_API_KEY}`,;
+      ...formData.getHeaders();
+    },;
+    body: formData;
+  }),;
+  const uploaded = await uploadRes.json(),;
+  // NOTE: additional parameters may be required depending on OpenAI API changes;
+  const jobRes = await fetch('https://api.openai.com/v1/fine_tuning/jobs', {;
+    method: 'POST',;
+    headers: {;
+      'Content-Type': 'application/json',;
+      Authorization: `Bearer ${OPENAI_API_KEY}`;
+    },;
+    body: JSON.stringify({;
+      training_file: uploaded.id,;
+      model: 'gpt-3.5-turbo';
+    });
+  }),;
+  const job = await jobRes.json(),;
+  // // // console.log('Fine-tune job created:', job.id);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 async function main() {
 
@@ -170,9 +249,19 @@ async function main() {
   await createFineTune('training-data && data.jsonl')
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   console && console.error('Training workflow failed', err)
 =======
+<<<<<<< HEAD
 import {create_client} from '@supabase / supabase - js';
 import fs from 'fs / promises';
 import {createReadStream} from 'fs';
@@ -301,18 +390,32 @@ main ().catch ((err) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);
 });
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

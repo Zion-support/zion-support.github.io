@@ -37,19 +37,41 @@ export default function GovernanceTrustPage() {
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
 
 
                 Appointed via DAO ratification, accountable to publish roadmaps,
 
+=======
+<<<<<<< HEAD
+        <section className='space-y-4'>
+          <h2 className='text-2xl font-semibold'>Governance</h2>
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <div className='font-medium mb-1'>Core Stewards</div>
+              <div className='text-sm text-gray-600 dark:text-gray-400'>
+<<<<<<< HEAD
+                Appointed via DAO ratification, accountable to publish roadmaps
+=======
+                Appointed via DAO ratification, accountable to publish roadmaps,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 risk registers, and post-mortems.
               </div>
 =======
@@ -59,10 +81,18 @@ export default function GovernanceTrustPage() {
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Core Stewards</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </div>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Delegated Voting</div>
@@ -277,6 +307,14 @@ import Link from 'next / link';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

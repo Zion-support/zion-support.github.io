@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useAuthStatus } from './talent / useAuthStatus';
 import { useTalentData } from './talent / useTalentData';
 import { useFilterTalents } from './talent / useFilterTalents';
@@ -9,6 +10,28 @@ export /**
 function useTalentDirectory() {
   // Fetch auth status and saved talents;
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { ;
+    isAuthenticated;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+<<<<<<< HEAD
+import { useFilterTalents } from "./talent/useFilterTalents";
+import { useUIState } from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const {
     is_authenticated;
     user_details,
@@ -170,11 +193,20 @@ function useTalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave
+<<<<<<< HEAD
 
     expanded_sections;
 =======
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useAuthStatus } from "./talent/useAuthStatus",;
 import { useTalentData } from "./talent/useTalentData",;
@@ -259,9 +291,16 @@ export function useTalentDirectory() {;
     clearFilters;
     toggleSection;
     handleToggleSave;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

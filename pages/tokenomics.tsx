@@ -1,8 +1,113 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
+=======
+type DistributionItem = { label: string; percent: number }
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
+<<<<<<< HEAD
+export default function TokenomicsWhitepaperBuilder() {
+=======
+type DistributionItem = { label: string, percent: number };
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
+export default function TokenomicsWhitepaperBuilder(req, res) {
+  try {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+export default function TokenomicsWhitepaperBuilder() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [publicPreview, setPublicPreview] = useState(false);
+  const [legalReview, setLegalReview] = useState(false);
+  const [tokenName, setTokenName] = useState('ZION$');
+  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+<<<<<<< HEAD
+  const [useCases, setUseCases] = useState<string>(
+    'Access to premium AI agents, marketplace discounts, reputation staking, governance participation'
+  );
+  const [rewardsLogic, setRewardsLogic] = useState<string>(
+    'Earn via contributions, referrals, and successful task completions; burn on dispute resolution fees and premium access'
+  );  const [distribution, setDistribution] = useState<DistributionItem[]>([
+    { label: 'Ecosystem & Rewards', percent: 35 }
+    { label: 'Community Treasury', percent: 20 }
+    { label: 'Team & Contributors', percent: 15 }
+    { label: 'Investors', percent: 15 }
+    { label: 'Liquidity & Market Making', percent: 10 }
+    { label: 'Advisors & Partnerships', percent: 5 }
+  ]);
+  const [governance, setGovernance] = useState<string>(
+    'One-token-one-vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported'
+  );
+  const [jurisdiction, setJurisdiction] = useState<string>('US');
+  const [operatorPrompt, setOperatorPrompt] = useState<string>(
+    defaultOperatorPrompt
+  );
+  const totalPercent = useMemo(
+    () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
+    [distribution]
+  );
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  const [activeSection, setActiveSection] =
+    useState<string>('Executive Summary');
+  const previewMarkdown = useMemo(() => {
+    return (
+      generatedMarkdown |
+      buildLocalMarkdown({
+        tokenName
+        tokenSupply
+        useCases
+        rewardsLogic
+        distribution
+        governance
+        jurisdiction
+        legalReview
+      })
+    );
+  }, [
+    generatedMarkdown
+    tokenName
+    tokenSupply
+    useCases
+    rewardsLogic
+    distribution
+    governance
+    jurisdiction
+    legalReview
+  ]);
+  async function handleGenerate() {
+    try {
+      setIsGenerating(true);
+      const res = await fetch('/api/whitepaper/generate', {
+        method: 'POST'
+        headers: {
+          'Content-Type': 'application/json'
+          'X-Admin': isAdmin ? 'true' : 'false'
+        }
+        body: JSON.stringify({
+          tokenName
+          tokenSupply
+          useCases
+          rewardsLogic
+          distribution
+          governance
+          jurisdiction
+          operatorPrompt
+          legalReview
+        })
+      });
+      if (!res.ok) throw new Error('Failed to generate');
+      const data = await res.json();
+      setGeneratedMarkdown(data.markdown |'');
+    } catch (e) {
+      console.error(e);
+      alert('Generation failed');
+    } finally {
+      setIsGenerating(false);    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
   static getDerivedStateFromError(error) {
@@ -20,12 +125,26 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+<<<<<<< HEAD
 }
 import React, { useMemo, useState } from 'react';
 
 
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 
+=======
+  function updateDistribution(
+    index: number
+    key: keyof DistributionItem
+    value: string
+  ) {
+    setDistribution(prev => {      const copy = [...prev];
+<<<<<<< HEAD
+      const item = { ...copy[index] }
+=======
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
@@ -41,8 +160,25 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
+  const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
+  const [distribution, setDistribution] = useState<DistributionItem[]>([;
+    { label: 'Ecosystem & Rewards', percent: 35 },;
+    { label: 'Community Treasury', percent: 20 },;
+    { label: 'Team & Contributors', percent: 15 },;
+    { label: 'Investors', percent: 15 },;
+    { label: 'Liquidity & Market Making', percent: 10 },;
+    { label: 'Advisors & Partnerships', percent: 5 }]),;
+  const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
+  const [jurisdiction, setJurisdiction] = useState<string>('US');
+  const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
+  const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
 
@@ -182,10 +318,17 @@ export default function TokenomicsWhitepaperBuilder() {;
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       const item = { ...copy[index] };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (key === 'percent') item.percent = Number(value);
@@ -329,8 +472,61 @@ if (item.label = value) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       copy[index] = item;
+<<<<<<< HEAD
 
 
+=======
+      return copy;
+    });
+<<<<<<< HEAD
+  }
+  function addDistributionItem() {
+    setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
+  }
+  function removeDistributionItem(index: number) {
+    setDistribution(prev => prev.filter((_, i) => i !== index));  }
+  async function handleShareableLink() {
+    const res = await fetch('/api/whitepaper/share', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })
+    });
+    if (!res.ok) {
+=======
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function addDistributionItem() {;
+    setDistribution((prev) => [...prev, { label: 'New Allocation', percent: 0 }]);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function removeDistributionItem(index: number) {;
+    setDistribution((prev) => prev.filter((_, i) => i !== index));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function handleShareableLink() {;
+    const res = await fetch('/api/whitepaper/share', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),;
+    if (!res.ok) {;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       alert('Failed to create share link');
       return;
     }
@@ -338,11 +534,19 @@ if (item.label = value) {
     await navigator && navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const sections = [
     'Executive Summary'
     'Market Context'
@@ -387,6 +591,7 @@ function handleShareableLink() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
 =======
@@ -637,6 +842,14 @@ function jurisdictionalNote(): any (j: string) {;
   }
 
 
+=======
+  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>
       <Head>
@@ -663,10 +876,18 @@ function jurisdictionalNote(): any (j: string) {;
             <div className="rounded-lg border p-4 space-y-4">
               <h2 className="font-medium">Builder Inputs</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -701,9 +922,17 @@ function jurisdictionalNote(): any (j: string) {;
                 <div className="flex items-center gap-2">
                   <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
                   <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </div>
               </div>
             </div>
@@ -727,10 +956,29 @@ function jurisdictionalNote(): any (j: string) {;
                 <DistributionDonut data={distribution} />
               </div>
             </div>
+<<<<<<< HEAD
 
 
                   disabled={!isAdmin || isGenerating}
 
+=======
+<<<<<<< HEAD
+            <div className='rounded-lg border p-4 space-y-3'>
+              <h3 className='font-medium'>Operator Prompt</h3>
+              <textarea
+                className='w-full border rounded-md px-3 py-2'
+                rows={4}
+                value={operatorPrompt}
+                onChange={e => setOperatorPrompt(e.target.value)}
+              />
+              <div className='flex gap-3'>
+                <button
+<<<<<<< HEAD
+                  disabled={!isAdmin |isGenerating}
+=======
+                  disabled={!isAdmin || isGenerating}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -754,10 +1002,18 @@ function jurisdictionalNote(): any (j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
@@ -783,9 +1039,17 @@ function jurisdictionalNote(): any (j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -802,8 +1066,16 @@ function jurisdictionalNote(): any (j: string) {;
 
 ;
 function buildLocalMarkdown(input: {;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   tokenName: string;
   tokenSupply: string;
   useCases: string;
@@ -816,6 +1088,7 @@ function buildLocalMarkdown(input: {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
+<<<<<<< HEAD
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
 
@@ -871,6 +1144,20 @@ function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
 
 
 =======
+  return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+function DistributionDonut({ data }: { data: DistributionItem[] }) {
+  // Simple textual donut placeholder until a chart lib is added
+  const total = data.reduce((a, b) => a + b.percent, 0) |1;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 }
 ;
 function jurisdictionalNote(j: string) {;
@@ -895,8 +1182,14 @@ function jurisdictionalNote(j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
@@ -913,6 +1206,7 @@ function MarkdownPreview(): any ({;
 }: {;
   markdown: string;
   activeSection: string;
+<<<<<<< HEAD
 }) {  // Very lightweight section filter: split by headings;
   const parts = useMemo(() => {;
     const sections = markdown && markdown.split(/\n## /g),;
@@ -922,11 +1216,23 @@ function MarkdownPreview(): any ({;
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}) {  // Very lightweight section filter: split by headings
+<<<<<<< HEAD
+  const parts = useMemo(() => {
+    const sections = markdown.split(/\n## /g)
+    const map: Record<string, string> = {}
+    sections.forEach((s, i) => {
+      if (i === 0) return; // first is H1
+      const [titleLine, ...rest] = s.split('\n');
+      map[titleLine.trim()] = rest.join('\n');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 
   return (
+<<<<<<< HEAD
 
 
 =======
@@ -991,6 +1297,14 @@ if (return) {
 
 
 =======
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content |markdown}
+    </pre>
+  );
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1005,8 +1319,14 @@ if (return) {
 }
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
@@ -1020,6 +1340,53 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content || markdown}
+    </pre>
+  );
+
+}
+}
+}
+}
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
+  )
+;
+function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {;
+  // Very lightweight section filter: split by headings;
+  const parts = useMemo(() => {;
+    const sections = markdown.split(/\n## /g);
+    const map: Record<string, string> = {};
+    sections.forEach((s, i) => {;
+      if (i === 0) return, // first is H1;
+      const [titleLine, ...rest] = s.split('\n');
+      map[titleLine.trim()] = rest.join('\n');
+    }),;
+    return map;
+  }, [markdown]);
+  const content = parts[activeSection] || '';
+  return (;
+    <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

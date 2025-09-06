@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -55,10 +61,16 @@ class AutomationFactory {
 =======
 
 =======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }};
 ; loadStatus() {; try {; if (fs && fs.existsSync(this && this.statusFile)) {; const status = JSON && JSON.parse(fs && fs.readFileSync(this && this.statusFile, "utf8")); this && this.runningScripts = new Map(Object && Object.entries(status && status.runningScripts || {}))}} catch (error) {; this && this.log(`Error loading status: ${error && error.message}`)}}}};
 ; generateCodeQualityScript() {; const script = `#!/usr/bin/env node;const fs = require("fs");
@@ -261,7 +273,14 @@ const { execSync } = require("child_process");
 ; async runAllScripts() {; this && this.log("Running all available scripts..."); const results = [];
 ; for (const [name, script] of this && this.scripts) {; if (script && script.status = = = "available") {; const success = await this && this.runScript(name); results && results.push({ name, success })};
 ;      };
+<<<<<<< HEAD
 
+=======
+      };
+<<<<<<< HEAD
+<<<<<<< HEAD
+      };
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 class PerformanceOptimizer {;
@@ -469,9 +488,14 @@ optimizer.optimizePerformance().then(report => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
+<<<<<<< HEAD
 
 =======
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   optimizeImages() {,
@@ -968,12 +992,23 @@ optimizer.optimizePerformance().then(report => {,
     for (const [name, script] of this.scripts) {,
       if (script.status === "available") {,
         const success = await this.runScript(name),
+<<<<<<< HEAD
 
 
         results.push({ name, success })
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        results.push({ name, success }),
+>>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+=======
+        results.push({ name, success })
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       };
 
 

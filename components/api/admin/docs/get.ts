@@ -6,10 +6,21 @@ import path from 'path';
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const token = req && req.headers['x-admin-token'] as string | undefined,
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+  const token = req.headers['x-admin-token'] as string | undefined
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+=======
+  const token = req.headers['x-admin-token'] as string | undefined,
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   try {
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');

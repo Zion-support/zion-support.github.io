@@ -1,13 +1,29 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume, ResumeBasicInfo  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useResumeActions() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,9 +32,18 @@ export function useResumeActions() {;
     if (!user) {
       setError('You must be logged in to create a resume')
       return null
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -33,9 +58,16 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to create a resume'),;
       return null;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -133,8 +165,24 @@ if (throw error) {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    }
+  }
+  const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update a resume')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -163,9 +211,16 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update a resume'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -197,6 +252,7 @@ if (throw error) {
 
 
       return showSuccessToast("Resume updated", "Your resume information has been updated")
+<<<<<<< HEAD
 =======
 ;
   const updateBasicInfo = async (resume_id: string, basic_info: ResumeBasicInfo): Promise < boolean> => {
@@ -235,6 +291,25 @@ if (throw error) {
 
 
 =======
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not update resume')
+    } finally {
+      setIsLoading(false)
+<<<<<<< HEAD
+    }
+  }
+  const setActiveResume = async (resumeId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to set active resume')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -260,9 +335,16 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to set active resume'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -371,7 +453,14 @@ if (throw error) {
   return {;
     isLoading,;
     error,;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     createResume;
     updateBasicInfo;

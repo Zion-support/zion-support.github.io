@@ -12,7 +12,21 @@ import React from 'react';
 
 
 import {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  Code
+  Check
+  Globe
+  Shield
+  Zap
+  Database
+  Cpu
+  Cloud
+  XCircle
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Code,
   Check,
   Globe,
@@ -22,8 +36,12 @@ import {
   Cpu,
   Cloud,
   XCircle,;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -75,6 +93,7 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
+<<<<<<< HEAD
 
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
@@ -149,13 +168,24 @@ function APIPage() {
       ],
     },
 =======
+<<<<<<< HEAD
+  }'`
+        }
+      ]
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   }'`,
         },
       ],
     },;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];
 ;
   const response_examples = {

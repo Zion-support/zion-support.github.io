@@ -1,7 +1,39 @@
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import React, { useState } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+<<<<<<< HEAD
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+=======
+import { Plus, Trash2 } from "lucide-react",
+import { AppPlatform } from "./MetadataManager",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ChangelogManagerProps {
   platform: AppPlatform
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -68,8 +100,22 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <Input
                 type="date"
                 name="date"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+                value={newEntry.date}
+                onChange={handleInputChange}
+              />
+            </div>
+            <Button
+<<<<<<< HEAD
+              onClick={handleAddEntry}
+              disabled={!newEntry.version |!newEntry.changes}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -156,10 +202,17 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             </div>;
 
             <Button;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               onClick={handleAddEntry}
 
               disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
@@ -172,9 +225,17 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 =======
 
           
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Textarea
             placeholder="What's new in this version?"
             name="changes"
@@ -184,9 +245,17 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
 =======
@@ -217,6 +286,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
 
 
             {entries && entries.length === 0 && (;
@@ -224,12 +294,41 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 No changelog entries yet;
               </p>;
 
+=======
+<<<<<<< HEAD
+            {entries.length === 0 && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <p className="text-center text-gray-400 py-4">
+                No changelog entries yet
+              </p>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+  );
+}
+
+=======
+            
+            {entries.length === 0 && (
+=======
+);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             )}
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 }
 
 =======
@@ -350,6 +449,12 @@ if (return) {
 =======
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -272,7 +272,17 @@
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      'Enterprise platform with monitoring engine, observability tools, and alerting system.'
+    launchDate: '2025-01-18'
+    customers: 56
+    rating: 4.8
+    reviews: 38
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
@@ -313,8 +323,12 @@
     reviews: 38,
 
   },;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ];	{
 
 =======
@@ -539,6 +553,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4 && 4.8,
 
 		reviews: 38
+<<<<<<< HEAD
 	}
 ];
 
@@ -734,6 +749,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 
 
 =======
+<<<<<<< HEAD
+	}
+];
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -926,8 +949,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		customers: 56,;
 		rating: 4.8;
 		reviews: 38;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

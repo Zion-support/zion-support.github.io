@@ -1,5 +1,33 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { GradientHeading } from "./GradientHeading",
+import { Button } from "./ui/button";
+=======
+import { GradientHeading } from './GradientHeading'
+import { Button } from './ui/button'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { CheckCircle2 } from 'lucide-react'
+
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from './ui/table'
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -208,12 +236,20 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
 
                   </TableRow>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                   </TableRow>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 ))}
               </TableBody>
             </Table>
@@ -236,12 +272,20 @@ export function ComparisonSection() {
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
 
               Calculate Your Savings
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
               Calculate Your Savings
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </Button>
           </div>
         </div>
@@ -250,10 +294,22 @@ export function ComparisonSection() {
 
 
     </section>
+<<<<<<< HEAD
 
 
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui/button';
+=======
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { GradientHeading } from "./GradientHeading",;
+import { Button } from "./ui/button",;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;
@@ -410,6 +466,7 @@ export function ComparisonSection() {;
 
   );
 }
+<<<<<<< HEAD
 
 =======
     </section>);
@@ -418,3 +475,11 @@ export function ComparisonSection() {;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -35,6 +36,116 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
+=======
+<<<<<<< HEAD
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Target
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Earth
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Network
+  Server
+  HardDrive
+  Monitor
+  Laptop
+  Watch
+  Headphones
+  Speaker
+  Mic
+  Keyboard
+  Mouse
+  CpuIcon
+  DatabaseIcon
+  CloudIcon
+  LockIcon
+  ShieldIcon
+  GlobeIcon
+  ZapIcon
+  SparklesIcon
+  BrainIcon
+  AtomIcon
+  HeartIcon
+  RocketIcon
+  ShieldIcon as ShieldIcon2
+  TargetIcon
+  MicroscopeIcon
+  StarIcon
+  ArrowRight
+  Infinity
+  Crown
+  Gem
+  Sparkles as SparklesIcon2
+  ShoppingCart
+  UserCheck
+  FileText
+  BarChart
+  PaletteIcon
+  VideoIcon
+  LockIcon as LockIcon2
+  GlobeIcon as GlobeIcon2
+  CpuIcon as CpuIcon2
+  Handshake
+  LifeBuoy
+  Activity
+  Linkedin
+  Twitter
+  Facebook
+  Instagram
+  Youtube
+  Github;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {
 =======
@@ -147,8 +258,12 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -212,6 +327,7 @@ import {
       { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
     ];
   }
+<<<<<<< HEAD
 
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
@@ -332,6 +448,18 @@ import {
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     description: 'Breakthrough research solutions',
 
+=======
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -403,12 +531,59 @@ const company_links = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status', icon: Activity }
 ];
+<<<<<<< HEAD
 
 
 
 export default function UltraFuturisticNavigation2034() {;
 
 
+=======
+const socialLinks = [
+  {
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+  }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  {
+    name: 'Instagram'
+    href: 'https://instagram.com/ziontechgroup'
+    icon: Instagram
+  }
+  {
+    name: 'YouTube'
+    href: 'https://youtube.com/@ziontechgroup'
+    icon: Youtube
+  }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+];
+const certifications = [
+  'ISO 27001 Certified'
+  'SOC 2 Type II Compliant'
+  'GDPR Compliant'
+  'HIPAA Compliant'
+  'PCI DSS Level 1'
+  'FedRAMP Authorized'
+  'Quantum Security Certified'
+  'AI Ethics Compliant',];];
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+];
+const certifications = [
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
+];
+<<<<<<< HEAD
+export default function UltraFuturisticNavigation2034() {
+=======
+
+export default function UltraFuturisticNavigation2034() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -529,7 +704,15 @@ export default function UltraFuturisticNavigation2034() {;
     <>;
       {/* Top Contact Bar */}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {contactInfo.mobile}
               </span>
             </div>
@@ -644,6 +827,7 @@ export default function UltraFuturisticNavigation2034() {;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main Navigation */}
 
@@ -663,6 +847,13 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -747,11 +938,27 @@ export default function UltraFuturisticNavigation2034() {;
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  {link.name}
+                </Link>
+              ))}
+=======
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 >
                   {link.name}
                 </Link>
               ))}
+<<<<<<< HEAD
               
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -1001,6 +1208,7 @@ function UltraFuturisticNavigation2034() {
                             <Link;
                               key={service.name}
                               href={service.href}
+<<<<<<< HEAD
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
@@ -1025,8 +1233,20 @@ function UltraFuturisticNavigation2034() {
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
                             >;
                               {service.name}
+=======
+                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             >
                               {service.name}
                             </Link>
@@ -1129,10 +1349,18 @@ function UltraFuturisticNavigation2034() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1140,8 +1368,73 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 
 
+=======
+              transition={{ duration: 0.3 }}
+              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
+            >
+              <div className='px-4 py-6 space-y-4'>
+                {quickLinks.map(link => (                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                  >
+                    {link.name}
+                  </Link>
+                ))}
+              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {quickLinks.map((link) => (
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+                {/* Mobile Services Accordion */}
+                {serviceCategories.map(category => (
+                  <div
+                    key={category.title}
+                    className='border-b border-cyan-500/20 pb-4'
+                  >
+                    <button
+                      onClick={() => toggleDropdown(category.title)}
+                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
+                    >
+                      <span>{category.title}</span>
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === category.title ? 'rotate-180' : ''
+                        }`}
+                      />                    </button>                {/* Mobile Services Accordion */}
+                {serviceCategories.map((category) => (
+                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
+                    <button
+                      onClick={() => toggleDropdown(category.title)}
+                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                    >
+                      <span>{category.title}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === category.title ? 'rotate-180' : ''
+                      }`} />
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -1288,9 +1581,14 @@ function UltraFuturisticNavigation2034() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
+<<<<<<< HEAD
 
 }
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             </motion.div>)}
         </AnimatePresence>;
@@ -1304,4 +1602,7 @@ function UltraFuturisticNavigation2034() {
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

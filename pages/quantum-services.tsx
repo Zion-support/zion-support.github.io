@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -22,6 +23,11 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react';
 import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
@@ -29,6 +35,7 @@ import Button from '../components / ui / Button';
 import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
 
 =======
+<<<<<<< HEAD
 export default /**
  * QuantumServicesPage - Function description
  */
@@ -38,6 +45,22 @@ function QuantumServicesPage() {
     'Hybrid quantum - classical pipelines (QAOA, VQE) where applicable',
     'Quantum - safe cryptography assessments and roadmaps',
     'R & D ideation for quantum - ready workloads',
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react',
+import Head from 'next/head',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+<<<<<<< HEAD
+import Button from '../components/ui/Button';
+import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
+export default function QuantumServicesPage() {
+
+  const features = [
+    'Quantum-inspired optimization & annealing strategies'
+    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable'
+    'Quantum-safe cryptography assessments and roadmaps'
+    'R&D ideation for quantum-ready workloads'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];
 ;
   const solutions = [;
@@ -119,6 +142,7 @@ function QuantumServicesPage() {
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="flex items-center gap-3 text-cyan-300 mb-2"><Sparkles className="w-5 h-5" /><span className="font-semibold">{s.name}</span></div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+<<<<<<< HEAD
                 </a>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -126,10 +150,39 @@ function QuantumServicesPage() {
 
 
 
+=======
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>
+          </section>
+<<<<<<< HEAD
+          <section className='text-center'>
+            <div className='inline-flex items-center justify-center gap-3 text-gray-300'>
+              <Shield className='w-5 h-5 text-purple-400' />
+              <span>
+                Post-quantum readiness assessments and migration planning
+              </span>            </div>
+=======
+          <section className="text-center">
+            <div className="inline-flex items-center justify-center gap-3 text-gray-300">
+              <Shield className="w-5 h-5 text-purple-400" />
+              <span>Post-quantum readiness assessments and migration planning</span>
+            </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 
             </div>;
           </section>;
@@ -141,6 +194,11 @@ function QuantumServicesPage() {
               <span>;
                 Post-quantum readiness assessments and migration planning;
 
+=======
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     <UltraAdvancedFuturisticBackground color_scheme='quantum' intensity='high'>;
       <Head>;
@@ -224,16 +282,29 @@ function QuantumServicesPage() {
       </div>;
 
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   )
 }
+<<<<<<< HEAD
 
     </UltraAdvancedFuturisticBackground>);
 ;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

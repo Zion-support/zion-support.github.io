@@ -1,6 +1,23 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { useAuth  } from '@/hooks/useAuth';
+import { MilestoneCard  } from './MilestoneCard';
+import { AddMilestoneForm  } from './AddMilestoneForm';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus  } from '@/components/icons';
+import { EmptyState } from '@/components/ui/empty-state';
+interface MilestonesListProps {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -34,7 +51,11 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
@@ -291,19 +312,38 @@ export const MilestonesList: React.FC < MilestonesListProps> = ({
             onReject={onReject}
           />;
         ))}
+<<<<<<< HEAD
 
 
 
 
 =======
+<<<<<<< HEAD
+      </div>
+    </div>
+  )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

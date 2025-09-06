@@ -1,5 +1,31 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import { writeState } from '[^']*';
+import { getProviderById } from '[^']*';
+import { ProviderConnection, SyncRules } from '[^']*';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+  if (req.method !== "POST")
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import { writeState } from "../../../lib/integrations/fileStore";
+import { getProviderById } from "../../../lib/integrations/registry";
+import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    return res.status(405).json({ error: "Method not allowed" });
+  const { providerId, syncRules } = req.body as {
+    providerId?: string;
+    syncRules?: SyncRules;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {
@@ -63,12 +89,50 @@ if (state.connections[existing_idx] = connection) {
   });
 
 }
+<<<<<<< HEAD
 
 =======
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: 'Invalid providerId' })
+=======
+<<<<<<< HEAD
+
+=======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const connection = {
+    providerId: req.body?.providerId || 'unknown',
+    status: 'connected',
+    accessToken: 'mock access token',
+    refreshToken: 'mock refresh token',
+    expiresAt: Date.now() + 1000 * 60 * 60,
+    connectedAt: Date.now(),
+    syncRules: req.body?.syncRules || {},
+    lastSyncAt: undefined
+  };
+  res.status(200).json({ connection });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState } from '../../../lib/integrations/fileStore';
+import { getProviderById } from '../../../lib/integrations/registry';
+import { ProviderConnection, SyncRules } from '../../../lib/integrations/types';
+export default function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules },;
+  if (!providerId || !getProviderById(providerId)) {;
+    return res.status(400).json({ error: 'Invalid providerId' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   const now = Date.now();
   const updated = writeState(state => {
@@ -86,6 +150,7 @@ if (state.connections[existing_idx] = connection) {
   res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   res.status (200).json ({
@@ -98,3 +163,15 @@ if (state.connections[existing_idx] = connection) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -26,10 +26,19 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
@@ -71,9 +80,16 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -201,7 +217,26 @@ if ( {) {
 }
         return;
       }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+onSelect(api)
+      api.on(&quot;reInit&quot;, onSelect)
+      api.on(&quot;select&quot;, onSelect)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+      onSelect(api)
+      api.on("reInit", onSelect)
+      api.on("select", onSelect)
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -259,9 +294,17 @@ on_select (api);
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {...props}
         >;
           {children}
@@ -399,6 +442,7 @@ const CarouselPrevious = React.forward_ref<;
 
         className
       )}
+<<<<<<< HEAD
 =======
       className={cn (
         &quot;absolute  h - 8 w - 8 rounded - full & quot;,
@@ -414,12 +458,35 @@ const CarouselPrevious = React.forward_ref<;
 
 
 =======
+      disabled={!canScrollPrev}
+      onClick={scrollPrev}
+      {...props}
+<<<<<<< HEAD
+>
+      <ArrowLeft className=&quot;h-4 w-4&quot; />
+      <span className=&quot;sr-only&quot;>Previous slide</span>
+<<<<<<< HEAD
+    </Button>
+  )
+})
+CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </Button>
   )
 })
@@ -462,6 +529,7 @@ const CarouselNext = React.forward_ref<;
 
         className
       )}
+<<<<<<< HEAD
 =======
       className={cn (
         &quot;absolute h - 8 w - 8 rounded - full & quot;,
@@ -485,12 +553,42 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
 
 
 =======
+      disabled={!canScrollNext}
+      onClick={scrollNext}
+      {...props}
+<<<<<<< HEAD
+>
+      <ArrowRight className=&quot;h-4 w-4&quot; />
+      <span className=&quot;sr-only&quot;>Next slide</span>
+<<<<<<< HEAD
+    </Button>
+  )
+})
+CarouselNext.displayName = &quot;CarouselNext&quot;
+export {
+  type CarouselApi
+  Carousel
+  CarouselContent
+  CarouselItem
+  CarouselPrevious
+  CarouselNext}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     </Button>
   )
 })
@@ -506,7 +604,17 @@ export {
 
 
   CarouselNext}
+<<<<<<< HEAD
 
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

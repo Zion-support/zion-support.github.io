@@ -1,12 +1,29 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+// File system database utilities
+export const fsDb = {
+  // Add file system database functionality here
+<<<<<<< HEAD
+  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -26,6 +43,21 @@ const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 
 
 
+<<<<<<< HEAD
+=======
+export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void> {
+  try {
+    const fullPath = path.join(DATA_DIR, filePath);
+    const dir = path.dirname(fullPath);
+    await fs.mkdir(dir, { recursive: true });
+    await fs.writeFile(fullPath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error('Error writing JSON file:', error);
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 // File system database utilities;
 export const fs_db = {
@@ -42,4 +74,7 @@ export const fs_db = {
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

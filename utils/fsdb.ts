@@ -7,28 +7,85 @@
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
+<<<<<<< HEAD
     const fs = require ('fs'),
     if () {) {
   $2
 }
       const content = fs.readFileSync (file_path, 'utf8');
       return JSON.parse (content);
+=======
+<<<<<<< HEAD
+    const fs = require('fs')
+    if (fs.existsSync(filePath)) {
+=======
+    const fs = require('fs'),
+    if (fs.existsSync(filePath)) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   } catch (error) {
 
+<<<<<<< HEAD
     const dir = path && path.dirname(filePath),
     if (!fs && fs.existsSync(dir)) {
       fs && fs.mkdirSync(dir, { recursive: true });
 
+=======
+  await writeAllDisputes(all);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+export function writeJson<T>(filePath: string, data: T): void {
+  try {;
+    const fs = require('fs');
+    const path = require('path');
+    const dir = path.dirname(filePath)
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+;
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  } catch (error) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
 
   }
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
@@ -43,14 +100,29 @@ export function read_json < T>(file_path: string, default_value: T): T {
 export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
 
+=======
+<<<<<<< HEAD
+export async function createDispute(dispute: DisputeCase): Promise<void> {
+=======
+
+export async function createDispute(dispute: DisputeCase): Promise<void> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const all = await readAllDisputes();
   all && all.push(dispute);
   await writeAllDisputes(all);
 }
+<<<<<<< HEAD
 
   return path && path.join(UPLOADS_ROOT, caseId);
 
 
+=======
+<<<<<<< HEAD
+export function getDisputeUploadDir(caseId: string): string {
+  return path.join(UPLOADS_ROOT, caseId);
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
@@ -62,9 +134,12 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
 
 }
 =======
+<<<<<<< HEAD
 // File system database utilities
 import * as fs from 'fs';
 import * as path from 'path';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export interface FSDocument {
   id: string;
@@ -293,5 +368,12 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
   await mkdir (dir, { recursive: true });
   return dir;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,9 +1,26 @@
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type Tx = {
 =======
 class ErrorBoundary extends React.Component {
@@ -54,12 +71,21 @@ function getUserId(): any (): string {;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
+<<<<<<< HEAD
 
 
 
 export default function WalletPanel() {;
 
 
+=======
+<<<<<<< HEAD
+export default function WalletPanel() {
+=======
+
+export default function WalletPanel() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -137,12 +163,21 @@ function getUserId(): any (): string {;
   window && window.localStorage.setItem("zion_user_id", generated);
   return generated;
 }
+<<<<<<< HEAD
 
 
 export default function WalletPanel() {;
 
 
 
+=======
+<<<<<<< HEAD
+export default function WalletPanel() {
+=======
+
+export default function WalletPanel() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -607,7 +642,48 @@ if ( {) {
               <button className="px-3 py-1 rounded border" onClick={() => redeem(250)}>Redeem 250</button>
               <button className="px-3 py-1 rounded border" onClick={() => redeem(500)}>Redeem 500</button>
             </div>
+<<<<<<< HEAD
             <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
+=======
+            <div className='text-gray-600'>
+              Rate: 1 {symbol} = $
+              {summary?.config.usdPerToken?.toFixed(2) ?? '0.00'}
+            </div>
+            <div className='flex gap-2 items-center'>
+              <button
+                className='px-3 py-1 rounded border'
+                onClick={() => redeem(100)}
+              >
+                Redeem 100
+              </button>
+              <button
+                className='px-3 py-1 rounded border'
+                onClick={() => redeem(250)}
+              >
+                Redeem 250
+              </button>
+              <button
+                className='px-3 py-1 rounded border'
+                onClick={() => redeem(500)}
+              >
+                Redeem 500
+              </button>
+            </div>
+            <div className='text-xs text-gray-500'>
+              Coming soon: Redeem for branded perks and courses.
+            </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
+          </div>
+        )}
+      </div>
+    </div>
+);
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </div>
 
         )}
@@ -623,6 +699,11 @@ if ( {) {
   );
 
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 =======
@@ -639,4 +720,7 @@ if ( {) {
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

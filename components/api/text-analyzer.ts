@@ -295,8 +295,48 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+<<<<<<< HEAD
 
 
+=======
+    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
+    const confidence = isEnglish ? 0.95 : 0.5;
+    const result: TextAnalysisResult = {
+      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
+    const detectedLanguage = isEnglish ? 'en' : 'unknown';
+    const confidence = isEnglish ? 0.95 : 0.5;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+    const result: TextAnalysisResult = {
+      text
+        characters
+        charactersNoSpaces
+        words
+        sentences
+        paragraphs
+        syllables
+        readingTime
+        speakingTime
+      }
+      readability: {
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
+        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
+        gunningFog: Math.round(gunningFog * 100) / 100
+        smog: Math.round(smog * 100) / 100
+        colemanLiau: Math.round(colemanLiau * 100) / 100
+        automatedReadability: Math.round(automatedReadability * 100) / 100
+        averageGrade
+      }
+      sentiment: {
+        score: sentimentScore
+        label: sentimentLabel
+        positiveWords: textWords.filter(word => positiveWords.includes(word))
+        negativeWords: textWords.filter(word => negativeWords.includes(word))
+      }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       language: {
 
         topWords,
@@ -399,10 +439,17 @@ export default async function handler(
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

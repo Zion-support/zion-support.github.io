@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from "react";
+import { Draggable } from "react-beautiful-dnd";
+import { formatDistanceToNow } from "date-fns";
+import { Link } from "react-router-dom";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import {;
   MessageSquare,;
@@ -21,6 +39,7 @@ import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {;
 =======
+<<<<<<< HEAD
 import { useState  } from './react';
 import { Draggable  } from './react - beautiful - dnd';
 import { formatDistanceToNow  } from './date - fns';
@@ -35,6 +54,15 @@ import {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   MessageSquare,
   User,
   FileText,
@@ -51,17 +79,54 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CandidateCardProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   application: JobApplication;
   index: number
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function CandidateCard({ application, index }: CandidateCardProps) {
+<<<<<<< HEAD
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes |"");
+  const [showHireModal, setShowHireModal] = useState(false);
+  // Check if application is stalled (no activity for 7 days)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -168,8 +233,16 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
           <Card;
             className="mb-2 p-0 shadow-sm border";
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -192,10 +265,18 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       />;
                     ) : (;
                       <User className="h-4 w-4" />;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     )}
 
 
@@ -203,9 +284,20 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+                
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -214,6 +306,53 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
+=======
+                      {showNotes ? "Hide notes" : "Add notes"}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>
+                      <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to={`/messages?talentId=${application.talent_id}`}>
+                        Message
+                      </Link>
+                    </DropdownMenuItem>
+                    {application.resume?.file_url && (
+                      <DropdownMenuItem asChild>
+                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
+                          View Resume
+                        </Link>
+                      </DropdownMenuItem>
+                    )}
+<<<<<<< HEAD
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+              {/* Application Info */}
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
+                <div className="flex items-center">
+                  <Calendar className="h-3 w-3 mr-1" />
+                  {formatDistanceToNow(new Date(application.created_at), {
+                    addSuffix: true
+                  })}
+                </div>
+                {isStalled && (
+                  <div className="flex items-center text-amber-500">
+                    <AlertTriangle className="h-3 w-3 mr-1" />
+                    Stalled
+                  </div>
+                )}
+              </div>
+              {/* Match Score */}
+              {application.match_score !== null &&
+                application.match_score !== undefined && (
+                  <div className="mb-2">
+                    <ScoreBadge application={application} />
+                  </div>
+                )}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                   </Avatar>;
                   <div>;
@@ -261,6 +400,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                   </DropdownMenuContent>;
                 </DropdownMenu>;
@@ -292,10 +435,18 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 </div>;
               )}
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Notes Section */}
               {showNotes && (;
                 <div className="mt-2">;
@@ -312,11 +463,19 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>;
                 </div>;
               )}
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Action Buttons */}
 
 =======
@@ -329,10 +488,18 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
@@ -346,9 +513,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {application.resume?.file_url ? (
 =======
               <div className="flex justify-between mt-2 gap-1">;
@@ -386,9 +561,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 <Button 
                   variant="default" 
                   size="sm" 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   className="flex-1"
                   onClick={() => setShowHireModal(true)}
                 >;
@@ -400,6 +583,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
         )}
 
       </Draggable>;
+<<<<<<< HEAD
 
 
 export /**
@@ -568,8 +752,15 @@ function CandidateCard() {
       </Draggable>;
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         is_open={showHireModal}
@@ -580,9 +771,17 @@ function CandidateCard() {
 
       />;
     </>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
         on_confirm={handleHireConfirmed}

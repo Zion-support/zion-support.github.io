@@ -1,8 +1,31 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useAuth} from "./useAuth";
+import {supabase} from "@/integrations/supabase/client";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+<<<<<<< HEAD
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+=======
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -14,11 +37,25 @@ interface OnboardingStatus {
 
   responseReceived: boolean
 }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function useOnboardingStatus() {
+  const { user } = useAuth(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -96,9 +133,17 @@ export function useOnboardingStatus() {;
         if (error) {;
           console.error("Error fetching onboarding status:", error),;
           return;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
         if (data) {
           setStatus({
@@ -196,6 +241,7 @@ function useOnboardingStatus() {
     response_received: false;
   });
 ;
+<<<<<<< HEAD
   useEffect (() => {
     const fetchOnboardingStatus = async () => {
       // Check condition
@@ -243,7 +289,14 @@ if ( {) {
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

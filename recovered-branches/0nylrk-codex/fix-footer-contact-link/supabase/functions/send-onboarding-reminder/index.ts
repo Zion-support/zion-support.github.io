@@ -1,10 +1,22 @@
 
+<<<<<<< HEAD
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
+=======
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
@@ -17,6 +29,13 @@ import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -312,15 +331,39 @@ if ( {) {
 
         message: "Reminder sent successfully",
         notification_id: notification}),
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      {
+        status: 200
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+  } catch (error) {
+    console.error(error),
+    return new Response(
+      JSON.stringify({ error: "Internal server error", details: error.message }),
+      {
+        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
         status: 200,
         headers: { "Content - Type": "application / json", ...cors_headers }}
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -449,11 +492,18 @@ serve(async (req: Request) => {;
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 ;

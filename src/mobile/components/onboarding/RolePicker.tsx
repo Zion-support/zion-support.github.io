@@ -1,5 +1,106 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Briefcase, Users, Check } from 'lucide-react'
+type UserRole = 'talent' | 'client' | null
+interface RolePickerProps {
+  onSelect: (role: UserRole) => void
+export function RolePicker({ onSelect }: RolePickerProps) {
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null)
+  const handleSelect = (role: UserRole) => {
+    setSelectedRole(role)
+    onSelect(role)
+  }
+  return (
+    <div className='space-y-4 px-4'>
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
+      <p className='text-muted-foreground'>
+        Choose how you want to use our platform
+      </p>
+      <div className='space-y-3 mt-6'>
+        <Card
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+type UserRole = any;
+  return (
+    <div className='space-y-4 px-4'>
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
+      <p className='text-muted-foreground'>
+        Choose how you want to use our platform
+      </p>
+      <div className='space-y-3 mt-6'>
+        <Card
+=======
+type UserRole = "talent" | "client" | null,
+
+interface RolePickerProps {
+  onSelect: (role: UserRole) => void
+}
+
+export function RolePicker({ onSelect }: RolePickerProps) {
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
+
+  const handleSelect = (role: UserRole) => {
+    setSelectedRole(role),
+    onSelect(role)
+  },
+
+  return (
+    <div className="space-y-4 px-4">
+      <h2 className="text-xl font-medium">What brings you to Zion?</h2>
+      <p className="text-muted-foreground">Choose how you want to use our platform</p>
+
+      <div className="space-y-3 mt-6">
+        <Card 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'talent' 
+              ? "border-primary bg-primary/5" 
+              : "border-border hover:border-primary/40"
+          }`}
+          onClick={() => handleSelect('talent')}
+        >
+          <CardContent className="p-5">
+            <div className="flex items-center">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <Briefcase className="h-6 w-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-medium">I'm offering services</h3>
+                <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>
+              </div>
+              {selectedRole === 'talent' && (
+                <Check className="h-5 w-5 text-primary" />
+              )}
+            </div>
+          </CardContent>
+        </Card>
+<<<<<<< HEAD
+        <Card
+=======
+
+        <Card 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
@@ -168,8 +269,17 @@ function RolePicker() {
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 
 
+=======
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -182,4 +292,7 @@ function RolePicker() {
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,11 +1,25 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+import { useAuth  } from '@/hooks/useAuth';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -63,10 +77,18 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -143,11 +165,20 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
+<<<<<<< HEAD
 
 
     };
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -173,6 +204,24 @@ export const useTalentQuotes = () => {;
       })
     }
   });
+<<<<<<< HEAD
+=======
+  return {
+    quotes: filteredQuotes;
+    unreadCount;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter
+    markAsViewed: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'in_review' });
+    markAsResponded: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'responded' });
+<<<<<<< HEAD
+    toggleArchive: (id: string, isArchived: boolean) =>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
@@ -290,7 +339,11 @@ if ( {) {
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     },
     onError: (error: Error) => {
@@ -363,10 +416,18 @@ if ( {) {
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

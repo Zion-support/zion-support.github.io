@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
+<<<<<<< HEAD
 interface MainNavigationProps {;
 
   isAdmin?: boolean;
@@ -18,6 +25,23 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
 
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare } from "lucide-react";
+=======
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -197,8 +221,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               )}
             >
               {link.name}
@@ -240,10 +272,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               )}
             </Link>;
           </li>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         )}
 
       </ul>;

@@ -1,10 +1,36 @@
 
+<<<<<<< HEAD
 
+=======
+import { Card, CardContent } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import {
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { Button } from '@/components/ui/button'
+import { Calendar as CalendarComponent } from '@/components/ui/calendar'
+import { format } from 'date-fns'
+import type { DateRange } from 'react-day-picker'
+import type { QuoteStatus } from '@/types/quotes'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface QuotesFilterProps {;
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
@@ -17,8 +43,15 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuotesFilterProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -336,6 +369,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>);
 }
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
@@ -350,3 +384,20 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 }  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    </Card>;
+  );
+};  )
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+
+=======
+}
+=======
+}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

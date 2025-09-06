@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -18,6 +24,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
 
 
 =======
+<<<<<<< HEAD
 import React, { forward_ref } from './react';
 import { ChevronDown  } from './lucide-react';
 import { cn  } from '@/lib / utils';
@@ -52,6 +59,22 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { forwardRef } from "react",
+import { ChevronDown } from "lucide-react",
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+=======
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string,
   icon?: React.ReactNode,
@@ -74,7 +97,14 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     const [expanded, setExpanded] = React.useState(defaultExpanded),;
     return (;
       <div;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn("px-3 py-2", className)}
@@ -89,10 +119,27 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
           </button>;
         )}
 
+<<<<<<< HEAD
+=======
+=======
+    )
+  }
+),
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+SidebarGroup.displayName = "SidebarGroup";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+SidebarGroup.displayName = "SidebarGroup",
+export { SidebarGroup },
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
       </div>;
     );
   }
+<<<<<<< HEAD
 );
 
 SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
@@ -104,6 +151,14 @@ SidebarGroup && SidebarGroup.displayName = "SidebarGroup";
 
 
 
+=======
+),;
+SidebarGroup.displayName = "SidebarGroup",;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export { SidebarGroup };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

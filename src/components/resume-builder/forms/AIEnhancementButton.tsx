@@ -1,8 +1,37 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button'
+import { Sparkles, Loader2 } from 'lucide-react'
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
+interface AIEnhancementButtonProps {
+  currentContent: string
+  enhancementType:
+    | 'summary'
+    | 'work-description'
+    | 'skill-categorization'
+    | 'general'
+  context?: string
+  onEnhanced: (enhancedContent: string) => void
+  buttonText?: string
+  className?: string
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -11,9 +40,42 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const { enhanceContent, isEnhancing } = useResumeEnhancer()
+  const [error, setError] = useState<string | null>(null)
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing')
+      return;
+    }
+
+    setError(null)
+    const enhancedContent = await enhanceContent(
+      currentContent,
+      enhancementType,
+      context
+    )
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { enhanceContent, isEnhancing } = useResumeEnhancer(),
+  const [error, setError] = useState<string | null>(null),
+  
+  const handleEnhance = async () => {
+    if (!currentContent || currentContent.trim().length < 10) {
+      setError('Please enter at least some basic content before enhancing'),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       return
     }
     setError(null)
@@ -107,25 +169,46 @@ if ( {) {
 
   },
   
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
 
       onClick={handleEnhance}
       disabled={isEnhancing}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Sparkles className="h-3 w-3" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
+<<<<<<< HEAD
 
       <span className="text-xs">{buttonText}</span>;
     </Button>;
@@ -162,8 +245,43 @@ if ( {) {
 ;
 
 =======
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <Sparkles className='h-3 w-3' />;
+      )};
+      <span className='text-xs'>{buttonText}</span>;
+    </Button>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+  )
+}
+<<<<<<< HEAD
+=======
+  )
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 ;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 interface Milestone {
   title: string;
@@ -15,7 +20,11 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
@@ -28,20 +37,50 @@ interface Milestone {
   description: string,
   dueDate: string,
   estimatedHours: number
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface Milestone {;
+  title: string,;
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
@@ -67,10 +106,17 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
   try {;
@@ -96,10 +142,18 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI;
     let prompt = `;
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -142,6 +196,34 @@ serve(async (req) => {
         messages: [
           {
             role: 'system'
+<<<<<<< HEAD
+=======
+            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
+          {
+            role: 'user'
+            content: prompt}];
+        temperature: 0.7})});
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error?.message |'Failed to generate contract')
+    }
+    const contract = data.choices[0].message.content.trim();
+    return new Response(JSON.stringify({
+      success: true
+      contract
+    }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  } catch (error) {
+    console.error('Error generating contract:', error);
+    return new Response(
+      JSON.stringify({
+        success: false
+        error: error.message |'Failed to generate contract'
+      });
+<<<<<<< HEAD
+      {
+        status: 500
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
@@ -235,7 +317,11 @@ if ( {) {
 
       { 
         status: 500, 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         - Estimated Work: ${milestone.estimatedHours} hours;
         `;
@@ -327,10 +413,18 @@ if ( {) {
       }),;
       {;
         status: 500,;
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

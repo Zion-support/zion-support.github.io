@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -12,7 +17,11 @@ const corsHeaders = {
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
@@ -374,6 +383,26 @@ if ( {) {
 });
 
 =======
+<<<<<<< HEAD
+=======
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500})
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
       case 'cancel':;
         // Only allow cancellation for pending transactions;
@@ -405,12 +434,19 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
+<<<<<<< HEAD
 =======
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 ;

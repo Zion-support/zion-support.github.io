@@ -1,5 +1,29 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+import { ClickableBadge } from '@/components/ui/clickable-badge'
+import { Button } from '@/components/ui/button'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import React from "react",
+<<<<<<< HEAD
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { Button } from "@/components/ui/button";
+=======
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { X } from 'lucide-react'
 interface ActiveFiltersProps {
 
@@ -27,21 +51,109 @@ interface ActiveFiltersProps {
 
   clearFilters: () => void
 }
+<<<<<<< HEAD
 
 =======
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+export function ActiveFilters({
+
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  clearFilters
+}: ActiveFiltersProps) {
+  // Check if any filters are active
+<<<<<<< HEAD
+  const hasActiveFilters =
+    selectedSkills.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRegions.length > 0 |
+    experienceRange[0] !== 0 |
+    experienceRange[1] !== 15 |
+    priceRange[0] !== 50 |
+    priceRange[1] !== 200
+  if (!hasActiveFilters) return null
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
+<<<<<<< HEAD
+    priceRange[1] !== 200
+  if (!hasActiveFilters) return null
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className='mb-6 flex flex-wrap gap-2 items-center'>
+      <span className='text-zion-slate-light text-sm'>Active filters:</span>
+      {selectedSkills.map(skill => (
+        <ClickableBadge
+          key={skill}
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => toggleSkill(skill)}        >
+          {skill}
+          <X className='h-3 w-3' />
+        </ClickableBadge>
+      ))}
+      {selectedAvailability.map(status => (
+        <ClickableBadge
+          key={status}
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => toggleAvailability(status)}        >
+          {status === 'full-time'
+            ? 'Full-time'
+            : status === 'part-time'
+              ? 'Part-time'
+              : 'Project-based'}
+          <X className='h-3 w-3' />
+        </ClickableBadge>
+      ))}
+      {selectedRegions.map(region => (
+        <ClickableBadge
+          key={region}
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => toggleRegion(region)}        >
+          {region}
+          <X className='h-3 w-3' />
+<<<<<<< HEAD
+        </ClickableBadge>
+      ))}
+      {(priceRange[0] !== 50 |priceRange[1] !== 200) && (
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setPriceRange([50, 200])}        >
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
+<<<<<<< HEAD
 
 
     selectedRegions.length > 0 ||
@@ -51,6 +163,11 @@ interface ActiveFiltersProps {
 =======
 =======
 
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
@@ -157,6 +274,7 @@ export function ActiveFilters(): any ({;
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => toggleRegion(region)}        >;
           {region}
+<<<<<<< HEAD
 
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
@@ -181,6 +299,10 @@ export function ActiveFilters(): any ({;
       )}
 =======
           <X className="h-3 w-3" />
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+          <X className="h-3 w-3" />
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -188,37 +310,104 @@ export function ActiveFilters(): any ({;
       ))}
       
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setPriceRange([50, 200])}        >
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => setPriceRange([50, 200])}
+        >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           ${priceRange[0]}-${priceRange[1]}/hr
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+<<<<<<< HEAD
 
       
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {(experienceRange[0] !== 0 |experienceRange[1] !== 15) && (
+=======
+      
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setExperienceRange([0, 15])}        >
+=======
+<<<<<<< HEAD
+      
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => setExperienceRange([0, 15])}
+        >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <Button
         variant='ghost'
         size='sm'
         onClick={clearFilters}
+<<<<<<< HEAD
 
 
+=======
+        className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'      >
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         Clear All
       </Button>
     </div>
   );
 };
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       
       <Button 
@@ -227,19 +416,35 @@ export function ActiveFilters(): any ({;
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         Clear All
       </Button>
     </div>
   )
+<<<<<<< HEAD
 
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
 =======
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -277,8 +482,14 @@ export function ActiveFilters(): any ({;
   );
 
 }
+<<<<<<< HEAD
 
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -390,4 +601,7 @@ if (return null) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -8,6 +14,27 @@ import {Badge} from "@/components/ui/badge";
 import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { ScrollArea } from "@/components/ui/scroll-area",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { formatDistanceToNow } from "date-fns";
+export function TransactionHistory() {
+  const { transactions, loading } = useWallet();
+=======
+import { Badge } from "@/components/ui/badge",
+import { formatDistanceToNow } from "date-fns",
+export function TransactionHistory() {
+  const { transactions, loading } = useWallet(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   if (loading) {;
 
@@ -86,6 +113,7 @@ export function TransactionHistory() {;
                         +{tx && tx.amount} ZION$;
                       </Badge>;
                     </div>;
+<<<<<<< HEAD
 
 
 
@@ -207,3 +235,43 @@ if ( {) {
     </Card>);
 }
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  ))}
+                </div>
+              )}
+            </ScrollArea>
+          </TabsContent>
+          <TabsContent value="spent">
+            <ScrollArea className="h-64">
+              {burnTransactions.length === 0 ? (
+                <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>
+              ) : (
+                <div className="space-y-2 mt-2">
+                  {burnTransactions.map(tx => (
+                    <div key={tx.id} className="flex items-center justify-between py-2 border-b">
+                      <div>
+                        <p className="font-medium">{tx.reason |"Feature purchase"}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+                        </p>
+                      </div>
+                      <Badge variant="outline" className="bg-red-100 text-red-800">
+                        -{tx.amount} ZION$
+                      </Badge>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </ScrollArea>
+          </TabsContent>
+        </Tabs>
+      </CardContent>
+    </Card>
+  )
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

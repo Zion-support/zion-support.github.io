@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 
     const fixedContent = content && content.replace(doubleCommaRegex, ",");
 
 
+=======
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixDoubleCommas(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+<<<<<<< HEAD
+    // Fix double commas in import statements
+=======
+
+    // Fix double commas in import statements;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const doubleCommaRegex = /,\s*,/g;
+    const fixedContent = content.replace(doubleCommaRegex, ",");
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 =======

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type ModerationModalProps = {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   flag: any | null;
@@ -6,6 +16,7 @@
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
+<<<<<<< HEAD
 
 export default function ModerationModal(): any ({;
   flag,;
@@ -14,13 +25,25 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 =======
+export default function ModerationModal({
+<<<<<<< HEAD
+  flag
+  onClose
+  onAction
+}: ModerationModalProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   flag,
   onClose,
   onAction,
 }: ModerationModalProps) {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -250,6 +273,14 @@ if (return null) {
 =======
 
   );
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

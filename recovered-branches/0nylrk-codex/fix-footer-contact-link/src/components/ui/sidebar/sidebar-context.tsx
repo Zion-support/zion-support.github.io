@@ -7,8 +7,16 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -54,6 +62,11 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -79,6 +92,7 @@ export interface SidebarProviderProps extends React && React.ComponentProps<"div
 export const SidebarProvider = React && React.forwardRef<;
 
   HTMLDivElement;
+<<<<<<< HEAD
   SidebarProviderProps;
 >(;
   (;
@@ -88,6 +102,13 @@ export const SidebarProvider = React && React.forwardRef<;
 
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const SidebarProvider = React.forwardRef<
+  HTMLDivElement,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   SidebarProviderProps
 >(
   (
@@ -112,6 +133,18 @@ export const SidebarProvider = React && React.forwardRef<;
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
     const setOpen = React.useCallback(
+<<<<<<< HEAD
+=======
+      (value: boolean | ((value: boolean) => boolean)) => {
+        const openState = typeof value === "function" ? value(open) : value
+        if (setOpenProp) {
+          setOpenProp(openState)
+        } else {
+          _setOpen(openState)
+        }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 export const SidebarProvider = React.forward_ref<;
   HTMLDivElement;
@@ -151,6 +184,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -171,9 +208,17 @@ if ( {) {
         ) {
           event.preventDefault()
           toggleSidebar()
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+        }
+      }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
         // This sets the cookie to keep the sidebar state.;
@@ -196,9 +241,16 @@ if ( {) {
         ) {;
           event.preventDefault();
           toggleSidebar();
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
       }
 
@@ -381,7 +433,21 @@ export { SidebarContext }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+export { SidebarContext };
+;
+=======
+export { SidebarContext }
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

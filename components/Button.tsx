@@ -85,19 +85,42 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
+<<<<<<< HEAD
 
 
 =======
+=======
+<<<<<<< HEAD
+      {children}
+    </button>
+);
+}
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     >
       {children}
     </button>
   );
+<<<<<<< HEAD
 
     </button>);
 }
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

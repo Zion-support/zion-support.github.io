@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
+import {supabase} from "@/integrations/supabase/client";
+import {useToast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+import {ContractTemplate} from "@/types/contracts";
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+export function useContractTemplates() {;
+  const { user, isAuthenticated } = useAuth();
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { useToast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { ContractTemplate } from "@/types/contracts";
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+export function useContractTemplates() {
+  const { user, isAuthenticated } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -12,9 +42,29 @@
     queryFn: async () => {
       if (!isAuthenticated |!user) {
         return []
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+      }
+      const { data, error } = await supabase
+        .from('contract_templates')
+        .select('*')
+        .order('is_default', { ascending: false })
+        .order('created_at', { ascending: false });
+      if (error) {
+        throw error
+<<<<<<< HEAD
+      }
+      return data as ContractTemplate[]
+    }
+    enabled: isAuthenticated && !!user
+  });
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
@@ -47,9 +97,16 @@ export function useContractTemplates() {;
         .order('created_at', { ascending: false }),;
       if (error) {;
         throw error;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       
       return data as ContractTemplate[]
@@ -117,15 +174,24 @@ if ( {) {
 }
         return [];
       }
+<<<<<<< HEAD
       const { data, error } = await supabase;
         .from ('contract_templates');
         .select ('*');
         .order ('is_default', { ascending: false });
         .order ('created_at', { ascending: false });
 =======
+<<<<<<< HEAD
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
     };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 ;
@@ -191,10 +257,18 @@ if (throw error) {
       }
 
     },
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -271,6 +345,7 @@ if (throw error) {
             .eq('user_id', user && user.id)
             .eq('is_default', true)
             .neq('id', templateId)
+<<<<<<< HEAD
 
       template_data: ContractFormValues,
       is_default?: boolean;
@@ -280,9 +355,37 @@ if (throw error) {
 }
       setIsLoading (true);
 =======
+<<<<<<< HEAD
+        }
+        // Update the template
+        const { data, error } = await supabase
+          .from('contract_templates')
+          .update({
+            title: title;
+            template_data: templateData;
+            is_default: isDefault
+            updated_at: new Date().toISOString()
+          })
+          .eq('id', templateId)
+          .eq('user_id', user.id)
+          .select()
+          .single();
+        if (error) throw error;
+        return data as ContractTemplate
+      } finally {
+        setIsLoading(false)
+      }
+<<<<<<< HEAD
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
     };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     },;
     onSuccess: () => {;
@@ -364,10 +467,18 @@ if (throw error) {
       }
 
     },
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -577,11 +688,20 @@ if (throw error) {
       toast({
         title: "Default template set"
         description: "Default contract template has been updated."})
+<<<<<<< HEAD
 
 
     };
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }
+=======
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     onError: (error: Error) => {
       console && console.error("Error setting default template:", error);
       toast({
@@ -623,10 +743,18 @@ if (throw error) {
     update_template;
     delete_template,
     setDefaultTemplate;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }

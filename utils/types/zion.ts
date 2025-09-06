@@ -1,7 +1,22 @@
+<<<<<<< HEAD
 
 
 =======
 
+=======
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface Branding {logoUrl?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
+  subdomain?: string;
+}
+export interface DeployModules {marketplace: boolean;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface Branding {;
 
   logoUrl?: string,;
@@ -30,9 +45,42 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+  globalMap?: boolean;
+  franchiseOnboarding?: boolean;
+  referralAmbassadors?: boolean;
+  grantPortal?: boolean;
+  trailer?: boolean;
+  bookStore?: boolean;
+<<<<<<< HEAD
+}
+export interface DeployInput {instanceName: string;
+  defaultLanguage: string;
+  deploymentRegion: string;
+  tokenActivation: boolean;
+  governanceMode: GovernanceMode;
+  branding: Branding;
+  modules: DeployModules;
+  requestedRoutes?: string[];
+}
+export interface DeployLogEntry {timestamp: string;
+  level: "info" | "warn" | "error";
+  action: string;
+  details?: Record<string unknown> | string;
+}
+export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event";
+  path: string;
+  description?: string;
+}
+export interface DeployResult {success: boolean;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
@@ -52,8 +100,63 @@ export interface DeployInput {;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  governanceMode: GovernanceMode;
+  branding: Branding;
+  modules: DeployModules;
+  requestedRoutes?: string[];
+}
+;
+export interface DeployLogEntry {;
+  timestamp: string;
+  level: "info" | "warn" | "error";
+  action: string;
+  details?: Record<string unknown> | string;
+}
+;
+export interface GeneratedAsset {;
+  kind: "file" | "page" | "config" | "job" | "event";
+  path: string;
+  description?: string;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  governanceMode: GovernanceMode,;
+  branding: Branding,;
+  modules: DeployModules,;
+  requestedRoutes?: string[];
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface DeployLogEntry {
+  timestamp: string;
+  level: "info" | "warn" | "error",;
+  action: string;
+  details?: Record<string, unknown> | string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export interface GeneratedAsset {;
+  kind: "file" | "page" | "config" | "job" | "event",;
+  path: string;
+  description?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 export interface DeployResult {;
@@ -66,6 +169,7 @@ export interface DeployResult {;
   logs: DeployLogEntry[];
   summary: string;
   version: string;
+<<<<<<< HEAD
 
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
@@ -77,14 +181,30 @@ export interface Branding {
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+  adminKeyConfigured: boolean;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -140,8 +260,26 @@ export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
+<<<<<<< HEAD
 
 
 
 }
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

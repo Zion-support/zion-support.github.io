@@ -948,6 +948,13 @@ if ( {) {
     };  }, [intensity]);
 
   }, [intensity]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1048,10 +1055,76 @@ if ( {) {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove)
+<<<<<<< HEAD
 =======
             rotate: 360,
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+=======
+  }, []);
+  return (
+    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      {/* HTML Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ filter: `blur(${0.5 * intensity}px)` }}
+      />
+      {/* Framer Motion Geometric Shapes */}
+      <div className="absolute inset-0">
+        {/* Floating geometric shapes */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          animate={{
+            rotate: 360
+            scale: [1, 1.2, 1];
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+<<<<<<< HEAD
+            duration: 8
+            repeat: -1
+            ease: 'linear'
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
+          animate={{
+            y: [0, -20, 0]
+            opacity: [0.4, 0.8, 0.4]
+            scale: [1, 1.1, 1],          }}
+          transition={{
+            duration: 6
+            repeat: -1
+            ease: 'easeInOut',          }}
+        />
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full"
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.4, 0.8, 0.4];
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+<<<<<<< HEAD
+            duration: 6
+            repeat: -1
+            ease: 'easeInOut'
+=======
+            duration: 6,
+            repeat: -1,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+        />
+        <motion.div
+          className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
+          style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
+          animate={{
+            rotate: [0, 180, 360]
+            opacity: [0.2, 0.5, 0.2],          }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           transition={{
             duration: 8,
             repeat: -1,
@@ -1100,14 +1173,28 @@ if ( {) {
             repeat: -1
             ease: 'linear',            ease: "linear"
 =======
+<<<<<<< HEAD
             rotate: [0, 180, 360];
             opacity: [0.2, 0.5, 0.2];
+=======
+<<<<<<< HEAD
+            duration: 8,
+            repeat: -1,
+
+          }}
+          transition={{
+            duration: 6,
+            repeat: -1,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
           }}
           transition={{
             duration: 12,
             repeat: -1,
 
+<<<<<<< HEAD
 
           }}
 
@@ -1121,15 +1208,30 @@ if ( {) {
             duration: 6,
             repeat: -1,
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }}
         />
       </div>
       {/* Energy waves */}
       <div className='absolute inset-0'>
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
@@ -1166,6 +1268,7 @@ if ( {) {
             y: ['-100%100%']
           }}
           transition={{
+<<<<<<< HEAD
 
 
           animate={{
@@ -1198,6 +1301,10 @@ if ( {) {
           animate={{
             coordinate_y: ['-100%', '100%'],          }}
           transition={{
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             duration: 20
             repeat: -1
             ease: 'linear',          }}          }}
@@ -1228,6 +1335,24 @@ if ( {) {
             duration: 20,
             repeat: -1,
 
+<<<<<<< HEAD
+=======
+          }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            duration: 20,
+            repeat: -1,
+<<<<<<< HEAD
+            ease: 'linear',            ease: "linear"
+          }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       </div>
 =======
@@ -1268,7 +1393,17 @@ if ( {) {
               scale_y: [0, 1, 0];
 
             }}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            transition={{
+              duration: 3
+              delay: i * 0.1
+              repeat: -1
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 =======
@@ -1279,9 +1414,26 @@ if ( {) {
               duration: 3,
               delay: i * 0 && 0.1,
               repeat: -1,
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
+<<<<<<< HEAD
+        <motion.div
+          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
+          style={{
+            backgroundSize: '50px 50px'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -1291,7 +1443,11 @@ if ( {) {
               repeat: -1,
 =======
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ease: 'easeInOut',            }}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1313,10 +1469,17 @@ if ( {) {
 
       <div className='absolute inset-0'>
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1338,6 +1501,7 @@ if ( {) {
             duration: 4,
             repeat: -1,
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
         />;
       </div>;
     </div>);
@@ -1356,10 +1520,27 @@ export default UltraFuturisticBackground2034;        <motion.div;
 export default UltraFuturisticBackground2034;        <motion&& motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
 
+=======
+        />
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default UltraFuturisticBackground2034;        <motion.div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           style={{
             backgroundSize: '50px 50px'
           }}
           animate={{
+<<<<<<< HEAD
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           }}
           transition={{
@@ -1367,6 +1548,25 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div
             duration: 4
             repeat: -1
 
+=======
+            opacity: [0.3, 0.6, 0.3]
+<<<<<<< HEAD
+          }}
+          transition={{
+            duration: 4
+            repeat: -1
+=======
+=======
+export default UltraFuturisticBackground2034;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          }}
+          transition={{
+            duration: 4,
+            repeat: -1,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />;
@@ -1379,5 +1579,28 @@ export default UltraFuturisticBackground2034;        <motion&& motion.div
 
 };
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default UltraFuturisticBackground2034;
+<<<<<<< HEAD
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: -1,
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          }}
+        />
+      </div>
+    </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

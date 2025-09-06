@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
@@ -8,6 +14,7 @@ export function Web3Login() {;
 
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
 
   const handleWeb3Login = async () => {;
     try {;
@@ -15,6 +22,23 @@ export function Web3Login() {;
 
 
 
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { Wallet } from "@/components/icons";
+import { toast } from "sonner";
+=======
+import { Wallet } from "@/components/icons",
+import { toast } from "sonner",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -91,8 +115,19 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      )}
+    </Button>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -144,11 +179,18 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       )}
 
     </Button>;

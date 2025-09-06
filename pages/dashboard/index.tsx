@@ -31,9 +31,17 @@ const Dashboard: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       </section>
       <section>
@@ -42,6 +50,7 @@ const Dashboard: NextPage = () => {
           title="No messages yet"
           description="When conversations start, they’ll show up here."
 
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from 'next',
@@ -62,6 +71,23 @@ const Dashboard: NextPage = () => {
           icon={<span>🧰</span>}
           primary_action={{ label: 'Post a job', href: '/jobs / post' }}
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
+=======
+<<<<<<< HEAD
+=======
+export default Dashboard,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          icon={<span>💬</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          primaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />;
       </section>;
 
@@ -69,7 +95,15 @@ const Dashboard: NextPage = () => {
   );
 },;
 export default Dashboard;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

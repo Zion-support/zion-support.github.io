@@ -309,6 +309,7 @@ export default function UltraAdvancedNavigation2026V2() {;
   Palette,
   Cloud,
   Server,
+<<<<<<< HEAD
   Network,
   Cpu,
 } from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
@@ -323,6 +324,30 @@ function UltraAdvancedNavigation2026V2() {
   useEffect (() => {
     const handle_scroll = () =>: any {
       setIsScrolled (window.scroll_y > 20);
+=======
+  Network,;
+  Cpu,;
+<<<<<<< HEAD
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;
+=======
+} from 'lucide-react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function UltraAdvancedNavigation2026V2() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     window.addEventListener ('scroll', handle_scroll);
     return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
@@ -450,6 +475,14 @@ function UltraAdvancedNavigation2026V2() {
     email: 'kleber@ziontechgroup.com',
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className='flex items-center space-x-2'>
@@ -565,8 +598,38 @@ function UltraAdvancedNavigation2026V2() {
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
 
 
+=======
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                    >                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+<<<<<<< HEAD
+                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -577,8 +640,51 @@ function UltraAdvancedNavigation2026V2() {
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    >
+                      <div className='grid grid-cols-1 gap-2'>
+                        {item.dropdown.map(dropdownItem => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className='flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group'
+                          >
+                            <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
+                              {dropdownItem.icon}
+                            </div>
+<<<<<<< HEAD
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}                    >
+                      <div className="grid grid-cols-1 gap-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+                          >
+                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
+                              {dropdownItem.icon}
+                            </div>
+                            <span className="text-gray-300 group-hover:text-white transition-colors">
+                              {dropdownItem.name}
+=======
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}
+
+                              {dropdownItem.name}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -594,12 +700,21 @@ function UltraAdvancedNavigation2026V2() {
 
             {/* CTA Button */}
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   Get Started
                 </button>
               </Link>
             </div>
 
+<<<<<<< HEAD
 
             </div>;
 
@@ -735,6 +850,13 @@ function UltraAdvancedNavigation2026V2() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -748,10 +870,18 @@ function UltraAdvancedNavigation2026V2() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -760,7 +890,19 @@ function UltraAdvancedNavigation2026V2() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
 
+<<<<<<< HEAD
 
+=======
+          >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <button
                   onClick={() => setIsOpen(false)}
 
@@ -876,10 +1018,18 @@ function UltraAdvancedNavigation2026V2() {
                         href={item.href}
                         onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -1062,10 +1212,18 @@ function UltraAdvancedNavigation2026V2() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -1082,7 +1240,12 @@ function UltraAdvancedNavigation2026V2() {
 
 
           onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
         />;
+=======
+<<<<<<< HEAD
+        />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       )}
       {/* Spacer for fixed navigation */}
 
@@ -1097,6 +1260,7 @@ function UltraAdvancedNavigation2026V2() {
   );
 
 }
+<<<<<<< HEAD
 
 =======
           className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
@@ -1112,12 +1276,22 @@ function UltraAdvancedNavigation2026V2() {
 
 
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       )}
@@ -1125,6 +1299,24 @@ function UltraAdvancedNavigation2026V2() {
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+);      <div className="h-32"></div>
+    </>
+  );
+}
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

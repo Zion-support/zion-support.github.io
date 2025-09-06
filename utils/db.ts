@@ -3,6 +3,7 @@
   }
   return default_value;
 }
+<<<<<<< HEAD
 
 
 
@@ -18,6 +19,20 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+<<<<<<< HEAD
+export function writeJsonFile<T>(fileName: string, data: T): void {
+=======
+
+export function writeJsonFile<T>(fileName: string, data: T): void {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const filePath = getFilePath(fileName);
+  const tmpPath = `${filePath}.tmp`;
+  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
+  fs.renameSync(tmpPath, filePath);
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
@@ -25,6 +40,7 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
 
 }
 =======
+<<<<<<< HEAD
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -107,19 +123,35 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 
 }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -165,8 +165,16 @@ function SolutionsPage() {
 
 
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -177,17 +185,39 @@ function SolutionsPage() {
         </div>;
       </div>;
       {/* Industry Applications */}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Industries</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Transforming Every Sector
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our AI solutions are designed to adapt and excel across diverse industries
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -239,17 +269,39 @@ function SolutionsPage() {
         </div>;
       </div>;
       {/* Implementation Process */}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Implementation</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Our Proven Process
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            From initial assessment to ongoing optimization, we guide you through every step
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -308,16 +360,37 @@ function SolutionsPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 
 
 
 =======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Ready to transform your business?
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Let's discuss how our AI solutions can accelerate your growth and give you a
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

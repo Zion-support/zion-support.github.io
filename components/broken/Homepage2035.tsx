@@ -32,8 +32,27 @@ import {
   Cpu,
   Atom,
   Satellite,
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  Gamepad2,
+  Palette,;} from 'lucide-react';import { 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  Gamepad2,;
+  Palette,;} from 'lucide-react';import {
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+=======
+  Gamepad2,
+  Palette,;} from 'lucide-react';import { 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
@@ -265,12 +284,45 @@ const Homepage2035: React.FC = () => {;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
   const allServices = [
+<<<<<<< HEAD
 =======
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
           return true;
         });
+=======
+    ...innovative2025MicroSaasBatch;
+    ...innovative2025ITEnterpriseBatch;
+    ...innovative2025AIServicesBatch
+  ];
+<<<<<<< HEAD
+  const filteredServices = activeCategory === 'all'
+    ? allServices
+=======
+
+<<<<<<< HEAD
+  const filteredServices = activeCategory === 'all' 
+    ? allServices 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    : allServices.filter(service => {
+        if (activeCategory === 'ai') return service.category.includes('AI') |service.category.includes('Machine Learning');
+        if (activeCategory === 'it') return service.category.includes('IT') |service.category.includes('Enterprise');
+        if (activeCategory === 'quantum') return service.name.includes('Quantum');
+        if (activeCategory === 'space') return service.category.includes('Space');
+        if (activeCategory === 'cyber') return service.category.includes('Security') |service.category.includes('Cybersecurity');
+        if (activeCategory === 'cloud') return service.category.includes('Cloud') |service.category.includes('DevOps');
+        if (activeCategory === 'fintech') return service.category.includes('Financial') |service.category.includes('Trading');
+        return true
+      });
+  if (isLoading) {
+    return <LoadingFallback />
+<<<<<<< HEAD
+  }
+=======
+    initial: { opacity: 0, scale: 0.8 },
+    animate: {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   if (isLoading) {;
     return <LoadingFallback />;  }      opacity: 1,;
@@ -290,8 +342,11 @@ const Homepage2035: React.FC = () => {;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
 
+<<<<<<< HEAD
   const allServices = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {
   ArrowRight,
@@ -531,9 +586,14 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 =======
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -555,6 +615,17 @@ if ( {) {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
+=======
+=======
+              className='mb-8'
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -631,10 +702,18 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -712,9 +791,17 @@ if ( {) {
 
                 </motion.div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ))}
 
             </motion && motion.div>;
@@ -724,10 +811,18 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -743,16 +838,32 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -791,10 +902,18 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Category Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -802,7 +921,15 @@ if ( {) {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -825,10 +952,18 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -876,10 +1011,18 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* View All Services Button */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -887,8 +1030,16 @@ if ( {) {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -940,16 +1091,32 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -1148,7 +1315,12 @@ if ( {) {
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
@@ -1167,9 +1339,17 @@ if ( {) {
 
                 </motion.div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ))}
 
             </div>;
@@ -1184,8 +1364,15 @@ if ( {) {
             <motion&& motion.div
 =======
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
@@ -1193,10 +1380,18 @@ if ( {) {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1244,6 +1439,7 @@ if ( {) {
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
+<<<<<<< HEAD
 
 
 };
@@ -1251,13 +1447,29 @@ if ( {) {
   animate: {
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+animate: {
+=======
+};
+
+  animate: {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 };
 
 
   animate: {
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -1372,7 +1584,18 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 
   once: true 
 
+<<<<<<< HEAD
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
+=======
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button 
+};
+<<<<<<< HEAD
+export default Homepage2035;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default Homepage2035;  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 
 =======
@@ -1421,6 +1644,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2035;
+<<<<<<< HEAD
 
 
 =======
@@ -1783,3 +2007,7 @@ export default Homepage2035;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

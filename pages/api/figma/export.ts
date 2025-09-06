@@ -1,10 +1,29 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import JSZip from "jszip";
+import {
+<<<<<<< HEAD
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind
+=======
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import JSZip from './jszip';
@@ -20,13 +39,22 @@ export default async /**
  */
 function handler() {
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
 
     const kind = (
+<<<<<<< HEAD
 
 
+=======
+      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
+    ) as UIKitKind;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -65,7 +93,11 @@ function handler() {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -149,6 +181,18 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+}
+=======
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

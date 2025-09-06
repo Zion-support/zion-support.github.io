@@ -1,5 +1,42 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+  CardFooter
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
+<<<<<<< HEAD
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+=======
+import { format } from 'date-fns'
+import { JobMatch } from '@/types/jobs'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+import { useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
+import { format } from "date-fns",
+import { JobMatch } from "@/types/jobs",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface JobMatchCardProps {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -23,6 +60,7 @@ interface JobMatchCardProps {;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
+<<<<<<< HEAD
 
 export function JobMatchesCard(): any ({;
   match,;
@@ -44,6 +82,26 @@ export function JobMatchesCard(): any ({;
 =======
 }
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+export function JobMatchesCard({
+  match
+  onApply
+  onDecline
+  showApplied = false
+}: JobMatchCardProps) {
+  const job = match.job
+  if (!job) return null
+<<<<<<< HEAD
+=======
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
@@ -51,8 +109,15 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   
   if (!job) return null,
   
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
@@ -144,8 +209,16 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
               {match.matched_skills.length > 5 && (
                 <Badge variant="secondary" className="text-xs">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   +{match.matched_skills.length - 5}
                 </Badge>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -153,11 +226,19 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
@@ -169,10 +250,18 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -243,14 +332,41 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            <Button
+              variant='outline'
+              className='flex-1'
+              onClick={() => onDecline(match.id)}            >
+              Decline
+            </Button>
+          </div>
+<<<<<<< HEAD
+        )}
+      </CardFooter>
+    </Card>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             <Button 
               variant="outline" 
@@ -383,6 +499,14 @@ if (return null) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -226,8 +226,16 @@ if ( {) {
 
         ctx.restore();      }
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     }
 
@@ -307,13 +315,26 @@ if ( {) {
             ctx.stroke();
           }
         });
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+        ctx.restore();      }            ctx.stroke()
+          }
+        });
+        ctx.restore()
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         ctx.restore();      }
 
       }
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -348,6 +369,12 @@ if ( {) {
           }
         });
         ctx && ctx.restore();
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
 
 
@@ -391,6 +418,7 @@ if ( {) {
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
+<<<<<<< HEAD
           ctx.stroke()
 
         }
@@ -407,10 +435,37 @@ if ( {) {
 =======
 =======
 
+=======
+          ctx.stroke();
+        }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+        ctx.restore();      }          ctx.stroke()
+        }
+        ctx.restore()
+<<<<<<< HEAD
+    }
+=======
+
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ctx.restore();      }
 
       }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -656,9 +711,25 @@ if ( {) {
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
+<<<<<<< HEAD
+=======
+        ctx.beginPath();
+        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
+        ctx.stroke();
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
         
+<<<<<<< HEAD
 
+=======
+        ctx.restore()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        ctx.restore();      }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
@@ -666,7 +737,15 @@ if ( {) {
 
       }
 
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -1384,10 +1463,18 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }
           });
         });
@@ -1442,10 +1529,18 @@ if ( {) {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1499,6 +1594,7 @@ if ( {) {
               duration: 8
               repeat: Infinity
               ease: 'easeInOut'
+<<<<<<< HEAD
 =======
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -1537,6 +1633,43 @@ if ( {) {
             animate={{
 
 
+=======
+            }}
+          />
+          <motion.div
+            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
+            animate={{
+              scale: [1.2, 1, 1.2]
+              rotate: [360, 180, 0]
+              opacity: [0.1, 0.3, 0.1],            }}
+            transition={{
+<<<<<<< HEAD
+              duration: 10
+              repeat: Infinity
+              ease: 'easeInOut',            }}
+          />
+        </div>
+      )}
+            }}
+          />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
+            animate={{
+              scale: [1.2, 1, 1.2];
+              rotate: [360, 180, 0];
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{
+<<<<<<< HEAD
+              duration: 10
+              repeat: Infinity
+=======
+              duration: 10,
+              repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ease: 'easeInOut',              ease: "easeInOut"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }}
           />;
         </div>;
@@ -1546,6 +1679,7 @@ if ( {) {
 };
 
 export default UltraAdvancedFuturisticBackground2026;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
               ease: 'easeInOut',              ease: "easeInOut";
@@ -1564,8 +1698,27 @@ export default UltraAdvancedFuturisticBackground2026;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               duration: 10,
               repeat: Infinity,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+            }}
+          />
+        </div>
+      )}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

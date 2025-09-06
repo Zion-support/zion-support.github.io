@@ -24,20 +24,42 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
   Settings,;
   Trash2,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 =======
+import {
+<<<<<<< HEAD
+  Link
+  Copy
+  BarChart3
+  ArrowRight
+  RefreshCw
+  CheckCircle
+  ExternalLink
+  QrCode
+  Settings
+  Trash2;
+} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+
+export default function URLShortenerPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function URLShortenerPage() {;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -525,6 +547,7 @@ function URLShortenerPage() {
                 Your Statistics
               </h3>
 
+<<<<<<< HEAD
 
                 <Button
                   onClick={generateShortUrl}
@@ -649,6 +672,13 @@ function URLShortenerPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
@@ -920,7 +950,16 @@ function URLShortenerPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
 
+<<<<<<< HEAD
 
+=======
+              Professional URL Shortening Features
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -1132,6 +1171,44 @@ function URLShortenerPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-orange-100 mb-8'>
+            Join thousands of businesses using our professional URL shortening
+            service to improve their link management.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-orange-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-orange-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-orange-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section className='py-20 bg-gray-900'>;
@@ -1227,6 +1304,7 @@ function URLShortenerPage() {
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
 =======
+<<<<<<< HEAD
     return result;
   }
 ;
@@ -1882,3 +1960,12 @@ function URLShortenerPage() {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

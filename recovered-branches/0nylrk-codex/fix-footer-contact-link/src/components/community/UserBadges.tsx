@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
@@ -10,6 +11,26 @@ interface UserBadgesProps {;
 
 const iconMap = {;
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
+import {Badge} from "@/types/community";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
+<<<<<<< HEAD
+import { Badge } from "@/types/community";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+=======
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
 import { Badge } from '@/types / community';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
@@ -17,7 +38,10 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface UserBadgesProps {
   badges: Badge[];
 }
@@ -122,9 +146,16 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default UserBadges;
 
 =======

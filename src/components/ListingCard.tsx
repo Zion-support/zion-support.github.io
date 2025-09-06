@@ -1,5 +1,105 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react'
+import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import Image from 'next/image';interface ListingCardProps {
+<<<<<<< HEAD
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+=======
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import Image from "next/image",
+interface ListingCardProps {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  id?: string,
+  title: string,
+  description: string,
+  images?: string[],
+  category: string,
+  tags?: string[],
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string,
+  profileType?: 'service' | 'talent'
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+export function ListingCard({
+  id
+  title
+  description
+  images
+  category
+  tags
+  author
+  className
+  profileType = 'service'
+}: ListingCardProps) {
+  // Generate a profile ID based on the listing data
+  // In a real app, this would be a proper ID from the database
+<<<<<<< HEAD
+  const profileId =
+    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
+      >
+
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import Image from "next/image",
+interface ListingCardProps {
+  id?: string,
+  title: string,
+  description: string,
+  images?: string[],
+  category: string,
+  tags?: string[],
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string,
+  profileType?: 'service' | 'talent'
+=======
+  const profileId = null;
+    id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')
+      >
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import { Badge } from "@/components/ui/badge",;
+import Link from "next/link",;
+import Image from "next/image",;
+interface ListingCardProps {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   id?: string,;
   title: string,;
   description: string,;
@@ -88,7 +188,15 @@ export function ListingCard(): any ({;
         className
       )}
     >
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
@@ -99,9 +207,17 @@ export function ListingCard(): any ({;
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -117,10 +233,18 @@ export function ListingCard(): any ({;
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
         {tags && tags.length > 0 && (
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
@@ -130,12 +254,21 @@ export function ListingCard(): any ({;
 
 
               </Badge>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ))}
           </div>;
         )}
+<<<<<<< HEAD
 
 
               <Image
@@ -160,14 +293,26 @@ export function ListingCard(): any ({;
           </div>;
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
         
 
 =======
+<<<<<<< HEAD
 
 
 =======
         
+=======
+
+=======
+        
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -175,10 +320,33 @@ export function ListingCard(): any ({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+<<<<<<< HEAD
 
 =======
 
 
+=======
+<<<<<<< HEAD
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
+          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
+            {author.avatarUrl ? (
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
+            ) : (
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+            )}
+            <span className="text-sm text-zion-slate-light">{author.name}</span>
+          </div>
+        )}
+      </div>
+    </Link>
+  );
+};"}) })"
+}
+<<<<<<< HEAD
+;"}) })"
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
@@ -189,8 +357,14 @@ export function ListingCard(): any ({;
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 
 ;"}) })"
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   );
 }
@@ -294,4 +468,7 @@ function ListingCard() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

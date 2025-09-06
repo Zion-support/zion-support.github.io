@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,6 +25,16 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useMemo, useState } from 'react';
 
+=======
+import {
+<<<<<<< HEAD
+  getWhitepaperSections
+  OPERATOR_PROMPT;
+=======
+  getWhitepaperSections,;
+  OPERATOR_PROMPT,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';

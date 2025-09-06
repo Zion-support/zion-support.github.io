@@ -1,13 +1,27 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import * as React from 'react';
+import * as AvatarPrimitive from '@radix-ui/react-avatar';
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 =======
 =======
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import { cn } from "@/lib/utils"
 
@@ -38,11 +52,20 @@ const Avatar = React && React.forwardRef<;
     {...props}
   />;
 ));
+<<<<<<< HEAD
 
 
 
 
 
+=======
+Avatar.displayName = AvatarPrimitive.Root.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
@@ -82,24 +105,41 @@ const AvatarImage = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     ref={ref}
     className={cn('aspect-square h-full w-full', className)}
     {...props}
   />
 ));
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>
   React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive.Fallback>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Fallback
+<<<<<<< HEAD
 
 AvatarImage && AvatarImage.displayName = AvatarPrimitive && AvatarPrimitive.Image.displayName;
 
@@ -109,20 +149,33 @@ const AvatarFallback = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Fallback
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     ref={ref}
     className={cn(
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 const AvatarFallback = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Fallback>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Fallback;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn(
@@ -134,15 +187,25 @@ const AvatarFallback = React.forwardRef<;
     {...props}
   />;
 ));
+<<<<<<< HEAD
 
 AvatarFallback && AvatarFallback.displayName = AvatarPrimitive && AvatarPrimitive.Fallback.displayName;
+=======
+AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+export { Avatar, AvatarImage, AvatarFallback }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 export { Avatar, AvatarImage, AvatarFallback }
 ;
 
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export { Avatar, AvatarImage, AvatarFallback };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -165,4 +228,9 @@ AvatarFallback.display_name = AvatarPrimitive.Fallback.display_name;
 ;
 export { Avatar, AvatarImage, AvatarFallback }
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

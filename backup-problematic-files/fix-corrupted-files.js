@@ -107,15 +107,29 @@ const corruptedFiles = ["src/pages/services/AIHealthcareRevenueCycle && AIHealth
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
 export default function ${serviceName}() {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  const features = ["AI-powered ${displayName.toLowerCase()} optimization"
+    "Automated ${displayName.toLowerCase()} management"
+    "Real-time ${displayName.toLowerCase()} analytics"
+    "Predictive ${displayName.toLowerCase()} insights"
+    "Custom AI models for ${displayName.toLowerCase()}"
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const features = ["AI-powered ${displayName.toLowerCase()} optimization",
     "Automated ${displayName.toLowerCase()} management",
     "Real-time ${displayName.toLowerCase()} analytics",
     "Predictive ${displayName.toLowerCase()} insights",
     "Custom AI models for ${displayName.toLowerCase()}",;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     "Enterprise-grade security and compliance"];
   const benefits = ["Improve ${displayName.toLowerCase()} performance by 50-80%"
     "Reduce operational costs by 35-65%"

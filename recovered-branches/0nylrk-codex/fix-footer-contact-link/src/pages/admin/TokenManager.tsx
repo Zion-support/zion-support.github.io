@@ -1,11 +1,45 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useEffect, useState  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import { TokenTransaction  } from '@/types/tokens';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { useToast } from '@/hooks/use-toast';
+export default function TokenManager() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
 import {useEffect, useState} from 'react';
+<<<<<<< HEAD
 
 
 
+=======
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {TokenTransaction} from '@/types/tokens';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
+import {useToast} from '@/hooks/use-toast';
+export default function TokenManager() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -74,13 +108,29 @@ if ( {) {
       });
       fetch_transactions ();
     } else {
+<<<<<<< HEAD
 
 
+=======
+      const err = await res.json();
+      toast({
+        title: 'Error'
+        description: err.error |'Failed'
+        variant: 'destructive'
+      })
+    }
+<<<<<<< HEAD
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     }
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
@@ -174,8 +224,18 @@ export default function TokenManager() {;
         variant: 'destructive';
       });
     }
+<<<<<<< HEAD
   }
 ;
+=======
+  },
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <ProtectedRoute admin_only>;
       <div>;

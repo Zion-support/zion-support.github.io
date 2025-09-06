@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:src.disabled/components/ModernUIEnhancer.jsx
+<<<<<<< HEAD
+"export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
+export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 "export\": const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState (\'auto\') const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState (\'desktop\') const scrollToTopRef = useRef (null) \';\"";
 export: const ModernUIEnhancer = ({ enableAnimations = true,enableParticles = true,enableScrollEffects = true,enableThemeToggle = true,enableResponsiveDesign = true }) => { const [isVisible,setIsVisible] = useState (false) const [currentTheme,setCurrentTheme] = useState ("auto") const [showScrollToTop,setShowScrollToTop] = useState (false) const [deviceType,setDeviceType] = useState ("desktop") const scrollToTopRef = useRef (null) ";"";"""

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -28,6 +29,15 @@ class ErrorBoundary extends React.Component {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -36,8 +46,30 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+<<<<<<< HEAD
 
 import js from '@eslint/js';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import js from '@eslint/js';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import next from '@next/eslint-plugin-next';
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import js from '@eslint/js';
 
@@ -155,6 +187,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 >>>>>>> origin/automation-improvements-final
 
 =======
+<<<<<<< HEAD
 
       "*.test && test.js",
       "*.test && test.ts",
@@ -164,6 +197,67 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
       "*.spec && spec.tsx",
     ],
 
+=======
+<<<<<<< HEAD
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsparser from "@typescript-eslint/parser";
+import react from "eslint-plugin-react";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+>>>>>>> origin/main
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default [
+  {
+<<<<<<< HEAD
+    ignores: [
+      "node_modules/",
+      ".next/",
+      "out/",
+      "dist/",
+      "build/",
+      "coverage/",
+      "*.config.js",
+      "*.config.cjs",
+      "*.config.mjs",
+      "scripts/",
+      "automation/",
+      "pm2-automation/",
+      "pages.disabled/",
+      "pages.disabled_auto/",
+      "pages.disabled_full/",
+      "pages.corrupted.*/",
+      "pages.broken/",
+      "pages.bak/",
+      "pages.blog.disabled/",
+      "pages._archive_corrupted/",
+      "pages._quarantine/",
+      "pages-disabled/",
+      "pages-quarantine/",
+      "pages.__backup/",
+      "pages-backup/",
+      "tests.disabled/",
+      "components.disabled/",
+      "zion-os.disabled/",
+      "zion_academy/",
+      "temp_backup/",
+      "temp_broken_files/",
+      "test_build/",
+      "*.test.js",
+      "*.test.ts",
+      "*.test.tsx",
+      "*.spec.js",
+      "*.spec.ts",
+      "*.spec.tsx"
+    ]
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
   js && js.configs.recommended,
   {
@@ -192,6 +286,13 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
       }
     },
     plugins: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       react,
       "react-hooks": reactHooks
     },
@@ -354,7 +455,42 @@ export default [
       }
     },
     rules: {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+<<<<<<< HEAD
+
+      "no-undef": "error"
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+  }
+];
+<<<<<<< HEAD
+=======
+=======
+      "no-undef": "error",
+    },
+  },;
+];
+=======
+      '@typescript-eslint': typescript,
+      react: react,
+      'react-hooks': reactHooks,
+      '@next/next': next,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...next.configs.recommended.rules,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
@@ -398,9 +534,22 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  }
+];
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -416,4 +565,7 @@ export default [
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

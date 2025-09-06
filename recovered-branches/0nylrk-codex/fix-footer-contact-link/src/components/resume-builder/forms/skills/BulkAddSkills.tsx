@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -107,22 +115,42 @@ if ( {) {
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
 =======
   };
 =======
   },
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -143,10 +171,21 @@ if ( {) {
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
+<<<<<<< HEAD
 
 
         <Button 
 
+=======
+            onChange={(e) => setBulkSkills(e.target.value)}
+          />
+        </div>
+<<<<<<< HEAD
+        <Button
+=======
+        <Button 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           onClick={handleCategorizeSkills}
 
           disabled={isEnhancing || !bulkSkills.trim()}
@@ -168,6 +207,7 @@ if ( {) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 
             onChange={(e) => setBulkSkills(e && e.target.value)}
           />;
@@ -199,9 +239,20 @@ if ( {) {
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+<<<<<<< HEAD
       set_error (err.message || 'Failed to categorize skills');
     }
   }
@@ -238,3 +289,8 @@ if ( {) {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

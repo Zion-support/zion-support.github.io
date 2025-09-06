@@ -1,5 +1,50 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Search } from 'lucide-react'
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+<<<<<<< HEAD
+=======
+  id: string
+name: string
+avatar?: string
+lastMessage: string
+timestamp: string
+unreadCount: number
+isTyping?: boolean 
+}interface MobileConversationListProps {
+  conversations: Conversation[]
+  activeConversation?: string
+  onSelectConversation: (id: string) => void
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  id: string
+name: string
+avatar?: string
+lastMessage: string
+timestamp: string
+unreadCount: number
+isTyping?: boolean
+}interface MobileConversationListProps {
+  conversations: Conversation[]
+  activeConversation?: string
+  onSelectConversation: (id: string) => void
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function MobileConversationList({
 
   conversations,
@@ -121,8 +166,46 @@ function MobileConversationList() {
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
               <Avatar>;
                 <AvatarImage
+<<<<<<< HEAD
 
 
+=======
+                  src={conversation.avatar}
+                  alt={conversation.name}
+                />                <AvatarFallback>
+                  {conversation.name.charAt(0).toUpperCase()}
+                </AvatarFallback>
+              </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+=======
+      
+      <div className="px-4 pb-4 space-y-2">
+        <div className="flex space-x-2">
+          <Badge variant="secondary" className="rounded-full px-3">All</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
+        </div>
+      </div>
+      
+      <div className="space-y-2 pb-24">
+        {conversations.map((conversation) => (
+          <div
+            key={conversation.id}
+            className={cn(
+              "px-4",
+              activeConversation === conversation.id && "bg-primary/5"
+            )}
+            onClick={() => onSelectConversation(conversation.id)}
+          >
+            <div className="flex items-center gap-3 py-3 cursor-pointer">
+              <Avatar>
+                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
@@ -188,10 +271,18 @@ function MobileConversationList() {
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </p>
                   
                   {conversation.unreadCount > 0 && (
@@ -200,9 +291,17 @@ function MobileConversationList() {
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   )}
                 </div>
               </div>
@@ -220,7 +319,13 @@ function MobileConversationList() {
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
@@ -272,4 +377,7 @@ function MobileConversationList() {
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

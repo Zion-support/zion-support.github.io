@@ -1,7 +1,27 @@
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import Head from 'next/head';
 
+=======
+<<<<<<< HEAD
+import { useState  } from 'react';
+import Head from 'next/head',
+=======
+import {useState} from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function OffworldDeploy() {
+  const [cid, setCid] = useState<string | null>(null),
+  const [status, setStatus] = useState<string>(''),
+=======
+export default function OffworldDeploy() {;
+  const [cid, setCid] = useState<string | null>(null);
+  const [status, setStatus] = useState<string>('');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [error, setError] = useState<string>('');
   const [provider, setProvider] = useState<string>('');
   async function handleDeploy() {
@@ -23,12 +43,23 @@ import {useState} from 'react';
 
   }
   return (
+<<<<<<< HEAD
 
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully');
     } catch (e: any) {;
       setError(e && e.message),;
       setStatus('');
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
+    } catch (e: any) {
+      setError(e.message)
+      setStatus('')
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   return (
     <div className='min-h-screen p-8'>;
@@ -108,14 +139,25 @@ function handle_deploy() {
       if (throw new Error (data?.error || 'Deploy failed')) {
   $2
 }
+<<<<<<< HEAD
       set_cid (data.cid);
       set_provider (data.provider || '');
       set_status ('Deployed successfully');
     } catch (e: any) {
       set_error (e.message);
       set_status ('');    }
+=======
+=======
+<<<<<<< HEAD
+=======
+    <div className='min-h-screen p-8'>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   return (
+<<<<<<< HEAD
     <div className='min - h-screen p - 8'>      set_status ('Deployed successfully');
     } catch (e: any) {
       set_error (e.message),
@@ -169,3 +211,15 @@ function handle_deploy() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+        </div>
+      )}
+    </div>
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

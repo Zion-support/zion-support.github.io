@@ -1,7 +1,30 @@
 
+<<<<<<< HEAD
 export const useRecordActivity = () => {;
   const { user } = useAuth();
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {
+  const { user } = useAuth();
+  const recordMilestoneActivity = async (
+    milestoneId: string
+    action: string
+    previousStatus: string | null
+    newStatus: string;
+=======
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -50,6 +73,7 @@ export const useRecordActivity = () => {
     } catch (err: any) {
       console && console.error("Error recording activity:", err);
       return null
+<<<<<<< HEAD
 
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -102,12 +126,21 @@ if (throw error) {
 
 =======
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   };
   
   return {
     recordMilestoneActivity
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -144,10 +177,26 @@ export const useRecordActivity = () => {;
       return null;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
+<<<<<<< HEAD
 
   };
   return {;
     recordMilestoneActivity;
+=======
+<<<<<<< HEAD
+=======
+  };
+  return {;
+    recordMilestoneActivity;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+<<<<<<< HEAD
+  return {
+    recordMilestoneActivity
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }

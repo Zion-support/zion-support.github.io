@@ -1,5 +1,22 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState, Suspense } from 'react'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+const ReactPlayer = React.lazy(() => import('react-player'))
+const ModelViewer = React.lazy(async () => {
+  await import('@google/model-viewer')
+  return {
+    default: (props: any) => React.createElement('model-viewer', props)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 });
 interface ProductGalleryProps {
@@ -218,16 +235,28 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
+<<<<<<< HEAD
 
     </Dialog>;
   );
+=======
+<<<<<<< HEAD
+    </Dialog>
+  )
+}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
     </Dialog>;
   );
 };
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState, Suspense } from 'react',;
 import {;
@@ -275,7 +304,15 @@ interface ProductGalleryProps {;
 }
 
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

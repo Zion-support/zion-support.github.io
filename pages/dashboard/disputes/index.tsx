@@ -47,21 +47,97 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split(';').reduce(
+    (acc: any, part: string) => {
+      const [k, v] = part.trim().split('=');
+      if (k) acc[k] = decodeURIComponent(v || '');
+      return acc;
+    },
+    {} as Record<string, string>
+  );
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
+    const [k, v] = part.trim().split('=');
+    if (k) acc[k] = decodeURIComponent(v || '');
+    return acc;
+  }, {} as Record<string, string>),;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   let role = 'guest';
   try {;
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest';
+<<<<<<< HEAD
   } catch {}
+=======
+  } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return { props: {} };};
+
+export default function AdminDisputesDashboard() {;
+  const { data } = useSWR('/api/disputes', fetcher);
+  const [statusFilter, setStatusFilter] = useState<
+    'All' | 'Open' | 'Under Review' | 'Resolved'
+  >('Open');
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (role !== 'admin') {;
     return { redirect: { destination: '/', permanent: false } };
   }
+<<<<<<< HEAD
 
   const disputes = useMemo(() => {;
     const list = data?.disputes || [];
 
+=======
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: {}   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function AdminDisputesDashboard() {
+  const { data } = useSWR('/api/disputes', fetcher),
+  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const disputes = useMemo(() => {
+<<<<<<< HEAD
+    const list = data?.disputes |[];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
 
@@ -185,6 +261,7 @@ export default function AdminDisputesDashboard() {
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
                   </td>
                 </tr>
+<<<<<<< HEAD
 
 =======
 import useSWR from 'swr';
@@ -205,10 +282,25 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     {} as Record < string, string>);
   let role = 'guest';
 =======
+<<<<<<< HEAD
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+);
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 },;
 export default function AdminDisputesDashboard(req, res) {
@@ -320,7 +412,15 @@ if (return list) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

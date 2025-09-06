@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -7,6 +13,10 @@ import { useRouter } from 'next/router',;
 export default function ToolResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -156,8 +166,14 @@ import { useRouter } from 'next/router';
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  ]
+  const tool = tools.find(t => t.id === id)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
@@ -167,7 +183,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -339,8 +359,14 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const tool = tools.find(t => t.id === id),
@@ -359,10 +385,22 @@ export default function ToolResourcePage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The tool resource you're looking for doesn't exist.
               </p>
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+              <Link
+=======
+<<<<<<< HEAD
+              <Link 
+=======
+              <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -405,9 +443,17 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -419,11 +465,37 @@ export default function ToolResourcePage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  <div 
+                    className="prose prose-invert max-w-none"
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <div
+                    className="prose prose-invert max-w-none"
+<<<<<<< HEAD
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+=======
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   />
                 </div>
               </div>
@@ -533,9 +605,17 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </ul>
                 </div>
 
@@ -558,10 +638,22 @@ export default function ToolResourcePage(req, res) {
 
 
             <div className="text-center">
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+              <Link
+=======
+<<<<<<< HEAD
+              <Link 
+=======
+              <Link
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -572,6 +664,7 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 
 =======
 }
@@ -808,6 +901,16 @@ if ( {) {
                         <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>;
                         {feature}
                       </li>))}
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </ul>;
                 </div>;
                 <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
@@ -836,11 +939,27 @@ if ( {) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
     </>);
+=======
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

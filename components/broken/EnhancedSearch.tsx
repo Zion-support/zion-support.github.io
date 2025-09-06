@@ -1,6 +1,23 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+=======
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+=======
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+=======
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }];
 setIsSearching (true);
 
@@ -715,12 +732,17 @@ function debounce<T extends (...args: any[]) => any>(;
 }
 export default EnhancedSearch;
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+<<<<<<< HEAD
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -830,6 +852,8 @@ export default EnhancedSearch;
 }</div> </div> </div>);
 }</div> </motion.div>);
 }</AnimatePresence> </div>);
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 // Debounce utility function function debounce < T extends (...args: unknown[]) => any> (func: T;
 wait: number;
@@ -844,6 +868,18 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
+<<<<<<< HEAD
 export default EnhancedSearch;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

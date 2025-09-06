@@ -22,8 +22,62 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 
+=======
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
+<<<<<<< HEAD
+  TrendingUp
+  BarChart3
+  DollarSign
+  Users
+  Globe
+  Target
+  Clock
+  Award
+  ArrowRight
+  ExternalLink
+  PieChart
+  LineChart
+  Activity
+  Zap;
+} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
+=======
+  TrendingUp,
+  BarChart3,
+  DollarSign,
+  Users,
+  Globe,
+  Target,
+  Clock,
+  Award,
+  ArrowRight,
+  ExternalLink,
+  PieChart,
+  LineChart,
+  Activity,;
+  Zap,;
+<<<<<<< HEAD
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
+=======
+} from 'lucide-react';
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -178,8 +232,138 @@ export default function MarketResearchPage() {
       ],
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+    },    {
+
+=======
+    },    {      opportunities: [
+        'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
+      ];
+      color: 'from-fuchsia-500 to-purple-600',
+      icon: <Zap className="w-8 h-8 text-white" />
+    };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    {
+
+      name: 'Database & Analytics',
+      marketSize: '$8.9B',
+      growthRate: '18.7% CAGR',
+      keyTrends: [
+        'Real-time analytics demand',
+        'Cloud database migration',
+        'Data privacy regulations',
+        'Performance optimization focus',
+      ],
+      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
+
+      opportunities: [
+        'Database performance monitoring',
+        'Real-time analytics dashboards',
+        'Data visualization tools',
+        'Query optimization platforms',
+      ],
+      color: 'from-cyan-500 to-blue-600',
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'Security & Identity',
+      marketSize: '$12.3B',
+      growthRate: '21.2% CAGR',
+      keyTrends: [
+        'Zero-trust security adoption',
+        'Multi-factor authentication growth',
+        'API security concerns',
+        'Compliance requirements increasing',
+      ],
+      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
+
+      opportunities: [
+        'Identity verification platforms',
+        'API security gateways',
+        'Compliance monitoring tools',
+        'Threat detection systems',
+      ],
+      color: 'from-green-500 to-emerald-600',
+      icon: <Target className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'Business Intelligence',
+      marketSize: '$22.1B',
+      growthRate: '19.8% CAGR',
+      keyTrends: [
+        'Self-service BI adoption',
+        'Real-time data integration',
+        'Mobile BI growth',
+        'Predictive analytics demand',
+      ],
+      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
+
+      opportunities: [
+        'Custom dashboard builders',
+        'Data integration platforms',
+        'Mobile analytics solutions',
+        'Predictive modeling tools',
+      ],
+      color: 'from-orange-500 to-red-600',
+      icon: <Activity className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'API Management',
+      marketSize: '$6.8B',
+      growthRate: '24.1% CAGR',
+      keyTrends: [
+        'Microservices architecture growth',
+        'API-first development',
+        'Rate limiting importance',
+        'Developer experience focus',
+      ],
+      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
+
+      opportunities: [
+        'API rate limiting services',
+        'Developer portal platforms',
+        'API analytics tools',
+        'Webhook management systems',
+      ],
+      color: 'from-indigo-500 to-purple-600',
+      icon: <Globe className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'User Experience Analytics',
+      marketSize: '$9.4B',
+      growthRate: '20.5% CAGR',
+      keyTrends: [
+        'Privacy-compliant tracking',
+        'Real-time user insights',
+        'Conversion optimization focus',
+        'Mobile app analytics growth',
+      ],
+      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
+
+      opportunities: [
+        'Heatmap and session recording',
+        'A/B testing platforms',
+        'User journey mapping tools',
+        'Conversion funnel analytics',
+      ],
+      color: 'from-teal-500 to-cyan-600',
+      icon: <Users className='w-8 h-8 text-white' />,
+    },  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ];
   const competitiveAnalysis = [
     {
@@ -792,18 +976,34 @@ function MarketResearchPage() {
 
             ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Market Segments */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Market Segment Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1041,10 +1241,18 @@ function MarketResearchPage() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         {/* Top Players */}
 
 
@@ -1059,10 +1267,18 @@ function MarketResearchPage() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       {/* Opportunities */}
 
 
@@ -1078,9 +1294,17 @@ function MarketResearchPage() {
 
                         </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       </div>
                     </div>
                   </div>
@@ -1090,18 +1314,34 @@ function MarketResearchPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Competitive Analysis */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1305,9 +1545,17 @@ function MarketResearchPage() {
 
                           {strength}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1319,10 +1567,18 @@ function MarketResearchPage() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {/* Weaknesses */}
 
 
@@ -1333,18 +1589,34 @@ function MarketResearchPage() {
               </Card>;
             ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Market Trends */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1507,7 +1779,15 @@ function MarketResearchPage() {
                         'bg-green-500/20 text-green-400'
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         </li>
                       ))}
                     </ul>
@@ -1525,18 +1805,34 @@ function MarketResearchPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Pricing Strategies */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1754,16 +2050,32 @@ function MarketResearchPage() {
                     </ul>
                   </div>
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {/* Cons */}
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -1885,14 +2197,29 @@ function MarketResearchPage() {
       {/* CTA Section */}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Apply This Market Intelligence?
           </h2>
@@ -2044,6 +2371,14 @@ function MarketResearchPage() {
 =======
 
             <Button
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

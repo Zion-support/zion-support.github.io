@@ -1,7 +1,24 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function VendorProfilePage({ vendor }: Props) {
 =======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
@@ -147,11 +164,39 @@ function submit_lead() {
                 </div>;
               </div>;
 
+<<<<<<< HEAD
             ))}
           </div>;
         </div>;
       )}
 
+=======
+<<<<<<< HEAD
+    }
+  }
+
+  return (
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -359,6 +404,58 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
     </div>
   );
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const slug = String(ctx.params?.slug |'');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+<<<<<<< HEAD
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};            {loading ? 'Submitting...' : 'Send'}
+          </button>
+          {message && <div className="text-sm">{message}</div>}
+        </form>
+      </div>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  );
+}
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
+  const slug = String(ctx.params?.slug |'');
+=======
+
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
+  const slug = String(ctx.params?.slug || '');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+}
+
+=======
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

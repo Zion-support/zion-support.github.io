@@ -1,15 +1,57 @@
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Globe} from "lucide-react";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { Globe } from "lucide-react",
+<<<<<<< HEAD
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+=======
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface CountrySelectorProps {
 
   onCountryChange: (country: CountryPricing | null) => void
 
   selectedCountry: CountryPricing | null
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {;
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
+<<<<<<< HEAD
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
+  // Set top/popular countries
+  useEffect(() => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -39,12 +81,22 @@ interface CountrySelectorProps {
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
+<<<<<<< HEAD
 
 
       <Select 
         onValueChange={handleCountryChange} 
 
 
+=======
+<<<<<<< HEAD
+      <Select
+        onValueChange={handleCountryChange}
+=======
+      <Select 
+        onValueChange={handleCountryChange} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         value={selectedCountry?.country}
       >
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
@@ -110,8 +162,16 @@ export function CountrySelector(): any ({ onCountryChange, selectedCountry }: Co
 
             {topCountries.map((item) => (;
               <SelectItem key={item.country} value={item.country} className="text-white">;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}

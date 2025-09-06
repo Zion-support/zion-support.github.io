@@ -28,8 +28,13 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 import React from './react';
 import SEO from "../components / SEO";
 import { Check, ExternalLink  } from './lucide-react';
@@ -40,12 +45,35 @@ function ApiPerformanceTestingPage() {
   const features = [;
     "k6 / Gatling - compatible test runner",
     "SLO - aware latency reports",
+=======
+<<<<<<< HEAD
+  const features = [
+    "k6/Gatling-compatible test runner"
+    "SLO-aware latency reports"
+    "Regression baselines per endpoint"
+    "CI checks and PR annotations"
+    "Synthetic traffic for staging"
+  ];
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function ApiPerformanceTestingPage() {
+  const features = [
+    "k6/Gatling-compatible test runner",
+    "SLO-aware latency reports",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
   ];
 ;
   return (
+<<<<<<< HEAD
     <>;
       <SEO;
         title="API Performance Testing";
@@ -124,6 +152,10 @@ function ApiPerformanceTestingPage() {
             {features.map ((f) => (
               <div;
 =======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <>
       <SEO
         title="API Performance Testing"

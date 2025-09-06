@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { TalentProfile } from '@/types/talent';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
       {
@@ -306,6 +315,15 @@
 =======
 
 
+<<<<<<< HEAD
+=======
+=======
+import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -557,12 +575,29 @@ export const TALENT_PROFILES: TalentProfile[] = [
         description: "Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates."
       };
       {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+title: 'Cancer Treatment Response Prediction',
+        description:
+          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
+      },
+    ],
+  },;
+];
+}];
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         title: "Cancer Treatment Response Prediction",
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     ]
   }
+<<<<<<< HEAD
 =======
     key_projects: [;
       {
@@ -584,3 +619,11 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+];
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

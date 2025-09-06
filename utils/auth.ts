@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -14,6 +19,11 @@ export interface User {
   role: string;
   isAdmin: boolean;
 =======
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface User {;
   id: string;
   email: string;
@@ -33,8 +43,12 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   }
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
   try {;
@@ -71,11 +85,24 @@ if ( {) {
     throw error;
   }
 }
+<<<<<<< HEAD
 export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+<<<<<<< HEAD
+
+  try {
+=======
+  try {;
+    const user = parseUserFromRequest(req);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    ensureAdmin(user);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return { allowed: true }
   } catch {
     return { allowed: false }
@@ -90,19 +117,45 @@ export interface DemoUser {
   role: 'admin' | 'user' | 'guest';
   email: string;
 }
+<<<<<<< HEAD
 
 
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
 
 
+=======
+const demoUsers: DemoUser[] = [];
+export function ensureDemoUsers(): void {
+  if (demoUsers.length === 0) {
+    demoUsers.push(
+<<<<<<< HEAD
+      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' }
+      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
+=======
+      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
+      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     );
   }
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    id: `user-${Date.now()}`
+    name
+    role
+    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`
+  }
+}
+export function upsertUser(user: DemoUser): void {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     id: `user-${Date.now()}`,
     name,
     role,
@@ -111,8 +164,12 @@ export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): De
 }
 
 export function upsertUser(user: DemoUser): void {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const index = demoUsers.findIndex(u => u.id === user.id);
   if (index >= 0) {
     demoUsers[index] = user;
@@ -120,8 +177,18 @@ export function upsertUser(user: DemoUser): void {;
     demoUsers.push(user);
   }
 }
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
+  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
+}
+export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
+  const cookieHeader = req.headers.cookie |'';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
   res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
@@ -129,8 +196,12 @@ export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
 
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   const cookieHeader = req.headers.cookie || '';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
 =======
@@ -182,7 +253,12 @@ if (return null) {
   } catch {
     return null;
   }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     user,
     token,
@@ -193,7 +269,11 @@ if (return null) {
 
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
 
@@ -213,6 +293,7 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
 export function isAdmin(session: AuthSession | null): boolean {
   return hasRole(session, 'admin');
 }
+<<<<<<< HEAD
 
 export function isModerator(session: AuthSession | null): boolean {
   return hasRole(session, 'moderator') || isAdmin(session);
@@ -223,3 +304,6 @@ export function isModerator(session: AuthSession | null): boolean {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

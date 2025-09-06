@@ -8,6 +8,7 @@ import { FlagResult } from './types',
 /**
  * Flag content for review
  */
+<<<<<<< HEAD
 
 
 // Content flagging functionality;
@@ -23,6 +24,28 @@ export const flag_content = async (
   content_type: FraudFlag['content_type'];
   content_id: string;
   content_excerpt: string;
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+export const flagContent = async (;
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
+  contentExcerpt: string;
+  severity: FraudSeverity;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const flagContent = async (
+<<<<<<< HEAD
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
+  contentExcerpt: string;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   severity: FraudSeverity;
   reason: string,
   ip_address?: string): Promise < FlagResult> => {
@@ -117,8 +140,70 @@ if (throw error) {
     
     if (error) throw error,
     
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    return { success: true }
+  } catch (error) {
+    console.error('Error flagging content:', error);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error.message : 'Unknown error' 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Content flagging functionality;
+import { supabase } from '@/integrations/supabase/client',;
+import { FraudSeverity, FraudFlag } from '@/types/fraud',;
+import { FlagResult } from './types',;
+/**;
+ * Flag content for review;
+ */;
+export const flagContent = async (;
+  userId: string,;
+  userEmail: string | undefined,;
+  contentType: FraudFlag['content_type'],;
+  contentId: string,;
+  contentExcerpt: string,;
+  severity: FraudSeverity,;
+  reason: string,;
+  ipAddress?: string;
+): Promise<FlagResult> => {;
+  try {;
+    // // // console.log('Flagging content for review:', {;
+      userId,;
+      contentType,;
+      contentId,;
+      reason,;
+      severity;
+    }),;
+    const { error } = await supabase.from('fraud_flags').insert({;
+      user_id: userId,;
+      user_email: userEmail,;
+      content_type: contentType,;
+      content_id: contentId,;
+      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length;
+      severity,;
+      reason,;
+      ip_address: ipAddress,;
+      timestamp: new Date().toISOString(),;
+      status: 'pending';
+    }),;
+    if (error) throw error,;
+    return { success: true }
+  } catch (error) {;
+    console.error('Error flagging content:', error),;
+    return {;
+      success: false;
+      error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
   }
 }

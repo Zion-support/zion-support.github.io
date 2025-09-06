@@ -1,15 +1,37 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
+=======
+import { listVendors } from '../../../utils/vendor-store';
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = null;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const vendors = listVendors();
   res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const vendors = listVendors();
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  res.status(200).json({ vendors })
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   res.status(200).json({ vendors })
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -34,3 +56,7 @@ function handler() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

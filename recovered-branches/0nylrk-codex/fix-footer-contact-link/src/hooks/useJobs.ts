@@ -1,26 +1,49 @@
 
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
 import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
+<<<<<<< HEAD
 
 
 export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
+=======
+<<<<<<< HEAD
+export const useJobs = (userId?: string, status?: JobStatus) => {
+=======
+export const useJobs = (userId?: string, status?: JobStatus) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+  const clientId = userId |user?.id;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -247,14 +270,28 @@ if (throw delete_error) {
     error;
     refetch: fetch_jobs;
     updateJobStatus;
+<<<<<<< HEAD
+=======
+    deleteJob;
+    createJob;
+    updateJob
+    getJobById
+<<<<<<< HEAD
+  }
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     delete_job;
     create_job;
     update_job,
     getJobById;
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -347,10 +384,17 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 ;

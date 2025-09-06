@@ -226,8 +226,16 @@ function ResearchPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Recent Research
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -267,17 +275,39 @@ function ResearchPage() {
         </div>;
       </div>;
       {/* Research Impact */}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Impact</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Research Influence
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our research has made significant contributions to the field
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Research Influence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -321,17 +351,39 @@ function ResearchPage() {
         </div>;
       </div>;
       {/* Academic Collaborations */}
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Collaborations</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Academic Partnerships
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            We collaborate with leading academic institutions worldwide to advance
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Academic Partnerships
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -392,16 +444,37 @@ function ResearchPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 
 
 
 =======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Join our research community
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Interested in collaborating on cutting-edge AI research?
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

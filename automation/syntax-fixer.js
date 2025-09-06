@@ -129,7 +129,35 @@ if ( {) {
 ,
         // Fix export statements,
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+,;
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
+=======
+,
+        if (content !== fs.readFileSync(file, "utf8")) {,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          modified = true
+        },
+,
+        if (modified) {,
+          fs.writeFileSync(file, content),
+          this.fixesApplied++,
+          this.log(`Fixed export issues in ${file}`)
+        }
+      } catch (error) {,
+<<<<<<< HEAD
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
+<<<<<<< HEAD
+this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     })
   },
@@ -169,8 +197,21 @@ if ( {) {
     try {,
       await this.fixSyntaxErrors(),
 ,
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      this.log("=" * 50),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+this.log("=" * 50),
+=======
+      this.log("=" * 50),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
@@ -349,8 +390,19 @@ if ( {, ) {
 ,
 export default SyntaxFixer,
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 ;
     });
   },;
@@ -452,7 +504,15 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ;
 export default SyntaxFixer;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

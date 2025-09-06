@@ -133,6 +133,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+<<<<<<< HEAD
 
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
@@ -148,6 +149,31 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 
 
+=======
+        <motion.div
+<<<<<<< HEAD
+<<<<<<< HEAD
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
+=======
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+=======
+<<<<<<< HEAD
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -193,6 +219,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>
         {/* Category Filter */}
 
+<<<<<<< HEAD
             </span>;
             <br />;
             <span className="text-white">Services</span>;
@@ -205,6 +232,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
         {/* Category Filter */}
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -226,6 +260,14 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               }`}
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </span>
             </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -236,10 +278,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -254,9 +304,24 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
+<<<<<<< HEAD
               style={{ perspective: '1000px' }}>;
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              style={{ perspective: '1000px' }}
+            >
+              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
+              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {/* Background Effects */}
 
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
@@ -413,11 +478,19 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Service Header */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 =======
@@ -756,6 +829,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion && motion.div>;
 
         {/* Load More Button */}
+<<<<<<< HEAD
         {visibleServices < filteredServices && filteredServices.length && (;
           <motion&& motion.div
             className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
@@ -763,9 +837,19 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="text-center"
 =======
+        {visibleServices < filteredServices.length && (
+          <motion.div
+<<<<<<< HEAD
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             className="text-center"
 =======
 
@@ -774,10 +858,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           <motion.div
             className='text-center'            initial={{ opacity: 0 }}
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
@@ -785,8 +877,16 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             <button
               onClick={loadMore}
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               Load More Revolutionary Services
             </button>
@@ -798,6 +898,26 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion && motion.div 
 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+<<<<<<< HEAD
+=======
+=======
+
+        {/* Call to Action */}
+        <motion.div
+<<<<<<< HEAD
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
+          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+=======
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -866,17 +986,29 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 };
 
 export default RevolutionaryServicesShowcase;  );
 
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   )
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default RevolutionaryServicesShowcase;  )
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default RevolutionaryServicesShowcase;
 
 
@@ -983,6 +1115,7 @@ export default RevolutionaryServicesShowcase);
 }
 ;
 export default RevolutionaryServicesShowcase;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -992,3 +1125,12 @@ export default RevolutionaryServicesShowcase;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default RevolutionaryServicesShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

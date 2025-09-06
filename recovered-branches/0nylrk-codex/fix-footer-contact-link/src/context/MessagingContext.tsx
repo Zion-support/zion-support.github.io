@@ -1,6 +1,17 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessagingContextType  } from '@/types/messaging';
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
+// Default context used when React type definitions are missing
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -15,7 +26,11 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -36,10 +51,18 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -112,6 +135,7 @@ export function useMessaging(): MessagingContextType {
   }
   return context;
 }
+<<<<<<< HEAD
 
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -168,6 +192,13 @@ export function MessagingProvider(): any ({ children }: { children: ReactNode })
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -189,9 +220,58 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
     create_conversation;
     markAsRead;
 
+<<<<<<< HEAD
 
 
       setConversations([]);
+=======
+  return (
+    <MessagingContext.Provider value={contextValue}>
+<<<<<<< HEAD
+      {children}
+    </MessagingContext.Provider>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+// Provider component;
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+  const { user } = useAuth(),;
+  const {;
+    messages,;
+    activeMessages,;
+    setActiveMessages,;
+    conversations,;
+    setConversations,;
+    unreadCount,;
+    setUnreadCount,;
+    activeConversation,;
+    setActiveConversation,;
+    isLoading,;
+    sendMessage,;
+    createConversation,;
+    markAsRead,;
+    fetchConversations,;
+    loadMessages;
+  } = useMessagingOperations(user),;
+  // Setup real-time subscription;
+  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
+  // Calculate unread count from conversations;
+  useEffect(() => {;
+    if (conversations.length > 0) {;
+      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
+      setUnreadCount(count);
+    }
+  }, [conversations, setUnreadCount]),;
+  // Fetch conversations when user changes;
+  useEffect(() => {;
+    if (user) {;
+      fetchConversations();
+    } else {;
+      setConversations([]),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
@@ -249,8 +329,17 @@ if ( {) {
     fetchConversations,;
     loadMessages;
   };
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  return (;
+    <MessagingContext.Provider value={contextValue}>;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {children}
 
     </MessagingContext && MessagingContext.Provider>;

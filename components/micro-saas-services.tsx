@@ -64,6 +64,24 @@ import {
   Globe,
   Lock,
   BarChart3,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Calendar,
+  Target,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  Calendar,;
+  Target,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Brain;
+  Monitor
+  Search
+  Shield
+  Mail
+  Share2
+  Check
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -427,6 +445,7 @@ import {
         enterprise: {
           price: 149
           features: [
+<<<<<<< HEAD
 
   Target;
 export default /**
@@ -492,6 +511,23 @@ function MicroSaasServicesPage() {
       website: 'https://ai - content.ziontech.ai',
       demo: 'https://demo.ai - content.ziontech.ai',
     },
+=======
+<<<<<<< HEAD
+            'Unlimited URLs'
+            'Real-time monitoring'
+            'All metrics'
+            'Custom dashboards'
+            '1-year retention'
+            'SLA guarantee'
+          ]
+        }
+      }
+      marketPrice: '$19-149/month'
+      competitors: ['Pingdom', 'GTmetrix', 'WebPageTest']
+      website: 'https://performance.ziontech.ai'
+      demo: 'https://demo.performance.ziontech.ai'
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       id: 'performance - monitor',
       name: 'Website Performance Monitor',
@@ -539,6 +575,7 @@ function MicroSaasServicesPage() {
           ],
         },
         enterprise: {
+<<<<<<< HEAD
           price: 149,
           features: [;
             'Unlimited URLs',
@@ -555,6 +592,231 @@ function MicroSaasServicesPage() {
       website: 'https://performance.ziontech.ai',
       demo: 'https://demo.performance.ziontech.ai',
     },
+=======
+          price: 199
+          features: [
+            'Unlimited keywords'
+            'Full SEO suite'
+            'Daily reports'
+            'Dedicated support'
+            '1-year retention'
+            'White-label options'
+          ]
+        }
+      }
+      marketPrice: '$39-199/month'
+      competitors: ['Ahrefs', 'SEMrush', 'Moz']
+      website: 'https://seo.ziontech.ai'
+      demo: 'https://demo.seo.ziontech.ai'
+    }
+    {
+      id: 'api-rate-limiter'
+      name: 'API Rate Limiter'
+      description:
+        'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.'
+      icon: <Shield className='w-8 h-8 text-white' />
+      color: 'bg-gradient-to-br from-red-500 to-orange-600'
+      gradient: 'from-red-400 to-orange-500'
+      features: [
+        'Intelligent rate limiting'
+        'Traffic pattern analysis'
+        'API key management'
+        'Real-time monitoring'
+        'Custom rules & policies'
+        'Comprehensive analytics'
+      ]
+      useCases: [
+        'API protection & security'
+        'Traffic management'
+        'Developer portal management'
+        'Microservices protection'
+        'SaaS API security'
+        'Enterprise API governance'
+      ]
+      pricing: {
+        starter: {
+          price: 25
+          features: [
+            '10 rate limit rules'
+            'Basic limiting'
+            'API key management'
+            'Email notifications'
+            '7-day retention'
+          ]
+        }
+        professional: {
+          price: 79
+          features: [
+            '50 rate limit rules'
+            'Advanced limiting'
+            'Unlimited API keys'
+            'Real-time monitoring'
+            '30-day retention'
+            'API access'
+          ]
+        }
+        enterprise: {
+          price: 199
+          features: [
+            'Unlimited rules'
+            'Enterprise security'
+            'Advanced features'
+            'Custom integrations'
+            '1-year retention'
+            'SLA guarantee'
+          ]
+        }
+      }
+      marketPrice: '$25-199/month'
+      competitors: ['Kong', 'Tyk', 'AWS API Gateway']
+      website: 'https://rate-limiter.ziontech.ai'
+      demo: 'https://demo.rate-limiter.ziontech.ai'
+    }
+    {
+      id: 'email-marketing'
+      name: 'Email Marketing Automation'
+      description:
+        'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.'
+      icon: <Mail className='w-8 h-8 text-white' />
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
+      gradient: 'from-indigo-400 to-purple-500'
+      features: [
+        'Drag & drop email builder'
+        'Advanced automation workflows'
+        'A/B testing & optimization'
+        'Subscriber segmentation'
+        'Performance analytics'
+        'Template library'
+      ]
+      useCases: [
+        'Newsletter campaigns'
+        'Welcome series automation'
+        'Abandoned cart recovery'
+        'Product announcements'
+        'Customer onboarding'
+        'Lead nurturing'
+      ]
+      pricing: {
+        starter: {
+          price: 29
+          features: [
+            '1,000 subscribers'
+            'Basic templates'
+            'Simple automation'
+            'Basic analytics'
+            'Email support'
+          ]
+        }
+        professional: {
+          price: 79
+          features: [
+            '10,000 subscribers'
+            'Advanced templates'
+            'Advanced automation'
+            'Advanced analytics'
+            'Priority support'
+            'API access'
+          ]
+        }
+        enterprise: {
+          price: 199
+          features: [
+            'Unlimited subscribers'
+            'Custom templates'
+            'Complex workflows'
+            'Enterprise analytics'
+            'Dedicated support'
+            'White-label options'
+          ]
+        }
+      }
+      marketPrice: '$29-199/month'
+      competitors: ['Mailchimp', 'ConvertKit', 'ActiveCampaign']
+      website: 'https://email.ziontech.ai'
+      demo: 'https://demo.email.ziontech.ai'
+    }
+    {
+      id: 'social-media-scheduler'
+      name: 'Social Media Scheduler'
+      description:
+        'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.'
+      icon: <Share2 className='w-8 h-8 text-white' />
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
+      gradient: 'from-pink-400 to-rose-500'
+      features: [
+        'Multi-platform scheduling'
+        'Content calendar management'
+        'Campaign planning tools'
+        'Performance analytics'
+        'Team collaboration'
+        'Auto-posting & optimization'
+      ]
+      useCases: [
+        'Social media management'
+        'Content calendar planning'
+        'Campaign coordination'
+        'Team collaboration'
+        'Performance tracking'
+        'Brand consistency'
+      ]
+      pricing: {
+        starter: {
+          price: 19
+          features: [
+            '3 social accounts'
+            'Basic scheduling'
+            'Simple calendar'
+            'Basic analytics'
+            'Email support'
+          ]
+        }
+        professional: {
+          price: 49
+          features: [
+            '10 social accounts'
+            'Advanced scheduling'
+            'Content calendar'
+            'Advanced analytics'
+            'Priority support'
+            'API access'
+          ]
+        }
+        enterprise: {
+          price: 129
+          features: [
+            'Unlimited accounts'
+            'Enterprise scheduling'
+            'Advanced calendar'
+            'Enterprise analytics'
+            'Dedicated support'
+            'White-label options'
+          ]
+        }
+      }
+      marketPrice: '$19-129/month'
+      competitors: ['Buffer', 'Hootsuite', 'Later']
+      website: 'https://social.ziontech.ai'
+      demo: 'https://demo.social.ziontech.ai'
+=======
+            'Unlimited accounts',
+            'Enterprise scheduling',
+            'Advanced calendar',
+            'Enterprise analytics',
+            'Dedicated support',
+            'White-label options',
+          ],
+        },
+      },
+      marketPrice: '$19-129/month',
+      competitors: ['Buffer', 'Hootsuite', 'Later'],
+      website: 'https://social.ziontech.ai',
+      demo: 'https://demo.social.ziontech.ai',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    },  ];      demo: 'https://demo.social.ziontech.ai'
+    }
+  ];
+  const marketInsights = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       id: 'seo - analytics',
       name: 'SEO Analytics Dashboard',
@@ -1431,23 +1693,47 @@ export default function MicroSaasServicesPage() {;
                 className="card-hover border-gradient-blue text-center"
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Services Grid */}
 
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1926,10 +2212,18 @@ export default function MicroSaasServicesPage() {;
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             </Card>
           </div>
@@ -2190,6 +2484,14 @@ export default function MicroSaasServicesPage() {;
 =======
 
             <Button
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

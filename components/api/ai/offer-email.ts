@@ -1,14 +1,38 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
+=======
+import { authenticateRequest } from '@/utils/auth';
+import { generateText } from '@/utils/ai';
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+<<<<<<< HEAD
+) {
+  const method = (req.method |'POST').toUpperCase();
+=======
+) {;
+  const method = (req.method || 'POST').toUpperCase();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
 import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+  const method = (req.method |'POST').toUpperCase()
+=======
+  const method = (req.method || 'POST').toUpperCase(),;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
@@ -47,10 +71,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status(200).json({ email: text })
+<<<<<<< HEAD
+=======
+}
+<<<<<<< HEAD
+=======
+  return res.status(200).json({ email: text });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -106,3 +140,8 @@ function handler() {
   return res.status (200).json ({ email: text });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  return res.status(200).json({ email: text });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

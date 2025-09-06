@@ -1,6 +1,14 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -9,7 +17,11 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -36,13 +48,38 @@ import { Button } from "@/components/ui/button",
 
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface PostFormValues {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  title: string
+  content: string
+  categoryId: ForumCategory
+
+  tags: string
+<<<<<<< HEAD
+}
+interface PostFormProps {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -51,7 +88,11 @@ interface PostFormValues {
 export const PostForm = ({;
   initialValues;
   onSubmit;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -135,6 +176,13 @@ export const PostForm = ({;
       tags: initialValues?.tags || "";
 
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -179,8 +227,27 @@ export const PostForm = ({
     try {
       await on_submit (values);
     } finally {
+<<<<<<< HEAD
 
 
+=======
+      setIsSubmitting(false)
+    }
+<<<<<<< HEAD
+  }
+=======
+      title: initialValues?.title || "",
+      content: initialValues?.content || "",
+      categoryId: initialValues?.categoryId || "project-help",
+      tags: initialValues?.tags || ""
+    }
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -189,10 +256,18 @@ export const PostForm = ({
       setIsSubmitting(false);
 
     }
+<<<<<<< HEAD
   }
 =======
 
 
+=======
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -373,5 +448,18 @@ export default PostForm;
 
 },
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+export default PostForm,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default PostForm;
+=======
+export default PostForm,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

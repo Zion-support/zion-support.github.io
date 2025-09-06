@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 import React from 'react';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -8,8 +14,23 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
+<<<<<<< HEAD
 
 interface AIMatchmakerProps {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+<<<<<<< HEAD
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles, Search } from "lucide-react";
+interface AIMatchmakerProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;
   className?: string;
@@ -24,13 +45,46 @@ export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, classNam
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
 
   className?: string
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+<<<<<<< HEAD
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+=======
+  const [query, setQuery] = useState(""),
+  const [isMatchmaking, setIsMatchmaking] = useState(false),
+  const [matches, setMatches] = useState([] as MatchResult[]),
+  const [hasSearched, setHasSearched] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -98,6 +152,27 @@ interface AIMatchmakerProps {
         variant: "destructive"})
       // Set empty matches to show no results found UI
       setMatches([])
+<<<<<<< HEAD
+=======
+    } finally {
+      setIsMatchmaking(false)
+<<<<<<< HEAD
+    }
+  }
+  const handleItemSelect = (item: any) => {
+    if (onMatchSelect) {
+      // Find the original MatchResult that contains this item
+      const matchResult = matches.find(match => match.item.id === item.id)
+      if (matchResult) {
+        onMatchSelect(matchResult)
+      }
+    }
+<<<<<<< HEAD
+  }
+  // Extract just the items from each MatchResult
+  const matchItems = matches.map(match => match.item);
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from './react';
 import { toast } from '@/hooks / use - toast';
@@ -163,7 +238,11 @@ function AIMatchmaker() {
       setIsMatchmaking(false)
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
@@ -229,9 +308,16 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       }
     }
   },
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),

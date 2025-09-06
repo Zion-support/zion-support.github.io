@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -5,6 +6,18 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react',
+import ReactDOM from 'react-dom/client',
+import App from './App.tsx',
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import './index.css';
 import { HelmetProvider  } from 'react-helmet-async';
 import { BrowserRouter as Router  } from 'react-router-dom';
@@ -37,6 +50,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  </React.StrictMode>);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -45,8 +63,12 @@ import './index ;
 import {HelmetProvider} from 'react-helmet-async';
 import {BrowserRouter, as, Router} from 'react-router-dom';
 =======
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from 'react',;
 import ReactDOM from 'react-dom/client',;
@@ -83,6 +105,7 @@ ReactDOM && ReactDOM.createRoot(document && document.getElementById('root')!).re
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+<<<<<<< HEAD
 
 import React from 'react';
 import ReactDOM from 'react-dom / client';
@@ -123,6 +146,12 @@ ReactDOM.create_root (document.getElementById ('root')!).render (<React.StrictMo
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   </React.StrictMode>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

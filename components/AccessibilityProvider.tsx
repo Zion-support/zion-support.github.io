@@ -23,12 +23,24 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
 
 
 
 export const useAccessibility = () => {;
 
 
+=======
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
+<<<<<<< HEAD
+export const useAccessibility = () => {
+=======
+
+export const useAccessibility = () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -41,6 +53,7 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+<<<<<<< HEAD
 
 
 const AccessibilityContext = createContext<;
@@ -66,11 +79,20 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
 }) => {;
 
 =======
+<<<<<<< HEAD
+  children
+}) => {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   children,
 }) => {;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, {;
@@ -13,6 +14,28 @@ import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 're
 import { Button } from "@/components/ui/button",
 
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, {
+  useState
+  useRef
+  useEffect
+  FormEvent
+  KeyboardEvent
+} from 'react'
+import { Button } from '@/components/ui/button'
+<<<<<<< HEAD
+
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
@@ -59,6 +82,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     // Focus input when component mounts;
     inputRef && inputRef.current?.focus();
 
+<<<<<<< HEAD
 =======
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
@@ -122,6 +146,16 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         disabled={!message.trim() |disabled}
 =======
 
+=======
+    }
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -130,6 +164,14 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         placeholder="Type your message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -155,16 +197,33 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
       >
         <Send className="h-5 w-5" />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </Button>
     </form>
   )
 }
+<<<<<<< HEAD
 
         disabled={!message.trim() || disabled}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        disabled={!message.trim() |disabled}
+=======
+        disabled={!message.trim() || disabled}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       >
         <Send className="h-5 w-5" />
       </Button>
@@ -172,8 +231,13 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   )
 }
 =======
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       <Button;
         type='submit';
@@ -194,4 +258,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

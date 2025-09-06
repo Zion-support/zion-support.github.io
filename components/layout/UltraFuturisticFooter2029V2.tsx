@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -35,6 +36,62 @@ import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
+=======
+<<<<<<< HEAD
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Brain
+  Rocket
+  Target
+  Shield
+  Cpu
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  MessageCircle
+  Star
+  Zap
+  Sparkles
+  Home
+  Users
+  Briefcase
+  BookOpen
+  TrendingUp
+  MessageSquare
+  Calendar
+  GraduationCap
+  ShieldCheck
+  Eye
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Globe2
+  Bot
+  Crown
+  Infinity;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight
+  Brain, Rocket, Target, Shield, Cpu
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {
 =======
@@ -93,8 +150,12 @@ import {
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, ;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -148,10 +209,25 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
+<<<<<<< HEAD
 
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const mainNavigation = [
 
 =======
@@ -352,6 +428,7 @@ const footer_sections = [;
 =======
       { name: 'Research', href: '/research' }
     ]
+<<<<<<< HEAD
 =======
   }, ];
 ;
@@ -359,17 +436,36 @@ export default /**
  * UltraFuturisticFooter2029V2 - Function description
  */
 function UltraFuturisticFooter2029V2() {
+=======
+  },];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export default function UltraFuturisticFooter2029V2() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
+<<<<<<< HEAD
 ;
 export default /**
  * UltraFuturisticFooter2029V2 - Function description
  */
 function UltraFuturisticFooter2029V2() {
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function UltraFuturisticFooter2029V2() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
           <div className="lg:col-span-2 xl:col-span-1">
@@ -386,9 +482,17 @@ export default function UltraFuturisticFooter2029V2() {
 
             <motion.div
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -515,10 +619,18 @@ export default function UltraFuturisticFooter2029V2() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -526,8 +638,16 @@ export default function UltraFuturisticFooter2029V2() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Service Showcase */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -535,7 +655,15 @@ export default function UltraFuturisticFooter2029V2() {
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Featured 2029 Services
@@ -575,11 +703,19 @@ export default function UltraFuturisticFooter2029V2() {
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+<<<<<<< HEAD
                 className='group'
 
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div
@@ -676,10 +812,18 @@ export default function UltraFuturisticFooter2029V2() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
@@ -735,9 +879,17 @@ export default function UltraFuturisticFooter2029V2() {
 
             </motion.div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Social Links */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -745,7 +897,15 @@ export default function UltraFuturisticFooter2029V2() {
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               {socialLinks.map(social => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -776,9 +936,17 @@ export default function UltraFuturisticFooter2029V2() {
 
                 </Link>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               ))}
 
             </motion && motion.div>;
@@ -789,10 +957,18 @@ export default function UltraFuturisticFooter2029V2() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Newsletter Signup */}
       <motion&& motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -800,7 +976,15 @@ export default function UltraFuturisticFooter2029V2() {
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
         viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -848,6 +1032,7 @@ export default function UltraFuturisticFooter2029V2() {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+<<<<<<< HEAD
 
 
                 Subscribe;
@@ -870,12 +1055,39 @@ export default function UltraFuturisticFooter2029V2() {
 
   );
 
+=======
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+<<<<<<< HEAD
+    </footer>
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+<<<<<<< HEAD
+    </footer>;
+);
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 =======
 
     </footer>
   );
 }
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

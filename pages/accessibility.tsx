@@ -32,12 +32,29 @@ import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
   Eye,
   Ear,
   Hand,
   Brain,
   CheckCircle,
+=======
+import {
+<<<<<<< HEAD
+  Eye
+  Ear
+  Hand
+  Brain
+  CheckCircle
+  AlertTriangle
+  Globe
+  Users
+  Shield
+  Zap
+  FileText
+  Settings
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
   Eye, 
@@ -53,9 +70,13 @@ import { motion } from 'framer-motion';
   Zap,
   FileText,
   Settings;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from 'lucide-react';
 const accessibility_features = [;
   {

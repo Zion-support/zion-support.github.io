@@ -10,9 +10,19 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
   ensureStorage();
   const { id } = req.query as { id?: string };
+=======
+<<<<<<< HEAD
+  ensureStorage()
+  const { id } = req.query as { id?: string }
+=======
+  ensureStorage(),;
+  const { id } = req.query as { id?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const episode = episodes.find((e) => e.id === id);
 
@@ -20,6 +30,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json({ episode })
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  return res.status(200).json({ episode });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   ensureStorage(),
   const { id } = req && req.query as { id?: string };
@@ -48,6 +66,7 @@ function ensure_storage() {
   $2
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
   if ()) {
   $2
 }
@@ -86,3 +105,9 @@ function handler() {
   return res.status (200).json ({ episode });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+  return res.status(200).json({ episode });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

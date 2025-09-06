@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -14,6 +15,38 @@ import { Loader2, Info, ThumbsUp } from 'lucide-react';
 import { PricingSuggestion } from '@/services/pricingSuggestionService';
 interface PricingSuggestionBoxProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import {
+  TooltipProvider
+  Tooltip
+  TooltipTrigger
+  TooltipContent
+} from '@/components/ui/tooltip'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+<<<<<<< HEAD
+=======
+import { Loader2, Info, ThumbsUp } from 'lucide-react'
+import { PricingSuggestion } from '@/services/pricingSuggestionService'
+interface PricingSuggestionBoxProps {
+  suggestion: PricingSuggestion | null
+  isLoading: boolean
+  onApplySuggestion: () => void
+  rateType: 'hourly' | 'fixed'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import { Loader2, Info, ThumbsUp } from 'lucide-react'
+import { PricingSuggestion } from "@/services/pricingSuggestionService";
+interface PricingSuggestionBoxProps {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
   onApplySuggestion: () => void;
@@ -42,6 +75,13 @@ interface PricingSuggestionBoxProps {
   rateType: "hourly" | "fixed"
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
@@ -57,8 +97,24 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  rateType}) => {
+  if (isLoading) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  rateType,
+}) => {  if (isLoading) {
+=======
+  rateType}) => {
+  if (isLoading) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return (
       <Card className="border border-dashed border-muted">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -68,10 +124,18 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             <p className="text-sm text-muted-foreground">
 
               Generating optimal pricing suggestion...
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             </p>
           </div>
         </CardContent>
@@ -133,10 +197,18 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       <CardContent className="p-5 space-y-4">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">AI Suggested Price</h4>
@@ -228,6 +300,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <span className="text-2xl font-bold">
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
+<<<<<<< HEAD
 
 
 
@@ -241,6 +314,25 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <span className="text-sm text-muted-foreground ml-1">
+            {rateType === "hourly" ? "/hour" : " total"}
+          </span>
+        </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <div className="flex items-start space-x-2 text-sm text-muted-foreground">
           <Info className="h-4 w-4 flex-shrink-0 mt-1" />
           <p>{suggestion.explanation}</p>
@@ -268,9 +360,17 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
 
         <div className="flex items-center justify-between">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </TooltipTrigger>
               <TooltipContent>
                 <p>Apply this suggestion to your pricing field</p>
@@ -283,9 +383,17 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         </p>
       </CardContent>
     </Card>
@@ -298,6 +406,10 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </p>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   )
 
 =======
@@ -306,7 +418,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 };
 "  );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 },
 ;
@@ -369,8 +485,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>;
   );
 };
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 };
@@ -513,4 +634,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

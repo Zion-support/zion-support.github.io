@@ -32,6 +32,7 @@ const values = [;
     description: 'We maintain the highest standards of security and ethical AI development.'
     icon: ShieldCheckIcon}
   {
+<<<<<<< HEAD
 
     name: 'Research Excellence',
     description: 'Our team of world - class researchers drives breakthrough discoveries and innovations.',
@@ -62,6 +63,42 @@ export default /**
  */
 function AboutPage() {
 
+=======
+    name: 'Research Excellence'
+    description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.'
+    icon: AcademicCapIcon}]
+const team = [
+  {
+    name: 'Dr. Sarah Chen'
+    role: 'Chief Executive Officer'
+    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.'
+    image: '/images/team/sarah-chen.jpg'}
+  {
+    name: 'Dr. Marcus Rodriguez'
+    role: 'Chief Technology Officer'
+    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.'
+    image: '/images/team/marcus-rodriguez.jpg'}
+  {
+    name: 'Dr. Elena Petrov'
+    role: 'Head of Research'
+    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.'
+    image: '/images/team/elena-petrov.jpg'}
+  {
+    name: 'James Kim'
+    role: 'Chief Operations Officer'
+    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.'
+    image: '/images/team/james-kim.jpg'}]
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export default function AboutPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function AboutPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <div className=&quot;bg - black & quot;>;
 =======
@@ -265,8 +302,16 @@ function AboutPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -302,16 +347,37 @@ function AboutPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 
 
 
 =======
+<<<<<<< HEAD
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+<<<<<<< HEAD
+            Join us in shaping the future
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Ready to be part of the AI revolution? Let's discuss how we can work together to
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             Join us in shaping the future
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

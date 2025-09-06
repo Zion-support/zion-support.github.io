@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+function getRefCode(): string {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   useEffect(() => {
@@ -21,12 +33,33 @@
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
 =======
+<<<<<<< HEAD
 
 
+=======
+=======
+=======
+import { useEffect, useMemo, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+function getRefCode(): string {;
+  if (typeof window === 'undefined') return '',;
+  return localStorage.getItem('ref_code') || '';
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 ;
@@ -124,9 +157,17 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       </div>
     </div>
   )
@@ -137,8 +178,32 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
+<<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+;
+  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
+  if (!code) {;
+    return (;
+      <div className="space-y-4">;
+        <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
+        <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 =======
@@ -231,6 +296,7 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 /**
  * Stat - Function description
  */
@@ -240,10 +306,31 @@ function Stat() {
       <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
+=======
+;
+function Stat({ label, value }: { label: string, value: number | string }) {;
+  return (;
+    <div className="p-4 rounded border border-gray-200 dark:border-gray-800">;
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>;
+      <div className="text-2xl font-semibold">{value}</div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

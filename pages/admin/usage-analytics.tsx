@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
@@ -44,7 +49,10 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   )
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -89,9 +97,17 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
@@ -118,6 +134,7 @@ function Funnel({ data }: { data: Datum[] }) {
       ))}
     </div>
   )
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
@@ -197,13 +214,51 @@ function Funnel() {
 
 
 =======
+<<<<<<< HEAD
+}
+export default function UsageAnalytics() {
+  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000))
+  const [end, setEnd] = useState<Date>(new Date())
+  const [userType, setUserType] = useState<string>('all')
+  const [loading, setLoading] = useState(false)
+  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([])
+  const [events, setEvents] = useState<Datum[]>([])
+  const [line, setLine] = useState<{ date: string, value: number }[]>([])
+  const [funnel, setFunnel] = useState<Datum[]>([])
+  const refresh = useCallback(async () => {
+    setLoading(true)
+    try {
+      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType })
+      const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`)
+      const json = await res.json()
+      setPagesMostUsed(json.pagesMostUsed |[])
+      setEvents(json.events |[])
+      setLine(json.line |[])
+      setFunnel(json.funnel |[])
+    } finally {
+      setLoading(false)
+    }
+  }, [start, end, userType])
+  useEffect(() => { refresh() }, [])
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
         </div>;
       ))  } catch (error) {
@@ -281,9 +336,17 @@ function UsageAnalytics() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </ul>
             </div>
           </div>
@@ -313,6 +376,7 @@ function UsageAnalytics() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 
 =======
 }
@@ -389,3 +453,23 @@ function UsageAnalytics() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

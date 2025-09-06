@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -22,12 +28,29 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
 import ResumePreview, {;
   ResumeData,;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { GetServerSideProps } from 'next',
+import React, { useRef, useState } from 'react',
+import PdfExportButton from '../../../components/ui/PdfExportButton',
+import ResumePreview, { ResumeData } from '../../../components/ui/ResumePreview',
+import { createServerClient } from '../../../utils/supabase/server',
+export default function TalentPortfolio() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const ref = useRef<HTMLDivElement>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const data: ResumeData = {
     name: 'Your Name',
     contact: {
@@ -53,13 +76,39 @@ import ResumePreview, {;
           <option value="dark">Dark</option>
         </select>
       </div>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+      <PdfExportButton
+        targetRef={ref}
+        fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <ResumePreview ref={ref} data={data} theme={theme} />
+    </div>
+  );
+export const getServerSideProps: GetServerSideProps = async () => {;
+  const supabase = createServerClient();
+  const user = await (supabase as any).auth.getUser?.()
+  if (!user) {
+    return { redirect: { destination: '/auth', permanent: false } } as any;
+  }
+<<<<<<< HEAD
+return { props: {} }
+}
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 return { props: {} };
 };
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
@@ -77,6 +126,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: {} }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
+<<<<<<< HEAD
 
 import PdfExportButton from '../../../components / ui / PdfExportButton';
 import ResumePreview, {
@@ -154,7 +204,14 @@ return { props: {} }
 ;
 
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

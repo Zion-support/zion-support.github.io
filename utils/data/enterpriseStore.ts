@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {
   CompanyRecord,
@@ -7,6 +8,19 @@ import {
 } from '../types/enterprise';
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
+const generateId = () => Math.random().toString(36).slice(2, 10),;
+const seedCompany: CompanyRecord = {;
+  id: 'cmp_acme',;
+  name: 'Acme Corporation',;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
@@ -91,6 +105,7 @@ export const store = {getCompanyBySlug(slug: string) {;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
 =======
+<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
 const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
 const seed_company: CompanyRecord = {
@@ -109,6 +124,15 @@ const seed_company: CompanyRecord = {
 =======
 
 
+=======
+const seedCompany: CompanyRecord = {;
+  id: 'cmp_acme';
+  name: 'Acme Corporation';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -131,8 +155,54 @@ const seed_company: CompanyRecord = {
 
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },;
+const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany },;
+export const store = {;
+  getCompanyBySlug(slug: string) {;
+    return companiesBySlug[slug] || null;
+  },;
+  getCompanyById(id: string) {;
+    return companiesById[id] || null;
+  },;
+  createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
+    const id = `cmp_${generateId()}`,;
+    const slug = input.slug || `co-${generateId()}`,;
+    const record: CompanyRecord = {;
+      id,;
+      name: input.name || 'New Company',;
+      slug,;
+      logoUrl: input.logoUrl,;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
+const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
+export const store = {;
+  getCompanyBySlug(slug: string) {;
+    return companiesBySlug[slug] || null;
+  };
+  getCompanyById(id: string) {;
+    return companiesById[id] || null;
+  };
+  createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
+    const id = `cmp_${generateId()}`;
+    const slug = input.slug || `co-${generateId()}`;
+    const record: CompanyRecord = {;
+      id;
+      name: input.name || 'New Company';
+      slug;
+      logoUrl: input.logoUrl;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;
         tier: 'teams',;
@@ -147,20 +217,101 @@ const seed_company: CompanyRecord = {
     return record;
   },;
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const company = companiesById[companyId],;
+    if (!company) return null,;
+    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
+    company.members.push(member),;
+    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
+    company.members.push(member);
+    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
     return member;
   },;
   removeMember(companyId: string, memberId: string): boolean {;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const company = companiesById[companyId],;
+    if (!company) return false,;
+    const before = company.members.length,;
+    company.members = company.members.filter(m => m.id !== memberId),;
+    const changed = company.members.length !== before,;
+    if (changed) {;
+      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),;
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
+    }
+    return changed;
+  },;
+  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
+    const company = companiesById[companyId],;
+    if (!company) return false,;
+    const member = company.members.find(m => m.id === memberId),;
+    if (!member) return false,;
+    member.role = role,;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return changed;
+  },;
+  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    member.role = role;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
     return true;
   },;
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+=======
+<<<<<<< HEAD
+    const company = companiesById[companyId],;
+    if (!company) return false,;
+=======
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
 

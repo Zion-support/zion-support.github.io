@@ -26,6 +26,7 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
+<<<<<<< HEAD
     on: jest.fn (),
     off: jest.fn (),
     emit: jest.fn ();
@@ -38,6 +39,20 @@ export const mockNextRouter = () =>: any ({
   is_preview: false;
 =======
 
+=======
+    on: jest.fn()
+    off: jest.fn()
+    emit: jest.fn()
+<<<<<<< HEAD
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   },
   isFallback: false,
   isLocale: false,
@@ -45,11 +60,21 @@ export const mockNextRouter = () =>: any ({
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
+<<<<<<< HEAD
 
 });
 export const createMockProps = (overrides = {}) => ({
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+});
+export const createMockProps = (overrides = {}) => ({
+<<<<<<< HEAD
+  ...overrides
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     </ThemeProvider>;
   );
@@ -82,8 +107,15 @@ export const mockNextRouter = () => ({;
 ;
 export const createMockProps = (overrides = {}) =>: any ({
   ...overrides;
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 });

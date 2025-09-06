@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -29,6 +30,11 @@ interface CategorizedSkills {
   softSkills: string[]
   other: string[]
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -47,6 +53,56 @@ import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Switch } from "@/components/ui/switch",
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
+=======
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+=======
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Define form schema
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -95,9 +151,17 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 interface EnhancedProfile {
   summary: string
@@ -144,9 +208,34 @@ export function TalentRegistrationForm() {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
+<<<<<<< HEAD
 
   };
 
+=======
+<<<<<<< HEAD
+    }
+  }
+  // Handle avatar upload
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setUploadedAvatar(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+<<<<<<< HEAD
+  }
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 export function TalentRegistrationForm() {;
@@ -203,6 +292,13 @@ export function TalentRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -230,6 +326,7 @@ export function TalentRegistrationForm() {;
       e && e.preventDefault(),;
       handleAddSkill();
     }
+<<<<<<< HEAD
   };
 
   // Handle avatar upload;
@@ -247,6 +344,29 @@ export function TalentRegistrationForm() {;
 =======
 
 
+=======
+    try {
+      setIsGenerating(true);
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: {
+          talentData: {
+            name: formData.name
+            title: formData.title
+            bio: formData.bio
+            skills: skillTags
+            location: formData.location
+          }
+        }
+      });
+      if (error) {
+        throw new Error(error.message)
+<<<<<<< HEAD
+      }
+      setGeneratedContent(data as EnhancedProfile);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   },;
 
@@ -278,9 +398,16 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -366,8 +493,30 @@ function TalentRegistrationForm() {
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  },;
+  // Apply generated content to form;
+  const applyGeneratedContent = () => {;
+    if (generatedContent) {;
+      form.setValue("bio", generatedContent.summary),;
+      // Extract all skills from categorized skills and properly type cast them;
+      const allCategorizedSkills = generatedContent.categorizedSkills,;
+      const newSkills: string[] = [],;
+      // Safely extract and flatten skills from each category;
+      Object.values(allCategorizedSkills).forEach(categorySkills => {;
+        if (Array.isArray(categorySkills)) {;
+          categorySkills.forEach(skill => {;
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
+              newSkills.push(skill);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }
           });
         }
@@ -387,10 +536,21 @@ function TalentRegistrationForm() {
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+<<<<<<< HEAD
 
 
   };
 
+=======
+      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
+      default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
+    }
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       }),;
       if (newSkills.length > 0) {;
@@ -409,9 +569,16 @@ function TalentRegistrationForm() {
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
     }
   },
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -594,9 +761,17 @@ if ( {) {
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   }
                 });
               }
@@ -611,7 +786,14 @@ if ( {) {
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         } catch (error) {
@@ -624,10 +806,18 @@ if ( {) {
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
@@ -803,10 +993,18 @@ if ( {) {
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;

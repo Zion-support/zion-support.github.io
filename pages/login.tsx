@@ -34,7 +34,190 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/automation-improvements-final
+import {
+<<<<<<< HEAD
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Database,
+  Cloud,
+  Brain,
+  Code,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Unlock,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  DizzyFace2,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from './react';
 import Head from './next / head';
@@ -220,7 +403,11 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "lucide-react";
 =======
   DizzyFace2
@@ -408,7 +595,23 @@ import {;
   YawningFace2
   DizzyFace2
 } from "lucide-react";
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+export default function LoginPage() {
+  const [formData, setFormData] = useState({
+<<<<<<< HEAD
+    email: ""
+    password: ""
+=======
+    email: "",
+    password: "",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

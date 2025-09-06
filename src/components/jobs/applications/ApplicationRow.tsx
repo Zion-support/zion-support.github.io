@@ -1,15 +1,62 @@
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+import { formatDistanceToNow } from 'date-fns'
+<<<<<<< HEAD
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+=======
+import { Calendar, User, FileText, BarChart } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
+import { TableRow, TableCell } from '@/components/ui/table'
+import { JobApplication, ApplicationStatus } from '@/types/jobs'
+import { StatusBadge } from './StatusBadge'
+import { ScoreBadge } from './ScoreBadge';
+import { ApplicationActions } from './ApplicationActions';
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+=======
+import { formatDistanceToNow } from "date-fns",
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+import { ScoreBadge } from "./ScoreBadge",
+import { ApplicationActions } from "./ApplicationActions",
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface ApplicationRowProps {
   application: JobApplication;
   processing_id: string | null;
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export function ApplicationRow({
 
   application
@@ -19,6 +66,7 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
+<<<<<<< HEAD
 
 
 import { formatDistanceToNow } from 'date-fns';
@@ -65,6 +113,19 @@ export function ApplicationRow(): any ({;
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+<<<<<<< HEAD
+  const talentName = application.talent_profile?.full_name |'Unknown'
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <TableRow key={application && application.id}>;
       <TableCell>;
@@ -84,8 +145,16 @@ export function ApplicationRow(): any ({;
                 onError={() => setAvatarError(true)}
                 priority={false}
               />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             ) : (
               <User className="h-5 w-5 text-gray-400" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -125,8 +194,16 @@ export function ApplicationRow(): any ({;
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
@@ -294,7 +371,13 @@ function ApplicationRow() {
     </TableRow>;
   );
 }
+<<<<<<< HEAD
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         {application.resume ? (
           <Button variant='ghost' size='sm' as_child>;
@@ -324,4 +407,7 @@ function ApplicationRow() {
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

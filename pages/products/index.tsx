@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -27,6 +28,14 @@ class ErrorBoundary extends React.Component {
 =======
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react';
 import { NextPage } from 'next';
 
@@ -484,12 +493,46 @@ const ProductsIndex: NextPage = () => {
                 </button>;
                 <Link
                   href="/contact"
+<<<<<<< HEAD
+=======
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Contact Sales
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+};
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
 
 
 =======
 =======
+=======
+export default Index;
+=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const Index: NextPage = () => {
+  return (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
@@ -543,6 +586,7 @@ export default Index;
 };
 
 export default Index;
+<<<<<<< HEAD
 
 
 
@@ -662,8 +706,27 @@ export default ProductsIndex;
 
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+}
+export default ProductsIndex;
+>>>>>>> origin/main
+  )
+<<<<<<< HEAD
+}
+export default Index;
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 },
 export default Index,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

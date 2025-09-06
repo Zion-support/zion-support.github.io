@@ -22,8 +22,24 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 
 
+=======
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import TrustBadge from '../components/ui/TrustBadge';
+import TrustRadar from '../components/ui/TrustRadar';
+import RiskIndicator from '../components/ui/RiskIndicator';
+<<<<<<< HEAD
+export default function TrustPage() {
+  const [userId, setUserId] = useState<string>('demo-user'),
+  const [data, setData] = useState<any>(null),
+=======
+export default function TrustPage() {;
+  const [userId, setUserId] = useState<string>('demo-user');
+  const [data, setData] = useState<any>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -79,9 +95,28 @@ export default function TrustPage() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 
     form && form.reset();
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
+    alert('Appeal submitted');
+
+<<<<<<< HEAD
+    form.reset()
+<<<<<<< HEAD
+=======
+=======
+    <EnhancedLayout>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   return (
     <EnhancedLayout>;
@@ -174,13 +209,18 @@ export default function TrustPage() {;
                       </li>;
 
 =======
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   return (
     <EnhancedLayout>
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
@@ -193,6 +233,15 @@ export default function TrustPage() {;
               )}
 
 =======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+                      </li>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     ))}
                   </ul>
                 </div>
@@ -208,12 +257,17 @@ export default function TrustPage() {;
                 </div>
               )}
             </div>
+<<<<<<< HEAD
 
       </div>;
     </EnhancedLayout>;
   );
 }
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   );
 }
@@ -429,4 +483,7 @@ function submit_appeal() {
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

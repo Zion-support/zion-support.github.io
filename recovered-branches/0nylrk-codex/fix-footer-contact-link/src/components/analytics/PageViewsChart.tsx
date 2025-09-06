@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {;
@@ -8,6 +9,32 @@ import {;
   CardTitle,;
 
 } from "@/components/ui/card";
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+=======
+<<<<<<< HEAD
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
@@ -19,7 +46,17 @@ interface PageViewsChartProps {;
 }
 
 =======
+<<<<<<< HEAD
 
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
@@ -44,9 +81,23 @@ export function PageViewsChart(): any ({;
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart
           title=""
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          data={data |[]}
+          dataKeys={["views"]}
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+      </CardContent>
+    </Card>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -67,13 +118,21 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
           title="";
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+<<<<<<< HEAD
 
 
     </Card>;
@@ -119,4 +178,22 @@ function PageViewsChart() {
       </CardContent>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        />
+      </CardContent>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        />;
+      </CardContent>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+    </Card>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }

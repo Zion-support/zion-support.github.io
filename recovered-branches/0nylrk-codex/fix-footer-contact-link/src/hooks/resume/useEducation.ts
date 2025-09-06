@@ -1,13 +1,29 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Education  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useEducation() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,9 +32,18 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -33,9 +58,16 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -83,9 +115,25 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+  }
+  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update education')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -117,9 +165,16 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -168,9 +223,25 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+  }
+  const deleteEducation = async (eduId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete education')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -202,9 +273,16 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -230,9 +308,18 @@ export function useEducation() {;
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
 
 
 
+=======
+    deleteEducation
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -263,9 +350,16 @@ if ( {) {
     addEducation;
     updateEducation;
     deleteEducation;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

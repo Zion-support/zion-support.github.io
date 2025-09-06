@@ -1,6 +1,34 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+import type {
+<<<<<<< HEAD
+  GrantApplication
+  UpdateGrantPayload;
+=======
+  GrantApplication,;
+  UpdateGrantPayload,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  }
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
+}
+function grantPath(id: string) {
+  return path.join(GRANTS_DIR, `${id}.json`);
+}
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 function ensureDir() {
@@ -60,8 +88,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+  const { id } = req.query as { id: string }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const { id } = req.query as { id: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return

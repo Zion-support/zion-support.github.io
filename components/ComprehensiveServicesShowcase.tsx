@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 
 import {;
   Star,;
@@ -21,18 +22,70 @@ import {;
   Grid,;
   List,;
   ArrowRight,;
+=======
+import {
+<<<<<<< HEAD
+  Star
+  Clock
+  Users
+  TrendingUp
+  CheckCircle
+  ExternalLink
+  ChevronRight
+  Shield
+  Zap
+  Globe
+  Rocket
+  Brain
+  Atom
+  Search
+  Filter
+  Grid
+  List
+  ArrowRight
+  Award
+  Target;
+} from 'lucide-react';
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink
+
+=======
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  Shield,
+  Zap,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Award,;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
+<<<<<<< HEAD
 
 =======
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
@@ -312,7 +365,15 @@ export default function ComprehensiveServicesShowcase() {
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025
@@ -487,10 +548,18 @@ export default function ComprehensiveServicesShowcase() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -498,7 +567,15 @@ export default function ComprehensiveServicesShowcase() {
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -912,6 +989,16 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   }`}
 
 
+<<<<<<< HEAD
+=======
+            {/* Sort and View Controls */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -920,9 +1007,17 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                 </button>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </div>
             </div>
           </div>
@@ -939,10 +1034,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Category Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -951,7 +1054,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -974,9 +1085,17 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           </div>
         </motion.div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Services Display */}
         {viewMode === 'grid' ? (;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -1020,22 +1139,45 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                   {service.popular && (
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+                      <Star className='w-3 h-3' />                      Popular                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                >
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                      <Star className="w-3 h-3" />
+<<<<<<< HEAD
+                    </div>
+                  )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   )}
                   {/* Service Content */}
 
+<<<<<<< HEAD
                   className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
                 >;
                   {/* Popular Badge */}
@@ -1065,6 +1207,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -1153,7 +1302,14 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
@@ -1216,15 +1372,31 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     {/* CTA */}
                     <a
 
+<<<<<<< HEAD
                       )}
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 >
                   <div className='flex flex-col lg:flex-row gap-6'>
                     {/* Left Side - Icon and Basic Info */}
@@ -1246,9 +1418,17 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                         <div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
@@ -1300,6 +1480,14 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                         ))}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
@@ -1436,13 +1624,34 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+            </p>          </motion.div>            className="text-center py-20"
+          >
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+            <p className="text-white/60">Try adjusting your search or filter criteria</p>
+<<<<<<< HEAD
+        )}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             </p>          </motion.div>
 
           </motion.div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        )}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1455,7 +1664,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1506,6 +1723,26 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               </a>;
               <a
                 href="tel:+13024640950"
+<<<<<<< HEAD
+=======
+                className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Call +1 302 464 0950
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+<<<<<<< HEAD
+);
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
                 Call +1 302 464 0950;
@@ -1518,6 +1755,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -1526,3 +1764,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
     </section>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

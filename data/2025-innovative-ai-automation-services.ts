@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+realImplementation: true;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 =======
@@ -177,12 +186,21 @@ reviews: 167;
     customers: 234;
     rating: 4 && 4.8;
     reviews: 167
+<<<<<<< HEAD
 
 
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+  }
+];
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       website: 'https://ziontechgroup.com';
     }
@@ -192,11 +210,18 @@ reviews: 167;
     customers: 234;
     rating: 4.8;
     reviews: 167;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 ];
 ;

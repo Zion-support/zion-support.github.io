@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 
 
 
 
 }
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import { useState, useEffect, useCallback, useMemo  } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+=======
+
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
@@ -194,12 +207,70 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <EquipmentErrorBoundary>
+      <EquipmentPageContent />
+    </EquipmentErrorBoundary>
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <Card className="h-full hover:shadow-lg transition-shadow">
+      <CardHeader className="pb-3">
+        <div className="flex items-start justify-between">
+          <div className="flex-1 min-w-0">
+            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
+            <p className="text-sm text-muted-foreground">{equipment.category}</p>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
+            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
+              {equipment.availability}
+            </Badge>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent className="pt-0">
+        <div className="flex items-center gap-4 mb-3">
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4 text-yellow-500 fill-current" />
+            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
+            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
+          </div>
+        </div>
+        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium">{equipment.category}</span>
+          <Button size="sm" onClick={onViewDetails}>
+            <ShoppingCart className="h-4 w-4 mr-1" />
+            View Details
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+},
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -348,8 +419,14 @@ export default function EquipmentPage() {;
     </EquipmentErrorBoundary>;
   );
 }
+<<<<<<< HEAD
 
 
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -372,4 +449,7 @@ function EquipmentPage() {
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

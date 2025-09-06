@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,18 +28,34 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
   const jsAxiosExample = `// Using Axios with JavaScript;
 import axios from 'axios';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
@@ -102,6 +119,7 @@ function get_jobs() {
     throw error;
   }
 }
+<<<<<<< HEAD
 // Post a new job;
 async /**
  * create_job - Function description
@@ -118,6 +136,32 @@ function create_job() {
 
 
 
+=======
+// Post a new job
+async function createJob(jobData) {
+  try {
+    const response = await api.post('/api/jobs', jobData);
+    return response.data
+  } catch (error) {
+    console.error('Error creating job:', error.response?.data |error.message);
+    throw error
+  }
+}
+// Search for talent
+async function searchTalent(filters = {}) {
+  try {
+    const response = await api.get('/api/talent', { params: filters })
+    return response.data
+  } catch (error) {
+    console.error('Error searching talent:', error.response?.data |error.message);
+    throw error
+  }
+}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
@@ -168,10 +212,18 @@ async function searchTalent(filters = {}) {;
   }
 }
 
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Example usage
 async function main() {
   try {
@@ -197,6 +249,7 @@ async function main() {
     });
     console.log('New job created:', newJob);
     // Search for talent with React skills
+<<<<<<< HEAD
 
 
 // Get all jobs;
@@ -232,6 +285,39 @@ async function searchTalent(): any (filters = {}) {;
   }
 }
 
+=======
+<<<<<<< HEAD
+    const talent = await searchTalent({ skills: 'React', limit: 10 })
+    console.log('Talent:', talent)
+  } catch (error) {
+    console.error('Something went wrong:', error)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+main(),`;
+  // Python example with requests
+  const pythonExample = `# Using requests with Python
+import requests
+import json
+API_KEY = 'YOUR_API_KEY'
+BASE_URL = 'https://api.zionai.com/v1'
+headers = {
+    'Authorization': f'Bearer {API_KEY}Content-Type': 'application/json'
+<<<<<<< HEAD
+}
+=======
+    const talent = await searchTalent({ skills: 'React', limit: 10 }),
+    // // // console.log('Talent:', talent)
+  } catch (error) {
+    console.error('Something went wrong:', error)
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Example usage;
 async function main() {;
   try {;
@@ -318,6 +404,7 @@ main (), `;
 import requests;
 import json;
 API_KEY = 'YOUR_API_KEY';
+<<<<<<< HEAD
 BASE_URL = 'https://api.zionai.com / v1';
 
 headers = {
@@ -326,6 +413,15 @@ headers = {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+BASE_URL = 'https://api.zionai.com/v1';
+headers = {;
+    'Authorization': f'Bearer {API_KEY}Content-Type': 'application/json';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 
@@ -350,16 +446,37 @@ headers = {
     except Exception as e:
         print(f"Error: {e}")`
   // Node.js example with fetch
+<<<<<<< HEAD
 
 
 
 =======
+<<<<<<< HEAD
+const nodeFetchExample = `// Using node-fetch with Node.js
+import fetch from 'node-fetch';
+const API_KEY = 'YOUR_API_KEY';
+<<<<<<< HEAD
+const BASE_URL = 'https: //api.zionai.com/v1'
+// Helper to handle API requests
+async function apiRequest(endpoint, options = {}) {
+  const url = \`\${BASE_URL}\${endpoint}\`;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
   const nodeFetchExample = `// Using node-fetch with Node.js
 import fetch from 'node-fetch',
 const API_KEY = 'YOUR_API_KEY',
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 const BASE_URL = 'https: //api.zionai.com/v1',
 
 // Helper to handle API requests
@@ -488,6 +605,7 @@ async function getJobs(): any (filters = {}) {;
   if (!response.ok) {
     const error = await response.json(),
     throw new Error(error.message || \`API error: \${response.status}\`)
+<<<<<<< HEAD
 
   }
   return response.json()
@@ -495,6 +613,90 @@ async function getJobs(): any (filters = {}) {;
 
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+def get_jobs(filters=None):;
+    """Get all jobs with optional filters""";
+    url = f"{BASE_URL}/api/jobs";
+    response = requests.get(url, params=filters, headers=headers);
+    response.raise_for_status()  # Raise exception for 4XX/5XX responses;
+    return response.json();
+def create_job(job_data):;
+    """Create a new job posting""";
+    url = f"{BASE_URL}/api/jobs";
+    response = requests.post(url, json=job_data, headers=headers);
+    response.raise_for_status();
+    return response.json();
+def search_talent(filters=None):;
+    """Search for talent with optional filters""";
+    url = f"{BASE_URL}/api/talent";
+    response = requests.get(url, params=filters, headers=headers);
+    response.raise_for_status();
+    return response.json();
+# Example usage;
+if __name__ == "__main__":;
+    try:;
+        # Get all open jobs;
+        jobs = get_jobs({'status': 'openlimit': 5});
+        print(f"Found {len(jobs['jobs'])} jobs");
+        # Create a new job;
+        new_job = create_job({;
+            'title': 'Data Scientistdescription': 'Looking for an experienced data scientist...category': 'databudget': {;
+                'min': 6000,;
+                'max': 9000,;
+                'currency': 'USD';
+            },;
+            'skills': ['PythonMachine LearningSQL'];
+        });
+        print(f"New job created with ID: {new_job['id']}");
+        # Search for talent with Python skills;
+        talent = search_talent({'skills': 'Pythonlimit': 10});
+        print(f"Found {len(talent['talent'])} talented people");
+    except requests.exceptions.HTTPError as e:;
+        print(f"HTTP Error: {e}");
+        print(f"Response: {e.response.text}");
+    except Exception as e:;
+        print(f"Error: {e}")`,;
+  // Node.js example with fetch;
+  const nodeFetchExample = `// Using node-fetch with Node.js;
+import fetch from 'node-fetch',;
+const API_KEY = 'YOUR_API_KEY',;
+const BASE_URL = 'https: //api.zionai.com/v1',;
+// Helper to handle API requests;
+async function apiRequest(endpoint, options = {}) {;
+  const url = \`\${BASE_URL}\${endpoint}\`,;
+  const headers = {;
+    'Authorization': \`Bearer \${API_KEY}\`,;
+    'Content-Type': 'application/json',;
+    ...options.headers;
+  },;
+  const config = {;
+    ...options,;
+    headers;
+  },;
+  const response = await fetch(url, config),;
+  if (!response.ok) {;
+    const error = await response.json(),;
+    throw new Error(error.message || \`API error: \${response.status}\`);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+  return response.json()
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Get all jobs
 async function getJobs(filters = {}) {
   // Convert filters to query string
@@ -515,10 +717,18 @@ async function getJobs(filters = {}) {;
   }),;
   const queryString = params.toString() ? \`?\${params.toString()}\` : '',;
   return apiRequest(\`/api/jobs\${queryString}\`, { method: 'GET' });
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 // Post a new job
 async function createJob(jobData) {
@@ -527,6 +737,7 @@ async function createJob(jobData) {
     body: JSON.stringify(jobData)
   })
 }
+<<<<<<< HEAD
 
 
   const queryString = params && params.toString() ? \`?\${params && params.toString()}\` : '';
@@ -535,6 +746,13 @@ async function createJob(jobData) {
 
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Search for talent
 async function searchTalent(filters = {}) {
   const params = new URLSearchParams();
@@ -543,8 +761,15 @@ async function searchTalent(filters = {}) {
   });
   const queryString = params.toString() ? \`?\${params.toString()}\` : '';
   return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' })
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
 // Search for talent;
@@ -555,10 +780,17 @@ async function searchTalent(filters = {}) {;
   }),;
   const queryString = params.toString() ? \`?\${params.toString()}\` : '',;
   return apiRequest(\`/api/talent\${queryString}\`, { method: 'GET' });
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 // Post a new job;
@@ -715,8 +947,15 @@ main(),`,;
 }
 
 ;
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default ApiSampleCode;
 
 =======

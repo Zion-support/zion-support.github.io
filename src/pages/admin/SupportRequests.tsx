@@ -1,6 +1,64 @@
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import React, { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from '@/components/ui/select'
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
+<<<<<<< HEAD
+=======
+import { Search, Filter } from 'lucide-react'
+import { SEO } from '@/components/SEO'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+import { Search, Filter } from 'lucide-react'
+import { SEO } from "@/components/SEO";
+=======
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Search, Filter } from 'lucide-react'
+import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -103,10 +161,31 @@ const MOCK_SUPPORT_REQUESTS = [;
     category: 'disputes',
   },
   {
+<<<<<<< HEAD
     id: 'SR - 1006',
     user: 'alex.wong@datacompany.com',
     user_id: 'user - 890',
     issue: 'Profile verification pending for over 7 days',
+=======
+    id: "SR-1006",
+    user: "alex.wong@datacompany.com",
+    userId: "user-890",
+    issue: "Profile verification pending for over 7 days",
+    status: "resolved",
+    priority: "medium",
+    createdAt: "2023-12-08T13:20:00Z",
+    lastUpdated: "2023-12-15T08:30:00Z",
+    category: "verification"
+  },
+  {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    id: 'SR-1007',
+    user: 'jamie.taylor@tech.org',
+    userId: 'user-345',
+    issue: 'Cannot upload portfolio images',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     status: 'resolved',
     priority: 'medium',
     created_at: '2023 - 12 - 08T13:20:00Z',
@@ -121,6 +200,28 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    id: "SR-1007",
+    user: "jamie.taylor@tech.org",
+    userId: "user-345",
+    issue: "Cannot upload portfolio images",
+    status: "resolved",
+    priority: "medium",
+    createdAt: "2023-12-10T15:10:00Z",
+    lastUpdated: "2023-12-13T11:25:00Z",
+    category: "profile"
+  }
+],
+
+export default function SupportRequests() {
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -280,6 +381,7 @@ export default function SupportRequests() {;
     if (categoryFilter && request && request.category !== categoryFilter) {;
       return false;
     }
+<<<<<<< HEAD
 
     return true;
   });
@@ -306,6 +408,30 @@ export default function SupportRequests() {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+    
+    return true
+  }),
+  
+  // Count by status for the summary dashboard
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
+  const totalCount = MOCK_SUPPORT_REQUESTS.length,
+  
+  const resetFilters = () => {
+    setSearchQuery(""),
+    setStatusFilter(null),
+    setPriorityFilter(null),
+    setCategoryFilter(null)
+  },
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <>;
 
@@ -313,9 +439,17 @@ export default function SupportRequests() {;
           
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               New Support Case
             </Button>
           </div>
@@ -323,9 +457,17 @@ export default function SupportRequests() {;
 
 
         
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {/* Status Cards */}
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>
           <Card>
@@ -337,9 +479,17 @@ export default function SupportRequests() {;
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>
@@ -351,9 +501,17 @@ export default function SupportRequests() {;
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>
@@ -365,9 +523,17 @@ export default function SupportRequests() {;
 
 
           
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <Card>
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>
@@ -379,9 +545,17 @@ export default function SupportRequests() {;
 
         
         <Tabs defaultValue="all" className="mb-8">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           <TabsList>
             <TabsTrigger value='all'>All Requests</TabsTrigger>
             <TabsTrigger value='escalated'>Escalated</TabsTrigger>
@@ -457,19 +631,44 @@ export default function SupportRequests() {;
 
           
           <TabsContent value="all" className="mt-6">
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Search and Filters */}
             <div className='flex flex-col md:flex-row gap-4 mb-6'>;
               <div className='relative flex-1'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />;
                 <Input
+<<<<<<< HEAD
 
 
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
 
+=======
+<<<<<<< HEAD
+                  placeholder='Search by ID, user or issue...'
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  className='pl-10'                />
+              </div>
+              <Select
+<<<<<<< HEAD
+                value={statusFilter |''}
+                onValueChange={value => setStatusFilter(value |null)}
+=======
+                value={statusFilter || ''}
+                onValueChange={value => setStatusFilter(value || null)}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
@@ -484,10 +683,18 @@ export default function SupportRequests() {;
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value=''>All Statuses</SelectItem>
@@ -496,11 +703,23 @@ export default function SupportRequests() {;
                   <SelectItem value='resolved'>Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
 
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
 
+=======
+<<<<<<< HEAD
+              <Select
+<<<<<<< HEAD
+                value={priorityFilter |''}
+                onValueChange={value => setPriorityFilter(value |null)}
+=======
+                value={priorityFilter || ''}
+                onValueChange={value => setPriorityFilter(value || null)}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -509,10 +728,18 @@ export default function SupportRequests() {;
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value=''>All Priorities</SelectItem>
@@ -521,11 +748,23 @@ export default function SupportRequests() {;
                   <SelectItem value='low'>Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
 
 
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
 
+=======
+<<<<<<< HEAD
+              <Select
+<<<<<<< HEAD
+                value={categoryFilter |''}
+                onValueChange={value => setCategoryFilter(value |null)}
+=======
+                value={categoryFilter || ''}
+                onValueChange={value => setCategoryFilter(value || null)}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
@@ -534,10 +773,18 @@ export default function SupportRequests() {;
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value=''>All Categories</SelectItem>
@@ -566,8 +813,16 @@ export default function SupportRequests() {;
               </Button>
             </div>
             
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -590,7 +845,14 @@ export default function SupportRequests() {;
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
@@ -788,7 +1050,22 @@ export default function SupportRequests() {;
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
+<<<<<<< HEAD
 
+=======
+                          <Badge variant={;
+                            request.priority === 'high';
+                              ? 'destructive';
+                              : request.priority === 'medium';
+                              ? 'default';
+                              : 'outline';
+                          }>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                             {request.priority}
                           </Badge>;
                         </TableCell>;
@@ -834,9 +1111,17 @@ export default function SupportRequests() {;
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </p>
             </div>
           </TabsContent>
@@ -844,6 +1129,7 @@ export default function SupportRequests() {;
       </div>
     </>
   )
+<<<<<<< HEAD
 
                   </TableBody>;
                 </Table>;
@@ -915,11 +1201,44 @@ export default function SupportRequests() {;
 
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
+=======
+<<<<<<< HEAD
+  return true
+})
+//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8"> <div> <h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Support Requests </h1> <p className=" text-zion-slate-light mt-2"> Manage and respond to user support requests and issues </p> </div> <div className=" mt-4 md:mt-0"> <Button className=" bg-zion-purple hover:bg-zion-purple-light"> New Support Case </Button> </div> </div> <CardDescription>Open Requests</CardDescription> </CardHeader> </Card> <Card> <CardDescription>In Progress</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Resolved</CardDescription> </CardHeader> </Card> <Card> <CardDescription>Total Requests</CardDescription> </CardHeader> </Card> </div> <Tabs defaultValue=" all"className=" mb-8"> <TabsList> <TabsTrigger value=" all">All Requests</TabsTrigger> <TabsTrigger value=" escalated">Escalated</TabsTrigger> <TabsTrigger value=" ai-flagged">AI Flagged</TabsTrigger> <TabsTrigger value=" need-response">Need Response</TabsTrigger> </TabsList> </SelectTrigger> <SelectContent> <SelectItem value="">All Statuses</SelectItem> <SelectItem value=" open">Open</SelectItem> <SelectItem value=" in-progress">In Progress</SelectItem> <SelectItem value=" resolved">Resolved</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Priorities</SelectItem> <SelectItem value=" high">High</SelectItem> <SelectItem value=" medium">Medium</SelectItem> <SelectItem value=" low">Low</SelectItem> </SelectContent> </Select> </SelectTrigger> <SelectContent> <SelectItem value="">All Categories</SelectItem> <SelectItem value=" authentication">Authentication</SelectItem> <SelectItem value=" billing">Billing</SelectItem> <SelectItem value=" api">API</SelectItem> <SelectItem value=" disputes">Disputes</SelectItem> <SelectItem value=" verification">Verification</SelectItem> <SelectItem value=" profile">Profile</SelectItem> </SelectContent> </Select> </Button> </div> {
+  /* Support Requests Table */ "
+}<Card> <CardContent className=" p-0"> <Table> <TableHeader> <TableRow> <TableHead>ID</TableHead> <TableHead>User</TableHead> <TableHead>Issue</TableHead> <TableHead>Status</TableHead> <TableHead>Priority</TableHead> <TableHead>Category</TableHead> <TableHead>Created</TableHead> <TableHead>Last Updated</TableHead> <TableHead>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  filteredRequests.map ( (request) => (<TableRow key= {
+  request.id
+}> <TableCell> <Badge variant= {
+  request.status === 'open' ? 'default' : request.status === 'in-progress' ? 'secondary' : 'outline'
+}> {
+  request.status
+}</Badge> </TableCell> <TableCell> <Badge variant= {'
+  request.priority === 'high' ? 'destructive' : request.priority === 'medium' ? 'default' : 'outline'
+}> {
+  request.priority
+}</Badge> </TableCell> <TableCell> {
+  request.category
+}</TableCell> <TableCell> {
+  new Date (request.createdAt) .toLocaleDateString ()
+}</TableCell> <TableCell> {
+  new Date (request.lastUpdated) .toLocaleDateString () "
+<<<<<<< HEAD
+}</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) "
+}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }'"}
 
 
 =======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
                       </TableRow>))}
                   </TableBody>;
@@ -979,7 +1298,17 @@ export default function SupportRequests() {;
 }</TableCell> <TableCell> {
   new Date (request.last_updated) .toLocaleDateString () ";
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
+<<<<<<< HEAD
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
+}'"};
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

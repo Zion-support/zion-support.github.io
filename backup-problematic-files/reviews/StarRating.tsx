@@ -1,10 +1,28 @@
+<<<<<<< HEAD
 
 > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
 
 =======
+<<<<<<< HEAD:components/reviews/StarRating.tsx
+<<<<<<< HEAD
+=======
+> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD:backup-problematic-files/reviews/StarRating.tsx
+import React, { useState } from 'react',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }) 
 }</div>) 
 };
@@ -15,9 +33,25 @@
 }</div>)
 }
 export const StarRating: React.FC<Props> = ({
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+  value
+  onChange
+  size = 24
+  readOnly
+}) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
+<<<<<<< HEAD:components/reviews/StarRating.tsx
+type Props = {
+  value: number
+  onChange: (val: number) => void
+=======
+>>>>>>> main:components/reviews/StarRating.tsx
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   value,
   onChange,
@@ -38,9 +72,16 @@ type Props = {
   readOnly?: boolean
 }
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
+<<<<<<< HEAD
 
 ;
 
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const stars = [1, 2, 3, 4, 5];
   return (
     <div className='flex items-center gap-1'>
@@ -51,10 +92,20 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
+<<<<<<< HEAD
 
 
 
 
+=======
+<<<<<<< HEAD:components/reviews/StarRating.tsx
+=======
+>>>>>>> main:components/reviews/StarRating.tsx
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
@@ -97,13 +148,33 @@ export default StarRating;              width={size}
           </button>
         )
       })}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD:components/reviews/StarRating.tsx
+=======
+<<<<<<< HEAD:backup-problematic-files/reviews/StarRating.tsx
+    </div>;
+  );
+};
+export default StarRating;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   )
 }
 export default StarRating;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:components/reviews/StarRating.tsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/StarRating.tsx

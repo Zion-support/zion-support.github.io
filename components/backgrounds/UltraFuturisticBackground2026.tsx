@@ -497,6 +497,11 @@ if ( {) {
 
           }}
           transition={{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             duration: 10
             repeat: Infinity
             ease: 'linear',            ease: "linear"
@@ -594,20 +599,43 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
         />;
       </div>;
 
 
       {/* Energy Field Effects */}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            duration: 10,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'linear',            ease: "linear"
+          }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       </div>
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -650,12 +678,23 @@ if ( {) {
             coordinate_y: ['-100%100%'];
           }}
           transition={{
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            duration: 20
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+          }}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             duration: 20,
             repeat: Infinity,
 
           }}
 
+<<<<<<< HEAD
 
             duration: 20,
             repeat: Infinity,
@@ -664,15 +703,23 @@ if ( {) {
 
 
 =======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
             duration: 20,
             repeat: Infinity,
 
 
           }}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         />
       </div>
       {/* Content */}
@@ -749,9 +796,40 @@ export default UltraFuturisticBackground2026;
       </div>
     </div>
   );
+<<<<<<< HEAD
 
 };
 
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default UltraFuturisticBackground2026;
+      {/* Holographic Overlay */}
+      <div className="fixed inset-0 pointer-events-none z-40">
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />
+      </div>
+    </div>
+  )
+}
+export default UltraFuturisticBackground2026;
+
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2026;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraFuturisticBackground2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

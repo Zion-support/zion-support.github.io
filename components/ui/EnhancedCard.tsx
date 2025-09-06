@@ -24,12 +24,26 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
+<<<<<<< HEAD
 
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
 }: {;
   children: React && React.ReactNode;
+=======
+export default function EnhancedCard({
+<<<<<<< HEAD
+  children
+  className = ""
+}: {
+=======
+  children,
+  className = "",
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  children: React.ReactNode;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   className?: string;
 }) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

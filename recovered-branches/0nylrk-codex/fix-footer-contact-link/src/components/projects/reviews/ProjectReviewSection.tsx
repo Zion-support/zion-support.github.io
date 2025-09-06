@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 import {useState} from "react";
@@ -12,6 +13,37 @@ import {Project} from "@/types/projects";
 import {useAuth} from "@/hooks/useAuth";
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from "react";
+import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
+
+import { Project } from "@/types/projects";
+import { useAuth } from "@/hooks/useAuth";
+=======
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReviewsList} from "@/components/reviews/ReviewsList";
+import {LeaveReviewModal} from "@/components/reviews/LeaveReviewModal";
+import {useReviews} from "@/hooks/useReviews";
+import {Project} from "@/types/projects";
+import {useAuth} from "@/hooks/useAuth";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -21,6 +53,7 @@ import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
 import { useReviews } from "@/hooks/useReviews",
 import { Project } from "@/types/projects",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 
 
 
@@ -29,6 +62,29 @@ interface ProjectReviewSectionProps {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface ProjectReviewSectionProps {
+  project: Project;
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
+  const { user } = useAuth();
+  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
+<<<<<<< HEAD
+  const { user } = useAuth();
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   return (
@@ -214,10 +270,18 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
                         Edit Review;
                       </Button>;
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     )}
                   </div>;
                 ) : null}

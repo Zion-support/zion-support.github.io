@@ -1,13 +1,29 @@
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Certification  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useCertifications() {
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -16,9 +32,18 @@ export function useCertifications() {;
     if (!user) {
       setError('You must be logged in to add certifications')
       return false
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -33,9 +58,16 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to add certifications'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -77,9 +109,25 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+  }
+  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update certifications')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -108,9 +156,16 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to update certifications'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -153,9 +208,25 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+    }
+  }
+  const deleteCertification = async (certId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete certifications')
+      return false
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+    setError(null);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 ;
     setIsLoading(true),;
@@ -184,9 +255,16 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to delete certifications'),;
       return false;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     }
     
     setIsLoading(true),
@@ -212,9 +290,18 @@ export function useCertifications() {;
     } finally {
       setIsLoading(false)
 
+<<<<<<< HEAD
 
 
 
+=======
+    deleteCertification
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -245,9 +332,16 @@ if ( {) {
     addCertification;
     updateCertification;
     deleteCertification;
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

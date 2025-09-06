@@ -1,5 +1,54 @@
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import {
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogFooter
+  DialogHeader
+  DialogTitle
+} from '@/components/ui/dialog'
+
+import { User, Mail, MapPin, CreditCard } from 'lucide-react'
+import { isProdDomain } from '@/utils/getStripe';
+interface GuestCheckoutModalProps {
+<<<<<<< HEAD
+
+  open: boolean
+  onOpenChange: (open: boolean) => void
+=======
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  onSubmit: (details: { email: string; address: string }) => void
+export default function GuestCheckoutModal({
+  open
+  onOpenChange
+  onSubmit
+}: GuestCheckoutModalProps) {
+  const [email, setEmail] = useState('')
+  const [address, setAddress] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email |!address) {
+      alert('Please fill in all required fields')
+      return;
+    }
+    setIsSubmitting(true)
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     try {
       on_submit ({ email, address });
     } finally {
@@ -77,10 +126,17 @@ export default function GuestCheckoutModal(): any ({;
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
 
     <Dialog open={open} onOpenChange={onOpenChange}>;
@@ -210,8 +266,95 @@ export default function GuestCheckoutModal(): any ({;
               Email Address
             </Label>
             <Input
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              id='guest-email'
+              type='email'
+              value={email || ''}
+              onChange={e => setEmail(e.target.value || '')}
+              placeholder='your.email@example.com'              required
+              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
+            />
+          </div>
+          <div className='space-y-2'>
+            <Label
+              htmlFor='guest-address'
+              className='text-white flex items-center gap-2'
+            >
+              <MapPin className='h-4 w-4 text-zion-cyan' />
+              Shipping Address
+            </Label>
+            <Textarea
+              id='guest-address'
+              value={address || ''}
+              onChange={e => setAddress(e.target.value || '')}
+              placeholder='Enter your full shipping address...'              required
+              className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
+            />
+          </div>
+          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>
+            <p className='text-yellow-400 text-sm'>
+              💡 Creating an account allows you to track your order and checkout
+              faster next time.
+            </p>
+          </div>
+          <DialogFooter className='space-x-2'>
+            <Button
+              type='button'
+              variant='outline'
+              onClick={() => onOpenChange(false)}
+              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >
+              Cancel
+            </Button>
+            <Button
+              type='submit'
+              disabled={isSubmitting || !email || !address}
+              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              id="guest-email"
+              type="email"
+              value={email || ''}
+              onChange={(e) => setEmail(e.target.value || '')}
+              placeholder="your.email@example.com"
+              required
+              className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light"
+            />
+          </div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+<<<<<<< HEAD
+=======
+          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">
+            <p className="text-yellow-400 text-sm">
+              💡 Creating an account allows you to track your order and checkout faster next time.
+            </p>
+          </div>
+
+          <DialogFooter className="space-x-2">
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => onOpenChange(false)}
+              className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10"
+            >
+              Cancel
+            </Button>
+            <Button
+              type="submit"
+              disabled={isSubmitting || !email || !address}
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
+            >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -220,6 +363,7 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment
                 </>
               )}
+<<<<<<< HEAD
 
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
@@ -232,11 +376,27 @@ export default function GuestCheckoutModal(): any ({;
                 </>;
               )}
 =======
+<<<<<<< HEAD
+            </Button>
+          </DialogFooter>
+        </form>
+      </DialogContent>
+    </Dialog>
+  )
+<<<<<<< HEAD
+}
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 };
 };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           <DialogFooter className='space - x-2'>;
             <Button;
@@ -263,6 +423,12 @@ export default function GuestCheckoutModal(): any ({;
       </DialogContent>;
 
 }
+<<<<<<< HEAD
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -277,4 +443,7 @@ export default function GuestCheckoutModal(): any ({;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

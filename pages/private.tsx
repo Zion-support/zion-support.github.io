@@ -15,8 +15,25 @@ interface PrivatePageProps {
 
 interface PrivatePageProps {;
   user: SupabaseUser;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export default /**
  * PrivatePage - Function description
@@ -28,9 +45,21 @@ function PrivatePage() {
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
+=======
+      <div className="container max-w-4xl mx-auto py-8">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -71,9 +100,21 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+            <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
+              <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
+              <div className=&quot;grid gap-2 text-sm&quot;>
+<<<<<<< HEAD
+                <div>
+                  <span className=&quot;font-medium&quot;>Last Sign In: </span>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
@@ -99,9 +140,17 @@ function PrivatePage() {
 
 
             <div className="flex gap-2">
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -216,10 +265,17 @@ if ( {) {
     props: {
 
       user: data.user}}
+<<<<<<< HEAD
 }
 =======
 
 
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -252,8 +308,18 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 } ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+} ;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+} ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

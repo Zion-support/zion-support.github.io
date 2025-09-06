@@ -1,11 +1,26 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useMemo, useState } from 'react',;
 import Sidebar from './Sidebar',;
 import EndpointDetail from './EndpointDetail',;
 import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -27,7 +42,14 @@ export default function ApiDocsPage() {
         onChangeVisibility={setVisibility}      />
       <main className=&quot;p-6 space-y-6&quot;>
         <header className=&quot;flex items-center justify-between&quot;>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
@@ -42,7 +64,14 @@ export default function ApiDocsPage() {
 
 
         {_activeEndpoint ? (
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
@@ -78,10 +107,23 @@ function ChangelogWidget() {
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
       </div>
+<<<<<<< HEAD
 
       <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
   )}
 
+=======
+<<<<<<< HEAD:components/docs/ApiDocsPage.tsx
+      <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
+    </div>
+<<<<<<< HEAD
+  )
+}
+=======
+      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
+  )}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   );
 };

@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -6,6 +12,7 @@ interface AppStoreButtonsProps {;
 
   className?: string;
 =======
+<<<<<<< HEAD
 import React from './react';
 import { Apple, GithubIcon } from './lucide-react';
 import { cn } from '@/lib / utils';
@@ -14,6 +21,21 @@ import { cn } from '@/lib / utils';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+<<<<<<< HEAD
+import { Apple, GithubIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+=======
+import { Apple, GithubIcon } from "lucide-react",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface AppStoreButtonsProps {
   class_name?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -56,9 +78,32 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+<<<<<<< HEAD
 
 
 
+=======
+    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
+      <a
+        href={appStoreUrl}
+        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
+        onClick={handleAppStoreClick}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Apple className="h-8 w-8 mr-3" />
+        <div>
+          <div className="text-xs">Download on the</div>
+          <div className="text-xl font-semibold">App Store</div>
+        </div>
+<<<<<<< HEAD
+      </a>
+<<<<<<< HEAD
+      <a
+        href={googlePlayUrl}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
       </Link>
 
@@ -89,11 +134,21 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
       </a>
     </div>
   )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
 
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 },
 import React from "react",;
@@ -168,6 +223,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   );
 };
 
+<<<<<<< HEAD
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -239,9 +295,17 @@ if ( {) {
 ;
 
 =======
+export default AppStoreButtons;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 export default AppStoreButtons;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

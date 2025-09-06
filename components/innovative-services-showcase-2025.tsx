@@ -10,8 +10,43 @@ import Head from 'next/head';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import { 
   Search, Filter, Star, CheckCircle, ArrowRight, 
+=======
+import {
+<<<<<<< HEAD
+  Search
+  Filter
+  Star
+  CheckCircle
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  Users
+  Award
+  Zap
+  Globe
+  Cpu
+  Database
+  Lock
+  Cloud
+  Stethoscope
+  GraduationCap
+  Leaf
+  Truck;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Search, Filter, Star, CheckCircle, ArrowRight
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
   Search,
@@ -44,8 +79,12 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight, ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -74,6 +113,120 @@ const contactInfo = {
 };
 
 const serviceCategories = [
+<<<<<<< HEAD
+=======
+  {
+    id: 'financial-technology'
+    title: '💰 Financial Technology'
+    description: 'Innovative fintech, DeFi, and financial services'
+    icon: TrendingUp
+    color: 'from-green-500 to-emerald-500'
+    services: [...innovativeFinancialServices2025]
+    gradient: 'from-green-500/20 to-emerald-500/20'
+    badge: 'New'
+  },  {    badge: 'New'
+  }
+  {
+    id: 'healthcare-biotech'
+    title: '🏥 Healthcare & Biotech'
+    description: 'AI-powered healthcare and biotechnology solutions'
+    icon: Stethoscope
+    color: 'from-blue-500 to-indigo-500'
+    services: [...innovativeHealthcareServices2025]
+    gradient: 'from-blue-500/20 to-indigo-500/20'
+    badge: 'Hot'
+  },  {    badge: 'Hot'
+  }
+  {
+    id: 'education-technology'
+    title: '🎓 Education Technology'
+    description: 'AI-powered learning and educational innovation'
+    icon: GraduationCap
+    color: 'from-purple-500 to-pink-500'
+    services: [...innovativeEducationServices2025]
+    gradient: 'from-purple-500/20 to-pink-500/20'
+    badge: 'Innovative'
+  },  {    badge: 'Innovative'
+  }
+  {
+    id: 'sustainability-green-tech'
+    title: '🌱 Sustainability & Green Tech'
+    description: 'Environmental technology and sustainability solutions'
+    icon: Leaf
+    color: 'from-emerald-500 to-teal-500'
+    services: [...innovativeSustainabilityServices2025]
+    gradient: 'from-emerald-500/20 to-teal-500/20'
+    badge: 'Eco-Friendly'
+  },  {    badge: 'Eco-Friendly'
+  }
+  {
+    id: 'logistics-supply-chain'
+    title: '🚚 Logistics & Supply Chain'
+    description: 'Autonomous logistics and supply chain optimization'
+    icon: Truck
+    color: 'from-orange-500 to-red-500'
+    services: [...innovativeLogisticsServices2025]
+    gradient: 'from-orange-500/20 to-red-500/20'
+    badge: 'Autonomous'
+  }
+  {
+    id: 'ai-consciousness'
+    title: '🧠 AI & Consciousness'
+    description:
+      'Revolutionary AI consciousness and emotional intelligence platforms',    icon: Brain
+    color: 'from-violet-500 to-purple-500'
+    services: [...innovativeAIServices2025]
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+    badge: 'Revolutionary'
+  },  {    badge: 'Autonomous'
+  }
+  {
+    id: 'ai-consciousness'
+    title: '🧠 AI & Consciousness'
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms'
+    color: 'from-violet-500 to-purple-500'
+    services: [...innovativeAIServices2025]
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+    badge: 'Revolutionary'
+  },    badge: 'Revolutionary'
+  }
+  {
+    id: 'quantum-emerging'
+    title: '⚛️ Quantum & Emerging Tech'
+    description: 'Quantum computing, DNA computing, and beyond'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-500'
+    services: [...emergingTechServices2025]
+    gradient: 'from-indigo-500/20 to-cyan-500/20'
+    badge: 'Quantum'
+  },  {    badge: 'Quantum'
+  }
+  {
+    id: 'enterprise-it'
+    title: '🏙️ Enterprise IT'
+    description: 'Autonomous operations and zero-trust security'
+    icon: Shield
+    color: 'from-blue-500 to-cyan-500'
+    services: [...innovativeITServices2025]
+    gradient: 'from-blue-500/20 to-teal-500/20'
+    badge: 'Enterprise'
+  },  {    badge: 'Enterprise'
+  }
+  {
+    id: 'micro-saas'
+    title: '🎯 Micro SAAS'
+    description: 'Innovative solutions for every business need'
+    icon: Target
+    color: 'from-teal-500 to-green-500'
+    services: [...realMicroSaasServices2025]
+    gradient: 'from-teal-500/20 to-green-500/20'
+    badge: 'Popular'
+  },];    badge: 'Popular'
+  }
+];
+<<<<<<< HEAD
+export default function InnovativeServicesShowcase2025() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   Search,
   Filter,
@@ -254,8 +407,12 @@ const service_categories = [;
 
 
 export default function InnovativeServicesShowcase2025() {;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -556,6 +713,7 @@ function InnovativeServicesShowcase2025() {
 ;
   return (
 
+<<<<<<< HEAD
 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -611,12 +769,27 @@ function InnovativeServicesShowcase2025() {
           </motion && motion.div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -764,9 +937,17 @@ function InnovativeServicesShowcase2025() {
 
               </div>
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Category Filter */}
               <div>;
                 <select
@@ -781,10 +962,18 @@ function InnovativeServicesShowcase2025() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Sort By */}
               <div>;
                 <select
@@ -817,7 +1006,15 @@ function InnovativeServicesShowcase2025() {
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Service Header */}
@@ -898,9 +1095,17 @@ function InnovativeServicesShowcase2025() {
 
                     {service.description}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   </p>
                 </div>
 =======
@@ -971,9 +1176,17 @@ function InnovativeServicesShowcase2025() {
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   <div>
                     <div className='text-gray-400'>Market Size</div>
                     <div className='text-white font-semibold'>
@@ -1056,6 +1269,7 @@ function InnovativeServicesShowcase2025() {
                 </div>
               </motion.div>
 
+<<<<<<< HEAD
             ))}
 
 
@@ -1063,6 +1277,13 @@ function InnovativeServicesShowcase2025() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {sortedServices.length === 0 && (
             <motion.div
 =======
@@ -1085,8 +1306,20 @@ function InnovativeServicesShowcase2025() {
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          )}
+        </div>
+      </section>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
@@ -1102,16 +1335,32 @@ function InnovativeServicesShowcase2025() {
 
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
@@ -1163,16 +1412,32 @@ function InnovativeServicesShowcase2025() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -1212,7 +1477,15 @@ function InnovativeServicesShowcase2025() {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -1252,7 +1525,15 @@ function InnovativeServicesShowcase2025() {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
@@ -1266,6 +1547,7 @@ function InnovativeServicesShowcase2025() {
     </Layout>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
+<<<<<<< HEAD
 
                   </p>;
                 </div>;
@@ -1450,9 +1732,22 @@ function InnovativeServicesShowcase2025() {
         </div>;
       </section>;
     </Layout>);
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
 =======
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+}
+;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -10,12 +10,21 @@
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
+<<<<<<< HEAD
 
 
 
 export function securityMiddleware(request) {;
 
 
+=======
+<<<<<<< HEAD
+export function securityMiddleware(request) {
+=======
+
+export function securityMiddleware(request) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const response = NextResponse.next();
 =======
   const response = NextResponse && NextResponse.next();
@@ -60,6 +69,7 @@ export function securityHeaders(req, res, next) {
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'X-Content-Type-Options': 'nosniff',
@@ -70,13 +80,35 @@ export function securityHeaders(req, res, next) {
 
 
 
+=======
+<<<<<<< HEAD
+    'X-Content-Type-Options': 'nosniff'
+    'X-Frame-Options': 'DENY'
+    'X-XSS-Protection': '1; mode=block'
+    'Referrer-Policy': 'strict-origin-when-cross-origin'
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+=======
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',;
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+>>>>>>> origin/main
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -88,6 +120,10 @@ export function securityHeaders(req, res, next) {
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -112,6 +148,7 @@ function security_middleware() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     response.headers.set (
       'Strict - Transport - Security',
       'max - age = 31536000; includeSubDomains; preload');
@@ -135,3 +172,6 @@ function security_headers() {
   next ();
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

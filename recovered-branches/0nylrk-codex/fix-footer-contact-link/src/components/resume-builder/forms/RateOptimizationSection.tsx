@@ -1,12 +1,24 @@
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+<<<<<<< HEAD
+import { Control } from "react-hook-form";
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
@@ -33,7 +45,14 @@ import {Card, CardContent} from "@/components/ui/card";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
@@ -43,7 +62,27 @@ interface RateOptimizationSectionProps {
 
   rateType: "hourly" | "fixed"
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+<<<<<<< HEAD
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
   rateType
@@ -163,9 +202,17 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 step="0.01";
 
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {...field}
               />;
             </FormControl>;
@@ -191,21 +238,43 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
+<<<<<<< HEAD
 
 
 
 
+=======
+            rateType={rateType}
+<<<<<<< HEAD
+          />
+        </CardContent>
+      </Card>
+    </div>
+  )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
           />;
         </CardContent>;
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

@@ -2,11 +2,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   if (req.method !== 'POST');
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
@@ -90,9 +98,18 @@ function handler() {
   } catch (e: any) {
     res.status(500).json({ error: e.message })
   }
+<<<<<<< HEAD
 
 }
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

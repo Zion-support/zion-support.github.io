@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {;
@@ -13,17 +14,59 @@ import {;
   PopoverTrigger,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import React from "react";
+import { format } from "date-fns";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import {
+<<<<<<< HEAD
+  Popover
+  PopoverContent
+  PopoverTrigger
+=======
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 
 
 =======
 =======
 
 
+=======
+<<<<<<< HEAD
+interface DateFieldsProps {
+  startDate: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  endDate: Date | undefined;
+  setEndDate: (date: Date | undefined) => void
+}
+export function DateFields({
+  startDate
+  setStartDate
+  endDate
+  setEndDate
+}: DateFieldsProps) {
+=======
+=======
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react',
 import { format } from 'date-fns',
 import { Label } from "@/components/ui/label",
@@ -32,9 +75,16 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -132,9 +182,17 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               disabled={(date) =>;
                 date > new Date();
               }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               initialFocus
             />
           </PopoverContent>
@@ -169,8 +227,22 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+              disabled={(date) => date < new Date()}
+              initialFocus
+            />
+          </PopoverContent>
+        </Popover>
+      </div>
+<<<<<<< HEAD
+    </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
               disabled={(date) =>;
                 date < new Date();
@@ -266,9 +338,16 @@ function DateFields() {
 
 
     </div>;
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 =======
     </div>);

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
@@ -9,6 +10,30 @@ import { Link } from './react-router-dom';
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+=======
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -306,15 +331,44 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
             <ProductListingCard
               key={listing.id}
               listing={listing}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               view="grid"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
+<<<<<<< HEAD
 
 
 
 
+=======
+            />
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Button
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
+            asChild
+          >
+            <Link to="/marketplace">View All Listings</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         </div>;
 
@@ -335,11 +389,20 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </section>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

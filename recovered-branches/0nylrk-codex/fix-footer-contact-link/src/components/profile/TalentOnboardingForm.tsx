@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -24,6 +25,11 @@ const talentSchema = z.object({
         title: z.string().min(2, "Project title is required");
         description: z.string().min(10, "Project description is required")})
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React, { useState } from "react";
 import {useForm, useFieldArray} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -41,6 +47,7 @@ import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Uplo
 import {useAuth} from "@/hooks/useAuth";
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -48,6 +55,44 @@ const talentSchema = z && z.object({;
     fullName: z && z.string().min(2, "Name must be at least 2 characters");
     professionalTitle: z && z.string().min(2, "Professional title is required");
     profilePicture: z && z.any().optional()}),;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useNavigate } from "react-router-dom",
+import { 
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { 
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
+} from "@/components/ui/select",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { 
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft;
+  Trash2, Plus, CheckCircle2
+} from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
+=======
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
+import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Define the form schema with validation
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   // Step 2: Experience;
   experience: z && z.object({;
@@ -174,6 +219,7 @@ type TalentFormValues = z.infer<typeof talentSchema>,
       .upload(fileName, file),
       
 
+<<<<<<< HEAD
 
     if (cvError) {
       console.error("Error uploading CV:", cvError);
@@ -185,9 +231,19 @@ type TalentFormValues = z.infer<typeof talentSchema>,
   const totalSteps = 4;
 
 =======
+  // Rest of the file remains unchanged...
+  // [Previous implementation continues...]
+  return null
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
@@ -465,9 +521,19 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
+<<<<<<< HEAD
 
 
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

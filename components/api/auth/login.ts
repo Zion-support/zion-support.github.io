@@ -1,6 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
+=======
+import {
+<<<<<<< HEAD
+  createSessionCookie
+  validateCredentials;
+=======
+  createSessionCookie,;
+  validateCredentials,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });

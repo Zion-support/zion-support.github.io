@@ -128,6 +128,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ogImage = '/og-image.jpg';
@@ -154,6 +155,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon && favicon.ico" />;
+=======
+<<<<<<< HEAD
+
+        {keywords && <meta name="keywords" content={keywords} />}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
@@ -170,6 +180,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <meta name="twitter:title" content={title} />;
         <meta name="twitter:description" content={description} />;
         {image && <meta name="twitter:image" content={image} />}
+<<<<<<< HEAD
       </Head>;
 
         <Header />;
@@ -180,6 +191,27 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
       </div>;
     </>;
 
+=======
+      </Head>
+<<<<<<< HEAD
+      
+
+      <div className="min-h-screen bg-gray-50">
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
+<<<<<<< HEAD
+    </>
+
+=======
+</>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   );
 
 export default MainLayout;
