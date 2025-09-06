@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
       }
     });
   } catch (error) {
+    void error; // Suppress unused parameter warning
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
       { status: 500 }

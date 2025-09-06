@@ -1,43 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
   X,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Mail,
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Target,
-  DollarSign,
-  BookOpen,
-  Calendar,
-  FileText,
-  Award,
-  Globe,
-  Search,
 } from 'lucide-react';
 
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navigationItems = [
     { name: 'Home', href: '/' },

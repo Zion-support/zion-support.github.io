@@ -4,10 +4,13 @@ export const supabase = {
     signOut: () => Promise.resolve({ error: null }),
     getUser: () => Promise.resolve({ data: { user: null }, error: null })
   },
-  from: (table: string) => ({
-    select: () => Promise.resolve({ data: [], error: null }),
-    insert: () => Promise.resolve({ data: null, error: null }),
-    update: () => Promise.resolve({ data: null, error: null }),
-    delete: () => Promise.resolve({ data: null, error: null })
-  })
+  from: (table: string) => {
+    void table; // Suppress unused parameter warning
+    return {
+      select: () => Promise.resolve({ data: [], error: null }),
+      insert: () => Promise.resolve({ data: null, error: null }),
+      update: () => Promise.resolve({ data: null, error: null }),
+      delete: () => Promise.resolve({ data: null, error: null })
+    };
+  }
 };
