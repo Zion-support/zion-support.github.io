@@ -159,6 +159,139 @@ export default function MicroSaaSPage() {
             price="$1,199/month"
             icon="💾"
           />
+          <MicroSaaSCard
+            title="AI-Powered SEO Suite"
+            description="Complete SEO automation with AI keyword research, content optimization, and ranking tracking"
+            features={["AI keyword research", "Content optimization", "Ranking tracking", "Competitor analysis", "Technical SEO audit", "Link building automation"]}
+            price="$1,899/month"
+            icon="🔍"
+          />
+          <MicroSaaSCard
+            title="Smart Invoice & Billing Platform"
+            description="Automated invoicing with AI-powered payment reminders, expense tracking, and financial reporting"
+            features={["Auto invoicing", "Payment reminders", "Expense tracking", "Tax calculations", "Financial reports", "Multi-currency support"]}
+            price="$1,399/month"
+            icon="🧾"
+          />
+          <MicroSaaSCard
+            title="AI Customer Onboarding Automation"
+            description="Intelligent customer onboarding with personalized journeys and automated follow-ups"
+            features={["Personalized journeys", "Progress tracking", "Auto follow-ups", "Success metrics", "A/B testing", "Integration APIs"]}
+            price="$1,599/month"
+            icon="🚀"
+          />
+          <MicroSaaSCard
+            title="Smart Time Tracking & Productivity"
+            description="AI-powered time tracking with productivity insights and automated reporting"
+            features={["Auto time tracking", "Productivity insights", "Project billing", "Team analytics", "Distraction blocking", "Goal tracking"]}
+            price="$1,299/month"
+            icon="⏰"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Survey & Feedback Platform"
+            description="Intelligent survey creation with AI analysis and actionable insights"
+            features={["AI survey creation", "Sentiment analysis", "Response analytics", "Action recommendations", "Integration APIs", "Custom dashboards"]}
+            price="$1,199/month"
+            icon="📝"
+          />
+          <MicroSaaSCard
+            title="Smart Password & Security Manager"
+            description="Enterprise-grade password management with AI security monitoring and breach detection"
+            features={["Password generation", "Security monitoring", "Breach detection", "Team sharing", "Compliance reporting", "SSO integration"]}
+            price="$999/month"
+            icon="🔐"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Translation Platform"
+            description="Real-time translation with AI context understanding and cultural adaptation"
+            features={["Real-time translation", "Context understanding", "Cultural adaptation", "Document translation", "API integration", "Quality scoring"]}
+            price="$1,499/month"
+            icon="🌍"
+          />
+          <MicroSaaSCard
+            title="Smart Appointment Booking System"
+            description="AI-powered scheduling with conflict resolution and customer preference learning"
+            features={["Smart scheduling", "Conflict resolution", "Preference learning", "Calendar sync", "Reminder automation", "Payment integration"]}
+            price="$899/month"
+            icon="📅"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Video Analytics"
+            description="Video content analysis with AI insights, engagement tracking, and optimization recommendations"
+            features={["Content analysis", "Engagement tracking", "Optimization tips", "Thumbnail generation", "Trend analysis", "Performance metrics"]}
+            price="$2,199/month"
+            icon="🎥"
+          />
+          <MicroSaaSCard
+            title="Smart Inventory Forecasting"
+            description="AI-driven demand prediction with automated reordering and supplier management"
+            features={["Demand forecasting", "Auto reordering", "Supplier management", "Cost optimization", "Seasonal analysis", "Multi-location sync"]}
+            price="$1,799/month"
+            icon="📦"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Email Signature Manager"
+            description="Dynamic email signatures with AI personalization and compliance management"
+            features={["Dynamic signatures", "AI personalization", "Compliance tracking", "Brand consistency", "Team management", "Analytics dashboard"]}
+            price="$599/month"
+            icon="✍️"
+          />
+          <MicroSaaSCard
+            title="Smart Meeting Transcription & Notes"
+            description="AI-powered meeting transcription with action item extraction and follow-up automation"
+            features={["Live transcription", "Action extraction", "Follow-up automation", "Meeting summaries", "Search functionality", "Integration APIs"]}
+            price="$1,399/month"
+            icon="🎤"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Lead Scoring Platform"
+            description="Intelligent lead qualification with behavioral analysis and conversion prediction"
+            features={["Behavioral analysis", "Conversion prediction", "Lead scoring", "CRM integration", "A/B testing", "Performance analytics"]}
+            price="$1,699/month"
+            icon="🎯"
+          />
+          <MicroSaaSCard
+            title="Smart Contract Template Generator"
+            description="AI-powered contract creation with legal compliance and risk assessment"
+            features={["Template generation", "Legal compliance", "Risk assessment", "Version control", "Digital signatures", "Approval workflows"]}
+            price="$1,999/month"
+            icon="📋"
+          />
+          <MicroSaaSCard
+            title="AI-Powered A/B Testing Platform"
+            description="Intelligent experimentation with AI-powered test design and statistical analysis"
+            features={["Test design", "Statistical analysis", "Winner selection", "Segmentation", "Multivariate testing", "Performance tracking"]}
+            price="$1,499/month"
+            icon="🧪"
+          />
+          <MicroSaaSCard
+            title="Smart Employee Scheduling"
+            description="AI-powered workforce management with shift optimization and compliance tracking"
+            features={["Shift optimization", "Compliance tracking", "Employee preferences", "Overtime management", "Skills matching", "Mobile app"]}
+            price="$1,799/month"
+            icon="👥"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Price Optimization"
+            description="Dynamic pricing with AI market analysis and competitor monitoring"
+            features={["Market analysis", "Competitor monitoring", "Price optimization", "Demand forecasting", "A/B testing", "Revenue tracking"]}
+            price="$2,499/month"
+            icon="💰"
+          />
+          <MicroSaaSCard
+            title="Smart Document Collaboration"
+            description="AI-powered document editing with real-time collaboration and version control"
+            features={["Real-time editing", "Version control", "AI suggestions", "Comment system", "Approval workflows", "Integration APIs"]}
+            price="$1,299/month"
+            icon="📄"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Customer Churn Prediction"
+            description="Predictive analytics for customer retention with automated intervention strategies"
+            features={["Churn prediction", "Risk scoring", "Intervention strategies", "Retention campaigns", "Success tracking", "ROI analysis"]}
+            price="$1,899/month"
+            icon="📉"
+          />
         </div>
       </section>
 

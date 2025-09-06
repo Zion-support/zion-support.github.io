@@ -61,6 +61,139 @@ export default function BlockchainSolutionsPage() {
             price="$30k–$120k"
             icon="🔗"
           />
+          <BlockchainServiceCard
+            title="DAO Development & Governance"
+            description="Decentralized autonomous organization platforms with governance mechanisms"
+            features={["Governance token design", "Voting mechanisms", "Treasury management", "Proposal systems", "Member management", "Transparency tools"]}
+            price="$20k–$80k"
+            icon="🗳️"
+          />
+          <BlockchainServiceCard
+            title="Metaverse & Virtual Worlds"
+            description="Blockchain-powered virtual worlds and metaverse platforms"
+            features={["Virtual land NFTs", "Avatar systems", "In-world economies", "Social features", "Gaming mechanics", "VR/AR integration"]}
+            price="$40k–$150k"
+            icon="🌍"
+          />
+          <BlockchainServiceCard
+            title="Blockchain Gaming & Play-to-Earn"
+            description="Gaming platforms with blockchain integration and tokenized rewards"
+            features={["Game development", "NFT integration", "Token economics", "Marketplace features", "Guild systems", "Tournament management"]}
+            price="$30k–$120k"
+            icon="🎮"
+          />
+          <BlockchainServiceCard
+            title="Supply Chain & Traceability"
+            description="Blockchain solutions for supply chain transparency and product traceability"
+            features={["Product tracking", "Quality verification", "Authenticity proof", "Compliance reporting", "Stakeholder management", "IoT integration"]}
+            price="$25k–$90k"
+            icon="📦"
+          />
+          <BlockchainServiceCard
+            title="Identity & KYC Solutions"
+            description="Decentralized identity management and KYC/AML compliance systems"
+            features={["Digital identity", "KYC verification", "Privacy protection", "Compliance reporting", "Cross-platform integration", "Biometric authentication"]}
+            price="$20k–$70k"
+            icon="🆔"
+          />
+          <BlockchainServiceCard
+            title="Real Estate Tokenization"
+            description="Property tokenization and fractional ownership platforms"
+            features={["Property tokenization", "Fractional ownership", "Rental income distribution", "Property management", "Legal compliance", "Marketplace integration"]}
+            price="$35k–$100k"
+            icon="🏠"
+          />
+          <BlockchainServiceCard
+            title="Carbon Credit & ESG Trading"
+            description="Blockchain platforms for carbon credit trading and ESG compliance"
+            features={["Carbon credit tokenization", "ESG reporting", "Trading mechanisms", "Verification systems", "Compliance tracking", "Impact measurement"]}
+            price="$30k–$80k"
+            icon="🌱"
+          />
+          <BlockchainServiceCard
+            title="Insurance & Risk Management"
+            description="Decentralized insurance protocols and risk management solutions"
+            features={["Smart insurance contracts", "Risk assessment", "Claims processing", "Payout automation", "Reinsurance protocols", "Parametric insurance"]}
+            price="$25k–$90k"
+            icon="🛡️"
+          />
+          <BlockchainServiceCard
+            title="Healthcare Data Management"
+            description="Secure healthcare data sharing and patient record management"
+            features={["Patient data privacy", "Interoperability", "Consent management", "Data sharing protocols", "Compliance frameworks", "AI integration"]}
+            price="$40k–$120k"
+            icon="🏥"
+          />
+          <BlockchainServiceCard
+            title="Energy Trading & Grid Management"
+            description="Peer-to-peer energy trading and smart grid management systems"
+            features={["Energy tokenization", "P2P trading", "Smart contracts", "Grid optimization", "Renewable energy tracking", "Billing automation"]}
+            price="$35k–$100k"
+            icon="⚡"
+          />
+          <BlockchainServiceCard
+            title="Voting & Governance Systems"
+            description="Secure and transparent voting systems for organizations and governments"
+            features={["Secure voting", "Identity verification", "Result transparency", "Audit trails", "Multi-level governance", "Mobile integration"]}
+            price="$20k–$60k"
+            icon="🗳️"
+          />
+          <BlockchainServiceCard
+            title="Intellectual Property & Patents"
+            description="IP protection and patent management on blockchain"
+            features={["IP registration", "Patent tracking", "Royalty distribution", "Dispute resolution", "Licensing management", "Prior art verification"]}
+            price="$25k–$70k"
+            icon="💡"
+          />
+          <BlockchainServiceCard
+            title="Gaming Assets & Marketplaces"
+            description="Cross-game asset trading and gaming NFT marketplaces"
+            features={["Asset interoperability", "Cross-game trading", "Rarity systems", "Marketplace features", "Guild management", "Tournament rewards"]}
+            price="$20k–$80k"
+            icon="🎯"
+          />
+          <BlockchainServiceCard
+            title="Decentralized Storage Solutions"
+            description="Distributed storage networks and file sharing protocols"
+            features={["Distributed storage", "File encryption", "Access control", "Redundancy management", "Cost optimization", "API integration"]}
+            price="$15k–$50k"
+            icon="💾"
+          />
+          <BlockchainServiceCard
+            title="Prediction Markets & Oracles"
+            description="Decentralized prediction markets and oracle data feeds"
+            features={["Market creation", "Oracle integration", "Liquidity management", "Dispute resolution", "Data verification", "API services"]}
+            price="$25k–$80k"
+            icon="🔮"
+          />
+          <BlockchainServiceCard
+            title="Social Media & Content Platforms"
+            description="Decentralized social media and content monetization platforms"
+            features={["Content monetization", "Creator rewards", "Community governance", "Censorship resistance", "Data ownership", "Token economics"]}
+            price="$30k–$100k"
+            icon="📱"
+          />
+          <BlockchainServiceCard
+            title="Lending & Borrowing Protocols"
+            description="Decentralized lending platforms with automated risk management"
+            features={["Collateral management", "Interest rate algorithms", "Liquidation mechanisms", "Risk assessment", "Governance tokens", "Multi-asset support"]}
+            price="$25k–$90k"
+            icon="💰"
+          />
+          <BlockchainServiceCard
+            title="Stablecoin Development"
+            description="Custom stablecoin creation with price stability mechanisms"
+            features={["Price stability", "Collateral management", "Governance systems", "Audit compliance", "Multi-chain deployment", "Integration APIs"]}
+            price="$20k–$60k"
+            icon="💎"
+          />
+          <BlockchainServiceCard
+            title="Blockchain Analytics & Monitoring"
+            description="Comprehensive blockchain data analysis and monitoring tools"
+            features={["Transaction analysis", "Address tracking", "Risk scoring", "Compliance monitoring", "Real-time alerts", "Custom dashboards"]}
+            price="$15k–$50k"
+            icon="📊"
+          />
         </div>
       </section>
 

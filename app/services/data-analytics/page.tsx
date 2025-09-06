@@ -61,6 +61,132 @@ export default function DataAnalyticsPage() {
             price="$22k–$80k"
             icon="⚡"
           />
+          <DataServiceCard
+            title="Marketing Analytics"
+            description="Comprehensive marketing data analysis and campaign optimization"
+            features={["Campaign performance", "Attribution modeling", "Customer journey analysis", "ROI measurement", "A/B testing", "Conversion optimization"]}
+            price="$18k–$60k"
+            icon="📢"
+          />
+          <DataServiceCard
+            title="Supply Chain Analytics"
+            description="Supply chain optimization and logistics data analysis"
+            features={["Demand forecasting", "Inventory optimization", "Supplier performance", "Cost analysis", "Risk assessment", "Route optimization"]}
+            price="$20k–$70k"
+            icon="🚚"
+          />
+          <DataServiceCard
+            title="HR Analytics & People Intelligence"
+            description="Human resources data analysis and workforce insights"
+            features={["Employee performance", "Retention analysis", "Recruitment metrics", "Skills gap analysis", "Engagement tracking", "Predictive HR"]}
+            price="$16k–$55k"
+            icon="👥"
+          />
+          <DataServiceCard
+            title="Web & Digital Analytics"
+            description="Website and digital platform performance analysis"
+            features={["User behavior tracking", "Conversion funnel analysis", "SEO performance", "Content analytics", "Mobile analytics", "E-commerce tracking"]}
+            price="$12k–$40k"
+            icon="🌐"
+          />
+          <DataServiceCard
+            title="IoT & Sensor Analytics"
+            description="Internet of Things data analysis and sensor monitoring"
+            features={["Sensor data processing", "Predictive maintenance", "Anomaly detection", "Performance monitoring", "Alert systems", "Trend analysis"]}
+            price="$25k–$85k"
+            icon="📡"
+          />
+          <DataServiceCard
+            title="Social Media Analytics"
+            description="Social media data analysis and sentiment tracking"
+            features={["Sentiment analysis", "Engagement metrics", "Influencer tracking", "Brand monitoring", "Trend analysis", "Competitor analysis"]}
+            price="$15k–$50k"
+            icon="📱"
+          />
+          <DataServiceCard
+            title="Risk Analytics & Fraud Detection"
+            description="Advanced risk assessment and fraud detection systems"
+            features={["Risk scoring", "Fraud detection", "Anomaly detection", "Pattern recognition", "Alert systems", "Compliance monitoring"]}
+            price="$22k–$75k"
+            icon="🛡️"
+          />
+          <DataServiceCard
+            title="Sales Analytics & Forecasting"
+            description="Sales performance analysis and revenue forecasting"
+            features={["Sales forecasting", "Pipeline analysis", "Performance tracking", "Territory analysis", "Commission tracking", "Revenue optimization"]}
+            price="$18k–$65k"
+            icon="💼"
+          />
+          <DataServiceCard
+            title="Healthcare Analytics"
+            description="Medical data analysis and healthcare insights"
+            features={["Patient analytics", "Clinical outcomes", "Resource optimization", "Quality metrics", "Cost analysis", "Population health"]}
+            price="$30k–$100k"
+            icon="🏥"
+          />
+          <DataServiceCard
+            title="Manufacturing Analytics"
+            description="Production data analysis and manufacturing optimization"
+            features={["Production monitoring", "Quality control", "Equipment efficiency", "Predictive maintenance", "Cost optimization", "Yield analysis"]}
+            price="$25k–$80k"
+            icon="🏭"
+          />
+          <DataServiceCard
+            title="Energy & Utilities Analytics"
+            description="Energy consumption analysis and utility optimization"
+            features={["Energy consumption", "Cost optimization", "Demand forecasting", "Efficiency analysis", "Sustainability metrics", "Grid optimization"]}
+            price="$20k–$70k"
+            icon="⚡"
+          />
+          <DataServiceCard
+            title="Real Estate Analytics"
+            description="Property market analysis and investment insights"
+            features={["Market analysis", "Property valuation", "Investment analysis", "Rental analytics", "Market trends", "ROI calculation"]}
+            price="$18k–$60k"
+            icon="🏠"
+          />
+          <DataServiceCard
+            title="Retail Analytics"
+            description="Retail data analysis and customer insights"
+            features={["Sales analysis", "Inventory optimization", "Customer segmentation", "Store performance", "Product analytics", "Seasonal analysis"]}
+            price="$20k–$65k"
+            icon="🛒"
+          />
+          <DataServiceCard
+            title="Insurance Analytics"
+            description="Insurance data analysis and risk assessment"
+            features={["Risk assessment", "Claims analysis", "Pricing optimization", "Fraud detection", "Customer segmentation", "Underwriting analytics"]}
+            price="$22k–$75k"
+            icon="🛡️"
+          />
+          <DataServiceCard
+            title="Education Analytics"
+            description="Educational data analysis and learning insights"
+            features={["Student performance", "Learning analytics", "Course effectiveness", "Engagement tracking", "Outcome prediction", "Resource optimization"]}
+            price="$18k–$60k"
+            icon="🎓"
+          />
+          <DataServiceCard
+            title="Environmental Analytics"
+            description="Environmental data analysis and sustainability insights"
+            features={["Environmental monitoring", "Carbon footprint", "Sustainability metrics", "Compliance tracking", "Impact assessment", "Trend analysis"]}
+            price="$20k–$70k"
+            icon="🌱"
+          />
+          <DataServiceCard
+            title="Sports Analytics"
+            description="Sports performance analysis and team insights"
+            features={["Performance metrics", "Player analysis", "Team statistics", "Game analysis", "Injury prediction", "Strategy optimization"]}
+            price="$25k–$80k"
+            icon="⚽"
+          />
+          <DataServiceCard
+            title="Government & Public Sector Analytics"
+            description="Public sector data analysis and policy insights"
+            features={["Policy analysis", "Citizen services", "Resource allocation", "Performance metrics", "Compliance tracking", "Impact assessment"]}
+            price="$30k–$90k"
+            icon="🏛️"
+          />
         </div>
       </section>
 

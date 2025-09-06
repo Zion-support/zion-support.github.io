@@ -61,6 +61,146 @@ export default function AutomationSolutionsPage() {
             price="$20k–$70k"
             icon="💰"
           />
+          <AutomationServiceCard
+            title="HR & Payroll Automation"
+            description="Complete HR process automation including recruitment, onboarding, and payroll"
+            features={["Resume screening", "Interview scheduling", "Onboarding workflows", "Payroll processing", "Benefits management", "Performance tracking"]}
+            price="$18k–$60k"
+            icon="👥"
+          />
+          <AutomationServiceCard
+            title="Marketing Automation"
+            description="Intelligent marketing campaign automation and lead nurturing"
+            features={["Email campaigns", "Lead scoring", "Social media posting", "Content scheduling", "A/B testing", "Analytics tracking"]}
+            price="$15k–$50k"
+            icon="📢"
+          />
+          <AutomationServiceCard
+            title="Inventory Management Automation"
+            description="Automated inventory tracking, ordering, and supply chain management"
+            features={["Stock monitoring", "Auto reordering", "Supplier management", "Demand forecasting", "Quality control", "Cost optimization"]}
+            price="$20k–$65k"
+            icon="📦"
+          />
+          <AutomationServiceCard
+            title="Email & Communication Automation"
+            description="Intelligent email management and communication workflows"
+            features={["Email routing", "Response automation", "Template management", "Follow-up sequences", "Spam filtering", "Analytics tracking"]}
+            price="$12k–$40k"
+            icon="📧"
+          />
+          <AutomationServiceCard
+            title="Data Entry & Migration Automation"
+            description="Automated data entry, validation, and system migration"
+            features={["Data extraction", "Validation rules", "Format conversion", "Error handling", "Migration testing", "Data quality checks"]}
+            price="$15k–$45k"
+            icon="📊"
+          />
+          <AutomationServiceCard
+            title="Compliance & Audit Automation"
+            description="Automated compliance monitoring and audit preparation"
+            features={["Compliance checking", "Audit trail generation", "Report automation", "Policy enforcement", "Risk assessment", "Documentation management"]}
+            price="$18k–$55k"
+            icon="📋"
+          />
+          <AutomationServiceCard
+            title="Customer Onboarding Automation"
+            description="Streamlined customer onboarding with automated workflows"
+            features={["Application processing", "Document verification", "Account setup", "Welcome sequences", "Progress tracking", "Compliance checks"]}
+            price="$16k–$50k"
+            icon="🚀"
+          />
+          <AutomationServiceCard
+            title="Sales Process Automation"
+            description="End-to-end sales automation from lead to close"
+            features={["Lead qualification", "Follow-up automation", "Proposal generation", "Contract management", "Pipeline tracking", "Revenue forecasting"]}
+            price="$20k–$70k"
+            icon="💼"
+          />
+          <AutomationServiceCard
+            title="IT Operations Automation"
+            description="Automated IT operations and infrastructure management"
+            features={["Server monitoring", "Backup automation", "Patch management", "Incident response", "Performance optimization", "Security scanning"]}
+            price="$25k–$80k"
+            icon="⚙️"
+          />
+          <AutomationServiceCard
+            title="Quality Assurance Automation"
+            description="Automated testing and quality control processes"
+            features={["Test case generation", "Automated testing", "Bug tracking", "Performance monitoring", "Regression testing", "Quality reporting"]}
+            price="$18k–$60k"
+            icon="🔍"
+          />
+          <AutomationServiceCard
+            title="Expense Management Automation"
+            description="Automated expense tracking, approval, and reimbursement"
+            features={["Receipt processing", "Expense categorization", "Approval workflows", "Policy compliance", "Reimbursement processing", "Analytics reporting"]}
+            price="$12k–$40k"
+            icon="💳"
+          />
+          <AutomationServiceCard
+            title="Project Management Automation"
+            description="Automated project tracking and resource management"
+            features={["Task assignment", "Progress tracking", "Resource allocation", "Timeline management", "Risk monitoring", "Reporting automation"]}
+            price="$15k–$50k"
+            icon="📅"
+          />
+          <AutomationServiceCard
+            title="Customer Feedback Automation"
+            description="Automated feedback collection and analysis"
+            features={["Survey automation", "Response collection", "Sentiment analysis", "Action planning", "Follow-up automation", "Trend analysis"]}
+            price="$10k–$35k"
+            icon="💬"
+          />
+          <AutomationServiceCard
+            title="Supply Chain Automation"
+            description="End-to-end supply chain process automation"
+            features={["Order processing", "Vendor management", "Shipment tracking", "Quality control", "Compliance monitoring", "Cost optimization"]}
+            price="$25k–$75k"
+            icon="🚚"
+          />
+          <AutomationServiceCard
+            title="Legal Document Automation"
+            description="Automated legal document processing and management"
+            features={["Document generation", "Contract analysis", "Compliance checking", "Version control", "Approval workflows", "Archive management"]}
+            price="$20k–$65k"
+            icon="⚖️"
+          />
+          <AutomationServiceCard
+            title="Real Estate Process Automation"
+            description="Automated real estate workflows and property management"
+            features={["Property listing", "Lead management", "Document processing", "Inspection scheduling", "Contract management", "Commission tracking"]}
+            price="$18k–$55k"
+            icon="🏠"
+          />
+          <AutomationServiceCard
+            title="Healthcare Process Automation"
+            description="Medical process automation and patient management"
+            features={["Patient scheduling", "Appointment reminders", "Insurance verification", "Billing automation", "Compliance tracking", "Report generation"]}
+            price="$25k–$80k"
+            icon="🏥"
+          />
+          <AutomationServiceCard
+            title="Manufacturing Automation"
+            description="Production line and manufacturing process automation"
+            features={["Production scheduling", "Quality control", "Inventory management", "Equipment monitoring", "Maintenance scheduling", "Performance tracking"]}
+            price="$30k–$100k"
+            icon="🏭"
+          />
+          <AutomationServiceCard
+            title="Insurance Process Automation"
+            description="Automated insurance workflows and claims processing"
+            features={["Claims processing", "Policy management", "Risk assessment", "Underwriting automation", "Payment processing", "Compliance monitoring"]}
+            price="$22k–$70k"
+            icon="🛡️"
+          />
+          <AutomationServiceCard
+            title="Event Management Automation"
+            description="Automated event planning and management workflows"
+            features={["Event registration", "Attendee management", "Communication automation", "Resource planning", "Feedback collection", "Analytics reporting"]}
+            price="$15k–$45k"
+            icon="🎉"
+          />
         </div>
       </section>
 

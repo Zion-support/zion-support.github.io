@@ -117,6 +117,83 @@ export default function AIPage() {
             price="$20k–$55k"
             icon="👥"
           />
+          <AIServiceCard
+            title="AI Code Generation & Review"
+            description="Automated code generation, review, and optimization using advanced AI models"
+            features={["Code generation", "Automated testing", "Code review", "Bug detection", "Performance optimization", "Documentation generation"]}
+            price="$25k–$70k"
+            icon="💻"
+          />
+          <AIServiceCard
+            title="AI Marketing Automation"
+            description="Intelligent marketing campaigns with personalized content and automated optimization"
+            features={["Campaign optimization", "Content personalization", "A/B testing", "Lead scoring", "Email automation", "Social media management"]}
+            price="$18k–$50k"
+            icon="📢"
+          />
+          <AIServiceCard
+            title="AI Legal Document Analysis"
+            description="Automated legal document review, contract analysis, and compliance monitoring"
+            features={["Contract analysis", "Risk assessment", "Compliance checking", "Document summarization", "Legal research", "Due diligence"]}
+            price="$35k–$85k"
+            icon="⚖️"
+          />
+          <AIServiceCard
+            title="AI Real Estate Analytics"
+            description="Property valuation, market analysis, and investment insights using AI"
+            features={["Property valuation", "Market analysis", "Investment recommendations", "Risk assessment", "Price prediction", "Market trends"]}
+            price="$22k–$60k"
+            icon="🏠"
+          />
+          <AIServiceCard
+            title="AI Energy Management"
+            description="Smart energy optimization and consumption analysis for buildings and facilities"
+            features={["Energy optimization", "Consumption analysis", "Predictive maintenance", "Cost reduction", "Sustainability metrics", "Smart grid integration"]}
+            price="$30k–$75k"
+            icon="⚡"
+          />
+          <AIServiceCard
+            title="AI E-commerce Personalization"
+            description="Advanced product recommendations and personalized shopping experiences"
+            features={["Product recommendations", "Dynamic pricing", "Inventory optimization", "Customer journey mapping", "Cross-selling", "Retention strategies"]}
+            price="$20k–$55k"
+            icon="🛒"
+          />
+          <AIServiceCard
+            title="AI Quality Assurance"
+            description="Automated testing, quality control, and defect detection using computer vision and ML"
+            features={["Automated testing", "Defect detection", "Quality scoring", "Process monitoring", "Predictive maintenance", "Compliance checking"]}
+            price="$25k–$65k"
+            icon="🔍"
+          />
+          <AIServiceCard
+            title="AI Talent Acquisition"
+            description="Intelligent recruitment, candidate screening, and HR analytics"
+            features={["Resume screening", "Candidate matching", "Interview scheduling", "Skills assessment", "Diversity analytics", "Retention prediction"]}
+            price="$28k–$70k"
+            icon="👔"
+          />
+          <AIServiceCard
+            title="AI Environmental Monitoring"
+            description="Environmental data analysis, pollution detection, and sustainability reporting"
+            features={["Air quality monitoring", "Water quality analysis", "Waste management", "Carbon footprint tracking", "Sustainability reporting", "Compliance monitoring"]}
+            price="$35k–$80k"
+            icon="🌱"
+          />
+          <AIServiceCard
+            title="AI Sports Analytics"
+            description="Performance analysis, injury prediction, and strategic insights for sports teams"
+            features={["Performance analysis", "Injury prediction", "Tactical insights", "Player scouting", "Fan engagement", "Revenue optimization"]}
+            price="$40k–$100k"
+            icon="⚽"
+          />
+          <AIServiceCard
+            title="AI Insurance Risk Assessment"
+            description="Automated risk evaluation, fraud detection, and claims processing"
+            features={["Risk assessment", "Fraud detection", "Claims automation", "Underwriting support", "Customer profiling", "Pricing optimization"]}
+            price="$45k–$110k"
+            icon="🛡️"
+          />
         </div>
       </section>
 

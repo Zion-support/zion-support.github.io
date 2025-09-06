@@ -103,6 +103,139 @@ export default function ITServicesPage() {
             price="$20k–$60k"
             icon="🔄"
           />
+          <ITServiceCard
+            title="IT Consulting & Strategy"
+            description="Strategic IT planning and digital transformation consulting"
+            features={["Technology roadmap", "Digital transformation", "IT governance", "Vendor evaluation", "Budget planning", "Risk assessment"]}
+            price="$8k–$25k"
+            icon="💡"
+          />
+          <ITServiceCard
+            title="Cloud Security & Compliance"
+            description="Advanced cloud security implementation and compliance management"
+            features={["Cloud security architecture", "Compliance frameworks", "Identity management", "Data encryption", "Audit preparation", "Security monitoring"]}
+            price="$15k–$45k"
+            icon="🔐"
+          />
+          <ITServiceCard
+            title="Application Performance Monitoring"
+            description="Comprehensive APM solutions with real-time monitoring and optimization"
+            features={["Real-time monitoring", "Performance analytics", "Error tracking", "User experience monitoring", "Alerting systems", "Performance optimization"]}
+            price="$10k–$30k"
+            icon="📈"
+          />
+          <ITServiceCard
+            title="IT Asset Management"
+            description="Complete IT asset lifecycle management and optimization"
+            features={["Asset inventory", "License management", "Lifecycle tracking", "Cost optimization", "Compliance reporting", "Automated discovery"]}
+            price="$12k–$35k"
+            icon="📋"
+          />
+          <ITServiceCard
+            title="Cloud Cost Management"
+            description="Intelligent cloud spending optimization and budget management"
+            features={["Cost analysis", "Budget forecasting", "Resource optimization", "Reserved instances", "Auto-scaling", "Cost alerts"]}
+            price="$8k–$25k"
+            icon="💰"
+          />
+          <ITServiceCard
+            title="IT Support & Help Desk"
+            description="24/7 IT support and help desk services for your organization"
+            features={["24/7 support", "Remote assistance", "Ticket management", "Knowledge base", "User training", "SLA management"]}
+            price="$3k–$15k/mo"
+            icon="🎧"
+          />
+          <ITServiceCard
+            title="Data Backup & Recovery"
+            description="Comprehensive data protection and recovery solutions"
+            features={["Automated backups", "Point-in-time recovery", "Cross-region replication", "Backup testing", "Recovery planning", "Compliance reporting"]}
+            price="$10k–$30k"
+            icon="💾"
+          />
+          <ITServiceCard
+            title="IT Training & Documentation"
+            description="Comprehensive IT training programs and technical documentation"
+            features={["Technical training", "Process documentation", "User manuals", "Video tutorials", "Certification programs", "Knowledge transfer"]}
+            price="$5k–$20k"
+            icon="📚"
+          />
+          <ITServiceCard
+            title="Mobile Device Management"
+            description="Enterprise mobile device security and management solutions"
+            features={["Device enrollment", "Policy enforcement", "App management", "Security controls", "Remote wipe", "Compliance monitoring"]}
+            price="$8k–$25k"
+            icon="📱"
+          />
+          <ITServiceCard
+            title="IT Governance & Risk Management"
+            description="IT governance framework and risk management implementation"
+            features={["Governance framework", "Risk assessment", "Policy development", "Compliance monitoring", "Audit support", "Risk mitigation"]}
+            price="$15k–$40k"
+            icon="⚖️"
+          />
+          <ITServiceCard
+            title="Cloud Migration Services"
+            description="Complete cloud migration planning and execution services"
+            features={["Migration planning", "Data migration", "Application migration", "Testing & validation", "Go-live support", "Post-migration optimization"]}
+            price="$20k–$80k"
+            icon="🚀"
+          />
+          <ITServiceCard
+            title="IT Infrastructure Monitoring"
+            description="Comprehensive infrastructure monitoring and alerting solutions"
+            features={["Server monitoring", "Network monitoring", "Application monitoring", "Log analysis", "Alerting systems", "Performance dashboards"]}
+            price="$8k–$25k"
+            icon="📊"
+          />
+          <ITServiceCard
+            title="IT Security Assessment"
+            description="Comprehensive security assessment and penetration testing"
+            features={["Vulnerability scanning", "Penetration testing", "Security audit", "Compliance assessment", "Risk analysis", "Remediation planning"]}
+            price="$10k–$35k"
+            icon="🔍"
+          />
+          <ITServiceCard
+            title="IT Project Management"
+            description="Professional IT project management and delivery services"
+            features={["Project planning", "Resource management", "Timeline management", "Risk management", "Quality assurance", "Stakeholder communication"]}
+            price="$12k–$40k"
+            icon="📅"
+          />
+          <ITServiceCard
+            title="Cloud Architecture Design"
+            description="Custom cloud architecture design and implementation"
+            features={["Architecture design", "Scalability planning", "Security design", "Cost optimization", "Performance tuning", "Documentation"]}
+            price="$15k–$50k"
+            icon="🏗️"
+          />
+          <ITServiceCard
+            title="IT Compliance & Auditing"
+            description="Compliance management and audit preparation services"
+            features={["Compliance assessment", "Audit preparation", "Policy development", "Control implementation", "Documentation", "Training"]}
+            price="$12k–$35k"
+            icon="📋"
+          />
+          <ITServiceCard
+            title="IT Vendor Management"
+            description="IT vendor evaluation, selection, and relationship management"
+            features={["Vendor evaluation", "Contract negotiation", "Performance monitoring", "Cost optimization", "Relationship management", "Risk assessment"]}
+            price="$8k–$25k"
+            icon="🤝"
+          />
+          <ITServiceCard
+            title="IT Change Management"
+            description="IT change management and release management services"
+            features={["Change planning", "Impact analysis", "Risk assessment", "Testing coordination", "Deployment management", "Rollback planning"]}
+            price="$10k–$30k"
+            icon="🔄"
+          />
+          <ITServiceCard
+            title="IT Capacity Planning"
+            description="IT capacity planning and resource optimization services"
+            features={["Capacity analysis", "Growth planning", "Resource optimization", "Performance modeling", "Cost forecasting", "Scaling strategies"]}
+            price="$8k–$25k"
+            icon="📈"
+          />
         </div>
       </section>
 

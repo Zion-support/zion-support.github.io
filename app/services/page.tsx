@@ -93,10 +93,10 @@ export default function ServicesOverviewPage() {
   );
 }
 function ServiceCard({
-  href
-  title
-  description
-  bullets
+  href,
+  title,
+  description,
+  bullets,
   icon
 }: {
   href: string;
