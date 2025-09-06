@@ -1,22 +1,27 @@
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth'
-import { useGetOrdersQuery } from '@/hooks/useOrders'
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
+TableRow,;
+=======
   TableRow,
-} from '@/components/ui/table'
-import { Badge } from '@/components/ui/badge'
-import Skeleton from '@/components/ui/skeleton'
-import { EmptyState } from '@/components/ui/empty-state'
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { EmptyState } from '@/components/ui/empty-state';
 export default function OrdersPage() {
-  const { user } = useAuth()
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id)
-  const formatDate = (date: string) => new Date(date).toLocaleDateString()
+  const { user } = useAuth();
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
   const getStatusBadge = (status: string,) => {
     switch (status) {
       case 'in_escrow':
@@ -24,14 +29,14 @@ export default function OrdersPage() {
           <Badge variant='warning' className='flex items-center gap-1'>
             <Clock className='h-3 w-3' /> In Escrow
           </Badge>
-        )
+        );
       case 'released':
       case 'completed':
         return (
           <Badge variant='success' className='flex items-center gap-1'>
             <CheckCircle2 className='h-3 w-3' /> Released
           </Badge>
-        )
+        );
       case 'disputed':
         return (
           <Badge variant='destructive' className='flex items-center gap-1'>
@@ -39,9 +44,10 @@ export default function OrdersPage() {
           </Badge>
         ),
       default:
-        return status
+        return status;
     }
-  }
+  };
+
   return (
     <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
@@ -114,6 +120,6 @@ export default function OrdersPage() {
         </Table>
       )}
     </div>
-  )
+  );
 }
 ;
