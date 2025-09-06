@@ -1,14 +1,22 @@
+<<<<<<< HEAD
+import { useEffect, useMemo, useState } from 'react';
+import { translateTextViaAI } from '../utils / translation';
+=======
 
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils / translation';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
   loading: boolean;
   error?: string;
 }
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 export type UseAutoTranslateResult = {
@@ -16,8 +24,35 @@ export type UseAutoTranslateResult = {
   loading: boolean,
   error?: string
 };
-
 export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
+<<<<<<< HEAD
+  const [translations, setTranslations] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | undefined>(undefined);
+  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
+  useEffect(() => {
+    if (!text || targets && targets.length === 0) {
+      setTranslations({});
+      return
+;
+export function useAutoTranslate (
+  text: string,
+  targets: string[],
+  debounce_ms = 600): UseAutoTranslateResult {  const [translations, set_translations] = useState < Record < string, string>>({});export function useAutoTranslate (text: string, targets: string[], debounce_ms = 600): UseAutoTranslateResult {
+  const [translations, set_translations] = useState < Record < string, string>>({});
+  const [loading, set_loading] = useState (false);
+  const [error, set_error] = useState < string | undefined>(undefined);
+;
+  const key = useMemo (() => JSON.stringify ({ text, targets }), [text, targets]);
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_translations ({});
+      return;    }      return;
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [translations, setTranslations] = useState<Record<string, string>>({});
@@ -26,7 +61,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 
 
   const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
-
   useEffect(() => {
     if (!text || targets && targets.length === 0) {
 
@@ -34,13 +68,20 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     let cancelled = false;
     const timer = set_timeout (async () => {
       try {
+<<<<<<< HEAD
+        if (!cancelled) setTranslations(res)
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message || 'Translation failed')
+=======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         set_loading (true);
         set_error (undefined);
         const res = await translateTextViaAI (text, targets);
@@ -58,12 +99,19 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
         if (set_error (e?.message || 'Translation failed')) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         if (set_loading (false)) {
   $2
 }
       }
+<<<<<<< HEAD
+      clearTimeout(timer)
+    }, debounce_ms);
+;
+    return () => {
+      cancelled = true;
+      clear_timeout (timer);
+=======
 
 
     }
@@ -74,9 +122,14 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 }
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }, [key, debounce_ms]);
 ;
   return { translations, loading, error }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }
+  }, [key, debounce_ms]);
+;
+  return { translations, loading, error }
+}

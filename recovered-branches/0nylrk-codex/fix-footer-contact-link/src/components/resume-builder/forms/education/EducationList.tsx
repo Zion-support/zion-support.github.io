@@ -1,16 +1,32 @@
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 
 
+<<<<<<< HEAD
+
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import { Education  } from '@/types/resume';
+import { EducationItem } from './EducationItem';
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
 interface EducationListProps {;
@@ -19,8 +35,11 @@ interface EducationListProps {;
   onDelete: (id: string) => void;
 
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export function EducationList({
   educationEntries
@@ -28,6 +47,8 @@ export function EducationList({
   onDelete
 }: EducationListProps) {
   if (!educationEntries |educationEntries.length === 0) {
+<<<<<<< HEAD
+=======
 =======
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
@@ -43,12 +64,14 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
     return null;
   }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 
   return (
 
+  return (
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Education</h3>;
       {educationEntries && educationEntries.map((edu) => (;
@@ -62,8 +85,6 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
     </div>;
   );
 }
-
-=======
 import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
 interface EducationListProps {
@@ -88,16 +109,98 @@ if ( {) {
         <EducationItem;
           key={edu.id}
           education={edu}
+
+import { Education } from "@/types/resume";
+import { EducationItem } from "./EducationItem";
+interface EducationListProps {
+  educationEntries: Education[];
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+}
+
+export function EducationList({
+  educationEntries,
+  onEdit,
+  onDelete,
+}: EducationListProps) {
+  if (!educationEntries || educationEntries.length === 0) {
+
+    return null;
+  }
+
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Education</h3>
+      {educationEntries.map((edu) => (
+        <EducationItem
+          key={edu.id}
+          education={edu}
+          onEdit={onEdit}
+          onDelete={onDelete}
+        />
+      ))}
+    </div>
           on_edit={on_edit}
           on_delete={on_delete}
         />))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
+<<<<<<< HEAD
+
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+;
+interface EducationListProps {;
+  educationEntries:Education[],;
+  onEdit:(education:Education) => void,;
+  onDelete:(id:string) => void;
+}
+;
+export function EducationList({ educationEntries, onEdit, onDelete } EducationListProps) {;
+  if (!educationEntries || educationEntries.length === 0) {;
+    return null,;
+  }
+;
+  return (;
+    <div className="space-y-4">;
+      <h3 className="text-md font-medium">Added Education</h3>;
+      {educationEntries.map((edu) => (;
+        <EducationItem ;
+          key={edu.id} ;
+          education={edu} ;
+          onEdit={onEdit} ;
+          onDelete={onDelete} ;
+        />;
+      ))}
+    </div>;
+  ),;}
+ <EducationItem key= {
+  edu.id 
+}education= {
+  edu 
+}onEdit= {
+  onEdit 
+}onDelete= {
+  onDelete 
+}/>) ) 
+}</div>) 
+}
+  );
+}
+}
+;
+
+  );
+}
+  )
+}
+;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

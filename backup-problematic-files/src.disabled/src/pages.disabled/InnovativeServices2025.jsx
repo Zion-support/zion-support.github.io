@@ -9,4 +9,8 @@ const InnovativeServices2025 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default InnovativeServices2025;
+=======
+export default InnovativeServices2025;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

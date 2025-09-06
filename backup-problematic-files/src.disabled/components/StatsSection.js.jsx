@@ -9,4 +9,8 @@ const StatsSection.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default StatsSection.js;
+=======
+export default StatsSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const Alert-dialog = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Alert-dialog;
+=======
+export default Alert-dialog;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIAutonomousRiskManagement = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousRiskManagement;
+=======
+export default AIAutonomousRiskManagement;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

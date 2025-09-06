@@ -9,4 +9,8 @@ const AICodeGenerationEnterprise = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AICodeGenerationEnterprise;
+=======
+export default AICodeGenerationEnterprise;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

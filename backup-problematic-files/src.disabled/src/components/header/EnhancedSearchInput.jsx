@@ -9,4 +9,8 @@ const EnhancedSearchInput = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedSearchInput;
+=======
+export default EnhancedSearchInput;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

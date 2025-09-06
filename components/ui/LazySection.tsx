@@ -4,7 +4,6 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-
 interface LazySectionProps {
   children: React.ReactNode,
   className?: string;
@@ -12,25 +11,46 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
-
 export const LazySection: React.FC<LazySectionProps> = ({
   children;
   className = '';
   threshold = 0.1;
   delay = 0;
 
+<<<<<<< HEAD
+ const getInitialPosition = () => {
+  switch (direction) {
+  case 'up': 
+
+const getInitialPosition = () => {
+const getInitialPosition = () => {
+ const getInitialPosition = () => {
+  switch (direction) {
+  case 'up':
+export const LazySection: React.FC<LazySectionProps> = ({
+  children
+  className = ''
+  threshold = 0.1
+  delay = 0
+  direction = 'up'
+}) => {
+=======
   direction = 'up'
 }) => {
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   children,
   className = '',
   threshold = 0.1,
   delay = 0,
   direction = 'up',
 }) => {;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -43,15 +63,26 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
+<<<<<<< HEAD
+        return { opacity: 0, y: 50 }
+=======
 
         return { opacity: 0, y: 50 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
+<<<<<<< HEAD
+
+  const _getInitialPosition = () => {_switch (direction) {
+
+      case 'up':
+=======
       case 'up':
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return { opacity: 1, y: 0 },
       case 'down':
         return { opacity: 1, y: 0 },
@@ -63,28 +94,27 @@ export const LazySection: React.FC<LazySectionProps> = ({
       default:
         return { opacity: 1, y: 0 }
     }
-  }
-    >
+<<<<<<< HEAD
+}
 =======
+  }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    >
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -92,7 +122,6 @@ import React from 'react';
  const getInitialPosition = () => {;
   switch (direction) {;
   case 'up': ;
-
 export const LazySection: React.FC<LazySectionProps> = ({;
   children,;
   className = '',;
@@ -102,7 +131,6 @@ export const LazySection: React.FC<LazySectionProps> = ({;
 }) => {;
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
-
   const getInitialPosition = () => {;
     switch (direction) {;
       case 'up':;
@@ -116,7 +144,10 @@ export const LazySection: React.FC<LazySectionProps> = ({;
         return { opacity: 0, y: 50 };    }        return { opacity: 0, y: 50 }
     }
   };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const getAnimatePosition = () => {;
     switch (direction) {;
       case 'up':;
@@ -131,16 +162,15 @@ export const LazySection: React.FC<LazySectionProps> = ({;
         return { opacity: 1, y: 0 };
     }
   };
-
-
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {children}
     </motion && motion.div>;
   );
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
-
 export default LazySection;      case 'down':;
         return { opacity: 1, y: 0 },;
       case 'left':;
@@ -148,10 +178,18 @@ export default LazySection;      case 'down':;
       case 'right':;
         return { opacity: 1, x: 0 },;
       default:;
+<<<<<<< HEAD
+        return { opacity: 1, y: 0 }
+    }
+  }
+
+
+=======
 
         return { opacity: 1, y: 0 }
     }
   }
+<<<<<<< HEAD
   return (
     <motion&& motion.div
       ref={ref}
@@ -160,10 +198,14 @@ export default LazySection;      case 'down':;
       transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
       className={className}>;
       {children}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     </motion && motion.div>;
   );
 };
+<<<<<<< HEAD
+export default LazySection;
+=======
 
 
 export default LazySection;
@@ -171,6 +213,7 @@ export default LazySection;
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const getInitialPosition = () =>: any {
   switch (direction) {
   case 'up':;
@@ -243,7 +286,26 @@ export default LazySection;      case 'down':;
 ;
 export default LazySection;
 ;
+<<<<<<< HEAD
+
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={getInitialPosition()}
+      animate={isInView ? getAnimatePosition() : getInitialPosition()}
+      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+export default LazySection;
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

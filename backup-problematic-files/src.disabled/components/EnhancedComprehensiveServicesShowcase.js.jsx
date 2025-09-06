@@ -9,4 +9,8 @@ const EnhancedComprehensiveServicesShowcase.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedComprehensiveServicesShowcase.js;
+=======
+export default EnhancedComprehensiveServicesShowcase.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,17 +1,125 @@
+<<<<<<< HEAD
+
+import React, { useState } from 'react'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
+import './video-call.css';interface Participant {
+  id: string,
+  name: string,
+  avatar?: string
+  isMuted?: boolean
+  isVideoEnabled?: boolean
+  isScreenSharing?: boolean
+  isHost?: boolean
+}
+
+interface VideoCallRoomProps {
+  roomId: string,
+  participants?: Participant[]
+  onLeave?: () => void
+  onToggleMute?: (isMuted: boolean) => void,
+  onToggleVideo?: (isEnabled: boolean) => void,
+  onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+import './video-call.css';interface Participant {
+  id: string,
+  name: string,
+  avatar?: string
+  isMuted?: boolean
+  isVideoEnabled?: boolean
+  isScreenSharing?: boolean
+  isHost?: boolean
+}
+
+interface VideoCallRoomProps {
+  roomId: string,
+  participants?: Participant[]
+  onLeave?: () => void
+  onToggleMute?: (isMuted: boolean) => void,
+  onToggleVideo?: (isEnabled: boolean) => void,
+  onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 
+<<<<<<< HEAD
+  roomId: string
+  participants?: Participant[]
+  onLeave?: () => void
+  onToggleMute?: (isMuted: boolean) => void
+  onToggleVideo?: (isEnabled: boolean) => void
+  onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
+import './video-call.css',
+interface Participant {
+  id: string,
+  name: string,
+  avatar?: string,
+  isMuted?: boolean,
+  isVideoEnabled?: boolean,
+  isScreenSharing?: boolean,
+  isHost?: boolean
+import React, { useState } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
+import './video-call.css',;
+interface Participant {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  isMuted?: boolean,;
+  isVideoEnabled?: boolean,;
+  isScreenSharing?: boolean,;
+  isHost?: boolean;
+}
+;
+interface VideoCallRoomProps {;
+  roomId: string,;
+  participants?: Participant[],;
+  onLeave?: () => void,;
+  onToggleMute?: (isMuted: boolean) => void,;
+  onToggleVideo?: (isEnabled: boolean) => void,;
+  onToggleScreenShare?: (isSharing: boolean) => void,;
+  className?: string;
+}
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
+  roomId
+  participants = []
+    const secs = seconds % 60
+};  onLeave
+  onToggleMute
+  onToggleVideo
+  onToggleScreenShare
+  className
+=======
 
 }
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   participants = [], ;
     const secs = seconds % 60;
 };  onLeave,
@@ -77,14 +185,26 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     if (onLeave) {
       onLeave()
     }
+<<<<<<< HEAD
+  }
+  return (
+    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
+  }
+  return (
+    <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
 
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
@@ -195,11 +315,23 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
           <CardTitle className="text-white">Video Call</CardTitle>;
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
             Room: {roomId}
-          </Badge>;
-        </div>;
-        <div className="flex items-center space-x-2">;
-          <Badge variant="secondary" className="bg-zion-blue-light text-white">;
+          </Badge>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Badge variant="secondary" className="bg-zion-blue-light text-white">
             {formatDuration(callDuration)}
+<<<<<<< HEAD
+          </Badge>
+          <Badge variant="outline" className="text-white">
+            {participants.length} participant{participants.length !== 1 ? 's' : ''}
+          </Badge>
+        </div>
+      </CardHeader>
+      <CardContent className="p-0">
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {participants.length > 0 ? (
+            participants.map((participant,) => (
+=======
 
 import React, { useState } from 'react';
 import { Button  } from '@/components / ui / button';
@@ -333,6 +465,7 @@ if ( {) {
       <CardContent className="p - 0">;
         <div className="video - container p - 4 grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {participants.length > 0 ? (
             participants.map ((participant, ) => (
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
@@ -361,29 +494,45 @@ if ( {) {
                 {participant && participant.isVideoEnabled && !participant && participant.isScreenSharing ? (;
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
 
+<<<<<<< HEAD
+      
+      <CardContent className="p-0">
+        <div className="video-container p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {participants.length > 0 ? (
+            participants.map((participant) => (
+              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {/* Placeholder for actual video stream */}
-                    <Video className="h-12 w-12 opacity-50" />;
-                  </div>;
-                ) : participant && participant.isScreenSharing ? (;
-                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">;
+                    <Video className="h-12 w-12 opacity-50" />
+                  </div>
+                ) : participant.isScreenSharing ? (
+                  <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">
                     {/* Placeholder for screen share */}
-                    <ScreenShare className="h-12 w-12 opacity-50" />;
-                  </div>;
-                ) : (;
-                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">;
-                    <Avatar className="h-20 w-20">;
-                      <AvatarImage src={participant && participant.avatar} alt={participant && participant.name} />;
-                      <AvatarFallback className="bg-zion-purple text-white text-2xl">;
-                        {participant && participant.name.charAt(0).toUpperCase()}
-                      </AvatarFallback>;
-                    </Avatar>;
-                  </div>;
+                    <ScreenShare className="h-12 w-12 opacity-50" />
+                  </div>
+                ) : (
+                  <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">
+                    <Avatar className="h-20 w-20">
+                      <AvatarImage src={participant.avatar} alt={participant.name} />
+                      <AvatarFallback className="bg-zion-purple text-white text-2xl">
+                        {participant.name.charAt(0).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                  </div>
                 )}
+<<<<<<< HEAD
+                
+                
+=======
 
 
                 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -401,7 +550,12 @@ if ( {) {
             </div>
           )}
         </div>
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
@@ -427,14 +581,108 @@ if ( {) {
         </div>;
 
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
+<<<<<<< HEAD
+        
+        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleToggleMute,}
+            aria-label = {isMuted ? 'Unmute microphone' : 'Mute microphone',}
+          >
+            {isMuted ? <MicOff /> : <Mic />}
+          </Button>
+=======
 
           </Button>;
 
 
+
+            onClick={handleToggleMute}
+            aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
+          >;
+            {isMuted ? <MicOff /> : <Mic />}
+          </Button>
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="outline"
+            size="icon"
+            className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleToggleVideo,}
+            aria-label = {isVideoEnabled ? 'Disable camera' : 'Enable camera',}
+          >
+            {isVideoEnabled ? <Video /> : <VideoOff />}
+          </Button>
+=======
+
+          </Button>;
+
+
+            onClick={handleToggleVideo}
+            aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
+          >;
+            {isVideoEnabled ? <Video /> : <VideoOff />}
+          </Button>
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="outline"
+            size="icon"
+            className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleToggleScreenShare,}
+            aria-label = {isScreenSharing ? 'Stop sharing screen' : 'Share screen',}
+          >
+            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+          </Button>
+=======
+
+          </Button>;
+
+
+            onClick={handleToggleScreenShare}
+            aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
+          >;
+            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+          </Button>
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="outline"
+            size="icon"
+            className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleToggleAudioOnly,}
+            aria-label = {isAudioOnly ? 'Disable audio only' : 'Enable audio only',}
+          >
+            {isAudioOnly ? <VolumeX /> : <Volume2 />}
+          </Button>
+=======
+
+          </Button>;
+
+
+            onClick={handleToggleAudioOnly}
+            aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
+          >;
+            {isAudioOnly ? <VolumeX /> : <Volume2 />}
+          </Button>
+          
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <Button
+            variant="destructive"
+            size="icon"
+            className="video-button video-button-danger rounded-full h-10 w-10"
+<<<<<<< HEAD
+            onClick = {handleLeaveCall,}
+            aria-label="Leave call"
+          >
 
             onClick={handleToggleMute}
             aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
@@ -488,18 +736,26 @@ if ( {) {
             variant="destructive"
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >
 
 
             <Phone className="rotate-135" />
-          </Button>
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+}
+
+};
+},
+}
+=======
 
             aria-label="Leave call">;
             <Phone className="rotate-135" />;
@@ -509,7 +765,11 @@ if ( {) {
     </Card>;
   );
 },;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
+},
+};
+},
 
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
@@ -591,4 +851,8 @@ if ( {) {
       </CardContent>;
     </Card>);
 },
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

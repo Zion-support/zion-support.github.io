@@ -9,4 +9,8 @@ const AIConsumerWillingnessToTry = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIConsumerWillingnessToTry;
+=======
+export default AIConsumerWillingnessToTry;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

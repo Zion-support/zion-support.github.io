@@ -9,4 +9,8 @@ const QuantumComputing = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default QuantumComputing;
+=======
+export default QuantumComputing;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

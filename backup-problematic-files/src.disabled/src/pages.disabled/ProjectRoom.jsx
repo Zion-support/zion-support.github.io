@@ -9,4 +9,8 @@ const ProjectRoom = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ProjectRoom;
+=======
+export default ProjectRoom;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

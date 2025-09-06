@@ -1,23 +1,28 @@
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
+
+
+
+
+
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -31,18 +36,20 @@ import Link from 'next / link';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
 }
 const SearchBar: React.FC = () => {
-=======
-
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const SearchBar: React.FC = () => {
   const [query, set_query] = useState ('');
   const [results, set_results] = useState < SearchResult[]>([]);
@@ -62,16 +69,26 @@ const SearchBar: React.FC = () => {
     {
       title: 'AI Services',
       description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+<<<<<<< HEAD
+url: '/ai - services',
+=======
       url: '/ai - services',
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: 'category',
     },
     {
       title: 'IT Services',
       description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+<<<<<<< HEAD
+url: '/it - services',
+      type: 'category',
+    },
+=======
       url: '/it - services',
       type: 'category',
     },
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: 'Cloud Cost Guard'
       description: 'FinOps Assistant for anomaly detection and cost optimization'
@@ -91,8 +108,11 @@ const SearchBar: React.FC = () => {
       type: 'page'
     }
   ];
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
     {;
@@ -132,61 +152,91 @@ const SearchBar: React.FC = () => {
       type: 'page',;
     },;
   ];
-
   const handleSearch = async (searchQuery: string) => {;
     if (!searchQuery && searchQuery.trim()) {;
       setResults([]);
       setIsOpen(false);
       return,;
+<<<<<<< HEAD
+    }
+    setIsLoading(true);
+=======
 
     }
     setIsLoading(true);
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 300));
-
     const filteredResults = searchData && searchData.filter(item =>;
       item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
+  };
+=======
 
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const value = e && e.target.value;
     setQuery(value);
     handleSearch(value),;
   };
-
   const handleResultClick = () => {;
     setIsOpen(false),;
     setQuery('');
   };
-
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === 'Escape') {;
     setIsOpen(false),;
     inputRef && inputRef.current?.blur();
   }
+<<<<<<< HEAD
+  const handleResultClick = () => {
+    setIsOpen(false)
+    setQuery('')
+  }
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+    setIsOpen(false)
+    inputRef.current?.blur()
+  }
+  }
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+=======
+<<<<<<< HEAD
   };
-
   useEffect(() => {;
     const handleClickOutside = (event: MouseEvent) => {;
       if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
         setIsOpen(false),;
       }
     };
-
     document && document.addEventListener('mousedown', handleClickOutside);
     return () => {;
       document && document.removeEventListener('mousedown', handleClickOutside);
     };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, []);
   return (
     <div ref={searchRef} className="relative w-full max-w-md">;
@@ -219,6 +269,15 @@ const SearchBar: React.FC = () => {
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
           </div>;
         )}
+<<<<<<< HEAD
+      </div>;
+      {/* Search Results Dropdown */}
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+          {results.length > 0 ? (
+            <div className="py-2">
+              {results.map((result, index) => (
+=======
 
       </div>;
 
@@ -229,10 +288,45 @@ const SearchBar: React.FC = () => {
           {results && results.length > 0 ? (;
             <div className="py-2">;
               {results && results.map((result, index) => (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link
                   key={index}
                   href={result && result.url}
                   onClick={handleResultClick}
+<<<<<<< HEAD
+
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0">
+                      <div className={`w-2 h-2 rounded-full mt-2 ${
+                        result.type === 'service' ? 'bg-blue-500' :
+                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
+                      }`}></div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-gray-900 truncate">
+                        {result.title}
+                      </p>
+                      <p className="text-sm text-gray-500 truncate">
+                        {result.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : query && !isLoading ? (
+            <div className="px-4 py-3 text-sm text-gray-500">
+              No results found for &quot;{query}&quot;
+            </div>
+          ) : null}
+        </div>;
+      )}
+    </div>
+  );
+}
+=======
                   className="block px-4 py-3 hover:bg-gray-50 transition-colors">;
                   <div className="flex items-start space-x-3">;
                     <div className="flex-shrink-0">;
@@ -393,9 +487,21 @@ if ( {) {
 ;
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 
+<<<<<<< HEAD
+export default SearchBar;
+export default SearchBar;
+};
+
+export default SearchBar;
+};
+
+export default SearchBar;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SearchBar;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

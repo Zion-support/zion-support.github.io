@@ -9,4 +9,8 @@ const AIContentCreation = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIContentCreation;
+=======
+export default AIContentCreation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

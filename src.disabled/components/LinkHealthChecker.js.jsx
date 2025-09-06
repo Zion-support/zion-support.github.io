@@ -1,5 +1,17 @@
 
 
+<<<<<<< HEAD
+import React from\';react\' const LinkHealthChecker = ({ links,className = \' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {\''\'';
+const React from";react" const LinkHealthChecker = ({ links,className = " }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {"""";""
+:src.disabled/components/LinkHealthChecker.js.jsx
+import React from\';react\' const LinkHealthChecker = ({ links,className = \' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {\''\'';
+const React from";react" const LinkHealthChecker = ({ links,className = " }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {"""";""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from\';react\' const LinkHealthChecker = ({ links,className = \' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {\''\'';
+const React from";react" const LinkHealthChecker = ({ links,className = " }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {"""";""
+:temp_exclude/src.disabled/components/LinkHealthChecker.js.jsx
+import _React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';
+=======
 =======
 
 
@@ -11,8 +23,13 @@ const React from";react" const LinkHealthChecker = ({ links,className = " }) => 
 import _React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';
 =======
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from\';react\' const LinkHealthChecker = ({ links,className = \' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date && Date.now() try {\''\'';
 const React from";react" const LinkHealthChecker = ({ links,className = " }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date && Date.now() try {"""";""
 
 import _React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date && Date.now() try {'''';
 
+<<<<<<< HEAD
+import _React from';react' const LinkHealthChecker = ({ links,className = ' }) => { const [linkStatuses,setLinkStatuses] = useState([]) const [isChecking,setIsChecking] = useState(false) const checkLinkHealth = async url => { const startTime = Date.now() try {'''';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

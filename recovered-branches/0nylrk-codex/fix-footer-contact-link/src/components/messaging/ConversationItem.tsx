@@ -1,11 +1,27 @@
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
 
+<<<<<<< HEAD
+
+import React from 'react';
+import { format  } from 'date-fns';
+import { cn  } from '@/lib/utils';
+import { Conversation  } from '@/types/messaging';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+interface ConversationItemProps {
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -15,12 +31,20 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
+
+
+}
+}
+}
+=======
 
 
 
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   conversation: Conversation
   isActive: boolean
@@ -34,7 +58,10 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
     <div 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -55,6 +82,13 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+<<<<<<< HEAD
+          </div>)}
+      </div>;
+      {conversation.unread_count > 0 && (
+        <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
+          {conversation.unread_count}
+=======
 =======
 import {format} from 'date - fns';
 import {cn} from '@/lib / utils';
@@ -105,17 +139,24 @@ function ConversationItem() {
         <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
 import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function ConversationItem(): any ({ conversation, isActive, onClick }: ConversationItemProps) {;
   return (
     <div
@@ -123,10 +164,99 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors"
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
         conversation && conversation.unread_count> 0 && "bg-zion-blue-dark/20";
+<<<<<<< HEAD
+
+import React from 'react',;
+import { format } from 'date-fns',;
+import { cn } from '@/lib/utils',;
+import { Conversation } from '@/types/messaging',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+;
+interface ConversationItemProps {;
+  conversation:Conversation,;
+  isActive:boolean,;
+  onClick:() => void;
+}
+;
+export function ConversationItem({ conversation, isActive, onClick } ConversationItemProps) {;
+  return (;
+    <div ;
+      className={cn(;
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",;
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" :"hover:bg-zion-blue-dark/30",;
+        conversation.unread_count > 0 && "bg-zion-blue-dark/20";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
       onClick={onClick}
     >;
       <Avatar className="h-12 w-12 border border-zion-purple/20">;
+<<<<<<< HEAD
+        </div>)}
+    </div>);
+}
+        <AvatarImage src={conversation.other_user.avatar_url} alt={conversation.other_user.name} />;
+        <AvatarFallback className="bg-zion-blue-dark text-white">;
+          {conversation.other_user.name.charAt(0).toUpperCase()}
+        </AvatarFallback>;
+      </Avatar>;
+      ;
+      <div className="flex-1 min-w-0">;
+        <div className="flex justify-between items-start">;
+          <div className="font-medium text-white truncate">{conversation.other_user.name}</div>;
+          <div className="text-xs text-zion-slate whitespace-nowrap">;
+            {format(new Date(conversation.updated_at), 'MMM d')}
+          </div>;
+        </div>;
+        ;
+        <div className="text-sm text-zion-slate truncate">;
+          {conversation.last_message?.content || '(No messages yet)'}
+        </div>;
+        ;
+        {conversation.context_data?.title && (;
+          <div className="text-xs mt-1 text-zion-cyan truncate">;
+            Re:{conversation.context_data.title}
+          </div>;
+        )}
+      </div>;
+      ;
+      {conversation.unread_count > 0 && (;
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">;
+          {conversation.unread_count}
+        </div>;
+      )}
+    </div>;
+  ),;}
+ export function ConversationItem ({
+  conversation, isActive, onClick 
+}: ConversationItemProps) {
+  return (<div className= {
+  cn () 
+}onClick= {
+  onClick 
+}> Re: {
+  conversation.context data.title 
+}</div>) 
+}</div> {
+  conversation.unread count 
+}</div>) 
+}</div>) 
+}
+        {conversation.context_data?.title && (
+          <div className="text-xs mt-1 text-zion-cyan truncate">
+            Re: {conversation.context_data.title}
+          </div>
+        )}
+      </div>
+      {conversation.unread_count > 0 && (
+        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">
+          {conversation.unread_count}
+        </div>
+      )}
+    </div>
+  )
+}
+=======
         <AvatarImage src={conversation && conversation.other_user.avatar_url} alt={conversation && conversation.other_user.name} />;
         <AvatarFallback className="bg-zion-blue-dark text-white">;
           {conversation && conversation.other_user.name && name.charAt(0).toUpperCase()}
@@ -166,3 +296,4 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

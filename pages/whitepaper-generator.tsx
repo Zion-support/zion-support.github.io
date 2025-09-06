@@ -1,23 +1,38 @@
+<<<<<<< HEAD
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function WhitepaperGeneratorRedirect() {
 
 
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
-
+export default function WhitepaperGeneratorRedirect() {;
+import {useEffect} from 'react';
+import {useRouter} from 'next/router';
 export default function WhitepaperGeneratorRedirect() {;
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/tokenomics');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, [router]);
   return null;
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
@@ -27,8 +42,6 @@ export default function WhitepaperGeneratorRedirect() {
   }, [router]);
   return null
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import {useEffect} from 'react';
 import {use_router} from 'next / router';
 export default /**
@@ -40,7 +53,23 @@ function WhitepaperGeneratorRedirect() {
 router.replace ('/tokenomics');
   }, [router]);
   return null;
+<<<<<<< HEAD
+;
+}
 
+}
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function WhitepaperGeneratorRedirect(req, res) {
+  try {
+  const router = useRouter();
+  useEffect(() => {;
+    router.replace('/tokenomics');
+  }, [router]);
+  return null;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -48,5 +77,8 @@ router.replace ('/tokenomics');
 }
 
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

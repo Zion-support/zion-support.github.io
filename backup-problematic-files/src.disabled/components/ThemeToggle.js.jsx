@@ -9,4 +9,8 @@ const ThemeToggle.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ThemeToggle.js;
+=======
+export default ThemeToggle.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

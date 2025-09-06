@@ -9,4 +9,8 @@ const DisputeDashboard.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default DisputeDashboard.js;
+=======
+export default DisputeDashboard.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+import { render, RenderOptions } from '@testing-library/react';
+import { ThemeProvider } from 'next-themes';
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="light">
+      {children}
+=======
 
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
@@ -6,9 +14,10 @@ import { ThemeProvider } from 'next - themes';
 const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
 
   return (
-    <ThemeProvider attribute="class" default_theme="light">;
+    <ThemeProvider attribute="class" defaultTheme="light">
       {children}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </ThemeProvider>);
 }
 ;
@@ -36,7 +45,6 @@ export const mockNextRouter = () =>: any ({
   default_locale: 'en',
   domain_locales: [],
   is_preview: false;
-=======
 
   },
   isFallback: false,
@@ -50,7 +58,10 @@ export const mockNextRouter = () =>: any ({
 export const createMockProps = (overrides = {}) => ({
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </ThemeProvider>;
   );
 },;
@@ -78,6 +89,7 @@ export const mockNextRouter = () => ({;
   domainLocales: [],;
   isPreview: false;
 
+<<<<<<< HEAD
 });
 ;
 export const createMockProps = (overrides = {}) =>: any ({
@@ -86,4 +98,78 @@ export const createMockProps = (overrides = {}) =>: any ({
 
 
 
+    </ThemeProvider>
+  );
+}
+const customRender = (
+  ui: React.ReactElement
+  options?: Omit<RenderOptions, 'wrapper'>
+) => render(ui, { wrapper: AllTheProviders, ...options });
+export * from '@testing-library/react';
+export { customRender as render }
+export const mockNextRouter = () => ({
+  push: jest.fn()
+  replace: jest.fn()
+  prefetch: jest.fn()
+  back: jest.fn()
+  beforePopState: jest.fn()
+  events: {
+    on: jest.fn()
+    off: jest.fn()
+    emit: jest.fn()
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
+  },
+  isFallback: false,
+  isLocale: false,
+  isReady: true,
+  defaultLocale: 'en',
+  domainLocales: [],
+  isPreview: false;
+});
+export const createMockProps = (overrides = {}) => ({
+  ...overrides
+    </ThemeProvider>;
+  );
+},;
+const customRender = (;
+  ui: React.ReactElement,;
+  options?: Omit<RenderOptions, 'wrapper'>;
+) => render(ui, { wrapper: AllTheProviders, ...options }),;
+export * from '@testing-library/react',;
+export { customRender as render },;
+export const mockNextRouter = () => ({;
+  push: jest.fn(),;
+  replace: jest.fn(),;
+  prefetch: jest.fn(),;
+  back: jest.fn(),;
+  beforePopState: jest.fn(),;
+  events: {;
+    on: jest.fn(),;
+    off: jest.fn(),;
+    emit: jest.fn();
+  },;
+  isFallback: false,;
+  isLocale: false,;
+  isReady: true,;
+  defaultLocale: 'en',;
+  domainLocales: [],;
+  isPreview: false;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+});
+export const createMockProps = (overrides = {}) => ({;
+  ...overrides;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 });

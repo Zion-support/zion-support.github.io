@@ -9,4 +9,8 @@ const AIAutonomousLegalCounsel.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousLegalCounsel.js;
+=======
+export default AIAutonomousLegalCounsel.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

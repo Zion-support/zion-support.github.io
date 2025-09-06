@@ -9,4 +9,8 @@ const AIAutonomousVehiclePlatform.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousVehiclePlatform.js;
+=======
+export default AIAutonomousVehiclePlatform.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

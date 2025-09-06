@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 type Theme = "dark" | "light" | "system",
@@ -27,6 +30,12 @@ function ThemeProvider() {
     // Check condition
 if ( {) {
   $2
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+type Theme = "dark" | "light" | "system";
+type ThemeProviderProps = {children: React.ReactNode;
+  defaultTheme?: Theme;
+  storageKey?: string;
 }
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
@@ -76,7 +85,10 @@ if ( {) {
     return <>{children}</>;
   }
   return (
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <ThemeProviderContext.Provider {...props} value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
@@ -87,6 +99,11 @@ export const use_theme = () =>: any {
     throw new Error ("use_theme must be used within a ThemeProvider")) {
   $2
 }
+<<<<<<< HEAD
+
+  return context;
+}
+=======
 
 
   return context;
@@ -95,6 +112,7 @@ export const use_theme = () =>: any {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -170,4 +188,7 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

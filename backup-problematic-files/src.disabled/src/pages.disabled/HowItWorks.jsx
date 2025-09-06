@@ -9,4 +9,8 @@ const HowItWorks = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default HowItWorks;
+=======
+export default HowItWorks;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

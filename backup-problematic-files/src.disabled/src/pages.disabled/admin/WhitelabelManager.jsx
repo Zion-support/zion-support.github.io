@@ -9,4 +9,8 @@ const WhitelabelManager = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default WhitelabelManager;
+=======
+export default WhitelabelManager;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

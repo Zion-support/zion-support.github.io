@@ -1,11 +1,48 @@
 
 
 
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+export default function UseTokensButton(): any ({;
+  serviceId,;
+  defaultType,;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }: {;
+export default function UseTokensButton({
+serviceId
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
+
+export default function UseTokensButton({
+  serviceId
+  defaultType
+}: {
+
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -21,15 +58,40 @@
         serviceId={serviceId}
         defaultType={defaultType}
 
-=======
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       />
     </>
 
+<<<<<<< HEAD
+export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
+  serviceId,
+  defaultType,
+}: {;
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary"
+      >
+        Use Tokens
+      </button>
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+);
+  );
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -47,12 +109,16 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
       />;
     </>;
   );
+<<<<<<< HEAD
+}
+=======
 
 }
 
 }
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -92,8 +158,54 @@ function UseTokensButton() {
         default_type={default_type}
       />;
     </>);
+    </>
+  )
+
 }
+<<<<<<< HEAD
+
+
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary"
+      >
+        Use Tokens
+      </button>
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="enhanced-button enhanced-button-primary"
+      >
+        Use Tokens
+      </button>
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
+}
+
+}
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const Interactive-timeline = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Interactive-timeline;
+=======
+export default Interactive-timeline;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

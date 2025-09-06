@@ -9,4 +9,8 @@ const Leadership = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Leadership;
+=======
+export default Leadership;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

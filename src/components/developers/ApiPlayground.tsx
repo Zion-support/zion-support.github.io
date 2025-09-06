@@ -1,7 +1,188 @@
+<<<<<<< HEAD
+import { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button";
+import CodeBlock from "./CodeBlock";
+import { useState } from 'react'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import CodeBlock from './CodeBlock'
+interface Param {
+
+  name: string
+type: string
+required?: boolean
+}interface ApiPlaygroundProps {
+  method: string
+  path: string
+  params?: Param[]
+export function ApiPlayground({
+  method
+  path
+  params = []
+}: ApiPlaygroundProps) {
+  const [apiKey, setApiKey] = useState('demo_key_123')
+  const [paramValues, setParamValues] = useState<Record<string, string>>({})
+  const [body, setBody] = useState('{}')
+  const [response, setResponse] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
+  const handleParamChange = (name: string, value: string) => {
+    setParamValues(prev => ({ ...prev, [name]: value }))
+  }
+  const sendRequest = async () => {
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
+import { Button } from "@/components/ui/button";
+import CodeBlock from "./CodeBlock";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_API_URL |
+    const baseUrl =
+      process.env.NEXT_PUBLIC_API_URL |
+    const baseUrl = null;
+      process.env.NEXT_PUBLIC_API_URL ||
+      (typeof window !== 'undefined' ? window.location.origin : '')
+    let url = `${baseUrl}${path}`
+    const searchParams = new URLSearchParams()
+    if (method === 'GET' |method === 'DELETE') {
+      params.forEach(p => {
+        const val = paramValues[p.name]
+        if (val) searchParams.append(p.name, val)
+      })
+      const query = searchParams.toString()
+      if (query) url += `?${query}` }
+import { Button } from "@/components/ui/button",
+import CodeBlock from "./CodeBlock",
+import { useState } from 'react';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Button } from '@/components / ui / button';
+import CodeBlock from './CodeBlock';
+import { useState } from "react",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import CodeBlock from "./CodeBlock",
+interface Param {
+  name: string,
+  type: string,
+  required?: boolean
+import { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import CodeBlock from "./CodeBlock",;
+interface Param {;
+  name: string,;
+  type: string,;
+  required?: boolean;
+}
+;
+interface ApiPlaygroundProps {;
+  method: string,;
+  path: string,;
+  params?: Param[];
+}
+
+export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
+  const [apiKey, setApiKey] = useState("demo_key_123"),
+  const [paramValues, setParamValues] = useState<Record<string string>>({}),
+  const [body, setBody] = useState("{}"),
+  const [response, setResponse] = useState<string | null>(null),
+  const [loading, setLoading] = useState(false),
+
+  const handleParamChange = (name: string, value: string) => {
+    setParamValues((prev) => ({ ...prev, [name]: value }))
+  },
+
+  const sendRequest = async () => {
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),
+    let url = `${baseUrl}${path}`,
+
+    const searchParams = new URLSearchParams(),
+    if (method === "GET" || method === "DELETE") {
+      params.forEach((p) => {
+        const val = paramValues[p.name],
+        if (val) searchParams.append(p.name, val)
+      }),
+      const query = searchParams.toString(),
+      if (query) url += `?${query}`
+    }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const options: RequestInit = {
       method
       headers: {
 
+<<<<<<< HEAD
+      try {
+        options.body = JSON.stringify(JSON.parse(body))
+      } catch {
+        options.body = body
+
+      method
+      headers: {
+
+    const options: RequestInit = {
+      method
+      headers: {
+        Authorization: `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
+      }
+      // Add timeout to prevent hanging
+      signal: AbortSignal.timeout(15000)
+      params.for_each (p => {
+        const val = param_values[p.name];
+        if (search_params.append (p.name, val)) {
+  $2
+}
+      });
+      const query = search_params.to_string ();
+      // Check condition
+if (url += `?${query}` }
+) {
+  $2
+}
+    const options: RequestInit = {
+      method
+      headers: {
+        Authorization: `Bearer ${api_key}`,
+        'Content - Type': 'application / json',
+      },
+      // Add timeout to prevent hanging;
+      signal: AbortSignal.timeout (15000),
+    }
+    if (method !== 'GET' && method !== 'DELETE') {
+      signal: AbortSignal.timeout(15000)},
+
+    if (method !== "GET" && method !== "DELETE") {
+      signal: AbortSignal.timeout(15000),
+    }
+    if (method !== 'GET' && method !== 'DELETE') {
+        options.body = JSON.stringify(JSON.parse(body))
+      } catch {
+        options.body = body
+    }
+    if (method !== 'GET' && method !== 'DELETE') {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json"},
+      // Add timeout to prevent hanging
+      signal: AbortSignal.timeout(15000)},
+
+      }
+    }
+    setLoading(true)
+    setResponse(null)
+      try {
+        options.body = JSON.stringify (JSON.parse (body));
+      } catch {
+        options.body = body;
+      }
+    }
+    set_loading (true);
+    set_response (null);
+=======
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
@@ -13,6 +194,7 @@ const options: RequestInit = {
     set_loading (true);
     set_response (null);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {
       const res = await fetch (url, options);
       const content_type = res.headers.get ('content - type');
@@ -29,11 +211,17 @@ const options: RequestInit = {
       } else {
         response_text = await res.text ();
       }
+<<<<<<< HEAD
+      // Format the response with status information;
+      const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
+      set_response (status_info + response_text);
+=======
 
       // Format the response with status information;
       const status_info = `HTTP ${res.status} ${res.status_text}\n\n`;
       set_response (status_info + response_text);
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (err: any) {
       let error_message = 'Request failed';
       // Check condition
@@ -47,14 +235,50 @@ if ( {) {
         error_message =;
           'Network error - check CORS configuration or API endpoint';
       } else {
+<<<<<<< HEAD
+    try {
+      const res = await fetch(url, options)
+      const contentType = res.headers.get('content-type')
+      let responseText: string
+      if (contentType?.includes('application/json')) {
+        try {
+          const jsonData = await res.json()
+          responseText = JSON.stringify(jsonData, null, 2)
+        } catch {
+          responseText = await res.text()
+        }
+      } else {
+        responseText = await res.text()
+      }
+      // Format the response with status information
+      const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`
+      setResponse(statusInfo + responseText)
+    } catch (err: any) {
+      let errorMessage = 'Request failed'
+      if (err.name === 'AbortError') {
+        errorMessage = 'Request timed out (15s)'
+      } else if (err.message?.includes('Failed to fetch')) {
+        errorMessage =
+          'Network error - check CORS configuration or API endpoint'
+      } else {
+        errorMessage = err.message |'Unknown error occurred'
+      }
+      setResponse(
+        `Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`
+      )
+    } finally {
+      setLoading(false)
+    }
+  }
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
-
 interface Param {;
   name: string;
 type: string;
@@ -63,7 +287,6 @@ required?: boolean ;
   method: string;
   path: string;
   params?: Param[];
-
 export function ApiPlayground(): any ({;
   method,;
   path,;
@@ -93,7 +316,10 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       process && process.env.NEXT_PUBLIC_API_URL ||;
       (typeof window !== 'undefined' ? window && window.location.origin : '');
     let url = `${baseUrl}${path}`;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const searchParams = new URLSearchParams();
     if (method === 'GET' || method === 'DELETE') {;
       params && params.forEach(p => {;
@@ -102,11 +328,40 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       });
       const query = searchParams && searchParams.toString();
       if (query) url += `?${query}`;    }
+<<<<<<< HEAD
+;
+export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState("demo_key_123"),;
+  const [paramValues, setParamValues] = useState<Record<string string>>({}),;
+  const [body, setBody] = useState("{}"),;
+  const [response, setResponse] = useState<string | null>(null),;
+  const [loading, setLoading] = useState(false),;
+  const handleParamChange = (name: string, value: string) => {;
+    setParamValues((prev) => ({ ...prev, [name]: value }));
+  },;
+  const sendRequest = async () => {;
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set;
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin : ''),;
+    let url = `${baseUrl}${path}`,;
+    const searchParams = new URLSearchParams(),;
+    if (method === "GET" || method === "DELETE") {;
+      params.forEach((p) => {;
+        const val = paramValues[p.name],;
+        if (val) searchParams.append(p.name, val);
+      }),;
+      const query = searchParams.toString(),;
+      if (query) url += `?${query}`;
+    }
+;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const options: RequestInit = {;
       method,;
       headers: {;
         Authorization: `Bearer ${apiKey}`,;
+<<<<<<< HEAD
+=======
         'Content-Type': 'application/json',;
       },;
       // Add timeout to prevent hanging;
@@ -166,11 +421,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className='space-y-4'>;
       <Input
         value={apiKey}
-
 
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
@@ -179,7 +434,14 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       />
       {params.map(p => (
         <Input
-
+          key={p.name}
+          value={paramValues[p.name] |''}
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
+        onChange={e => setApiKey(e && e.target.value)}
+        placeholder='API Key';
+      />;
+      {params && params.map(p => (;
+        <Input
 
           value={paramValues[p.name] || ''}
 
@@ -199,7 +461,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         {loading ? 'Sending...' : 'Send Request'}
       </Button>;
       {response && <CodeBlock code={response} language='json' />}
-
         error_message = err.message || 'Unknown error occurred';
       }
       set_response (
@@ -257,11 +518,113 @@ set_response (null);
 let response_text: string;
 if () {) {
   $2
-
 }
   try {
   /> {
   params.map ( (p) => (<Input key= {
+        "Content-Type": "application/json"},;
+      // Add timeout to prevent hanging;
+      signal: AbortSignal.timeout(15000)},;
+    if (method !== "GET" && method !== "DELETE") {;
+      try {;
+        options.body = JSON.stringify(JSON.parse(body));
+      } catch {;
+        options.body = body;
+      }
+    }
+;
+    setLoading(true),;
+    setResponse(null),;
+    try {;
+      const res = await fetch(url, options),;
+      const contentType = res.headers.get('content-type'),;
+      let responseText: string,;
+      if (contentType?.includes('application/json')) {;
+        try {;
+          const jsonData = await res.json(),;
+          responseText = JSON.stringify(jsonData, null, 2);
+        } catch {;
+          responseText = await res.text();
+        }
+      } else {;
+        responseText = await res.text();
+      }
+;
+      // Format the response with status information;
+      const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`,;
+      setResponse(statusInfo + responseText);
+    } catch (err: any) {;
+      let errorMessage = 'Request failed',;
+      if (err.name === 'AbortError') {;
+        errorMessage = 'Request timed out (15s)';
+      } else if (err.message?.includes('Failed to fetch')) {;
+        errorMessage = 'Network error - check CORS configuration or API endpoint';
+      } else {;
+        errorMessage = err.message || 'Unknown error occurred';
+      }
+;
+      setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting: \n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`);
+    } finally {;
+      setLoading(false);
+    }
+  },
+
+  return (
+    <div className="space-y-4">
+      <Input
+        value={apiKey}
+        onChange={e => setApiKey(e.target.value)}
+        placeholder='API Key'
+        onChange={(e) => setApiKey(e.target.value)}
+        placeholder="API Key"
+      />
+      {params.map(p => (
+        <Input
+          key={p.name}
+          value={paramValues[p.name] |''}
+          value={paramValues[p.name] || ''}
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
+      ))}
+      {method !== 'GET' && method !== 'DELETE' && (
+        <Textarea
+          value={body}
+          onChange={e => setBody(e.target.value)}
+          className='font-mono'        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? 'Sending...' : 'Send Request'}
+      </Button>
+      {response && <CodeBlock code={response} language='json' />}
+    </div>
+  )
+export default ApiPlayground
+  const val = paramValues[p.name]
+if (val) searchParams.append (p.name, val)
+})
+const query = searchParams.toString ()
+if (query) url += `?$ {
+  query
+}`
+}const options: RequestInit = {
+  method, headers: {
+  Authorization: `Bearer $ {
+  apiKey
+}`
+"Content-Type" : "application/json"
+}
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)
+}
+}setLoading (true)
+setResponse (null)
+let responseText: string
+if (contentType?.includes ('application/json') ) {
+  try {
+  /> {
+  params.map ( (p) => (<Input key= {
+  p.name
+}</div>)
+}export default ApiPlayground
+'"
 
 
     </div>;
@@ -304,7 +667,10 @@ if (contentType?.includes ('application/json') ) {;
 }export default ApiPlayground;
 '";
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -324,4 +690,181 @@ if (contentType?.includes ('application/json') ) {;
   )
 }
 ;
+<<<<<<< HEAD
+    </div>;
+  );
 export default ApiPlayground;
+  const val = paramValues[p && p.name];
+if (val) searchParams && searchParams.append (p && p.name, val) ;
+});
+const query = searchParams && searchParams.toString ();
+import { useState } from "react",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Button } from "@/components/ui/button",;
+import CodeBlock from "./CodeBlock",;
+;
+interface Param {;
+  name:string,;
+  type:string,;
+  required?:boolean;}
+;
+interface ApiPlaygroundProps {;
+  method:string,;
+  path:string,;
+  params?:Param[];
+}
+;
+export function ApiPlayground({ method, path, params = [] } ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState("demo_key_123"),;
+  const [paramValues, setParamValues] = useState<Record<string string>>({}),;
+  const [body, setBody] = useState("{}"),;
+  const [response, setResponse] = useState<string | null>(null),;
+  const [loading, setLoading] = useState(false),;
+;
+  const handleParamChange = (name:string, value:string) => {;
+    setParamValues((prev) => ({ ...prev, [name]:value })),;
+  },;
+;
+  const sendRequest = async () => {;
+    // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set;
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? window.location.origin :''),;
+    let url = `${baseUrl}${path}`,;
+;
+    const searchParams = new URLSearchParams(),;
+    if (method === "GET" || method === "DELETE") {;
+      params.forEach((p) => {;
+        const val = paramValues[p.name],;
+        if (val) searchParams.append(p.name, val),;
+      }),;
+      const query = searchParams.toString(),;
+      if (query) url += `?${query}`,;
+    }
+;
+    const options:RequestInit = {;
+      method,;
+      headers:{;
+        Authorization:`Bearer ${apiKey}`,;
+        "Content-Type":"application/json"},;
+      // Add timeout to prevent hanging;
+      signal:AbortSignal.timeout(15000)},;
+;
+    if (method !== "GET" && method !== "DELETE") {;
+      try {;
+        options.body = JSON.stringify(JSON.parse(body)),;
+      } catch {;
+        options.body = body,;
+      }
+    }
+;
+    setLoading(true),;
+    setResponse(null),;
+;
+    try {;
+      const res = await fetch(url, options),;
+      const contentType = res.headers.get('content-type'),;
+      ;
+      let responseText:string,;
+      if (contentType?.includes('application/json')) {;
+        try {;
+          const jsonData = await res.json(),;
+          responseText = JSON.stringify(jsonData, null, 2),;
+        } catch {;
+          responseText = await res.text(),;
+        }
+      } else {;
+        responseText = await res.text(),;
+      }
+;
+      // Format the response with status information;
+      const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`,;
+      setResponse(statusInfo + responseText),;
+    } catch (err:any) {;
+      let errorMessage = 'Request failed',;
+      ;
+      if (err.name === 'AbortError') {;
+        errorMessage = 'Request timed out (15s)';
+      } else if (err.message?.includes('Failed to fetch')) {;
+        errorMessage = 'Network error - check CORS configuration or API endpoint',;
+      } else {;
+        errorMessage = err.message || 'Unknown error occurred',;
+      }
+      ;
+      setResponse(`Error:${errorMessage}\n\nAttempted URL:${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`);
+    } finally {;
+      setLoading(false),;
+    }
+  },;
+;
+  return (;
+    <div className="space-y-4">;
+      <Input;
+        value={apiKey}
+        onChange={(e) => setApiKey(e.target.value)}
+        placeholder="API Key";
+      />;
+      {params.map((p) => (;
+        <Input;
+          key={p.name}
+          value={paramValues[p.name] || ""}          onChange={(e) => handleParamChange(p.name, e.target.value)}
+        />;
+      ))}
+      {method !== "GET" && method !== "DELETE" && (;
+        <Textarea;
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          className="font-mono";
+        />;
+      )}
+      <Button onClick={sendRequest} disabled={loading}>;
+        {loading ? "Sending..." :"Send Request"}
+      </Button>;
+      {response && <CodeBlock code={response} language="json" />}
+    </div>;
+  ),;}
+;
+export default ApiPlayground,;
+ interface Param {;
+  name: string;
+type: string;
+required?: boolean ;
+}interface ApiPlaygroundProps {;
+  method: string;
+path: string;
+params?: Param[] ;
+}export function ApiPlayground ({;
+  method,  path, params = [] ;
+}: ApiPlaygroundProps) {;
+  const [response, setResponse] = useState<string | null> (null);
+const [loading,  setLoading] = useState (false);
+  const val = paramValues[p.name];
+if (val) searchParams.append (p.name, val) ;
+});
+const query = searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params.map ( (p) => (<Input key= {;
+  p.name ;
+}</div>) ;
+}export default ApiPlayground;
+'"
+export default ApiPlayground;
+=======
+export default ApiPlayground;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

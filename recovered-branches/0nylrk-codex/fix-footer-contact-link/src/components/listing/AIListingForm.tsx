@@ -1,8 +1,12 @@
 
+<<<<<<< HEAD
+
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -10,6 +14,10 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
@@ -17,11 +25,30 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
-=======
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea",
+import { Sparkles } from "lucide-react",
+interface AIListingFormProps {
+  onSubmit: (formData: {
+
+    title: string
+    category: string
+    keyFeatures: string
+    targetAudience: string
+  }) => void;
+  isLoading: boolean
 
   }) => void,
   isLoading: boolean,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   initialValues?: {
     title?: string,
     category?: string,
@@ -33,6 +60,27 @@ import {Sparkles} from "lucide-react";
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
 
+<<<<<<< HEAD
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title |"");
+  const [category, setCategory] = useState(initialValues.category |"");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
+  const { toast } = useToast(),
+  const [title, setTitle] = useState(initialValues.title || ""),
+  const [category, setCategory] = useState(initialValues.category || ""),
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSubmit = () => {
     if (!title |!category) {
       toast({
@@ -51,6 +99,11 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
   },
 
+<<<<<<< HEAD
+  }
+  },
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   return (
     <div className="space-y-4">
@@ -95,23 +148,40 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
+<<<<<<< HEAD
+      <Button 
+
+          disabled={isLoading}
+        />
+      </div>
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading |!title |!category}
+      <Button 
+=======
 
       <Button 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Sparkles } from "lucide-react",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface AIListingFormProps {;
   onSubmit: (formData: {;
     title: string,;
     category: string,;
     keyFeatures: string,;
     targetAudience: string;
+<<<<<<< HEAD
+=======
   }) => void;
   isLoading: boolean,;
   initialValues?: {;
@@ -126,17 +196,99 @@ interface AIListingFormProps {;
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [title, setTitle] = useState(initialValues && initialValues.title || "");
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
+<<<<<<< HEAD
+  }) => void,;
+  isLoading: boolean,;
+  initialValues?: {;
+    title?: string,;
+    category?: string,;
+    keyFeatures?: string,;
+    targetAudience?: string;
+  }
+}
+;
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
+  const { toast } = useToast(),;
+  const [title, setTitle] = useState(initialValues.title || ""),;
+  const [category, setCategory] = useState(initialValues.category || ""),;
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSubmit = () => {;
     if (!title || !category) {;
       toast({;
         title: "Missing required fields",;
         description: "Please provide at least a title and category.",;
         variant: "destructive";
+<<<<<<< HEAD
+      });
+      return;
+    }
+    onSubmit({;
+      title;
+      category;
+      keyFeatures;
+      targetAudience;
+    });
+  };
+  return (
+    <div className="space-y-4">;
+      <div className="space-y-2">;
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
+
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Sparkles } from "lucide-react",;
+;
+interface AIListingFormProps {;
+  onSubmit:(formData:{;
+    title:string,;
+    category:string,;
+    keyFeatures:string,;
+    targetAudience:string;
+  }) => void,;
+  isLoading:boolean,;
+  initialValues?:{;
+    title?:string,;
+    category?:string,;
+    keyFeatures?:string,;
+    targetAudience?:string;
+  },;
+}
+;
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIListingFormProps) {;
+  const { toast } = useToast(),;
+  const [title, setTitle] = useState(initialValues.title || ""),;
+  const [category, setCategory] = useState(initialValues.category || ""),;
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
+;
+  const handleSubmit = () => {;
+    if (!title || !category) {;
+      toast({;
+        title:"Missing required fields",;
+        description:"Please provide at least a title and category.",;
+        variant:"destructive";
+      }),;
+      return,;
+      }),;
+      return;
+    }
+;
+    onSubmit({;
+      title,;
+      category,;
+=======
 
       });
       return;
@@ -146,10 +298,21 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
     onSubmit({;
       title;
       category;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       keyFeatures;
       targetAudience;
     });
   };
+<<<<<<< HEAD
+  return (;
+    <div className="space-y-4">;
+      <div className="space-y-2">;
+        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
+        <Input;
+          id="title";
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+=======
 
 
   return (
@@ -160,6 +323,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
           id="title"
           value={title}
           onChange={(e) => setTitle(e && e.target.value)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           placeholder="Enter your product or service title";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
@@ -167,21 +331,36 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       </div>;
       <div className="space-y-2">;
         <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+<<<<<<< HEAD
+        <Input;
+          id="category";
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          placeholder="e.g. AI Tool, Digital Product, Service";
+=======
         <Input
           id="category"
           value={category}
           onChange={(e) => setCategory(e && e.target.value)}
           placeholder="e && e.g. AI Tool, Digital Product, Service";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
         />;
       </div>;
       <div className="space-y-2">;
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+<<<<<<< HEAD
+        <Textarea;
+          id="keyFeatures";
+          value={keyFeatures}
+          onChange={(e) => setKeyFeatures(e.target.value)}
+=======
         <Textarea
           id="keyFeatures"
           value={keyFeatures}
           onChange={(e) => setKeyFeatures(e && e.target.value)}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           placeholder="Briefly describe the main features or benefits";
           className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
           disabled={isLoading}
@@ -189,23 +368,58 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       </div>;
       <div className="space-y-2">;
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
-        <Input
-          id="targetAudience"
+<<<<<<< HEAD
+        <Input;
+          id="targetAudience";
           value={targetAudience}
-          onChange={(e) => setTargetAudience(e && e.target.value)}
-          placeholder="e && e.g. Developers, Marketers, Startups";
+          onChange={(e) => setTargetAudience(e.target.value)}
+          placeholder="e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
-
         />;
       </div>;
-      <Button;
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder=&quot;Enter your product or service title&quot;
+          className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
+          disabled={isLoading}        />
+      </div>
+      <div className=&quot;space-y-2&quot;>
+        <label htmlFor=&quot;category&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Category</label>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <Input
+          id=&quot;category&quot;
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          placeholder=&quot;e.g. AI Tool, Digital Product, Service&quot;
+          className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
+          disabled={isLoading}        />
+      </div>
+      <div className=&quot;space-y-2&quot;>
+        <label htmlFor=&quot;keyFeatures&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Key Features (Optional)</label>
+        <Textarea
+          id=&quot;keyFeatures&quot;
+          value={keyFeatures}
+          onChange={(e) => setKeyFeatures(e.target.value)}
+          placeholder=&quot;Briefly describe the main features or benefits&quot;
+          className=&quot;bg-zion-blue border border-zion-blue-light text-white min-h-20&quot;
+          disabled={isLoading}        />
+      </div>
+      <div className=&quot;space-y-2&quot;>
+        <label htmlFor=&quot;targetAudience&quot; className=&quot;text-sm font-medium text-zion-slate-light&quot;>Target Audience (Optional)</label>
+        <Input
+          id=&quot;targetAudience&quot;
+          value={targetAudience}
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
+<<<<<<< HEAD
+      <Button;
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -216,7 +430,10 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content
           </>
         )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
       </div>;
       <Button
@@ -226,18 +443,134 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
         {isLoading ? (;
           <>Generating Optimized Content...</>;
         ) : (;
+          onChange={(e) => setTargetAudience(e.target.value)}
+          placeholder=&quot;e.g. Developers, Marketers, Startups&quot;
+          className=&quot;bg-zion-blue border border-zion-blue-light text-white&quot;
+          disabled={isLoading}
+        />;
+      </div>;
+      <Button ;
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
+      >;
+        {isLoading ? (;
+          <>Generating Optimized Content...</>;
+        ) :(;
           <>;
             <Sparkles className="h-4 w-4 mr-2" />;
             Generate Optimized Content;
           </>;
         )}
+
+
+<<<<<<< HEAD
+      </Button>;
+    </div>;
+  const handle_submit = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
+        variant: "destructive";
+      });
+      return;
+    }
+    on_submit ({
+      title;
+      category;
+      key_features;
+      target_audience;
+    });
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <div className="space - y-2">;
+        <label html_for="title" className="text - sm font - medium text - zion - slate - light">Title</label>;
+        <Input;
+          id="title";
+          value={title}
+          on_change={(e) => set_title (e.target.value)}
+          placeholder="Enter your product or service title";
+          className="bg - zion - blue border border - zion - blue - light text - white";
+          disabled={is_loading}
+        />;
+      </div>;
+      <div className="space - y-2">;
+        <label html_for="category" className="text - sm font - medium text - zion - slate - light">Category</label>;
+        <Input;
+          id="category";
+          value={category}
+          on_change={(e) => set_category (e.target.value)}
+          placeholder="e.g. AI Tool, Digital Product, Service";
+          className="bg - zion - blue border border - zion - blue - light text - white";
+          disabled={is_loading}
+        />;
+      </div>;
+      <div className="space - y-2">;
+        <label html_for="key_features" className="text - sm font - medium text - zion - slate - light">Key Features (Optional)</label>;
+        <Textarea;
+          id="key_features";
+          value={key_features}
+          on_change={(e) => setKeyFeatures (e.target.value)}
+          placeholder="Briefly describe the main features or benefits";
+          className="bg - zion - blue border border - zion - blue - light text - white min - h-20";
+          disabled={is_loading}
+        />;
+      </div>;
+      <div className="space - y-2">;
+        <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light">Target Audience (Optional)</label>;
+        <Input;
+          id="target_audience";
+          value={target_audience}
+          on_change={(e) => setTargetAudience (e.target.value)}
+          placeholder="e.g. Developers, Marketers, Startups";
+          className="bg - zion - blue border border - zion - blue - light text - white";
+          disabled={is_loading}
+        />;
+      </div>;
+      <Button;
+        on_click={handle_submit}
+        disabled={is_loading || !title || !category}
+        className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
+      >;
+        {is_loading ? (
+          <>Generating Optimized Content...</>) : (
+          <>;
+            <Sparkles className="h - 4 w - 4 mr - 2" />;
+            Generate Optimized Content;
+          </>)}
+      </Button>;
+    </div>);
+  ),;}export function AIListingForm ({
+  onSubmit, isLoading, initialValues = {
+  
+}
+}: AIListingFormProps) {
+  if (!title || !category) {
+  toast ({
+  return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
+}</Button> </div>) 
+}
+      </Button>
+    </div>
+  )
+}
 =======
-
-
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </Button>;
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import React, { useState } from './react';
@@ -274,3 +607,4 @@ function AIListingForm() {
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

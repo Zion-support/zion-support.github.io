@@ -9,4 +9,8 @@ const Dialog = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Dialog;
+=======
+export default Dialog;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

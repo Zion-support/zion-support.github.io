@@ -9,4 +9,8 @@ const MainNavigation.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MainNavigation.js;
+=======
+export default MainNavigation.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

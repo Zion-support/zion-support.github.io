@@ -9,4 +9,8 @@ const Webinars = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Webinars;
+=======
+export default Webinars;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

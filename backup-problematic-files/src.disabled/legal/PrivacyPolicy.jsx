@@ -9,4 +9,8 @@ const PrivacyPolicy = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PrivacyPolicy;
+=======
+export default PrivacyPolicy;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

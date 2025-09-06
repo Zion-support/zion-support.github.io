@@ -9,4 +9,8 @@ const UseOrders = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default UseOrders;
+=======
+export default UseOrders;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

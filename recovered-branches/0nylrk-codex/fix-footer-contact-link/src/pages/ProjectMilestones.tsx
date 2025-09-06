@@ -1,13 +1,25 @@
 
 
+<<<<<<< HEAD
+import React from 'react';
+import { SEO  } from '@/components/SEO';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
@@ -16,8 +28,11 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
 
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 function ProjectMilestones() {
   return (
     <ProtectedRoute>
@@ -25,6 +40,23 @@ function ProjectMilestones() {
 
         <SEO
           title="Payment Milestones | Zion AI Marketplace"
+<<<<<<< HEAD
+
+import React from 'react',;
+import { SEO } from '@/components/SEO',;
+import { AppHeader } from '@/layout/AppHeader',;
+import { Footer } from '@/components/Footer',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',;
+;
+function ProjectMilestones() {;
+  return (;
+    <ProtectedRoute>;
+      <>;
+        <SEO ;
+          title="Payment Milestones | Zion AI Marketplace" ;
+          description="Manage project payment milestones and deliverables";
+=======
 =======
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
@@ -57,20 +89,44 @@ function ProjectMilestones() {
           title="Payment Milestones | Zion AI Marketplace";
           description="Manage project payment milestones and deliverables";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         />;
         <AppHeader />;
         <ProjectMilestonesContent />;
         <Footer />;
       </>;
-
-
-
-=======
+<<<<<<< HEAD
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ProjectMilestones;
+
+export default ProjectMilestones;
+;
+    </ProtectedRoute>;
+  ),;
+}
+;
+export default ProjectMilestones,; <ProtectedRoute> <> <SEO title="Payment Milestones | Zion AI Marketplace" description="Manage project payment milestones and deliverables" /> <AppHeader /> <ProjectMilestonesContent /> <Footer /> </> </ProtectedRoute> export default ProjectMilestones;
+          description="Manage project payment milestones and deliverables"
+        />
+        <AppHeader />
+        <ProjectMilestonesContent />
+        <Footer />
+      </>
+    </ProtectedRoute>
+  )
+}
+
+;
+export default ProjectMilestones;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+;
+export default ProjectMilestones;
+<<<<<<< HEAD
+=======
 
 =======
     </ProtectedRoute>);
@@ -78,3 +134,4 @@ export default ProjectMilestones;
 export default ProjectMilestones;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

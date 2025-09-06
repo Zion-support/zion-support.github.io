@@ -9,4 +9,8 @@ const ModernUIEnhancer = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ModernUIEnhancer;
+=======
+export default ModernUIEnhancer;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

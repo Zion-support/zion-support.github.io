@@ -1,7 +1,13 @@
 {
-  "timestamp": "2025-09-05T23:46:02.066Z",
+  "timestamp": "2025-09-06T00:08:31.766Z",
   "metrics": {},
   "performanceIssues": [
+    {
+      "file": "/workspace/src/components/NewsletterSection.jsx",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
     {
       "file": "/workspace/src/utils/accessibility-checker.ts",
       "type": "console_statements",
@@ -9,13 +15,7 @@
       "message": "Console statements found (remove in production)"
     },
     {
-      "file": "/workspace/src/utils/accessibility-checker.ts",
-      "type": "dom_manipulation",
-      "severity": "warning",
-      "message": "Direct DOM manipulation detected (use React refs instead)"
-    },
-    {
-      "file": "/workspace/src/utils/env-polyfill.ts",
+      "file": "/workspace/src/utils/authUtils.ts",
       "type": "console_statements",
       "severity": "info",
       "message": "Console statements found (remove in production)"
@@ -33,91 +33,25 @@
       "message": "Console statements found (remove in production)"
     },
     {
+      "file": "/workspace/src/utils/productionLogger.ts",
+      "type": "console_statements",
+      "severity": "info",
+      "message": "Console statements found (remove in production)"
+    },
+    {
       "file": "/workspace/src/utils/seo-optimizer.ts",
       "type": "console_statements",
       "severity": "info",
       "message": "Console statements found (remove in production)"
     },
     {
-      "file": "/workspace/src/utils/serverless-polyfill.ts",
+      "file": "/workspace/pages/quote.tsx",
       "type": "console_statements",
       "severity": "info",
       "message": "Console statements found (remove in production)"
     },
     {
-      "file": "/workspace/pages/api/livekit/room.ts",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/pages/index.tsx",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/ContactForm.tsx",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/PerformanceOptimizer.tsx",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/api/events/expo/claim.ts",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/api/events/expo/email-summary.ts",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/api/request-to-hire.ts",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/api-rate-limiter.tsx",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/apps/extension/public/popup.js",
-      "type": "dom_manipulation",
-      "severity": "warning",
-      "message": "Direct DOM manipulation detected (use React refs instead)"
-    },
-    {
-      "file": "/workspace/components/apps/extension/scripts/generate-icons.js",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/apps/slack-bot/src/index.ts",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/broken/MobileOptimizer.tsx",
-      "type": "console_statements",
-      "severity": "info",
-      "message": "Console statements found (remove in production)"
-    },
-    {
-      "file": "/workspace/components/calls/Controls.tsx",
+      "file": "/workspace/components/PerformanceMonitor.tsx",
       "type": "console_statements",
       "severity": "info",
       "message": "Console statements found (remove in production)"
@@ -134,10 +68,10 @@
   "summary": {
     "buildTime": 0,
     "bundleSize": 0,
-    "totalIssues": 20,
+    "totalIssues": 9,
     "criticalIssues": 0,
-    "warnings": 2,
-    "info": 18,
+    "warnings": 0,
+    "info": 9,
     "totalOptimizations": 1
   }
 }

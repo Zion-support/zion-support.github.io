@@ -9,4 +9,8 @@ const Help = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Help;
+=======
+export default Help;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

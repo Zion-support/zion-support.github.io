@@ -1,11 +1,21 @@
 
 
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
 } from 'lucide-react'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -14,8 +24,11 @@ import {
 } from 'lucide-react',;
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const contactInfo = {
 
   mobile: '+1 302 464 0950',
@@ -26,12 +39,20 @@ const contactInfo = {
 }
 export default function Pricing2033Page() {
 
+<<<<<<< HEAD
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+}
+export default function Pricing2033Page() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
   // Enhanced service categories with pricing
   const serviceCategories = [
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -55,12 +76,77 @@ function Pricing2033Page() {
   // Enhanced service categories with pricing;
   const service_categories = [;
 
+<<<<<<< HEAD
+  // Enhanced service categories with pricing
+  const _serviceCategories = [
+
     {
+      name: 'Revolutionary AI Services'
+      description: 'AI consciousness evolution and emotional intelligence'
+      services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager']
+      avgPrice: '$11,499/month'
+      savings: 'Save 60-80% vs. competitors'
+      icon: Brain
+      color: 'from-violet-500 to-purple-500'
+    }
+    {
+      name: 'Quantum & Emerging Tech'
+      description: 'Quantum computing and DNA-based solutions'
+      services: ['Quantum DNA ComputingQuantum Internet SecurityQuantum Financial TradingQuantum Creativity Studio']
+      avgPrice: '$19,999/month'
+      savings: 'Save 70-85% vs. competitors'
+      icon: Atom
+      color: 'from-indigo-500 to-blue-500'
+    }
+    {
+      name: 'Enterprise IT Solutions'
+      description: 'Autonomous operations and zero-trust security'
+      services: ['Autonomous DevOpsZero Trust ArchitectureEdge Computing OrchestrationAI IT Operations Center']
+      avgPrice: '$649/month'
+      savings: 'Save 50-70% vs. competitors'
+      icon: Cpu
+      color: 'from-blue-500 to-cyan-500'
+    }
+    {
+      name: 'Space & Metaverse Tech'
+      description: 'Space mining and metaverse development'
+      services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events']
+      avgPrice: '$14,999/month'
+      savings: 'Save 65-80% vs. competitors'
+      icon: Rocket
+      color: 'from-teal-500 to-emerald-500'
+    }
+    {
+      name: 'Innovative Micro SAAS'
+      description: 'Cutting-edge solutions for every business'
+      services: ['AI Business IntelligenceQuantum-Secure CommunicationAI Customer SuccessBlockchain Supply Chain']
+      avgPrice: '$374/month'
+      savings: 'Save 40-60% vs. competitors'
+      icon: Target
+      color: 'from-green-500 to-yellow-500'
+    }
+    {
+      name: 'Research & Development'
+      description: 'Breakthrough technologies and innovations'
+      services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation']
+      avgPrice: '$1,099/month'
+      savings: 'Save 55-75% vs. competitors'
+      icon: Microscope
+      color: 'from-orange-500 to-red-500'
+    }
+=======
+    {
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
 
 
+<<<<<<< HEAD
+  ]
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -70,15 +156,23 @@ function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features';
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'API Access (1000 calls/month)Community Support'
       ]
       popular: false
       color: 'from-gray-500 to-gray-600'
+<<<<<<< HEAD
+    };
+=======
 
     };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -86,15 +180,23 @@ function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
+        'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting'
       ]
       popular: true
       color: 'from-purple-500 to-cyan-500'
+<<<<<<< HEAD
+    };
+=======
 
     };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -102,15 +204,31 @@ function Pricing2033Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
+        'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features';
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees'
       ]
       popular: false
       color: 'from-blue-500 to-indigo-500'
     }
+<<<<<<< HEAD
+  ];
+  // Popular services with pricing
+  const popularServices = [
+    {
+      name: 'AI Consciousness Evolution Platform',
+      price: '$24,999/month',
+    description: 'Develop genuine AI consciousness through advanced neural architecture',
+      category: 'AI & Consciousness',
+      features: ['Multi-dimensional consciousness mappingEmotional intelligence evolutionSelf-awareness development'],
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       savings: 'Save 70% vs. competitors'
     }
     {
@@ -139,11 +257,16 @@ function Pricing2033Page() {
     }
 
 
+<<<<<<< HEAD
+  ]
+
+=======
 
 =======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -308,11 +431,14 @@ export default function Pricing2033Page(req, res) {
   }
 }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
+<<<<<<< HEAD
+  ],
+  ],
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Head>
@@ -333,22 +459,34 @@ export default function Pricing2033Page(req, res) {
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
 
+<<<<<<< HEAD
+        {/* Header */}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <motion.div
 
+<<<<<<< HEAD
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -359,9 +497,12 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -370,7 +511,12 @@ export default function Pricing2033Page(req, res) {
               </motion.div>
               <motion.h1
 
+<<<<<<< HEAD
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -381,9 +527,12 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
@@ -392,7 +541,10 @@ export default function Pricing2033Page(req, res) {
                 <span className="text-white">Pricing</span>
               </motion.h1>
               <motion.p
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -425,7 +577,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
@@ -435,8 +586,16 @@ export default function Pricing2033Page(req, res) {
                   <div
                     className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
+<<<<<<< HEAD
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
+              </motion.p>
 =======
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       avg_price: '$11, 499 / month',
       savings: 'Save 60 - 80% vs. competitors',
       icon: Brain,
@@ -464,7 +623,7 @@ export default function Pricing2033Page(req, res) {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
       services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],
-      avg_price: '$14, 999 / month',
+avg_price: '$14, 999 / month',
       savings: 'Save 65 - 80% vs. competitors',
       icon: Rocket,
       color: 'from - teal - 500 to - emerald - 500';
@@ -482,7 +641,7 @@ export default function Pricing2033Page(req, res) {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
       services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],
-      avg_price: '$1, 099 / month',
+avg_price: '$1, 099 / month',
       savings: 'Save 55 - 75% vs. competitors',
       icon: Microscope,
       color: 'from - orange - 500 to - red - 500';
@@ -506,7 +665,7 @@ export default function Pricing2033Page(req, res) {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billing_cycle === 'monthly' ? 299 : 239,
+price: billing_cycle === 'monthly' ? 299 : 239,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -519,7 +678,7 @@ export default function Pricing2033Page(req, res) {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billing_cycle === 'monthly' ? 999 : 799,
+price: billing_cycle === 'monthly' ? 999 : 799,
       period: billing_cycle === 'monthly' ? '/month' : '/month',
       savings: billing_cycle === 'yearly' ? 'Save 20%' : '',
       features: [;
@@ -614,8 +773,10 @@ export default function Pricing2033Page(req, res) {
                 transition={{ duration: 0.6, delay: 0.2 }} className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed mb - 8">;
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.;
               </motion.p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Billing Toggle */}
+<<<<<<< HEAD
+                    }`}
+=======
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 animate={{ opacity: 1, coordinate_y: 0 }}
@@ -631,6 +792,7 @@ export default function Pricing2033Page(req, res) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }`}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </button>;
                 <span className={`text - sm ${billing_cycle === 'yearly' ? 'text - white' : 'text - gray - 400'}`}>;
@@ -643,32 +805,34 @@ export default function Pricing2033Page(req, res) {
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
 
         {/* Pricing Tiers */}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
-        {/* Pricing Tiers */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
+<<<<<<< HEAD
+        {/* Pricing Tiers */}
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="relative py - 20">;
           <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 via - transparent to - cyan - 500 / 5"></div>;
           <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
               {pricing_tiers.map ((tier, index) => (
                 <motion.div;
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={tier.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -679,16 +843,127 @@ export default function Pricing2033Page(req, res) {
                 >;
                   {tier.popular && (
 
+<<<<<<< HEAD
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+                Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
+              </motion.p>
+              {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <motion.div;
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
+                <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+                  Monthly
+                </span>
+                <button
+                  onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')} className="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200">
+                  <div
+                    className={`w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transition-transform duration-200 ${
+                      billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-0'
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  />
+                </button>
+                <span className={`text-sm ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
+                  Yearly
+                  <span className="ml-2 px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+                    Save 20%
+                  </span>
+                </span>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+        {/* Pricing Tiers */}
+        {/* Pricing Tiers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="relative py-20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingTiers.map((tier, index) => (
+                <motion.div
+                  key={tier.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`relative ${;
+                    tier.popular ? 'scale-105' : '';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full">
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+=======
 
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className={`relative bg-gray-900/50 border border-purple-500/30 rounded-2xl p-8 h-full backdrop-blur-sm ${
                     tier.popular ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' : ''
                   }`}>
@@ -702,15 +977,22 @@ export default function Pricing2033Page(req, res) {
                       {tier.savings && (
                         <div className="text-green-400 text-sm font-medium">{tier.savings}</div>
 
+<<<<<<< HEAD
+                      )}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </div>
                     <ul className="space-y-4 mb-8">
                       {tier.features.map((feature, idx) => (
@@ -719,7 +1001,29 @@ export default function Pricing2033Page(req, res) {
                           <span className="text-gray-300">{feature}</span>
                         </li>
 
+<<<<<<< HEAD
+                      ))}
+                    </ul>
+                    <button
+                      onClick={() => setSelectedPlan(tier.name)}
+                      className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
+                        tier.popular
+                          ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 shadow-lg'
+                          : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-purple-500/30'
+                      }`}
+                    >
+                      Get Started
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Service Categories Pricing */}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -759,9 +1063,12 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -777,7 +1084,13 @@ export default function Pricing2033Page(req, res) {
               {serviceCategories.map((category, index) => (
                 <motion.div
 
+<<<<<<< HEAD
+                  key={category.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -793,9 +1106,12 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -816,16 +1132,34 @@ export default function Pricing2033Page(req, res) {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
                       </li>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>
                   <a
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
 
+<<<<<<< HEAD
+                  </Link>
+                </motion.div>
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Popular Services */}
+                  </Link>
+                </motion.div>
+=======
 
                   </Link>
                 </motion.div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -839,9 +1173,12 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -856,7 +1193,10 @@ export default function Pricing2033Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                   key={service.name  } catch (error) {
     console.error("Error:", error);
@@ -875,7 +1215,6 @@ export default function Pricing2033Page(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -883,6 +1222,8 @@ export default function Pricing2033Page(req, res) {
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
 
+<<<<<<< HEAD
+=======
 =======
                     <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                       <div className="px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - cyan - 600 text - white text - sm font - medium rounded - full">;
@@ -988,6 +1329,7 @@ export default function Pricing2033Page(req, res) {
               {popular_services.map ((service, index) => (
                 <motion.div;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   key={service.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -997,18 +1339,50 @@ export default function Pricing2033Page(req, res) {
                       <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
                       <p className="text - gray - 400 text - sm mb - 3">{service.description}</p>;
                       <div className="inline - flex items - center px - 3 py - 1 bg - purple - 500 / 20 text - purple - 300 text - xs rounded - full">;
+<<<<<<< HEAD
+                        {service.category}
+                  key={service.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  key={service.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                      <p className="text-gray-400 text-sm mb-3">{service.description}</p>
+                      <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
+                        {service.category}
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {service.category}
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         {service.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </div>
                     </div>
                     <div className="text-right ml-4">
@@ -1022,10 +1396,17 @@ export default function Pricing2033Page(req, res) {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <div className="flex space-x-3">
                     <a
                       href="/contact" className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 text-center">
@@ -1038,7 +1419,15 @@ export default function Pricing2033Page(req, res) {
                   </div>
                 </motion.div>
 
+<<<<<<< HEAD
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Call to Action */}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1052,9 +1441,12 @@ export default function Pricing2033Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1066,7 +1458,12 @@ export default function Pricing2033Page(req, res) {
 
 
 
+<<<<<<< HEAD
+                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions. 
+                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions.
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -1075,11 +1472,19 @@ export default function Pricing2033Page(req, res) {
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
 
+<<<<<<< HEAD
+                </Link>
+
+
+                </a>
+                </Link>
+=======
 
                 </Link>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
                   <Phone className="w-5 h-5 mr-2 inline" />
@@ -1087,15 +1492,22 @@ export default function Pricing2033Page(req, res) {
                 </a>
               </div>
 
+<<<<<<< HEAD
+              {/* Contact Info */}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
@@ -1117,10 +1529,24 @@ export default function Pricing2033Page(req, res) {
         </div>
       </div>
     </>
-
-=======
+<<<<<<< HEAD
 }
 
+  );
+};
+  )
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+<<<<<<< HEAD
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+=======
 =======
                       </div>;
                     </div>;
@@ -1203,3 +1629,4 @@ export default function Pricing2033Page(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

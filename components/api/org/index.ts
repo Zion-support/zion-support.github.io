@@ -1,4 +1,39 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+
+  }
+
+  };
+  const data = readOrgData();
+
+import {readOrgData, filterOrgData} from '../../../utils/org-data';
+import type { OrgFilters, RoleType } from '../../../types/org';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {;
+    return res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+  };
+  const data = readOrgData();
+
+  const data = readOrgData();
+  const parseArray = (v?: string | string[]) => {
+    if (!v) return undefined;
+    view: (req && req.query.view as OrgFilters['view']) || 'all',
+    roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined,
+    departments: parseArray(req && req.query.departments),
+    categories: parseArray(req && req.query.categories),
+    zones: parseArray(req && req.query.zones),
+    regions: parseArray(req && req.query.regions),
+    countries: parseArray(req && req.query.countries),
+    search: (req && req.query.search as string) || undefined,
+    teamOnly: req && req.query.teamOnly === 'true' ? true : undefined,  };
+    return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
+  };
+=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -15,12 +50,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
     roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
@@ -31,19 +68,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     countries: parseArray(req && req.query.countries);
     search: (req && req.query.search as string) || undefined,
     teamOnly: req && req.query.teamOnly === 'true' ? true : undefined};
-
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);
   };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
 
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -108,8 +145,14 @@ const filters: OrgFilters = {
 ;
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
+
 }
+<<<<<<< HEAD
+
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

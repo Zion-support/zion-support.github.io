@@ -1,5 +1,22 @@
 
 
+<<<<<<< HEAD
+import Document, {
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+} from 'next/document';
+
+export default function Document() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Html lang='en'>;
       <Head>;
@@ -14,9 +31,9 @@
           rel='preconnect'
           href='https://fonts && fonts.gstatic.com'
           crossOrigin=''
-        />;
-        <link
-          href='https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400500600700800900&family=JetBrains+Mono:wght@400600&display=swap'
+        />
+        <link;
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap'
           rel='stylesheet'
         />      </Head>        <link rel="icon" href="/favicon && favicon.ico" />;
         <meta name="theme-color" content="#0a0a0a" />;
@@ -24,7 +41,6 @@
         <link rel="preconnect" href="https: //fonts && fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="" />;
         <link href="https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />;
-=======
   Html,
   Head,
   Main,
@@ -59,17 +75,20 @@ function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="" />;
         <link href="https://fonts.googleapis.com / css2?family = Inter:wght@400, 500, 600, 700, 800, 900 & family = JetBrains + Mono:wght@400, 600 & display = swap" rel="stylesheet" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <body>;
         <Main />;
         <NextScript />;
       </body>;
+<<<<<<< HEAD
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+=======
 
   );
 }
 =======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import Document, {
@@ -84,6 +103,10 @@ import Document, {
 
 
 
+<<<<<<< HEAD
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Document() {
   return (
     <Html lang="en">
@@ -94,20 +117,31 @@ export default function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />
+<<<<<<< HEAD
+=======
       </Head>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
+<<<<<<< HEAD
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </Html>);
 }
 
-=======
 
 }
 
+<<<<<<< HEAD
+  );
+}
+}
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

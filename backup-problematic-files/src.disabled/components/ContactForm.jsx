@@ -9,4 +9,8 @@ const ContactForm = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactForm;
+=======
+export default ContactForm;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

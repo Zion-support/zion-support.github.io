@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+"autoMerge"
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -580,6 +583,7 @@ gitAutomation.start().catch(console.error);
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       "autoMerge"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       "conflictResolution"
       "branchProtection"
       "mergeStrategy"
@@ -650,6 +654,10 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
 <<<<<<< HEAD
+      console.error('Error loading "history")
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       console.error('Error loading "history")
@@ -657,6 +665,8 @@ gitAutomation.start().catch(console.error);
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -681,3 +691,7 @@ gitAutomation.start().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

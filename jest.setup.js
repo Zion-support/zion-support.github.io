@@ -1,9 +1,16 @@
+<<<<<<< HEAD
+require("@testing-library/jest-dom");
+require("@testing-library/jest-dom");
+import "@testing-library/jest-dom";
+
+=======
 
 
 import "@testing-library/jest-dom";
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -19,6 +26,8 @@ jest.mock("next/router", () => ({
       prefetch: jest.fn().mockResolvedValue(undefined)
       beforePopState: jest.fn()
       events: {
+<<<<<<< HEAD
+=======
 
 import "@testing-library/jest-dom";
 
@@ -41,6 +50,7 @@ jest && jest.mock("next/router", () => ({
         off: jest && jest.fn(),
         emit: jest && jest.fn(),
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         on: jest.fn(),
         off: jest.fn(),
@@ -53,7 +63,6 @@ jest && jest.mock("next/router", () => ({
 }));
 
 
-=======
 
 
 // Mock Next.js Image component
@@ -70,19 +79,59 @@ jest && jest.mock("next/link", () => {
         {children}
       </a>
     );
-=======
     return React.createElement("a", { href, ...props }, children);
 
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
 
 
 
+<<<<<<< HEAD
+on: jest.fn()
+        on: jest.fn()
+        off: jest.fn()
+        emit: jest.fn()
+      }
+      isFallback: false
+    }
+  }
+}));
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
+    };
+  },
+}));
+
+// Mock Next.js Image component
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt, ...props }) {
+    return <img src={src} alt={alt} {...props} />;
+  }
+});
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockLink({ children, href, ...props }) {
+    return <a href={href} {...props}>{children}</a>;
+  }
+});
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true
   value: jest.fn().mockImplementation(query => ({
+<<<<<<< HEAD
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn()
+    removeListener: jest.fn()
+    addEventListener: jest.fn()
+    removeEventListener: jest.fn()
+=======
 
     matches: false,
     media: query,
@@ -92,6 +141,7 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     dispatchEvent: jest.fn()
   }))
 });
@@ -108,6 +158,11 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
+};
+
+// Global test setup,
+=======
 
     return <img src={src} alt={alt} {...props} />;
 
@@ -116,21 +171,63 @@ global.ResizeObserver = class ResizeObserver {
 
 // Global test setup,
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 // Global test setup
 
 
+<<<<<<< HEAD
+=======
 =======
 
 =======
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 beforeEach(() => {
   jest.clearAllMocks();
 
 
+<<<<<<< HEAD
+};
+
+// Global test setup,
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+beforeEach(() => {
+  jest.clearAllMocks();
+
+origin/main
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+ursor/integrate-build-improve-and-re-verify-8f7d
+beforeEach(() => {
+  jest.clearAllMocks();
+ursor/fix-lint-push-and-merge-to-main-ae4e
+});
+// Mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+ursor/fix-syntax-push-and-merge-to-main-40de
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -140,12 +237,21 @@ beforeEach(() => {
     "dispatchEvent": jest.fn()}))});
 
 
+<<<<<<< HEAD
+
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
 =======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 // Global test setup
 beforeEach(() => {
@@ -156,6 +262,16 @@ beforeEach(() => {
 
 });
 
+<<<<<<< HEAD
+});
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+});
+origin/main
+origin/automation-improvements-final
+});
+  };
+=======
 =======
 
 >>>>>>> origin/automation-improvements-final
@@ -163,11 +279,23 @@ beforeEach(() => {
 });
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 });
 
 
 // Mock Next.js Link component
+<<<<<<< HEAD
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 jest.mock('next/link', () => ({
   _esModule: true,
   default: ({ children, href, ...props }) => {
@@ -177,6 +305,28 @@ jest.mock('next/link', () => ({
 // Mock window.matchMedia,Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
+<<<<<<< HEAD
+import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
+
+});
+
+  };
+});
+
+// Mock Next.js Link component
+jest.mock("next/link", () => ({
+  _esModule: true,
+  default: ({ children, href, ...props }) => {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+};
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     matches: false,
     media: query,
     onchange: null,
@@ -184,7 +334,11 @@ jest.mock('next/link', () => ({
 removeListener: jest.fn(), // deprecated,
 addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
+<<<<<<< HEAD
+dispatchEvent: jest.fn()
+=======
     dispatchEvent: jest.fn()
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }))
 }),
 // Mock IntersectionObserver,
@@ -208,7 +362,10 @@ jest.clearAllMocks()
 beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
-
+ursor/fix-lint-push-and-merge-to-main-ae4e
 });
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

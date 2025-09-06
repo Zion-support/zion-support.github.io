@@ -9,4 +9,8 @@ const Settings = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Settings;
+=======
+export default Settings;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import { Resume  } from '@/types / resume';
 
 export interface ResumeOption {
+<<<<<<< HEAD
+import { Resume } from "@/types/resume";
+export interface ResumeOption {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -12,12 +20,15 @@ export interface ResumeOption {
 export interface ResumeSelectorProps {
 
 
-
+<<<<<<< HEAD
 =======
 
 =======
 
+=======
 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
@@ -35,6 +46,12 @@ export interface ResumeOption {;
 }
 ;
 
+<<<<<<< HEAD
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+  onResumeSelected: (resume_option: ResumeOption) => void;
+export interface ResumeSelectorProps {;
+  onResumeSelected: (resumeOption: ResumeOption) => void;
+=======
 export interface ResumeSelectorProps {;
 
 
@@ -43,4 +60,5 @@ export interface ResumeSelectorProps {;
 =======
   onResumeSelected: (resume_option: ResumeOption) => void;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

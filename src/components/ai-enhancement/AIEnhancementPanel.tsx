@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+
+import React, { useState } from 'react'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardFooter
+import React, { useState } from 'react'
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,;
+  CardFooter;
+} from '@/components/ui/card'; import React, { useState } from 'react'
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
+  useAIContentEnhancer
+  AIEnhancementOptions
+} from '@/hooks/useAIContentEnhancer'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useState } from 'react';
 import {;
   Card,;
@@ -16,12 +43,56 @@ import {;
   AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
 
+<<<<<<< HEAD
+interface AIEnhancementPanelProps {
+=======
 interface AIEnhancementPanelProps {;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
+  initialContent?: string
+export function AIEnhancementPanel({
+
+  title
+  defaultOptions
+  onApply
+  onClose
+  showInstructions = true
+  initialContent = ''
+}: AIEnhancementPanelProps) {
+  const [options, setOptions] = useState<AIEnhancementOptions>({
+    ...defaultOptions
+    content: initialContent |defaultOptions.content
+  })
+  const [generatedContent, setGeneratedContent] = useState<string>('')
+  const [copied, setCopied] = useState(false)
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
+  const handleGenerate = async () => {
+    const result = await enhanceContent(options)
+    if (result) {
+      setGeneratedContent(result)
+    }
+  }
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;
+=======
 
 import React, { useState } from 'react';
 import {
@@ -90,11 +161,14 @@ if ( {) {
 
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title,;
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
+<<<<<<< HEAD
+=======
   initialContent = '',;
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -112,6 +186,7 @@ export function AIEnhancementPanel(): any ({;
     }
   };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
@@ -130,6 +205,21 @@ export function AIEnhancementPanel(): any ({;
         </div>;
 
 
+  initialContent = '';
+}: AIEnhancementPanelProps) {;
+  const [options, setOptions] = useState<AIEnhancementOptions>({;
+    ...defaultOptions,;
+    content: initialContent || defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>(''),;
+  const [copied, setCopied] = useState(false),;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const handleGenerate = async () => {;
+    const result = await enhanceContent(options),;
+    if (result) {;
+      setGeneratedContent(result);
+    }
+  },
+
 
 
   const handleInputChange = (
@@ -137,8 +227,47 @@ export function AIEnhancementPanel(): any ({;
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
+      ...options
+      [field]: e.target.value
+      [field]: e.target.value,
+      ...options
+      [field]: e.target.value
+      ...options,
+    })
+  }
+  const handleApply = () => {
+    onApply(generatedContent)
+    if (onClose) onClose()
+  }
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+      ...options,
+      [field]: e.target.value})
+  },
 
       ...options,
+      [field]: e.target.value})
+  },
+
+  const handleApply = () => {
+    onApply(generatedContent),
+    if (onClose) onClose()
+  },
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
+  return (
+=======
+
+      ...options,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -156,7 +285,25 @@ export function AIEnhancementPanel(): any ({;
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
+<<<<<<< HEAD
+            placeholder='Enter your content to enhance...'
+            className='min-h-[100px]'
+            value={options.content}
+            onChange={e => handleInputChange(e, 'content')}          />
+        </div>
+        {/* Context input */}
+        <div className='space-y-2'>
+          <label className='text-sm font-medium'>Context (optional)</label>
+          <Textarea
+            placeholder='Add any relevant context to guide the AI...'
+            className='min-h-[60px]'
+            value={options.context}
+            onChange={e => handleInputChange(e, 'context')}          />
+        </div>
+          disabled={isEnhancing |(!options.content && !options.context)}        >
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -175,6 +322,22 @@ export function AIEnhancementPanel(): any ({;
         </div>;
 
         {/* Instructions input (optional) */}
+<<<<<<< HEAD
+        {showInstructions && (
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Special instructions (optional)</label>
+            <Input
+              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              value={options.instructions}
+              onChange={e => handleInputChange(e, 'instructions')}            />
+          </div>
+        )}
+        {/* Generate button */}
+        <Button
+          onClick={handleGenerate}
+          className='w-full'
+          disabled={isEnhancing |(!options.content && !options.context)}        >
+=======
         {showInstructions && (;
           <div className='space-y-2'>;
             <label className='text-sm font-medium'>;
@@ -185,6 +348,7 @@ export function AIEnhancementPanel(): any ({;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
               onChange={(e) => handleInputChange(e, 'instructions')}
@@ -198,17 +362,31 @@ export function AIEnhancementPanel(): any ({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+          {isEnhancing ? (
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           {isEnhancing ? (
             <>
+<<<<<<< HEAD
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+=======
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Enhancing...
             </>
           ) : (
             <>
+<<<<<<< HEAD
+              <Sparkles className="mr-2 h-4 w-4" />
+=======
               <Sparkles className='mr-2 h-4 w-4' />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Generate Enhanced Content
             </>
           )}
@@ -228,9 +406,29 @@ export function AIEnhancementPanel(): any ({;
         </Button>;
 
         {/* Output area */}
-
         {generatedContent && (
+<<<<<<< HEAD
+          <div className='space-y-2 mt-4'>
+            <div className='flex justify-between items-center'>
+              <label className='text-sm font-medium'>Generated content</label>
+              <Button
+                variant='ghost'
+                size='sm'
+                onClick={handleCopy}
+                className='h-8'              >
+                onChange={e => setGeneratedContent(e.target.value)}
+                className='min-h-[200px]'              />
+          </div>
+        )}
+      </CardContent>
+        <CardFooter className="flex justify-between">
+ursor/fix-website-loading-errors-and-merge-6662
+      {generatedContent && (
+        <CardFooter className='flex justify-between'>
+            <Button variant='outline' onClick={onClose}>
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="space-y-2 mt-4">
             <div className="flex justify-between items-center">
               <label className="text-sm font-medium">Generated content</label>
@@ -240,13 +438,32 @@ export function AIEnhancementPanel(): any ({;
                 onClick={handleCopy}
                 className="h-8"
               >
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
+<<<<<<< HEAD
+              </Button>
+            </div>
+            <div className="relative">
+              <Textarea
+                value={generatedContent}
+                onChange={e => setGeneratedContent(e.target.value)}
+                className='min-h-[200px]'              />
+                onChange={(e) => setGeneratedContent(e.target.value)}
+                className="min-h-[200px]"
+              />
+            </div>
+          </div>
+        )}
+      </CardContent>
+=======
               </Button>;
             </div>;
             <div className='relative'>;
@@ -264,13 +481,20 @@ export function AIEnhancementPanel(): any ({;
         )}
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
 
       {generatedContent && (
+<<<<<<< HEAD
+        <CardFooter className="flex justify-between">
+          {onClose && (
+            <Button variant="outline" onClick={onClose}>
+=======
         <CardFooter className='flex justify-between'>
           {onClose && (
             <Button variant='outline' onClick={onClose}>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               Cancel
             </Button>
       </CardContent>;
@@ -282,7 +506,14 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-
+          <Button onClick={handleApply}>Apply to Form</Button>
+        </CardFooter>
+          <Button onClick={handleApply}>Apply to Form</Button>
+        </CardFooter>
+      )}
+    </Card>
+  )
+}
     </Card>;
   );
 }
@@ -381,7 +612,10 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
@@ -390,4 +624,8 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

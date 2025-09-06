@@ -9,4 +9,8 @@ const ChatMessage.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ChatMessage.js;
+=======
+export default ChatMessage.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

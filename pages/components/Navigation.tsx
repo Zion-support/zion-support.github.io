@@ -1,4 +1,15 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 import React, { useState } from "react";
@@ -12,9 +23,28 @@ import { motion  } from './framer-motion';
 import {
 
 
+<<<<<<< HEAD
+  ArrowRight,
+  Award,
+  BarChart3,
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   BookOpen,
   Brain,
   Building,
@@ -49,7 +79,10 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   ArrowRight,;
   Award,;
@@ -92,10 +125,25 @@ import {;
   Users,;
   X,;
   Zap,;
+<<<<<<< HEAD
+} from "lucide-react";
+ursor/integrate-build-improve-and-re-verify-8f7d
+  Truck,
+  Users,
+  X,
+  Zap,;
+} from "lucide-react";
+
+  Truck,
+  Users,
+  X,
+  Zap
+=======
 
 } from "lucide-react";
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Clock,
   DollarSign,
   Cpu,
@@ -134,20 +182,37 @@ import {;
   Clock as Time,
   DollarSign as Money;
 
+<<<<<<< HEAD
+=======
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
 
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 } from 'lucide-react';
 
 
+<<<<<<< HEAD
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+} from 'lucide-react';
+origin/automation-improvements-final
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+=======
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   ArrowRight
   Award
   BarChart3
@@ -193,8 +258,12 @@ import {;
 
 
 
+<<<<<<< HEAD
+origin/main
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const navigationItems = [
   {
     title: "Services"
@@ -222,7 +291,6 @@ const navigationItems = [
         description: "40+ innovative micro SaaS solutions"
         popular: true
       }
-=======
 } from './lucide-react';
 ;
 const navigation_items = [;
@@ -252,7 +320,6 @@ const navigation_items = [;
         description: "40+ innovative micro SaaS solutions",
         popular: true,
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         title: "Cybersecurity"
         href: "/cybersecurity"
@@ -261,7 +328,10 @@ const navigation_items = [;
         popular: false
       }
       {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Cloud Solutions",
         href: "/cloud - solutions",
         icon: Cloud,
@@ -356,7 +426,10 @@ const navigation_items = [;
     href: "/resources",
     icon: FileText,
     submenu: [;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         title: "Blog"
         href: "/blog"
@@ -364,7 +437,10 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         title: "Case Studies",
         href: "/case - studies",
         icon: BarChart3,
@@ -382,7 +458,10 @@ const navigation_items = [;
         icon: BookOpen,
         description: "Step - by - step guides",
       },
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         title: "FileTextation"
         href: "/docs"
@@ -392,12 +471,18 @@ const navigation_items = [;
     ]
   }
   {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     title: "Company",
     href: "/about",
     icon: Building,
     submenu: [;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {
         title: "About Us"
         href: "/about"
@@ -437,7 +522,10 @@ const navigation_items = [;
     ]
   }
 ];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const navigationItems = [;
   {;
     title: "Services",;
@@ -643,21 +731,12 @@ const navigationItems = [;
     ],;
   },;
 ];
-
-const quickLinks = [;
-  { title: "Pricing", href: "/pricing", icon: DollarSign },;
-  { title: "Contact", href: "/contact", icon: Phone },;
-  { title: "Support", href: "/support", icon: MessageSquare },;
-  { title: "Status", href: "/status", icon: BarChart3 },;
-  { title: "Quote", href: "/quote", icon: FileText },;
-  { title: "API Docs", href: "/api-docs", icon: Code },;
-];
+export default function Navigation() {
 
 export default function Navigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -668,7 +747,15 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 
+<<<<<<< HEAD
+export default function Navigation() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+
+const Navigation: React.FC<NavigationProps> = ({ className }) => {
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -693,9 +780,11 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
-
-                className="hover:text-blue-200 transition-colors">;
+<<<<<<< HEAD
 =======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                className="hover:text-blue-200 transition-colors">;
 ;
 const quick_links = [;
   { title: "Pricing", href: "/pricing", icon: DollarSign },
@@ -740,14 +829,20 @@ function Navigation() {
                 href="/pricing";
                 className="hover:text - blue - 200 transition - colors";
               >;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Link href="/" className="flex items-center space-x-2">;
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
               <span className="text-white font-bold text-xl">Z</span>;
@@ -757,7 +852,6 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text-sm text-gray-500">;
-=======
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
@@ -771,20 +865,29 @@ function Navigation() {
                 Zion Tech Group;
               </div>;
               <div className="text - sm text - gray - 500">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   href={item && item.href}
                   className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
                   <item && item.icon className="w-5 h-5" />;
                   <span>{item && item.title}</span>;
                   <ChevronDown className="w-4 h-4" />;
                 </Link>;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -833,22 +936,32 @@ function Navigation() {
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
+<<<<<<< HEAD
+            </div>;
+          </div>;
+=======
 
             </div>;
           </div>;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
+          </button>;
+        </div>;
+=======
 
           </button>;
         </div>;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div
@@ -909,7 +1022,6 @@ function Navigation() {
       </div>;
     </nav>;
   );
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
             {navigation_items.map ((item) => (
@@ -1038,5 +1150,4 @@ function Navigation() {
           </motion.div>)}
       </div>;
     </nav>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

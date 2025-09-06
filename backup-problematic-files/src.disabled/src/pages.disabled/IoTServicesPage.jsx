@@ -9,4 +9,8 @@ const IoTServicesPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default IoTServicesPage;
+=======
+export default IoTServicesPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

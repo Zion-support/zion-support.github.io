@@ -1,21 +1,50 @@
+<<<<<<< HEAD
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixImportSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =;
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists;
+      const fixedImports = imports.replace(/;/g, ",");
+      return match.replace(imports, fixedImports);
+    });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
     // Fix missing commas in import statements;
 
 
+<<<<<<< HEAD
+    // Fix missing commas in import statements
+
+    // Fix missing commas in import statements;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content && content.replace(importCommaRegex, (match, imports) => {
+    content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-        .filter((item) => item ;
-      return match && match.replace(imports, fixedImports);
+        .filter((item) => item.trim());
+        .join(", ");
+      return match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
+<<<<<<< HEAD
+    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+=======
 
     content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Fix function parameter syntax errors
     content = content && content.replace(
       /function\s*\(([^)]+)\)\s*{/g,
@@ -24,11 +53,13 @@
         return match && match.replace(params, fixedParams);
       },
     );
-
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -77,18 +108,18 @@ function fixImportSyntax() {
   $2
 }
       fs.writeFileSync (file_path, content, "utf8");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       modified = true;
     }
     return modified;
   } catch (error) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const items = fs && fs.readdirSync(currentDir);
-
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
-
       if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
@@ -103,7 +134,10 @@ function fixImportSyntax() {
             "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ].includes(item)
         ) {
           continue;
@@ -113,7 +147,6 @@ function fixImportSyntax() {
         const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
           files && files.push(fullPath);
-=======
     console.error (`Error processing ${file_path}:`, error.message);
     return false;
   }
@@ -154,27 +187,34 @@ if (
   $2
 }
           files.push (full_path);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
   }
+<<<<<<< HEAD
+console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
+=======
 
 
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console && console.log(`Fixed syntax in: ${file}`);
   }
 }
+<<<<<<< HEAD
+console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
+=======
 
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   traverse (dir);
   return files;
 }
@@ -194,4 +234,3 @@ for (const file of files) {
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

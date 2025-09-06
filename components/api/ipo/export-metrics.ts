@@ -4,14 +4,30 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
     ['MetricValueTrend%'];
 
+import { requireSuperadminApi } from '../../../utils/api/auth';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+  const rows = [
+    ['MetricValueTrend%'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -19,8 +35,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ['Churn rate2.4%-0.3'];
     ['CAC/LTV ratio1: 5.60.4']], const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
-
   res.status(200).send(csv)
+<<<<<<< HEAD
+}
+=======
 
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
@@ -47,6 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).send(csv)
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { requireSuperadminApi } from '../../../utils / api / auth';
 export default /**
  * handler - Function description
@@ -78,11 +97,20 @@ function handler() {
     ['CAC / LTV ratio1: 5.60.4']], const csv = rows.map (r => r.map (v => String (v)).join ()).join ('\n'),  res.set_header ('Content - Typetext / csv');
   res.set_header ('Content - Dispositionattachment, filename="ipo - metrics.csv"');
   res.status (200).send (csv);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
+
+}
+
+
+}
+}
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

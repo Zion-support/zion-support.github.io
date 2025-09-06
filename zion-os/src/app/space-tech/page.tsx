@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import Link from "next/link",;
 export const metadata = {;
@@ -10,7 +13,10 @@ export default function SpaceTechPage() {;
 
 
     <div className="min-h-screen">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
@@ -22,7 +28,19 @@ export default /**
 function SpaceTechPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import Link from "next/link";
+export const metadata = {title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services";
+  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
+export default function SpaceTechPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
+  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
+export default function SpaceTechPage() {;
+  return (;
+    <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -108,11 +126,24 @@ function SpaceTechPage() {
               <p className="text - gray - 400 mb - 4">;
                 High - speed satellite internet, global connectivity solutions,
 
+<<<<<<< HEAD
+
+                High-speed satellite internet, global connectivity solutions,;
+
+              <h3 className="text - xl font - semibold mb - 3">Satellite Communications</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                High - speed satellite internet, global connectivity solutions,
+              <h3 className="text-xl font-semibold mb-3">Satellite Communications</h3>;
+              <p className="text-gray-400 mb-4">;
+                High-speed satellite internet, global connectivity solutions;
+                High-speed satellite internet, global connectivity solutions,;
+=======
 =======
 
                 High-speed satellite internet, global connectivity solutions,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

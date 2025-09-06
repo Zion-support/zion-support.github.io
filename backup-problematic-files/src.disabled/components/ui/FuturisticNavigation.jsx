@@ -9,4 +9,8 @@ const FuturisticNavigation = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticNavigation;
+=======
+export default FuturisticNavigation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

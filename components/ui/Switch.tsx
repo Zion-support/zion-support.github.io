@@ -1,41 +1,49 @@
+<<<<<<< HEAD
+import React from './react';
+;
+=======
 
 import React from './react';
 ;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 interface SwitchProps {
-=======
-
 interface SwitchProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
   disabled?: boolean;
   class_name?: string;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const Switch: React.FC < SwitchProps> = ({
   checked = false,
   onCheckedChange,
   disabled = false,
   class_name = "",
-
-}) => {
+<<<<<<< HEAD
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}) => {
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
   onCheckedChange,;
   disabled = false,;
   className = "",;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <button;
       type="button";
       role="switch";
       aria - checked={checked}
       disabled={disabled}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       on_click={() => onCheckedChange?.(!checked)}
       className={`relative inline - flex h - 6 w - 11 items - center rounded - full transition - colors focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 ${
         checked ? "bg - blue - 600" : "bg - gray - 200";
@@ -51,4 +59,7 @@ const Switch: React.FC<SwitchProps> = ({;
 ;
 export { Switch }
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

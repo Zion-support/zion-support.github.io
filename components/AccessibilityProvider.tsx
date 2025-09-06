@@ -2,33 +2,44 @@
 
 interface AccessibilityContextType {;
 
+<<<<<<< HEAD
+
+
+
+interface AccessibilityContextType {
+interface AccessibilityContextType {;
+import React, { createContext, useContext, useState, ReactNode } from "react";
+
+interface AccessibilityContextType {
+=======
 =======
 
 
 
 interface AccessibilityContextType {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
-=======
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
 interface AccessibilityContextType {
   high_contrast: boolean;
   large_text: boolean;
   reduced_motion: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+<<<<<<< HEAD
+export const useAccessibility = () => {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 export const useAccessibility = () => {;
-
-
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -42,7 +53,10 @@ interface AccessibilityProviderProps {
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -56,29 +70,41 @@ export const useAccessibility = () => {;
   }
   return context;
 };
-
 interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
-  children,;
+  children,
 }) => {;
 
+<<<<<<< HEAD
+interface AccessibilityProviderProps {
+  children: React.ReactNode;
+}
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+  children
+}) => {
+  children,
+}) => {;
+=======
 =======
 
   children,
 }) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const value = {;
     highContrast,;
     largeText,;
@@ -87,8 +113,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
     toggleLargeText,;
     toggleReducedMotion,;
   };
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -98,6 +127,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
 
+<<<<<<< HEAD
+}
+export default AccessibilityProvider;
+=======
 const AccessibilityContext = create_context<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -152,9 +185,21 @@ export default AccessibilityProvider;
 ;
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 };
 
 export default AccessibilityProvider;
 
+<<<<<<< HEAD
+};
+
+export default AccessibilityProvider;
+}
+export default AccessibilityProvider;
+};
+
+export default AccessibilityProvider;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

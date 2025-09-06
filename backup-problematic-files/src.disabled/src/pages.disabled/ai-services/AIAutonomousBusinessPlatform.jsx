@@ -9,4 +9,8 @@ const AIAutonomousBusinessPlatform = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousBusinessPlatform;
+=======
+export default AIAutonomousBusinessPlatform;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

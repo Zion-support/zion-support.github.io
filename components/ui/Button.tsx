@@ -5,18 +5,26 @@ import React from "react";
 
 import React from './react';
 ;
+<<<<<<< HEAD
+import React from './react';
+;
+import React from "react";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
-=======
 interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 interface ButtonProps {
   children: React.ReactNode,
@@ -24,12 +32,11 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string, onClick?: () => void, disabled?: boolean, type?: 'button' | 'submit' | 'reset';
 }
-
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
   size = 'md',
-  className = '',
+className = '',
   onClick,
   disabled = false,
   type = 'button'
@@ -41,8 +48,11 @@ const Button: React.FC<ButtonProps> = ({
     outline: 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black focus:ring-cyan-400',
     ghost: 'text-gray-300 hover:text-white hover:bg-gray-800 focus:ring-gray-500',
   };
+<<<<<<< HEAD
+=======
   
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const sizeClasses = {
     sm: "h-8 px-3 text-xs"
     md: "h-10 px-4 py-2"
@@ -56,8 +66,6 @@ const Button: React.FC<ButtonProps> = ({
       disabled
       type
       ...props
-=======
-
 const Button: React.FC<ButtonProps> = ({;
   children,;
   variant = "primary",;
@@ -71,28 +79,34 @@ const Button: React.FC<ButtonProps> = ({;
 }) => {;
   const baseClasses =;
     "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
-
   const variantClasses = {;
     primary: "bg-blue-600 text-white hover:bg-blue-700",;
     secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300",;
     outline: "border border-gray-300 bg-transparent hover:bg-gray-50",;
     ghost: "hover:bg-gray-100",;
   };
-
   const sizeClasses = {;
     sm: "h-8 px-3 text-xs",;
     md: "h-10 px-4 py-2",;
     lg: "h-12 px-8 text-lg",;
   };
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
 
+<<<<<<< HEAD
+  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   class_name?: string;
   on_click?: () => void;
   disabled?: boolean;
@@ -107,7 +121,7 @@ const Button: React.FC < ButtonProps> = ({
   on_click,
   disabled = false,
   type = "button",
-  as_child = false,
+as_child = false,
   ...props;
 }) => {
   const base_classes =;
@@ -140,7 +154,6 @@ if ( {) {
       ...props,
     });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <button;
       className={classes}
@@ -149,9 +162,25 @@ if ( {) {
       type={type}
 
 
+<<<<<<< HEAD
+export { Button };
+
+export default Button;
+      {...props}
+    >;
+      {children}
+    </button>);
+}
+;
+export { Button }
+;
+
+export { Button };
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 export { Button };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

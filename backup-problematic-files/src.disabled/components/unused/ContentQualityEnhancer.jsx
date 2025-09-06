@@ -9,4 +9,8 @@ const ContentQualityEnhancer = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ContentQualityEnhancer;
+=======
+export default ContentQualityEnhancer;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const ProjectManagementDashboard.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ProjectManagementDashboard.js;
+=======
+export default ProjectManagementDashboard.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

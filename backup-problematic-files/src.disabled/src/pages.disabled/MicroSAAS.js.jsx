@@ -9,4 +9,8 @@ const MicroSAAS.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MicroSAAS.js;
+=======
+export default MicroSAAS.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

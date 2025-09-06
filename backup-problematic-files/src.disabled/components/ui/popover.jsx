@@ -9,4 +9,8 @@ const Popover = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Popover;
+=======
+export default Popover;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

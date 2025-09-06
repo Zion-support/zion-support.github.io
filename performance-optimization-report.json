@@ -1,4 +1,6 @@
 {
+<<<<<<< HEAD
+=======
 
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
@@ -17259,6 +17261,7 @@
         "Consider consolidating JavaScript files"
       ]
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     },
     {
       "type": "image-optimization",
@@ -17286,8 +17289,64 @@
       ]
     }
   ]
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T04:57:30.817Z",
+  "issues": [],
+  "optimizations": [
+    {
+      "file": "/workspace/pages_minimal/_app.tsx",
+      "type": "memo_optimization",
+      "message": "Consider using React.memo for performance"
+    },
+    "imageOptimization": {
+      "success": true,
+      "optimized": 0,
+      "recommendations": ["No images found to optimize"]
+    },
+    "codeSplitting": {
+      "success": true,
+      "chunks": 3,
+      "recommendations": [
+        "Implement route-based code splitting",
+        "Use React.lazy() for component-based splitting",
+        "Split vendor libraries into separate chunks",
+        "Implement dynamic imports for heavy components",
+        "Consider using loadable-components for SSR compatibility"
+      ]
+    },
+    "caching": {
+      "success": true,
+      "strategies": ["static", "dynamic", "api"],
+      "recommendations": [
+        "Implement service worker for offline caching",
+        "Use HTTP caching headers appropriately",
+        "Implement client-side caching with React Query or SWR",
+        "Cache API responses with appropriate TTL",
+        "Use CDN for static asset caching"
+      ]
+    },
+    "compression": {
+      "success": true,
+      "ratio": 0.7,
+      "recommendations": [
+        "Enable gzip compression on the server",
+        "Implement Brotli compression for better ratios",
+        "Minify CSS and JavaScript files",
+        "Remove unused CSS and JavaScript",
+        "Optimize font loading and subsetting"
+      ]
+    }
+  },
+  "summary": {
+    "bundleOptimized": false,
+    "imagesOptimized": true,
+    "codeSplittingImplemented": true,
+    "cachingConfigured": true,
+    "compressionSetup": true
+=======
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -17322,7 +17381,25 @@
       "Use CDN for static assets",
       "Enable gzip compression"
     ]
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T00:06:24.470Z",
+  "metrics": {
+    "bundleSize": 0,
+    "loadTime": 0,
+    "performanceScore": 0
+  },
+  "optimizations": [
+    "Found 5 images for optimization"
+  ],
+  "summary": {
+    "totalOptimizations": 1,
+    "bundleSize": 0,
+    "performanceScore": 0
+  }
+  }
+=======
 
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

@@ -9,4 +9,8 @@ const ProjectMilestones = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ProjectMilestones;
+=======
+export default ProjectMilestones;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

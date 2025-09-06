@@ -9,4 +9,8 @@ const ComprehensiveServicesOverview = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensiveServicesOverview;
+=======
+export default ComprehensiveServicesOverview;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

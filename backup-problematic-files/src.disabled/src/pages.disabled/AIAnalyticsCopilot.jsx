@@ -9,4 +9,8 @@ const AIAnalyticsCopilot = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAnalyticsCopilot;
+=======
+export default AIAnalyticsCopilot;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

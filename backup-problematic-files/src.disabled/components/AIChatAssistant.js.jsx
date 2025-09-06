@@ -9,4 +9,8 @@ const AIChatAssistant.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIChatAssistant.js;
+=======
+export default AIChatAssistant.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

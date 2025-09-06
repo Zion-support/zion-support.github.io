@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+<:pages/white-papers.tsx.backup
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -29,6 +36,7 @@ import Link from 'next/link';
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 const whitePapers = [;
   {}
@@ -104,6 +112,28 @@ const whitePapers = [;
     pdfUrl: "/whitepapers/data-privacy-ai-compliance.pdf""
 import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+<<<<<<< HEAD
+
+import React from 'react';
+
+import React from 'react';
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+import { motion } from 'framer-motion';
+
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import MainLayout from '../components/layout/MainLayout';
+
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -161,6 +191,10 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   FileText,
   Download,
@@ -174,6 +208,16 @@ import {
   Star,
   Clock,
 <<<<<<< HEAD
+<<<<<<< HEAD
+<:pages/white-papers.tsx.backup
+  Tag
+} from 'lucide-react';
+
+import Layout from '../components/Layout';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -204,6 +248,10 @@ import Layout from '../components/Layout';
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const whitePaperCategories = [
   { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
@@ -315,8 +363,15 @@ const stats = [
   { number: '10K+', label: 'Downloads' },
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> main
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -328,6 +383,19 @@ import {
   ArrowRight, 
   Tag, 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+  ExternalLink 
+} from 'lucide-react';
+
+<:pages/white-papers.tsx.backup
+
+  ExternalLink 
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
   ExternalLink 
@@ -367,6 +435,10 @@ import {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 const whitePapers = [
   {
@@ -375,7 +447,15 @@ const whitePapers = [
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 >>>>>>> main
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> main
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     author: "Dr. Sarah Chen",
     date: "2024-01-15",
     category: "Artificial Intelligence",
@@ -396,6 +476,12 @@ const whitePapers = [
 title: 'Cybersecurity Best Practices 2024',
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+title: 'Cybersecurity Best Practices 2024',
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
 <<<<<<< HEAD
@@ -405,6 +491,10 @@ title: 'Cybersecurity Best Practices 2024',
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
     category: 'Cybersecurity',
     downloadCount: 1500,
@@ -413,6 +503,13 @@ title: 'Cybersecurity Best Practices 2024',
   }
 ;];
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 
 =======
@@ -472,6 +569,10 @@ export default function WhitePapersPage() {
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export default function WhitePapersPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -604,6 +705,40 @@ export default function WhitePapersPage() {
   return (
 <<<<<<< HEAD
 title="White Papers - Zion Tech Group"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    id: 3,
+    title: "Cybersecurity in the Digital Age: Protecting Your Assets",
+    author: "Emily Johnson",
+    date: "2024-01-05",
+    category: "Cybersecurity",
+    description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.",
+    downloadCount: 1500
+  },
+  {
+    id: 4,
+    title: "Data Analytics: Turning Information into Insights",
+    author: "David Kim",
+    date: "2023-12-20",
+    category: "Data Analytics",
+    description: "Discover how to leverage data analytics to drive business decisions and growth.",
+    downloadCount: 750
+  }
+
+];
+
+export default function WhitePapersPage() {
+
+    <Layout
+
+    <MainLayout
+
+      title="White Papers - Zion Tech Group"
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -620,6 +755,10 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
     >
@@ -645,6 +784,13 @@ title="White Papers - Zion Tech Group"
                 </span>
               </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -662,8 +808,36 @@ title="White Papers - Zion Tech Group"
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                In-depth research and insights on the latest technology trends and industry developments
+
+<<<<<<< HEAD
+=======
+  return (
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+  return (
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 <<<<<<< HEAD
 =======
@@ -688,6 +862,7 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -709,6 +884,12 @@ title="White Papers - Zion Tech Group"
                 Download our comprehensive white papers on technology trends and best practices.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<:pages/white-papers.tsx.backup
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -717,12 +898,18 @@ title="White Papers - Zion Tech Group"
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 
               </p>
+<<<<<<< HEAD
+=======
               
               <div className="mb-4">
                 <div className="flex items-center text-sm text-gray-600 mb-2">
@@ -790,11 +977,21 @@ title="White Papers - Zion Tech Group"
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
               </p>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </motion.div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+                </motion.div>
+
+                </motion.div>
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 </motion.div>
@@ -902,6 +1099,10 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               ))}
             </div>
           </div>
@@ -912,6 +1113,12 @@ title="White Papers - Zion Tech Group"
 <section className="py-16 bg-gray-50">
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<section className="py-16 bg-gray-50">
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 =======
 <<<<<<< HEAD
@@ -921,6 +1128,10 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
@@ -942,6 +1153,12 @@ title="White Papers - Zion Tech Group"
                   <div className="text-2xl font-bold text-gray-900">{category.count}</div>
                   <div className="text-sm text-gray-500">papers</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 =======
 >>>>>>> main
@@ -980,6 +1197,10 @@ title="White Papers - Zion Tech Group"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> main
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </motion.div>
               ))}
             </div>
@@ -987,6 +1208,13 @@ title="White Papers - Zion Tech Group"
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+</Link>
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1034,6 +1262,10 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -1280,6 +1512,14 @@ title="White Papers - Zion Tech Group"
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+    </Layout>
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 </Layout>
@@ -1312,6 +1552,10 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> main
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -1344,6 +1588,12 @@ title="White Papers - Zion Tech Group"
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> main
 >>>>>>> main
 <<<<<<< HEAD
@@ -1357,11 +1607,33 @@ title="White Papers - Zion Tech Group"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </motion.div>
           </div>
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+<:pages/white-papers.tsx.backup
+
+<:pages/white-papers.tsx.backup
+
+    </MainLayout>
+
+    </>
+
+    </MainLayout>
+
+    </>
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 =======
 <<<<<<< HEAD
 <:pages/white-papers.tsx.backup
@@ -1424,5 +1696,9 @@ title="White Papers - Zion Tech Group"
     </MainLayout>
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
 >>>>>>> main
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }

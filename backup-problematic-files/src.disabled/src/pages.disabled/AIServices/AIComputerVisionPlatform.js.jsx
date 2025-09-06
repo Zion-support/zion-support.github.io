@@ -9,4 +9,8 @@ const AIComputerVisionPlatform.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIComputerVisionPlatform.js;
+=======
+export default AIComputerVisionPlatform.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

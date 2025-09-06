@@ -9,4 +9,8 @@ const CategoryListingPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CategoryListingPage;
+=======
+export default CategoryListingPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

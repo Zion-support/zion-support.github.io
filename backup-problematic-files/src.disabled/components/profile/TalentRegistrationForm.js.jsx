@@ -9,4 +9,8 @@ const TalentRegistrationForm.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TalentRegistrationForm.js;
+=======
+export default TalentRegistrationForm.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

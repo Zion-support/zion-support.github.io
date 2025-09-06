@@ -9,4 +9,8 @@ const 3d-card-gallery = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default 3d-card-gallery;
+=======
+export default 3d-card-gallery;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

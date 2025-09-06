@@ -9,4 +9,8 @@ const CategoriesSection.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default CategoriesSection.js;
+=======
+export default CategoriesSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

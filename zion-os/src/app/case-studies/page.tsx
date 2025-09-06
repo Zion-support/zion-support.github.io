@@ -1,16 +1,25 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function CaseStudiesPage() {;
   return (;
 
     <div className="min-h-screen py-20">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default /**
  * CaseStudiesPage - Function description
  */
 function CaseStudiesPage() {
   return (
     <div className="min - h-screen py - 20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default function CaseStudiesPage() {return (;
+export default function CaseStudiesPage() {;
+  return (;
+    <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

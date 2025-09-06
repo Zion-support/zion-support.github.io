@@ -1,18 +1,39 @@
 
 
+<<<<<<< HEAD
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import type { NextApiRequest, NextApiResponse } from 'next';
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
+export interface DevIdentity {
+
+export interface DevIdentity {;
+  isAuthenticated: boolean;
   roles: DevRole[];
-  user_id?: string;
+  userId?: string;
+}
+    const gitDir = path && path.join(process && process.cwd(), '.git');
+    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
+export function getGitStatus(): { connected: boolean; branch?: string } {
+  try {
+    const gitDir = path.join(process.cwd(), '.git');
+    if (!fs.existsSync(gitDir)) return { connected: false }
+=======
+  roles: DevRole[];
+  userId?: string;
 }
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore']
+      stdio: ['ignore', 'pipe', 'ignore'],
     })
       .toString()
       .trim();
-=======
 export function getGitStatus (): { connected: boolean; branch?: string } {
   try {
     const git_dir = path.join (process.cwd (), '.git');
@@ -24,10 +45,9 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
     });
       .to_string ();
       .trim ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { connected: true, branch }
   } catch {
-    return { connected: false }
+    return { connected: false };
   }
 }
 
@@ -41,12 +61,30 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
+<<<<<<< HEAD
+    return { connected: true, branch }
+  } catch {
+    return { connected: false }
+  }
+}
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+  // TODO: integrate real auth; for now, check a header and env var for dev
+  const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
+  const adminToken = process.env.ADMIN_TOKEN;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (token && adminToken && token === adminToken) {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
   }
   return { isAuthenticated: false, roles: [] }
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -57,26 +95,30 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
 
+<<<<<<< HEAD
+
+
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function requireRoles(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: ApiRequest,
+  res: ApiResponse,
   allowed: DevRole[]
-): DevIdentity | undefined {
+): DevIdentity | undefined {;
   const identity = getDevIdentity(req);
-  if (!identity && identity.isAuthenticated) {
-    res && res.status(401).json({ error: 'Unauthorized' });
+  if (!identity.isAuthenticated) {
+    res.status(401).json({ error: 'Unauthorized' });
     return undefined;
   }
-  const hasRole = identity && identity.roles.some(r => allowed && allowed.includes(r));
+  const hasRole = identity.roles.some(r => allowed.includes(r));
   if (!hasRole) {
-    res && res.status(403).json({ error: 'Forbidden' });
+    res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;
 
 }
-=======
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -211,7 +253,6 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 
-=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -246,10 +287,12 @@ if ( {) {
   }
   return identity;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+<<<<<<< HEAD
+}
+}
 =======
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIAutonomousManagement = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousManagement;
+=======
+export default AIAutonomousManagement;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

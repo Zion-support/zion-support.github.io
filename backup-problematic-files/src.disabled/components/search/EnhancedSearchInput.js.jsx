@@ -9,4 +9,8 @@ const EnhancedSearchInput.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedSearchInput.js;
+=======
+export default EnhancedSearchInput.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const EnhancedAccessibility.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedAccessibility.js;
+=======
+export default EnhancedAccessibility.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

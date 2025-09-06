@@ -9,4 +9,8 @@ const OptimizedImage.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default OptimizedImage.js;
+=======
+export default OptimizedImage.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

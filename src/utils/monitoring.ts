@@ -7,15 +7,41 @@ export const track_performance = () =>: any {
   console.log ('Tracking performance...');
 }
 ;
-
 // Monitoring utilities
 export const logEvent = (event: string) => {;
   console.log('Event logged:', event);
+}
+export const trackPerformance = () => {
+  console.log('Tracking performance...');
+}
+  });
+};
 
+ursor/fix-website-loading-errors-and-merge-6662
+// Monitoring utilities
+export const logEvent = (event: string) => {
+  console.log('Event logged:', event);
+};
+
+export const trackPerformance = () => {
+  console.log('Tracking performance...');
+};
+}
+export const trackPerformance = () => {
 };
 
 export const trackPerformance = () => {;
-
   console.log('Tracking performance...');
+<<<<<<< HEAD
+}
+};
+  });
+};
+
+  });
+};
+};
+=======
 
 };
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

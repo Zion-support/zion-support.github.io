@@ -9,4 +9,8 @@ const Use-mobile = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Use-mobile;
+=======
+export default Use-mobile;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

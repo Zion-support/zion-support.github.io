@@ -9,4 +9,8 @@ const Main = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Main;
+=======
+export default Main;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

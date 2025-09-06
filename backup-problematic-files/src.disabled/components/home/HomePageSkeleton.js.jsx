@@ -9,4 +9,8 @@ const HomePageSkeleton.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default HomePageSkeleton.js;
+=======
+export default HomePageSkeleton.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

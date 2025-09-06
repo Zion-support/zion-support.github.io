@@ -9,4 +9,8 @@ const EnterpriseHero.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnterpriseHero.js;
+=======
+export default EnterpriseHero.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

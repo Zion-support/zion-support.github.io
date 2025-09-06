@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -26,10 +28,16 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +152,10 @@ testRunner.runTests().catch(error => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       "timestamp"
       summary: {total: 0,"passed": 0,"failed"}
 // console.log("🧪 Starting Automated Test Suite...")
@@ -181,6 +193,9 @@ testRunner.runTests().catch(error => {
     console.log(`"Failed"`)
 // console.log(`"Skipped"`)
     console.log("=")
+<<<<<<< HEAD
+    console.log(`\n� Detailed report saved "to"`)
+=======
     console.log(`\n� Detailed report saved "to"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -215,3 +230,7 @@ testRunner.runTests().catch(error => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const WhitelabelContext.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default WhitelabelContext.js;
+=======
+export default WhitelabelContext.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 // Search parser utilities;
 export const parseSearchQuery = (query: string) =>: any {
   // Add search query parsing functionality here;
@@ -35,42 +38,72 @@ export const parseSearchQuery = (query: string) =>: any {
   }
   
   return filters;
+<<<<<<< HEAD
+// Search parser utilities
+export const parseSearchQuery = (query: string) => {
+  // Add search query parsing functionality here
+  return {
+    keywords: []
+    skills: []
+    location: null
+    type: null
+  }
+}
+export const searchAll = (parsed: any, access: any) => {
+  // Add search functionality here
+  return {
+    all: []
+    talent: []
+    jobs: []
+    projects: []
+  }
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     keywords: [],
     skills: [],
     location: null,
     type: null;
-  }
-}
-;
-export const search_all = (parsed: any, access: any) =>: any {
-  // Add search functionality here;
+  };
+};
+
+export const searchAll = (parsed: any, access: any) => {
+  // Add search functionality here
   return {
     all: [],
     talent: [],
     jobs: [],
     projects: [];
+<<<<<<< HEAD
+};
+
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   };
 };
-
 
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
 
-
-
-}
+<<<<<<< HEAD
 =======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+}
 };
-=======
 
 }
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

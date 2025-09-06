@@ -9,4 +9,8 @@ const ComprehensivePricing2026 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensivePricing2026;
+=======
+export default ComprehensivePricing2026;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

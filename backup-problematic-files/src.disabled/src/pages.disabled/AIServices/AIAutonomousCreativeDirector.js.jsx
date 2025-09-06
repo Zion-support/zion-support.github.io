@@ -9,4 +9,8 @@ const AIAutonomousCreativeDirector.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousCreativeDirector.js;
+=======
+export default AIAutonomousCreativeDirector.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

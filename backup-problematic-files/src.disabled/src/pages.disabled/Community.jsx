@@ -9,4 +9,8 @@ const Community = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Community;
+=======
+export default Community;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

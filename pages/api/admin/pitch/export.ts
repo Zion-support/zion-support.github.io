@@ -1,6 +1,17 @@
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdminFromApi } from '../../../../utils/auth';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+=======
 
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' })
@@ -8,8 +19,12 @@
   if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
+<<<<<<< HEAD
+    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -19,17 +34,60 @@
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)
   res.status(200).send(html)
+<<<<<<< HEAD
+}
+function escapeHtml(str: string) {
+  return String(str)
+=======
 
 }
 function escapeHtml(str: string) {
   return String(str)
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 }
+<<<<<<< HEAD
+    .replace(/'/g, '&#039,')
+}
+
+
+;
+
+    .replace(/'/g, '&#039,');
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'POST') {
+      const { slides, format, version } = req.body || {};
+      if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
+
+      if (format === 'gslides') {
+        // TODO: integrate Google Slides API and return created deck URL
+        const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
+        res.json({ url });
+      } else {
+        res.status(400).json({ error: 'Unsupported format' });
+      }
+    } else {
+      res.setHeader('Allow', 'POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -37,3 +95,4 @@ function escapeHtml(str: string) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

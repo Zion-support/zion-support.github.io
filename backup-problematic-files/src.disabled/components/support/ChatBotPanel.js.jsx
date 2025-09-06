@@ -9,4 +9,8 @@ const ChatBotPanel.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ChatBotPanel.js;
+=======
+export default ChatBotPanel.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

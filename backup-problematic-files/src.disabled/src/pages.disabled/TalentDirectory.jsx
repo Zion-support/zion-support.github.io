@@ -9,4 +9,8 @@ const TalentDirectory = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TalentDirectory;
+=======
+export default TalentDirectory;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

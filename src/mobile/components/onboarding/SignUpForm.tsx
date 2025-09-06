@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+
+
+  
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { useAuth } from "@/context/auth/AuthProvider"
+import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
+import React from 'react';
+
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert",
+=======
 import React from 'react';
 
 import { useRouter } from 'next/router';
@@ -8,46 +22,33 @@ import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function SignUpForm() {;
+export function SignUpForm() {
 
-
-;
-import { use_router } from 'next / router';
-import Link from 'next / link';
-import { use_auth  } from '@/context / auth / AuthProvider';
-import { AlertCircle } from 'lucide-react'import { use_router } from 'next / router';
-import { AlertCircle } from 'lucide-react';
-import { Alert, AlertDescription  } from '@/components / ui / alert';
-import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
-import {logErrorToProduction} from '@/utils / production_logger';
-export /**
- * SignUpForm - Function description
- */
-function SignUpForm() {
-  const router = use_router ();
-  const { sign_up, login, loginWithGoogle } = use_auth ();
-  const [form_data, setFormData] = useState ({
-    email: "",
-    password: "",
-    name: ""}),
-  const [is_loading, setIsLoading] = useState (false);
-  const [signup_mode, setSignupMode] = useState (true);
-  const [error, set_error] = useState ("");
-  const [field_errors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
-  const [showVerificationMessage, setShowVerificationMessage] = useState (false);
-  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const { name, value } = e.target;
-    setFormData (prev => ({ ...prev, [name]: value }));
-    set_error ("");    setFieldErrors (prev => ({ ...prev, [name]: "" }));
+<<<<<<< HEAD
+  const router = useRouter()
+  const { signUp, login, loginWithGoogle } = useAuth()
+  const [formData, setFormData] = useState({
+    email: ""
+    password: ""
+    name: ""})
+  const [isLoading, setIsLoading] = useState(false)
+  const [signupMode, setSignupMode] = useState(true)
+  const [error, setError] = useState("")
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false)
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
   }
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    set_error (""),
-    setFieldErrors ({});
-    setIsLoading (true);
-
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError("")
+    setFieldErrors({})
+    setIsLoading(true)
     const errors: { email?: string, password?: string, name?: string } = {}
     const email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const strongPasswordRegex = /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d).{8}$/;
@@ -74,21 +75,94 @@ export function SignUpForm() {
   const router = useRouter(),
   const { signUp, login, loginWithGoogle } = useAuth(),
   
-
-
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: ""}),
+  const [isLoading, setIsLoading] = useState(false)
+  const [signupMode, setSignupMode] = useState(true)
+  const [error, setError] = useState("")
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError(""),
+    setFieldErrors({})
+    setIsLoading(true)
+    const errors: { email?: string, password?: string, name?: string } = {}
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+  
+    email: "",
+    password: "",
+    name: ""}),
+  const [isLoading, setIsLoading] = useState(false)
+  const [signupMode, setSignupMode] = useState(true)
+  const [error, setError] = useState("")
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({})
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError(""),
+    setFieldErrors({})
+    setIsLoading(true)
+    const errors: { email?: string, password?: string, name?: string } = {}
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+    setError(""),
+    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  },
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setError(""),
+    setFieldErrors({}),
+    setIsLoading(true),
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     name: ""}),
 
-
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required'
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = 'Invalid email address'
+    }
+    if (!formData.password) {
+      errors.password = 'Password is required'
+    } else if (!strongPasswordRegex.test(formData.password)) {
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
+    }
+ursor/fix-website-loading-errors-and-merge-6662
     }
 
 
 
 
 
-    if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)
       return
@@ -100,9 +174,7 @@ export function SignUpForm() {
           name: formData.name})
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError
-
-
-
+        }
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -118,10 +190,7 @@ export function SignUpForm() {
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
 
-
-
-        }
-
+        if (result?.emailVerificationRequired) {
         if (result?.emailVerificationRequired) {
           setShowVerificationMessage(true)
     if () {) {
@@ -174,7 +243,182 @@ if ( {) {
 
           // Only navigate if email verification is not required
           router.push("/mobile")
+        }
+      } else {
+        const { error } = await login(formData.email, formData.password)
+        if (error) {
+          throw new Error(error)
+        }
+        router.push("/mobile")
+    } catch (err: any) {
+      logErrorToProduction('Signup/Login error:', { data: err })
+      setError(err.message |'An unexpected error occurred. Please try again.')
+    } finally {
+      setIsLoading(false)
+    }
 
+ursor/fix-website-loading-errors-and-merge-6662
+      }
+    } catch (err: any) {
+      logErrorToProduction('Signup/Login error:', { data: err })
+      setError(err.message |'An unexpected error occurred. Please try again.')
+        router.push ("/mobile");
+      }
+    } catch (err: any) {
+      logErrorToProduction ('Signup / Login error:', { data: err }),
+      set_error (err.message || 'An unexpected error occurred. Please try again.');
+    } finally {
+      setIsLoading (false);
+    }
+
+  const router = useRouter();
+  const { signUp, login, loginWithGoogle } = useAuth();
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value })),
+    setError(""),
+    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+  },
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault(),
+    setError(""),
+    setFieldErrors({}),
+    setIsLoading(true),
+
+    const errors: { email?: string, password?: string, name?: string } = {},
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,
+
+    if (signupMode && !formData.name.trim()) {
+      errors.name = 'Full name is required'
+import React, { useState } from "react",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",;
+import { useRouter } from 'next/router',;
+import Link from 'next/link',;
+import { useAuth } from "@/context/auth/AuthProvider",;
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription } from "@/components/ui/alert",;
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+export function SignUpForm() {;
+  const router = useRouter(),;
+  const { signUp, login, loginWithGoogle } = useAuth(),;
+  const [formData, setFormData] = useState({;
+    email: "",;
+    password: "",;
+    name: ""}),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [signupMode, setSignupMode] = useState(true),;
+  const [error, setError] = useState(""),;
+  const [fieldErrors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({}),;
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    const { name, value } = e.target,;
+    setFormData(prev => ({ ...prev, [name]: value })),;
+    setError(""),;
+    setFieldErrors(prev => ({ ...prev, [name]: "" }));
+  },;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setError(""),;
+    setFieldErrors({}),;
+    setIsLoading(true),;
+    const errors: { email?: string, password?: string, name?: string } = {},;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,;
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,;
+    if (signupMode && !formData.name.trim()) {;
+      errors.name = 'Full name is required';
+=======
+
+;
+import { use_router } from 'next / router';
+import Link from 'next / link';
+import { use_auth  } from '@/context / auth / AuthProvider';
+import { AlertCircle } from 'lucide-react'import { use_router } from 'next / router';
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription  } from '@/components / ui / alert';
+import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
+import {logErrorToProduction} from '@/utils / production_logger';
+export /**
+ * SignUpForm - Function description
+ */
+function SignUpForm() {
+  const router = use_router ();
+  const { sign_up, login, loginWithGoogle } = use_auth ();
+  const [form_data, setFormData] = useState ({
+    email: "",
+    password: "",
+    name: ""}),
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    }
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required'
+    } else if (!emailRegex.test(formData.email)) {
+      errors.email = 'Invalid email address'
+    }
+    if (!formData.password) {
+      errors.password = 'Password is required'
+    } else if (!strongPasswordRegex.test(formData.password)) {
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors)
+      setIsLoading(false)
+      return;
+    }
+    try {
+      setShowVerificationMessage(false), // Reset verification message
+      if (signupMode) {
+        const result = await signUp(formData.email, formData.password, {
+          name: formData.name})
+        if (result?.error) {
+          throw new Error(result.error as any), // Cast to any if type is AuthError
+<<<<<<< HEAD
+        }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+;
+    if (Object.keys(errors).length > 0) {;
+      setFieldErrors(errors),;
+      setIsLoading(false),;
+      return;
+    }
+;
+    try {;
+      setShowVerificationMessage(false), // Reset verification message;
+      if (signupMode) {;
+        const result = await signUp(formData.email, formData.password, {;
+          name: formData.name}),;
+        if (result?.error) {;
+          throw new Error(result.error as any), // Cast to any if type is AuthError;
+        }
+
+        if (result?.emailVerificationRequired) {
+          setShowVerificationMessage(true)
+        } else {
+          // Only navigate if email verification is not required
+          router.push("/mobile")
+<<<<<<< HEAD
+        }
+      } else {
+        const { error } = await login(formData.email, formData.password)
+        if (error) {
+          throw new Error(error)
+        }
+        router.push("/mobile")
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
         if (result?.emailVerificationRequired) {;
           setShowVerificationMessage(true);
@@ -191,20 +435,32 @@ if ( {) {
         router.push("/mobile")
 ;
         router.push("/mobile");
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
       setError(err.message |'An unexpected error occurred. Please try again.')
+<<<<<<< HEAD
         router.push ("/mobile");
       }
     } catch (err: any) {
       logErrorToProduction ('Signup / Login error:', { data: err }),
       set_error (err.message || 'An unexpected error occurred. Please try again.');
     } finally {
-      setIsLoading (false);
+      setIsLoading(false)
     }
+  }
+  const handleGoogleLogin = async () => {
+    try {
+      await loginWithGoogle()
+    } catch (err: any) {
+      setError(err.message)
+    }
+  }
 
   const router = useRouter();
   const { signUp, login, loginWithGoogle } = useAuth();
@@ -226,81 +482,34 @@ if ( {) {
 
 
 
+=======
+    } finally {
+      setIsLoading(false)
+    }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setError(""),;
-    setFieldErrors({});
-    setIsLoading(true);
-    const errors: { email?: string, password?: string, name?: string } = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
-
-    if (signupMode && !formData && formData.name.trim()) {;
-      errors && errors.name = 'Full name is required';
-    }
-
-    if (!formData && formData.email.trim()) {;
-      errors && errors.email = 'Email is required';
-    } else if (!emailRegex && emailRegex.test(formData && formData.email)) {;
-      errors && errors.email = 'Invalid email address';
-    }
-
-    if (!formData && formData.password) {;
-      errors && errors.password = 'Password is required';
-    } else if (!strongPasswordRegex && strongPasswordRegex.test(formData && formData.password)) {;
-      errors && errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
-    }
-
-    if (Object && Object.keys(errors).length > 0) {;
-      setFieldErrors(errors);
-      setIsLoading(false);
-      return;
-    }
-
-    try {;
-      setShowVerificationMessage(false), // Reset verification message;
-      if (signupMode) {;
-        const result = await signUp(formData && formData.email, formData && formData.password, {;
-          name: formData && formData.name}),;
-        if (result?.error) {;
-          throw new Error(result && result.error as any), // Cast to any if type is AuthError;
-        }
-
-        if (result?.emailVerificationRequired) {;
-          setShowVerificationMessage(true);
-        } else {;
-          // Only navigate if email verification is not required;
-          router && router.push("/mobile");
-        };
-      } else {;
-        const { error } = await login(formData && formData.email, formData && formData.password);
-
-        if (error) {;
-          throw new Error(error);
-        }
-
-        router && router.push("/mobile");
-      }
-    } catch (err: any) {;
-      logErrorToProduction('Signup/Login error:', { data: err }),;
-      setError(err && err.message || 'An unexpected error occurred. Please try again.');
-    } finally {;
-      setIsLoading(false);
-    }
-  };
-
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
-      setError(err && err.message);
+      setError(err.message);
     }
+<<<<<<< HEAD
+  
+  },
+  
+  return (
+    <div className="space-y-4 px-4">
+      <h2 className="text-xl font-medium text-center">
+        {signupMode ? "Create your account" : "Welcome back"}
+      </h2>
+ursor/fix-website-loading-errors-and-merge-6662
+=======
 
   },
   
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   return (
@@ -309,8 +518,12 @@ if ( {) {
       
 
 
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <div className="space-y-2">
-        <Button
           variant="outline"
           className="w-full py-6 relative"
           onClick = {handleGoogleLogin,}
@@ -323,12 +536,21 @@ if ( {) {
           </svg>
           Continue with Google
         </Button>
+<<<<<<< HEAD
+        <Button
+          variant="outline"
+        <Button
+          variant="outline"
+        <Button 
+          variant="outline" 
+=======
 
 
         <Button 
           variant="outline" 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -342,7 +564,16 @@ if ( {) {
         <span className="mx-2 text-xs text-muted-foreground">OR</span>
         <div className="flex-grow border-t border-border"></div>
       </div>
+<<<<<<< HEAD
+      {error && (
+        <Alert variant="destructive" className="mb-4">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </h2>;
 
       <div className="space-y-2">;
@@ -389,15 +620,18 @@ if ( {) {
           <svg view_box="0 0 24 24" className="h - 5 w - 5 mr - 2" xmlns="http://www.w3.org / 2000 / svg">;
             <path d="M24 12.073c0 - 5.8 - 4.85 - 10.5 - 10.826 - 10.5 - 6.02 0 - 10.93 4.7 - 10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v - 7.318h - 2.696v - 3.041h2.696V9.898c0 - 2.586 1.581 - 4.016 4.003 - 4.016 1.159 0 2.37.204 2.37.204v2.543h - 1.334c - 1.316 0 - 1.727.8 - 1.727 1.622v1.95h2.938l-.47 3.04h - 2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />;
 
-          </svg>;
-          Continue with Facebook;
-        </Button>;
-      </div>;
+      {/* Verification Message */}
+      {showVerificationMessage && (
+        <Alert className="mb-4 border-blue-500 bg-blue-50">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>
+            Please check your email and click the verification link before signing in.
+          </AlertDescription>
+        </Alert>
 
+      )}
 
       
-
-
       {/* Error Alert */}
       {error && (
         <Alert variant="destructive" className="mb-4">
@@ -406,12 +640,28 @@ if ( {) {
         </Alert>
       )}
 
-
+      {/* Verification Message */}
+      {showVerificationMessage && (
+        <Alert className="mb-4 border-blue-500 bg-blue-50">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>
+            Please check your email and click the verification link before signing in.
+          </AlertDescription>
+        </Alert>
+;
+      {/* Verification Message */}
+      {showVerificationMessage && (;
+        <Alert className="mb-4 border-blue-500 bg-blue-50">;
+          <AlertCircle className="h-4 w-4" />;
+          <AlertDescription>;
+            Please check your email and click the verification link before signing in.;
+          </AlertDescription>;
+        </Alert>;
       )}
-
       
 
       <form onSubmit={handleSubmit} className="space-y-4">
+ursor/fix-website-loading-errors-and-merge-6662
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
@@ -423,12 +673,33 @@ if ( {) {
             <Input
               id="name"
               name="name"
+<<<<<<< HEAD
+              value = {formData.name,}
+              onChange = {handleInputChange,}
+              required
+              aria-invalid = {!!fieldErrors.name,}
+ursor/fix-website-loading-errors-and-merge-6662
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               value={formData.name}
               onChange={handleInputChange}
               required;
               aria-invalid={!!fieldErrors.name}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              placeholder="Enter your full name"
+            />
+            {fieldErrors.name && (
+              <p className="text-red-500 text-sm">{fieldErrors.name}</p>
+            )}
+          </div>
+        )}
+<<<<<<< HEAD
 
 
               placeholder="Enter your full name"
@@ -438,6 +709,8 @@ if ( {) {
             )}
           </div>;
         )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -446,14 +719,33 @@ if ( {) {
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
 
+
+
+
+
+          <Label htmlFor="email">Email address</Label>
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
+<<<<<<< HEAD
+
+        <div className="space-y-2">
+          <Label htmlFor="email">Email address</Label>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             id="email"
             name="email"
             type="email"
+<<<<<<< HEAD
+            value = {formData.email,}
+            onChange = {handleInputChange,}
+            required
+            aria-invalid = {!!fieldErrors.email,}
+
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             value={formData.email}
             onChange={handleInputChange}
             required;
@@ -464,24 +756,60 @@ if ( {) {
           />;
           {fieldErrors && fieldErrors.email && (;
             <p className="text-red-500 text-sm">{fieldErrors && fieldErrors.email}</p>;
+<<<<<<< HEAD
+=======
           )}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         </div>;
 
         <div className="space-y-2">;
           <Label htmlFor="password">Password</Label>;
 
+<<<<<<< HEAD
+            value={formData.email}
+            onChange={handleInputChange}
+            required;
+            aria-invalid={!!fieldErrors.email}
+            placeholder="Enter your email"
+          />
+          {fieldErrors.email && (
+            <p className="text-red-500 text-sm">{fieldErrors.email}</p>
+          )}
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           <Input
             id="password"
             name="password"
             type="password"
+<<<<<<< HEAD
+            value = {formData.password,}
+            onChange = {handleInputChange,}
+            required
+            aria-invalid = {!!fieldErrors.password,}
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             value={formData.password}
             onChange={handleInputChange}
             required;
             aria-invalid={!!fieldErrors.password}
+<<<<<<< HEAD
+            placeholder="Create a password"
+          />
+          <PasswordStrengthMeter password={formData.password} />
+          {fieldErrors.password && (
+            <p className="text-red-500 text-sm">{fieldErrors.password}</p>
+          )}
+        </div>
+ursor/fix-website-loading-errors-and-merge-6662
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             placeholder="Create a password"
           />;
@@ -493,10 +821,32 @@ if ( {) {
         </div>;
 
 
+<<<<<<< HEAD
+        
+        
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
 
         <Button
+<<<<<<< HEAD
+          className="w-full py-6"
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <>
+              <LoadingSpinner size="sm" className="mr-2" />
+              Please wait...
+            </>
+          ) : (
+            signupMode ? "Create Account" : "Sign In"
+          )}
+        </Button>
+      </form>
+ursor/fix-website-loading-errors-and-merge-6662
+      
+=======
           type="submit"
           className="w-full py-6"
           disabled = {isLoading,}>;
@@ -510,11 +860,11 @@ if ( {) {
           )}
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       
 
 
       <p className="text-center text-sm">
-        {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
       <div className="relative flex items - center">;
@@ -610,6 +960,7 @@ if ( {) {
           ? "Already have an account? ";
           : "Don't have an account? ";
         }
+        }
         <Link
           href="/login"
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">;
@@ -618,7 +969,10 @@ if ( {) {
           href="/login";
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer";
         >;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           Sign In;
         </Link>;
       </p>;
@@ -660,4 +1014,8 @@ if ( {) {
 }</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor - pointer" > Sign In </Link> </p> </div>);
 }"}
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

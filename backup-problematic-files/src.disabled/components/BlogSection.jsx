@@ -9,4 +9,8 @@ const BlogSection = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default BlogSection;
+=======
+export default BlogSection;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

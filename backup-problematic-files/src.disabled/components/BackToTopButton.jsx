@@ -9,4 +9,8 @@ const BackToTopButton = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default BackToTopButton;
+=======
+export default BackToTopButton;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

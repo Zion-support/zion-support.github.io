@@ -9,4 +9,8 @@ const ComprehensivePricingShowcase2025 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensivePricingShowcase2025;
+=======
+export default ComprehensivePricingShowcase2025;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIBusinessIntelligenceSuite.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIBusinessIntelligenceSuite.js;
+=======
+export default AIBusinessIntelligenceSuite.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

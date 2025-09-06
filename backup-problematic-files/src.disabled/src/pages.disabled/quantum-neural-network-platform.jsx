@@ -9,4 +9,8 @@ const Quantum-neural-network-platform = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Quantum-neural-network-platform;
+=======
+export default Quantum-neural-network-platform;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

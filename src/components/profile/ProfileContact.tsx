@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Mail, Send } from 'lucide-react'
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+interface ProfileContactProps {
+  email?: string;
+  profileName: string;
+  profileType: 'service' | 'talent'
+
+export function ProfileContact({
+  email
+  profileName
+  profileType
+}: ProfileContactProps) {
+  const [message, setMessage] = useState('')
+  const [subject, setSubject] = useState('')
+  const [isSending, setIsSending] = useState(false)
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSending(true)
+    // Here would be the actual API call to send the message;
+    setTimeout(() => {;
+      setIsSending(false);
+      setMessage('');
+      setSubject('');      toast({
+        title: 'Message Sent'
+        description: `Your message has been sent to ${profileName}.`
+      })
+    }, 1000)
+  }
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
@@ -17,7 +52,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { Mail, Send } from 'lucide-react'
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
-
 interface ProfileContactProps {
   email?: string;
   profile_name: string;
@@ -64,10 +98,58 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
     }, 1000)
   },
 
+<<<<<<< HEAD
+  return (
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+        <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
+        Contact
+      </h3>
+      
+      {email && (
+        <div className="mb-4 text-zion-slate-light">
+          <span className="block">Email: </span>
+          <a
+            href={`mailto:${email}`}
+          </Link>
+        </div>
+      )}
+      <form onSubmit={handleSendMessage}>
+        <div className="space-y-4">
+          <div>
+            <Input
+              placeholder='Subject'
+              value={subject}
+              onChange={e => setSubject(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white'              required              className="bg-zion-blue border-zion-blue-light text-white"
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+  const [message, setMessage] = useState(""),
+  const [subject, setSubject] = useState(""),
+  const [isSending, setIsSending] = useState(false),
+  
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault(),
+    setIsSending(true),
+    
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false),
+      setMessage(""),
+      setSubject(""),
+      toast({
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})
+    }, 1000)
+  },
 
 
 
 
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
 
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
@@ -126,12 +208,21 @@ export function ProfileContact(): any ({;
           <span className="block">Email: </span>;
           <a
             href={`mailto:${email}`} 
+<<<<<<< HEAD
+            className="text-zion-cyan hover:underline truncate block"
+
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="text-zion-cyan hover:underline truncate block"
 
 
 
           >
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {email}
           </a>;
         </div>;
@@ -150,12 +241,64 @@ export function ProfileContact(): any ({;
 
       
 
+<<<<<<< HEAD
+        <div className="space-y-4">
+          <div>
+            <Input
+          >
+            {email}
+          </Link>
+        </div>
+      )}
+      
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
             <Input
+              placeholder='Subject'
+              value={subject}
+              onChange={e => setSubject(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white'              required              className="bg-zion-blue border-zion-blue-light text-white"
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      <form onSubmit={handleSendMessage}>
+        <div className="space-y-4">
+          <div>
+            <Input
+<<<<<<< HEAD
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white"
+              required
+            />
+          </div>
+          <div>
+            <Textarea
+              placeholder={`Message to ${profileName}...`}
+              value={message}
+              onChange={e => setMessage(e.target.value)}
+              className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
+              required
+            />
+          </div>
+          <Button
+            type='submit'
+            className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
+            disabled={isSending}              required
+            />
+          </div>
+          <Button
+            type="submit"
+  `mailto:$ {
+  email
+}` "
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
+}'"}
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
@@ -180,14 +323,122 @@ export function ProfileContact(): any ({;
             {isSending ? "Sending..." : "Send Message"}
 
 
+<<<<<<< HEAD
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            disabled = {isSending,}
+          >
+            <Send className='mr-2 h-4 w-4' />
+            {isSending ? 'Sending...' : 'Send Message'}          </Button>            disabled={isSending}
+          >
+              onChange={(e) => setMessage(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              required
+            />
+          </div>
+          <Button 
+            type="submit" 
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+            disabled={isSending}
+          >
+            <Send className="mr-2 h-4 w-4" />
+            {isSending ? "Sending..." : "Send Message"}
+          </Button>
+        </div>
+      </form>
+    </div>
+  )
+  `mailto:$ {
+  email
+}` "
+}className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
+}'"}
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Mail, Send } from 'lucide-react';
+import { useState } from "react",;
+import { toast } from "@/hooks/use-toast",;
+interface ProfileContactProps {;
+  email?: string,;
+  profileName: string,;
+  profileType: 'service' | 'talent';
+}
+;
+export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {;
+  const [message, setMessage] = useState(""),;
+  const [subject, setSubject] = useState(""),;
+  const [isSending, setIsSending] = useState(false),;
+  const handleSendMessage = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSending(true),;
+    // Here would be the actual API call to send the message;
+    setTimeout(() => {;
+      setIsSending(false),;
+      setMessage(""),;
+      setSubject(""),;
+      toast({;
+        title: "Message Sent";
+        description: `Your message has been sent to ${profileName}.`});
+    }, 1000);
+  };
+  return (;
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
+      <h3 className="text-xl font-bold text-white mb-4 flex items-center">;
+        <Mail className="mr-2 h-5 w-5 text-zion-cyan" />;
+        Contact;
+      </h3>;
+      {email && (;
+        <div className="mb-4 text-zion-slate-light">;
+          <span className="block">Email: </span>;
+          <a;
+            href={`mailto:${email}`} ;
+            className="text-zion-cyan hover:underline truncate block";
+          >;
+            {email}
+          </a>;
+        </div>;
+      )}
+;
+      <form onSubmit={handleSendMessage}>;
+        <div className="space-y-4">;
+          <div>;
+            <Input;
+              placeholder="Subject";
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white";
+              required;
+            />;
+          </div>;
+          <div>;
+            <Textarea;
+              placeholder={`Message to ${profileName}...`}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
+              required;
+            />;
+          </div>;
+          <Button;
+            type="submit";
+            className="w-full bg-zion-cyan hover:bg-zion-cyan/90";
+            disabled={isSending}
+          >;
+            <Send className="mr-2 h-4 w-4" />;
+            {isSending ? "Sending..." : "Send Message"}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </Button>;
         </div>;
       </form>;
     </div>;
   );
+<<<<<<< HEAD
+=======
 
 
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               on_change={e => set_message (e.target.value)}
               className='bg - zion - blue border - zion - blue - light text - white min - h-[120px]';
               required;
@@ -219,4 +470,10 @@ export function ProfileContact(): any ({;
 }className="text - zion - cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>);
 }'"}
 }
+<<<<<<< HEAD
 ;
+}
+;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

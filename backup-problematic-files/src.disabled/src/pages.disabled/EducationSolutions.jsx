@@ -9,4 +9,8 @@ const EducationSolutions = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EducationSolutions;
+=======
+export default EducationSolutions;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

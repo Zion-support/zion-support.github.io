@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+=======
   const terms = readJsonFile('deal/terms && terms.json', {
     round: 'Series A',
     target: '$10,000,000',
@@ -20,14 +22,21 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     leadInvestor: 'TBD'});
 
   res && res.status(200).json(terms)
 }
 
+<<<<<<< HEAD
+leadInvestor: 'TBD'});
+  res && res.status(200).json(terms)
+}
+=======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -58,7 +67,41 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
+
 }
+<<<<<<< HEAD
+
+}
+
+
+
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (!requireSuperadminApi(req, res)) return;
+
+  const terms = readJsonFile('deal/terms.json', {
+    round: 'Series A'
+    target: '$10,000,000'
+    valuationCap: '$80,000,000'
+    discount: '20%'
+    leadInvestor: 'TBD'
+  });
+  res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (!requireSuperadminApi(req, res)) return;
+  const terms = readJsonFile('deal/terms.json', {
+    round: 'Series A'
+    target: '$10,000,000';
+    valuationCap: '$80,000,000';
+    discount: '20%'
+    leadInvestor: 'TBD'});
+
+  res.status(200).json(terms)
+}
+}
+
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -69,3 +112,4 @@ function handler() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

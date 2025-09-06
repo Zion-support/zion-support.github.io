@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Git Workflow Automator
@@ -456,6 +458,10 @@ module.exports = GitWorkflowAutomator;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"
@@ -528,6 +534,9 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
 <<<<<<< HEAD
   git commit -m '"fix"
 =======
+<<<<<<< HEAD
+  git commit -m '"fix"
+=======
   git commit -m '"fix"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -535,3 +544,7 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

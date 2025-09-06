@@ -9,4 +9,8 @@ const AIAutonomousTranslation = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousTranslation;
+=======
+export default AIAutonomousTranslation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

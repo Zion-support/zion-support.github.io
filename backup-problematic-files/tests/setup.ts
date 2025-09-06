@@ -22,9 +22,9 @@ afterEach(() => {;
 });
 ;
 // -----------------------------------------------------------------------------;
-// Jest-compatibility shim ------------------------------------------------------;
+// Jest - compatibility shim ------------------------------------------------------;
 // -----------------------------------------------------------------------------;
-// A lot of legacy test files still call `jest.fn()`, `jest.mock()` etc.  Rather;
+// A lot of legacy test files still call `jest.fn ()`, `jest.mock ()` etc.  Rather;
 // than refactor them all at once we map those calls to Vitest's equivalent;
 // (`vi`).  The shim only runs in the test environment and has no effect on;
 // production bundles.;
@@ -56,4 +56,8 @@ export default function Setup({ }: SetupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

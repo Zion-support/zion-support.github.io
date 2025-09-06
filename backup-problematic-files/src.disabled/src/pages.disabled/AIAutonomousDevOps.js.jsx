@@ -9,4 +9,8 @@ const AIAutonomousDevOps.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousDevOps.js;
+=======
+export default AIAutonomousDevOps.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

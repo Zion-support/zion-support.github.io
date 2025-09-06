@@ -9,4 +9,8 @@ const ITInfrastructure = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ITInfrastructure;
+=======
+export default ITInfrastructure;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

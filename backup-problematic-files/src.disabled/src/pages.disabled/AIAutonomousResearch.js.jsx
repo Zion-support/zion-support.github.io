@@ -9,4 +9,8 @@ const AIAutonomousResearch.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousResearch.js;
+=======
+export default AIAutonomousResearch.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

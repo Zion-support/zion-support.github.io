@@ -9,4 +9,8 @@ const PricingGuide = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PricingGuide;
+=======
+export default PricingGuide;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

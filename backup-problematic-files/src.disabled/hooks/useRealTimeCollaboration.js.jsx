@@ -9,4 +9,8 @@ const UseRealTimeCollaboration.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default UseRealTimeCollaboration.js;
+=======
+export default UseRealTimeCollaboration.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

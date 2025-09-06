@@ -1,7 +1,21 @@
 
+<<<<<<< HEAD
+{onNext && (;
+
+import { Button } from "@/components/ui/button",;
+import { Loader2 } from "lucide-react",;
+import { NavigationButtonsProps } from "./types",;
+;
+export const NavigationButtons = ({;
+
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {NavigationButtonsProps} from "./types";
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -11,27 +25,45 @@ export const NavigationButtons = ({;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
+<<<<<<< HEAD
+=======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
 
 
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export const NavigationButtons = ({
   onBack,
   onNext,
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   isLoading = false}: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
       {onBack && (
         <Button variant="outline" onClick={onBack}>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
 import { NavigationButtonsProps } from "./types",;
@@ -41,37 +73,85 @@ export const NavigationButtons = ({;
   isNextDisabled = false,;
   backLabel = "Back",;
   nextLabel = "Next";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
   isLoading = false}: NavigationButtonsProps) => {;
-  return (
+  return (;
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {backLabel}
-        </Button>;
+        </Button>
+      )}
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>
       )}
 
+  nextLabel = "Next",;
+  isLoading = false} NavigationButtonsProps) => {;
+  return (;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  isLoading = false}: NavigationButtonsProps) => {;
+  return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant="outline" onClick={onBack}>;          {backLabel}
+        </Button>;
+      )}
       {onNext && (;
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
-
-=======
       {onNext && (
 
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
-
-
+    </div>;
+<<<<<<< HEAD
+  ),;
+},; export const NavigationButtons = ({
+  onBack;
+onNext;
+isNextDisabled = false;
+backLabel = "Back";
+nextLabel = "Next";
+isLoading = false 
+}: NavigationButtonsProps) => {
+  return (<div className="flex justify-between" > {
+  onBack && (<Button variant="outline" onClick= {
+  onBack 
+}> {
+  backLabel 
+}</Button>) 
+}{
+  onNext && (<Button onClick= {
+  onNext 
+}disabled= {
+  isNextDisabled || isLoading 
+}> {
+  isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" /> 
+}{
+  nextLabel 
+}
+}</div>) 
+};
+    </div>
+  )
+}
 
     </div>;
+  );
+    </div>;
+  );
+};
+=======
   );
 
 =======
@@ -109,3 +189,4 @@ export const NavigationButtons = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

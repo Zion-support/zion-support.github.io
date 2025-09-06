@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -39,16 +47,27 @@ class PerformanceMonitor {}
   setupLogging() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -61,8 +80,11 @@ class PerformanceMonitor {
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
     this.ensureLogDirectory();
   }
-
   ensureLogDirectory() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -75,8 +97,40 @@ class PerformanceMonitor {
     };
   };
   log(message) {}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+  log(message, level = 'INFO') {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    const timestamp = new Date().toISOString();
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { "recursive": true }
+});
+    };
+  };
+  log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -171,53 +225,75 @@ class PerformanceMonitor {
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async monitorPerformance() {
     this.log('⚡ Starting performance monitoring...');
-
     try {
       // Monitor build time
       const buildTime = await this.measureBuildTime();
       this.metrics.buildTime = buildTime;
-
       // Monitor bundle size
       const bundleSize = await this.measureBundleSize();
       this.metrics.bundleSize = bundleSize;
-
       // Monitor memory usage
       const memoryUsage = process.memoryUsage();
       this.metrics.memoryUsage = memoryUsage.heapUsed / 1024 / 1024; // MB
-
       // Monitor CPU usage
       const cpuUsage = process.cpuUsage();
       this.metrics.cpuUsage = cpuUsage.user / 1000000; // seconds
-
       this.metrics.lastUpdated = new Date().toISOString();
-
       await this.saveMetrics();
       await this.generatePerformanceReport();
-
       this.log('Performance monitoring completed');
       return this.metrics;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Failed to get build metrics: ${error.message}`);
       return { error: error.message };
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -257,22 +333,40 @@ class PerformanceMonitor {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async measureBuildTime() {
     const startTime = Date.now();
     try {
       execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
       return Date.now() - startTime;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Failed to get bundle metrics: ${error.message}`);
       return { error: error.message };
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -385,26 +479,26 @@ class PerformanceMonitor {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async measureBundleSize() {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       if (!fs.existsSync(buildDir)) {
         return 0;
       }
-
       const getDirSize = dir => {
         let size = 0;
         const files = fs.readdirSync(dir);
-
         files.forEach(file => {
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-
           if (stat.isDirectory()) {
             size += getDirSize(filePath);
           } else {
             size += stat.size;
           }
+<<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -414,10 +508,35 @@ class PerformanceMonitor {
         this.log('Bundle analysis completed');
       }
       await this.optimizeBuild();
+=======
+<<<<<<< HEAD
+        });
+        return size;
+      };
+      return getDirSize(buildDir);
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+        });
+        this.log('Bundle analysis completed');
+      }
+      await this.optimizeBuild();
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } catch (error) {
       this.log(`Build size optimization failed: ${error.message}`);
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   async savePerformanceReport() {
 =======
@@ -428,6 +547,7 @@ class PerformanceMonitor {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async saveMetrics() {
     const metricsFile = path.join(
       __dirname,
@@ -437,18 +557,28 @@ class PerformanceMonitor {
     fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
-
   async generatePerformanceReport() {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const report = {
       lastCheck: this.lastCheck,
       projectRoot: this.projectRoot,
       recommendations: this.getPerformanceRecommendations(),
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
     try {
       fs.writeFileSync(
         this.performanceReportFile,
@@ -501,6 +631,96 @@ class PerformanceMonitor {
         );
       }
     }
+=======
+<<<<<<< HEAD
+    const reportFile = path.join(
+      __dirname,
+      'reports',
+      'performance-report.json'
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Performance report generated: ${reportFile}`);
+  }
+  generateRecommendations() {
+    const recommendations = [];
+    if (this.metrics.buildTime > 60000) {
+      // 1 minute
+      recommendations.push(
+        'Consider optimizing build process - build time is high'
+      );
+    }
+    if (this.metrics.bundleSize > 5000000) {
+      // 5MB
+      recommendations.push('Consider code splitting - bundle size is large');
+    }
+    if (this.metrics.memoryUsage > 100) {
+      // 100MB
+      recommendations.push(
+        'Consider memory optimization - high memory usage detected'
+      );
+    }
+    return recommendations;
+  }
+}
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+    try {
+      fs.writeFileSync(
+        this.performanceReportFile,
+        JSON.stringify(report, null, 2)
+      );
+    } catch (_) {}
+  }
+<<<<<<< HEAD
+  getPerformanceRecommendations() {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  getPerformanceRecommendations() {
+=======
+
+  generateRecommendations() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+  generateRecommendations() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+    const recommendations = [];
+    if (!this.lastCheck) return recommendations;
+    const metrics = this.lastCheck.systemMetrics;
+    if (metrics && metrics.memory && metrics.memory.heapTotal) {
+      const memoryUsagePercent =
+        (metrics.memory.heapUsed / metrics.memory.heapTotal) * 100;
+      if (memoryUsagePercent > 80) {
+        recommendations.push(
+          'High memory usage detected. Consider optimizing memory usage.'
+        );
+      }
+      if (memoryUsagePercent > 90) {
+        recommendations.push(
+          'Critical memory usage. Immediate optimization required.'
+        );
+      }
+    }
+    if (this.lastCheck.buildMetrics && this.lastCheck.buildMetrics.exists) {
+      if (this.lastCheck.buildMetrics.age > 3600000) {
+        recommendations.push(
+          'Build is stale. Consider rebuilding for optimal performance.'
+        );
+      }
+      if (this.lastCheck.buildMetrics.size > 100 * 1024 * 1024) {
+        recommendations.push(
+          'Large build size detected. Consider code splitting and optimization.'
+        );
+      }
+    }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     return recommendations;
   }
 <<<<<<< HEAD
@@ -656,11 +876,15 @@ monitor.start().catch(error => {})
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run if called directly
 if (require.main === module) {
     const monitor = new PerformanceMonitor(),
     monitor.monitorPerformance().catch(console.error)
   }
+<<<<<<< HEAD
+module.exports = PerformanceMonitor;
+=======
 
 module.exports = PerformanceMonitor;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -668,3 +892,10 @@ module.exports = PerformanceMonitor;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

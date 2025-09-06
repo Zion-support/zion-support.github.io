@@ -9,4 +9,8 @@ const SiteFooter = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SiteFooter;
+=======
+export default SiteFooter;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

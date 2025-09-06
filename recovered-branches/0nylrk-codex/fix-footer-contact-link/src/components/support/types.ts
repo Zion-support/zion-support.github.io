@@ -1,10 +1,16 @@
 
 import { ReactNode  } from './react';
 
+<<<<<<< HEAD
+import { ReactNode } from "react";
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
+=======
 
   last_updated: string;
   tags: string[];
@@ -12,6 +18,7 @@ export interface HelpArticle {
 }
 export interface HelpCategory {
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 import {ReactNode} from "react";
 export interface HelpArticle {;
@@ -20,23 +27,35 @@ export interface HelpArticle {;
   content: string;
   lastUpdated: string,
   tags: string[]
+<<<<<<< HEAD
+  lastUpdated: string;
+tags: string[]
+}
+export interface HelpCategory {
+}
+
+export interface HelpCategory {;
+=======
 }
 
 export interface HelpCategory {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
+<<<<<<< HEAD
+export interface SupportTicket {
+=======
   articles: HelpArticle[]
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 export interface SupportTicket {;
-
-
   id: string;
   user_id: string;
   subject: string;
@@ -48,9 +67,7 @@ export interface SupportTicket {;
   updated_at: string;
 }
 
-=======
 
-=======
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
@@ -93,10 +110,29 @@ export interface SupportTicket {;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
   createdAt: string;
+<<<<<<< HEAD
+articles: HelpArticle[]
+}
+export interface SupportTicket {
+  id: string;
+  userId: string;
+  subject: string;
+  message: string;
+  status: "open" | "in-progress" | "resolved" | "closed";
+  priority: "low" | "medium" | "high";
+  createdAt: string;
+updatedAt: string;
+}
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   updatedAt: string;
 }
 ;
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

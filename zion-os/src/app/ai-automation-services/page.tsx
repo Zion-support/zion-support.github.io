@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Automation Services - Zion Tech Group",;
@@ -9,7 +12,10 @@ export default function AIAutomationServicesPage() {;
 
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Link from './next / link';,
 export const metadata = {
   title: "AI Automation Services - Zion Tech Group",
@@ -22,7 +28,20 @@ function AIAutomationServicesPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import Link from "next/link";
+export const metadata = {title: "AI Automation Services - Zion Tech Group";
+  description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
+  keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"}
+export default function AIAutomationServicesPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Automation Services - Zion Tech Group",;
+  description: "Transform your business with intelligent AI automation solutions. Streamline operations, reduce costs, and enhance productivity with our cutting-edge automation technology.";
+  keywords: "AI automation, business process automation, intelligent automation, workflow automation, Zion Tech Group"};
+export default function AIAutomationServicesPage() {;
+  return (;
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;

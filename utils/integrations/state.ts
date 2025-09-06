@@ -24,29 +24,48 @@ export function resetState(): void {
   connections: [],
   logs: [],
   overrides: [];
+  connections: []
+  logs: []
+  overrides: []
 }
 ;
 export function get_state (): IntegrationState {
   return { ...state }
 }
-export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
-  updater (state);
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+};
+
+export function getState(): IntegrationState {;
+  return { ...state };
+}
+
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+  updater(state);
   return { ...state }
 }
 export function reset_state (): void {
   state = {
-    connections: [],
-    logs: [],
-    overrides: [];
+    connections: []
+    logs: []
+    overrides: []
   }
+<<<<<<< HEAD
+
+=======
 }
 
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     connections: [],
     logs: [],
     overrides: [];
   };
+<<<<<<< HEAD
+}
+}
+=======
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -46,15 +54,27 @@ async function checkCodeDuplication() {
     { file: 'pages/ai-services.tsx', line: 7, duplicateOf: 'pages/about.tsx' },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-
 class CodeQualityMonitor {
   constructor() {
     this.metrics = {
@@ -66,24 +86,20 @@ class CodeQualityMonitor {
     };
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
   }
-
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
-
   async analyzeCodeQuality() {
     try {
       this.log("Starting code quality analysis...");
-      
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();
       this.metrics.performance = this.calculatePerformance();
       this.metrics.lastUpdated = new Date().toISOString();
-      
       this.saveMetrics();
       this.log("Code quality analysis completed successfully");
       return this.metrics;
@@ -92,7 +108,6 @@ class CodeQualityMonitor {
       return null;
     }
   }
-
   calculateComplexity() {
     try {
       const files = this.getTypeScriptFiles();
@@ -107,7 +122,6 @@ class CodeQualityMonitor {
       return Math.floor(Math.random() * 10) + 1;
     }
   }
-
   calculateMaintainability() {
     try {
       const files = this.getTypeScriptFiles();
@@ -116,34 +130,28 @@ class CodeQualityMonitor {
         const stats = fs.statSync(file);
         return acc + stats.size;
       }, 0) / totalFiles;
-      
       // Lower file size = higher maintainability
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000));
     } catch (error) {
       return Math.floor(Math.random() * 100) + 50;
     }
   }
-
   calculateTestCoverage() {
     // Placeholder for test coverage calculation
     return Math.floor(Math.random() * 100);
   }
-
   calculatePerformance() {
     // Placeholder for performance calculation
     return Math.floor(Math.random() * 100) + 70;
   }
-
   getTypeScriptFiles() {
     const projectRoot = path.resolve(__dirname, "..");
     const files = [];
-    
     const walkDir = (dir) => {
       const items = fs.readdirSync(dir);
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
           walkDir(fullPath);
         } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
@@ -151,16 +159,16 @@ class CodeQualityMonitor {
         }
       });
     };
-    
     walkDir(projectRoot);
     return files;
   }
-
   saveMetrics() {
     const metricsFile = path.join(__dirname, "logs", "code-quality-metrics.json");
     fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
   }
 }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 async function checkCodeDuplication() {
@@ -253,6 +261,13 @@ async function checkCodeStyle() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (duplications.length > 0) {}
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications;
@@ -277,6 +292,14 @@ async function checkCodeStyle() {}
     return { "passed": false, "error": 'Code style issues detected' };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -297,6 +320,13 @@ async function checkTypeScriptQuality() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 };
 async function checkTypeScriptQuality() {}
@@ -310,6 +340,14 @@ async function checkTypeScriptQuality() {}
     console.error(`[ERROR] TypeScript quality issues "found": ${error.message}`);
     return { "passed": false, "error": 'TypeScript quality issues detected' };
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -336,6 +374,13 @@ async function checkTestCoverage() {
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', {
     "cwd": process.cwd(),
     "ignore": 'node_modules/**'});
@@ -354,6 +399,14 @@ async function checkDocumentationCoverage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -367,6 +420,13 @@ async function checkDocumentationCoverage() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 };
 async function checkTestCoverage() {}
@@ -401,6 +461,13 @@ async function runCodeQualityMonitor() {}
   const testCoverageResult = await checkTestCoverage();
   const docCoverageResult = await checkDocumentationCoverage();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const results = [
+    complexityResult,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
   const results = [
     complexityResult,
 =======
@@ -416,6 +483,13 @@ async function runCodeQualityMonitor() {}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const results = [complexityResult,]
     duplicationResult,
     styleResult,
@@ -427,6 +501,16 @@ async function runCodeQualityMonitor() {}
   const endTime = Date.now();
   const duration = endTime - startTime;
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    process.exit(1);
+  } else {
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -471,6 +555,13 @@ async function runCodeQualityMonitor() {}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   console.log()
     `[INFO] Code quality monitoring "completed": ${issuesFound.length} issues found in ${duration}ms"
   );
@@ -490,6 +581,14 @@ async function runCodeQualityMonitor() {}
     process.exit(0);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -498,11 +597,28 @@ async function runCodeQualityMonitor() {}
   }
 }
 runCodeQualityMonitor();
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  };
+};
+<<<<<<< HEAD
+runCodeQualityMonitor();
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+runCodeQualityMonitor();
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   };
 };
 <<<<<<< HEAD
 runCodeQualityMonitor();
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 <<<<<<< HEAD
 runCodeQualityMonitor();
 =======
@@ -512,11 +628,20 @@ runCodeQualityMonitor();
 };
 runCodeQualityMonitor();
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
+<<<<<<< HEAD
+});
+=======
 });
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -524,3 +649,10 @@ monitor.analyzeCodeQuality().then(metrics => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

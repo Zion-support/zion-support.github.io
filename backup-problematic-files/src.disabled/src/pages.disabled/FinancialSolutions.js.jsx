@@ -9,4 +9,8 @@ const FinancialSolutions.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FinancialSolutions.js;
+=======
+export default FinancialSolutions.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

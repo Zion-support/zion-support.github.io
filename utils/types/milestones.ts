@@ -1,11 +1,36 @@
 
+<<<<<<< HEAD
+export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
+export type ProjectParticipantRole = 'client' | 'talent';
+export type ProjectParticipants = {
 
+export type ProjectParticipants = {;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   clientUserId: string;
   talentUserId: string;
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type Project = {  id: string;
+<<<<<<< HEAD
+  title: string;
+  description?: string;
+  dueDate: string;
+  amountUsd: number;
+  status: 'pending' | 'completed' | 'cancelled';
+  attachments?: MilestoneAttachment[];
+  createdAt: string;
+  updatedAt: string
+}
+export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  return (
+    value === 'Pending' |
+    value === 'In Progress' |
+    value === 'Submitted' |
+    value === 'Approved' |
+    value === 'Paid'
+  );export interface MilestoneAttachment {
+=======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   title: string;
   description?: string;
@@ -24,32 +49,42 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
     value === 'Approved' ||;
     value === 'Paid';
   );export interface MilestoneAttachment {;
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
+<<<<<<< HEAD
+  uploadedAt: string
+=======
 
   uploaded_at: string,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 export interface CreateMilestoneRequest {
+<<<<<<< HEAD
+=======
 =======
   uploadedAt: string
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export interface CreateMilestoneRequest {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   description?: string;
 
@@ -63,25 +98,40 @@ export interface CreateMilestoneRequest {;
 }
 
 export interface UpdateMilestoneRequest {
-=======
 
 
 export interface UpdateMilestoneRequest {;
 
+<<<<<<< HEAD
+
+export interface CreateMilestoneRequest {;
+  title: string;
+  description?: string;
+  dueDate: string;
+  amountUsd: number;
+  attachments?: MilestoneAttachment[]
+}
+export interface UpdateMilestoneRequest {
+
+export interface UpdateMilestoneRequest {;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   title?: string;
   description?: string;
-  due_date?: string;
-  amount_usd?: number;
+  dueDate?: string;
+  amountUsd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-
+<<<<<<< HEAD
 =======
 
-
-
-
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
 
 export function isOverdue(milestone: Milestone): boolean {
   if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
@@ -207,8 +257,14 @@ export function createMilestoneFile(
     uploadedAt: new Date().toISOString()
   };
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
+<<<<<<< HEAD
+}
+
+
+}
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

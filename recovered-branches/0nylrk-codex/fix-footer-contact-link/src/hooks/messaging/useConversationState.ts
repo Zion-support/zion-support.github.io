@@ -1,5 +1,16 @@
 
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { Conversation, Message  } from '@/types/messaging';
+/**
+ * Hook to manage messaging state
+ */
+export function useConversationState() {
+  const [messages, setMessages] = useState<Message[]>([]),
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]),
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -8,12 +19,27 @@ import {Conversation, Message} from '@/types/messaging';
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+  return {
+    // State
+    messages;
+    setMessages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+=======
 =======
 import {useState} from 'react';
 import {Conversation, Message} from '@/types / messaging';
@@ -43,8 +69,8 @@ function useConversationState() {
     unread_count;
     setUnreadCount;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     activeConversation;
-=======
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
 /**;
@@ -70,9 +96,42 @@ export function useConversationState() {;
     activeConversation,;
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setActiveConversation;
     is_loading;
+    setIsLoading}
+}
+
+import { useState } from 'react',;
+import { Conversation, Message } from '@/types/messaging',;
+;
+/**;
+ * Hook to manage messaging state;
+ */;
+export function useConversationState() {;
+  const [messages, setMessages] = useState<Message[]>([]),;
+  const [activeMessages, setActiveMessages] = useState<Message[]>([]),;
+  const [conversations, setConversations] = useState<Conversation[]>([]),;
+  const [unreadCount, setUnreadCount] = useState(0),;
+  const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),;
+  const [isLoading, setIsLoading] = useState(false),;
+;
+  return {;
+    // State;
+    messages,;
+    setMessages,;
+    activeMessages,;
+    setActiveMessages,;
+    conversations,;
+    setConversations,;
+    unreadCount,;
+    setUnreadCount,;
+    activeConversation,;
+    setActiveConversation,;
+    isLoading,;
+    setIsLoading},;
+} /** * Hook to manage messaging state */ 
+}
+    setActiveConversation;
+    isLoading;
     setIsLoading}
 }

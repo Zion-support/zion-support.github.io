@@ -3,6 +3,22 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   fallback?: React.ReactNode;
   [key: string]: any;
 }
+:components/LazyComponent.tsx
+const LazyComponent: React.FC<LazyComponentProps> = ({component;
+  fallback = <div>Loading...</div>;
+;
+const LazyComponent: React.FC<LazyComponentProps> = ({;
+  component,;
+  fallback = <div>Loading...</div>,;
+  ...props;
+}) => {const LazyLoadedComponent = lazy(component);
+  return (;
+    <Suspense fallback={fallback}>;
+      <LazyLoadedComponent {...props} />;
+    </Suspense>;
+  );
+}
+export default LazyComponent;
 
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
@@ -18,7 +34,6 @@ const LazyComponent: React.FC<LazyComponentProps> = ({;
   );
 }
 export default LazyComponent;
-=======
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 
   component, 
@@ -34,6 +49,11 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
 },
 
 export default LazyComponent,
+<<<<<<< HEAD
+:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
+:backup-problematic-files/temp_broken_files/components/LazyComponent.tsx
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

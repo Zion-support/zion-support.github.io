@@ -9,4 +9,8 @@ const ExpandedServicesPreview = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ExpandedServicesPreview;
+=======
+export default ExpandedServicesPreview;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

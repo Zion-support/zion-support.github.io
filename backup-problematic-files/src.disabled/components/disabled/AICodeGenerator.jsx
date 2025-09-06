@@ -9,4 +9,8 @@ const AICodeGenerator = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AICodeGenerator;
+=======
+export default AICodeGenerator;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

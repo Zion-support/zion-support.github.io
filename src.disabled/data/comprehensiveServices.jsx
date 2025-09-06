@@ -11,6 +11,15 @@ export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+}
+
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+=======
 
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

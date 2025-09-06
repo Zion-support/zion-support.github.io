@@ -3,6 +3,27 @@ const images = document && document.querySelectorAll('img');
     if (!img && img.loading) {
       img && img.loading = 'lazy';
     }
+<<<<<<< HEAD
+    if (!img.decoding) {
+      img.decoding = 'async'
+    }
+  });
+};
+
+  });
+};
+
+export const preloadCriticalResources = null;
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+=======
     if (!img && img.decoding) {
       img && img.decoding = 'async';
 
@@ -49,6 +70,7 @@ export const preloadCriticalResources = () =>: any {
     link.href = resource;
     link.as = resource.ends_with ('.css') ? 'style' : 'font';
     document.head.append_child (link);
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });
 }
 export const optimizeBundleSize = () =>: any {
@@ -73,8 +95,8 @@ export const lazyLoadComponents = () => {
 };
 
 export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...');
-};
+  console.log('Lazy loading components...')
+}
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
@@ -82,10 +104,53 @@ export const optimizeBundleSize = () => {
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
+<<<<<<< HEAD
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+
+  })
+}
+export const preloadCriticalResources = () => {
+  const criticalResources = ['/fonts/main.woff2/css/critical.css']
+  criticalResources.forEach(resource => {    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.href = resource
+    link.as = resource.endsWith('.css') ? 'style' : 'font'
+    document.head.appendChild(link)
+  })
+}
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+  const loadComponent = componentName => {    return import(`./components/${componentName}`)
+  }
+  return { loadComponent }
+}
+    link.rel = 'preload'
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
+;
+  });
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+  const loadComponent = componentName => {
+    return import(`./components/${componentName}`);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
 
   return { loadComponent };
 };
 
     link.rel = 'preload';
+<<<<<<< HEAD
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+=======
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

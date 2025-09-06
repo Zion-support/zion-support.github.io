@@ -9,4 +9,8 @@ const 404 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default 404;
+=======
+export default 404;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

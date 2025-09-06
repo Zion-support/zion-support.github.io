@@ -9,4 +9,8 @@ const ThemeContext.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ThemeContext.js;
+=======
+export default ThemeContext.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

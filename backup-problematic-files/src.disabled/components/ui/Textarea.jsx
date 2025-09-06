@@ -9,4 +9,8 @@ const Textarea = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Textarea;
+=======
+export default Textarea;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

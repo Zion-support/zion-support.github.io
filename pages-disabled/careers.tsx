@@ -1,22 +1,26 @@
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
+<<<<<<< HEAD
+import React from 'react',
+import React from 'react';
+=======
     }
     
     return this.props.children;
@@ -24,12 +28,15 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+<<<<<<< HEAD
+=======
 
 import Head from 'next / head';
 import {motion} from 'framer-motion';
@@ -43,6 +50,7 @@ function CareersPage() {
 
     {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
@@ -62,12 +70,38 @@ export default function CareersPage() {;
       description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
       requirements: [;
 
+<<<<<<< HEAD
+export default function CareersPage() {
+
+  const openPositions = [
+    {
+      title: "Senior AI Engineer"
+      department: "AI & Machine Learning"
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",;
+      location: "San Francisco, CA / Remote";
+      type: "Full-time"
+      experience: "5+ years"
+      salary: "$150,000 - $200,000";
+      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients"
+      requirements: [
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
-        "Strong background in machine learning algorithms";
+        "Strong background in machine learning algorithms"
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
+<<<<<<< HEAD
+      icon: Brain
+      color: "from-purple-500 to-pink-500"
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+=======
 
       type: "Full - time",
       experience: "5+ years",
@@ -103,28 +137,36 @@ export default function CareersPage() {;
       requirements: [;
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000";
       description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
         "Knowledge of quantum algorithms and cryptography";
         "Strong mathematical and analytical skills";
       ];
       benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
+<<<<<<< HEAD
+      icon: Atom,
+      color: "from - blue - 500 to - cyan - 500";
+=======
 
       icon: Atom,
       color: "from - blue - 500 to - cyan - 500";
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       title: "Cybersecurity Architect"
       department: "Cybersecurity"
       location: "San Francisco, CA / Remote";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: "Full - time",
       experience: "7+ years",
       salary: "$160, 000 - $220, 000";
@@ -138,13 +180,19 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
       icon: Shield,
       color: "from - red - 500 to - orange - 500";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       title: "Cloud Infrastructure Engineer"
       department: "Cloud Infrastructure"
       location: "San Francisco, CA / Remote";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: Atom,;
       color: "from-blue-500 to-cyan-500";
     };
@@ -176,13 +224,19 @@ export default function CareersPage() {;
       description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",;
       requirements: [;
         "Bachelor's degree in Computer Science or related field",;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "Expertise in AWS, Azure, or GCP";
         "Experience with Kubernetes, Docker, and CI/CD";
         "Strong knowledge of infrastructure as code";
       ];
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: "Full - time",
       experience: "4+ years",
       salary: "$130, 000 - $180, 000";
@@ -196,13 +250,19 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
       icon: Cloud,
       color: "from - emerald - 500 to - teal - 500";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       title: "Data Scientist"
       department: "Data Analytics"
       location: "San Francisco, CA / Remote";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: Cloud,;
       color: "from-emerald-500 to-teal-500";
     };
@@ -215,14 +275,20 @@ export default function CareersPage() {;
       salary: "$110,000 - $160,000";
       description: "Develop predictive analytics models and data-driven insights for business clients",;
       requirements: [;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "Master's degree in Data Science, Statistics, or related field";
         "Proficiency in Python, R, and SQL";
         "Experience with machine learning and statistical modeling";
         "Strong analytical and problem-solving skills";
       ];
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: "Full - time",
       experience: "3+ years",
       salary: "$110, 000 - $160, 000";
@@ -236,13 +302,19 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
       icon: Zap,
       color: "from - indigo - 500 to - purple - 500";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       title: "Product Manager"
       department: "Product"
       location: "San Francisco, CA / Remote";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: Zap,;
       color: "from-indigo-500 to-purple-500";
     };
@@ -255,21 +327,26 @@ export default function CareersPage() {;
       salary: "$140,000 - $190,000";
       description: "Lead product strategy and development for our technology solutions portfolio",;
       requirements: [;
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       type: "Full - time",
       experience: "5+ years",
       salary: "$140, 000 - $190, 000";
       description: "Lead product strategy and development for our technology solutions portfolio",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
         "Strong analytical and strategic thinking skills";
         "Excellent communication and leadership abilities";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: Rocket,
       color: "from - yellow - 500 to - orange - 500";
     }
@@ -281,12 +358,18 @@ export default function CareersPage() {;
       description: "Above - market salaries with equity options and performance bonuses",
       icon: DollarSign,
       color: "from - green - 500 to - emerald - 500";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       title: "Health & Wellness"
       description: "Comprehensive health, dental, and vision insurance for you and your family";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: Star,
       color: "from - blue - 500 to - cyan - 500";
     }
@@ -295,17 +378,22 @@ export default function CareersPage() {;
       description: "Remote work options and flexible hours to support work - life balance",
       icon: Clock,
       color: "from - purple - 500 to - pink - 500";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     {
       title: "Professional Growth"
       description: "Continuous learning opportunities, conferences, and career development";
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       icon: Rocket,;
       color: "from-yellow-500 to-orange-500";
     }
   ];
-
   const benefits = [;
     {;
       title: "Competitive Compensation",;
@@ -330,28 +418,39 @@ export default function CareersPage() {;
       description: "Continuous learning opportunities, conferences, and career development";
       icon: Rocket,;
       color: "from-orange-500 to-red-500";
+<<<<<<< HEAD
+    }
+  ];
+  return (
+=======
 
     }
   ];
   return (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <UltraAdvancedFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
         </Head>;
-
       <EnhancedNavigation />;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             transition={{ duration: 0 && 0.8 }}
             className="mb-8">;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
@@ -361,7 +460,6 @@ export default function CareersPage() {;
               Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -378,8 +476,11 @@ export default function CareersPage() {;
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Benefits Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -388,19 +489,24 @@ export default function CareersPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Why Work at Zion Tech Group?</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
               We offer competitive benefits and a collaborative environment that fosters innovation and growth;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -417,6 +523,17 @@ export default function CareersPage() {;
           </div>;
         </div>;
       </section>;
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+
+
+
+
+=======
+<<<<<<< HEAD
+=======
 
 
 =======
@@ -425,6 +542,7 @@ export default function CareersPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -433,19 +551,24 @@ export default function CareersPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
               Join our team of innovators and help build the future of technology;
             </p>;
           </motion && motion.div>;
-
           <div className="space-y-6">;
             {openPositions && openPositions.map((position, index) => (;
               <motion&& motion.div
                 key={position && position.title}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -463,9 +586,7 @@ export default function CareersPage() {;
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
                     </div>;
-
                     <p className="text-white/80 mb-4">{position && position.description}</p>;
-
                     <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
@@ -484,26 +605,35 @@ export default function CareersPage() {;
                         <span>{position && position.salary}</span>;
                       </div>;
                     </div>;
-
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
                         {position && position.requirements.map((req, idx) => (;
                           <li key={idx} className="text-sm text-white/80 flex items-center">;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
+<<<<<<< HEAD
+                            {req}
+                          </li>;
+                        ))}
+=======
 
                             {req}
                           </li>;
                         ))}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       </ul>;
                     </div>;
-
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;
                         {position && position.benefits.map((benefit) => (;
                           <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
+<<<<<<< HEAD
+                            {benefit}
+                          </span>;
+                        ))}
+=======
 
                             {benefit}
                           </span>;
@@ -512,10 +642,8 @@ export default function CareersPage() {;
                       </div>;
                     </div>;
                   </div>;
-
                   <div className="lg:flex-shrink-0">;
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-=======
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
@@ -568,6 +696,29 @@ export default function CareersPage() {;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      </div>
+                    </div>
+                  </div>
+                  <div className="lg:flex-shrink-0">
+                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -673,11 +824,16 @@ export default function CareersPage() {;
                   </div>;
                   <div className="lg:flex - shrink - 0">;
                     <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - white transition - all duration - 300 transform hover:scale - 105">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       Apply Now;
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
 
 
 
@@ -691,6 +847,7 @@ export default function CareersPage() {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -713,12 +870,21 @@ export default function CareersPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 };
-
       <EnhancedFooter />;
     </div>;
   );
 }
 
+<<<<<<< HEAD
+}
+
+
+      <EnhancedFooter />
+    </div>
+  )
+}
+}
+=======
 =======
               </motion.div>))}
           </div>;
@@ -762,3 +928,4 @@ export default function CareersPage() {;
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const ProductSubmissionForm.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ProductSubmissionForm.js;
+=======
+export default ProductSubmissionForm.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

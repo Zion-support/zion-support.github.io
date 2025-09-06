@@ -182,7 +182,15 @@ return (<> <Dialog open= {;
   loginOpen ;
 }onOpenChange= {;
   setLoginOpen ;
+<<<<<<< HEAD
+:temp_broken_files/profile/ContactPublisherModal.tsx
+}/> </>) ;"}'"
+}/> </>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ContactPublisherModal.tsx
+=======
 
 }/> </>) ;
 }'"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

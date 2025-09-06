@@ -1,9 +1,22 @@
 
 
+<<<<<<< HEAD
+export default function Page() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Capabilities Live Implementation</title>;
+<<<<<<< HEAD
+import Head from 'next/head';
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta
           name='description'
           content='Step-by-step guidance derived from live research signals.'
@@ -26,6 +39,11 @@
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
+=======
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
 
@@ -39,10 +57,15 @@
   );export default function Page() {;
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export default function Page() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
+<<<<<<< HEAD
+export default function Page() {
+  return (
+}
+=======
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Guide — Capabilities Live Implementation</title>;
@@ -62,6 +85,7 @@ export default function Page() {
 }
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -120,8 +144,11 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
@@ -135,6 +162,77 @@ function Page() {
     </div>
   );export default function Page() {
   return (
+<<<<<<< HEAD
+
+export default function Page() {
+  return (
+
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Capabilities Live Implementation</title>
+        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Guide — Capabilities Live Implementation&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+    </div>
+  );
+}
+    </div>;
+  );
+}
+
+}
+    </div>
+  )
+import Head from 'next/head';
+export default function Page(req, res) {
+  try {
+  return (;
+    <div className="min-h-screen bg-slate-950 text-white">;
+      <Head>;
+        <title>Guide — Capabilities Live Implementation</title>;
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />;
+        <meta property="og:title" content="Guide — Capabilities Live Implementation" />;
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />;
+        <meta name="twitter:card" content="summary_large_image" />;
+      </Head>;
+      <main className="container mx-auto px-6 py-12 prose prose-invert">;
+        <h1 className="text-3xl font-extrabold">Guide — Capabilities Live Implementation</h1>;
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />;
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>;
+      </main>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+
+=======
 =======
 
 export default function Page() {
@@ -159,3 +257,4 @@ export default function Page() {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

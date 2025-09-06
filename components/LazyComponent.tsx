@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType < any> }>,
@@ -16,5 +19,9 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
       <LazyLoadedComponent {...props} />;
     </Suspense>);
 },
+<<<<<<< HEAD
+export default LazyComponent;
+=======
 
 export default LazyComponent;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

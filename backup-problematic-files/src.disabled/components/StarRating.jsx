@@ -9,4 +9,8 @@ const StarRating = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default StarRating;
+=======
+export default StarRating;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

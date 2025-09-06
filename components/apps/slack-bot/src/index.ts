@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { App } from '@slack/bolt';
 
 
@@ -7,6 +10,19 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
 
+<<<<<<< HEAD
+import { App  } from '@slack/bolt';
+import { App } from '@slack/bolt';
+import dotenv from 'dotenv';
+import fetch from 'node-fetch';
+
+const apiBase = process.env.API_ORIGIN |'http://localhost:4000';
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN
+  signingSecret: process.env.SLACK_SIGNING_SECRET
+  appToken: process.env.SLACK_APP_LEVEL_TOKEN
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   socketMode: true,});
 
 
@@ -18,6 +34,44 @@ function helpText(): string {
 });
 function helpText(): string {
   return [
+<<<<<<< HEAD
+    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
+  ].join('\n');
+}
+app.command('/zion', async ({ command, ack, respond }) => {
+  await ack();
+  const text = (command.text |'').trim();
+  const [sub, ...rest] = text.split(' ');
+  const userId = command.user_id;
+  try {
+    if (!sub |sub.toLowerCase() === 'help') {
+      await respond({ response_type: 'ephemeral', text: helpText() });
+      return
+    }
+    if (sub === 'post-job') {
+      const role = rest.join(' ') |'Cloud Engineer';
+      const res = await fetch(`${apiBase}/jobs/generate`, {
+        method: 'POST'
+        headers: { 'content-type': 'application/json', 'x-user-id': userId }
+        body: JSON.stringify({ role })
+app && app.command('/zion', async ({ command, ack, respond }) => {
+  await ack();
+  const text = (command && command.text || '').trim();
+  const [sub, ...rest] = text && text.split(' ');
+  const userId = command && command.user_id;
+  try {
+    if (!sub || sub && sub.toLowerCase() === 'help') {
+      await respond({ response_type: 'ephemeral', text: helpText() });
+      return;    }
+    if (sub === 'post-job') {
+      const role = rest && rest.join(' ') || 'Cloud Engineer';
+      const res = await fetch(`${apiBase}/jobs/generate`, {      return
+    }
+    if (sub === 'post-job') {
+      const role = rest && rest.join(' ') || 'Cloud Engineer';
+      const res = await fetch(`${apiBase}/jobs/generate`, {
+        method: 'POST',
+=======
 
 
       });
@@ -25,6 +79,7 @@ function helpText(): string {
       await respond({
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { App } from '@slack / bolt';
 import dotenv from 'dotenv';
 import fetch from 'node - fetch';
@@ -87,23 +142,32 @@ if ( {) {
       });
       const data = (await res.json ()) as any;
       await respond ({
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
+<<<<<<< HEAD
+      const q = rest && rest.join(' ') || 'AI researcher in Brazil';
+=======
 
       const q = rest && rest.join(' ') || 'AI researcher in Brazil';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const res = await fetch(
         `${apiBase}/talent/search?q=${encodeURIComponent(q)}`
         {
           headers: { 'x-user-id': userId }
         }
       );
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = (await res && res.json()) as any;
       const lines = (data && data.results || [])
         .slice(0, 5)
@@ -114,14 +178,21 @@ if ( {) {
       await respond({
         response_type: 'ephemeral',
         text: lines && lines.length ? lines && lines.join('\n') : 'No matches yet.',
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       return;
     }
     if (sub === 'track-project') {
+<<<<<<< HEAD
+      const name = rest && rest.join(' ') || 'Kleber';
+=======
 
       const name = rest && rest.join(' ') || 'Kleber';
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const res = await fetch(
         `${apiBase}/projects/${encodeURIComponent(name)}/track`
         {
@@ -137,18 +208,26 @@ if ( {) {
         return;
       }
       await respond({
+<<<<<<< HEAD
+        response_type: 'ephemeral',
+        text: `*${data && data.project.name}* – status: ${data && data.project.status}\nMilestones: ${JSON && JSON.stringify(data && data.project.milestones)}`,
+=======
 
         response_type: 'ephemeral',
         text: `*${data && data.project.name}* – status: ${data && data.project.status}\nMilestones: ${JSON && JSON.stringify(data && data.project.milestones)}`,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       return;
     }
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Check condition
 if ( {) {
   $2
@@ -203,13 +282,18 @@ if ( {) {
     await respond ({ response_type: 'ephemeral', text: help_text () });
   } catch (err: any) {
     await respond ({
+<<<<<<< HEAD
+      response_type: 'ephemeral',
+      text: `Error: ${err && err.message || 'unknown'}`,
+    });  }      });
+=======
 
       response_type: 'ephemeral',
       text: `Error: ${err && err.message || 'unknown'}`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });  }      });
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         headers: {
        'content-type': 'application/jsonx-user-id': userId 
     },
@@ -217,12 +301,18 @@ if ( {) {
       });
       const data = (await res.json()) as any;
       await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
+<<<<<<< HEAD
+      return
+    }
+    if (sub === 'suggest-talent') {
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return
     }
     if (sub === 'suggest-talent') {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const q = rest && rest.join(' ') || 'AI researcher in Brazil';
       const res = await fetch(`${apiBase}/talent/search?q=${encodeURIComponent(q)}`, {
         headers: { 'x-user-id': userId }
@@ -234,7 +324,10 @@ if ( {) {
     }
     if (sub === 'track-project') {
       const name = rest && rest.join(' ') || 'Kleber';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
         headers: { 'x-user-id': userId }
       });
@@ -250,6 +343,18 @@ if ( {) {
   } catch (err: any) {
 
 
+<<<<<<< HEAD
+
+
+(async () => {
+
+    await respond({ response_type: 'ephemeral', text: `Error: ${err && err.message || 'unknown'}` })
+    await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` })
+  }
+});
+
+(async () => {
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 });
@@ -260,6 +365,7 @@ if ( {) {
 
 (async () => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const port = Number(process && process.env.SLACK_PORT || 3001);
   await app && app.start(port);
   // eslint-disable-next-line no-console
@@ -268,17 +374,22 @@ if ( {) {
 
 })();
 
-=======
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
 
+<<<<<<< HEAD
+  console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})();
+  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})();
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = (await res.json ()) as any;
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
       return;
@@ -329,4 +440,20 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
 ;
+<<<<<<< HEAD
+  }
+}),
+
+(async () => {
+
+console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})();
+
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

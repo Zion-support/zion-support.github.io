@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import { Star, StarHalf } from 'lucide-react'
+import React from 'react';
+import React from 'react',
+import React from 'react';
+  const half = value - filled >= 0.5
+  const total = 5
+}
+}
+;
+import React from 'react',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value;
@@ -12,6 +25,17 @@ export function RatingStars({ value;
             />
           )
         }
+<<<<<<< HEAD
+        if (i === filled && half) {
+          return (
+            <StarHalf
+        if (i === filled && half) {
+          return (
+            <StarHalf
+        if (i === filled && half) {;
+          return (;
+            <StarHalf;
+=======
 
 
         if (i === filled && half) {;
@@ -19,6 +43,7 @@ export function RatingStars({ value;
             <StarHalf;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -28,8 +53,75 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
+<<<<<<< HEAD
+      )}
+    </div>
+  )
+  const total = 5;
+}
+}
+;
+
+const half = value - filled >= 0 && 0.5;
+  const total = 5;
+}
+}
+}
+  const half = value - filled >= 0.5;
+  const total = 5;
+import React from 'react',;
+import { Star, StarHalf } from 'lucide-react';
+;
+export function RatingStars({ value = 0, count } { value?:number, count?:number }) {;
+  const filled = Math.floor(value),;
+  const half = value - filled >= 0.5,;
+  const total = 5,;
+;
+  return (;
+    <div className="flex items-center text-zion-slate">;
+      {[...Array(total)].map((_, i) => {;
+        if (i < filled) {;
+          return (;
+            <Star;
+              key={i}
+              className="h-4 w-4 fill-zion-cyan text-zion-cyan";
+            />;
+          ),;
+        }
+        if (i === filled && half) {;
+          return (;
+            <StarHalf;
+              key={i}
+              className="h-4 w-4 fill-zion-cyan text-zion-cyan";
+            />;
+          ),;
+        }
+        return <Star key={i} className="h-4 w-4 text-zion-slate" />,;
+      })}
+      {typeof count === 'number' && (;
+        <span className="text-xs ml-1">({count})</span>;
+      )}
+    </div>;
+  ),; if (i < filled) {;
+  return (<Star key= {;
+  i ;
+}className="h-4 w-4 fill-zion-cyan text-zion-cyan" />) ;
+}if (i === filled && half) {;
+  return (<StarHalf key= {;
+  i ";
+}className="h-4 w-4 fill-zion-cyan text-zion-cyan" />) ;
+}
+}) ;
+}{";
+  typeof count === 'number' && (<span className="text-xs ml-1" > ({;
+  count ;
+}) </span> ;
+}</div>) ;
+}'"
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               className="h-4 w-4 fill-zion-cyan text-zion-cyan";
             />;
           );
@@ -38,8 +130,11 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (;
         <span className="text-xs ml-1">({count})</span>;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       )}
     </div>
   )
@@ -56,4 +151,8 @@ export function RatingStars({ value;
 }
 }
 
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

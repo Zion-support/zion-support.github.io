@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+interface FilterSidebarProps {
+  className?: string;
+  children?: React.ReactNode
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 
@@ -12,21 +19,57 @@ export const FilterSidebar: React.FC < FilterSidebarProps> = ({
 }, ) => {  return (
     <div className={`filter - sidebar ${class_name || ''}`}>;
 
-      {children}
-    </div>);
+<<<<<<< HEAD
+import React from 'react';
+import React from 'react'
+interface FilterSidebarProps {
+  className?: string;
+  children?: React.ReactNode
 }
-export default FilterSidebar;
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({
+  className
+  children
+},) => {  return (
+    <div className={`filter-sidebar ${className |''}`}>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      {children}
+    </div>
+  )
+}
+export default FilterSidebar
 interface FilterOption {
-  value: string;
-  label: string;
-  count?: number;
+  value: string
+  label: string
+  count?: number
 }
 interface FilterGroup {
-  title: string;
-  key: string;
-  options: FilterOption[];
+  title: string
+  key: string
+  options: FilterOption[]
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD
+  filters: FilterGroup[]
+  selectedFilters: Record<string, any>
+  onFilterChange: key: string, value: string, checked: boolean void
+  onClearFilters: : unknown void
+  isOpen: boolean
+  onClose: ()  => void}
+export function FilterSidebar({
+  filters
+  selectedFilters
+  onFilterChange
+  onClearFilters
+  isOpen
+  onClose
+}: FilterSidebarProps) {
+  return ()
+    <>
+      {/* Mobile overlay */}
+      {isOpen && (
+=======
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
   className,;
@@ -40,12 +83,31 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
 
 export default FilterSidebar;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
       {/* Sidebar */}
+<<<<<<< HEAD
+      <div className={`
+        fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
+        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`
+      `}>"
+        <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">"
+          <h3 className="text-lg font-semibold text-white flex items-center gap-2">"
+            <Filter className="w-5 h-5"  />
+            Filters                      <span className="text-sm text-zion-slate-light">
+                        {option.label}
+                        {option.count && ("
+                          <span className="ml-2 text-zion-slate-light/60">
+                            ({option.count})
+                          </span>
+                        )}
+                      </span>
+                    </label>
+=======
 
       <divclassName={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none'
@@ -64,12 +126,16 @@ export default FilterSidebar;
                       </span>;
                     </label>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   )})}
               </div>
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   filters: FilterGroup[];
   selected_filters: Record < string, any>;
@@ -109,12 +175,31 @@ function FilterSidebar() {
             </div>))}
         </div>;
 
+<<<<<<< HEAD
       </div>;
     </>)}
 '"`;
 
 
 
+import React from 'react',;
+      </div>
+    </>
+  )}
+'"`
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      </div>;
+    </>;
+  )};
+'"`;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 interface FilterSidebarProps {;
   className?: string,;
@@ -131,4 +216,8 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
 export default FilterSidebar;
+=======
+export default FilterSidebar;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

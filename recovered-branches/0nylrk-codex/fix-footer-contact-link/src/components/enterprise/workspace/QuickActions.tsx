@@ -2,20 +2,49 @@
 
 
 
+<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {FileText, Plus, Users, Search, Calendar} from "lucide-react";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button",
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
+
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function QuickActions() {
 
   const actions = [
     {
 
+<<<<<<< HEAD
+      id: "post-job"
+      label: "Post New Job"
+      icon: <FileText className="h-5 w-5 mr-2" />
+      description: "Create a new job posting"
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       id: "post-job",
       label: "Post New Job",
       icon: <FileText className="h-5 w-5 mr-2" />,
       description: "Create a new job posting",
+<<<<<<< HEAD
+      color: "bg-blue-100 dark:bg-blue-900/20";
+    };
+      color: "bg-blue-100 dark:bg-blue-900/20"
+    }
+    },
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "add-member"
       label: "Add Team Member"
@@ -23,10 +52,18 @@ export function QuickActions() {
       description: "Invite someone to your team"
       color: "bg-green-100 dark:bg-green-900/20"
 
+<<<<<<< HEAD
+    },
+
+
+    }
+    },
+=======
 
     },
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "find-talent"
       label: "Find Talent"
@@ -34,16 +71,52 @@ export function QuickActions() {
       description: "Search the talent pool"
       color: "bg-purple-100 dark:bg-purple-900/20"
 
+<<<<<<< HEAD
+    },
+
+
+    }
+    },
+=======
 
     },
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       id: "schedule"
       label: "Schedule Interview"
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
+<<<<<<< HEAD
+    }
+  ],
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Quick Actions</CardTitle>
+        <CardDescription>Fast access to common tasks</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {actions.map(action => (
+            <Button
+              key={action.id}
+              variant="outline"
+              className={`h-auto justify-start p-4 ${action.color}`}
+            >
+              <div className="flex flex-col items-start text-left">
+                <div className="flex items-center">
+                  {action.icon}
+
+                  <span>{action.label}</span>
+                </div>
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+              </div>
+            </Button>
+=======
 =======
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -125,6 +198,7 @@ function QuickActions() {
 
 =======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -161,7 +235,44 @@ export function QuickActions() {;
     }
   ];
   return (;
+<<<<<<< HEAD
+;
+export function QuickActions() {;
+  const actions = [;
+    {;
+      id:"post-job",;
+      label:"Post New Job",;
+      icon:<FileText className="h-5 w-5 mr-2" />,;
+      description:"Create a new job posting",;
+      color:"bg-blue-100 dark:bg-blue-900/20";
+    },;
+    {;
+      id:"add-member",;
+      label:"Add Team Member",;
+      icon:<Plus className="h-5 w-5 mr-2" />,;
+      description:"Invite someone to your team",;
+      color:"bg-green-100 dark:bg-green-900/20";
+    },;
+    {;
+      id:"find-talent",;
+      label:"Find Talent",;
+      icon:<Search className="h-5 w-5 mr-2" />,;
+      description:"Search the talent pool",;
+      color:"bg-purple-100 dark:bg-purple-900/20";
+    },;
+    {;
+      id:"schedule",;
+      label:"Schedule Interview",;
+      icon:<Calendar className="h-5 w-5 mr-2" />,;
+      description:"Set up candidate interviews",;
+      color:"bg-amber-100 dark:bg-amber-900/20";
+    }
+  ],;
+;
+  return (;
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
@@ -169,6 +280,20 @@ export function QuickActions() {;
       </CardHeader>;
       <CardContent>;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
+<<<<<<< HEAD
+          {actions.map(action => (;
+            <Button ;
+              key={action.id}
+              variant="outline" ;
+              className={`h-auto justify-start p-4 ${action.color}`}
+            >;
+              <div className="flex flex-col items-start text-left">;
+                <div className="flex items-center">;
+                  {action.icon}
+                  <span>{action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>;
+=======
           {actions && actions.map(action => (;
             <Button
               key={action && action.id}
@@ -180,12 +305,24 @@ export function QuickActions() {;
                   <span>{action && action.label}</span>;
                 </div>;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               </div>;
             </Button>;
           ))}
         </div>;
       </CardContent>;
     </Card>;
+<<<<<<< HEAD
+          {actions.map(action => (;
+            <Button;
+              key={action.id}
+              variant="outline";
+              className={`h-auto justify-start p-4 ${action.color}`}
+            >
+              <div className="flex flex-col items-start text-left">
+                <div className="flex items-center">
+                  {action.icon}
+=======
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -207,17 +344,30 @@ export function QuickActions() {;
                 <div className="flex items - center">;
                   {action.icon}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <span>{action.label}</span>
                 </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ))}
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+  ),;}
+ const actions = [ {
+  return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) 
+}</div> </CardContent> </Card>) 
+}
+}
+=======
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const ITServicePricingTable = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ITServicePricingTable;
+=======
+export default ITServicePricingTable;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

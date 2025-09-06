@@ -1,11 +1,12 @@
 
+<<<<<<< HEAD
+=======
 
   return {
     props: {
       docs: content as DocsContent,
     },
   }}import React, { useEffect } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import type { GetStaticProps } from 'next';
 import content from '../../../data / docs / content.json';
 export type Section = {
@@ -22,11 +23,42 @@ type DocsContent = {
 ;
 type PageProps = {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   docs: DocsContent;
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
+<<<<<<< HEAD
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  return {
+    props: {
+      docs: content as DocsContent,
+    },;
+  };};import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+export type Section = {
+  id: string,
+  title: string,;
+  html?: string;
+  code?: { language?: string, content: string }[]
+};
 
+type DocsContent = {
+  title: string,
+  sections: Section[]
+};
+
+type PageProps = {
+  docs: DocsContent
+};
+
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return {
     props: {
       docs: content as DocsContent
@@ -51,7 +83,10 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -59,28 +94,22 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -98,25 +127,24 @@ export type Section = {;
   html?: string;
   code?: { language?: string, content: string }[];
 };
-
 type DocsContent = {;
   title: string,;
   sections: Section[];
 };
-
 type PageProps = {;
   docs: DocsContent;
 };
-
 export const getStaticProps: GetStaticProps<PageProps> = async () => {;
   return {;
     props: {;
       docs: content as DocsContent}}
-
 export default function PrintDocs(): any ({ docs }: PageProps) {;
   useEffect(() => {;
     const id = setTimeout(() => window && window.print(), 500);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {;
+    const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id);
   }, []);
   return (
@@ -135,18 +163,25 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
-
-=======
+<<<<<<< HEAD
 };
 
+=======
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+};
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
+<<<<<<< HEAD
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -158,20 +193,26 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
+<<<<<<< HEAD
+          </section>
+        ))}
+=======
 
 
         ))}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * PrintDocs - Function description
  */
@@ -211,7 +252,47 @@ function PrintDocs() {
           </section>))}
       </div>;
     </div>);
+
+export const getStaticProps: GetStaticProps<PageProps> = async () => {_return {
+    props: {
+      docs: content as DocsContent}}
+},
+
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500),
+    return () => clearTimeout(id)
+  }, []),
+
+  return (
+    <div className=&quot;p-8 max-w-4xl mx-auto&quot;>
+      <h1 className=&quot;text-3xl font-bold mb-6&quot;>{docs.title}</h1>
+      <div className=&quot;space-y-8&quot;>
+        {docs.sections.map((s) => (
+          <section key={s.id}>
+            <h2 className=&quot;text-2xl font-semibold mb-2&quot;>{s.title}</h2>
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.code && s.code.map((c, i) => (
+              <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+
+  );
 }
+<<<<<<< HEAD
+
+
+
+);
+}
+  );
+}
+
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -223,3 +304,4 @@ function PrintDocs() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

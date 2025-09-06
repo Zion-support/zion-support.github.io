@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const AccessibilityEnhancer: React.FC = () => {;
   useEffect(() => {;
     // Add skip link for keyboard navigation;
@@ -12,9 +15,21 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
+import React, { useEffect } from 'react';
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Add skip link for keyboard navigation
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'sr-only focus: not-sr-only'
+    skipLink.style.cssText = `
+      position: absolute, top: -40px
+      left: 6px, background: #000
+      color: #fff, padding: 8px
+      text-decoration: none, z-index: 1000
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
-
     // Focus management;
     const handleMouseDown = () => {;
       document && document.body.classList && classList.add('using-mouse');
@@ -24,10 +39,8 @@ const AccessibilityEnhancer: React.FC = () => {;
         document && document.body.classList && classList.remove('using-mouse'),;
       }
     };
-
     document && document.addEventListener('mousedown', handleMouseDown);
     document && document.addEventListener('keydown', handleKeyDown);
-
     // Add ARIA live region for announcements;
     const liveRegion = document && document.createElement('div');
     liveRegion && liveRegion.setAttribute('aria-live', 'polite');
@@ -35,7 +48,6 @@ const AccessibilityEnhancer: React.FC = () => {;
     liveRegion && liveRegion.className = 'sr-only';
     liveRegion && liveRegion.id = 'live-region';
     document && document.body.appendChild(liveRegion);
-
     // Announce page changes;
     const announcePageChange = (message: string) => {;
       const liveRegion = document && document.getElementById('live-region');
@@ -43,37 +55,34 @@ const AccessibilityEnhancer: React.FC = () => {;
         liveRegion && liveRegion.textContent = message,;
       }
     };
-
     // Listen for route changes (Next && Next.js specific);
     const handleRouteChange = () => {;
       announcePageChange('Page loaded');
     };
-
     // Add route change listener if available;
     if (typeof window !== 'undefined' && window && window.history) {;
       const originalPushState = window && window.history.pushState;
       const originalReplaceState = window && window.history.replaceState;
-
       window && window.history.pushState = function(...args) {;
         originalPushState && originalPushState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window && window.history.replaceState = function(...args) {;
         originalReplaceState && originalReplaceState.apply(this, args);
         setTimeout(handleRouteChange, 100);
       };
-
       window && window.addEventListener('popstate', handleRouteChange);
     }
-
     // Cleanup;
     return () => {;
       document && document.removeEventListener('mousedown', handleMouseDown);
       document && document.removeEventListener('keydown', handleKeyDown);
       if (skipLink && skipLink.parentNode) {;
         skipLink && skipLink.parentNode.removeChild(skipLink);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -81,7 +90,10 @@ const AccessibilityEnhancer: React.FC = () => {;
     }
   }, []);
   return null;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React, { useEffect } from 'react';
 ;
 const AccessibilityEnhancer: React.FC = () => {
@@ -245,11 +257,17 @@ if ( {) {
   $2
 }
       root.class_list.add ('high - contrast');
+<<<<<<< HEAD
+    } else {
+      root.class_list.remove ('high - contrast');
+    }
+=======
 
     } else {
       root.class_list.remove ('high - contrast');
     }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     root.class_list.remove ('font - small', 'font - normal', 'font - large', 'font - extra - large');
     root.class_list.add (`font-${fontSizeValue}`);
 ;
@@ -258,14 +276,19 @@ if ( {) {
   $2
 }
       root.class_list.add ('reduced - motion');
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     } else {
       root.class_list.remove ('reduced - motion');
     }
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
-
 // Add CSS for focus management;
 const focusStyles = `;
   .using-mouse *:focus {;
@@ -288,7 +311,6 @@ const focusStyles = `;
     clip: auto, white-space: normal,;
   }
 `;
-
 // Inject styles;
 if (typeof document !== 'undefined') {;
   const styleSheet = document && document.createElement('style');
@@ -297,60 +319,58 @@ if (typeof document !== 'undefined') {;
 }
 export default AccessibilityEnhancer;
 import React, { useEffect, useState } from 'react';
-
 interface AccessibilityEnhancerProps {;
   children: React && React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('normal');
   const [reducedMotion, setReducedMotion] = useState(false);
-
   useEffect(() => {;
     const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     setReducedMotion(prefersReducedMotion);
-
     const savedHighContrast = localStorage && localStorage.getItem('highContrast') === 'true';
     const savedFontSize = localStorage && localStorage.getItem('fontSize') || 'normal';
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
   }, []);
-
   const applyAccessibilityStyles = (;
     highContrast: boolean,;
     fontSizeValue: string,;
     reducedMotionValue: boolean;
   ) => {;
     const root = document && document.documentElement;
-
     if (highContrast) {;
       root && root.classList.add('high-contrast');
     } else {;
       root && root.classList.remove('high-contrast');
     }
-
     root && root.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
     root && root.classList.add(`font-${fontSizeValue}`);
-
     if (reducedMotionValue) {;
       root && root.classList.add('reduced-motion');
     } else {;
       root && root.classList.remove('reduced-motion');
     }
   };
-
   const toggleHighContrast = () => {;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage && localStorage.setItem('highContrast', newValue && newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+<<<<<<< HEAD
+  };
+  const changeFontSize = (newSize: string) => {;
+=======
 
   };
-
   const changeFontSize = (newSize: string) => {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     setFontSize(newSize);
     localStorage && localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
@@ -383,25 +403,32 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 {size && size.charAt(0).toUpperCase()}
               </button>;
             ))}
+<<<<<<< HEAD
+=======
 
           </div>;
         </div>;
       </div>;
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default AccessibilityEnhancer;
-=======
 };
 
 
+<<<<<<< HEAD
+          </div>;
+        </div>;
+      </div>;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Skip to main content link */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;
         Skip to main content;
       </a>;
-
       {/* Screen reader only content */}
       <div className="sr-only">;
         <h1>Zion Tech Group - Technology Solutions Provider</h1>;
@@ -410,15 +437,23 @@ export default AccessibilityEnhancer;
           computing, blockchain infrastructure, and innovative development services.;
         </p>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main content */}
       <div id="main-content">{children}</div>;
     </>;
   );
 }
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
+export default AccessibilityEnhancer;
+};
+
+export default AccessibilityEnhancer;
+export default AccessibilityEnhancer;
 =======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default AccessibilityEnhancer;
+<<<<<<< HEAD
 ;
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
@@ -487,3 +522,4 @@ export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

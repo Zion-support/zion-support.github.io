@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+export default function RegisterPage() {;
+import React, { useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
+import Layout from "../components/Layout";
+export default function RegisterPage() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function RegisterPage() {;
@@ -13,7 +23,6 @@ export default function RegisterPage() {;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
   });
-
   const [passwordRequirements, setPasswordRequirements] = useState({;
     length: false,;
     uppercase: false,;
@@ -21,19 +30,16 @@ export default function RegisterPage() {;
     number: false,;
     special: false,;
   });
-
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     // Handle registration logic here;
   };
-
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value, type, checked } = e && e.target;
     setFormData((prev) => ({;
       ...prev,;
       [name]: type === "checkbox" ? checked : value,;
     }));
-
     // Check password requirements;
     if (name === "password") {;
       setPasswordRequirements({;
@@ -45,7 +51,6 @@ export default function RegisterPage() {;
       });
     }
   };
-
   const isPasswordValid = Object && Object.values(passwordRequirements).every(Boolean);
   const isFormValid =;
     formData && formData.firstName &&;
@@ -56,8 +61,11 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -68,7 +76,10 @@ export default function RegisterPage() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
             <div className="mx-auto h-12 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
@@ -81,9 +92,11 @@ export default function RegisterPage() {;
               Join Zion Tech Group and start your digital transformation journey;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -109,13 +122,18 @@ export default function RegisterPage() {;
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     />;
                   </div>;
                 </div>;
-
                 <div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2">;
@@ -130,13 +148,18 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
               </div>;
-
               <div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -156,13 +179,18 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   />;
                 </div>;
               </div>;
-
               <div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <label
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -176,12 +204,17 @@ export default function RegisterPage() {;
                   onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
+<<<<<<< HEAD
+                />;
+              </div>;
+              <div>;
+=======
 
                 />;
               </div>;
-
               <div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -212,11 +245,16 @@ export default function RegisterPage() {;
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
+<<<<<<< HEAD
+                  </button>;
+                </div>;
+=======
 
                   </button>;
                 </div>;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">;
                   {Object && Object.entries(passwordRequirements).map(;
@@ -229,7 +267,6 @@ export default function RegisterPage() {;
                           className={
                             isValid ? "text-green-400" : "text-gray-400"
                           }>;
-=======
 import React, { useState } from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
@@ -459,22 +496,26 @@ if ( {) {
                             is_valid ? "text - green - 400" : "text - gray - 400";
                           }
                         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           {key === "length" && "At least 8 characters"}
                           {key === "uppercase" && "One uppercase letter"}
                           {key === "lowercase" && "One lowercase letter"}
                           {key === "number" && "One number"}
                           {key === "special" && "One special character"}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         </span>;
                       </div>;
                     ),;
                   )}
                 </div>;
               </div>;
-
               <div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <label
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -513,12 +554,17 @@ if ( {) {
                       Passwords do not match;
                     </p>;
                   )}
+<<<<<<< HEAD
+              </div>;
+              <div className="space-y-4">;
+                <div className="flex items-center">;
+=======
 
               </div>;
-
               <div className="space-y-4">;
                 <div className="flex items-center">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -540,9 +586,11 @@ if ( {) {
                     and{" "}
                     <Link
                       href="/privacy"
-
-                      className="text-blue-400 hover:text-blue-300">;
+<<<<<<< HEAD
 =======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                      className="text-blue-400 hover:text-blue-300">;
                         </span>;
                       </div>),
                   )}
@@ -613,18 +661,23 @@ if ( {) {
                       href="/privacy";
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
                   </label>;
                 </div>;
               </div>;
-
               <div>;
                 <button
                   type="submit"
@@ -632,7 +685,6 @@ if ( {) {
                   className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed">;
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">;
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />;
-=======
                 <div className="flex items - center">;
                   <input;
                     id="subscribe_newsletter";
@@ -658,12 +710,18 @@ if ( {) {
                 >;
                   <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
                     <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   </span>;
                   Create account;
                 </button>;
               </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -671,16 +729,25 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

@@ -1,16 +1,19 @@
+<<<<<<< HEAD
+export default function Contact() {;
+=======
 
 
 export default function Contact() {;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
-    <div>;
-      <main>;
-        <h1>Contact Us</h1>;
-        <p>Get in touch with our team for your IT and AI service needs.</p>;
-      </main>;
+    <div>
+      <main>
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team for your IT and AI service needs.</p>
+      </main>
     </div>;
   );
-=======
 import React from './react';
 ;
 export default /**
@@ -24,5 +27,4 @@ function Contact() {
         <p > Get in touch with our team for your IT and AI service needs.</p>;
       </main>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

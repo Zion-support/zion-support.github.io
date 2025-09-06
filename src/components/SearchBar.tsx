@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import React, { useState, useEffect, useRef } from 'react';
+import { useRouter  } from 'next/router';
+import { useRouter } from 'next/router';
+import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+=======
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -24,9 +33,21 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
  */
 interface SearchBarProps {
   /**
+<<<<<<< HEAD
+   * The current value of the search input
+   */
 
   value: string,
 
+   * The current value of the search input
+   */
+
+  value: string;  value: string
+=======
+
+  value: string,
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
    * The current value of the search input;
    */;
@@ -37,26 +58,64 @@ interface SearchBarProps {
    * @param {string} val - The new value of the search input
    */
 
+<<<<<<< HEAD
+  onChange: (val: string) => void;  /**
+   * Function to call when a suggestion is selected
+   * @param {SearchSuggestion} suggestion - The selected suggestion
+   */  onChange: (val: string,) => void
+  onChange: (val: string) => void
+=======
   onChange: (val: string) => void,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
 
+<<<<<<< HEAD
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
+  /**
+   * The placeholder text for the search input
+   */
+  placeholder?: string
+/**
+ * SearchBar component that allows users to search for content.
+ */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
+=======
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   /**
    * The placeholder text for the search input
    */
   placeholder?: string
 }
+<<<<<<< HEAD
+/**
+ * SearchBar component that allows users to search for content.
+ */
+
+export function SearchBar({
+  value
+  onChange
+  onSelectSuggestion
+  placeholder = 'Search...'
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   value,
   onChange,
   onSelectSuggestion,;
   placeholder = 'Search...';
+<<<<<<< HEAD
+}: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
+  const router = useRouter()
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
+  const [focused, setFocused] = useState(false);
+  const [highlightedIndex, setHighlightedIndex] = useState(-1);
+=======
 
 
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
@@ -64,6 +123,7 @@ interface SearchBarProps {
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
   const [focused, setFocused] = useState(false)
   const [highlightedIndex, setHighlightedIndex] = useState(-1)
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -71,7 +131,11 @@ interface SearchBarProps {
     if (!debounced) {
       setSuggestions([])
       setHighlightedIndex(-1)
+<<<<<<< HEAD
+      return;
+=======
       return
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
@@ -148,6 +212,32 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     inputRef.current?.blur()
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
+<<<<<<< HEAD
+            if (
+              !relatedTarget |
+              !containerRef.current?.contains(relatedTarget)
+            if (
+              !relatedTarget |
+              !containerRef.current?.contains(relatedTarget)
+            if (true) {}
+            ) {
+              setFocused(false)
+              setHighlightedIndex(-1)
+            }          }}
+          className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate'
+          aria-autocomplete='list'
+          aria-activedescendant={
+            highlightedIndex !== -1
+              ? `suggestion-item-${highlightedIndex}`
+              : undefined
+          }
+          autoComplete='search'
+          onKeyDown={e => {            if (!focused |suggestions.length === 0) {
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
+import React, { useState, useEffect, useRef } from 'react',;
+import { useRouter } from 'next/router',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -159,6 +249,19 @@ import { SearchSuggestion } from '@/types/search';
 import { slugify } from '@/lib/slugify';
 import { useDebounce } from '@/hooks/useDebounce';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef } from 'react',;
+import { useRouter } from 'next/router',;
+import { Search, X } from 'lucide-react';
+import { Input } from '@/components/ui/input',;
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions',;
+import { fireEvent } from '@/lib/analytics',;
+import { SearchSuggestion } from '@/types/search',;
+import { slugify } from '@/lib/slugify',;
+import { useDebounce } from '@/hooks/useDebounce',;
+import { useOnClickOutside } from '@/hooks/useOnClickOutside',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**;
  * SearchBar component props;
  */;
@@ -166,20 +269,30 @@ interface SearchBarProps {;
   /**;
    * The current value of the search input;
    */;
+<<<<<<< HEAD
+  value: string,;
+=======
   value: string;  value: string,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   /**;
    * Function to call when the search input changes;
    * @param {string} val - The new value of the search input;
    */;
+<<<<<<< HEAD
+=======
   onChange: (val: string) => void;  /**;
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
    */  onChange: (val: string,) => void,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onChange: (val: string) => void,;
   /**;
    * Function to call when a suggestion is selected;
    * @param {SearchSuggestion} suggestion - The selected suggestion;
    */;
+<<<<<<< HEAD
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
+=======
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   /**;
    * The placeholder text for the search input;
@@ -188,11 +301,91 @@ interface SearchBarProps {;
 /**;
  * SearchBar component that allows users to search for content.;
  */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   /**;
    * The placeholder text for the search input;
    */;
   placeholder?: string;
 }
+<<<<<<< HEAD
+;
+/**;
+ * SearchBar component that allows users to search for content.;
+ */;
+export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {;
+  const router = useRouter(),;
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),;
+  const [focused, setFocused] = useState(false),;
+  const [highlightedIndex, setHighlightedIndex] = useState(-1),;
+  const listId = 'searchbar-autocomplete-list',;
+  const debounced = useDebounce(value, 150),;
+  const inputRef = useRef<HTMLInputElement>(null),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (!debounced) {;
+      setSuggestions([]),;
+      setHighlightedIndex(-1),;
+      return;
+    }
+    const controller = new AbortController(),;
+    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal });
+      .then(res => {;
+        if (!res.ok) throw new Error('Failed to fetch suggestions'),;
+        return res.json();
+      });
+      .then(data => {;
+        if (Array.isArray(data)) {;
+          setSuggestions(data.slice(0, 5));
+        } else {;
+          setSuggestions([]);
+        }
+        setHighlightedIndex(-1)
+      })
+      .catch(() => setSuggestions([])),
+    return () => controller.abort()
+  }, [debounced]),
+
+  useOnClickOutside(containerRef, () => {
+    setFocused(false),
+    setHighlightedIndex(-1)
+  }),
+
+  const handleSelect = (suggestion: SearchSuggestion) => {
+    onChange(suggestion.text),
+    if (onSelectSuggestion) onSelectSuggestion(suggestion),
+
+    const searchQuery = encodeURIComponent(suggestion.text),
+    router.push(`/search?q=${searchQuery}`),
+    fireEvent('search', { search_term: suggestion.text }),
+    setFocused(false),
+    setHighlightedIndex(-1),
+    inputRef.current?.blur()
+  },
+
+  return (
+    <div
+      className="relative w-full"
+      ref={containerRef}
+      role="combobox"
+      aria-expanded={focused && suggestions.length > 0}
+      aria-haspopup="listbox"
+      aria-controls={listId}
+      data-testid="search-bar"
+    >
+      <div className="relative">
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate" />
+        <Input
+          ref={inputRef}
+          type="text"
+          id="main-search-input"
+          name="search"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          onFocus={(e) => {;
+            setFocused(true),;
+            // Ensure the input receives focus properly;
+            e.target.setSelectionRange(e.target.value.length, e.target.value.length);
+=======
 /**;
  * SearchBar component that allows users to search for content.;
  */;
@@ -279,6 +472,7 @@ export function SearchBar(): any ({;
           type='text'
           id='main-search-input'
           name='search'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           value={value}
 
 
@@ -296,14 +490,11 @@ export function SearchBar(): any ({;
               e && e.target.value && value.length;
             );
           }}
-          onBlur={e => {;
+          onBlur={(e) => {;
             // Only blur if not clicking on suggestions;
-            const relatedTarget = e && e.relatedTarget as HTMLElement;
-            if (;
-              !relatedTarget ||;
-              !containerRef && containerRef.current?.contains(relatedTarget);
-            ) {;
-              setFocused(false);
+            const relatedTarget = e.relatedTarget as HTMLElement,;
+            if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {;
+              setFocused(false),;
               setHighlightedIndex(-1);
             }          }}
           className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate';
@@ -314,7 +505,14 @@ export function SearchBar(): any ({;
               : undefined;
           }
 
+<<<<<<< HEAD
+ursor/fix-website-loading-errors-and-merge-6662
+          aria-autocomplete="list"
+          autoComplete="search"
+          onKeyDown={(e) => {
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
@@ -355,6 +553,88 @@ export function SearchBar(): any ({;
               return;
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
+<<<<<<< HEAD
+                e.preventDefault()
+                setFocused(false)
+                setHighlightedIndex(-1)
+                inputRef.current?.blur()
+              }
+              // If Enter is pressed and there's a value, navigate with query parameter
+              if (e.key === 'Enter' && value.trim()) {                e.preventDefault(); // Prevent form submission if SearchBar is in a form
+                fireEvent('search', { search_term: value })
+                router.push(`/search?q=${encodeURIComponent(value)}`)
+                setFocused(false)
+                inputRef.current?.blur()
+              }
+              return }              // If Enter is pressed and there's a value, navigate with query parameter
+              if (e.key === 'Enter' && value.trim()) {
+                e.preventDefault(), // Prevent form submission if SearchBar is in a form
+                fireEvent('search', { search_term: value })
+                router.push(`/search?q=${encodeURIComponent(value)}`)
+                setFocused(false)
+                inputRef.current?.blur()
+              }
+              return;
+            }
+            switch (e.key) {
+              case 'ArrowDown':
+                e.preventDefault()
+                setHighlightedIndex(prev => (prev + 1) % suggestions.length)
+                break
+              case 'ArrowUp':
+                e.preventDefault()
+                setHighlightedIndex(
+                  prev => (prev - 1 + suggestions.length) % suggestions.length
+                );                break;              case 'Enter':
+                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                  e.preventDefault()
+                  handleSelect(suggestions[highlightedIndex])
+                } else if (value.trim()) {
+                  // This case should ideally be handled by the form's onSubmit,                  // but if SearchBar is used standalone, this provides a fallback.
+                setHighlightedIndex((prev) => (prev + 1) % suggestions.length)
+                break
+              case 'ArrowUp':
+                e.preventDefault()
+                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length)
+                setHighlightedIndex((prev) => (prev + 1) % suggestions.length)
+                break
+              case 'ArrowUp':
+                e.preventDefault()
+                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length)
+                break
+              case 'Enter':
+                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {
+                  e.preventDefault()
+                  handleSelect(suggestions[highlightedIndex])
+                } else if (value.trim()) {
+                  // This case should ideally be handled by the form's onSubmit,                  handleSelect(suggestions[highlightedIndex])
+                } else if (value.trim()) {
+                  // This case should ideally be handled by the form's onSubmit
+                  // but if SearchBar is used standalone, this provides a fallback.
+                  e.preventDefault()
+                  fireEvent('search', { search_term: value })
+                  router.push(`/search?q=${encodeURIComponent(value)}`)
+                  setFocused(false)
+                  inputRef.current?.blur()
+                break
+              case 'Escape':
+                e.preventDefault()
+                setFocused(false)
+                setHighlightedIndex(-1)
+                inputRef.current?.blur()
+                break
+              default:
+                break }              default: break
+
+
+            if (!focused || suggestions.length === 0) {
+              if (e.key === 'Escape') {
+                e.preventDefault(),
+                setFocused(false),
+                setHighlightedIndex(-1),
+                inputRef.current?.blur()
+              }
+=======
                 e.preventDefault();
                 setFocused(false);
                 setHighlightedIndex(-1);
@@ -363,6 +643,7 @@ export function SearchBar(): any ({;
               // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key = == 'Enter' && value.trim()) {
                 e.preventDefault(); // Prevent form submission if SearchBar is in a form
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 fireEvent('search', { search_term: value });
                 router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
@@ -415,31 +696,113 @@ export function SearchBar(): any ({;
                   setFocused(false);
                   inputRef && inputRef.current?.blur();
                 break;
-              case 'Escape':;
-                e && e.preventDefault();
-                setFocused(false);
-                setHighlightedIndex(-1);
-                inputRef && inputRef.current?.blur();
-                break;
-              default:;
-                break;            }              default: break;
+              default: break;
 
 
 
             }
-          }}
         />;
         {value && (;
           <button
+<<<<<<< HEAD
+              // If Enter is pressed and there's a value, navigate with query parameter;
+              if (e.key === 'Enter' && value.trim()) {;
+                e.preventDefault(), // Prevent form submission if SearchBar is in a form;
+                fireEvent('search', { search_term: value }),;
+                router.push(`/search?q=${encodeURIComponent(value)}`),;
+                setFocused(false),;
+                inputRef.current?.blur();
+              }
+              return;
+            }
+;
+            switch (e.key) {;
+              case 'ArrowDown':;
+                e.preventDefault(),;
+                setHighlightedIndex((prev) => (prev + 1) % suggestions.length),;
+                break,;
+              case 'ArrowUp':;
+                e.preventDefault(),;
+                setHighlightedIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length),;
+                break,;
+              case 'Enter':;
+                if (highlightedIndex !== -1 && suggestions[highlightedIndex]) {;
+                  e.preventDefault(),;
+                  handleSelect(suggestions[highlightedIndex]);
+                } else if (value.trim()) {;
+                  // This case should ideally be handled by the form's onSubmit,;
+                  // but if SearchBar is used standalone, this provides a fallback.;
+                  e.preventDefault(),;
+                  fireEvent('search', { search_term: value }),;
+                  router.push(`/search?q=${encodeURIComponent(value)}`),;
+                  setFocused(false),;
+                  inputRef.current?.blur();
+                }
+                break,;
+              case 'Escape':;
+                e.preventDefault(),;
+                setFocused(false),;
+                setHighlightedIndex(-1),;
+                inputRef.current?.blur();
+                break;
+              default: break;
+            }
+          }}
+        />
+        {value && (
+          <button
+            className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
+            onClick={() => onChange('')}
+            aria-label='Clear search'          >
+            <X className='h-4 w-4' />          </button>
+            <X className="h-4 w-4" />
+            onClick={() => onChange('')}
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
+            onClick={() => onChange('')}
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
         )}
+<<<<<<< HEAD
+      </div>
+      <AutocompleteSuggestions
+        suggestions = {suggestions,}
+        searchTerm = {value,}
+        onSelectSuggestion = {handleSelect,}
+        visible = {focused,}
+        highlightedIndex = {highlightedIndex,}
+        listId = {listId,}
+      />
+    </div>
+  )
+}/> onClick={'
+  () => onChange ('') "
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
+}</div> <AutocompleteSuggestions suggestions= {
+  suggestions
+}searchTerm= {
+  value
+}onSelectSuggestion= {
+  handleSelect
+}visible= {
+  focused
+}highlightedIndex= {
+  highlightedIndex
+}listId= {
+  listId
+}/> </div>)
+}'"  )
+}
+
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 }
 }
@@ -454,6 +817,13 @@ export function SearchBar(): any ({;
         visible={focused}
         highlightedIndex={highlightedIndex}
         listId={listId}
+<<<<<<< HEAD
+      />;
+    </div>;
+  );
+}
+;
+=======
 
       />;
     </div>;
@@ -477,6 +847,7 @@ export function SearchBar(): any ({;
 }/> </div>) ;
 }'"  );
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 }
 
@@ -799,4 +1170,8 @@ if ( {) {
 }/> </div>);
 }'"  );
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

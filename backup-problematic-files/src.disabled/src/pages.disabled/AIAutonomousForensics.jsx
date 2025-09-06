@@ -9,4 +9,8 @@ const AIAutonomousForensics = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousForensics;
+=======
+export default AIAutonomousForensics;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

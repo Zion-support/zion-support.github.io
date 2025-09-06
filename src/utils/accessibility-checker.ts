@@ -7,13 +7,30 @@ export const validateAriaLabels = () =>: any {
   console.log ('Validating ARIA labels...');
 }
 ;
-
 // Accessibility checker utilities
 export const checkAccessibility = () => {;
   console.log('Checking accessibility...');
+}
+export const validateAriaLabels = () => {
+  console.log('Validating ARIA labels...');
+}
+// Accessibility checker utilities
+export const checkAccessibility = () => {
+  console.log('Checking accessibility...');
+};
 
+<<<<<<< HEAD
+export const validateAriaLabels = () => {
+  console.log('Validating ARIA labels...');
+};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 };
 
 export const validateAriaLabels = () => {;
   console.log('Validating ARIA labels...');
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const MobileNavigation.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MobileNavigation.js;
+=======
+export default MobileNavigation.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

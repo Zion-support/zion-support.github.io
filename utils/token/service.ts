@@ -1,19 +1,48 @@
+<<<<<<< HEAD
+export function getConfig() {
+  return {
+    tokenName: 'Zion Token',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000
+  };
+export interface TokenTransaction {;
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
-  user_id: string;
+  userId: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
-// Mock data storage - replace with actual database;
+
+// Mock data storage - replace with actual database
 let transactions: TokenTransaction[] = [];
+<<<<<<< HEAD
+export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
 
 
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    userId
+    amount
+    type: 'issue'
+    reason
+    timestamp: Date.now()
+  }
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -22,8 +51,11 @@ let transactions: TokenTransaction[] = [];
     timestamp: Date.now();
   };
   
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   transactions.push(transaction);
   return transaction;
 }
@@ -32,6 +64,14 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
+    type: 'redeem'
+    reason
+    timestamp: Date.now()
+  }
+    type: 'redeem',
+    reason,
+=======
 
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
@@ -60,31 +100,28 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   transactions.push (transaction);
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
-
-  transactions.push(transaction);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return transaction;
-=======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
+    timestamp: Date.now();
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   };
-  transactions && transactions.push(transaction);
+  
+  transactions.push(transaction);
   return transaction;
 }
-
-  const current = tokenStore && tokenStore.getConfig();
-  tokenStore && tokenStore.setConfig({ ...current, ...partial });
-
-=======
+<<<<<<< HEAD
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -182,7 +219,28 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+export function set_config (
+  partial: Partial < ReturnType < typeof get_config>>): void {
+  const current = get_config ();
+  // Update the configuration;
+  Object.assign (current, partial);
+}
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>
+): void {;
+  const current = getConfig();
+  // Update the configuration
+  Object.assign(current, partial);
+}
+
+
+
+=======
+
+  const current = tokenStore && tokenStore.getConfig();
+  tokenStore && tokenStore.setConfig({ ...current, ...partial });
+
+=======
 =======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
@@ -192,3 +250,4 @@ export function set_config (
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

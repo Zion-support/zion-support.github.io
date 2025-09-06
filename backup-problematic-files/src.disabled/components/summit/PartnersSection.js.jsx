@@ -9,4 +9,8 @@ const PartnersSection.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PartnersSection.js;
+=======
+export default PartnersSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

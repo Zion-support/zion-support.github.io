@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2024-09-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -30,4 +31,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+=======
+    <loc>https://zion.app/</loc>
+    <lastmod>2025-09-06T12:00:30.876Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+>>>>>>> cursor/expand-services-advertise-and-build-project-f59c
 </urlset>

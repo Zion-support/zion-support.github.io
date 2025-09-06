@@ -9,4 +9,8 @@ const ComprehensiveContact = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensiveContact;
+=======
+export default ComprehensiveContact;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

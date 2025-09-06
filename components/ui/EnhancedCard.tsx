@@ -6,20 +6,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -32,24 +28,30 @@ export default function EnhancedCard(): any ({;
   children: React && React.ReactNode;
   className?: string;
 }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
+<<<<<<< HEAD
+}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
     <div className={["card-base p-4", className].join(' ')}>
       {children}
-    </div>
+</div>
   );
 }
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from './react';
 ;
 export default /**
@@ -60,10 +62,41 @@ function EnhancedCard() {
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
+    </div>
+  )
+
 }
+<<<<<<< HEAD
+
+}
+
+import React from "react";
+
+import React from "react";
+export default function EnhancedCard({
+  children
+  className = ""
+}: {
+  children,
+  className = "",
+}: {;
+  children: React.ReactNode;
+  className?: string;
+}) {
+
+  return (
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+  );
+  return (
+    <div className={["card-base p-4", className].join(" ")}>{children}</div>
+  );
+}
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

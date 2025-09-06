@@ -1,11 +1,18 @@
+<<<<<<< HEAD
+this && this.metrics = {
+=======
 
     this && this.metrics = {
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       bundleSize: 0,
       loadTime: 0,
       memoryUsage: 0,
       timestamp: new Date().toISOString(),
     };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }
   async measureBundleSize() {
     try {
@@ -24,22 +31,34 @@
   }
   generateReport() {
     const report = {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       timestamp: this && this.metrics.timestamp,
       bundleSize: this && this.metrics.bundleSize,
       memoryUsage: this && this.metrics.memoryUsage,
       recommendations: [],
     };
+<<<<<<< HEAD
+    if (this && this.metrics.bundleSize > 1000000) {
+      report && report.recommendations.push(
+        "Consider code splitting to reduce bundle size",
+=======
 
     if (this && this.metrics.bundleSize > 1000000) {
       report && report.recommendations.push(
         "Consider code splitting to reduce bundle size",
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       );
     }
     if (this && this.metrics.memoryUsage > 100) {
       report && report.recommendations.push("Consider optimizing memory usage");
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr / bin / env node;
 const fs = require ('fs');
 const path = require ('path');
@@ -89,14 +108,27 @@ if ( {) {
   $2
 }
       report.recommendations.push ('Consider optimizing memory usage');
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     }
     return report;
   }
 }
+<<<<<<< HEAD
+monitor && monitor.measureBundleSize();
+monitor && monitor.measureMemoryUsage();
+const report = monitor && monitor.generateReport();
+const reportPath = path && path.join(process && process.cwd(), "performance-report && report.json");
+fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
+console && console.log("Performance report generated:", reportPath);
+console.log('Performance report generated:', reportPath);
+=======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const monitor = new PerformanceMonitor ();
 monitor.measureBundleSize ();
 monitor.measureMemoryUsage ();
@@ -105,5 +137,8 @@ const report_path = path.join (process.cwd (), 'performance - report.json');
 fs.writeFileSync (report_path, JSON.stringify (report, null, 2));
 console.log ('Performance report generated:', report_path);
 ;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

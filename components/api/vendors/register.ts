@@ -1,6 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+<<<<<<< HEAD
+import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method !== 'POST')
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const {
     slug
     name
@@ -12,8 +30,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -22,32 +43,55 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     services_offered,
     team_size,
     about,
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       slug,
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
       teamSize: Number(teamSize || 0),
+<<<<<<< HEAD
+      about,  try {
+=======
 
       about,  try {
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
   if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
   if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
   try {
+<<<<<<< HEAD
+    const vendor = registerVendor({
+      slug;
+      name;
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const vendor = registerVendor({
       slug;
       name;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];
       teamSize: Number(teamSize || 0);
       about;
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
     res && res.status(201).json({ vendor })
+<<<<<<< HEAD
+  } catch (e: any) {
+    res && res.status(500).json({ error: e && e.message });
+  }
+      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
+      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [],
+    });
+    res && res.status(201).json({ vendor });
+  } catch (e: any) {
+=======
 
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
@@ -66,6 +110,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -103,6 +148,12 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
+
+    res.status(500).json({ error: e.message });
+  }    res.status(500).json({ error: e.message })
   }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

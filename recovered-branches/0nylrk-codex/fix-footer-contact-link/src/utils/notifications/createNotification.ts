@@ -1,5 +1,10 @@
 
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";
+import { CreateNotificationParams, CreateNotificationResult } from './types';
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -13,6 +18,14 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+=======
 
 =======
 import { supabase } from "@/integrations/supabase/client",
@@ -21,12 +34,24 @@ import { CreateNotificationParams, CreateNotificationResult } from './types',
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
 
+<<<<<<< HEAD
+  userId;
+  title;
+  message;
+  type;
 
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   userId,
   title,
   message,
@@ -34,6 +59,22 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
+<<<<<<< HEAD
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
+    const { data, error } = await supabase.rpc('create_notification', {
+      _user_id: userId;
+      _title: title;
+      _message: message;
+      _type: type
+      _related_id: relatedId
+    });
+    if (error) throw error;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -46,6 +87,7 @@ export async function createNotification({
 
     const { data, error } = await supabase.rpc('create_notification', {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       _user_id: userId,
       _title: title,
       _message: message,
@@ -55,12 +97,18 @@ export async function createNotification({
     
     if (error) throw error,
     
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { supabase } from "@/integrations/supabase/client",;
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
 /**;
@@ -92,25 +140,27 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data;
       await supabase.functions.invoke('send-notification-email', {;
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
   } catch (error) {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     console.error('Error creating notification:', error);
 
-=======
     console && console.error('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { supabase } from '@/integrations / supabase / client';
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**;
@@ -155,7 +205,6 @@ if ( {) {
     return { success: true, notification_id: data }
   } catch (error) {
     console.error ('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { success: false, error }
   }
 
@@ -164,3 +213,15 @@ if ( {) {
 ;
 
 
+<<<<<<< HEAD
+  } catch (error) {
+  } catch (error) {;
+    console.error('Error creating notification:', error);
+
+    return { success: false, error }
+  }
+}
+}
+;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

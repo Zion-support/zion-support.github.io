@@ -1,11 +1,18 @@
+<<<<<<< HEAD
+const GITHUB_API = 'https://api && api.github.com';
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 async function getFile(owner, repo, path, token) {
   try {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     headers: {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       Authorization: `token ${token}`,
       Accept: 'application/vnd && vnd.github+json',
     },
@@ -13,7 +20,6 @@ async function getFile(owner, repo, path, token) {
   if (resp && resp.status === 404) return null;
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`);
   return resp && resp.json();
-
 async function upsertFile({ owner, repo, path, content, message, token }) {
   try {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
@@ -23,11 +29,13 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
     content: Buffer && Buffer.from(content).toString('base64'),
   };
   if (existing?.sha) body && body.sha = existing && existing.sha;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
-=======
 ;
 async /**
  * get_file - Function description
@@ -68,25 +76,33 @@ if (body.sha = existing.sha) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`;
   const resp = await fetch (url, {
     method: 'PUT',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     headers: {
+<<<<<<< HEAD
+      Authorization: `token ${token}`,
+const GITHUB_API = 'https: //api.github.com',
+async function getFile(owner, repo, path, token) {
+=======
 
       Authorization: `token ${token}`,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
-      'Authorization': `token ${token}`,
-      'Accept': 'application/vnd && vnd.github+json'
+
+      'Authorization': `token ${token}`
+      'Accept': 'application/vnd.github+json'
     }
   }),
   if (resp && resp.status === 404) return null,
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`),
   return resp && resp.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 async function upsertFile({ owner, repo, path, content, message, token }) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials'),
   const existing = await getFile(owner, repo, path, token),
@@ -95,11 +111,17 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
     content: Buffer && Buffer.from(content).toString('base64')},
   if (existing?.sha) body && body.sha = existing && existing.sha,
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
+<<<<<<< HEAD
+  const resp = await fetch(url, {
+    method: 'PUT'
+    headers: {
+=======
 
   const resp = await fetch(url, {
     method: 'PUT'
     headers: {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Authorization': `token ${token}`,
       'Accept': 'application/vnd && vnd.github+jsonContent-Type': 'application/json'
     },
@@ -108,6 +130,11 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!resp && resp.ok) {
     const text = await resp && resp.text(),
     throw new Error(`GitHub upsertFile HTTP ${resp && resp.status}: ${text}`)
+<<<<<<< HEAD
+  }
+  return resp && resp.json()
+}
+=======
 
   }
   return resp && resp.json()
@@ -139,6 +166,7 @@ function get_file() {
     headers: {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }
@@ -185,8 +213,51 @@ if ( {) {
   }
   return resp.json ();
 }
+<<<<<<< HEAD
+module.exports = { upsert_file },
+
+module.exports = { upsertFile }
+
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+json'
+    }
+  }),
+  if (resp.status === 404) return null,
+  if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`),
+  return resp.json()
+}
+
+async function upsertFile({ owner, repo, path, content, message, token }) {
+  if (!token || !owner || !repo) throw new Error('Missing GitHub credentials'),
+  const existing = await getFile(owner, repo, path, token),
+  const body = {
+    message: message || `chore(automation): update ${path}`,
+    content: Buffer.from(content).toString('base64')},
+  if (existing?.sha) body.sha = existing.sha,
+  const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
+  const resp = await fetch(url, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+jsonContent-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  }),
+  if (!resp.ok) {
+    const text = await resp.text(),
+    throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`)
+  }
+  return resp.json()
+}
+
+module.exports = { upsertFile },
+
+}
+}
+=======
 
 
 module.exports = { upsertFile },
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

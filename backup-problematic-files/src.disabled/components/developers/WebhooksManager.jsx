@@ -9,4 +9,8 @@ const WebhooksManager = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default WebhooksManager;
+=======
+export default WebhooksManager;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

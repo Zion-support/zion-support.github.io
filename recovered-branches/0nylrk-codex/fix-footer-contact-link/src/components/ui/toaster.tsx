@@ -1,14 +1,31 @@
 
 
+<<<<<<< HEAD
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+
+import * as React from "react";
+import { Toaster as SonnerToaster } from "sonner";
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+=======
 
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {Toaster, as, SonnerToaster} from "sonner";
-=======
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
+<<<<<<< HEAD
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (
+export function Toaster() {
+  return (
+
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -20,6 +37,7 @@ import {Toaster, as, SonnerToaster} from "sonner";
 export function Toaster() {;
   return (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -32,10 +50,18 @@ export function Toaster() {;
 
         descriptionClassName: "text-zion-slate-light"}}
 
+<<<<<<< HEAD
+
+
+    />
+  )
+}
+=======
 =======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 export function Toaster() {;
@@ -50,9 +76,12 @@ export function Toaster() {;
           border: '1px solid #1e3a6f'};
         duration: 4000;
         descriptionClassName: "text-zion-slate-light"}}
+<<<<<<< HEAD
+=======
 
     />;
   );
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 import * as React from './react';
@@ -75,8 +104,14 @@ function Toaster() {
     />);
 }
 
-=======
 ;
 
 
+<<<<<<< HEAD
+    />;
+  );
+}
+;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

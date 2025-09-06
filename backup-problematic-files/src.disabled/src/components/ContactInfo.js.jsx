@@ -9,4 +9,8 @@ const ContactInfo.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ContactInfo.js;
+=======
+export default ContactInfo.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

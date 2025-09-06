@@ -2,9 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
-
 const execAsync = promisify(exec);
-
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -22,48 +20,40 @@ class BuildMonitor {}
     const startTime = Date.now();
     try {}
       this.log('Starting build process...');
-
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
         "timeout": 300000, // 5 minutes timeout;
       }
 });
-
       const endTime = Date.now();
       const duration = endTime - startTime;
-
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
         "success": true,
         "output": stdout,
         "errors": stderr};
-
       this.buildHistory.push(buildResult);
       if (this.buildHistory.length > this.maxHistorySize) {}
         this.buildHistory.shift();
       };
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
-
       return buildResult;
     } catch (error) {}
       const endTime = Date.now();
       const duration = endTime - startTime;
-
       const buildResult = {}
         "timestamp": new Date().toISOString(),
         duration,
         "success": false,
         "output": error.stdout || '',
         "errors": error.stderr || error.message};
-
       this.buildHistory.push(buildResult);
       if (this.buildHistory.length > this.maxHistorySize) {}
         this.buildHistory.shift();
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
-
       return buildResult;
     };
   };
@@ -74,7 +64,6 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 60000}
 });
-
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -92,7 +81,6 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 60000}
 });
-
       this.log('Lint check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -110,7 +98,6 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 120000}
 });
-
       this.log('Tests completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -123,32 +110,26 @@ class BuildMonitor {}
   };
   async performFullCheck() {}
     this.log('Starting full build check...');
-
     const results = {}
       "timestamp": new Date().toISOString(),
       "typeCheck": await this.runTypeCheck(),
       "lintCheck": await this.runLintCheck(),
       "build": await this.runBuild(),
       "tests": await this.runTests()};
-
     const allPassed =
       results.typeCheck.success &&
       results.lintCheck.success &&
       results.build.success &&
       results.tests.success;
-
     this.log(`Full check completed. All "passed": ${allPassed}`);
-
     // Save results;
     const resultsFile = path.join(__dirname, 'logs', 'build-results.json');
     fs.writeFileSync(resultsFile, JSON.stringify(results, null, 2));
-
     return results;
   };
   async cleanupOldBuilds() {}
     try {}
       this.log('Cleaning up old build artifacts...');
-
       const buildDirs = ['.next', 'out', 'dist'];
       for (const dir of buildDirs) {}
         const dirPath = path.join(process.cwd(), dir);
@@ -165,16 +146,13 @@ class BuildMonitor {}
   async optimizeBuild() {}
     try {}
       this.log('Optimizing build...');
-
       // Clean up first;
       await this.cleanupOldBuilds();
-
       // Run build with optimization;
       const { stdout, stderr } = await execAsync('npm run "build": production', {})
         "cwd": process.cwd(),
         "timeout": 300000}
 });
-
       this.log('Build optimization completed');
       return { "success": true, "output": stdout, "errors": stderr };
     } catch (error) {}
@@ -191,7 +169,6 @@ class BuildMonitor {}
     const averageDuration =
       recentBuilds.reduce((sum, b) => sum + b.duration, 0) /
       recentBuilds.length;
-
     return {}
       "totalBuilds": this.buildHistory.length,
       "recentSuccessRate": (successfulBuilds / recentBuilds.length) * 100,
@@ -200,10 +177,8 @@ class BuildMonitor {}
   };
   async start() {}
     this.log('Build Monitor started');
-
     // Run initial check;
     await this.performFullCheck();
-
     // Set up periodic checks every 4 hours;
     setInterval()
       async () => {}
@@ -211,7 +186,6 @@ class BuildMonitor {}
       },
       4 * 60 * 60 * 1000;
     );
-
     // Set up daily optimization;
     setInterval()
       async () => {}

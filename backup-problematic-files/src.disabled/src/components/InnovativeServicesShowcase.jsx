@@ -9,4 +9,8 @@ const InnovativeServicesShowcase = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default InnovativeServicesShowcase;
+=======
+export default InnovativeServicesShowcase;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -17,4 +17,8 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Industry;
+=======
+export default Industry;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

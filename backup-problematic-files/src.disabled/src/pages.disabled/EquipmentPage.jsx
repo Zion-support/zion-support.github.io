@@ -9,4 +9,8 @@ const EquipmentPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EquipmentPage;
+=======
+export default EquipmentPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

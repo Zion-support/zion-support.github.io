@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+
+import React from 'react';
+import React from 'react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { CheckCircle } from 'lucide-react'
 
 import {
@@ -77,6 +84,24 @@ if (return null) {
 
 
 
+<<<<<<< HEAD
+interface VerifiedBadgeProps {
+  verified: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  /** Optional tooltip label to display */
+  label?: string;
+
+import React from 'react',;
+import { CheckCircle } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
+interface VerifiedBadgeProps {;
+  verified: boolean,;
+  size?: 'sm' | 'md' | 'lg',;
+  /** Optional tooltip label to display */;
+  label?: string;
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null,
@@ -93,12 +118,33 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 
 
 
+<<<<<<< HEAD
+  
+  return (
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">
+          <span className="inline-flex text-blue-500">
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
+<<<<<<< HEAD
+      </Tooltip>;
+    </TooltipProvider>;
+  );
+};
+}
+}
+      </Tooltip>
+    </TooltipProvider>
+  )
+=======
 
 
 
@@ -142,6 +188,7 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */;
   label?: string;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 
 export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
@@ -175,4 +222,8 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 }
 
     </TooltipProvider>);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

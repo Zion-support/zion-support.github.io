@@ -10,18 +10,30 @@ import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
 
+<<<<<<< HEAD
+export const useJobs = (userId?: string, status?: JobStatus) => {;
+
+
+export const useJobs = (userId?: string, status?: JobStatus) => {
+export const useJobs = (userId?: string, status?: JobStatus) => {;
+=======
 
 export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
 
+<<<<<<< HEAD
+  const clientId = userId |user?.id;
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -34,6 +46,28 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
+  
+  const clientId = userId || user?.id,
+
+
+      setIsLoading(true),
+      
+
+
+  
+  const clientId = userId || user?.id,
+
+  const fetchJobs = async () => {
+    if (!clientId) {
+      setIsLoading(false),
+      return
+    }
+    try {
+      setIsLoading(true);
+      setIsLoading(true),
+      
+=======
 
   
   const clientId = userId || user?.id,
@@ -52,11 +86,15 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       let query = supabase
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { Job, JobStatus } from '@/types / jobs';
@@ -113,6 +151,16 @@ if (throw fetch_error) {
   }
 
 
+<<<<<<< HEAD
+        .order("created_at", { ascending: false });
+      if (status) {
+        query = query.eq("status", status)
+      }
+      const { data, error: fetchError } = await query;
+      if (fetchError) throw fetchError;
+      setJobs(data as Job[]);
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .order("created_at", { ascending: false }),
       
       if (status) {
@@ -124,7 +172,10 @@ if (throw fetch_error) {
       if (fetchError) throw fetchError,
       
       setJobs(data as Job[]),
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setError(null)
     } catch (err: any) {
       console.error("Error fetching jobs:", err),
@@ -133,11 +184,20 @@ if (throw fetch_error) {
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   },
   
 
 
+<<<<<<< HEAD
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase
@@ -145,7 +205,10 @@ if (throw fetch_error) {
         .update({ status: newStatus })
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       
       if (updateError) throw updateError,
@@ -167,6 +230,25 @@ if (throw fetch_error) {
   
 
 
+<<<<<<< HEAD
+      if (updateError) throw updateError;
+      
+      if (updateError) throw updateError,
+      
+      // Update local state
+      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
+      toast.success("Job status updated successfully"),
+      return true
+    } catch (err: any) {
+      console.error("Error updating job status:", err),
+      toast.error("Failed to update job status"),
+      return false
+    }
+  }
+  },
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase
@@ -174,7 +256,10 @@ if (throw fetch_error) {
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         
       if (deleteError) throw deleteError,
@@ -252,10 +337,43 @@ if (throw delete_error) {
     create_job;
     update_job,
     getJobById;
-=======
 
 
+<<<<<<< HEAD
+      if (deleteError) throw deleteError;
+        
+      if (deleteError) throw deleteError,
+      
+      // Update local state
+      setJobs(jobs.filter(job => job.id !== jobId)),
+      toast.success("Job deleted successfully"),
+      return true
+    } catch (err: any) {
+      console.error("Error deleting job:", err),
+      toast.error("Failed to delete job"),
+      return false
+    }
+  }
+  // Fetch jobs when component mounts or dependencies change
+  useEffect(() => {
+    fetchJobs()
+  }, [clientId, status]);
+  return {
+    jobs;
+    isLoading;
+    error;
+    refetch: fetchJobs;
+    updateJobStatus;
+    deleteJob;
+    createJob;
+    updateJob
+    getJobById
+  }
+}
+
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -349,9 +467,14 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     getJobById;
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
+<<<<<<< HEAD
+  }
+};
+  }
+};
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

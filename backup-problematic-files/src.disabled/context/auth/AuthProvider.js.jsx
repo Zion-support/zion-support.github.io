@@ -9,4 +9,8 @@ const AuthProvider.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AuthProvider.js;
+=======
+export default AuthProvider.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

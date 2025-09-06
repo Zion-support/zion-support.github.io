@@ -9,4 +9,8 @@ const Support = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Support;
+=======
+export default Support;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

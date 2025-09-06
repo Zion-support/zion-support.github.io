@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+export default function CookieConsent() {;
+import React, { useState, useEffect } from "react";
+import { X, Cookie, Settings } from "lucide-react";
+export default function CookieConsent() {
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 export default function CookieConsent() {;
@@ -9,14 +16,12 @@ export default function CookieConsent() {;
     marketing: false,;
     functional: false,;
   });
-
   useEffect(() => {;
     const consent = localStorage && localStorage.getItem("cookie-consent");
     if (!consent) {;
       setIsVisible(true);
     }
   }, []);
-
   const acceptAll = () => {;
     const allAccepted = {;
       necessary: true,;
@@ -24,30 +29,33 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
+<<<<<<< HEAD
+    setPreferences(allAccepted);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
+    setIsVisible(false);
+=======
 
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     // Initialize analytics if accepted;
     if (allAccepted && allAccepted.analytics) {;
       // Add your analytics initialization code here;
       console && console.log("Analytics initialized");
     }
   };
-
   const acceptSelected = () => {;
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(preferences));
     setIsVisible(false);
-
     // Initialize analytics if accepted;
     if (preferences && preferences.analytics) {;
       // Add your analytics initialization code here;
       console && console.log("Analytics initialized");
     }
   };
-
   const rejectAll = () => {;
     const onlyNecessary = {;
       necessary: true,;
@@ -55,19 +63,29 @@ export default function CookieConsent() {;
       marketing: false,;
       functional: false,;
     };
+<<<<<<< HEAD
+    setPreferences(onlyNecessary);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
+    setIsVisible(false);
+  };
+  if (!isVisible) {;
+    return null;
+  }
+  return (
+=======
 
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
     setIsVisible(false);
 
   };
-
   if (!isVisible) {;
 
     return null;
   }
   return (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
       <div className="max-w-7xl mx-auto p-4">;
         {!showSettings ? (;
@@ -79,7 +97,6 @@ export default function CookieConsent() {;
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text-sm text-gray-600">;
-=======
 import React, { useState, useEffect } from './react';
 import { X, Cookie, Settings  } from './lucide-react';
 ;
@@ -171,20 +188,25 @@ if ( {) {
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text - sm text - gray - 600">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
                 </p>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
                 <X className="w-5 h-5" />;
               </button>;
             </div>;
-
             <div className="space-y-4 mb-6">;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
@@ -195,16 +217,21 @@ if ( {) {
                     Required for the website to function properly;
                   </p>;
                 </div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 />;
               </div>;
-
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
                   <h4 className="font-medium text-gray-900">;
@@ -226,7 +253,6 @@ if ( {) {
                   className="w-4 h-4 text-blue-600 rounded";
                 />;
               </div>;
-
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
                   <h4 className="font-medium text-gray-900">;
@@ -249,7 +275,6 @@ if ( {) {
                   className="w-4 h-4 text-blue-600 rounded";
                 />;
               </div>;
-
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
                   <h4 className="font-medium text-gray-900">;
@@ -272,9 +297,11 @@ if ( {) {
                 />;
               </div>;
             </div>;
-
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;
@@ -291,7 +318,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
             <div className="flex flex - col sm:flex - row gap - 2 w - full md:w - auto">;
               <button;
                 on_click={() => setShowSettings (true)}
@@ -425,5 +451,4 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

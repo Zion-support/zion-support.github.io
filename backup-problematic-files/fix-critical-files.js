@@ -69,7 +69,6 @@ try {,;
         <div className="text-center mb-12">,
           <h1 className="text-4xl font-bold text-gray-900 mb-4">,
     { &quot;to&quot;: &quot;/services/ai-seo-optimizer&quot;, &quot;label&quot;: &quot;AI SEO Optimizer&quot; };
-
   ],
   return (,
     <div className=&quot;min-h-screen bg-gray-50 py-12&quot;>,

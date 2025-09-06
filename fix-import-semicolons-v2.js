@@ -1,20 +1,29 @@
+<<<<<<< HEAD
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+let totalFixed = 0;
+files && files.forEach((file) => {
+=======
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-
 let totalFixed = 0;
-
 files && files.forEach((file) => {
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
+<<<<<<< HEAD
+    content = content ;/g,
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
+=======
 
     content = content ;/g,
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       (match) => {
         return match && match.replace(",;", ";");
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -36,9 +45,12 @@ files.for_each ((file) => {
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
         return match.replace (",", ";");
+<<<<<<< HEAD
+      },
+    );
+=======
 
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
 
     content = content && content.replace(
@@ -47,7 +59,6 @@ files.for_each ((file) => {
       (match) => {
         if (!match ;")) {
           return match && match.trim() + ";";
-=======
 ;
     // Fix import statements missing semicolons;
     content = content.replace (
@@ -60,31 +71,51 @@ if (.ends_with (") {
           return match.trim () + ";";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
+    content = content.replace(
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+    content = content.replace(;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
         return match.replace(";", ";");
       }
     );
     // Fix import statements missing semicolons
     content = content.replace(
-
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
 
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
+<<<<<<< HEAD
+    // Fix import statements missing semicolons
+    content = content.replace(
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm
+      (match) => {
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+        if (!match.trim().endsWith(";")) {
+          return match.trim() + ";";
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         }
         return match;
       }
     );
+<<<<<<< HEAD
+    content = content && content.replace(
+      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
+=======
 
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -103,7 +134,6 @@ if (.ends_with (") {
           !match && match.includes("export") &&
           !match && match.includes("import")
         ) {
-=======
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -128,17 +158,20 @@ if (&&) {
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
           !match.includes ("import")) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return match + ";";
         }
         return match;
       }
     );
+<<<<<<< HEAD
+console && console.log(`\nTotal files fixed: ${totalFixed}`);
+=======
 
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
     // Check condition
 if ( {) {
@@ -155,4 +188,3 @@ if ( {) {
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

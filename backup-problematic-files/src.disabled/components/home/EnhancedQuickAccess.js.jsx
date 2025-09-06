@@ -9,4 +9,8 @@ const EnhancedQuickAccess.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedQuickAccess.js;
+=======
+export default EnhancedQuickAccess.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -1,13 +1,21 @@
 
+<<<<<<< HEAD
+
+  id: string;
+  user_id: string;
+  code: string;
+  created_at: string
+  updated_at: string
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
 
 export interface ReferralCode {
-=======
 
 export interface ReferralCode {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   code: string;
@@ -17,13 +25,18 @@ export interface ReferralCode {;
 
 }
 export interface Referral {
-=======
 }
 
 
 export interface Referral {;
 
+<<<<<<< HEAD
+export interface Referral {
+
+export interface Referral {;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -41,13 +54,21 @@ export interface Referral {;
 
 }
 export interface ReferralReward {
-=======
 }
 
 
 export interface ReferralReward {;
 
+<<<<<<< HEAD
+  reward_issued: boolean
+  reward_issued_at: string | null
+}
+export interface ReferralReward {
+
+export interface ReferralReward {;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   id: string;
   user_id: string;
   referral_id: string;
@@ -59,16 +80,66 @@ export interface ReferralReward {;
 export interface ReferralStats {;
 
 
+<<<<<<< HEAD
+  created_at: string
+  expires_at: string | null
+}
+export interface ReferralStats {
+
+export interface ReferralStats {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number
 
   totalRewards: number
+<<<<<<< HEAD
+}
+export type ReferralStatus = 'pending' | 'completed' | 'expired',;
+export interface ReferralCode {;
+  id: string,;
+  user_id: string,;
+  code: string,;
+  created_at: string,;
+  updated_at: string;
+}
+;
+export interface Referral {;
+  id: string,;
+  referrer_id: string,;
+  referred_id: string | null,;
+  referral_code: string,;
+  status: ReferralStatus,;
+  ip_address: string | null,;
+  email: string | null,;
+  referred_user_type: string | null,;
+  referrer_user_type: string | null,;
+  created_at: string,;
+  completed_at: string | null,;
+  reward_issued: boolean,;
+  reward_issued_at: string | null;
+}
+;
+export interface ReferralReward {;
+  id: string,;
+  user_id: string,;
+  referral_id: string,;
+  reward_type: 'credit' | 'visibility',;
+  amount: number | null,;
+  created_at: string,;
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   created_at: string,
   expires_at: string | null;
 }
 
+<<<<<<< HEAD
+  expires_at: string | null;
+}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 export interface ReferralStats {;
   totalReferrals: number,;
@@ -79,5 +150,8 @@ export interface ReferralStats {;
 ;
 
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

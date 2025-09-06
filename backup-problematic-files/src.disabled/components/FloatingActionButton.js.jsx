@@ -9,4 +9,8 @@ const FloatingActionButton.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FloatingActionButton.js;
+=======
+export default FloatingActionButton.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

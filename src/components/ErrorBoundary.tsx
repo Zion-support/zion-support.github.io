@@ -7,7 +7,6 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -21,11 +20,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo
-    });
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
   render() {
@@ -57,7 +52,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </summary>
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
                   {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}

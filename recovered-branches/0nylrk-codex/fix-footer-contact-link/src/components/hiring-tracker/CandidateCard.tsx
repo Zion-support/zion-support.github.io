@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+import { useState } from "react";
+import { Draggable } from "react-beautiful-dnd";
+import { formatDistanceToNow } from "date-fns";
+import { Link } from "react-router-dom";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+
+import { useState } from "react",
+import { Draggable } from "react-beautiful-dnd",
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { JobApplication } from "@/types/jobs",
+import { Card, CardContent } from "@/components/ui/card",
+import { Avatar } from "@/components/ui/avatar",
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   MessageSquare,;
   User,;
@@ -8,17 +30,114 @@ import {;
   AlertTriangle,;
   BriefcaseIcon,;
 } from "lucide-react";
+<<<<<<< HEAD
+
+import { useState } from "react",;
+import { Draggable } from "react-beautiful-dnd",;
+import { formatDistanceToNow } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Avatar } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { ;
+  MessageSquare,;
+  User, ;
+  FileText, ;
+  MoreVertical, ;
+  Calendar,;
+  AlertTriangle,;
+  BriefcaseIcon;
+} from "lucide-react",;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
+<<<<<<< HEAD
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+interface CandidateCardProps {;
+import { useState  } from './react';
+import { Draggable  } from './react - beautiful - dnd';
+import { formatDistanceToNow  } from './date - fns';
+import { Link  } from './react-router-dom';
+import { JobApplication  } from '@/types / jobs';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Avatar  } from '@/components / ui / avatar';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+
+
+  MessageSquare,
+  User,
+  FileText,
+  MoreVertical,
+  Calendar,
+  AlertTriangle,
+
+
+  BriefcaseIcon
+} from "lucide-react",
+
+
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { 
+  MessageSquare;
+  User;
+  FileText;
+  MoreVertical;
+  Calendar;
+  AlertTriangle;
+  BriefcaseIcon
+} from "lucide-react",
+import {
+
+  MessageSquare
+  User
+  FileText
+  MoreVertical
+  Calendar
+  AlertTriangle
+  BriefcaseIcon
+} from "lucide-react";
+import {
+DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuTrigger
+=======
   DropdownMenuTrigger,;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
+<<<<<<< HEAD
+interface CandidateCardProps {
+  application: JobApplication;
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { 
+  MessageSquare,
+  User, 
+  FileText, 
+  MoreVertical, 
+  Calendar,
+  AlertTriangle,
+  BriefcaseIcon,;
+} from "lucide-react";
+  BriefcaseIcon
+} from "lucide-react",
+=======
 interface CandidateCardProps {;
 =======
 import { useState  } from './react';
@@ -47,24 +166,69 @@ import {
 } from "lucide-react",
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
+DropdownMenuTrigger,;
+} from "@/components/ui/dropdown-menu";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
+const [showNotes, setShowNotes] = useState(false);
+interface CandidateCardProps {
+  application: JobApplication,
+  index: number
+}
 
+export function CandidateCard({ application, index }: CandidateCardProps) {;
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
+
+export function CandidateCard({ application, index }: CandidateCardProps) {
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes |"");
+  const [showHireModal, setShowHireModal] = useState(false);
+  // Check if application is stalled (no activity for 7 days)
+
+  const isStalled =
+    application.updated_at &&
+    new Date(application.updated_at).getTime() <
+      Date.now() - 7 * 24 * 60 * 60 * 1000;
+  const [showNotes, setShowNotes] = useState(false),
+  const [notes, setNotes] = useState(application.notes || ""),
+  const [showHireModal, setShowHireModal] = useState(false),
+  
+  // Check if application is stalled (no activity for 7 days)
+  const isStalled = application.updated_at && 
+    new Date(application.updated_at).getTime() < 
+    (Date.now() - 7 * 24 * 60 * 60 * 1000),
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
 interface CandidateCardProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   application: JobApplication;
   index: number
 }
 
+<<<<<<< HEAD
+  
+=======
 
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
@@ -76,7 +240,22 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
   const [notes, setNotes] = useState(application && application.notes || "");
   const [showHireModal, setShowHireModal] = useState(false);
 
+<<<<<<< HEAD
+      title: "Notes saved"
+      description: "Your notes have been saved"
+    });
+    setShowNotes(false);
+  }
+  const handleHireConfirmed = () => {
+    // Hiring process completed via the modal
+    toast({
+      title: "Hiring process initiated"
+      description: "Offer has been sent to the talent."
+    });
+  }
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       title: "Notes saved",
       description: "Your notes have been saved"
@@ -92,14 +271,32 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     })
   },
   
+<<<<<<< HEAD
+title: "Notes saved"
+      description: "Your notes have been saved"
+    });
+    setShowNotes(false);
+  }
+  const handleHireConfirmed = () => {
+    // Hiring process completed via the modal
+    toast({
+      title: "Hiring process initiated"
+      description: "Offer has been sent to the talent."
+    });
+  }
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { useState } from "react",;
 import { Draggable } from "react-beautiful-dnd",;
 import { formatDistanceToNow } from "date-fns",;
@@ -141,11 +338,32 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
     application && application.updated_at &&;
     new Date(application && application.updated_at).getTime() <;
       Date && Date.now() - 7 * 24 * 60 * 60 * 1000;
-
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",;
+import { toast } from "@/hooks/use-toast",;
+import { HireConfirmationModal } from "./HireConfirmationModal",;
+;
+interface CandidateCardProps {;
+  application:JobApplication,;
+  index:number;
+}
+;
+export function CandidateCard({ application, index } CandidateCardProps) {;
+  const [showNotes, setShowNotes] = useState(false),;
+  const [notes, setNotes] = useState(application.notes || ""),;
+  const [showHireModal, setShowHireModal] = useState(false),;
+  ;
+  // Check if application is stalled (no activity for 7 days);
+  const isStalled = application.updated_at && ;
+    new Date(application.updated_at).getTime() < ;
+    (Date.now() - 7 * 24 * 60 * 60 * 1000),;
+  ;
   const handleSaveNotes = () => {;
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
     toast({;
+<<<<<<< HEAD
+=======
       title: "Notes saved",;
       description: "Your notes have been saved",;
     });
@@ -170,33 +388,113 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             className="mb-2 p-0 shadow-sm border";
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
             <CardContent className="p-3">
+          <Card
+            className="mb-2 p-0 shadow-sm border"
+            ref={provided && provided.innerRef}
+            {...provided && provided.draggableProps}
+            {...provided && provided.dragHandleProps}>;
+      title:"Notes saved",;
+      description:"Your notes have been saved";
+    }),;
+    setShowNotes(false),;
+  },;
+  ;
+  const handleHireConfirmed = () => {;
+    // Hiring process completed via the modal;
+    toast({;
+      title:"Hiring process initiated",;
+      description:"Offer has been sent to the talent.";
+    }),;
+  },;
+  ;
+  return (;
+    <>;
+      <Draggable draggableId={application.id} index={index}>;
+        {(provided) => (;
+          <Card ;
+            className="mb-2 p-0 shadow-sm border";
+            ref={provided.innerRef}
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+          >;
+            <CardContent className="p-3">;
               {/* Candidate Header */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              {/* Candidate Header */}
+<<<<<<< HEAD
+<div className="flex justify-between items-start mb-2">
+              {/* Candidate Header */}
+              <div className="flex justify-between items-start mb-2">
+                <div className="flex items-center gap-2">
+                  <Avatar className="h-8 w-8">
+                    {application.talent_profile?.profile_picture_url ? (
+                      <img
+                        src={application.talent_profile.profile_picture_url}
+                        alt={
+                          application.talent_profile.full_name |"Candidate"
+                        }
+                      />
+                    ) : (
+                      <User className="h-4 w-4" />
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <Avatar className="h-8 w-8">;
-                    {application && application.talent_profile?.profile_picture_url ? (;
-                      <img
-                        src={application && application.talent_profile.profile_picture_url}
-                        alt={
+                    {application.talent_profile?.profile_picture_url ? (;
+                      <img;
+                        src={application.talent_profile.profile_picture_url} ;
+                        alt={application.talent_profile.full_name || "Candidate"} ;
+                      />;
+                    ) : (;
+                      <User className="h-4 w-4" />;
+                    )}
+                  </Avatar>
+                  <div>
+                    <h4 className="font-medium text-sm">
+                      {application.talent_profile?.full_name |"Candidate"}
+                    </h4>
+                    <p className="text-xs text-muted-foreground">
+=======
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <div className="flex justify-between items-start mb-2">;
+                <div className="flex items-center gap-2">;
+                  <Avatar className="h-8 w-8">;
                           application && application.talent_profile.full_name || "Candidate"
-
                         }
                       />;
                     ) : (;
+                    {application.talent_profile?.profile_picture_url ? (;
+                      <img ;
+                        src={application.talent_profile.profile_picture_url} ;
+                        alt={application.talent_profile.full_name || "Candidate"} ;
+                      />;
+                    ) :(;
                       <User className="h-4 w-4" />;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
+<<<<<<< HEAD
+                      {application.talent_profile?.professional_title |
+                        "Applicant"}
+                    </p>
+                  </div>
+                </div>
+                      {application.talent_profile?.professional_title || "Applicant"}
+{application.talent_profile?.professional_title |
+                        "Applicant"}
+                    </p>
+                  </div>
+                </div>
+                
+=======
 
 
                       {application.talent_profile?.professional_title || "Applicant"}
@@ -206,6 +504,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -214,6 +513,36 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
+                      {showNotes ? "Hide notes" : "Add notes"}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>
+                      <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild>
+                      <Link to={`/messages?talentId=${application.talent_id}`}>
+                        Message
+                      </Link>
+                    </DropdownMenuItem>
+                    {application.resume?.file_url && (
+                      <DropdownMenuItem asChild>
+                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
+                          View Resume
+                        </Link>
+                      </DropdownMenuItem>
+                    )}
+                  </Avatar>;
+                  <div>;
+                    <h4 className="font-medium text-sm">;
+                      {application.talent_profile?.full_name || "Candidate"}
+                    </h4>;
+                    <p className="text-xs text-muted-foreground">;
+                      {application.talent_profile?.professional_title || "Applicant"}
+                    </p>;
+                  </div>;
+                </div>;
+                ;
+=======
 =======
                   </Avatar>;
                   <div>;
@@ -227,6 +556,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>;
                 </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <DropdownMenu>;
                   <DropdownMenuTrigger asChild>;
                     <Button variant="ghost" className="h-8 w-8 p-0">;
@@ -235,13 +565,26 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </DropdownMenuTrigger>;
                   <DropdownMenuContent align="end">;
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
+<<<<<<< HEAD
+                      {showNotes ? "Hide notes" :"Add notes"}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {showNotes ? "Hide notes" : "Add notes"}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
                       <BriefcaseIcon className="h-4 w-4 mr-2" /> Hire Candidate;
                     </DropdownMenuItem>;
                     <DropdownMenuItem asChild>;
+<<<<<<< HEAD
+                      <Link to={`/messages?talentId=${application.talent_id}`}>;
+                        Message;
+                      </Link>;
+                    </DropdownMenuItem>;
+                    {application.resume?.file_url && (;
+                      <DropdownMenuItem asChild>;
+                        <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">;
+=======
                       <Link to={`/messages?talentId=${application && application.talent_id}`}>;
                         Message;
                       </Link>;
@@ -252,10 +595,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                           href={application && application.resume.file_url}
                           target="_blank"
                           rel="noopener noreferrer">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           View Resume;
                         </a>;
                       </DropdownMenuItem>;
                     )}
+<<<<<<< HEAD
+                  </DropdownMenuContent>;
+                </DropdownMenu>;
+              </div>;
+              ;
+=======
 
 
 
@@ -266,15 +616,22 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 </DropdownMenu>;
               </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Application Info */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
                 <div className="flex items-center">;
                   <Calendar className="h-3 w-3 mr-1" />;
+<<<<<<< HEAD
+                  {formatDistanceToNow(new Date(application.created_at), { addSuffix:true })}
+                </div>;
+                ;
+=======
                   {formatDistanceToNow(new Date(application && application.created_at), {;
                     addSuffix: true,;
                   })}
                 </div>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {isStalled && (;
                   <div className="flex items-center text-amber-500">;
                     <AlertTriangle className="h-3 w-3 mr-1" />;
@@ -283,6 +640,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 )}
               </div>;
 
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Match Score */}
 
@@ -296,6 +656,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {/* Notes Section */}
               {showNotes && (;
                 <div className="mt-2">;
@@ -316,10 +677,9 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
-
+<<<<<<< HEAD
               {/* Action Buttons */}
 
-=======
 ;
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
@@ -332,13 +692,102 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 
 
 
+</DropdownMenuContent>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+              {/* Application Info */}
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
+                <div className="flex items-center">
+                  <Calendar className="h-3 w-3 mr-1" />
+                  {formatDistanceToNow(new Date(application.created_at), {
+                    addSuffix: true
+                  })}
+                </div>
+                {isStalled && (
+                  <div className="flex items-center text-amber-500">
+                    <AlertTriangle className="h-3 w-3 mr-1" />
+                    Stalled
+                  </div>
+                )}
+              </div>
+              {/* Match Score */}
+              {application.match_score !== null &&
+                application.match_score !== undefined && (
+                  <div className="mb-2">
+                    <ScoreBadge application={application} />
+                  </div>
+                )}
+
+                  </DropdownMenuContent>;
+                </DropdownMenu>;
+              </div>;
+              {/* Application Info */}
+              <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">;
+                <div className="flex items-center">;
+                  <Calendar className="h-3 w-3 mr-1" />;
+                  {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+                </div>;
+                {isStalled && (;
+                  <div className="flex items-center text-amber-500">;
+                    <AlertTriangle className="h-3 w-3 mr-1" />;
+                    Stalled;
+                  </div>;
+                )}
+              </div>;
+              {/* Match Score */}
+              {application.match_score !== null && application.match_score !== undefined && (;
+                <div className="mb-2">;
+                  <ScoreBadge application={application} />;
+                </div>;
+              )}
+;
+              {/* Notes Section */}
+              {showNotes && (
+                <div className="mt-2">
+                  <Textarea 
+                    placeholder="Add private notes about this candidate..." 
+                    className="text-xs min-h-[60px]"
+                    value={notes}
+                    onChange={(e) => setNotes(e.target.value)}
+                  />
+                  <div className="flex justify-end mt-2">
+                    <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>
+                  </div>
+                </div>
+              )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+                <Button variant="outline" size="sm" className="flex-1" asChild>
+;
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="flex-1"
+                  asChild
+                >
+<<<<<<< HEAD
+=======
+
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
 
+<<<<<<< HEAD
+                <Button variant="outline" size="sm" className="flex-1" asChild>
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 
                 <Button 
                   variant="outline" 
@@ -346,21 +795,30 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
+<<<<<<< HEAD
+              {/* Action Buttons */}
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {application.resume?.file_url ? (
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className="flex justify-between mt-2 gap-1">;
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   <Link to={`/messages?talentId=${application && application.talent_id}`}>;
                     <MessageSquare className="h-3 w-3 mr-1" /> Message;
                   </Link>;
                 </Button>;
+<<<<<<< HEAD
+                <Button variant="outline" size="sm" className="flex-1" asChild>;
+                  {application && application.resume?.file_url ? (;
+=======
 
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
                   {application && application.resume?.file_url ? (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <a
                       href={application && application.resume.file_url}
                       target="_blank"
@@ -368,6 +826,54 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                       <FileText className="h-3 w-3 mr-1" /> Resume;
                     </a>;
                   ) : (;
+<<<<<<< HEAD
+              ;
+              {/* Match Score */}
+              {application.match_score !== null && application.match_score !== undefined && (;
+                <div className="mb-2">;
+                  <ScoreBadge application={application} />;
+                </div>;              )}
+              ;
+              {/* Notes Section */}
+              {showNotes && (;
+                <div className="mt-2">;
+                  <Textarea ;
+                    placeholder="Add private notes about this candidate..." ;
+                    className="text-xs min-h-[60px]";
+                    value={notes}
+                    onChange={(e) => setNotes(e.target.value)}
+                  />;
+                  <div className="flex justify-end mt-2">;
+                    <Button size="sm" onClick={handleSaveNotes}>Save Notes</Button>;
+                  </div>;
+                </div>;              )}
+              ;
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">;
+                <Button ;
+                  variant="outline" ;
+                  size="sm" ;
+                  className="flex-1";
+                  asChild;
+                >;
+                  <Link to={`/messages?talentId=${application.talent_id}`}>;
+                    <MessageSquare className="h-3 w-3 mr-1" /> Message;
+                  </Link>;
+                </Button>;
+                ;
+                <Button ;
+                  variant="outline" ;
+                  size="sm" ;
+                  className="flex-1";
+                  asChild;
+                >;
+                  {application.resume?.file_url ? (;
+                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">;
+                      <FileText className="h-3 w-3 mr-1" /> Resume;
+                    </a>;
+                  ) :(;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <span>;
                       <FileText className="h-3 w-3 mr-1" /> No Resume;
                     </span>;
@@ -376,10 +882,14 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                 </Button>;
 
 
+<<<<<<< HEAD
+                </Button>;
+=======
                 <Button
                   variant="default"
                   size="sm"
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </Button>
 
                 
@@ -387,9 +897,18 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   variant="default" 
                   size="sm" 
 
+<<<<<<< HEAD
+                  className="flex-1"
+                ;
+                <Button ;
+                  variant="default" ;
+                  size="sm" ;
+                  className="flex-1";
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="flex-1"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   onClick={() => setShowHireModal(true)}
                 >;
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
@@ -398,6 +917,12 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             </CardContent>;
           </Card>;
         )}
+<<<<<<< HEAD
+      </Draggable>;
+
+
+      </Draggable>;
+=======
 
       </Draggable>;
 
@@ -570,23 +1095,81 @@ function CandidateCard() {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         is_open={showHireModal}
         on_close={() => setShowHireModal (false)}
         application={application}
-
-        onConfirm={handleHireConfirmed}
-
+<<<<<<< HEAD
       />;
     </>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
+        on_confirm={handleHireConfirmed}
+      />;
+    </>);
+}
+      ;
+      {/* Hire Confirmation Modal */}
+      <HireConfirmationModal;
+<Button variant="outline" size="sm" className="flex-1" asChild>
+
+                  {application.resume?.file_url ? (
+                    <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
+                      <FileText className="h-3 w-3 mr-1" /> Resume
+                    </Link>
+                  ) : (
+                    <span>
+                      <FileText className="h-3 w-3 mr-1" /> No Resume
+                    </span>
+                  )}
+                </Button>
+                <Button
+                  variant="default"
+                  size="sm"
+                
+                <Button 
+                  variant="default" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick={() => setShowHireModal(true)}
+                >
+                  <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </Draggable>
+      </Draggable>;
+      {/* Hire Confirmation Modal */}
+      <HireConfirmationModal
+        isOpen={showHireModal}
+        onClose={() => setShowHireModal(false)}
+        application={application}
+        onConfirm={handleHireConfirmed}
+/>
+    </>
+
+      />
+    </>
+=======
+
+        onConfirm={handleHireConfirmed}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      />;
+    </>;
+  );
+<<<<<<< HEAD
+}
+=======
 =======
         on_confirm={handleHireConfirmed}
       />;
     </>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

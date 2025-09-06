@@ -9,4 +9,8 @@ const AIConsciousnessEvolutionPlatform = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIConsciousnessEvolutionPlatform;
+=======
+export default AIConsciousnessEvolutionPlatform;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

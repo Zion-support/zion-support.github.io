@@ -1,360 +1,227 @@
 export const metadata = { 
+<<<<<<< HEAD
   title: 'Data Analytics Services | Zion Tech Group',
-  description: 'Advanced data analytics solutions including business intelligence, predictive modeling, data visualization, and real-time analytics. Transform data into actionable insights.'
-}; 
+  description: 'Advanced data analytics solutions including business intelligence, data visualization, machine learning, and data engineering.'
+=======
+  title: 'Advanced Data Analytics & BI | Zion Tech Group',
+  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+};
 
-export default function DataAnalyticsPage() { 
-  return ( 
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Data Analytics Services</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Advanced data analytics solutions including business intelligence, predictive modeling, 
-            data visualization, and real-time analytics. Transform data into actionable insights.
-          </p>
-        </div>
+export default function DataAnalyticsPage() {
+  return (
+<<<<<<< HEAD
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Data Analytics Services</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Transform your data into actionable insights with our comprehensive analytics solutions. 
+          From data engineering to advanced visualization, we help you make data-driven decisions.
+        </p>
+      </div>
 
-        {/* Analytics Service Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <AnalyticsServiceCategory
-            title="Business Intelligence"
-            icon="📊"
-            description="Comprehensive BI solutions for data-driven decisions"
-            services={[
-              "Interactive dashboards",
-              "KPI monitoring",
-              "Data warehousing",
-              "ETL pipelines",
-              "Report automation",
-              "Self-service analytics"
-            ]}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <Item 
+          title="Data Engineering" 
+          details={[
+            "ETL/ELT pipelines",
+            "Data warehousing",
+            "Real-time processing",
+            "Data quality management",
+            "Cloud data platforms",
+            "API development"
+          ]} 
+        />
+        <Item 
+          title="Business Intelligence" 
+          details={[
+            "Dashboard development",
+            "KPI tracking",
+            "Report automation",
+            "Data visualization",
+            "Self-service analytics",
+            "Mobile reporting"
+          ]} 
+        />
+        <Item 
+          title="Advanced Analytics" 
+          details={[
+            "Predictive modeling",
+            "Statistical analysis",
+            "Machine learning",
+            "A/B testing",
+            "Customer segmentation",
+            "Forecasting"
+          ]} 
+        />
+      </div>
+
+      <div className="mb-16">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Our Data Analytics Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ServiceCard
+            title="Business Intelligence Dashboard"
+            description="Interactive dashboards with real-time KPIs and business metrics"
+            price="Starting at $15k"
+            features={["Custom dashboards", "Real-time data", "Mobile responsive", "Export capabilities"]
           />
-          <AnalyticsServiceCategory
+          <ServiceCard
+            title="Data Pipeline Development"
+            description="Automated data processing and ETL pipelines for your business"
+            price="Starting at $20k"
+            features={["ETL/ELT pipelines", "Data validation", "Error handling", "Monitoring"]
+          />
+          <ServiceCard
             title="Predictive Analytics"
-            icon="🔮"
             description="Machine learning models for forecasting and prediction"
-            services={[
-              "Predictive modeling",
-              "Time series forecasting",
-              "Customer segmentation",
-              "Risk assessment",
-              "Demand forecasting",
-              "Churn prediction"
-            ]}
+            price="Starting at $25k"
+            features={["Model development", "Data preprocessing", "Model training", "Deployment"]
           />
-          <AnalyticsServiceCategory
-            title="Real-time Analytics"
-            icon="⚡"
-            description="Live data processing and instant insights"
-            services={[
-              "Stream processing",
-              "Real-time dashboards",
-              "Event-driven analytics",
-              "Alert systems",
-              "Live monitoring",
-              "Instant reporting"
-            ]}
+          <ServiceCard
+            title="Customer Analytics"
+            description="Comprehensive customer behavior analysis and segmentation"
+            price="Starting at $18k"
+            features={["Customer segmentation", "Behavior analysis", "Churn prediction", "Lifetime value"]
           />
-        </div>
-
-        {/* Real Analytics Solutions */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Analytics Solutions We Build</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnalyticsSolution
-              title="Executive Dashboard"
-              description="C-level business intelligence dashboard"
-              features={[
-                "Real-time KPIs",
-                "Interactive charts",
-                "Mobile responsive",
-                "Automated reports",
-                "Drill-down capabilities"
-              ]}
-              price="$15k - $35k"
-              timeline="6-10 weeks"
-              useCase="C-suite, executives, management"
-            />
-            <AnalyticsSolution
-              title="Customer Analytics Platform"
-              description="Comprehensive customer behavior analysis"
-              features={[
-                "Customer journey mapping",
-                "Segmentation analysis",
-                "Lifetime value prediction",
-                "Churn analysis",
-                "Personalization insights"
-              ]}
-              price="$20k - $50k"
-              timeline="8-12 weeks"
-              useCase="Marketing, sales, customer success"
-            />
-            <AnalyticsSolution
-              title="Supply Chain Analytics"
-              description="End-to-end supply chain optimization"
-              features={[
-                "Demand forecasting",
-                "Inventory optimization",
-                "Supplier performance",
-                "Risk assessment",
-                "Cost analysis"
-              ]}
-              price="$25k - $60k"
-              timeline="10-16 weeks"
-              useCase="Manufacturing, retail, logistics"
-            />
-            <AnalyticsSolution
-              title="Financial Analytics Suite"
-              description="Advanced financial reporting and analysis"
-              features={[
-                "P&L analysis",
-                "Cash flow forecasting",
-                "Budget variance analysis",
-                "Risk modeling",
-                "Compliance reporting"
-              ]}
-              price="$18k - $45k"
-              timeline="6-12 weeks"
-              useCase="Finance, accounting, CFO"
-            />
-            <AnalyticsSolution
-              title="Marketing Attribution Platform"
-              description="Multi-channel marketing performance analysis"
-              features={[
-                "Attribution modeling",
-                "ROI calculation",
-                "Campaign optimization",
-                "Cross-channel analysis",
-                "Predictive insights"
-              ]}
-              price="$22k - $55k"
-              timeline="8-14 weeks"
-              useCase="Marketing, agencies, CMO"
-            />
-            <AnalyticsSolution
-              title="Operational Analytics"
-              description="Real-time operational performance monitoring"
-              features={[
-                "Process optimization",
-                "Performance metrics",
-                "Anomaly detection",
-                "Resource utilization",
-                "Efficiency analysis"
-              ]}
-              price="$16k - $40k"
-              timeline="6-10 weeks"
-              useCase="Operations, manufacturing, services"
-            />
-          </div>
-        </div>
-
-        {/* Analytics Technologies */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Analytics Technologies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AnalyticsTechnology
-              category="Data Processing"
-              technologies={["Apache Spark", "Kafka", "Flink", "Airflow", "dbt"]}
-            />
-            <AnalyticsTechnology
-              category="Visualization"
-              technologies={["Tableau", "Power BI", "Grafana", "D3.js", "Plotly"]}
-            />
-            <AnalyticsTechnology
-              category="Machine Learning"
-              technologies={["Python", "R", "TensorFlow", "Scikit-learn", "XGBoost"]}
-            />
-            <AnalyticsTechnology
-              category="Databases"
-              technologies={["PostgreSQL", "MongoDB", "ClickHouse", "BigQuery", "Snowflake"]}
-            />
-          </div>
-        </div>
-
-        {/* Data Sources & Integration */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Data Sources & Integration</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <DataSource
-              title="CRM & Sales Data"
-              description="Customer relationship management systems"
-              sources={["Salesforce", "HubSpot", "Pipedrive", "Zoho", "Custom APIs"]}
-            />
-            <DataSource
-              title="Marketing Data"
-              description="Digital marketing and advertising platforms"
-              sources={["Google Analytics", "Facebook Ads", "LinkedIn", "Twitter", "Email platforms"]}
-            />
-            <DataSource
-              title="Financial Data"
-              description="Accounting and financial management systems"
-              sources={["QuickBooks", "Xero", "Sage", "NetSuite", "Bank APIs"]}
-            />
-            <DataSource
-              title="E-commerce Data"
-              description="Online store and marketplace data"
-              sources={["Shopify", "WooCommerce", "Amazon", "eBay", "Custom stores"]}
-            />
-            <DataSource
-              title="IoT & Sensors"
-              description="Internet of Things and sensor data"
-              sources={["Temperature sensors", "GPS trackers", "Cameras", "Smart devices", "Industrial sensors"]}
-            />
-            <DataSource
-              title="Social Media"
-              description="Social media platforms and sentiment data"
-              sources={["Twitter API", "Facebook API", "Instagram", "LinkedIn", "Reddit"]}
-            />
-          </div>
-        </div>
-
-        {/* Pricing Plans */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Analytics Development Packages</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AnalyticsPricingPlan
-              name="Data Discovery"
-              price="$8k - $20k"
-              duration="3-6 weeks"
-              features={[
-                "Data audit & assessment",
-                "Data quality analysis",
-                "Source identification",
-                "Integration planning",
-                "Pilot dashboard",
-                "Recommendations"
-              ]}
-              popular={false}
-            />
-            <AnalyticsPricingPlan
-              name="Analytics Platform"
-              price="$25k - $75k"
-              duration="8-16 weeks"
-              features={[
-                "Full analytics platform",
-                "Data pipeline setup",
-                "Interactive dashboards",
-                "Automated reports",
-                "User training",
-                "Ongoing support"
-              ]}
-              popular={true}
-            />
-            <AnalyticsPricingPlan
-              name="Advanced Analytics"
-              price="$50k+"
-              duration="12+ weeks"
-              features={[
-                "Machine learning models",
-                "Predictive analytics",
-                "Real-time processing",
-                "Advanced visualizations",
-                "Custom algorithms",
-                "Continuous optimization"
-              ]}
-              popular={false}
-            />
-          </div>
-        </div>
-
-        {/* Success Metrics */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Proven Results</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <MetricCard
-              metric="40%"
-              description="Average efficiency improvement"
-              icon="📈"
-            />
-            <MetricCard
-              metric="25%"
-              description="Cost reduction achieved"
-              icon="💰"
-            />
-            <MetricCard
-              metric="60%"
-              description="Faster decision making"
-              icon="⚡"
-            />
-            <MetricCard
-              metric="90%"
-              description="Data accuracy improvement"
-              icon="🎯"
-            />
-          </div>
-        </div>
-
-        {/* Contact CTA */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Unlock Your Data?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can transform your data into powerful insights that drive business growth and competitive advantage.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
-            >
-              Email Us
-            </a>
-          </div>
-          <div className="mt-6 text-sm">
-            <p>364 E Main St STE 1008, Middletown DE 19709</p>
-          </div>
+          <ServiceCard
+            title="Data Visualization"
+            description="Advanced data visualization and interactive reports"
+            price="Starting at $12k"
+            features={["Interactive charts", "Custom visualizations", "Storytelling", "Export options"]
+          />
+          <ServiceCard
+            title="Data Warehouse Setup"
+            description="Complete data warehouse design and implementation"
+            price="Starting at $30k"
+            features={["Architecture design", "Data modeling", "ETL processes", "Security setup"]
+          />
         </div>
       </div>
-    </div>
+
+=======
+    <section>
+      <h1 style={{fontSize: 26, fontWeight: 800}}>Advanced Data Analytics & Business Intelligence</h1>
+      <p style={{marginTop: 8, color: '#374151'}}>
+        Unlock the power of your data with cutting-edge analytics, real-time dashboards, and AI-driven insights 
+        that drive strategic decision-making and boost revenue by up to 25%.
+      </p>
+      
+      <div style={{display: 'grid', gap: 12, marginTop: 16}}>
+        <Item 
+          title="Real-Time Dashboards" 
+          details={[
+            "Custom KPI dashboards", 
+            "Real-time data visualization", 
+            "Interactive charts and graphs", 
+            "Mobile-responsive design",
+            "Automated alerts and notifications"
+          ]} 
+        />
+        <Item 
+          title="Predictive Analytics" 
+          details={[
+            "Machine learning forecasting", 
+            "Customer behavior prediction", 
+            "Sales trend analysis", 
+            "Risk assessment models",
+            "Demand planning optimization"
+          ]} 
+        />
+        <Item 
+          title="Data Integration & ETL" 
+          details={[
+            "Multi-source data consolidation", 
+            "Real-time data pipelines", 
+            "Data quality validation", 
+            "Automated data cleansing",
+            "Cloud and on-premise solutions"
+          ]} 
+        />
+        <Item 
+          title="Advanced Reporting" 
+          details={[
+            "Automated report generation", 
+            "Custom report templates", 
+            "Scheduled email delivery", 
+            "PDF and Excel exports",
+            "White-label reporting solutions"
+          ]} 
+        />
+        <Item 
+          title="AI-Powered Insights" 
+          details={[
+            "Natural language queries", 
+            "Automated anomaly detection", 
+            "Pattern recognition", 
+            "Intelligent recommendations",
+            "Conversational analytics"
+          ]} 
+        />
+        <Item 
+          title="Data Governance" 
+          details={[
+            "Data security and compliance", 
+            "Access control and permissions", 
+            "Audit trails and logging", 
+            "GDPR and CCPA compliance",
+            "Data lineage tracking"
+          ]} 
+        />
+      </div>
+      
+      <div style={{marginTop: 24, padding: 20, backgroundColor: '#f0fdf4', borderRadius: 12, border: '1px solid #bbf7d0'}}>
+        <h3 style={{fontSize: 18, fontWeight: 700, marginBottom: 12, color: '#14532d'}}>Proven Results for Our Clients</h3>
+        <ul style={{color: '#166534', lineHeight: 1.6}}>
+          <li>• <strong>25% Average Revenue Increase:</strong> Through data-driven decision making</li>
+          <li>• <strong>60% Faster Reporting:</strong> Automated dashboards vs manual processes</li>
+          <li>• <strong>40% Cost Reduction:</strong> Optimized operations through predictive analytics</li>
+          <li>• <strong>99.9% Data Accuracy:</strong> Advanced validation and cleansing processes</li>
+          <li>• <strong>Real-Time Insights:</strong> Make decisions based on current data, not yesterday's reports</li>
+        </ul>
+      </div>
+      
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+      <Pricing />
+    </section>
   );
 }
 
-function AnalyticsServiceCategory({ title, icon, description, services }: {
-  title: string;
-  icon: string;
-  description: string;
-  services: string[];
-}) {
+function Item({ title, details }: { title: string; details: string[] }) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-      <div className="text-3xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
+<<<<<<< HEAD
+    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2">
-        {services.map((service, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-indigo-500 mr-2">•</span>
-            {service}
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start text-gray-600">
+            <span className="text-blue-500 mr-2 mt-1">•</span>
+            {detail}
           </li>
         ))}
+=======
+    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16, backgroundColor: '#ffffff'}}>
+      <h3 style={{fontWeight: 700, color: '#1f2937', marginBottom: 8}}>{title}</h3>
+      <ul style={{paddingLeft: 18, color: '#4b5563', margin: 0}}>
+        {details.map(d => (<li key={d} style={{listStyle: 'disc', marginBottom: 4}}>{d}</li>))}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </ul>
     </div>
   );
 }
 
-function AnalyticsSolution({ title, description, features, price, timeline, useCase }: {
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  timeline: string;
-  useCase: string;
+<<<<<<< HEAD
+function ServiceCard({ title, description, price, features }: { 
+  title: string; 
+  description: string; 
+  price: string; 
+  features: string[] 
 }) {
   return (
-    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200">
       <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-4">
-        <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
-          {useCase}
-        </span>
-      </div>
-      <ul className="space-y-1 mb-4">
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-1">
         {features.map((feature, index) => (
           <li key={index} className="text-sm text-gray-600 flex items-center">
             <span className="text-green-500 mr-2">✓</span>
@@ -362,102 +229,201 @@ function AnalyticsSolution({ title, description, features, price, timeline, useC
           </li>
         ))}
       </ul>
-      <div className="flex justify-between items-center pt-4 border-t border-gray-200">
-        <div>
-          <div className="font-bold text-indigo-600">{price}</div>
-          <div className="text-sm text-gray-500">{timeline}</div>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Data Analytics Service Packages</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="Analytics Discovery" 
+          price="$8k–$15k" 
+          duration="2–4 weeks"
+          features={[
+            "Data assessment",
+            "Requirements analysis",
+            "Technology selection",
+            "Architecture design",
+            "Proof of concept",
+            "Implementation roadmap"
+          ]} 
+        />
+        <Plan 
+          name="Analytics Implementation" 
+          price="$20k–$50k" 
+          duration="6–12 weeks"
+          features={[
+            "Dashboard development",
+            "Data pipeline setup",
+            "Model development",
+            "Testing & validation",
+            "User training",
+            "Documentation"
+          ]} 
+        />
+        <Plan 
+          name="Analytics Platform" 
+          price="$50k+" 
+          duration="12+ weeks"
+          features={[
+            "Full platform development",
+            "Advanced analytics",
+            "Machine learning models",
+            "Real-time processing",
+            "Scalable architecture",
+            "Ongoing support"
+=======
+function Pricing() {
+  return (
+    <div style={{marginTop: 32}}>
+      <h2 style={{fontSize: 24, fontWeight: 700, marginBottom: 20, color: '#1f2937'}}>Analytics Solutions Pricing</h2>
+      <div style={{display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'}}>
+        <Plan 
+          name="Analytics Starter" 
+          price="$3,000–$10,000" 
+          features={[
+            "2-4 weeks implementation", 
+            "Basic dashboard setup", 
+            "Up to 5 data sources", 
+            "Standard visualizations",
+            "Email support"
+          ]} 
+        />
+        <Plan 
+          name="Business Intelligence" 
+          price="$10,000–$30,000" 
+          features={[
+            "4-8 weeks implementation", 
+            "Advanced analytics platform", 
+            "Unlimited data sources", 
+            "Predictive modeling",
+            "Custom report automation",
+            "Priority support & training"
+          ]} 
+        />
+        <Plan 
+          name="Enterprise Analytics" 
+          price="$30,000+" 
+          features={[
+            "Custom analytics platform", 
+            "AI-powered insights", 
+            "Real-time data processing", 
+            "Advanced security & compliance",
+            "Dedicated analytics specialist",
+            "SLA guarantees & monitoring"
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          ]} 
+        />
+      </div>
+      
+<<<<<<< HEAD
+      <div className="text-center mt-8">
+        <p className="text-gray-600 mb-4">
+          Ready to unlock insights from your data? Let's discuss your analytics needs.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+=======
+      <div style={{marginTop: 24, textAlign: 'center', padding: 20, backgroundColor: '#fef2f2', borderRadius: 12, border: '1px solid #fecaca'}}>
+        <h3 style={{fontSize: 18, fontWeight: 600, marginBottom: 8, color: '#991b1b'}}>Free Data Health Check</h3>
+        <p style={{color: '#b91c1c', marginBottom: 16}}>
+          Get a comprehensive analysis of your current data infrastructure and discover 
+          opportunities for improvement. Includes ROI projections and implementation roadmap.
+        </p>
+        <div style={{display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap'}}>
+          <a 
+            href="tel:+13024640950" 
+            style={{
+              display: 'inline-block', 
+              padding: '12px 24px', 
+              backgroundColor: '#dc2626', 
+              color: 'white', 
+              textDecoration: 'none', 
+              borderRadius: 8,
+              fontWeight: 600
+            }}
+          >
+            Schedule Free Assessment
+          </a>
+          <a 
+            href="mailto:kleber@ziontechgroup.com" 
+            style={{
+              display: 'inline-block', 
+              padding: '12px 24px', 
+              backgroundColor: 'transparent', 
+              color: '#dc2626', 
+              textDecoration: 'none', 
+              borderRadius: 8,
+              border: '2px solid #dc2626',
+              fontWeight: 600
+            }}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          >
+            Email Us
+          </a>
         </div>
-        <a
-          href="tel:+13024640950"
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition-colors"
-        >
-          Get Quote
-        </a>
       </div>
     </div>
   );
 }
 
-function AnalyticsTechnology({ category, technologies }: { category: string; technologies: string[] }) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-      <h3 className="font-bold text-gray-900 mb-4">{category}</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
-          <span key={index} className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function DataSource({ title, description, sources }: {
-  title: string;
-  description: string;
-  sources: string[];
-}) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-      <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="flex flex-wrap gap-2">
-        {sources.map((source, index) => (
-          <span key={index} className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">
-            {source}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function AnalyticsPricingPlan({ name, price, duration, features, popular }: {
-  name: string;
-  price: string;
+<<<<<<< HEAD
+function Plan({ name, price, duration, features }: { 
+  name: string; 
+  price: string; 
   duration: string;
-  features: string[];
-  popular: boolean;
+  features: string[] 
 }) {
   return (
-    <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-indigo-500' : 'border-gray-200'} relative`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-        </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="text-3xl font-bold text-indigo-600 mb-1">{price}</div>
-      <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
+      <div className="text-sm text-gray-500 mb-6">{duration}</div>
+      <ul className="space-y-2">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
+          <li key={index} className="text-gray-600 flex items-start">
+            <span className="text-green-500 mr-2 mt-1">✓</span>
             {feature}
           </li>
         ))}
       </ul>
-      <a
-        href="tel:+13024640950"
-        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
-          popular 
-            ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
+=======
+function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
+  return (
+    <div style={{border: '2px solid #e5e7eb', borderRadius: 12, padding: 20, backgroundColor: '#ffffff', position: 'relative'}}>
+      <h4 style={{fontWeight: 700, fontSize: 18, color: '#1f2937', marginBottom: 8}}>{name}</h4>
+      <div style={{color: '#111827', fontWeight: 800, fontSize: 24, marginBottom: 16}}>{price}</div>
+      <ul style={{paddingLeft: 18, color: '#4b5563', marginBottom: 20}}>
+        {features.map(f => (<li key={f} style={{listStyle: 'disc', marginBottom: 6}}>{f}</li>))}
+      </ul>
+      <a 
+        href="mailto:kleber@ziontechgroup.com?subject=Data Analytics Services Inquiry" 
+        style={{
+          display: 'inline-block', 
+          width: '100%',
+          textAlign: 'center',
+          padding: '12px 16px', 
+          backgroundColor: '#3b82f6', 
+          color: 'white', 
+          textDecoration: 'none', 
+          borderRadius: 8,
+          fontWeight: 600
+        }}
       >
         Get Started
       </a>
-    </div>
-  );
-}
-
-function MetricCard({ metric, description, icon }: { metric: string; description: string; icon: string }) {
-  return (
-    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200 text-center">
-      <div className="text-3xl mb-2">{icon}</div>
-      <div className="text-3xl font-bold text-indigo-600 mb-2">{metric}</div>
-      <div className="text-gray-600">{description}</div>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>
   );
 }

@@ -28,6 +28,58 @@ import React, { useState } from 'react';
     language: 'en',;
 
 
+<<<<<<< HEAD
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+    title: 'Zion DAO x Digital Labor Initiative',
+    targetInstitution: 'UN Development Programme',
+    type: 'Workforce Dev',
+    regionalScope: 'Global South',
+    budgetOrResolution: 'USD 3M over 24 months',
+    supportingMultiverses: 'Digital Labor, AI Ethics',
+    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en'}),
+const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }))
+  };
+import React, { useState } from 'react';
+export default function UNBridge() {
+  const [form, setForm] = useState({
+
+    title: 'Zion DAO x Digital Labor Initiative'
+    targetInstitution: 'UN Development Programme'
+    type: 'Workforce Dev'
+    regionalScope: 'Global South'
+    budgetOrResolution: 'USD 3M over 24 months'
+    supportingMultiverses: 'Digital Labor, AI Ethics'
+    promptAssist:
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+    language: 'en'
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -38,25 +90,6 @@ import React, { useState } from 'react';
   ) => {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));  }
-=======
-    title: 'Zion DAO x Digital Labor Initiative',
-    targetInstitution: 'UN Development Programme',
-    type: 'Workforce Dev',
-    regionalScope: 'Global South',
-    budgetOrResolution: 'USD 3M over 24 months',
-    supportingMultiverses: 'Digital Labor, AI Ethics',
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en'}),
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [translated, setTranslated] = useState<string>('');
-
-  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }))
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function generate() {
     setLoading(true);
     try {
@@ -64,26 +97,108 @@ import React, { useState } from 'react';
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
 
+<<<<<<< HEAD
+=======
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          ...form
+          supportingMultiverses: form.supportingMultiverses
+            .split(',')
+            .map(s => s.trim())
+            .filter(Boolean)
+        })
+      });
+      const data = await res.json();
+      setResult(data);
+    } finally {
+      setLoading(false);
+    }  }
+  async function translate(targetLanguage: string) {
+    if (!result?.markdown) return;
+    setLoading(true)
+    try {
+      const res = await fetch('/api/proposals/translate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage })
+      });
+      const data = await res.json();
+      setTranslated(data.translated);
+    } finally {
+      setLoading(false);
+    }  }
+  async function exportArtifacts() {
+    if (!result?.meta?.id) return;
+    setLoading(true);
+    try {
+      await fetch('/api/proposals/export', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ id: result.meta.id })
+      });
+      // Refresh meta
+      const list = await fetch('/api/proposals/list');
+      const { proposals } = await list.json();
+      const updated = proposals.find((p: any) => p.id === result.meta.id)
+      setResult((r: any) => ({ ...r, meta: updated }));
+    } finally {
+      setLoading(false);
+    }  }
+  async function submit(channels: string[]) {
+    if (!result?.meta?.id) return;
+    setLoading(true)
+    try {
+      const res = await fetch('/api/proposals/submit', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ id: result.meta.id, channels })
+      });
+      const data = await res.json();
+      setResult((r: any) => ({ ...r, meta: data.meta }));
+    } finally {
+      setLoading(false);
+    }
+
+  }
+export default function UNBridge(req, res) {
+  try {
+  const [form, setForm] = useState({;
+    title: 'Zion DAO x Digital Labor Initiative';
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
+<<<<<<< HEAD
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
+      const data = await res.json();
+      setTranslated(data.translated)
+    } finally { setLoading(false) }
+  }
+  async function translate(): any (targetLanguage: string) {;
+    if (!result?.markdown) return;
+    setLoading(true),;
+=======
+<<<<<<< HEAD
     promptAssist:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
     language: 'en',;
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
-
   const onChange = (;
     e: React && React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
@@ -91,7 +206,6 @@ import React, { useState } from 'react';
   ) => {;
     const { name, value } = e && e.target;
     setForm(f => ({ ...f, [name]: value }));  };
-
   async function generate() {;
     setLoading(true);
     try {;
@@ -105,7 +219,6 @@ import React, { useState } from 'react';
             .map(s => s && s.trim());
             .filter(Boolean),;
         }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setResult(data);
@@ -114,18 +227,43 @@ import React, { useState } from 'react';
     }  }
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     try {;
       const res = await fetch('/api/proposals/translate', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ markdown: result && result.markdown, targetLanguage }),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       const data = await res && res.json();
       setTranslated(data && data.translated);
     } finally {;
       setLoading(false);
     }  }
+<<<<<<< HEAD
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: result.meta.id })}),
+      // Refresh meta
+const list = await fetch('/api/proposals/list');
+      const { proposals } = await list.json();
+      const updated = proposals.find((p: any) => p.id === result.meta.id),
+      setResult((r: any) => ({ ...r, meta: updated }))
+    } finally { setLoading(false) }
+  }
+  async function exportArtifacts() {;
+    if (!result?.meta?.id) return;
+    setLoading(true);
+    try {;
+      await fetch('/api/proposals/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ id: result && result.meta.id }),;
+      });
+      // Refresh meta;
+      const list = await fetch('/api/proposals/list');
+      const { proposals } = await list && list.json();
+      const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
+=======
 
 
       });
@@ -135,13 +273,17 @@ import React, { useState } from 'react';
       const { proposals } = await list && list.json();
       const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {;
       setLoading(false);
     }  }
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function submit(): any (channels: string[]) {;
     if (!result?.meta?.id) return;
     setLoading(true),;
@@ -150,14 +292,16 @@ import React, { useState } from 'react';
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
     } finally {;
       setLoading(false);
     }
-
   }
   return (
     <div className='space-y-6'>;
@@ -239,7 +383,10 @@ import React, { useState } from 'react';
               disabled={loading}
               className='px-4 py-2 bg-black text-white rounded'>;
               {loading ? 'Working…' : 'Generate Proposal'}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </button>;
           </div>;
         </div>;
@@ -273,14 +420,20 @@ import React, { useState } from 'react';
           </div>;
           {translated && (;
             <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               {translated}
             </div>;
           )}
           <div className='flex items-center gap-2'>;
             <button
               onClick={exportArtifacts}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               disabled={loading || !result}
               className='px-3 py-2 border rounded'>;
               Export PDF + Sign + IPFS;
@@ -296,7 +449,10 @@ import React, { useState } from 'react';
           {result?.meta && (;
             <div className='text-sm space-y-1'>;
               <div>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <span className='font-medium'>Status:</span>{' '}
                 {result && result.meta.status}
               </div>;
@@ -330,12 +486,121 @@ import React, { useState } from 'react';
                 </div>              )}
             </div>;
           )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: result.meta.id, channels })});
+      const data = await res.json();
+      setResult((r: any) => ({ ...r, meta: data.meta }))
+    } finally { setLoading(false) }
+  }
+    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
+    language: 'en'});
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [translated, setTranslated] = useState<string>('');
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
+  },;
+  async function generate() {;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/proposals/generate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          ...form,;
+          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),;
+      const data = await res.json();
+      setResult(data);
+    } finally { setLoading(false)   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function translate(targetLanguage: string) {;
+    if (!result?.markdown) return;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/proposals/translate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ markdown: result.markdown, targetLanguage })}),;
+      const data = await res.json();
+      setTranslated(data.translated);
+    } finally { setLoading(false)   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function exportArtifacts() {;
+    if (!result?.meta?.id) return;
+    setLoading(true);
+    try {
+      await fetch('/api/proposals/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ id: result.meta.id })}),;
+      // Refresh meta;
+      const list = await fetch('/api/proposals/list');
+      const { proposals } = await list.json();
+      const updated = proposals.find((p: any) => p.id === result.meta.id);
+      setResult((r: any) => ({ ...r, meta: updated }));
+    } finally { setLoading(false)   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function submit(channels: string[]) {;
+    if (!result?.meta?.id) return,;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/proposals/submit', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ id: result.meta.id, channels })});
+      const data = await res.json();
+      setResult((r: any) => ({ ...r, meta: data.meta }));
+    } finally { setLoading(false)   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
@@ -380,11 +645,72 @@ import React, { useState } from 'react';
         </div>
 
 
+<<<<<<< HEAD
+=======
 
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
             {result?.markdown || 'No draft yet'}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        <div className='space-y-3'>
+          <div className='text-sm opacity-70'>Output</div>
+          <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
+            {result?.markdown |'No draft yet'}
+          </div>
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={() => translate('fr')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate FR
+            </button>
+            <button
+              onClick={() => translate('es')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate ES
+            </button>
+            <button
+              onClick={() => translate('ar')}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate AR
+            </button>
+          </div>
+          {translated && (
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
+              {translated}
+            </div>
+          )}
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={exportArtifacts}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Export PDF + Sign + IPFS
+            </button>
+            <button
+              onClick={() => submit(['email'])}
+              disabled={loading |!result}
+              className='px-3 py-2 border rounded'
+            >
+              Submit (Email)
+            </button>
+        <div className="space-y-3">
+          <div className="text-sm opacity-70">Output</div>
+          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
+            {result?.markdown || 'No draft yet'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -392,9 +718,46 @@ import React, { useState } from 'react';
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
+<<<<<<< HEAD
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
+              {translated}
+            </div>
+          )}
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={exportArtifacts}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Export PDF + Sign + IPFS
+            </button>
+            <button
+              onClick={() => submit(['email'])}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Submit (Email)
+            </button>
+            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
+              {translated  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <div className="flex items-center gap-2">
+            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
+            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
+=======
 
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
@@ -404,6 +767,42 @@ import React, { useState } from 'react';
               )}
               {result.meta.artifacts?.pdfPath && (
 
+<<<<<<< HEAD
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
+              )}
+              {result.meta.artifacts?.pdfPath && (
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</a></div>
+              )}
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</Link></div>
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              {result.meta.artifacts?.pdfPath && (
+                <div>
+                  <a
+                    className='text-blue-600 underline'
+                    href={result.meta.artifacts.pdfPath}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    PDF
+                  </a>
+                </div>              )}
+              {result.meta.artifacts?.ipfsCid && (
+                <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
+              )}
+              {result.meta.artifacts?.signature && (
+                <div>
+                  Signature: {result.meta.artifacts.signature.slice(0, 30)}…
+                </div>              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+=======
 export default /**
  * UNBridge - Function description
  */
@@ -515,11 +914,11 @@ if (return) {
       set_loading (false);
     }
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 }
 
-=======
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -696,7 +1095,43 @@ if (return) {
             </div>)}
         </div>;
       </div>;
+<<<<<<< HEAD
+    </div>);
+;
+);
 
+}
+                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              {result.meta.artifacts?.ipfsCid && (;
+                <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>;
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              {result.meta.artifacts?.signature && (;
+                <div>Signature: {result.meta.artifacts.signature.slice(0, 30)}…</div>;
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </div>;
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>;
   );
   } catch (error) {
@@ -706,5 +1141,8 @@ if (return) {
 }
 
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

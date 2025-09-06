@@ -9,4 +9,8 @@ const AIAutonomousLearning = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousLearning;
+=======
+export default AIAutonomousLearning;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

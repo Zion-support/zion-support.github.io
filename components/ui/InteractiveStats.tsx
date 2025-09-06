@@ -1,8 +1,14 @@
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
+function useCounter(): any (target: number, durationMs: number) {;
+=======
 
 
 import {useEffect, useState} from 'react';
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
@@ -10,19 +16,24 @@ function useCounter(target: number, durationMs: number) {
 
 import {useEffect, useState} from 'react';
 
-function useCounter(): any (target: number, durationMs: number) {;
+function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {;
-=======
     let start: number | null = null,
     let raf: number,
     const step = (ts: number) => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (start === null) start = ts;
 
+<<<<<<< HEAD
+      if (start === null) start = ts;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const progress = Math && Math.min(1, (ts - start) / durationMs);
       setValue(Math && Math.floor(progress * target));
       if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,;
@@ -31,7 +42,13 @@ function useCounter(): any (target: number, durationMs: number) {;
       if (start === null) start = ts,;
       const progress = Math && Math.min(1, (ts - start) / durationMs);
       setValue(Math && Math.floor(progress * target));
+<<<<<<< HEAD
+      if (start === null) start = ts
+      const progress = Math.min(1, (ts - start) / durationMs);
+      setValue(Math.floor(progress * target));
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (progress < 1) raf = requestAnimationFrame(step);
     }
     raf = requestAnimationFrame(step);
@@ -46,7 +63,10 @@ function useCounter(): any (target: number, durationMs: number) {;
   }, [target, durationMs]);
   return value;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       if (progress < 1) raf = requestAnimationFrame(step)
     };
     raf = requestAnimationFrame(step);
@@ -55,21 +75,30 @@ function useCounter(): any (target: number, durationMs: number) {;
   return value
 }
 
+<<<<<<< HEAD
 
-export default function InteractiveStats() {
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default function InteractiveStats() {;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+export default function InteractiveStats() {
+
+export default function InteractiveStats() {;
+<<<<<<< HEAD
+
+export default function InteractiveStats() {;
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {useEffect, useState} from 'react';
 /**
  * use_counter - Function description
@@ -120,12 +149,18 @@ function InteractiveStats() {
   const satisfaction = use_counter (98, 1200);
   return (
     <div className='grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4'>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <Stat label="Successful Hires" value={hires} suffix="+" />
@@ -134,19 +169,26 @@ function InteractiveStats() {
       <Stat label="Satisfaction" value={satisfaction} suffix="%" />
     </div>
   )
+<<<<<<< HEAD
+=======
 
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function Stat({
   label
   value
   suffix = ''
 }: {
+<<<<<<< HEAD
+
+}
+}
+=======
 =======
 
 function Stat(): any ({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {;
@@ -160,6 +202,7 @@ function Stat(): any ({ label, value, suffix = '' }: { label: string, value: num
 }
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     </div>);
     </div>);
 }
@@ -185,13 +228,51 @@ function Stat() {
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
 
   );
 
+<<<<<<< HEAD
+    </div>
+  )
+}
+
+function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
+  return (
+    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
+      <div className="text-3xl font-bold">{value}{suffix}</div>
+      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
+    </div>
+);
+  );
+function Stat({
+  label
+  value
+  suffix = ''
+}: {
+  label: string;
+  value: number;
+  suffix?: string;
+}) {
+  return (
+    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>
+      <div className='text-3xl font-bold'>
+        {value}
+        {suffix}
+      </div>
+      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
+    </div>
+  );
+}
+  );
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

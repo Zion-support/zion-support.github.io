@@ -9,4 +9,8 @@ const AIContentGenerator = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIContentGenerator;
+=======
+export default AIContentGenerator;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

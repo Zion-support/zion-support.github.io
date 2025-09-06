@@ -9,4 +9,8 @@ const MicroSAASShowcase = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MicroSAASShowcase;
+=======
+export default MicroSAASShowcase;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

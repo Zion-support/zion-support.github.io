@@ -2,6 +2,11 @@
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -71,6 +76,10 @@ module.exports = ServicesComprehensiveFixer;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 #!/usr/bin/env node;
 const fs = require('fs')
       this.log(' Comprehensive fix for data/services.ts...')
@@ -84,6 +93,9 @@ const fs = require('fs')
       content = content.replace(/(\w+):\s*(\w+)\s*\n/g, '$"1"
       content = content.replace(/'([^']*)'\s*\n\s*'([^']*)'/g, '
       content = content.replace(/"([^"]*)"\s*\n\s*"([^"]*)"/g, '"$1",\n      "$2"
+<<<<<<< HEAD
+      content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $"2"
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -106,3 +118,7 @@ const fs = require('fs')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

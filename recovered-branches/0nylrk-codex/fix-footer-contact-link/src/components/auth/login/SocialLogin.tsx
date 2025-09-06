@@ -26,6 +26,11 @@ export function SocialLogin() {
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
 
+<<<<<<< HEAD
+
+  );
+}
+=======
 =======
         <Button
           type="button"
@@ -68,25 +73,35 @@ export function SocialLogin() {
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Web3Login } from "./Web3Login",;
+<<<<<<< HEAD
+export function SocialLogin() {;
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+  return (;
+=======
 
 export function SocialLogin() {;
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
     useAuth();
 
   return (
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className="mt-6">;
       <div className="relative">;
         <div className="absolute inset-0 flex items-center">;
           <div className="w-full border-t border-zion-blue-light" />;
         </div>;
         <div className="relative flex justify-center text-sm">;
+<<<<<<< HEAD
+=======
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Facebook, Twitter  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -106,7 +121,6 @@ function SocialLogin() {
         </div>;
         <div className="relative flex justify - center text - sm">;
           <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Or continue with;
           </span>;
         </div>;
@@ -120,5 +134,19 @@ function SocialLogin() {
   );
 }
 ;
+<<<<<<< HEAD
+          <span className="px-2 bg-zion-blue-dark text-zion-slate-light">Or continue with</span>;
+        </div>;
+      </div>;
+      <div className="mt-6 grid grid-cols-4 gap-3">;
+        <Button;
+          type="button";
+          variant="outline";
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan";
+  );
+}
+;
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

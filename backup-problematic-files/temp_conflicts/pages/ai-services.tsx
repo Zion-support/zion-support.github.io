@@ -183,5 +183,12 @@ export default function AIServices() {;
     </>;
   );
 }
+<<<<<<< HEAD
+:temp_conflicts/pages/ai-services.tsx
+;
+}
+:backup-problematic-files/temp_conflicts/pages/ai-services.tsx
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

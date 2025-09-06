@@ -1,8 +1,17 @@
 
 
+<<<<<<< HEAD
+import React from 'react';
+import { Button } from '@/components/ui/button';
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>
+}
+=======
 
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
@@ -10,6 +19,33 @@ interface NotificationHeaderProps {;
   onMarkAllAsRead: () => Promise<void>;
 
 
+<<<<<<< HEAD
+}
+
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+
+  unreadCount
+import React from 'react';
+import { Button } from '@/components/ui/button';
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>
+
+}
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+interface NotificationHeaderProps {
+  unreadCount: number;
+  onMarkAllAsRead: () => Promise<void>;
+
+}
+
+export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
+unreadCount
+=======
 
 }
 
@@ -18,6 +54,7 @@ interface NotificationHeaderProps {;
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   onMarkAllAsRead
 }) => {
   return (
@@ -27,38 +64,62 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
-=======
-import {Button} from '@/components/ui/button';
-interface NotificationHeaderProps {;
-  unreadCount: number,;
-  onMarkAllAsRead: () => Promise<void>;
+<<<<<<< HEAD
+          onClick={onMarkAllAsRead}
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
+        >
+          Mark all as read
+        </Button>
+      )}
+</div>
+
+    </div>
+  );
 }
 
-export const NotificationHeader: React.FC<NotificationHeaderProps> = ({;
+
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+;
+=======
+=======
+import {Button} from '@/components/ui/button';
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+interface NotificationHeaderProps {;
+  unreadCount:number,;
+  onMarkAllAsRead:() => Promise<void>;
+}
+;
+export const NotificationHeader:React.FC<NotificationHeaderProps> = ({;
   unreadCount,;
   onMarkAllAsRead;
 }) => {;
-  return (
+  return (;
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">;
       <h3 className="font-medium text-white">Notifications</h3>;
       {unreadCount > 0 && (;
-        <Button
-          variant="ghost" 
-          size="sm" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <Button ;
+          variant="ghost" ;
+          size="sm" ;
           onClick={onMarkAllAsRead}
-          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
+          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark";
+        >;
           Mark all as read;
         </Button>;
       )}
-
-
-
-
-=======
+    </div>;
+  ),;
+},; {
+  unreadCount > 0 && (<Button variant="ghost" size="sm" onClick= {
+  onMarkAllAsRead 
+}className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark" > Mark all as read </Button>) 
+}</div>) 
+};
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import React from './react';
@@ -87,3 +148,4 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

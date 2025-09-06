@@ -1,6 +1,10 @@
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   FormField,
+FormField,
   FormItem,
   FormLabel,
   FormControl,
@@ -10,13 +14,10 @@ import { Input  } from '@/components / ui / input';
 import { UseFormReturn  } from './react - hook - form';
 import { FormValues  } from './useHireRequestForm';
 
+
 interface PersonalInfoFieldsProps {
   form: UseFormReturn < FormValues>;
 }
-
-=======
-
-
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {UseFormReturn} from "react-hook-form";
@@ -25,7 +26,6 @@ import {FormValues} from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { UseFormReturn } from "react-hook-form",
@@ -36,6 +36,21 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;
 
+<<<<<<< HEAD
+
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+import { UseFormReturn } from "react-hook-form";
+
+}
+=======
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
@@ -45,21 +60,33 @@ interface PersonalInfoFieldsProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
         control={form && form.control}
         name="requesterName"
 
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormValues } from "./useHireRequestForm",;
+;
+interface PersonalInfoFieldsProps {;
+  form:UseFormReturn<FormValues>;
+}
+;
+export function PersonalInfoFields({ form } PersonalInfoFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+        control={form.control}
+        name="requesterName";
         render={({ field }) => (;
           <FormItem>;
             <FormLabel className="text-white">Your Name</FormLabel>;
             <FormControl>;
-              <Input
-                placeholder="Enter your full name" 
-
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
               />;
@@ -67,24 +94,35 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
             <FormMessage />;
           </FormItem>;
         )}
-
       />;
-
-
       <FormField
         control={form && form.control}
         name="requesterEmail"
-
+              <Input ;
+                placeholder="Enter your full name" ;
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white";
+              />;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;        )}
+      />;
+      ;
+      <FormField;
+        control={form.control}
+        name="requesterEmail";
         render={({ field }) => (;
           <FormItem>;
             <FormLabel className="text-white">Your Email</FormLabel>;
             <FormControl>;
-              <Input
-                placeholder="Enter your email address" 
-
                 type="email"
                 {...field}
                 className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+              <Input ;
+                placeholder="Enter your email address" ;
+                type="email";
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white";
               />;
             </FormControl>;
             <FormMessage />;
@@ -93,10 +131,6 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 
       />;
     </>;
-  );
-}
-
-=======
 export /**
  * PersonalInfoFields - Function description
  */
@@ -138,11 +172,100 @@ function PersonalInfoFields() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
+<<<<<<< HEAD
+  ),;}
+ interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues> 
+}form 
+}: PersonalInfoFieldsProps) {
+  return (<> <FormField control= {
+  form.control 
+}<FormItem> <FormLabel className="text-white" >Your Name</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> <FormField <FormItem> <FormLabel className="text-white" >Your Email</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
+}/> </>) 
+}
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>;
+
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {UseFormReturn} from "react-hook-form";
+import {FormValues} from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { UseFormReturn } from "react-hook-form",
+import { FormValues } from "./useHireRequestForm",
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { UseFormReturn } from "react-hook-form",;
+import { FormValues } from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>;
+}
+export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
+  return (
+    <>
+      <FormField
+        control={form.control}
+        name="requesterName"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="text-white">Your Name</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="Enter your full name"
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+
+      <FormField
+        control={form.control}
+        name="requesterEmail"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel className="text-white">Your Email</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="Enter your email address"
+                type="email"
+                {...field}
+                className="bg-zion-blue-light/20 border-zion-blue-light text-white"
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />
+    </>
+  );
+}
+  )
+}
+;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

@@ -9,4 +9,8 @@ const AIAutonomousFinance = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousFinance;
+=======
+export default AIAutonomousFinance;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

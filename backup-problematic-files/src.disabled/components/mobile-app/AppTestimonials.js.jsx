@@ -9,4 +9,8 @@ const AppTestimonials.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AppTestimonials.js;
+=======
+export default AppTestimonials.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

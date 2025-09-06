@@ -9,4 +9,8 @@ const [id].js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default [id].js;
+=======
+export default [id].js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

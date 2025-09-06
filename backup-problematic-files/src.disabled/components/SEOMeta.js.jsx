@@ -9,4 +9,8 @@ const SEOMeta.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SEOMeta.js;
+=======
+export default SEOMeta.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

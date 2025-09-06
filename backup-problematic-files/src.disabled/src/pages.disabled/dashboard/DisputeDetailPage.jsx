@@ -9,4 +9,8 @@ const DisputeDetailPage = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default DisputeDetailPage;
+=======
+export default DisputeDetailPage;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

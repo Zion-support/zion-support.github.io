@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Badge } from "@/components/ui/badge";
+import { X } from 'lucide-react'
+
+interface MetadataFormProps {;
+  form: UseFormReturn<AppMetadataValues>;
+}
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+
+=======
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
 }
@@ -33,13 +57,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 
   return (
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle>App Metadata</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <div className="space-y-4">;
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle>App Metadata</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <div className="space-y-4">
             <FormField
               control = {control,}
               name="appTitle"
@@ -52,6 +76,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     <Input
                       placeholder="Enter app title"
                       maxLength = {platform === "ios" ? 30 : 50,}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
@@ -105,22 +130,21 @@ if ( {) {
                       placeholder="Enter app title";
                       max_length = {platform === "ios" ? 30 : 50, }
                       {...field}
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Max {platform === "ios" ? "30" : "50"} characters;
-                  </FormDescription>;
-
-            />;
-
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Max {platform === "ios" ? "30" : "50"} characters
+                  </FormDescription>
+                </FormItem>
+              )}
+            />
             <FormField
               control = {control,}
               name="shortDescription"
-              render={({ field }: { field: any },) => (;
-                <FormItem>;
-                  <FormLabel>Short Description</FormLabel>;
-                  <FormControl>;
-
+              render={({ field }: { field: any },) => (
+                <FormItem>
+                  <FormLabel>Short Description</FormLabel>
+                  <FormControl>
                     <Input
                       placeholder="Brief description of your app"
                       maxLength = {platform === "ios" ? 170 : 80,}
@@ -137,6 +161,23 @@ if ( {) {
                       placeholder="Brief description of your app";
                       max_length = {platform === "ios" ? 170 : 80, }
                       {...field}
+<<<<<<< HEAD
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Max {platform === "ios" ? "170" : "80"} characters
+                  </FormDescription>
+                </FormItem>
+              )}
+            />
+            <FormField
+              control = {control,}
+              name="longDescription"
+              render={({ field }: { field: any },) => (
+                <FormItem>
+                  <FormLabel>Long Description</FormLabel>
+                  <FormControl>
+=======
                     />;
                   </FormControl>;
                   <FormDescription>;
@@ -153,6 +194,7 @@ if ( {) {
                   <FormLabel>Long Description</FormLabel>;
                   <FormControl>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     <Textarea
                       placeholder="Detailed description of your app"
                       className="min-h-32"
@@ -171,6 +213,18 @@ if ( {) {
                       className="min - h-32";
                       max_length = {maxDescriptionLength, }
                       {...field}
+<<<<<<< HEAD
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    {longDescription.length}/{maxDescriptionLength} characters
+                  </FormDescription>
+                </FormItem>
+              )}
+            />
+            <div>
+              <FormLabel htmlFor="keywords">Keywords</FormLabel>
+=======
                     />;
                   </FormControl>;
                   <FormDescription>;
@@ -180,11 +234,18 @@ if ( {) {
             <div>;
               <FormLabel htmlFor="keywords">Keywords</FormLabel>;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown = {addKeyword,}
                 className="mb-2"
+<<<<<<< HEAD
+              />
+              <div className="flex flex-wrap gap-2 mt-2">
+                {keywords.map((keyword, index,) => (
+                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
+=======
 
               />;
 
@@ -192,17 +253,34 @@ if ( {) {
                 {keywords && keywords.map((keyword, index,) => (;
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     {keyword}
                     <button
                       type="button"
                       onClick = {(,) => removeKeyword(keyword),}
-                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded";
-                      aria-label="Remove keyword";
-                    >;
-                      <X className="h-3 w-3" />;
-                    </button>;
-                  </Badge>;
+                      className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
+                      aria-label="Remove keyword"
+                    >
+                      <X className="h-3 w-3" />
+                    </button>
+                  </Badge>
                 ))}
+<<<<<<< HEAD
+              </div>
+              <FormDescription className="mt-2">
+                Add keywords to improve discoverability (max 100 characters total)
+              </FormDescription>
+            </div>
+            <FormField
+              control = {control,}
+              name="version"
+              render={({ field }: { field: any },) => (
+                <FormItem>
+                  <FormLabel>App Version</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="e.g., 1.0.0"
+=======
 
               </div>;
               <FormDescription className="mt-2">;
@@ -220,11 +298,32 @@ if ( {) {
                     <Input
                       placeholder="e && e.g., 1 && 1.0.0"
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {...field}
-                    />;
-                  </FormControl>;
-                </FormItem>;
+                    />
+                  </FormControl>
+                </FormItem>
               )}
+<<<<<<< HEAD
+            />
+          </div>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from 'lucide-react'
+
+
+}
+};
+
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from 'lucide-react'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                     {long_description.length}/{maxDescriptionLength} characters;
                   </FormDescription>;
@@ -279,4 +378,8 @@ if ( {) {
 
     </Card>);
 },
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

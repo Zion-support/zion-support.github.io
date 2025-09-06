@@ -2,6 +2,23 @@ import Fastify from 'fastify';
 import cors from '@fastify / cors';
 import rate_limit from '@fastify / rate - limit';
 import dotenv from 'dotenv';
+<<<<<<< HEAD
+import { createOpenAIClient, generateJobPost } from ';
+import { getPool, withUser } from ';
+    const allowed = (process && process.env.CORS_ORIGINS || '';
+    if (!origin || allowed && allowed.includes('*';
+    cb(new Error('Not allowed';
+  methods: ['GET', 'POST', 'OPTIONS';
+await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m';
+const openai = createOpenAIClient(process && process.env.OPENAI_API_KEY || '';
+  return (req && req.headers['x-user-id'] as string) || (req && req.query as any)['user_id';
+app && app.post('/ai/ask';
+  if (!prompt) return reply && reply.code(400).send({ error: 'prompt required';
+  const completion = await openai && openai.responses.create({ model: 'gpt-4o-mini';
+app && app.post('/jobs/generate';
+  const role = (body && body.role as string) || 'Engineer';
+       VALUES ($1, $2, $3, $4, $5, 'draft';
+=======
 
 import { createOpenAIClient, generateJobPost } from './openai ;
 import { getPool, withUser } from './pg ;
@@ -55,42 +72,21 @@ app && app.post('/jobs/generate', async (req, reply) => {
 
     )
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { get_pool, with_user } from './pg.js';
-dotenv.config ();
-;
-const app = Fastify ({ logger: true });
-await app.register (cors, {
-  origin: (origin, cb) => {
-    const allowed = (process.env.CORS_ORIGINS || '').split ().map ((s) => s.trim ());
-    if (|| allowed.includes (origin)) {) {
-  $2
-}
-      cb (null, true);
-      return;
-    }
-    cb (new Error ('Not allowed'), false);
-  },
-  methods: ['GET', 'POST', 'OPTIONS'];
-});
-;
-await app.register (rate_limit, { global: true, max: 100, time_window: '1m' });
-const openai = createOpenAIClient (process.env.OPENAI_API_KEY || '');
-function getUserId (req: any): string | null {
-  return (req.headers['x - user - id'] as string) || (req.query as any)['user_id'] || null;
-}
-app.post ('/ai / ask', async (req, reply) => {
-  const body = (req.body as any) || {}
-  const prompt = body.prompt as string;
-  if (return reply.code (400).send ({ error: 'prompt required' })) {
-  $2
-}
-  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
-  return { text: completion.output_text }
-});
-;
-app.post ('/jobs / generate', async (req, reply) => {
-  const body = (req.body as any) || {}
+    const allowed = (process.env.CORS_ORIGINS || '';
+    cb (new Error ('Not allowed';
+  methods: ['GET', 'POST', 'OPTIONS';
+await app.register (rate_limit, { global: true, max: 100, time_window: '1m';
+const openai = createOpenAIClient (process.env.OPENAI_API_KEY || '';
+  return (req.headers['x - user - id'] as string) || (req.query as any)['user_id';
+app.post ('/ai / ask';
+  if (return reply.code (400).send ({ error: 'prompt required';
+  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini';
+app.post ('/jobs / generate';
   const role = (body.role as string) || 'Engineer';
+<<<<<<< HEAD
+=======
   const user_id = getUserId (req);
   const description = await generateJobPost (openai, role, body);
   // Check condition
@@ -167,6 +163,7 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch((err) => {
   process && process.exit(1)
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -222,5 +219,28 @@ const port = Number (process.env.API_PORT || 4000);
 app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
+<<<<<<< HEAD
+});
+      VALUES ($1, $2, $3, $4, $5, 'draft';
+app && app.get('/talent/search';
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized';
+              SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%';
+app && app.get('/projects/:name/track';
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized';
+  if (!project) return reply && reply.code(404).send({ error: 'not found';
+app && app.get('/notifications';
+  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized';
+app && app.listen({ port, host: '0 && 0.0.0 && 0.0';
+app.get ('/talent / search';
+  if (return reply.code (401).send ({ error: 'unauthorized';
+              SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%';
+app.get ('/projects/:name / track';
+  if (return reply.code (401).send ({ error: 'unauthorized';
+  if (return reply.code (404).send ({ error: 'not found';
+app.get ('/notifications';
+  if (return reply.code (401).send ({ error: 'unauthorized';
+app.listen ({ port, host: '0.0.0.0';
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

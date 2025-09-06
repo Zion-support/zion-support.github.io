@@ -1,12 +1,43 @@
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import { useState, useEffect  } from 'react';
+import { useState, useEffect } from 'react'
+import { Search } from 'lucide-react'
+
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import {
+  Pagination
+  PaginationContent
+  PaginationItem
+  PaginationButton
+  PaginationNext
+  PaginationPrevious
+} from '@/components/ui/pagination'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { CountryServiceCard } from '@/components/services/CountryServiceCard'
+import { CountryPricing } from '@/data/onsiteServicePricing'
+interface CountryTabsProps {
+  popularCountries: string[]
+  filteredCountries: CountryPricing[]
+  handleCountrySelect: (country: CountryPricing) => void
+  onQuote?: (country: CountryPricing) => void
+  searchQuery: string
+  setSearchQuery: (query: string) => void
+import { useState, useEffect } from 'react',;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
 import {;
   Pagination,;
   PaginationContent,;
   PaginationItem,;
   PaginationButton,;
   PaginationNext,;
+<<<<<<< HEAD
+=======
   PaginationPrevious,;
 } from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -15,6 +46,7 @@ import { CountryPricing } from '@/data/onsiteServicePricing';
 
 
   setSearchQuery: (query: string) => void;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 export function CountryTabs(): any ({;
   popularCountries,;
   filteredCountries,;
@@ -44,11 +76,60 @@ export function CountryTabs({
   onQuote,
   searchQuery,
 
+  PaginationPrevious} from '@/components/ui/pagination',;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
+import { CountryServiceCard } from '@/components/services/CountryServiceCard',;
+import { CountryPricing } from '@/data/onsiteServicePricing',;
+interface CountryTabsProps {;
+  popularCountries: string[],;
+  filteredCountries: CountryPricing[],;
+  handleCountrySelect: (country: CountryPricing) => void,;
+  onQuote?: (country: CountryPricing) => void,;
+  searchQuery: string,;
+  setSearchQuery: (query: string) => void;
+}
+
+interface CountryTabsProps {
+  popularCountries: string[];
+  filteredCountries: CountryPricing[];
+  handleCountrySelect: (country: CountryPricing) => void;
+  onQuote?: (country: CountryPricing) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void
+export function CountryTabs({
+
+  popularCountries
+  filteredCountries
+  handleCountrySelect
+  onQuote
+  searchQuery
+  setSearchQuery
+export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
+  setSearchQuery,
+}: CountryTabsProps) {
+  const [currentPage, setCurrentPage] = useState(1)
+  const countriesPerPage = 50
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [searchQuery])
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
+  const paginatedCountries = filteredCountries.slice(
+    (currentPage - 1) * countriesPerPage,
+    currentPage * countriesPerPage
+    (currentPage - 1) * countriesPerPage
+    currentPage * countriesPerPage
+  )
+  )
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
@@ -66,9 +147,30 @@ export function CountryTabs({
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
+<<<<<<< HEAD
+  )
+  ),
+  return (
+    <Tabs defaultValue="featured" className="w-full">
+      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
+        <TabsTrigger
+          value="featured"
+          className="data-[state=active]:bg-zion-purple"
+        >
+          Featured Countries
+        </TabsTrigger>
+        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">
+          All Countries
+        </TabsTrigger>
+      </TabsList>
+      <TabsContent value='featured' className='mt-0'>
+        <div className='mb-6'>
+          <h2 className='text-2xl font-bold text-white text-center'>
+=======
 
   ),
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   return (
     <Tabs defaultValue='featured' className='w-full'>;
       <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
@@ -76,18 +178,35 @@ export function CountryTabs({
           value='featured'
 
 
+<<<<<<< HEAD
+      <TabsContent value='featured' className='mt-0'>
+        <div className='mb-6'>
+          <h2 className='text-2xl font-bold text-white text-center'>
+      <TabsContent value='featured' className='mt-0'>
+        <div className='mb-6'>
+          <h2 className='text-2xl font-bold text-white text-center'>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             Featured Service Locations
           </h2>
-          <p className='text-zion-slate-light text-center mt-2'>
+          <p className="text-zion-slate-light text-center mt-2">
             Browse our most popular service destinations
           </p>
         </div>
+<<<<<<< HEAD
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {filteredCountries
+            .filter(country => popularCountries.includes(country.country))
+=======
 
           className='data-[state=active]:bg-zion-purple'>;
           Featured Countries;
@@ -111,14 +230,23 @@ export function CountryTabs({
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             .map(country => (              <CountryServiceCard
-                key = {country && country.country,}
+                key = {country.country,}
                 country = {country,}
                 onSelect = {handleCountrySelect,}
                 onQuote = {onQuote,}
                 isPopular = {true,}
-              />;
+              />
             ))}
+<<<<<<< HEAD
+        </div>
+      </TabsContent>
+      <TabsContent value='all' className='mt-0'>
+        <div className='mb-6 max-w-md mx-auto'>
+          <div className='relative'>
+            <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />
+=======
 
         </div>;
       </TabsContent>;
@@ -128,11 +256,26 @@ export function CountryTabs({
           <div className='relative'>;
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Input
               type='text'
               placeholder='Search by country...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
+<<<<<<< HEAD
+              onChange={e => setSearchQuery(e.target.value)}            />
+          </div>
+        </div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
+          {paginatedCountries.map(country => (            <CountryServiceCard
+              key = {country.country,}
+              country = {country,}
+              onSelect = {handleCountrySelect,}
+              onQuote = {onQuote,}
+              isPopular = {popularCountries && popularCountries.includes(country && country.country),}
+            />;
+
+=======
 
               onChange={e => setSearchQuery(e && e.target.value)}            />;
           </div>;
@@ -145,8 +288,66 @@ export function CountryTabs({
               country = {country,}
               onSelect = {handleCountrySelect,}
               onQuote = {onQuote,}
-              isPopular = {popularCountries && popularCountries.includes(country && country.country),}
+              isPopular = {popularCountries.includes(country.country),}
+            />
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredCountries
+            .filter((country) => popularCountries.includes(country.country))
+            .map((country) => (
+              <CountryServiceCard
+                key={country.country}
+                country={country}
+                onSelect={handleCountrySelect}
+                onQuote={onQuote}
+                isPopular={true}
+              />;
+            ))}
+        </div>
+      </TabsContent>
+
+      <TabsContent value="all" className="mt-0">
+        <div className="mb-6 max-w-md mx-auto">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+            <Input
+              type="text"
+              placeholder="Search by country..."
+              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {paginatedCountries.map((country) => (
+            <CountryServiceCard
+              key={country.country}
+              country={country}
+              onSelect={handleCountrySelect}
+              onQuote={onQuote}
+              isPopular={popularCountries.includes(country.country)}
             />;
+<<<<<<< HEAD
+          ))}
+        </div>
+        {totalPages > 1 && (
+          <div className="mt-8">
+            <Pagination className="justify-center">
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious
+                    href={`?page=${currentPage - 1}`}
+                    onClick={e => {
+                      e.preventDefault()
+                      setCurrentPage(Math.max(1, currentPage - 1))
+
+                    onClick={(e) => {;
+                      e.preventDefault(),;
+                      setCurrentPage(Math.max(1, currentPage - 1));
+=======
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -188,6 +389,7 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           ))}
 
         </div>;
@@ -202,28 +404,66 @@ export function CountryTabs({
                     onClick={e => {;
                       e && e.preventDefault();
                       setCurrentPage(Math && Math.max(1, currentPage - 1));
+<<<<<<< HEAD
+                    onClick={(e) => {;
+                      e.preventDefault(),;
+                      setCurrentPage(Math.max(1, currentPage - 1));
                     }}
                   />;
                 </PaginationItem>;
-                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
-                  page => (;
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  (page) => (;
                     <PaginationItem key={page}>;
-                      <PaginationButton
+                      <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-                        onClick={e => {;
-                          e && e.preventDefault();
-                          setCurrentPage(page);                        }}
+                        onClick={e => {
+                          e.preventDefault()
+                          setCurrentPage(page) }}
+                      />
+                    </PaginationItem>
+                  )
+                        onClick={(e) => {;
+                          e.preventDefault();
+                          setCurrentPage(page);
+                        }}
                       />;
                     </PaginationItem>;
                   );
                 )}
                 <PaginationItem>;
-                  <PaginationNext
+                  <PaginationNext;
                     href={`?page=${currentPage + 1}`}
-                    onClick={e => {;
-                      e && e.preventDefault();
-                      setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
+                    onClick={(e) => {;
+                      e.preventDefault();
+                      setCurrentPage(Math.min(totalPages, currentPage + 1));
+                    }}
+                    onClick={e => {
+                      e.preventDefault()
+                      setCurrentPage(Math.min(totalPages, currentPage + 1)) }}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
+        )}
+      </TabsContent>
+    </Tabs>
+  )
+  )
+}
+  )
+}
+  );
+};
+  );
+};
+                    onClick={(e) => {;
+                      e.preventDefault();
+                      setCurrentPage(Math.min(totalPages, currentPage + 1));
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                    }}
                   />;
                 </PaginationItem>;
               </PaginationContent>;
@@ -233,8 +473,9 @@ export function CountryTabs({
       </TabsContent>;
     </Tabs>;
   );
-  );
 }
+<<<<<<< HEAD
+=======
   );
 }
 
@@ -368,6 +609,7 @@ function CountryTabs() {
 }
   );
 }
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                     onClick={(e) => {;
@@ -384,9 +626,39 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-
-
-                )}
+                        onClick={e => {
+                          e.preventDefault()
+                          setCurrentPage(page) }}
+                      />
+                    </PaginationItem>
+                  )
+                        onClick={(e) => {;
+                          e.preventDefault();
+                          setCurrentPage(page);
+                        }}
+                      />;
+                    </PaginationItem>;
+                  );
                 <PaginationItem>;
                   <PaginationNext;
+<<<<<<< HEAD
                     href={`?page=${currentPage + 1}`}
+                    onClick={(e) => {;
+                      e.preventDefault();
+                      setCurrentPage(Math.min(totalPages, currentPage + 1));
+                    }}
+  )
+}
+  )
+}
+      </TabsContent>;
+    </Tabs>;
+  );
+}
+;
+ursor/fix-website-loading-errors-and-merge-6662
+;
+                    href={`?page=${currentPage + 1}`}
+=======
+                    href={`?page=${currentPage + 1}`}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

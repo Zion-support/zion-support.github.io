@@ -9,4 +9,8 @@ const RetailSolutions = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default RetailSolutions;
+=======
+export default RetailSolutions;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

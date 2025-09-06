@@ -9,4 +9,8 @@ const AIAutonomousDatabaseSecurity = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousDatabaseSecurity;
+=======
+export default AIAutonomousDatabaseSecurity;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

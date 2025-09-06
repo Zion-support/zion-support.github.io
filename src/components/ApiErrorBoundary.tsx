@@ -1,3 +1,62 @@
+<<<<<<< HEAD
+import React, { Component, ReactNode } from 'react';
+import { QueryClient  } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import React, { Component, ReactNode } from 'react'
+import { QueryClient } from '@tanstack/react-query'
+import * as Sentry from '@sentry/nextjs'
+import { Button } from '@/components/ui/button'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
+import { RefreshCw, WifiOff } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ApiErrorBoundaryProps {
+  children: ReactNode;
+  queryClient?: QueryClient;
+  fallback?: ReactNode
+}
+
+render () {
+  if (this.state.hasError) {'
+  //Check if it's a network-related error const isNetworkError = this.state.error?.message?.includes ('fetch') |this.state.error?.message?.includes ('network') |this.state.error?.message?.includes ('timeout') |!this.state.isOnline
+//Use custom fallback if provided if (this.props.fallback) {
+  ) : (<RefreshCw className="h-4 w-4" />)
+}<AlertTitle> {'
+  isNetworkError ? 'Connection Problem': 'Something went wrong' '
+}</AlertTitle> </div> !this.state.isOnline ? ('You appear to be offline. Please check your internet connection.') : ('Unable to connect to our servers. This might be a temporary network issue.') ) : ('An unexpected error occurred while loading the page.') "
+}</AlertDescription> </Alert> <div className="flex flex-col gap-2" > <Button > {"
+  this.state.isRetrying ? (<> <RefreshCw className="mr-2 h-4 w-4 animate-spin" /> Retrying... </>) : (<> <RefreshCw className="mr-2 h-4 w-4" /> Try Again </>)
+}</Button> <Button > Reload Page </Button> </div> <span>Offline</span> </div>) "
+}Debug Info (Development Only) </summary> <pre className="mt-2 whitespace-pre-wrap break-all" > {
+  this.state.error.toString ()
+}{
+  this.state.errorInfo?.componentStack
+}</pre> </details>)
+}</div> </div>)
+}return this.props.children
+export class ApiErrorBoundary extends Component<
+  ApiErrorBoundaryProps
+  ApiErrorBoundaryState
+> {
+  private retryTimeoutId: NodeJS.Timeout | null = null
+  constructor(props: ApiErrorBoundaryProps) {
+    super(props)
+    this.state = {
+      hasError: false
+      error: null
+      errorInfo: null
+      isRetrying: false
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true
+    } }
+  static getDerivedStateFromError(
+    error: Error
+  ): Partial<ApiErrorBoundaryState> {
+    return {
+      hasError: true
+      error
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
       return (
 
@@ -16,6 +75,210 @@
       this.set_state ({ is_retrying: false });
     }
   }
+<<<<<<< HEAD
+  componentDidCatch(error: Error, errorInfo: any) {
+    // Log to Sentry
+    Sentry.withScope(scope => {
+      scope.setTag('errorBoundary', 'ApiErrorBoundary')
+      scope.setContext('errorInfo', errorInfo)
+      scope.setLevel('error')
+      Sentry.captureException(error)
+    })
+    this.setState({
+      error
+      errorInfo
+    })
+    logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo)
+  }
+  componentDidMount() {
+    // Listen for online/offline events
+    if (typeof window !== 'undefined') {
+      window.addEventListener('online', this.handleOnline)
+      window.addEventListener('offline', this.handleOffline)
+    }
+  }
+  componentWillUnmount() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('online', this.handleOnline)
+      window.removeEventListener('offline', this.handleOffline)
+    }
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId)
+    }
+  }
+  handleOnline = () => {
+    this.setState({ isOnline: true })
+    // Auto-retry when coming back online
+    if (this.state.hasError) {
+      this.handleRetry()
+    }
+  }
+  handleOffline = () => {
+    this.setState({ isOnline: false })
+  }
+  handleRetry = async () => {
+    this.setState({ isRetrying: true })
+    try {
+      // Invalidate all queries to force refetch
+      if (this.props.queryClient) {
+        await this.props.queryClient.invalidateQueries()
+        await this.props.queryClient.refetchQueries()
+      }
+      // Reset error state after a brief delay
+      this.retryTimeoutId = setTimeout((,) => {
+        this.setState({
+          hasError: false
+          error: null
+          errorInfo: null
+          isRetrying: false
+        })
+      }, 500)
+    } catch (retryError) {
+      logErrorToProduction('Retry failed:', { data: retryError })
+      Sentry.captureException(retryError)
+      this.setState({ isRetrying: false })
+    }
+  }
+  render() {
+    if (this.state.hasError) {
+      // Check if it's a network-related error
+import { QueryClient  } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+      const isNetworkError =
+        this.state.error?.message?.includes('fetch') |
+        this.state.error?.message?.includes('network') |
+        this.state.error?.message?.includes('timeout') |
+      const isNetworkError = null;
+        this.state.error?.message?.includes('fetch') ||
+        this.state.error?.message?.includes('network') ||
+        this.state.error?.message?.includes('timeout') ||
+        !this.state.isOnline
+      // Use custom fallback if provided
+      if (this.props.fallback) {
+        return this.props.fallback
+      }
+      }
+import React, { Component, ReactNode } from 'react';
+import { QueryClient } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCw, WifiOff } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface ApiErrorBoundaryProps {;
+  children: ReactNode,;
+  queryClient?: QueryClient,;
+  fallback?: ReactNode;
+}
+;
+interface ApiErrorBoundaryState {;
+  hasError: boolean,;
+  error: Error | null,;
+  errorInfo: any,;
+  isRetrying: boolean,;
+  isOnline: boolean;
+}
+;
+export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBoundaryState> {;
+  private retryTimeoutId: NodeJS.Timeout | null = null,;
+  constructor(props: ApiErrorBoundaryProps) {;
+    super(props),;
+    this.state = {;
+      hasError: false,;
+      error: null,;
+      errorInfo: null,;
+      isRetrying: false,;
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true}
+  }
+;
+  static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {;
+    return {;
+      hasError: true,;
+      error}
+  }
+;
+  componentDidCatch(error: Error, errorInfo: any) {;
+    // Log to Sentry;
+    Sentry.withScope((scope) => {;
+      scope.setTag('errorBoundaryApiErrorBoundary'),;
+      scope.setContext('errorInfo', errorInfo),;
+      scope.setLevel('error'),;
+      Sentry.captureException(error);
+    }),;
+    this.setState({;
+      error,;
+      errorInfo}),;
+    logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo);
+  }
+;
+  componentDidMount() {;
+    // Listen for online/offline events;
+    if (typeof window !== 'undefined') {;
+      window.addEventListener('online', this.handleOnline),;
+      window.addEventListener('offline', this.handleOffline);
+    }
+  }
+;
+  componentWillUnmount() {;
+    if (typeof window !== 'undefined') {;
+      window.removeEventListener('online', this.handleOnline),;
+      window.removeEventListener('offline', this.handleOffline);
+    }
+    if (this.retryTimeoutId) {;
+      clearTimeout(this.retryTimeoutId);
+    }
+  }
+;
+  handleOnline = () => {;
+    this.setState({ isOnline: true }),;
+    // Auto-retry when coming back online;
+    if (this.state.hasError) {;
+      this.handleRetry();
+    }
+  },;
+  handleOffline = () => {;
+    this.setState({ isOnline: false });
+  },;
+  handleRetry = async () => {;
+    this.setState({ isRetrying: true }),;
+    try {;
+      // Invalidate all queries to force refetch;
+      if (this.props.queryClient) {;
+        await this.props.queryClient.invalidateQueries(),;
+        await this.props.queryClient.refetchQueries();
+      }
+;
+      // Reset error state after a brief delay;
+      this.retryTimeoutId = setTimeout(() => {;
+        this.setState({;
+          hasError: false,;
+          error: null,;
+          errorInfo: null,;
+          isRetrying: false});
+      }, 500);
+    } catch (retryError) {;
+      logErrorToProduction('Retry failed:', { data: retryError }),;
+      Sentry.captureException(retryError),;
+      this.setState({ isRetrying: false });
+    }
+  },;
+  render() {;
+    if (this.state.hasError) {;
+      // Check if it's a network-related error;
+      const isNetworkError = this.state.error?.message?.includes('fetch') ||;
+                           this.state.error?.message?.includes('network') ||;
+                           this.state.error?.message?.includes('timeout') ||;
+                           !this.state.isOnline,;
+      // Use custom fallback if provided;
+      if (this.props.fallback) {;
+        return this.props.fallback;
+
+      }
+
+      return (
+=======
   render () {
     // Check condition
 if ( {) {
@@ -43,6 +306,7 @@ if ( {) {
                   <WifiOff className='h - 4 w - 4' />) : (
                   <RefreshCw className='h - 4 w - 4' />)}
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
@@ -59,13 +323,25 @@ if ( {) {
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
+                  <RefreshCw className='h-4 w-4' />
+                )}
+                <AlertTitle>
+                  {isNetworkError
+                    ? 'Connection Problem'
+                    : 'Something went wrong'}
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   <RefreshCw className="h-4 w-4" />
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -80,17 +356,34 @@ if ( {) {
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
+            <div className='flex flex-col gap-2'>
+              <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className='w-full'              >
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             <div className='flex flex-col gap-2'>;
               <Button
 
+<<<<<<< HEAD
+
+            <div className="flex flex-col gap-2">
+              <Button
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -102,6 +395,10 @@ if ( {) {
                     Try Again
                   </>
                 )}
+<<<<<<< HEAD
+                )}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
                 variant="outline"
@@ -112,6 +409,12 @@ if ( {) {
 
                 Reload Page
               </Button>
+              <Button
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+ursor/fix-website-loading-errors-and-merge-6662
+                Reload Page
             </div>
             {!this.state.isOnline && (
               <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
@@ -200,43 +503,108 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
+<<<<<<< HEAD
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+                variant="outline"
+                onClick={() => window.location.reload()}
+                className="w-full"
+              >
+                Reload Page
+              </Button>
+            </div>
+            {!this.state.isOnline && (
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <WifiOff className="h-4 w-4" />
+                <span>Offline</span>
+              </div>
+            )}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
+                <pre className='mt-2 whitespace-pre-wrap break-all'>
+                <pre className="mt-2 whitespace-pre-wrap break-all">
+=======
 
                 <pre className="mt-2 whitespace-pre-wrap break-all">
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
-
+<<<<<<< HEAD
 }, ;
   return { handleApiError };
 
           </div>;
+          </div>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+// Hook for accessing query client in function components
+export const useApiErrorHandler = () => {
+  const handleApiError = (error: Error) => {
+    Sentry.withScope(scope => {
+      scope.setTag('source', 'useApiErrorHandler')
+      scope.setLevel('error')
+      Sentry.captureException(error)
+    })
+  }
+  return { handleApiError }
+}
+  return { handleApiError }
+}
+  return { handleApiError }
+}
+
+}, ;
+  return { handleApiError };
+=======
+
+}, ;
+  return { handleApiError };
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          </div>;
         </div>;
       );
     }
-
-    return this && this.props.children;
+<<<<<<< HEAD
+;
+    return this.props.children;
   }
-
+}
+;
 // Hook for accessing query client in function components;
 export const useApiErrorHandler = () => {;
   const handleApiError = (error: Error) => {;
-    Sentry && Sentry.withScope(scope => {;
-      scope && scope.setTag('source', 'useApiErrorHandler');
-      scope && scope.setLevel('error');
-      Sentry && Sentry.captureException(error);
+    Sentry.withScope((scope) => {;
+      scope.setTag('sourceuseApiErrorHandler'),;
+      scope.setLevel('error'),;
+      Sentry.captureException(error);
     });
   };
-  return { handleApiError };
-};
   return { handleApiError }
+};
+};
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+};
+};
+};
 
 
 
@@ -246,4 +614,8 @@ export const useApiErrorHandler = () => {;
 },
 
 
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

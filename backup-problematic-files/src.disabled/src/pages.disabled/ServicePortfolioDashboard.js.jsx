@@ -9,4 +9,8 @@ const ServicePortfolioDashboard.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ServicePortfolioDashboard.js;
+=======
+export default ServicePortfolioDashboard.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

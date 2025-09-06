@@ -8,8 +8,69 @@
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
 
-=======
 
+<<<<<<< HEAD
+'use client';
+]
+}];
+</div> </div> </div> </div> {
+  /* Main Navigation */
+}<nav className= {
+  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation • Intelligence • Impact</p> </div> </a> </button> {
+  /* Submenu */
+}<AnimatePresence> <span key= {
+  service
+}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md" > {
+  service
+}</span>) )
+}+ {
+  subitem.services.length - 2
+}more </span>)
+}</div>)
+}</div> </div> </a>) )
+}</div> </motion.div>)
+}</AnimatePresence> </div>) )
+}</div> <Link href="/pricing" className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200" > Pricing </a> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started </a> </div> {
+  /* Mobile Menu Button */
+}<button </button> </div> </div> </nav> {
+  /* Mobile Menu */
+}<AnimatePresence> {
+  isOpen && (<motion.div {
+  item.badge
+}</span>)
+}</div> <ChevronDown className= {
+  `w-4 h-4 transition-transform duration-200 $ {
+  activeDropdown === item.name ? 'rotate-180' : ''
+}`
+}/> </button> > {
+  item.children?.map ( (child) => (<Link key= {
+  child.name
+}</span> </a>) )
+}</motion.div>)
+}</div>) )
+}> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {
+  /* Backdrop */
+}<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDown className= {
+  `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
+  activeSubmenu === item.name ? 'rotate-180': ''
+}`
+}/> </button> {
+  /* Mobile Submenu */
+}<AnimatePresence> > {
+  item.submenu?.map ( (subitem) => (<Link key= {
+  subitem.name
+}) )
+}</motion.div>)
+}</AnimatePresence> </div>) )
+}</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
+}</AnimatePresence> </>)
+};export default EnhancedNavigation2025;
+export default function EnhancedNavigation2025() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+=======
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -23,12 +84,11 @@ import {
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
 } from 'lucide-react';
-
 const navigationItems = [
   {
     name: 'All Services',
     href: '/2025-innovative-services-showcase',
-    icon: <Globe className="w-5 h-5" />,
+icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
     badge: 'New',
     children: [
@@ -46,7 +106,7 @@ const navigationItems = [
       { name: 'IT Infrastructure', href: '/2025-innovative-it-infrastructure-services', description: 'Advanced IT solutions' },
       { name: 'Micro SAAS Solutions', href: '/2025-innovative-micro-saas-solutions', description: 'Business solutions' }
     ]
-  };
+};
   {
     name: 'AI & Consciousness',
     href: '/ai-services',
@@ -74,14 +134,14 @@ const navigationItems = [
       { name: 'AI Autonomous Sales', href: '/ai-autonomous-sales-platform', description: 'AI that closes deals' },
       { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', description: 'Autonomous support AI' },
       { name: 'AI Autonomous HR', href: '/ai-autonomous-hr-platform', description: 'Autonomous HR management' },
-      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' };
+{ name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' };
       { name: 'AI Quantum Financial Trading', href: '/ai-quantum-financial-trading', description: 'Quantum AI trading platform' },
       { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI diagnostics' },
       { name: 'AI Autonomous Manufacturing', href: '/ai-autonomous-manufacturing-platform', description: 'Industrial AI automation' },
       { name: 'AI Cybersecurity Intelligence', href: '/ai-cybersecurity-threat-intelligence', description: 'AI threat detection' },
       { name: 'AI Content Creation Studio', href: '/ai-content-creation-studio', description: 'AI content generation' }
     ]
-  };
+};
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
@@ -100,7 +160,7 @@ const navigationItems = [
       { name: 'Quality Assurance AI', href: '/ai-quality-assurance', description: 'Automated testing and QA' },
       { name: 'Data Processing AI', href: '/ai-data-processing', description: 'Intelligent data handling' }
     ]
-  };
+};
   {
     name: 'AI Automation',
     href: '/ai-automation-services',
@@ -119,7 +179,7 @@ const navigationItems = [
       { name: 'Quality Assurance AI', href: '/ai-quality-assurance', description: 'Automated testing and QA' },
       { name: 'Data Processing AI', href: '/ai-data-processing', description: 'Intelligent data handling' }
     ]
-  };
+};
   {
     name: 'Quantum & Emerging Tech',
     href: '/quantum-services',
@@ -143,7 +203,7 @@ const navigationItems = [
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
       { name: 'Quantum-Ready Database', href: '/quantum-ready-database-platform', description: 'Quantum-resistant data storage' }
     ]
-  };
+};
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
@@ -162,7 +222,7 @@ const navigationItems = [
       { name: 'Vulnerability Management', href: '/vulnerability-management', description: 'Automated vulnerability scanning' },
       { name: 'Security Analytics', href: '/security-analytics', description: 'Advanced security insights' }
     ]
-  };
+};
   {
     name: 'Cybersecurity',
     href: '/cybersecurity-services',
@@ -181,7 +241,7 @@ const navigationItems = [
       { name: 'Vulnerability Management', href: '/vulnerability-management', description: 'Automated vulnerability scanning' },
       { name: 'Security Analytics', href: '/security-analytics', description: 'Advanced security insights' }
     ]
-  };
+};
   {
     name: 'Enterprise IT',
     href: '/enterprise-it',
@@ -204,7 +264,7 @@ const navigationItems = [
       { name: 'IT Asset Management', href: '/it-asset-management', description: 'Comprehensive asset tracking' },
       { name: 'Infrastructure Monitoring', href: '/infrastructure-monitoring', description: 'Real-time system monitoring' }
     ]
-  };
+};
   {
     name: 'Blockchain & Web3',
     href: '/blockchain-web3-services',
@@ -223,7 +283,7 @@ const navigationItems = [
       { name: 'Token Economics', href: '/token-economics', description: 'Token design and modeling' },
       { name: 'Regulatory Compliance', href: '/web3-compliance', description: 'Compliance automation' }
     ]
-  };
+};
   {
     name: 'Micro SAAS',
     href: '/micro-saas',
@@ -242,7 +302,7 @@ const navigationItems = [
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization', description: 'Supply chain optimization' },
       { name: 'AI Legal Analysis', href: '/ai-legal-document-analysis', description: 'Legal document processing' }
     ]
-  };
+};
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
@@ -261,7 +321,7 @@ const navigationItems = [
       { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
       { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
     ]
-  };
+};
   {
     name: 'Healthcare & Biotech',
     href: '/healthcare-biotech-services',
@@ -280,7 +340,7 @@ const navigationItems = [
       { name: 'Healthcare Security', href: '/healthcare-cybersecurity', description: 'Medical data protection' },
       { name: 'Biotech Research Tools', href: '/biotech-research-tools', description: 'Research automation' }
     ]
-  };
+};
   {
     name: 'Solutions',
     href: '/solutions',
@@ -294,7 +354,7 @@ const navigationItems = [
       { name: 'AI Video Generation', href: '/ai-video-generation', description: 'Automated video content' },
       { name: 'AI Music Composition', href: '/ai-music-composition', description: 'AI-generated music' }
     ]
-  };
+};
   {
     name: 'Research & Development',
     href: '/research-development',
@@ -308,7 +368,7 @@ const navigationItems = [
       { name: 'Neuroscience Research', href: '/neuroscience-research-platform', description: 'Brain research tools' },
       { name: 'Climate Research AI', href: '/climate-research-ai', description: 'Environmental research automation' }
     ]
-  };
+};
   {
     name: 'Industry Solutions',
     href: '/industry-solutions',
@@ -322,7 +382,7 @@ const navigationItems = [
       { name: 'Education AI', href: '/education-ai-solutions', description: 'Educational technology' },
       { name: 'Transportation AI', href: '/transportation-ai-solutions', description: 'Smart transportation' }
     ]
-  };
+};
   {
     name: 'Pricing & Plans',
     href: '/pricing',
@@ -336,7 +396,7 @@ const navigationItems = [
       { name: 'Custom Solutions', href: '/custom-pricing', description: 'Tailored pricing' },
       { name: 'ROI Calculator', href: '/roi-calculator', description: 'Calculate your return on investment' }
     ]
-  };
+};
   {
     name: 'Resources',
     href: '/resources',
@@ -350,7 +410,7 @@ const navigationItems = [
       { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
       { name: 'Research Papers', href: '/research-papers', description: 'Academic publications' }
     ]
-  };
+};
   {
     name: 'Support',
     href: '/support',
@@ -363,16 +423,18 @@ const navigationItems = [
       { name: 'Training Programs', href: '/training', description: 'Skill development' },
       { name: 'Community Forum', href: '/community', description: 'User community' },
       { name: 'Status Page', href: '/status', description: 'Service status' }
-    ]
+]
   }
 ];
+    ]
+  }
+],
 
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
-
 export default function EnhancedNavigation2025() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -381,19 +443,25 @@ export default function EnhancedNavigation2025() {
   const [isScrolled, setIsScrolled] = useState(false);
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   }, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
+=======
 
       <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">;
         <div className="container mx-auto px-4">;
@@ -415,18 +483,21 @@ export default function EnhancedNavigation2025() {
           </div>;
         </div>;
       </div>;
-
       {/* Main Navigation */}
       <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           : 'bg-transparent'
       }`}>;
         <div className="container mx-auto px-4">;
           <div className="flex items-center justify-between h-20">;
             {/* Logo */}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
@@ -439,8 +510,11 @@ export default function EnhancedNavigation2025() {
                 <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>;
               </div>;
             </Link>;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">;
               {navigationItems && navigationItems.map((item) => (;
@@ -456,6 +530,11 @@ export default function EnhancedNavigation2025() {
                       activeSubmenu === item && item.name ? 'rotate-180' : ''
                     }`} />;
                   </button>;
+<<<<<<< HEAD
+
+
+
+=======
 
 
 =======
@@ -464,6 +543,7 @@ export default function EnhancedNavigation2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -475,10 +555,83 @@ export default function EnhancedNavigation2025() {
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
                         <div className="p-6">;
                           {item && item.submenu?.map((subitem) => (;
+<<<<<<< HEAD
+      <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
+            <div className="flex items-center gap-4 mb-2 sm:mb-0">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4 text-cyan-300" />
+                <span>{contactInfo.phone}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4 text-purple-300" />
+                <span>{contactInfo.email}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-green-300" />
+              <span className="text-xs">{contactInfo.address}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Main Navigation */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50'
+          : 'bg-transparent'
+      }`}>
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
+                <p className="text-xs text-gray-400">Innovation • Intelligence • Impact</p>
+              </div>
+            </Link>
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative group">
+                  <button
+                    onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeSubmenu === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+
+                  {/* Submenu */}
+                  <AnimatePresence>
+                    {activeSubmenu === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
+                      >
+                        <div className="p-6">
+                          {item.submenu?.map((subitem) => (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                             <Link
                               key={subitem && subitem.name}
                               href={subitem && subitem.href}
                               onClick={() => setActiveSubmenu(null)}
+<<<<<<< HEAD
+=======
                               className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0";
                             >;
                               <div className="flex items-start space-x-3">;
@@ -500,9 +653,45 @@ export default function EnhancedNavigation2025() {
                                         <span
                                           key={service}
                                           className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
+                            >
+                              <div className="flex items-start space-x-3">
+                                {subitem.icon && (
+                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
+                                    <subitem.icon className="w-5 h-5 text-cyan-400" />
+                                  </div>
+                                )}
+                                <div className="flex-1">
+                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                    {subitem.name}
+                                  </h3>
+                                  <p className="text-sm text-gray-400 mt-1">
+                                    {subitem.description}
+                                  </p>
+                                  {subitem.services && (
+                                    <div className="mt-2 flex flex-wrap gap-1">
+                                      {subitem.services.slice(0, 2).map((service) => (
+                                        <span
+                                          key={service}
+                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
+                                        >
                                           {service}
                                         </span>;
                                       ))}
+<<<<<<< HEAD
+                                      {subitem.services.length > 2 && (
+                                        <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">
+                                          +{subitem.services.length - 2} more
+                                        </span>
+                                      )}
+                                    </div>;
+                                  )}
+                                </div>
+                              </div>
+                            </Link>
+=======
                                       {subitem && subitem.services.length > 2 && (;
                                         <span className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
                                           +{subitem && subitem.services.length - 2} more;
@@ -513,6 +702,7 @@ export default function EnhancedNavigation2025() {
                                 </div>;
                               </div>;
                             </Link>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           ))}
                         </div>;
                       </motion && motion.div>;
@@ -524,6 +714,20 @@ export default function EnhancedNavigation2025() {
             </div>;
 
 
+<<<<<<< HEAD
+
+
+
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">;
+            </div>;
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">;
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+=======
 =======
 
 
@@ -532,6 +736,7 @@ export default function EnhancedNavigation2025() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <Link
                 href="/pricing"
                 className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200">;
@@ -539,6 +744,14 @@ export default function EnhancedNavigation2025() {
               </Link>;
               <Link
                 href="/contact"
+<<<<<<< HEAD
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+            </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
                 Get Started;
@@ -546,19 +759,30 @@ export default function EnhancedNavigation2025() {
             </div>;
 
 
+<<<<<<< HEAD
+
+
+
+
+
+=======
 =======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
 }];
 </div> </div> </div> </div> {
@@ -764,59 +988,96 @@ function EnhancedNavigation2025() {
               className="lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200";
             >;
               {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </button>;
           </div>;
         </div>;
       </nav>;
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {/* Mobile Menu */}
-      <AnimatePresence>;
-        {isOpen && (;
-          <motion&& motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0 && 0.3 }}
-                      {item && item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
-                          {item && item.badge}
-                        </span>;
-                      )}
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  {activeDropdown === item.name && (
-                    <motion.div
-=======
+<<<<<<< HEAD
                     </div>;
                     <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item && item.name ? 'rotate-180' : ''
                     }`} />;
                   </button>;
-
                   {activeDropdown === item && item.name && (;
                     <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0 && 0.2 }}
                       className="ml-8 mt-2 space-y-2">;
                       {item && item.children?.map((child) => (;
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+                      {item.badge && (
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
+                          {item.badge}
+                        </span>
+                      )}
+                    </div>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+
+
+
+
+
+
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+                  {activeDropdown === item.name && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
+                      transition={{ duration: 0.2 }}
+                      className="ml-8 mt-2 space-y-2"
+                    >
+                      {item.children?.map((child) => (
+=======
+                      transition={{ duration: 0 && 0.2 }}
+                      className="ml-8 mt-2 space-y-2">;
+                      {item && item.children?.map((child) => (;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                         <Link
                           key={child && child.name}
                           href={child && child.href}
                           className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                           onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
+                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"
+                        >
+                          <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                            {subItem.name}
+                          </span>
+                        </Link>
+=======
                           className="block p-2 text-gray-300 hover:text-white transition-colors text-sm";
                         >;
                           <subItem && subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />;
@@ -824,6 +1085,7 @@ function EnhancedNavigation2025() {
                             {subItem && subItem.name}
                           </span>;
                         </Link>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       ))}
                     </motion && motion.div>;
                   )}
@@ -833,9 +1095,17 @@ function EnhancedNavigation2025() {
 
 
 
+<<<<<<< HEAD
+              {/* Mobile CTA */}
+              <div className="pt-4">;
+
+              {/* Mobile CTA */}
+              <div className="pt-4">
+=======
 
               {/* Mobile CTA */}
               <div className="pt-4">;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
@@ -849,16 +1119,31 @@ function EnhancedNavigation2025() {
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
+<<<<<<< HEAD
+            />;
+            />
+            
+            {/* Menu Panel */}
+            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
+              <div className="p-6">;
+                {/* Close Button */}
+                <div className="flex justify-end mb-6">
+                  <button
+                    onClick={closeMenu}
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
             />;
 
 
-=======
 
             
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -879,6 +1164,16 @@ function EnhancedNavigation2025() {
                     <div key={item && item.name}>;
                       <button
 
+<<<<<<< HEAD
+                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200">;
+                    <X className="w-6 h-6" />;
+                  </button>;
+                </div>;
+                {/* Mobile Navigation Items */}
+
+
+
+=======
                         onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
                       >;
@@ -898,6 +1193,7 @@ function EnhancedNavigation2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -922,6 +1218,12 @@ function EnhancedNavigation2025() {
                       </AnimatePresence>;
                     </div>;
                   ))}
+<<<<<<< HEAD
+
+
+
+                </div>;
+=======
 
                 </div>;
 
@@ -932,6 +1234,7 @@ function EnhancedNavigation2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
                   <Link
@@ -943,13 +1246,19 @@ function EnhancedNavigation2025() {
                   <Link
                     href="/contact"
                     onClick={closeMenu}
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">;
                     Contact Us;
                   </Link>;
                 </div>;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">;
                   <div className="space-y-3 text-sm">;
@@ -964,7 +1273,6 @@ function EnhancedNavigation2025() {
                     <div className="flex items-start space-x-3 text-gray-400">;
                       <MapPin className="w-4 h-4 text-green-400 mt-0 && 0.5" />;
                       <span className="text-xs">{contactInfo && contactInfo.address}</span>;
-=======
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (
@@ -988,7 +1296,7 @@ function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="ml - 8 mt - 2 space - y-2";
+className="ml - 8 mt - 2 space - y-2";
                     >;
                       {item.children?.map ((child) => (
                         <Link;
@@ -1053,16 +1361,30 @@ function EnhancedNavigation2025() {
                       <AnimatePresence>;
                         {active_submenu === item.name && (
                           <motion.div;
+                <div className="space-y-4">
+                  {navigationItems.map((item) => (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <item.icon className="w-5 h-5 text-cyan-400" />
+                          <span className="text-white font-medium">{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                          activeSubmenu === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+
+                      {/* Mobile Submenu */}
+                      <AnimatePresence>
+                        {activeSubmenu === item.name && (
+                          <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="ml - 8 space - y-2";
-                          >;
-                            {item.submenu?.map ((subitem) => (
-                              <Link;
-                                key={subitem.name}
-                                href={subitem.href}
                                 on_click={close_menu}
                                 className="block p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200";
                               >;
@@ -1104,12 +1426,13 @@ function EnhancedNavigation2025() {
                     <div className="flex items - start space - x-3 text - gray - 400">;
                       <MapPin className="w - 4 h - 4 text - green - 400 mt - 0.5" />;
                       <span className="text - xs">{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
 
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">
@@ -1133,11 +1456,10 @@ function EnhancedNavigation2025() {
           </motion.div>
         )}
       </AnimatePresence>
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
@@ -1146,20 +1468,88 @@ function EnhancedNavigation2025() {
 
 
       </AnimatePresence>;
-
       {/* Spacer for fixed navigation */}
       <div className="h-20" />;
     </>;
   );
 };
+<<<<<<< HEAD
+export default EnhancedNavigation2025;
+=======
 
 =======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </motion.div>)}
       </AnimatePresence>;
+                            className="ml-8 space-y-2"
+                          >
+                            {item.submenu?.map((subitem) => (
+                              <Link
+                                key={subitem.name}
+                                href={subitem.href}
+                                onClick={closeMenu}
+                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
+                              >
+                                <h4 className="text-white font-medium">{subitem.name}</h4>
+                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Mobile CTA */}
+                <div className="mt-8 space-y-4">
+                  <Link
+                    href="/pricing"
+                    onClick={closeMenu}
+                    className="block w-full text-center px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-200"
+                  >
+                    View Pricing
+                  </Link>
+                  <Link
+                    href="/contact"
+                    onClick={closeMenu}
+                    className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+                {/* Mobile Contact Info */}
+                <div className="mt-8 pt-6 border-t border-gray-700/50">
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center space-x-3 text-gray-400">
+                      <Phone className="w-4 h-4 text-cyan-400" />
+                      <span>{contactInfo.phone}</span>
+                    </div>
+                    <div className="flex items-center space-x-3 text-gray-400">
+                      <Mail className="w-4 h-4 text-purple-400" />
+                      <span>{contactInfo.email}</span>
+                    </div>
+                    <div className="flex items-start space-x-3 text-gray-400">
+                      <MapPin className="w-4 h-4 text-green-400 mt-0.5" />
+                      <span className="text-xs">{contactInfo.address}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);
 }
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

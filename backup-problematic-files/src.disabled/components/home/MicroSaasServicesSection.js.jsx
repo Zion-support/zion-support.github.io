@@ -9,4 +9,8 @@ const MicroSaasServicesSection.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default MicroSaasServicesSection.js;
+=======
+export default MicroSaasServicesSection.js;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

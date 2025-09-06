@@ -7,27 +7,76 @@ interface GradientHeadingProps {;
 }
 
 
+interface GradientHeadingProps {;
+  children: React && React.ReactNode,;
+  className?: string;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
 export function GradientHeading(): any ({ children, className, level = "h2" }: GradientHeadingProps) {;
   const Tag = level;
-
   return (
     <Tag
       className={cn(
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
 
-        className
-      )}>;
-=======
+import { cn } from "@/lib/utils";
+import React from "react";
+interface GradientHeadingProps {
 
+<<<<<<< HEAD
+  children: React.ReactNode
+  className?: string;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import { cn } from "@/lib/utils",
 import React from "react",
-=======
 import {cn} from "@/lib/utils";
 import React from "react";
-=======
 import { cn } from "@/lib/utils",
 import React from "react",
 
+<<<<<<< HEAD
+
+  return (
+    <Tag
+      className={cn(
+
+interface GradientHeadingProps {
+  children: React.ReactNode,
+  className?: string,
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
+
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {
+  const Tag = level;
+  const Tag = level,
+  
+  return (
+    <Tag
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+
+        className
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        className
+import { cn } from "@/lib/utils",;
+import React from "react",;
+interface GradientHeadingProps {;
+  children: React.ReactNode,;
+  className?: string,;
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+;
+export function GradientHeading({ children, className, level = "h2" }: GradientHeadingProps) {;
+  const Tag = level;
+  return (;
+    <Tag;
+      className={cn(;
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+        className;
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GradientHeadingProps {
   children: React.ReactNode,
@@ -42,19 +91,24 @@ interface GradientHeadingProps {
     <Tag
       className={cn(
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
         className
 
       )}
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
 
     </Tag>;
   );
 }
 
-=======
+        className
+      )}>;
+      {children}
+    </Tag>;
+  );
+}
 import { cn } from '@/lib / utils';
 import React from './react';
 interface GradientHeadingProps {
@@ -77,4 +131,45 @@ function GradientHeading() {
       {children}
     </Tag>);
 }
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils",;
+import React from "react",;
+;
+interface GradientHeadingProps {;
+  children:React.ReactNode,;
+  className?:string,;
+  level?:"h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
+;
+export function GradientHeading({ children, className, level = "h2" } GradientHeadingProps) {;
+  const Tag = level,;
+  ;
+  return (;
+    <Tag ;
+      className={cn(;
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",;
+        className;
+      )}
+    >;
+      {children}
+    </Tag>;
+  ),;}
+ interface GradientHeadingProps {
+  children: React.ReactNode;
+className?: string;
+return (<Tag className= {
+  cn () 
+}> {
+  children 
+}</Tag>) 
+}
+      )}
+    >
+      {children}
+    </Tag>
+  )
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

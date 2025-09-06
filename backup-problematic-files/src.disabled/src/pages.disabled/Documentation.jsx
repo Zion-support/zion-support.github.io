@@ -9,4 +9,8 @@ const Documentation = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Documentation;
+=======
+export default Documentation;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

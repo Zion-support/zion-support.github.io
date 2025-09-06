@@ -9,4 +9,8 @@ const SupplyChain = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default SupplyChain;
+=======
+export default SupplyChain;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36

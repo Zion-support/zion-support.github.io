@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-
-import Link from 'next / link'; // Changed from react-router-dom;
-import { use_auth } from '@/hooks / use_auth';
-import { useGetOrdersQuery } from '@/hooks / use_orders';
-
+import Link from 'next/link'; // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
+import Link from 'next/link'; // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   Table
   TableBody
   TableCell
@@ -61,8 +71,27 @@ import {
   Table,
   TableBody,
   TableCell,
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth } from '@/hooks/useAuth',
+import { useGetOrdersQuery } from '@/hooks/useOrders',
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from '@/components/ui/table',
+import { Badge } from '@/components/ui/badge',
+import Skeleton from '@/components/ui/skeleton',
+import { EmptyState } from '@/components/ui/empty-state',
+export default function OrdersPage() {
+  const { user } = useAuth(),
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
+  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
+  const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
         return (
@@ -86,7 +115,8 @@ import {
       default:
         return status
     }
-
+  }
+ursor/fix-website-loading-errors-and-merge-6662
   },
 
 
@@ -125,11 +155,16 @@ import {
                 </TableCell>;
               </TableRow>;
 
+<<<<<<< HEAD
+  }
+  },
+=======
             ))}
-          </TableBody>;
-        </Table>;
-      ) : orders && orders.length === 0 ? (;
+          </TableBody>
+        </Table>
+      ) : orders.length === 0 ? (
         <EmptyState
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
           icon={<FileText className="h-10 w-10" />}
@@ -150,20 +185,65 @@ import {
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
+            {Array.from({ length: 3 }).map((_, i) => (
+              <TableRow key={i}>
+                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-16" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      ) : orders.length === 0 ? (
+        <EmptyState
+          icon={<FileText className='h-10 w-10' />}
+          title='No Orders'          description="You haven't purchased anything yet."
+ursor/fix-website-loading-errors-and-merge-6662
+          icon={<FileText className='h-10 w-10' />}
+          title='No Orders'          description="You haven't purchased anything yet."
+          icon={<FileText className="h-10 w-10" />}
+          title="No Orders"
+          description="You haven't purchased anything yet."
+        />
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Order #</TableHead>
+              <TableHead>Date</TableHead>
+              <TableHead>Total</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>View</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {orders.map(order => (              <TableRow key={order.orderId}>
+                <TableCell className='font-medium'>{order.orderId}</TableCell>
+ursor/fix-website-loading-errors-and-merge-6662
+            {orders.map(order => (              <TableRow key={order.orderId}>
+                <TableCell className='font-medium'>{order.orderId}</TableCell>
+=======
 
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
 
 
                 <TableCell>{formatDate(order.date)}</TableCell>
-                <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
+<<<<<<< HEAD
+                    href={`/orders/${order.orderId}`} // Changed to href
+                    className="text-zion-purple underline"
+=======
                     href={`/orders/${order.orderId}`}
                     className='text-zion-purple underline'
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                   >
                     View
                   </Link>
@@ -197,17 +277,31 @@ import {
                 </TableCell>;
               </TableRow>;
             ))}
-
-
+            ))}
+          </TableBody>
+        </Table>
+      )}
+    </div>
+  );
+}
 ;
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </TableBody>;
         </Table>;
       )}
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+;
+
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 ;
@@ -316,4 +410,8 @@ function OrdersPage() {
         </Table>)}
     </div>);
 }
+<<<<<<< HEAD
 ;
+=======
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
