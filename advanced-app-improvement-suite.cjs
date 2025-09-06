@@ -1,14 +1,23 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync, spawn } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 
 class AdvancedAppImprovementSuite {
-  constructor() {
-    this.projectRoot = process.cwd();
+  constructor(projectRoot) {
+    this.projectRoot = projectRoot || process.cwd();
+    this.reportsDir = path.join(this.projectRoot, "improvement-reports");
+    this.logFile = path.join(this.reportsDir, "app-improvement.log");
     this.startTime = new Date();
     this.results = {};
+    this.ensureDirectories();
+  }
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
   }
 
   log(message, type = 'INFO') {
@@ -158,12 +167,131 @@ console.log('SEO report generated');`;
 
       this.generateReport();
     } catch (error) {
+<<<<<<< HEAD
       this.log(`Fatal error: ${error.message}`, 'ERROR');
       this.generateReport();
     }
   }
 }
 
+=======
+      this.log(`⚠️ Bundle analysis failed: ${error.message}`);
+    }
+  }
+
+  async runSecurityEnhancements() {
+    this.log('🔒 Running security enhancements...');
+    
+    try {
+      // Security audit
+      this.log('🔍 Running security audit...');
+      execSync('npm run security:audit', { stdio: 'inherit' });
+      this.improvements.push('Security audit completed');
+    } catch (error) {
+      this.log(`⚠️ Security audit failed: ${error.message}`);
+    }
+
+    try {
+      // Security scan
+      this.log('🛡️ Running security scan...');
+      execSync('node security-scanner.cjs', { stdio: 'inherit' });
+      this.improvements.push('Security scan completed');
+    } catch (error) {
+      this.log(`⚠️ Security scan failed: ${error.message}`);
+    }
+  }
+
+  async runCodeQualityImprovements() {
+    this.log('📝 Running code quality improvements...');
+    
+    try {
+      // Lint fix
+      this.log('🔧 Fixing linting issues...');
+      execSync('npm run lint:fix', { stdio: 'inherit' });
+      this.improvements.push('Linting fixes applied');
+    } catch (error) {
+      this.log(`⚠️ Lint fix failed: ${error.message}`);
+    }
+
+    try {
+      // Type check
+      this.log('🔍 Running type check...');
+      execSync('npm run type-check', { stdio: 'inherit' });
+      this.improvements.push('Type checking completed');
+    } catch (error) {
+      this.log(`⚠️ Type check failed: ${error.message}`);
+    }
+  }
+
+  async runAccessibilityImprovements() {
+    this.log('♿ Running accessibility improvements...');
+    
+    try {
+      // Accessibility check
+      this.log('🔍 Running accessibility check...');
+      execSync('node accessibility-checker.cjs', { stdio: 'inherit' });
+      this.improvements.push('Accessibility check completed');
+    } catch (error) {
+      this.log(`⚠️ Accessibility check failed: ${error.message}`);
+    }
+  }
+
+  async runSEOOptimizations() {
+    this.log('🔍 Running SEO optimizations...');
+    
+    try {
+      // Generate sitemap
+      this.log('🗺️ Generating sitemap...');
+      execSync('npm run sitemap:generate', { stdio: 'inherit' });
+      this.improvements.push('Sitemap generated');
+    } catch (error) {
+      this.log(`⚠️ Sitemap generation failed: ${error.message}`);
+    }
+  }
+
+  async createImprovementReport() {
+    const endTime = new Date();
+    const duration = endTime - this.startTime;
+    
+    const report = {
+      timestamp: endTime.toISOString(),
+      duration: duration,
+      improvements: this.improvements,
+      errors: this.errors,
+      summary: {
+        totalImprovements: this.improvements.length,
+        totalErrors: this.errors.length,
+        successRate: this.improvements.length / (this.improvements.length + this.errors.length) * 100
+      }
+    };
+
+    const reportPath = path.join(this.projectRoot, 'advanced-improvement-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Improvement report saved to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    this.log("Starting Advanced App Improvement Suite...");
+    try {
+      const results = await this.generateReports();
+      this.log("Advanced App Improvement Suite completed successfully!");
+      return results;
+    } catch (error) {
+      this.log(`Advanced App Improvement Suite failed: ${error.message}`);
+      throw error;    }
+  }
+}
+
+if (require.main === module) {
+  const suite = new AdvancedAppImprovementSuite();
+  suite.run().catch(console.error);
+}
+
+module.exports = AdvancedAppImprovementSuite;
+// Run the improvement suite
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1488
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 

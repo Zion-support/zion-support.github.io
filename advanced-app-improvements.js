@@ -293,16 +293,23 @@ getPoolStatus() {
     };
   }
 
-export const connectionPool = new ConnectionPool();
+export const connectionPool = new ConnectionPool();`
   };
-
-  Object.entries(dbFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+  
+  // Create monitoring files
+  Object.entries(monitoringFiles).forEach(([filePath, content]) => {
+    const fullPath = path.join(process.cwd(), filePath);
+    const dir = path.dirname(fullPath);
+    
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
     fs.writeFileSync(fullPath, content);
-    console.log(`[OK] Created ${filename}`);
+    console.log(`✅ Created ${filePath}`);
   });
-});
+}
+
 // Main execution
 async function main() {
   try {
@@ -333,7 +340,7 @@ async function main() {
 }
 
 main();// Run if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (require.main === module) {
   main();
 }
 
