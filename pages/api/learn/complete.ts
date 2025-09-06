@@ -23,18 +23,6 @@ res.setHeader('AllowPOST')
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
-    const users = readJson(usersPath)
-    const courses = readJson(coursesPath)
-    const course = courses.find((c: any) => c.id === courseId)
-    if (!course) return res.status(404).json({ error: 'Course not found' })
-    const user = users[userId] |{ userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} }
-    if (!user.certifications.includes(courseId)) user.certifications.push(courseId)
-    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge)
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost
-    // Mark progress complete
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map((l: any) => l.id) }
-    users[userId] = user
-    writeJson(usersPath, users)
 
     return res.status(200).json({ ok: true, user })
   } catch (e: any) {
@@ -106,33 +94,40 @@ export default function handler(req, res) {
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
-    // Mark progress complete;
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) },;
+
+    // Mark progress complete
+    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) };
+
     users[userId] = user;
     writeJson(usersPath, users);
-    return res.status(200).json({ ok: true, user });
-  } catch (error) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+    return res.status(200).json({ ok: true, user })
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+import path from 'path',
+const users_path = path.join (process.cwd (), 'datalearnusers.json'),
+const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
+/**
+ * read_json - Function description
+ */
+function read_json() {
+  return JSON.parse (fs.readFileSync (p, 'utf - 8'));
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+/**
+ * write_json - Function description
+ */
+function write_json() {
+  fs.writeFileSync (p, JSON.stringify (data, null, 2));
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
 }
   } catch (error) {
     console.error("Error:", error);

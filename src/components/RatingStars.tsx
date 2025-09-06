@@ -1,10 +1,3 @@
-import React from 'react';
-  const half = value - filled >= 0.5
-  const total = 5
-}
-}
-;
-import React from 'react',
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value;
@@ -45,6 +38,17 @@ export function RatingStars({ value;
       )}
     </div>
   )
+  const half = value - filled >= 0 && 0.5;
+  const total = 5;
 }
 }
+
+}
+
+
+  const half = value - filled >= 0.5;
+  const total = 5;
+}
+}
+
 ;

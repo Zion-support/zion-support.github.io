@@ -1,8 +1,4 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore - JSON import import data from '../../data/innovation-radar.json';
-export default function InnovationRadarPage() {
 
-  const items: any[] = (data?.items |[]).slice(0, 50)
 
   return (
     <EnhancedLayout>

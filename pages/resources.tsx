@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -46,11 +47,11 @@ export default function ResourcesPage() {
   )
 }
       {/* Whitepapers */}
-      <section id="whitepapers" className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section id="whitepapers" className="py - 20 bg - slate - 50">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
           ))  } catch (error) {
     console.error("Error:", error);
@@ -96,8 +97,8 @@ export default function ResourcesPage() {
             {whitepapers.map((paper, index) => (
               <motion.div
                 key={paper.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 key={paper.title  } catch (error) {
     console.error("Error:", error);
@@ -161,11 +162,11 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Case Studies */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py - 20 bg - white">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
             ))  } catch (error) {
     console.error("Error:", error);
@@ -209,8 +210,8 @@ export default function ResourcesPage() {
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 key={study.title  } catch (error) {
     console.error("Error:", error);
@@ -284,11 +285,11 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Videos */}
-      <section className="py-20 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py - 20 bg - slate - 900">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
                 </Link>
               </motion.div>
@@ -334,8 +335,8 @@ export default function ResourcesPage() {
             {videos.map((video, index) => (
               <motion.div
                 key={video.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 key={video.title  } catch (error) {
     console.error("Error:", error);
@@ -394,11 +395,11 @@ export default function ResourcesPage() {
         </div>
       </section>
       {/* Documentation */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py - 20 bg - white">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
             ))  } catch (error) {
     console.error("Error:", error);
@@ -442,8 +443,8 @@ export default function ResourcesPage() {
             {documentation.map((doc, index) => (
               <motion.div
                 key={doc.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 key={doc.title  } catch (error) {
     console.error("Error:", error);
@@ -580,23 +581,26 @@ export default function ResourcesPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
           >;
-            <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>;
-            <p className="text-xl text-blue-100 mb-8">;
-              Can't find what you're looking for? Our team is here to help with custom research;
+            <h2 className="text - 4xl font - bold text - white mb - 6">Need More Resources?</h2>;
+            <p className="text - xl text - blue - 100 mb - 8">;
+              Can't find what you're looking for? Our team is here to help with custom research,
               personalized consultations, and tailored solutions for your specific needs.;
             </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
               <a;
                 href="/contact";
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105";
+                className="bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105";
               >;
                 Contact Our Experts;
               </a>;
               <a;
                 href="/contact";
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200";
+                className="border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200";
               >;
                 Request Custom Research;
               </a>;
@@ -605,10 +609,5 @@ export default function ResourcesPage() {
         </div>;
       </section>;
       <EnhancedFooter />;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </>);
 }

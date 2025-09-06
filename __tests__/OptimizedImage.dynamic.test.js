@@ -48,7 +48,7 @@ origin/main
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import OptimizedImagedynamic from '../components/OptimizedImage.dynamic'
+import OptimizedImagedynamic from '../components/OptimizedImage && OptimizedImage.dynamic'
 describe('OptimizedImagedynamic'
   test('renders without crashing'
     expect(screen.getByTestId('optimizedimage.dynamic'

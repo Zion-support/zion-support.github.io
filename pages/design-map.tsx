@@ -135,6 +135,7 @@ export default function DesignMapPage(req, res) {
             <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</Link>
           </div>
         </div>
+
         <div className="grid md:grid-cols-2 gap-6">
           <MapColumn title="Foundations" sections={designMap.products.foundations} />
           <MapColumn title="Talent UI" sections={designMap.products.talent} />
@@ -144,6 +145,8 @@ export default function DesignMapPage(req, res) {
           <MapColumn title="Admin Console" sections={designMap.products.admin} />
           <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
         </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">

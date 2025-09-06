@@ -234,7 +234,8 @@ export default function PricingEnhanced2026Page(req, res) {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
+
+
         'Mobile App AccessAPI Access (1000 calls/month)'
       ]
       icon: <Sparkles className="w-8 h-8" />
@@ -247,7 +248,9 @@ export default function PricingEnhanced2026Page(req, res) {
       popular: false,
       cta: 'Start Free Trial',
       color: 'from-blue-500 to-indigo-600'
-    }
+
+    };
+
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -255,7 +258,8 @@ export default function PricingEnhanced2026Page(req, res) {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features'
+
+
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
       ]
       icon: <Star className="w-8 h-8" />
@@ -268,7 +272,9 @@ export default function PricingEnhanced2026Page(req, res) {
       popular: true,
       cta: 'Start Free Trial',
       color: 'from-purple-500 to-pink-600'
-    }
+
+    };
+
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -276,7 +282,8 @@ export default function PricingEnhanced2026Page(req, res) {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
-        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
+
+
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
       ]
       icon: <Crown className="w-8 h-8" />
@@ -285,16 +292,8 @@ export default function PricingEnhanced2026Page(req, res) {
       cta: 'Contact Sales'
       color: 'from-yellow-500 to-orange-600'
     }
-  ]
-  // Featured services showcase
-  const featuredServices = [
-    {
-      name: 'AI Quantum Financial Trading'
-      price: '$2,999/month'
-      description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy'
-      features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies']
-      link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading'
-      icon: '📈'
+
+
       color: 'from-green-500 to-emerald-600'
     }
     {
@@ -446,8 +445,20 @@ export default function PricingEnhanced2026Page(req, res) {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
+
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
+=======
+            className="max - w-7xl mx - auto text - center";
+          >;
+            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">;
+              Enhanced 2026 Pricing;
+            </h1>;
+            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.;
+              Achieve remarkable ROI with transparent, competitive pricing.;
+            </p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Billing Cycle Toggle */}
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
               Achieve remarkable ROI with transparent, competitive pricing.
@@ -461,18 +472,23 @@ export default function PricingEnhanced2026Page(req, res) {
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${;
-                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600';
-                }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
+                  billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
+                }`}
+              >
+                <span
+                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
+                    billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
+                  }`}
+=======
+            <div className="flex items - center justify - center space - x-4 mb - 8">;
+              <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
+              <button;
+                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'yearly' : 'monthly')}
+                className={`relative inline - flex h - 8 w - 16 items - center rounded - full transition - colors ${
+                  billing_cycle === 'yearly' ? 'bg - cyan - 600' : 'bg - gray - 600';
+                }`}
               >;
                 <span;
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${;
@@ -525,8 +541,8 @@ export default function PricingEnhanced2026Page(req, res) {
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   key={tier.name  } catch (error) {
     console.error("Error:", error);
@@ -578,11 +594,7 @@ export default function PricingEnhanced2026Page(req, res) {
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
-                          {tier.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                          {tier.icon}
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
@@ -605,11 +617,7 @@ export default function PricingEnhanced2026Page(req, res) {
                             <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-300">{feature}</span>
                           </li>
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        ))}
                       </ul>
                                              <Button
                                                    variant="primary"
@@ -644,30 +652,23 @@ export default function PricingEnhanced2026Page(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-                         }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                       >;
-                         {tier.cta  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                       </Button>;
+                            window.open (`mailto:${contact_info.email}?subject = Enterprise Pricing Inquiry`, '_blank');
+                          } else {
+                            window.open (`mailto:${contact_info.email}?subject = Start Free Trial - ${tier.name}`, '_blank');
+                          }
+                          }}
+                        >;
+                        {tier.cta}
+                        </Button>;
                     </div>;
                   </UltraFuturisticCard>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                </motion.div>))}
             </div>;
           </div>;
         </div>;
+
         {/* Enhanced Service Categories */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -766,6 +767,8 @@ export default function PricingEnhanced2026Page(req, res) {
   }
 }
                       </ul>
+
+
                       <Button
                         variant="primary"
                         size="sm"
@@ -788,11 +791,11 @@ export default function PricingEnhanced2026Page(req, res) {
           </div>
         </div>
         {/* Featured Services Showcase */}
-        <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               ))  } catch (error) {
@@ -899,6 +902,8 @@ export default function PricingEnhanced2026Page(req, res) {
   }
 }
                       </ul>
+
+
                       <div className="flex space-x-2">
                         <Button
                           variant="primary"
@@ -942,21 +947,18 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                         >;
                           Contact;
                         </Button>;
                       </div>;
                     </div>;
                   </UltraFuturisticCard>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                </motion.div>))}
             </div>;
           </div>;
         </div>;
+
         {/* Enhanced Footer CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

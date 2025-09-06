@@ -2,12 +2,15 @@ import Link from 'next/link';
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import {useEffect, useState} from 'react';
-import InteractiveSearch from '../../components/ui/InteractiveSearch';
-export default function JobsListPage() {;
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 500);
-    return () => clearTimeout(t);
+import InteractiveSearch from '../../components / ui / InteractiveSearch';
+export default /**
+ * JobsListPage - Function description
+ */
+function JobsListPage() {
+  const [loading, set_loading] = useState (true);
+  useEffect (() => {
+    const t = set_timeout (() => set_loading (false), 500);
+    return () => clear_timeout (t);
   }, []);
 
 import Link from 'next/link',
@@ -24,18 +27,21 @@ export default function JobsListPage() {
   }, []);
   const jobs = [
     {
-      slug: 'senior-ai-engineer'
-      title: 'Senior AI Engineer'
-      subtitle: 'Remote • Contract'
-      description: 'Build and optimize LLM-powered features in production.'
-    }
+      slug: 'senior - ai - engineer',
+      title: 'Senior AI Engineer',
+      subtitle: 'Remote • Contract',
+      description: 'Build and optimize LLM - powered features in production.',
+    },
     {
-      slug: 'mlops-specialist'
-      title: 'MLOps Specialist'
-      subtitle: 'Remote • Part-time'
-      description: 'Design pipelines for training/inference at scale.'
-    }
+      slug: 'mlops - specialist',
+      title: 'MLOps Specialist',
+      subtitle: 'Remote • Part - time',
+      description: 'Design pipelines for training / inference at scale.',
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
+;
+  return (
 
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import { useEffect, useState } from 'react',
@@ -57,13 +63,14 @@ export default function JobsListPage() {
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
                 <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
-              </Link>
+              </a>
             </Link>
           ))}
         </div>
       )}
     </div>
 );
+
 
 }
           ))  } catch (error) {

@@ -85,14 +85,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 const { test, expect } = require('@playwright/test')'
-test.describe('"Performance"
+test && test.describe('"Performance"
   test('"page"
     "await"
     "await"
             "output"
   test('"bundle"
     "await"
-    page.on('console', "msg"
+    page && page.on('console', "msg"
               "output"
           resolve({ "error"
 ursor/automate-test-improve-and-merge-code-2480

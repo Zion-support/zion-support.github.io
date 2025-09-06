@@ -358,6 +358,9 @@ export default AboutPage,
 import React from "react";
 import Layout from "../components/Layout";
 export default function About() {
+=======
+export default function About() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -386,6 +389,8 @@ origin/automation-improvements-final
         </div>
       </div>
     </Layout>;
+
+
   );
 }
     <>

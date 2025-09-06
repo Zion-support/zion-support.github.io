@@ -9,9 +9,9 @@ export interface TalentProfileData {;
   title: string;
   bio: string;
 
-  skills: string[]
+  skills: string[],
+  location?: string;
 
-  location?: string
 }
 export interface CategorizedSkills {
 
@@ -20,7 +20,6 @@ export interface CategorizedSkills {;
   devops: string[];
   platforms: string[];
 
-  softSkills: string[]
 
   other: string[]
 }
@@ -53,7 +52,7 @@ export function useTalentProfileEnhancer() {;
     
     try {
       // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
 
@@ -98,7 +97,9 @@ export function useTalentProfileEnhancer() {;
       }
       return data as EnhancedProfile
     } catch (err: any) {
-      setError(err.message |'Failed to enhance profile')
+
+      setError(err && err.message || 'Failed to enhance profile'),
+
       return null
     } finally {
       setIsGenerating(false)

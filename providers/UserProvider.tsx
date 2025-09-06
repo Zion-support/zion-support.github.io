@@ -49,9 +49,20 @@ export function UserProvider({ children }: { children: React.ReactNode }) {  con
   useEffect(() => {
     try {
 ;
-export type UserContextValue = {;
+export type UserRole = 'client' | 'talent';
+;
+export type User = {
+  id: string;
+  name: string;
+  role: UserRole;
+  avatar_url?: string;
+  onboarding_completed: boolean;
+}
+;
+export type UserContextValue = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: User | null;
-  setUser: (user: User | null) => void;
+  set_user: (user: User | null) => void;
   logout: () => void;
   completeOnboarding: () => void;
 }
@@ -71,26 +82,50 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
       if (raw) {
         setUser(JSON.parse(raw));
       } else {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         setUser(DEFAULT_USER);
       }
-    } catch {
+    } catch {;
       setUser(DEFAULT_USER);
     }
   }, []);
 
   useEffect(() => {
     try {
-      if (user) localStorage.setItem('zion.user', JSON.stringify(user));
-      else localStorage.removeItem('zion.user');
-    } catch {}  }, [user]);  }, [user]);
+
+      if (user) {
+        localStorage.setItem('zion.user', JSON.stringify(user));
+      } else {
+        localStorage.removeItem('zion.user');
+      }
+    } catch {
+      // Ignore localStorage errors
+    }
+  }, [user]);
+
+
   const value = useMemo<UserContextValue>(
     () => ({
       user
       setUser
       logout: () => setUser(null)
       completeOnboarding: () =>
-        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    })
-    [user]
+
+
+  useEffect(() => {;
+    try {;
+      if (user) localStorage && localStorage.setItem('zion && zion.user', JSON && JSON.stringify(user));
+      else localStorage && localStorage.removeItem('zion && zion.user');
+    } catch {}  }, [user]);  }, [user]);
+
+  const value = useMemo<UserContextValue>(;
+    () => ({;
+      user,;
+      setUser,;
+      logout: () => setUser(null),;
+      completeOnboarding: () =>;
+        setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),    }),    }),;
+    [user];
   );
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 export function useUser() {
@@ -110,8 +145,10 @@ export function useUser() {
     logout: () => setUser(null);
     completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev)}), [user]);
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function useUser() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;

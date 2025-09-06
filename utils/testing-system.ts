@@ -5,7 +5,8 @@ export class TestingSystem {
   ) {
     switch (action) {
       case 'click':;
-        element.click();
+        element.click ();
+
         break;
       case 'type': // Handle typing
         break;

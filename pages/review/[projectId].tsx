@@ -3,7 +3,10 @@ import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
 import { findProjectById } from "../../utils/dataStore";
-type Props = {
+
+
+type Props = {;
+
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
@@ -27,7 +30,8 @@ type Props = {
   fromId: string,
   valid: boolean,
   reason?: string
-},
+};
+
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
   if (!valid) {
     return (
@@ -114,62 +118,63 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if (!projectId || !role || !fromId) {
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const { projectId } = ctx.query as { projectId: string };
-  const { role, fromId } = ctx.query as {
-    role?: "client" | "talent";
-    fromId?: string;
-  };
 
-  if (!projectId || !role || !fromId) {
-    return {
-      props: {
-        projectId: projectId || "",
-        fromRole: role || "client",
-        fromId: fromId || "",
-        valid: false,
-        reason: "Missing parameters",
-      },
-    };
   }
-
-  const project = await findProjectById(projectId);
-  if (!project) {
-    return {
-      props: {
-        projectId,
-        fromRole: role,
-        fromId,
-        valid: false,
-        reason: "Project not found",
-      },
+  if (project && project.status !== "Completed") {;
+    return {;
+      props: {;
+        projectId,;
+        fromRole: role,;
+        fromId,;
+        valid: false,;
+        reason: "Project is not completed yet",;
+      },;
     } as any;
   }
-  if (project.status !== "Completed") {
-    return {
-      props: {
-        projectId,
-        fromRole: role,
-        fromId,
+
+  const expectedFromId =;
+    role === "client" ? project && project.clientId : project && project.talentSlug;
+  const valid = expectedFromId === fromId;
+
+  return {;
+    props: {;
+      projectId,;
+      fromRole: role,;
+      fromId,;
+      valid,;
+      reason: valid ? null : "Invalid reviewer for this project",;
+    },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  } as any;
+
+}
+
+export default ReviewSubmitPage;
+
+
+=======
+        project_id,
+        from_role: role,
+        from_id,
         valid: false,
         reason: "Project is not completed yet",
       },
     } as any;
   }
-
-  const expectedFromId =
-    role === "client" ? project.clientId : project.talentSlug;
-  const valid = expectedFromId === fromId;
-
+  const expectedFromId =;
+    role === "client" ? project.client_id : project.talent_slug;
+  const valid = expectedFromId === from_id;
+;
   return {
     props: {
-      projectId,
-      fromRole: role,
-      fromId,
+      project_id,
+      from_role: role,
+      from_id,
       valid,
       reason: valid ? null : "Invalid reviewer for this project",
     },
   } as any;
+
 };
 
   )

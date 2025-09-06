@@ -2,6 +2,7 @@ import EmptyState from '../../components/ui/EmptyState'
 export default function RequestsPage() {
   return (
 
+
 export default function RequestsPage() {
   return (;
     <div>;
@@ -17,3 +18,4 @@ export default function RequestsPage() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

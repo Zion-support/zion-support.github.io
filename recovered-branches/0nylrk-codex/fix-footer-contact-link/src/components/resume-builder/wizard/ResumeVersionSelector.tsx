@@ -45,11 +45,12 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleCreateNewVersion = async () => {
-    if (newResumeTitle.trim()) {
+
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle && newResumeTitle.trim()) {;
       setIsLoading(true);
-      const resumeId = await createResume({ title: newResumeTitle.trim() });
-      if (resumeId) {
+      const resumeId = await createResume({ title: newResumeTitle && newResumeTitle.trim() }),;
+      if (resumeId) {;
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);

@@ -33,7 +33,7 @@ export function useJobSuggestions(talentId?: string) {
         const { data, error } = await supabase
           .from("job_talent_matches")
           .select(`
-            *,
+            *;
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
@@ -46,7 +46,7 @@ export function useJobSuggestions(talentId?: string) {
         
         setJobMatches(data || [])
       } catch (error) {
-        console.error("Error fetching job matches:", error),
+        console && console.error("Error fetching job matches:", error);
         toast({
           title: "Error";
           description: "Failed to load job suggestions"
@@ -85,9 +85,11 @@ export function useJobSuggestions(talentId?: string) {
       if (error) throw error,
       
       // Update local state
-      setJobMatches(matches =>
-        matches.map(match =>
-          match.id === matchId
+
+      setJobMatches(matches => 
+        matches && matches.map(match => 
+          match && match.id === matchId 
+
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
@@ -107,7 +109,7 @@ export function useJobSuggestions(talentId?: string) {
         })
       }
     } catch (error) {
-      console.error("Error updating job match status:", error),
+      console && console.error("Error updating job match status:", error);
       toast({
         title: "Error";
         description: "Failed to update job status"
@@ -164,48 +166,50 @@ export function useJobSuggestions(talentId?: string) {;
       } finally {;
         setIsLoading(false);
       }
-    },;
-    fetchSuggestedJobs();
-  }, [talentId]),;
-  const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {;
-    try {;
-      const updates = {;
-        status,;
-        ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {});
-      },;
+;
       const { error } = await supabase;
-        .from("job_talent_matches");
-        .update(updates);
-        .eq("id", matchId),;
-      if (error) throw error,;
+        .from ("job_talent_matches");
+        .update (updates);
+        .eq ("id", match_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
       // Update local state;
-      setJobMatches(matches =>;
-        matches.map(match =>;
-          match.id === matchId;
-            ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
-            : match;
-        );
-      ),;
+      setJobMatches (matches =>;
+        matches.map (match =>;
+          match.id === match_id;
+            ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date ().toISOString () } : {}) }
+            : match));
+;
       // Show appropriate message;
-      if (status === 'applied') {;
-        toast({;
-          title: "Application Submitted",;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Application Submitted",
           description: "You've successfully applied to this job";
         });
-      } else if (status === 'declined') {;
-        toast({;
-          title: "Job Declined",;
+      } else // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Job Declined",
           description: "This job will be removed from your suggestions";
         });
       }
-    } catch (error) {;
-      console.error("Error updating job match status:", error),;
-      toast({;
-        title: "Error",;
-        description: "Failed to update job status",;
+    } catch (error) {
+      console.error ("Error updating job match status:", error);
+      toast ({
+        title: "Error";
+        description: "Failed to update job status",
         variant: "destructive"});
     }
-  },;
+  }
+;
   // Filter matches by status;
   const newMatches = jobMatches.filter(match => match.status === 'new'),;
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed'),;
@@ -222,4 +226,5 @@ export function useJobSuggestions(talentId?: string) {;
       declinedMatches;
     }
   }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

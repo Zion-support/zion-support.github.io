@@ -2,8 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-function writeUsers(data: any) {
-  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers()
@@ -47,9 +46,6 @@ function readUsers() {
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 }
 
-function writeUsers(data: any) {
-  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2))
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -232,5 +228,12 @@ export default function handler(req, res) {
   }
 }
 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+        course_progress.completed_lessons.push (lesson_id);
+      }
+      // Check condition
+if ( {) {
+  $2
 }

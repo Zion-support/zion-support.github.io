@@ -14,13 +14,13 @@ import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const {
-    isAuthenticated;
-
-    userDetails
-    savedTalents
-    handleToggleSave
-  } = useAuthStatus();
-  // Fetch talent data
+    is_authenticated;
+    user_details,
+    saved_talents,
+    handleToggleSave;
+  } = useAuthStatus ();
+;
+  // Fetch talent data;
   const {
     talents
     isLoading
@@ -139,11 +139,11 @@ export function useTalentDirectory() {
     savedTalents,
     
     // Actions
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
+    toggleSkill;
+    toggleAvailability;
+    toggleRegion;
+    clearFilters;
+    toggleSection;
     handleToggleSave
   }
 }
@@ -232,4 +232,5 @@ export function useTalentDirectory() {;
     handleToggleSave;
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

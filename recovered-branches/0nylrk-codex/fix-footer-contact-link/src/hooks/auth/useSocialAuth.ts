@@ -9,6 +9,10 @@ import {toast} from "@/hooks/use-toast";
 export const useSocialAuth = () => {
   const loginWithGoogle = async () => {
     try {
+
+          description: error && error.message,
+
+=======
       const { error } = await supabase.auth.signInWithOAuth({;
         provider: "google"});
 import { supabase } from "@/integrations/supabase/client",
@@ -31,7 +35,7 @@ export const useSocialAuth = () => {
           variant: "destructive"})
       }
     } catch (error: any) {
-      console.error("Google login error:", error),
+      console && console.error("Google login error:", error);
       toast({
         title: "Google login failed";
         description: error.message |"An unexpected error occurred"
@@ -40,7 +44,7 @@ export const useSocialAuth = () => {
   }
   const loginWithFacebook = async () => {
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
+      const { error } = await supabase && supabase.auth.signInWithOAuth({
         provider: "facebook"});
       if (error) {
         toast({
@@ -64,7 +68,7 @@ export const useSocialAuth = () => {
           variant: "destructive"})
       }
     } catch (error: any) {
-      console.error("Facebook login error:", error),
+      console && console.error("Facebook login error:", error);
       toast({
         title: "Facebook login failed";
         description: error.message |"An unexpected error occurred"
@@ -73,7 +77,7 @@ export const useSocialAuth = () => {
   }
   const loginWithTwitter = async () => {
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
+      const { error } = await supabase && supabase.auth.signInWithOAuth({
         provider: "twitter"});
       if (error) {
         toast({
@@ -97,7 +101,7 @@ export const useSocialAuth = () => {
           variant: "destructive"})
       }
     } catch (error: any) {
-      console.error("Twitter login error:", error),
+      console && console.error("Twitter login error:", error);
       toast({
         title: "Twitter login failed";
         description: error.message |"An unexpected error occurred"

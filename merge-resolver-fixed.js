@@ -2,21 +2,19 @@ const fs = require('fs');
 const path = require('path');
 console.log('🔧 Starting Merge Conflict Resolution');
 // Function to fix merge conflicts in a file;
-function fixMergeConflicts(filePath) {try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+/**
+ * fixMergeConflicts - Function description
+ */
+function fixMergeConflicts() {
+  try {
+    let content = fs.readFileSync (file_path, 'utf8'),
+    const original_content = content,
     // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?
-    content = content.replace(/
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`);
-      return true;
-    }
-    return false;
-  } catch (error) {console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-    return false;
-  }
+    content = content.replace (/[\s\S]*?;
+    content = content.replace (/;
+    // Check condition
+if ( {) {
+  $2
 }
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {let files = [];
@@ -40,16 +38,18 @@ function fixMergeConflicts(filePath) {;
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
+
       return true;
     }
     return false;
-  } catch (error) {;
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`),;
+  } catch (error) {
+    console.log (`❌ Error fixing ${file_path}: ${error.message}`),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return false;
   }
 }
-;
 // Function to get all files recursively;
+
 function getAllFiles(dir, extensions) {;
   let files = [],;
   try {;
@@ -68,7 +68,9 @@ function getAllFiles(dir, extensions) {;
       } else if (extensions.some(ext => item.endsWith(ext))) {files.push(fullPath);
       }
     }
-  } catch (error) {// Skip directories that can't be read;
+  } catch (error) {
+    // Skip directories that can't be read;
+
   }
   return files;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import MainLayoutdynamic from '../components/MainLayout.dynamic'
+import MainLayoutdynamic from '../components/MainLayout && MainLayout.dynamic'
 describe('MainLayoutdynamic'
   test('renders without crashing'
     expect(screen.getByTestId('mainlayout.dynamic'
@@ -43,8 +43,9 @@ import MainLayout from '../components/MainLayout.dynamic';
 describe('MainLayout', () => {
   test('renders without crashing', () => {
     render(<MainLayout />);
-    expect(screen.getByTestId('main-layout')).toBeInTheDocument();
+    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument();
   });
+
   test('displays correct content', () => {
     // Test content display
   });

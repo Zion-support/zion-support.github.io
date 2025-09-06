@@ -229,134 +229,95 @@ interface PartnerProfile {;
   created_at: string,;
   niche: string,;
   audience_size: string,;
-  social_media?: Record<string string>,;
-  website?: string,;
-  bio?: string,;
-  payout_method?: string,;
-  fraud_flags?: number,;
+
+  social_media?: Record<string, string>;
+
+=======
+import { useState, useEffect } from './react';
+import { use_auth } from '@/hooks / use_auth';
+import { use_navigate } from './react-router-dom';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Input } from '@/components / ui / input';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
+import { Badge } from '@/components / ui / badge';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
+import { toast } from '@/hooks / use - toast';
+import { Check, Flag, Search, Settings, X } from './lucide-react';
+import { supabase } from '@/integrations / supabase / client';
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface PartnerProfile {
+  id: string,
+  user_id: string,
+  name: string,
+  status: 'pending' | 'approved' | 'rejected',
+  created_at: string,
+  niche: string,
+  audience_size: string,
+  social_media?: Record < string, string>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  website?: string;
+  bio?: string;
+  payout_method?: string;
+  fraud_flags?: number;
   commission_rate?: number;
 }
-;
+
+
 export default function PartnerManager() {;
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),;
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [activeTab, setActiveTab] = useState("pending"),;
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),;
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),;
-  const [commissionRate, setCommissionRate] = useState(25),;
-  const { user, isAuthenticated } = useAuth(),;
-  const navigate = useNavigate(),;
+  const [partners, setPartners] = useState<PartnerProfile[]>([]);
+  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeTab, setActiveTab] = useState("pending");
+  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [commissionRate, setCommissionRate] = useState(25);
+  const { user, isAuthenticated } = useAuth();
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   useEffect(() => {;
     if (!isAuthenticated) {;
-      navigate("/login"),;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      navigate("/login");
       return;
     }
-;
-    fetchPartners();
-  }, [isAuthenticated, navigate]),;
-  const fetchPartners = async () => {;
-    try {;
-      setIsLoading(true),;
-      // In a real application, check admin permissions here;
-      const { data, error } = await supabase;
-        .from('partner_profiles');
-        .select('*');
-        .order('created_at', { ascending: false }),;
-      if (error) throw error,;
-      // If no data is returned, use mock data;
-      if (!data || data.length === 0) {;
-        const mockData: PartnerProfile[] = [;
-          {;
-            id: '1',;
-            user_id: 'user1',;
-            name: 'AI Bytes',;
-            status: 'pending',;
-            created_at: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'AI Tutorials',;
-            audience_size: '10k-50k',;
-            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },;
-            website: 'aibytes.com',;
-            bio: 'We create AI tutorials and insights for developers.',;
-            payout_method: 'paypal',;
-            fraud_flags: 0,;
-            commission_rate: 25;
-          },;
-          {;
-            id: '2',;
-            user_id: 'user2',;
-            name: 'ML Academy',;
-            status: 'approved',;
-            created_at: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Machine Learning Education',;
-            audience_size: 'over100k',;
-            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },;
-            website: 'mlacademy.edu',;
-            bio: 'Premiere online academy for machine learning enthusiasts.',;
-            payout_method: 'bank',;
-            fraud_flags: 0,;
-            commission_rate: 30;
-          },;
-          {;
-            id: '3',;
-            user_id: 'user3',;
-            name: 'Tech Insights',;
-            status: 'rejected',;
-            created_at: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Technology News',;
-            audience_size: '1k-10k',;
-            social_media: { twitter: '@techinsights' },;
-            website: 'techinsights.io',;
-            bio: 'We share insights about the latest in tech.',;
-            payout_method: 'crypto',;
-            fraud_flags: 2,;
-            commission_rate: 20;
-          },;
-          {;
-            id: '4',;
-            user_id: 'user4',;
-            name: 'CodeMaster',;
-            status: 'approved',;
-            created_at: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'Coding Tutorials',;
-            audience_size: '50k-100k',;
-            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },;
-            website: 'codemaster.dev',;
-            bio: 'Learn to code with our expert tutorials.',;
-            payout_method: 'paypal',;
-            fraud_flags: 0,;
-            commission_rate: 25;
-          },;
-          {;
-            id: '5',;
-            user_id: 'user5',;
-            name: 'AI Daily',;
-            status: 'pending',;
-            created_at: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),;
-            niche: 'AI News',;
-            audience_size: '10k-50k',;
-            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },;
-            website: 'aidaily.news',;
-            bio: 'Daily updates on the world of artificial intelligence.',;
-            payout_method: 'platform_credit',;
-            fraud_flags: 1,;
-            commission_rate: 20;
-          }
-        ],;
-        setPartners(mockData),;
+
+
+        setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
       } else {;
-        setPartners(data as PartnerProfile[]),;
+        setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
       }
-    } catch (error) {
-      console.error("Error fetching partners:", error),
-      toast({
-        title: "Error"
-        description: "Failed to load partner data"
-        variant: "destructive"})
+
+      console.error ("Error fetching partners:", error);
+      toast ({
+        title: "Error",
+        description: "Failed to load partner data",
+        variant: "destructive"});
+
+    } finally {
+      setIsLoading (false);
+    }
+  }
+
     } finally {
       setIsLoading(false)
     }
@@ -382,7 +343,7 @@ export default function PartnerManager() {;
     setFilteredPartners(filtered)
   }
     } catch (error) {;
-      console.error("Error fetching partners:", error),;
+      console && console.error("Error fetching partners:", error);
       toast({;
         title: "Error",;
         description: "Failed to load partner data",;
@@ -390,22 +351,24 @@ export default function PartnerManager() {;
     } finally {;
       setIsLoading(false);
     }
-  },;
+  };
+
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
     let filtered = partners,;
+
     // Filter by status;
     if (status !== "all") {;
-      filtered = filtered.filter(p => p.status === status);
+      filtered = filtered && filtered.filter(p => p && p.status === status);
     }
-;
+
     // Filter by search query;
     if (query) {;
-      const lowerQuery = query.toLowerCase(),;
-      filtered = filtered.filter(p =>;
-        p.name.toLowerCase().includes(lowerQuery) ||;
-        p.niche.toLowerCase().includes(lowerQuery) ||;
-        p.bio?.toLowerCase().includes(lowerQuery) ||;
-        p.website?.toLowerCase().includes(lowerQuery);
+      const lowerQuery = query && query.toLowerCase();
+      filtered = filtered && filtered.filter(p => ;
+        p && p.name.toLowerCase().includes(lowerQuery) ||;
+        p && p.niche.toLowerCase().includes(lowerQuery) ||;
+        p && p.bio?.toLowerCase().includes(lowerQuery) ||;
+        p && p.website?.toLowerCase().includes(lowerQuery);
       );
     }
     
@@ -465,7 +428,7 @@ export default function PartnerManager() {;
         setIsDetailsOpen(false)
       }
     } catch (error) {
-      console.error("Error updating partner status:", error),
+      console.error("Error updating partner status:", error);
       toast({
         title: "Error"
         description: "Failed to update partner status"
@@ -484,10 +447,12 @@ export default function PartnerManager() {;
       setPartners(partners.map(p =>
         p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
       ));
-      filterPartners(
-        partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p)
+
+      filterPartners(;
+        partners && partners.map(p => p && p.id === selectedPartner && selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),;
+
         activeTab;
-        searchQuery
+        searchQuery;
       );
       )),
       
@@ -503,7 +468,7 @@ export default function PartnerManager() {;
         variant: "default"})
       setIsSettingsOpen(false)
     } catch (error) {
-      console.error("Error updating partner settings:", error),
+      console.error("Error updating partner settings:", error);
       toast({
         title: "Error"
         description: "Failed to update partner settings"
@@ -580,28 +545,33 @@ export default function PartnerManager() {;
         activeTab,;
         searchQuery;
       ),;
+
       toast({;
         title: "Settings Updated",;
         description: "Partner settings have been updated successfully.",;
         variant: "default"}),;
+
       setIsSettingsOpen(false);
     } catch (error) {;
-      console.error("Error updating partner settings:", error),;
+      console && console.error("Error updating partner settings:", error);
       toast({;
         title: "Error",;
         description: "Failed to update partner settings",;
         variant: "destructive"});
     }
-  },;
+  };
+
   const getAudienceSizeLabel = (size: string) => {;
     switch (size) {;
-      case 'under1k': return 'Under 1,000',;
-      case '1k-10k': return '1,000 - 10,000',;
-      case '10k-50k': return '10,000 - 50,000',;
-      case '50k-100k': return '50,000 - 100,000',;
-      case 'over100k': return 'Over 100,000',;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      case 'under1k': return 'Under 1,000';
+      case '1k-10k': return '1,000 - 10,000';
+      case '10k-50k': return '10,000 - 50,000';
+      case '50k-100k': return '50,000 - 100,000';
+      case 'over100k': return 'Over 100,000';
       default: return size;
     }
+
   },
 
   const getStatusBadge = (status: string) => {
@@ -620,7 +590,20 @@ export default function PartnerManager() {;
 
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
+=======
+      case 'rejected':;
+        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+
+  const getFraudFlagBadge = (flags: number = 0) => {;
+    if (flags === 0) return null,;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
         {flags}
@@ -778,6 +761,12 @@ export default function PartnerManager() {;
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
+=======
+            <TabsContent value="pending" className="space - y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -791,6 +780,14 @@ export default function PartnerManager() {;
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
+=======
+              />;
+            </TabsContent>;
+            <TabsContent value="approved" className="space - y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -802,8 +799,19 @@ export default function PartnerManager() {;
               <PartnerTable
                 partners={filteredPartners}
               <PartnerTable 
+
                 partners={filteredPartners} 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 isLoading={isLoading}
+
+              />;
+            </TabsContent>;
+            <TabsContent value="rejected" className="space - y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+
+=======
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus} 
                 onOpenSettings={handleOpenSettings}
@@ -815,17 +823,29 @@ export default function PartnerManager() {;
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-              />
-            </TabsContent>
-            <TabsContent value="all" className="space-y-4">
+
+              />;
+            </TabsContent>;
+
+            <TabsContent value="all" className="space-y-4">;
               <PartnerTable
-                partners={filteredPartners}
+                partners={filteredPartners} 
+
                 isLoading={isLoading}
+=======
+              />;
+            </TabsContent>;
+            <TabsContent value="all" className="space - y-4">;
+              <PartnerTable;
+                partners={filtered_partners}
+                is_loading={is_loading}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -935,14 +955,14 @@ export default function PartnerManager() {;
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
                   >;
-                    <X className="h-4 w-4 mr-1" />;
+                    <X className="h - 4 w - 4 mr - 1" />;
                     Reject;
                   </Button>;
                   <Button;
-                    className="bg-green-600 hover:bg-green-700";
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
+                    className="bg - green - 600 hover:bg - green - 700";
+                    on_click={() => handleUpdateStatus (selected_partner.id, 'approved')}
                   >;
-                    <Check className="h-4 w-4 mr-1" />;
+                    <Check className="h - 4 w - 4 mr - 1" />;
                     Approve;
                   </Button>;
                 </div>;
@@ -952,50 +972,38 @@ export default function PartnerManager() {;
         </DialogContent>
       </Dialog>
       {/* Partner Settings Dialog */}
-      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
-        <DialogContent className="bg-zion-blue border-zion-blue-light">
-          <DialogHeader>
-            <DialogTitle>Partner Settings</DialogTitle>
-            <DialogDescription>
-              Configure commission rates and other settings
-            </DialogDescription>
-          </DialogHeader>
-          {selectedPartner && (
-            <div className="space-y-4">
-              <div>
-                <label className="text-sm font-medium text-white">Partner Name</label>
-                <p className="text-zion-slate-light">{selectedPartner.name}</p>
-              </div>
-              <div>
-                <label className="text-sm font-medium text-white" htmlFor="commission-rate">
-                  Commission Rate (%)
-                </label>
-                <Input
-                  id="commission-rate"
-                  type="number"
-                  min="1"
-                  max="50"
-                  value={commissionRate}
-                  onChange={(e) => setCommissionRate(parseInt(e.target.value))}
-                />
-                <p className="text-xs text-zion-slate-light mt-1">
-                  Percentage of reward granted to this partner for successful referrals
-                </p>
-              </div>
-              <DialogFooter>
-                <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
-                  Cancel
-                </Button>
-                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
-                  Save Changes
-                </Button>
-              </DialogFooter>
-            </div>
+      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
+        <DialogContent className="bg - zion - blue border - zion - blue - light">;
+          <DialogHeader>;
+            <DialogTitle > Partner Settings</DialogTitle>;
+
+            <DialogDescription>;
+              Configure commission rates and other settings;
+            </DialogDescription>;
+          </DialogHeader>;
+
+                  onChange={(e) => setCommissionRate(parseInt(e && e.target.value))}
+                />;
+                <p className="text-xs text-zion-slate-light mt-1">;
+                  Percentage of reward granted to this partner for successful referrals;
+                </p>;
+              </div>;
+
+              <DialogFooter>;
+                <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>;
+                  Cancel;
+                </Button>;
+                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">;
+                  Save Changes;
+                </Button>;
+              </DialogFooter>;
+            </div>;
+
           )}
-        </DialogContent>
-      </Dialog>
-    </div>
-  )
+        </DialogContent>;
+      </Dialog>;
+    </div>;
+  );
 }
 interface PartnerTableProps {
   partners: PartnerProfile[]
@@ -1038,74 +1046,185 @@ function PartnerTable({;
   getFraudFlagBadge;
 }: PartnerTableProps) {;
   if (isLoading) {;
-    return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
   }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (partners.length === 0) {
+=======
+
+  if (partners && partners.length === 0) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-      <div className="text-center py-8">
-        <p className="text-zion-slate-light">No partners found.</p>
-      </div>
-    )
+      <div className="text-center py-8">;
+        <p className="text-zion-slate-light">No partners found.</p>;
+      </div>;
+    );
   }
+
+          {selected_partner && (
+            <div className="space - y-4">;
+              <div>;
+                <label className="text - sm font - medium text - white">Partner Name</label>;
+                <p className="text - zion - slate - light">{selected_partner.name}</p>;
+              </div>;
+              <div>;
+                <label className="text - sm font - medium text - white" html_for="commission - rate">;
+                  Commission Rate (%);
+                </label>;
+                <Input;
+                  id="commission - rate";
+                  type="number";
+                  min="1";
+                  max="50";
+                  value={commission_rate}
+                  on_change={(e) => setCommissionRate (parse_int (e.target.value))}
+                />;
+                <p className="text - xs text - zion - slate - light mt - 1">;
+                  Percentage of reward granted to this partner for successful referrals;
+                </p>;
+              </div>;
+              <DialogFooter>;
+                <Button variant="outline" on_click={() => setIsSettingsOpen (false)}>;
+                  Cancel;
+                </Button>;
+                <Button on_click={handleSaveSettings} className="bg - zion - purple hover:bg - zion - purple - dark">;
+                  Save Changes;
+                </Button>;
+              </DialogFooter>;
+            </div>)}
+        </DialogContent>;
+      </Dialog>;
+    </div>);
+}
+interface PartnerTableProps {
+  partners: PartnerProfile[],
+  is_loading: boolean,
+  onViewDetails: (partner: PartnerProfile) => void,
+  onUpdateStatus: (partner_id: string, status: 'approved' | 'rejected') => void,
+  onOpenSettings: (partner: PartnerProfile) => void,
+  getStatusBadge: (status: string) => JSX.Element,
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null;
+}
+/**
+ * PartnerTable - Function description
+ */
+function PartnerTable() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="text - center py - 8">;
+        <p className="text - zion - slate - light">Loading partner data...</p>;
+      </div>);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="text - center py - 8">;
+        <p className="text - zion - slate - light">No partners found.</p>;
+      </div>);
+  }
+
   return (
-    <Table>
-      <TableHeader>
-        <TableRow className="hover:bg-transparent">
-          <TableHead>Name</TableHead>
-          <TableHead>Niche</TableHead>
-          <TableHead>Audience</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Date</TableHead>
-          <TableHead className="text-right">Actions</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {partners.map((partner) => (
-          <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">
-            <TableCell className="font-medium text-white">
-              <div className="flex items-center gap-2">
+    <Table>;
+      <TableHeader>;
+        <TableRow className="hover:bg - transparent">;
+          <TableHead > Name</TableHead>;
+          <TableHead > Niche</TableHead>;
+          <TableHead > Audience</TableHead>;
+          <TableHead > Status</TableHead>;
+          <TableHead > Date</TableHead>;
+          <TableHead className="text - right">Actions</TableHead>;
+        </TableRow>;
+      </TableHeader>;
+      <TableBody>;
+        {partners.map ((partner) => (
+          <TableRow key={partner.id} className="border - zion - blue - light hover:bg - zion - blue - light / 10">;
+            <TableCell className="font - medium text - white">;
+              <div className="flex items - center gap - 2">;
                 {partner.name}
-                {getFraudFlagBadge(partner.fraud_flags)}
-              </div>
-            </TableCell>
-            <TableCell>{partner.niche}</TableCell>
-            <TableCell>
-              {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
-            </TableCell>
-            <TableCell>{getStatusBadge(partner.status)}</TableCell>
-            <TableCell>
-              {new Date(partner.created_at).toLocaleDateString()}
-            </TableCell>
-            <TableCell className="text-right">
-              <div className="flex justify-end gap-2">
+                {getFraudFlagBadge (partner.fraud_flags)}
+              </div>;
+            </TableCell>;
+            <TableCell>{partner.niche}</TableCell>;
+            <TableCell>;
+              {partner.audience_size.replace ('k, 000').replace ('- - ').replace ('over_over ')}
+            </TableCell>;
+            <TableCell>{getStatusBadge (partner.status)}</TableCell>;
+            <TableCell>;
+              {new Date (partner.created_at).toLocaleDateString ()}
+            </TableCell>;
+            <TableCell className="text - right">;
+              <div className="flex justify - end gap - 2">;
                 {partner.status === 'pending' && (
-                  <>
+
+
+  return (
+    <Table>;
+      <TableHeader>;
+        <TableRow className="hover:bg-transparent">;
+          <TableHead>Name</TableHead>;
+          <TableHead>Niche</TableHead>;
+          <TableHead>Audience</TableHead>;
+          <TableHead>Status</TableHead>;
+          <TableHead>Date</TableHead>;
+          <TableHead className="text-right">Actions</TableHead>;
+        </TableRow>;
+      </TableHeader>;
+      <TableBody>;
+        {partners && partners.map((partner) => (;
+          <TableRow key={partner && partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">;
+            <TableCell className="font-medium text-white">;
+              <div className="flex items-center gap-2">;
+                {partner && partner.name}
+                {getFraudFlagBadge(partner && partner.fraud_flags)}
+              </div>;
+            </TableCell>;
+            <TableCell>{partner && partner.niche}</TableCell>;
+            <TableCell>;
+              {partner && partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
+            </TableCell>;
+            <TableCell>{getStatusBadge(partner && partner.status)}</TableCell>;
+            <TableCell>;
+              {new Date(partner && partner.created_at).toLocaleDateString()}
+            </TableCell>;
+            <TableCell className="text-right">;
+              <div className="flex justify-end gap-2">;
+                {partner && partner.status === 'pending' && (;
+                  <>;
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'rejected')}
-                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
-                    >
-                      <X className="h-4 w-4" />
-                      <span className="sr-only">Reject</span>
-                    </Button>
+                      onClick={() => onUpdateStatus(partner && partner.id, 'rejected')}
+                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20";
+                    >;
+                      <X className="h-4 w-4" />;
+                      <span className="sr-only">Reject</span>;
+                    </Button>;
+
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={() => onUpdateStatus(partner.id, 'approved')}
-                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
-                    >
-                      <Check className="h-4 w-4" />
-                      <span className="sr-only">Approve</span>
-                    </Button>
-                  </>
+                      onClick={() => onUpdateStatus(partner && partner.id, 'approved')}
+                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20";
+                    >;
+                      <Check className="h-4 w-4" />;
+                      <span className="sr-only">Approve</span>;
+                    </Button>;
+                  </>;
                 )}
+
+
                 <Button
-                  variant="ghost"
+                  variant="ghost" 
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
                   className="text-zion-slate-light hover:text-white"
@@ -1117,6 +1236,7 @@ function PartnerTable({;
                   variant="outline"
                 
                 <Button 
+
                   variant="outline" 
                   size="sm"
                   onClick={() => onViewDetails(partner)}
@@ -1132,7 +1252,8 @@ function PartnerTable({;
   )
 }
       </TableBody>;
-    </Table>;
-  );
+    </Table>);
 }
+
+=======
 ;

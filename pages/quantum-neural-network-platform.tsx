@@ -1,51 +1,36 @@
 
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+
+=======
+
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  Atom, Brain, Cpu, Zap, Shield, Globe, 
+
+=======
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import {
-  Atom, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
+  Atom, Brain, Cpu, Zap, Shield, Globe,
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react'
+} from 'lucide-react',
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
-      icon: Brain
-      title: "Quantum Consciousness Integration"
-      description: "Advanced AI consciousness with quantum processing capabilities"
-      color: "from-purple-500 to-pink-500"
-    }
-    {
-      icon: Atom
-      title: "Quantum Neural Processing"
-      description: "Revolutionary quantum computing for neural network operations"
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      icon: Cpu
-      title: "Hybrid AI Architecture"
-      description: "Combines classical and quantum computing for optimal performance"
-      color: "from-emerald-500 to-teal-500"
-    }
-    {
-      icon: Shield
-      title: "Quantum Security"
-      description: "Unbreakable encryption using quantum cryptography"
-      color: "from-red-500 to-orange-500"
-    }
-  ]
-  const benefits = [
-    "1000x faster neural network training"
-    "Quantum-level security and encryption"
-    "Scalable consciousness simulation"
-    "Real-time quantum decision making"
-    "Advanced pattern recognition"
-    "Future-proof technology foundation"
-  ]
-  const useCases = [
-    {
-      title: "AI Research & Development"
+      icon: Brain,
+      title: "Quantum Consciousness Integration",
+      description: "Advanced AI consciousness with quantum processing capabilities",
+
+
       description: "Accelerate AI breakthroughs with quantum processing power"
     }
     {
@@ -329,42 +314,41 @@ const QuantumNeuralNetworkPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             >;
-              <div className="flex justify-center mb-6">;
-                <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">;
-                  <Atom className="w-8 h-8 text-white" />;
+              <div className="flex justify - center mb - 6">;
+                <div className="p - 3 bg - gradient - to - r from - purple - 500 to - blue - 500 rounded - full">;
+                  <Atom className="w - 8 h - 8 text - white" />;
                 </div>;
               </div>;
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
+              <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;
                 Quantum Neural Network;
-                <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
+                <span className="block bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent">;
                   Platform;
                 </span>;
               </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
                 Revolutionary platform combining quantum computing with AI consciousness for unprecedented;
                 performance, security, and capabilities in neural network operations.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 3 bg - gradient - to - r from - purple - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - purple - 600 hover:to - blue - 600 transition - all duration - 200">;
                   Get Started;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
+                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
                 </Link>;
-                <Link href="/services" className="inline-flex items-center px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200">;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 3 border border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition - all duration - 200">;
                   Learn More;
                 </Link>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
-        {/* Features Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* Features Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
             <motion.div;
+
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -398,8 +382,8 @@ const QuantumNeuralNetworkPlatform = () => {;
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   key={index  } catch (error) {
@@ -440,11 +424,11 @@ const QuantumNeuralNetworkPlatform = () => {;
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               ))  } catch (error) {
@@ -492,12 +476,14 @@ const QuantumNeuralNetworkPlatform = () => {;
                 Transform your operations with quantum-powered AI capabilities
               </p>
             </motion.div>
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, coordinate_x: -20 }}
+                  whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   key={index  } catch (error) {
@@ -535,11 +521,11 @@ const QuantumNeuralNetworkPlatform = () => {;
           </div>
         </section>
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               ))  } catch (error) {
@@ -591,8 +577,8 @@ const QuantumNeuralNetworkPlatform = () => {;
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   key={index  } catch (error) {
@@ -697,18 +683,18 @@ export default QuantumNeuralNetworkPlatform,;
 ;
 export default QuantumNeuralNetworkPlatform,
             >;
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
+              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Experience the Future?;
               </h2>;
-              <p className="text-xl text-gray-400 mb-8">;
+              <p className="text - xl text - gray - 400 mb - 8">;
                 Join the quantum revolution and transform your AI capabilities today;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200 text-lg">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - purple - 600 hover:to - blue - 600 transition - all duration - 200 text - lg">;
                   Start Your Journey;
-                  <Rocket className="ml-2 w-6 h-6" />;
+                  <Rocket className="ml - 2 w - 6 h - 6" />;
                 </Link>;
-                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200 text-lg">;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 4 border border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition - all duration - 200 text - lg">;
                   Explore All Services;
                 </Link>;
               </div>;

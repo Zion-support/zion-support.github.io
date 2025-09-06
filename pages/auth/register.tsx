@@ -53,16 +53,12 @@ const RegisterPage = () => {;
   }, []),;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
     email: string;
+
     emailVerificationRequired: boolean;
-  }) => {;
-    if (emailVerificationRequired) {;
-      router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-    } else {;
-      router.push('/auth/login?registrationSuccess=true');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  }) =>: any {
+    // Check condition
+if ( {) {
+  $2
 }
   },
   return (
@@ -80,9 +76,10 @@ const RegisterPage = () => {;
               alt="Zion Tech"
               width={48}
               height={48}
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement
-                target.style.display = 'none'
+              on_error={(e) => {
+                const target = e.current_target as HTMLImageElement,
+                target.style.display = 'none';
+
               }}
               width={48  } catch (error) {
     console.error("Error:", error);
@@ -142,8 +139,8 @@ const RegisterPage = () => {;
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
               By creating an account, you agree to our{' '}
-              <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
-                Terms of Service
+              <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
+                Terms of Service;
               </Link>{' '}
               and{' '}
               By creating an account, you agree to our{' '  } catch (error) {

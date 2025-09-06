@@ -1,11 +1,6 @@
 import React from 'react';
 export default function SEOIndex() {
 
-  const [slugs, setSlugs] = React.useState<string[]>([])
-  React.useEffect(() => {
-    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
-    setSlugs([])
-  }, [])
 
   const [slugs, setSlugs] = React.useState<string[]>([]),
   React.useEffect(() => {
@@ -13,8 +8,8 @@ export default function SEOIndex() {
     setSlugs([])
   }, []),
   return (
-    <div>
-      <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>
+    <div>;
+      <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
         <div className="text-sm text-gray-500">Generated pages will appear once deployed.</div>
       ) : (

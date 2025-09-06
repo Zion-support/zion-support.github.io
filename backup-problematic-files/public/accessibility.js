@@ -10,22 +10,45 @@ const accessibilityEnhancements = {
     })}
   // Add keyboard navigation support;
   "addKeyboardNavigation": () => {
-  const focusableElements = document.querySelectorAll("a, button, input, textarea, select");
-    focusableElements.forEach(element => {
-  element.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" |e.key === " ") {
-  e.preventDefault();
-          element.click()}
-      })})}
+  const focusableElements = document && document.querySelectorAll("a, button, input, textarea, select");
+    focusableElements && focusableElements.forEach(element => {
+  element && element.addEventListener("keydown", (e) => {
+  if (e && e.key === "Enter" || e && e.key === " ") {
+  e && e.preventDefault();
+          element && element.click()}
+=======
+  const buttons = document.querySelectorAll ("button:not ([aria - label])");
+    buttons.for_each (button => {
+  if () {) {
+  $2
+}
+  button.set_attribute ("aria - label", button.text_content || "Button")}
+    })},
+  // Add keyboard navigation support;
+  "addKeyboardNavigation": () => {
+  const focusable_elements = document.querySelectorAll ("a, button, input, textarea, select");
+    focusable_elements.for_each (element => {
+  element.addEventListener ("keydown", (e) => {
+  // Check condition
+if ( {) {
+  $2
+}
+  e.prevent_default ();
+          element.click ()}
+
+      })})},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Add high contrast mode support;
   "addHighContrastMode": () => {
-  const style = document.createElement("style");
-    style.textContent = ";
-      @media (prefers-contrast: high) {
+
+  const style = document.create_element ("style");
+    style.text_content = ";
+      @media (prefers - contrast: high) {
+
   * {
-  background-color: white !important;
+  background - color: white !important;
           color: black !important;
-          border-color: black !important}
+          border - color: black !important}
       }
     ";
     document.head.appendChild(style)}

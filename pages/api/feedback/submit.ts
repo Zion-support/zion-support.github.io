@@ -24,11 +24,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
     id: responseId,
     rating,
-comment: String(comment || "").slice(0, 2000),
+    comment: String(comment || "").slice(0, 2000),
     pagePath: String(pagePath || ""),
     aiModel: String(aiModel || ""),
-    userAgent: req.headers["user-agent"] || "",
-    ts: Date.now(),
+    userAgent: req && req.headers["user-agent"] || "",
+    ts: Date && Date.now(),
   };
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -128,10 +128,19 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+  const entry = {
+    id: response_id,
+    rating,
+    comment: String (comment || "").slice (0, 2000),
+    page_path: String (page_path || ""),
+    ai_model: String (ai_model || ""),
+    user_agent: req.headers["user - agent"] || "",
+    ts: Date.now (),
   }
+  const rows = read_all ();
+  rows.push (entry);
+  write_all (rows);
+  return res.status (200).json ({ ok: true });
 }

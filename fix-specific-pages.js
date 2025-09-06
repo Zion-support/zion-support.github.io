@@ -1,5 +1,4 @@
 
-')
 
 '),
       if (parts.length > 1) {
@@ -100,10 +99,11 @@ function restorePage(pagePath) {;
       corruptedBackup: corruptedBackupPath
 ;
     // Create a backup of the current corrupted file;
-    const timestamp = Date.now();
-    const corruptedBackupPath = `${pagePath}.corrupted.${timestamp}`;
-    fs.writeFileSync(corruptedBackupPath, currentContent),;
+    const timestamp = Date.now (),
+    const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
+    fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
+
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
@@ -180,15 +180,6 @@ function fixSpecificPages() {
   }
   // Generate summary
 
-  console.log('\n📊 Restoration Summary: ')
-  console.log(`   Total pages: ${results.total}`)
-  console.log(`   Restored: ${results.restored}`)
-  console.log(`   Failed: ${results.failed}`)
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
 
   return results
       results.failed++,
@@ -265,9 +256,70 @@ if ({
 }
 module.exports = {
 
-  restorePage
-  fixSpecificPages
-  findBestBackup
+// Function to fix specific corrupted pages;
+/**
+ * fixSpecificPages - Function description
+ */
+function fixSpecificPages() {
+  const results = {
+    total: corrupted_pages.length,
+    restored: 0,
+    failed: 0,
+    details: [];
+  },
+  console.log ('🚀 Starting targeted page restoration...'),
+  console.log (`📋 Targeting ${corrupted_pages.length} specific corrupted pages`),
+  for (const page_path of corrupted_pages) {
+    if () {) {
+  $2
+}
+      console.log (`⚠️  Page not found: ${page_path}`),
+      results.failed++,
+      results.details.push ({
+        file: page_path,
+        restored: false,
+        reason: 'Page not found';
+      }),
+      continue;
+    }
+    console.log (`\n🔍 Checking: ${page_path}`),
+    const result = restore_page (page_path),
+    // Check condition
+if ( {) {
+  $2
+}
+      results.restored++,
+      console.log (`✅ Restored: ${page_path}`),
+      console.log (`   Used backup: ${result.backup_used}`),
+      console.log (`   Corrupted backup: ${result.corrupted_backup}`);
+    } else {
+      results.failed++,
+      console.log (`❌ Failed: ${page_path}`),
+      console.log (`   Reason: ${result.reason}`);
+    }
+    results.details.push ({
+      file: page_path,
+      ...result;
+    });
+  }
+  // Generate summary;
+  console.log ('\n📊 Restoration Summary: '),
+  console.log (`   Total pages: ${results.total}`),
+  console.log (`   Restored: ${results.restored}`),
+  console.log (`   Failed: ${results.failed}`),
+  console.log (`   Success rate: ${((results.restored / results.total) * 100).to_fixed (1)}%`),
+  // Save detailed report;
+  const report_path = path.join (process.cwd (), 'targeted - page - restoration - report.json'),
+  fs.writeFileSync (report_path, JSON.stringify (results, null, 2)),
+  console.log (`\n📄 Detailed report saved to: ${report_path}`),
+  return results;
+}
+// Run the restoration if this script is executed directly;
+// Check condition
+if ( {) {
+  $2
+}
+  fixSpecificPages ();
 }
 
 ;
@@ -278,8 +330,9 @@ module.exports = {;
 };
 main
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
-  restorePage,
+  restore_page,
   fixSpecificPages,
   findBestBackup;
 },;

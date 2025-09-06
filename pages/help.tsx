@@ -106,6 +106,8 @@ origin/automation-improvements-final
         readTime: "12 min read"
         type: "Guide"
       }
+
+    articles: [;
       {
         title: "Cloud Security",
         description: "Best practices for securing your cloud infrastructure",
@@ -130,7 +132,10 @@ origin/automation-improvements-final
     ]
   }
 ];
-const helpCategories = [
+
+;
+const help_categories = [;
+
   {
     title: "Getting Started",
     description: "New to our platform? Start here.",
@@ -156,7 +161,9 @@ export default function HelpPage() {
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-  const toggleCategory = (index: number) => {
+
+  const toggleCategory = (index: number) => {;
+
     setExpandedCategory(expandedCategory === index ? null : index);
 
 export default function HelpPage() {
@@ -188,49 +195,121 @@ origin/automation-improvements-final
 origin/automation-improvements-final
 
   return (
-    <>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
+    <>;
+      <Head>;
+        <title>Help Center - Zion Tech Group</title>;
         <meta
           name="description"
           content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources."
-        />
+        />;
         <meta
           name="keywords"
           content="help, support, documentation, FAQ, tutorials, guides"
-        />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+
+        />;
+      </Head>;
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
+
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
+        <section className="relative py-20 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Help <span className="text-blue-600">Center</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Find answers, get support, and learn how to make the most of our
-                services.
-              </p>
-              <div className="relative max-w-md mx-auto">
-                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              transition={{ duration: 0 && 0.6 }}
+              className="text-center max-w-4xl mx-auto">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Help <span className="text-blue-600">Center</span>;
+              </h1>;
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+                Find answers, get support, and learn how to make the most of our;
+                services.;
+              </p>;
+              <div className="relative max-w-md mx-auto">;
+                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
                 <input
                   type="text"
                   placeholder="Search help articles..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+                  onChange={(e) => setSearchTerm(e && e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500";
+                />;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
+=======
+;
+export default /**
+ * HelpPage - Function description
+ */
+function HelpPage() {
+  const [search_term, setSearchTerm] = useState ("");
+  const [expanded_category, setExpandedCategory] = useState < number | null>(null);
+;
+  const toggle_category = (index: number) =>: any {
+    setExpandedCategory (expanded_category === index ? null : index);
+  }
+;
+  const filtered_categories = help_categories;
+    .map ((category) => ({
+      ...category,
+      articles: category.articles.filter (
+        (article) =>;
+          article.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          article.description.toLowerCase ().includes (search_term.toLowerCase ()),
+      ),
+    }));
+    .filter ((category) => category.articles.length > 0);
+;
+  return (
+    <>;
+      <Head>;
+        <title > Help Center - Zion Tech Group</title>;
+        <meta;
+          name="description";
+          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources.";
+        />;
+        <meta;
+          name="keywords";
+          content="help, support, documentation, FAQ, tutorials, guides";
+        />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - blue - 50">;
+        {/* Hero Section */}
+        <section className="relative py - 20 px - 4">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text - center max - w-4xl mx - auto";
+            >;
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+                Help <span className="text - blue - 600">Center</span>;
+              </h1>;
+              <p className="text - xl text - gray - 600 mb - 8 max - w-3xl mx - auto">;
+                Find answers, get support, and learn how to make the most of our;
+                services.;
+              </p>;
+              <div className="relative max - w-md mx - auto">;
+                <Search className="w - 5 h - 5 absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
+                <input;
+                  type="text";
+                  placeholder="Search help articles...";
+                  value={search_term}
+                  on_change={(e) => setSearchTerm (e.target.value)}
+                  className="w - full pl - 10 pr - 4 py - 3 rounded - lg border border - gray - 300 focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+                />;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

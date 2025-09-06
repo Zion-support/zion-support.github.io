@@ -234,8 +234,14 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -268,6 +274,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           }
         }
       }
+
+
+
+
+      this.integrityChecks++;
+      this.issuesFound += issues.length;
   ERROR')';;
 ;
   async: createPackageJson() {
@@ -350,11 +362,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.issuesFound += issues.length;
 
 
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
 
-      this.integrityChecks++;
-      this.issuesFound += issues.length;
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -457,6 +465,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         "issuesFound": issues.length,",
         "issues": issues";,
       };,
+
+
+
+
+
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   vite.config.ts'), ';
       config);
   async: createTsConfig() {
@@ -729,12 +745,16 @@ module.exports = FileIntegrityMonitor;
 ;
 ursor/add-new-services-and-deploy-updates-0462
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = FileIntegrityMonitor;
 ;
 ;
 ;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -905,15 +925,10 @@ class FileIntegrityMonitor {
     try {
       issues.push({
 
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       issues.push({
-
-      issues.push({
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-      issues.push({
-
-ursor/fix-syntax-push-and-merge-to-main-40de
       const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles();
       for: (const file of sourceFiles) {

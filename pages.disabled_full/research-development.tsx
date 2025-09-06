@@ -10,10 +10,10 @@ interface ResearchdevelopmentProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Researchdevelopment({ }: ResearchdevelopmentProps) {
   return (
-    <div>
-      <h1>Researchdevelopment</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <div>;
+      <h1>Researchdevelopment</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
   );
 }
 }

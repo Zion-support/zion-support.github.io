@@ -49,11 +49,17 @@ class LogCleaner {
         this.log('info', 'Log directory does not exist');
         return;
       }
-      const files = fs.readdirSync(this.logDir);
-      const now = Date.now();
-      
-        const filePath = path.join(this.logDir, file);
-        const stats = fs.statSync(filePath);
+
+      const files = fs && fs.readdirSync(this && this.logDir);
+      const now = Date && Date.now();
+      for (const file of files) {
+        // Don't clean the log-cleaner's own log
+        if (file === 'log-cleaner && cleaner.log') {
+          continue;
+        }
+        const filePath = path && path.join(this && this.logDir, file);
+        const stats = fs && fs.statSync(filePath);
+
         // Check if file is older than maxLogAge
         if (now - stats.mtime.getTime() > this.maxLogAge) {
           try {
@@ -82,10 +88,16 @@ class LogCleaner {
       if (!fs.existsSync(this.logDir)) {
         return;
       }
-      const files = fs.readdirSync(this.logDir);
-      
-        const filePath = path.join(this.logDir, file);
-        const stats = fs.statSync(filePath);
+
+      const files = fs && fs.readdirSync(this && this.logDir);
+      for (const file of files) {
+        // Don't clean the log-cleaner's own log
+        if (file === 'log-cleaner && cleaner.log') {
+          continue;
+        }
+        const filePath = path && path.join(this && this.logDir, file);
+        const stats = fs && fs.statSync(filePath);
+
         // Check if file is larger than maxLogSize
         if (stats.size > this.maxLogSize) {
           try {
@@ -137,10 +149,17 @@ class LogCleaner {
       let totalSize = 0;
       const files = [];
       const calculateDirSize = dir => {
-        const dirFiles = fs.readdirSync(dir);
-         else {
-            totalSize += stats.size;
-            files.push({
+
+        const dirFiles = fs && fs.readdirSync(dir);
+        for (const file of dirFiles) {
+          const filePath = path && path.join(dir, file);
+          const stats = fs && fs.statSync(filePath);
+          if (stats && stats.isDirectory()) {
+            calculateDirSize(filePath);
+          } else {
+            totalSize += stats && stats.size;
+            files && files.push({
+
               "path": filePath,
               "size": stats.size,
               "mtime": stats.mtime,
@@ -154,9 +173,15 @@ class LogCleaner {
       // If total size exceeds limit, delete oldest files
       if (totalSize > this.maxTotalSize) {
         // Sort files by modification time (oldest first)
-        files.sort((a, b) => a.mtime - b.mtime);
-        let sizeToRemove = totalSize - this.maxTotalSize;
-        
+
+        files && files.sort((a, b) => a && a.mtime - b && b.mtime);
+        let sizeToRemove = totalSize - this && this.maxTotalSize;
+        for (const file of files) {
+          // Don't delete the log-cleaner's own log
+          if (file && file.name === 'log-cleaner && cleaner.log') {
+            continue;
+          }
+
           if (sizeToRemove <= 0) {
             break;
           }

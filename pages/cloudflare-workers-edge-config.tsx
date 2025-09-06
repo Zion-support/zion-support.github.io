@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -46,10 +45,11 @@ export default function CloudflareWorkersEdgeConfigPage(req, res) {
   return (;
     <Layout>;
       <Head>;
-        <title>Cloudflare Workers Edge Config Manager | Zion Tech Group</title>;
-        <meta name="description" content="Safe, versioned edge configuration for Cloudflare Workers/KV with previews, rollbacks, and audit logs." />;
-        <link rel="canonical" href="https://ziontechgroup.com/cloudflare-workers-edge-config" />;
+        <title > Cloudflare Workers Edge Config Manager | Zion Tech Group</title>;
+        <meta name="description" content="Safe, versioned edge configuration for Cloudflare Workers / KV with previews, rollbacks, and audit logs." />;
+        <link rel="canonical" href="https://ziontechgroup.com / cloudflare - workers - edge - config" />;
       </Head>;
+
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">Cloudflare Workers Edge Config</h1>;

@@ -33,13 +33,15 @@ export const BLOG_POSTS: BlogPost[] = [
       avatarUrl:
         'https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200',
     },
-    publishedDate: 'Apr 15, 2025',
-    readTime: '5 min read',
+    published_date: 'Apr 15, 2025',
+    read_time: '5 min read',
     category: 'Trends',
     tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech'],
-    featuredImage:
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630',
-    isFeatured: true,
+
+    featured_image:;
+      'https://images.unsplash.com / photo - 1488590528505 - 98d2b5aba04b?auto = format & fit = crop & w=1200 & h=630',
+    is_featured: true,
+
   },
 
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
@@ -68,13 +70,15 @@ export const BLOG_POSTS: BlogPost[] = [
     isFeatured: true
   }
   {
-    id: 'optimize-ai-listings'
-    title: 'How to Optimize Your AI Service Listings for Maximum Visibility'
-    slug: 'optimize-ai-listings'
-    excerpt:
-      'Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.',    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>    id: "optimize-ai-listings";
+
+    id: 'optimize - ai - listings',
+    title: 'How to Optimize Your AI Service Listings for Maximum Visibility',
+    slug: 'optimize - ai - listings',
+    excerpt:;
+      'Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.',    content: `<p > In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>    id: "optimize - ai - listings";
+
     title: "How to Optimize Your AI Service Listings for Maximum Visibility";
-    slug: "optimize-ai-listings";
+    slug: "optimize - ai - listings";
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.";
 import { BlogPost } from "@/types/blog",
 // Sample blog data - in a real app this would come from an API or CMS
@@ -110,14 +114,18 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630'
   }
   {
-    id: 'green-it'
-    title: "Green IT: Reducing Your Data Center's Carbon Footprint"
-    slug: 'green-it'
-    excerpt:
-      'Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.',    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>    id: "green-it";
+
+    id: 'green - it',
+    title: "Green IT: Reducing Your Data Center's Carbon Footprint",
+    slug: 'green - it',
+    excerpt:;
+      'Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.',    content: `<p > As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>    id: "green - it";
+
     title: "Green IT: Reducing Your Data Center's Carbon Footprint";
-    slug: "green-it";
+    slug: "green - it";
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.";
+
+
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
 <p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`,
     author: {
@@ -168,13 +176,15 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630'
   }
   {
-    id: 'ai-ethics-frameworks'
-    title: 'Implementing Ethical AI Frameworks in Enterprise Applications'
-    slug: 'ai-ethics-frameworks'
-    excerpt:
-      'A comprehensive guide to integrating ethical considerations into your AI development lifecycle.',    content: `<p>As AI systems become more prevalent in critical decision-making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>    id: "ai-ethics-frameworks";
+
+    id: 'ai - ethics - frameworks',
+    title: 'Implementing Ethical AI Frameworks in Enterprise Applications',
+    slug: 'ai - ethics - frameworks',
+    excerpt:;
+      'A comprehensive guide to integrating ethical considerations into your AI development lifecycle.',    content: `<p > As AI systems become more prevalent in critical decision - making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>    id: "ai - ethics - frameworks";
+
     title: "Implementing Ethical AI Frameworks in Enterprise Applications";
-    slug: "ai-ethics-frameworks";
+    slug: "ai - ethics - frameworks";
     excerpt: "A comprehensive guide to integrating ethical considerations into your AI development lifecycle.";
 <p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
     author: {
@@ -182,12 +192,16 @@ export const BLOG_POSTS: BlogPost[] = [
       title: "Sustainability Engineer",
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
     },
-    publishedDate: "Apr 5, 2025",
-    readTime: "6 min read",
-    category: "Sustainability",
-    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
-    featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
+    published_date: 'Mar 30, 2025',
+    read_time: '7 min read',
+    category: 'Ethics',
+    tags: ['AI Ethics', 'Enterprise AI', 'Responsible AI', 'Governance'],
+
+    featured_image:;
+      'https://images.unsplash.com / photo - 1454165804606 - c3d57bc86b40?auto = format & fit = crop & w=1200 & h=630',
+
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: "ai-ethics-frameworks",
     title: "Implementing Ethical AI Frameworks in Enterprise Applications",
@@ -226,18 +240,20 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "ai-talent-acquisition";
     excerpt: "How forward-thinking companies are attracting and retaining scarce AI talent in an increasingly competitive market.";
 <p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`,
+
     author: {
-      name: "Dr. James Peterson",
-      title: "AI Ethics Officer",
+      
+      name: "Dr. James Peterson", title: "AI Ethics Officer",
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
+    
     },
-    publishedDate: "Mar 30, 2025",
-    readTime: "7 min read",
-    category: "Ethics",
-    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
+    publishedDate: "Mar 30, 2025";
+    readTime: "7 min read", category: "Ethics",
+    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
-  },
+  };
   {
+
     id: "ai-talent-acquisition",
     title: "Winning the AI Talent War: Recruitment Strategies for 2025",
     slug: "ai-talent-acquisition",
@@ -280,12 +296,16 @@ export const BLOG_POSTS: BlogPost[] = [
       title: "Head of AI Talent",
       avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
     },
-    publishedDate: "Mar 22, 2025",
-    readTime: "9 min read",
-    category: "Recruitment",
-    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
-    featuredImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630"
+    published_date: 'Mar 22, 2025',
+    read_time: '9 min read',
+    category: 'Recruitment',
+    tags: ['AI Talent', 'Recruitment', 'Tech Hiring', 'Retention'],
+
+    featured_image:;
+      'https://images.unsplash.com / photo - 1581091226825 - a6a2a5aee158?auto = format & fit = crop & w=1200 & h=630',
+
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
     id: "ai-compute-optimization",
     title: "AI Compute Optimization: Balancing Performance and Cost",

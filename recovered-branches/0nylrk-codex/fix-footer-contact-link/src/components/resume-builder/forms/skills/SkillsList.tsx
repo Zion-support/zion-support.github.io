@@ -23,9 +23,21 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       (acc, skill) => {
         const category = skill.category |"Other";
         if (!acc[category]) {
+=======
+;
+  useEffect (() => {
+    // Group skills by category;
+    const grouped = skills.reduce (
+      (acc, skill) => {
+        const category = skill.category || "Other";
+        // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           acc[category] = [];
         }
-        acc[category].push(skill);
+        acc[category].push (skill);
         return acc;
       }
       {} as Record<string, Skill[]>

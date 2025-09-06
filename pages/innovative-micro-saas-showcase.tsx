@@ -74,9 +74,11 @@ import Layout from '../components/layout/Layout';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
 const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
   website: 'https://ziontechgroup.com'
 }
 const stats = [
@@ -94,7 +96,8 @@ const categories = [
   { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
-]
+
+
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -102,32 +105,16 @@ export default function InnovativeMicroSaasShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
-    ...innovativeRealMicroSaasServices2025
-    ...emergingTechServicesEnhanced2025
-  ]
-  // Filter services based on category and search
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' |
-      service.category.toLowerCase().includes(selectedCategory) |
-      service.name.toLowerCase().includes(selectedCategory)
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  })
+
+
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
-      case 'price-high':
-        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''))
-      case 'rating':
-        return b.rating - a.rating
-      case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
+
+
       default: return 0
     }
   })
@@ -230,21 +217,9 @@ export default function InnovativeMicroSaasShowcase(req, res) {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Innovative Micro SAAS Services
@@ -285,28 +260,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   <span className="text-white font-semibold">{stat.number}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Contact Bar */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 py-4">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
-            <div className="flex items-center space-x-4 mb-4 lg:mb-0">
-              <Phone className="w-5 h-5 text-white" />
-              <span className="text-white font-semibold">{contactInfo.mobile}</span>
-              <Mail className="w-5 h-5 text-white" />
-              <span className="text-white font-semibold">{contactInfo.email}</span>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -418,30 +372,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
             <div className="flex items-center space-x-4">
               <div className="flex bg-white/10 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover:text-white'}`}
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -678,25 +616,22 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                     </div>
                   </div>
                 </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
           ) : (
             <div className="space-y-4">
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, coordinate_x: -20 }}
+                  animate={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
-                >
-                  <div className="flex items-start space-x-6">
+
+                  className="group bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - xl p - 6 hover:bg - white / 10 hover:border - purple - 500 / 50 transition - all duration - 300";
+                >;
+                  <div className="flex items - start space - x-6">;
                     {/* Service Icon */}
-                    <div className="text-4xl">{service.icon}</div>
+
                     {/* Service Details */}
                   key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -762,6 +697,8 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                           </div>
                         </div>
                       </div>
+
+
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4 text-xs text-gray-500">
@@ -865,22 +802,22 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 };
   )
           >;
-            <h2 className="text-4xl font-bold text-white mb-6">;
+            <h2 className="text - 4xl font - bold text - white mb - 6">;
               Ready to Transform Your Business?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
               Join thousands of companies already using our innovative services to gain competitive advantages and drive growth.;
             </p>;
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
               <Link;
                 href="/contact";
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105";
+                className="bg - gradient - to - r from - purple - 600 to - pink - 600 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - purple - 700 hover:to - pink - 700 transition - all duration - 300 hover:scale - 105";
               >;
                 Get Started Today;
               </Link>;
               <Link;
                 href="/pricing";
-                className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/20 transition-all duration-300";
+                className="bg - white / 10 border border - white / 20 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - white / 20 transition - all duration - 300";
               >;
                 View Pricing;
               </Link>;

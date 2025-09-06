@@ -466,9 +466,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
           </div>
         </section>
         {/* Search and Filter Section */}
-        <section className="py-8 px-4 border-b border-gray-800">
-          <div className="container mx-auto">
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+        <section className="py - 8 px - 4 border - b border - gray - 800">;
+          <div className="container mx - auto">;
+            <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
               {/* Search */}
         {/* Search and Filter Section */  } catch (error) {
     console.error("Error:", error);
@@ -494,7 +494,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                 />
               </div>
               {/* Filters */}
-              <div className="flex flex-wrap gap-4 items-center">
+              <div className="flex flex - wrap gap - 4 items - center">;
                 {/* Category Filter */}
                 <div className="relative">
                   <select
@@ -541,17 +541,9 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                     <option value="all">All Categories</option>
                     {serviceCategories.map(category => (
                       <option key={category.id} value={category.id}>
-                        {category.title.split(' ').slice(1).join(' ')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </option>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        {category.title.split(' ').slice(1).join(' ')}
+                      </option>
+                    ))}
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
@@ -595,32 +587,16 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 }
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
-                    onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                     </svg>
                   </button>
                   <button
-                    onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    onClick={() => setViewMode('list')}
+                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'}`}
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
@@ -632,8 +608,8 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
           </div>
         </section>
         {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+        <section className="py - 16 px - 4">;
+          <div className="container mx - auto">;
             {/* Results Count */}
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
@@ -742,9 +718,10 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                           </div>
                         )}
                         {/* Service Icon */}
-                        <div className="text-4xl mb-4">{service.icon}</div>
+                        <div className="text - 4xl mb - 4">{service.icon}</div>;
+
                         {/* Service Title */}
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                        <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors">;
                           {service.name}
                         </h3>
                         {/* Tagline */}
@@ -780,32 +757,31 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                         </h3>;
-                        {/* Tagline */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                          {service.tagline  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                        {/* Tagline */}
+                        <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
+                          {service.tagline}
+
                         </p>;
-                        {/* Price */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        <div className="text-3xl font-bold text-white mb-4">
-                          {service.price  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          <span className="text-lg text-gray-400 font-normal">{service.period}</span>
-                        </div>
+
+                        {/* Price */}
+                        <div className="text - 3xl font - bold text - white mb - 4">;
+                          {service.price}
+
+                          <span className="text - lg text - gray - 400 font - normal">{service.period}</span>;
+                        </div>;
+
+                        {/* Features */}
+                        <div className="space - y-2 mb - 6">;
+                          <h4 className="text - sm font - semibold text - purple - 400">Key Features</h4>;
+                          <ul className="space - y-1">;
+                            {service.features.slice (0, 4).map ((feature, feature_index) => (
+                              <li key={feature_index} className="flex items - center text - xs text - gray - 300">;
+                                <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
+                                {feature}
+
                         {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -983,6 +959,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                             <div className="flex-1">
                               <div className="flex items-center gap-3 mb-2">
                                 <h3 className="text-xl font-bold text-white">{service.name}</h3>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 {service.popular && (
                                   <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                                     POPULAR
@@ -1070,10 +1047,12 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               </div>;
                             </div>;
                           </div>;
                         </div>;
+
                         {/* Right Column */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1092,15 +1071,18 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                               <span className="text-lg text-gray-400 font-normal">{service.period}</span>
                             </div>
                             <div className="text-sm text-gray-400">30-day free trial</div>
                           </div>
+
                           {/* Market Data */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                           <div className="grid grid-cols-2 gap-3">
                             <div className="bg-gray-800/50 rounded-lg p-3 text-center">
                               <div className="text-xs text-gray-400 mb-1">Market Size</div>
@@ -1111,15 +1093,18 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
                               <div className="text-sm text-gray-200">{service.growthRate}</div>
                             </div>
                           </div>
+
                           {/* ROI */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                           <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-3">
                             <div className="text-xs text-green-400 mb-1">Expected ROI</div>
                             <div className="text-sm text-green-300">{service.roi}</div>
                           </div>
+
                           {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1255,6 +1240,7 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -1309,46 +1295,46 @@ export default function Revolutionary2025ServicesShowcase(req, res) {
 };
   )
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
               </h2>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
                 Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation.;
               </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">;
-                <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">;
-                  <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>;
-                  <p className="text-gray-300 mb-3">{contactInfo.mobile}</p>;
-                  <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="text-purple-400 hover:text-purple-300">;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 max - w-4xl mx - auto mb - 8">;
+                <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
+                  <Phone className="w - 8 h - 8 text - purple - 400 mx - auto mb - 4" />;
+                  <h3 className="text - lg font - semibold text - white mb - 2">Call Us</h3>;
+                  <p className="text - gray - 300 mb - 3">{contact_info.mobile}</p>;
+                  <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`} className="text - purple - 400 hover:text - purple - 300">;
                     Call Now →;
                   </a>;
                 </div>;
-                <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">;
-                  <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>;
-                  <p className="text-gray-300 mb-3">{contactInfo.email}</p>;
-                  <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">;
+                <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
+                  <Mail className="w - 8 h - 8 text - blue - 400 mx - auto mb - 4" />;
+                  <h3 className="text - lg font - semibold text - white mb - 2">Email Us</h3>;
+                  <p className="text - gray - 300 mb - 3">{contact_info.email}</p>;
+                  <a href={`mailto:${contact_info.email}`} className="text - blue - 400 hover:text - blue - 300">;
                     Send Email →;
                   </a>;
                 </div>;
-                <div className="bg-gray-800/50 border border-gray-700/50 rounded-lg p-6">;
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-4" />;
-                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>;
-                  <p className="text-gray-300 mb-3 text-sm">{contactInfo.address}</p>;
-                  <a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">;
+                <div className="bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - lg p - 6">;
+                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 4" />;
+                  <h3 className="text - lg font - semibold text - white mb - 2">Visit Us</h3>;
+                  <p className="text - gray - 300 mb - 3 text - sm">{contact_info.address}</p>;
+                  <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - green - 400 hover:text - green - 300">;
                     Get Directions →;
                   </a>;
                 </div>;
               </div>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <Link href="/contact">;
-                  <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
+                  <button className="bg - gradient - to - r from - purple - 500 to - blue - 600 hover:from - purple - 600 hover:to - blue - 700 text - white px - 8 py - 4 rounded - lg font - semibold text - lg transition - all duration - 300 transform hover:scale - 105">;
                     Start Your Transformation;
                   </button>;
                 </Link>;
-                <Link href={contactInfo.website}>;
-                  <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg hover: border-purple-500 hover:text-purple-400 transition-all duration-300 text-lg">;
+                <Link href={contact_info.website}>;
+                  <button className="px - 8 py - 4 border border - gray - 600 text - gray - 300 rounded - lg hover: border - purple - 500 hover:text - purple - 400 transition - all duration - 300 text - lg">;
                     Visit Website;
                   </button>;
                 </Link>;

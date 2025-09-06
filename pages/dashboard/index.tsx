@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
+
 
 const Dashboard: NextPage = () => {
   return (
@@ -8,6 +6,8 @@ const Dashboard: NextPage = () => {
       <Head>
         <title>Dashboard - Zion</title>
       </Head>
+
+
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
@@ -61,6 +61,7 @@ export default Dashboard,;
 }
         />;
       </section>;
+
     </div>;
   );
 },;

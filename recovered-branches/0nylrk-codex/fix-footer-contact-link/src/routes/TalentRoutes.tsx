@@ -58,23 +58,25 @@ import SavedTalentsPage from "../pages/SavedTalentsPage",;
 import CreateTalentProfile from "../pages/CreateTalentProfile",;
 import ProfilePage from "../pages/ProfilePage",;
 const TalentRoutes = () => {;
-  return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
     <Routes>;
       {/* Talent Routes */}
+
       <Route path="/talent" element={<TalentDirectory />} />;
       <Route path="/talents" element={<TalentsPage />} />;
       <Route path="/talent/:id" element={<TalentProfilePage />} />;
-      <Route;
-        path="/saved-talents";
-        element={;
+      <Route
+        path="/saved-talents" 
+        element={
           <ProtectedRoute>;
             <SavedTalentsPage />;
           </ProtectedRoute>;
         } ;
       />;
-      <Route;
-        path="/create-talent-profile";
-        element={;
+      <Route
+        path="/create-talent-profile" 
+        element={
           <ProtectedRoute>;
             <CreateTalentProfile />;
           </ProtectedRoute>;

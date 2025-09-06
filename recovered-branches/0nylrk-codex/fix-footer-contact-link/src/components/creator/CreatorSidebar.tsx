@@ -2,14 +2,8 @@
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 import {
 
-  Bell
-  FileText
-  Home
-  Mail
-  Search
-  Settings
-  Users
-} from "lucide-react";
+
+
 import {
   Sidebar
   SidebarContent
@@ -25,29 +19,23 @@ import {
   Mail,
   Search,
   Settings,
+
   Users,;
 } from "lucide-react";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarGroupLabel,
+import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
   SidebarGroupContent,;
 } from "@/components/ui/sidebar";
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-  SidebarGroupLabel,
-  SidebarGroupContent} from "@/components/ui/sidebar",
+export function AppSidebar() {;
+  return (
+
 
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -80,7 +68,7 @@ import {
                   <a href="/publish">
                     <FileText size={16} />
                     <span>My Content</span>
-                  </Link>
+                  </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -88,7 +76,7 @@ import {
                   <a href="/analytics">
                     <Search size={16} />
                     <span>Analytics</span>
-                  </Link>
+                  </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -104,7 +92,7 @@ import {
                   <a href="/profile">
                     <Users size={16} />
                     <span>Profile</span>
-                  </Link>
+                  </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -112,7 +100,7 @@ import {
                   <a href="/settings">
                     <Settings size={16} />
                     <span>Settings</span>
-                  </Link>
+                  </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -146,68 +134,117 @@ export function AppSidebar() {;
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
                     <span>Home</span>;
+=======
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,
+} from './lucide-react';
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
+  SidebarGroupContent,
+} from '@/components / ui / sidebar';
+;
+export /**
+ * AppSidebar - Function description
+ */
+function AppSidebar() {
+  return (
+    <Sidebar>;
+      <SidebarContent>;
+        <SidebarGroup>;
+          <SidebarGroupLabel > Dashboard</SidebarGroupLabel>;
+          <SidebarGroupContent>;
+            <SidebarMenu>;
+              <SidebarMenuItem>;
+                <SidebarMenuButton as_child>;
+                  <a href="/creator - dashboard">;
+                    <Home size={16} />;
+                    <span > Home</span>;
+
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
+
+                <SidebarMenuButton as_child>;
                   <a href="/messaging">;
                     <Mail size={16} />;
-                    <span>Messages</span>;
+                    <span > Messages</span>;
+
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
+
+                <SidebarMenuButton as_child>;
                   <a href="/notifications">;
                     <Bell size={16} />;
-                    <span>Notifications</span>;
+                    <span > Notifications</span>;
+
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
+
         <SidebarGroup>;
-          <SidebarGroupLabel>Content</SidebarGroupLabel>;
+          <SidebarGroupLabel > Content</SidebarGroupLabel>;
           <SidebarGroupContent>;
             <SidebarMenu>;
               <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
+                <SidebarMenuButton as_child>;
                   <a href="/publish">;
                     <FileText size={16} />;
-                    <span>My Content</span>;
+                    <span > My Content</span>;
+
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
+
+                <SidebarMenuButton as_child>;
                   <a href="/analytics">;
                     <Search size={16} />;
-                    <span>Analytics</span>;
+                    <span > Analytics</span>;
+
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
+
         <SidebarGroup>;
-          <SidebarGroupLabel>Settings</SidebarGroupLabel>;
+          <SidebarGroupLabel > Settings</SidebarGroupLabel>;
           <SidebarGroupContent>;
             <SidebarMenu>;
               <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
+                <SidebarMenuButton as_child>;
                   <a href="/profile">;
                     <Users size={16} />;
-                    <span>Profile</span>;
+                    <span > Profile</span>;
+
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
+
+                <SidebarMenuButton as_child>;
                   <a href="/settings">;
                     <Settings size={16} />;
-                    <span>Settings</span>;
+                    <span > Settings</span>;
+
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -216,6 +253,7 @@ export function AppSidebar() {;
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 ;

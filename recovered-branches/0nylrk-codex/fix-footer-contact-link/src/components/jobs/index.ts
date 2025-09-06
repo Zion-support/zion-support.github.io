@@ -11,6 +11,8 @@ export * from "./NoJobsCard";
 export * from "./JobApplicationsTable";
 export * from "./ApplicationScoreCard";
 
+
+
 export * from './JobsList',;
 export * from './job-posting',;
 export * from './SuggestedTalents',;

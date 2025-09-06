@@ -30,7 +30,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 
   const fetchJobs = async () => {
     if (!clientId) {
-      setIsLoading(false),
+      setIsLoading(false);
       return
     }
     try {
@@ -82,12 +82,12 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       if (updateError) throw updateError,
       
       // Update local state
-      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
-      toast.success("Job status updated successfully"),
+      setJobs(jobs && jobs.map(job => job && job.id === jobId ? {...job, status: newStatus} : job));
+      toast && toast.success("Job status updated successfully");
       return true
     } catch (err: any) {
-      console.error("Error updating job status:", err),
-      toast.error("Failed to update job status"),
+      console && console.error("Error updating job status:", err);
+      toast && toast.error("Failed to update job status");
       return false
     }
   }
@@ -105,24 +105,49 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       if (deleteError) throw deleteError,
       
       // Update local state
-      setJobs(jobs.filter(job => job.id !== jobId)),
-      toast.success("Job deleted successfully"),
+      setJobs(jobs && jobs.filter(job => job && job.id !== jobId));
+      toast && toast.success("Job deleted successfully");
       return true
     } catch (err: any) {
-      console.error("Error deleting job:", err),
-      toast.error("Failed to delete job"),
+      console && console.error("Error deleting job:", err);
+      toast && toast.error("Failed to delete job");
       return false
     }
   }
-  // Fetch jobs when component mounts or dependencies change
-  useEffect(() => {
-    fetchJobs()
-  }, [clientId, status]);
+;
+  const delete_job = async (job_id: string) => {
+    try {
+      const { error: delete_error } = await supabase;
+        .from ("jobs");
+        .delete ();
+        .eq ("id", job_id);
+        .eq ("client_id", client_id), // Ensure user can only delete their own jobs;
+      // Check condition
+if (throw delete_error) {
+  $2
+}
+      // Update local state;
+      set_jobs (jobs.filter (job => job.id !== job_id));
+      toast.success ("Job deleted successfully");
+      return true;
+    } catch (err: any) {
+      console.error ("Error deleting job:", err);
+      toast.error ("Failed to delete job");
+      return false;
+    }
+  }
+;
+  // Fetch jobs when component mounts or dependencies change;
+  useEffect (() => {
+    fetch_jobs ();
+  }, [client_id, status]);
+;
+
   return {
     jobs;
-    isLoading;
+    is_loading;
     error;
-    refetch: fetchJobs;
+    refetch: fetch_jobs;
     updateJobStatus;
     deleteJob;
     createJob;

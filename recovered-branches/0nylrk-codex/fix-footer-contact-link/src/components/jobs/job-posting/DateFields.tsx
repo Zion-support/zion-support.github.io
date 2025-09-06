@@ -91,32 +91,34 @@ interface DateFieldsProps {;
 ;
 export function DateFields({ startDate, setStartDate, endDate, setEndDate }: DateFieldsProps) {;
   return (;
+
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       <div>;
         <Label htmlFor="publishedDate">Published Date (Optional)</Label>;
         <Popover>;
           <PopoverTrigger asChild>;
             <FormControl>;
-              <Button;
+              <Button
                 variant={"outline"}
-                className={cn(;
-                  "w-full md:w-[240px] pl-3 text-left font-normal";
-                  !startDate && "text-muted-foreground";
-                )}
-              >;
+                className={cn(
+                  "w-full md: w-[240px] pl-3 text-left font-normal",
+                  !startDate && "text-muted-foreground",
+                )}>;
                 {startDate ? (;
                   format(startDate, "PPP");
                 ) : (;
                   <span>Pick a date</span>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-              </Button>
-            </FormControl>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="start">
+              </Button>;
+            </FormControl>;
+          </PopoverTrigger>;
+          <PopoverContent className="w-auto p-0" align="start">;
             <Calendar
               mode="single"
               selected={startDate}
               onSelect={setStartDate}
+
               disabled={(date) =>;
                 date > new Date();
               }
@@ -162,6 +164,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               disabled={(date) =>;
                 date < new Date();
               }
+
               initialFocus;
             />;
           </PopoverContent>;
@@ -169,4 +172,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
       </div>;
     </div>;
   );
+=======
+    </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

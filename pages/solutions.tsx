@@ -1,258 +1,778 @@
+
 import React from 'react';
-import Link from 'next/link';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
+import {
+  Target, Brain, Rocket, Shield, Zap, Atom, Cpu
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart
+  Lightbulb, Search, Grid, List, TrendingUp
+  User, ShoppingCart, Bell, HelpCircle, FileText
+  Video, Headphones, Code, Database, Network, Server
+  Monitor, Smartphone, Camera, Gamepad2, Palette
+  Music, Film, BookOpenCheck, Building, MessageCircle
+import React from 'react',;
+import Layout from '../components/layout/Layout',;
+import SEO from '../components/SEO',;
+import { motion } from 'framer-motion',;
 import { 
-  Shield, 
-  Rocket, 
-  BarChart3, 
-  Settings, 
-  Zap, 
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Globe,
-  Building
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-
-const solutions = [
-  {
-    title: "Enterprise Solutions",
-    description: "Comprehensive enterprise-grade solutions for large organizations",
-    icon: Shield,
-    href: "/solutions/enterprise",
-    features: ["Scalable Architecture", "Enterprise Security", "24/7 Support", "Custom Integration"],
-    price: "Custom Pricing"
-  },
-  {
-    title: "Startup Solutions",
-    description: "Cost-effective solutions designed for growing startups",
-    icon: Rocket,
-    href: "/solutions/startup",
-    features: ["Rapid Deployment", "Cost-Effective", "Scalable Growth", "Startup Support"],
-    price: "From $999/month"
-  },
-  {
-    title: "Industry Solutions",
-    description: "Specialized solutions tailored for specific industries",
-    icon: BarChart3,
-    href: "/solutions/industry",
-    features: ["Industry Expertise", "Compliance Ready", "Custom Workflows", "Regulatory Support"],
-    price: "Industry Specific"
-  },
-  {
-    title: "Custom Development",
-    description: "Bespoke solutions built to your exact specifications",
-    icon: Settings,
-    href: "/solutions/custom",
-    features: ["100% Custom", "Full Ownership", "Dedicated Team", "Flexible Timeline"],
-    price: "Project Based"
-  },
-  {
-    title: "Digital Transformation",
-    description: "Complete digital transformation for modern businesses",
-    icon: Zap,
-    href: "/solutions/digital-transformation",
-    features: ["Process Automation", "Data Migration", "Change Management", "Training & Support"],
-    price: "From $5,000/month"
-  },
-  {
-    title: "Cloud Migration",
-    description: "Seamless migration to cloud infrastructure",
-    icon: Cloud,
-    href: "/solutions/cloud-migration",
-    features: ["Zero Downtime", "Data Security", "Cost Optimization", "Performance Boost"],
-    price: "From $2,500/month"
+  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
+  Lightbulb, Search, Grid, List, TrendingUp, 
+  User, ShoppingCart, Bell, HelpCircle, FileText, 
+  Video, Headphones, Code, Database, Network, Server, 
+  Monitor, Smartphone, Camera, Gamepad2, Palette, 
+  Music, Film, BookOpenCheck, Building, MessageCircle, 
+import React from 'react',
+import Layout from '../components / layout / Layout',
+import SEO from '../components / SEO',
+import { motion } from 'framer-motion',
+import {
+  Target, Brain, Rocket, Shield, Zap, Atom, Cpu,
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart,
+  Lightbulb, Search, Grid, List, TrendingUp,
+  User, ShoppingCart, Bell, HelpCircle, FileText,
+  Video, Headphones, Code, Database, Network, Server,
+  Monitor, Smartphone, Camera, Gamepad2, Palette,
+  Music, Film, BookOpenCheck, Building, MessageCircle,
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
+} from 'lucide-react'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
+} from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
+const Solutions: NextPage = () => {
+  const industry_solutions = [;
+    {
+      id: 'healthcare'
+      name: 'Healthcare Solutions'
+      description: 'AI-powered healthcare technology solutions'
+      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management']
+      price: '$3,999'
+      period: 'month'
+      popular: true
+      icon: <Heart className="w-8 h-8" />
+    }
+    {
+      id: 'financial'
+      name: 'Financial Solutions'
+      description: 'Advanced financial technology and services'
+      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation']
+      price: '$2,999'
+      period: 'month'
+      popular: false
+      icon: <TrendingUp className="w-8 h-8" />
+    }
+    {
+      id: 'manufacturing'
+      name: 'Manufacturing Solutions'
+      description: 'Smart manufacturing and Industry 4.0'
+      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration']
+      price: '$2,799'
+      period: 'month'
+      popular: false
+      icon: <Settings className="w-8 h-8" />
+    }
+    {
+      id: 'retail'
+      name: 'Retail Solutions'
+      description: 'Digital transformation for retail businesses'
+      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions']
+      price: '$2,499'
+      period: 'month'
+      popular: false
+      icon: <ShoppingCart className="w-8 h-8" />
+    }
+    {
+      id: 'government'
+      name: 'Government Solutions'
+      description: 'Technology solutions for public sector'
+      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement']
+      price: '$3,499'
+      period: 'month'
+      popular: false
+      icon: <Building className="w-8 h-8" />
+    }
+    {
+      id: 'education'
+      name: 'Education Solutions'
+      description: 'Innovative educational technology'
+      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms']
+      price: '$1,999'
+      period: 'month'
+      popular: false
+      icon: <BookOpenCheck className="w-8 h-8" />
+    }
+  ]
+  const solutionCapabilities = [
+    {
+      title: 'Industry Expertise'
+      description: 'Deep domain knowledge across sectors'
+      icon: <Briefcase className="w-6 h-6" />
+    }
+    {
+      title: 'Custom Development'
+      description: 'Tailored solutions for unique needs'
+      icon: <Code className="w-6 h-6" />
+    }
+    {
+      title: 'Integration Services'
+      description: 'Seamless system integration'
+      icon: <Network className="w-6 h-6" />
+    }
+    {
+      title: 'AI & Automation'
+      description: 'Intelligent automation solutions'
+      icon: <Brain className="w-6 h-6" />
+    }
+    {
+      title: 'Cloud & Security'
+      description: 'Secure cloud infrastructure'
+      icon: <Shield className="w-6 h-6" />
+    }
+    {
+      title: 'Analytics & Insights'
+      description: 'Data-driven decision making'
+      icon: <BarChart3 className="w-6 h-6" />
+    }
+  ]
+  const caseStudies = [
+    {
+      title: "Healthcare Provider Digital Transformation"
+      industry: "Healthcare"
+      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency."
+      results: [
+        "30% reduction in administrative overhead"
+        "Improved patient satisfaction scores"
+        "Enhanced data security and compliance"
+      ]
+      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    }
+    {
+      title: "E-commerce Platform Modernization"
+      industry: "Retail"
+      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales."
+      results: [
+        "45% increase in conversion rates"
+        "60% improvement in page load times"
+        "Enhanced mobile user experience"
+      ]
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+    }
+    {
+      title: "Manufacturing IoT Integration"
+      industry: "Manufacturing"
+      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency."
+      results: [
+        "25% reduction in unplanned downtime"
+        "15% improvement in production efficiency"
+        "Predictive maintenance cost savings"
+      ]
+      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+    }
+  ]
+      id: 'healthcare',
+      name: 'Healthcare Solutions',
+      description: 'AI-powered healthcare technology solutions',
+      features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
+      price: '$3,999',
+      period: 'month',
+      popular: true,
+      icon: <Heart className="w-8 h-8" />
+    },
+    {
+      id: 'financial',
+      name: 'Financial Solutions',
+      description: 'Advanced financial technology and services',
+      features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
+      price: '$2,999',
+      period: 'month',
+      popular: false,
+      icon: <TrendingUp className="w-8 h-8" />
+    },
+    {
+      id: 'manufacturing',
+      name: 'Manufacturing Solutions',
+      description: 'Smart manufacturing and Industry 4.0',
+      features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
+      price: '$2,799',
+      period: 'month',
+      popular: false,
+      icon: <Settings className="w-8 h-8" />
+    },
+    {
+      id: 'retail',
+      name: 'Retail Solutions',
+      description: 'Digital transformation for retail businesses',
+      features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
+      price: '$2,499',
+      period: 'month',
+      popular: false,
+      icon: <ShoppingCart className="w-8 h-8" />
+    },
+    {
+      id: 'government',
+      name: 'Government Solutions',
+      description: 'Technology solutions for public sector',
+      features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
+      price: '$3,499',
+      period: 'month',
+      popular: false,
+      icon: <Building className="w-8 h-8" />
+    },
+    {
+      id: 'education',
+      name: 'Education Solutions',
+      description: 'Innovative educational technology',
+      features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
+      price: '$1,999',
+      period: 'month',
+      popular: false,
+      icon: <BookOpenCheck className="w-8 h-8" />
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-];
-
-const stats = [
-  { number: '500+', label: 'Solutions Delivered' },
-  { number: '99.9%', label: 'Success Rate' },
-  { number: '24/7', label: 'Support Available' },
-  { number: '50+', label: 'Industry Experts' }
-];
-
-export default function SolutionsPage() {
+}
+  ],
+  const solutionCapabilities = [
+    {
+      title: 'Industry Expertise',
+      description: 'Deep domain knowledge across sectors',
+      icon: <Briefcase className="w-6 h-6" />
+    },
+    {
+      title: 'Custom Development',
+      description: 'Tailored solutions for unique needs',
+      icon: <Code className="w-6 h-6" />
+    },
+    {
+      title: 'Integration Services',
+      description: 'Seamless system integration',
+      icon: <Network className="w-6 h-6" />
+    },
+    {
+      title: 'AI & Automation',
+      description: 'Intelligent automation solutions',
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: 'Cloud & Security',
+      description: 'Secure cloud infrastructure',
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: 'Analytics & Insights',
+      description: 'Data-driven decision making',
+      icon: <BarChart3 className="w-6 h-6" />
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const caseStudies = [
+    {
+      title: "Healthcare Provider Digital Transformation",
+      industry: "Healthcare",
+      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
+      results: [
+        "30% reduction in administrative overhead",
+        "Improved patient satisfaction scores",
+        "Enhanced data security and compliance"
+      ],
+      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    },
+    {
+      title: "E-commerce Platform Modernization",
+      industry: "Retail",
+      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales.",
+      results: [
+        "45% increase in conversion rates",
+        "60% improvement in page load times",
+        "Enhanced mobile user experience"
+      ],
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+    },
+    {
+      title: "Manufacturing IoT Integration",
+      industry: "Manufacturing",
+      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
+      results: [
+        "25% reduction in unplanned downtime",
+        "15% improvement in production efficiency",
+        "Predictive maintenance cost savings"
+      ],
+      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
   return (
-    <MainLayout 
-      title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development, digital transformation, and cloud migration services."
-      keywords="enterprise solutions, startup solutions, digital transformation, cloud migration, custom development, industry solutions"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <UltraAdvancedFuturisticBackground>
+      <div className="min-h-screen">
+        <Head>
+          <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
+          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
+        </Head>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
+          <div className="text-center max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
+                Industry Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-gray-300">
-                Comprehensive technology solutions tailored to your business needs. 
-                From enterprise-grade systems to startup-friendly packages.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Tailored technology solutions designed for your industry's unique challenges and opportunities
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
                   href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300 flex items-center"
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Get Started <ArrowRight className="ml-2" />
-                </Link>
-                <Link 
-                  href="/about"
-                  className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-300"
+                  Get Started
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Learn More
+                  Get Started
                 </Link>
+                <a
+                  href="/contact"
+                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Demo
+                </a>
               </div>
             </motion.div>
           </div>
         </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-gray-900">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+        {/* Solution Capabilities */}
+        <section className="py - 20 px - 4 bg - gradient - to - b from - black to - gray - 900">;
+          <div className="max - w-6xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+        {/* Solution Capabilities */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                Solution Capabilities
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive capabilities to deliver industry-specific technology solutions
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {solutionCapabilities.map((capability, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  key={capability.title}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
+                  viewport={{ once: true }}
+                  key={capability.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
-                    {stat.number}
+                  <div className="flex items-center mb-4">
+                    <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
+                      {capability.icon}
+                      {capability.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
-                  <div className="text-gray-300 text-lg">
-                    {stat.label}
-                  </div>
+                  <p className="text-gray-300">{capability.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Solutions Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+        {/* Industry Solutions */}
+        <section className="py - 20 px - 4">;
+          <div className="max - w-6xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </div>;
+        </section>;
+        {/* Industry Solutions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                Industry Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose from our comprehensive range of technology solutions designed to meet your specific business requirements.
+                Choose from our comprehensive suite of industry-specific solutions
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
+              {industrySolutions.map((solution, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  key={solution.id}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-colors duration-300 group"
+                  viewport={{ once: true }}
+
+                  className={`relative bg - gradient - to - br from - gray - 800 to - gray - 900 p - 6 rounded - xl border transition - all duration - 300 hover:scale - 105 ${
+                    solution.popular;
+                      ? 'border - orange - 500 shadow - lg shadow - orange - 500 / 25';
+                      : 'border - gray - 700 hover:border - orange - 500';
+
+                  }`}
+                  key={solution.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${;
+                    solution.popular;
+                      ? 'border-orange-500 shadow-lg shadow-orange-500/25';
+                      : 'border-gray-700 hover:border-orange-500';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
-                  <div className="flex items-center mb-6">
-                    <div className="bg-blue-600 p-3 rounded-lg mr-4 group-hover:bg-blue-500 transition-colors duration-300">
-                      <solution.icon className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {solution.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">
-                        {solution.title}
-                      </h3>
-                      <p className="text-gray-400">
-                        {solution.description}
-                      </p>
+                  )}
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
+                      {solution.icon}
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <div className="text-center mb-6">
+                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
+                      {solution.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
+                    <p className="text-gray-300 mb-4">{solution.description}</p>
+                    <div className="text-3xl font-bold text-orange-400 mb-2">
+                      {solution.price}
+                      {solution.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      <span className="text-lg text-gray-400">/{solution.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-bold text-blue-400">
-                      {solution.price}
-                    </span>
-                    <div className="flex text-yellow-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-current" />
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link 
-                    href={solution.href}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center group"
+                  <a 
+                    href="/contact" 
+                        {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </li>;
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </ul>
+                  <a
+                    href="/contact"
+                    className="w-full block text-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300"
                   >
-                    Learn More <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
+                    Get Started
+                  </a>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Industry Solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300"
+              >
+                Get Started
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                href="/demo"
+                className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10"
+              >
+                Request Demo
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900">
-          <div className="container mx-auto px-4 text-center">
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
+              <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                Ready for Industry Transformation?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let our experts help you choose the perfect solution for your needs. 
-                Get a free consultation and custom quote today.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Partner with us to build industry-specific solutions that drive your business forward
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
                   href="/contact"
-                  className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 flex items-center"
+                <a 
+                  href="/contact" 
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Get Free Consultation <ArrowRight className="ml-2" />
-                </Link>
-                <Link 
-                  href="/about"
-                  className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-300"
+                  Start Your Transformation
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  View Our Work
+                  Start Your Transformation
                 </Link>
+                <a
+                  href="/contact"
+                  className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Consultation
+                </a>
               </div>
             </motion.div>
           </div>
         </section>
       </div>
-    </MainLayout>
-  );
+    </UltraAdvancedFuturisticBackground>
+  )
 }
+export default Solutions;
+
+},
+
+export default Solutions,;
+;
+export default Solutions,
+            >;
+              <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
+                Ready for Industry Transformation?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+                Partner with us to build industry - specific solutions that drive your business forward;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 bg - gradient - to - r from - orange - 500 to - red - 600 text - white font - semibold rounded - lg hover:from - orange - 600 hover:to - red - 700 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  Start Your Transformation;
+                </a>;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 border - 2 border - orange - 400 text - orange - 400 font - semibold rounded - lg hover:bg - orange - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  Schedule Consultation;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+  );
+},;
+export default Solutions;

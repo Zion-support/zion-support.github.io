@@ -3,24 +3,20 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-console.log('🔒 Starting Security Audit...\n');
+  if (auditData && auditData.vulnerabilities && Object && Object.keys(auditData && auditData.vulnerabilities).length > 0) {
+    console && console.log('⚠️  Security vulnerabilities found: '),
+    Object && Object.entries(auditData && auditData.vulnerabilities).forEach(([pkg, vuln]) => {
+      console && console.log(`   - ${pkg}: ${vuln && vuln.severity} - ${vuln && vuln.title}`);
 
-// Check for security vulnerabilities
-try {
-  console.log('📦 Checking npm dependencies for vulnerabilities...');
-  const auditResult = execSync('npm audit --audit-level=moderate --json', { encoding: 'utf8' });
-  const auditData = JSON.parse(auditResult);
-  
-  if (auditData.vulnerabilities && Object.keys(auditData.vulnerabilities).length > 0) {
-    console.log('⚠️  Security vulnerabilities found:');
-    Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
-      console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`);
     });
   } else {
     console.log('✅ No security vulnerabilities found in dependencies');
   }
 } catch (error) {
-  console.log('❌ Failed to run npm audit:', error.message);
+
+  console && console.log('❌ Failed to run npm audit:', error && error.message);
+}
+
 
 // Check for sensitive data in files
 console.log('\n🔍 Scanning for sensitive data...');
@@ -61,16 +57,19 @@ const scanDirectory = (dir, results = []) => {
 };
 
 const sensitiveResults = scanDirectory('.');
-if (sensitiveResults.length > 0) {
-  console.log('⚠️  Potential sensitive data found:');
-  sensitiveResults.forEach(result => {
-    console.log(`   - ${result.file}`);
-    result.matches.forEach(match => {
-      console.log(`     ${match.substring(0, 50)}...`);
+
+if (sensitiveResults && sensitiveResults.length > 0) {
+  console && console.log('⚠️  Potential sensitive data found: '),
+  sensitiveResults && sensitiveResults.forEach(result => {
+    console && console.log(`   - ${result && result.file}`);
+    result && result.matches.forEach(match => {
+      console && console.log(`     ${match && match.substring(0, 50)}...`);
     });
   });
 } else {
-  console.log('✅ No sensitive data patterns found');
+  console && console.log('✅ No sensitive data patterns found');
+}
+
 
 // Check for outdated dependencies
 console.log('\n📅 Checking for outdated dependencies...');
@@ -78,16 +77,21 @@ try {
   const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
   const outdatedData = JSON.parse(outdatedResult);
   
-  if (Object.keys(outdatedData).length > 0) {
-    console.log('⚠️  Outdated dependencies found:');
-    Object.entries(outdatedData).forEach(([pkg, info]) => {
-      console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);
+
+  if (Object && Object.keys(outdatedData).length > 0) {
+    console && console.log('⚠️  Outdated dependencies found: '),
+    Object && Object.entries(outdatedData).forEach(([pkg, info]) => {
+      console && console.log(`   - ${pkg}: ${info && info.current} → ${info && info.latest}`);
+
     });
   } else {
     console.log('✅ All dependencies are up to date');
   }
 } catch (error) {
-  console.log('✅ All dependencies are up to date');
+
+  console && console.log('✅ All dependencies are up to date');
+}
+
 
 // Generate security report
 const securityReport = {

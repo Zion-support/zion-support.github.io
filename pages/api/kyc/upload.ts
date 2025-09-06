@@ -40,7 +40,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res
       .status(404)
       .json({ error: 'Profile not found. Start KYC first.' });
-  const id = crypto.randomUUID();
+  const id = crypto && crypto.randomUUID();
+
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
     id
@@ -49,20 +50,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     uploadedAt
   }
   // Replace or add
-  const withoutSameKind = (profile.documents |[]).filter(
-    d => d.kind !== kind
-  );
-  profile.documents = [...withoutSameKind, doc];
-  profile.lastUpdatedAt = uploadedAt;
-  profile.auditTrail.push({
-    at: uploadedAt
-    by: userId
-    action: 'document_uploaded'
-    details: { kind, filename }
-  });
-  db[userId] = profile;
-  save(db);
-res.status(200).json({ ok: true, profile });
+
+  }
 }
 
   } catch {;
@@ -108,38 +97,39 @@ res.status(200).json({ ok: true, profile });
 ;
 function save(db: Record<string, KycProfile>) {;
   fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default function handler(req, res) {
-  try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-  const { userId, kind, filename } = req.body as { userId?: string, kind?: KycDocumentMeta['kind'], filename?: string },;
-  if (!userId || !kind || !filename) return res.status( error: 'Missing userId, kind or filename' ).json({$2});
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { userId, kind, filename } = req.body as { userId?: string, kind?: KycDocumentMeta['kind'], filename?: string };
+  if (!userId || !kind || !filename) return res.status(400).json({ error: 'Missing userId, kind or filename' });
+
   const db = load();
   const profile = db[userId];
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    filename;
+  if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
+
+  const id = crypto.randomUUID();
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  const uploadedAt = new Date().toISOString();
+  const doc: KycDocumentMeta = {
+    id,
+    kind,
+    filename,
+
     uploadedAt};
-  // Replace or add;
+  // Replace or add
   const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
-  profile.documents = [...withoutSameKind, doc],;
+  profile.documents = [...withoutSameKind, doc];
   profile.lastUpdatedAt = uploadedAt;
   profile.auditTrail.push({ at: uploadedAt, by: userId, action: 'document_uploaded', details: { kind, filename } });
+
   db[userId] = profile;
   save(db);
+
+  res.status(200).json({ ok: true, profile })
+
+=======
   res.status(200).json({ ok: true, profile });
   } catch (error) {
     console.error("Error:", error);

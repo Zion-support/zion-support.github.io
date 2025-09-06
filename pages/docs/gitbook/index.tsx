@@ -6,7 +6,8 @@ import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir)
+
+
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -83,6 +84,21 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
         ))}
       </div>
     </div>
+
+=======
+}
+
+=======
+                  </a>;
+                </li>))}
+            </ul>;
+          </div>))}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
   );
 };
                     {it.rel  } catch (error) {

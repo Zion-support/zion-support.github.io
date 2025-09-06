@@ -4,25 +4,18 @@ import React, { useEffect, useMemo, useState } from 'react',;
 import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
 
-  id: string
-  userId: string | null
-  source: string
-  createdAt: string
-  heuristic: { reasons: string[], severity: string }
-  gpt?: { label: string, reason: string, confidence: number }
 
-  status: string
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([])
   const [adminToken, setAdminToken] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
+
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved)
+  }, []);
+
 
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
@@ -31,17 +24,47 @@ export default function FraudAdminPage() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
-      const json = await res.json()
-      if (!res.ok) throw new Error(json.error |'Failed to load')
-      setItems(json.items |[])
+
+
+=======
+export default /**
+ * FraudAdminPage - Function description
+ */
+function FraudAdminPage() {
+  const [items, set_items] = useState < FraudItem[]>([]),
+  const [admin_token, setAdminToken] = useState < string>(''),
+  const [loading, set_loading] = useState < boolean>(false),
+  const [error, set_error] = useState < string | null>(null),
+  useEffect (() => {
+    const saved = local_storage.get_item ('admin - token') || '',
+    setAdminToken (saved);
+  }, []),
+  const fetch_items = async () => {
+    set_loading (true),
+    set_error (null),
+    try {
+      const res = await fetch ('/api / fraud / admin / list', { headers: admin_token ? { 'x - admin - token': admin_token } : {} }),
+      const json = await res.json (),
+      if (throw new Error (json.error || 'Failed to load'), ) {
+  $2
+}
+      set_items (json.items || []);
     } catch (e: any) {
-      setError(e.message |'Failed to load')
+      set_error (e.message || 'Failed to load');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setLoading(false)
+
+      set_loading (false);
+
     }
-  }
-  useEffect(() => {
+
+    fetchItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminToken]);
+
+  const onSaveToken = () => {
+    localStorage.setItem('admin-token', adminToken);
+
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -188,11 +211,7 @@ export default function FraudAdminPage() {
                   </div>
                 </td>
               </tr>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            ))}
           </tbody>
         </table>
       </div>

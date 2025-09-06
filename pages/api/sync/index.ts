@@ -54,14 +54,16 @@ import { filterEventsByScope } from "../../../utils/sync/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
   if (req.method === "GET") {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const scope = state.config.scope,
-    const scopedEvents = filterEventsByScope(state.events, scope),
-    return res.status(200).json({
+    const scoped_events = filterEventsByScope (state.events, scope),
+    return res.status (200).json ({
       status: "ok",
-      instanceId: state.config.instanceId,
+      instance_id: state.config.instance_id,
       config: state.config,
       lastSyncedAt: state.lastSyncedAt,
       counts: {
+
         totalEvents: scopedEvents.length,
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 proposals: scopedEvents.filter((e) => e.type === "proposal").length,

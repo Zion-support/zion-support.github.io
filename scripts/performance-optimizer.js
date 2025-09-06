@@ -46,13 +46,14 @@ class PerformanceOptimizer {
     }
     return recommendations;
   }
-
+}
 if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
   optimizer.analyzeBundle();
   optimizer.generateReport();
+}
 
-module.exports = PerformanceOptimizer;
+module && module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
@@ -63,26 +64,26 @@ const fs = require('fs');
 const path = require('path');
 class PerformanceOptimizer {
   constructor() {
-    this.metrics = {};
+    this && this.metrics = {};
   }
   async analyzeBundle() {
-    const buildDir = path.join(process.cwd(), '.next');
-    if (fs.existsSync(buildDir)) {
-      const stats = this.getDirectorySize(buildDir);
-      this.metrics.bundleSize = stats;
-      console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+    const buildDir = path && path.join(process && process.cwd(), '.next');
+    if (fs && fs.existsSync(buildDir)) {
+      const stats = this && this.getDirectorySize(buildDir);
+      this && this.metrics.bundleSize = stats;
+      console && console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
     }
   }
   getDirectorySize(dirPath) {
     let totalSize = 0;
-    const files = fs.readdirSync(dirPath);
-    files.forEach(file => {
-      const filePath = path.join(dirPath, file);
-      const stats = fs.statSync(filePath);
-      if (stats.isDirectory()) {
-        totalSize += this.getDirectorySize(filePath);
+    const files = fs && fs.readdirSync(dirPath);
+    files && files.forEach(file => {
+      const filePath = path && path.join(dirPath, file);
+      const stats = fs && fs.statSync(filePath);
+      if (stats && stats.isDirectory()) {
+        totalSize += this && this.getDirectorySize(filePath);
       } else {
-        totalSize += stats.size;
+        totalSize += stats && stats.size;
       }
     });
     return totalSize;
@@ -90,26 +91,26 @@ class PerformanceOptimizer {
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      metrics: this.metrics,
-      recommendations: this.generateRecommendations()
+      metrics: this && this.metrics,
+      recommendations: this && this.generateRecommendations()
     };
-    fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
-    console.log('Performance report generated');
+    fs && fs.writeFileSync('performance-report && report.json', JSON && JSON.stringify(report, null, 2));
+    console && console.log('Performance report generated');
   }
   generateRecommendations() {
     const recommendations = [];
-    if (this.metrics.bundleSize > 1000000) { // 1MB
-      recommendations.push('Consider implementing code splitting');
-      recommendations.push('Use dynamic imports for large components');
-      recommendations.push('Optimize images and assets');
+    if (this && this.metrics.bundleSize > 1000000) { // 1MB
+      recommendations && recommendations.push('Consider implementing code splitting');
+      recommendations && recommendations.push('Use dynamic imports for large components');
+      recommendations && recommendations.push('Optimize images and assets');
     }
     return recommendations;
   }
 }
-if (require.main === module) {
+if (require && require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer.analyzeBundle();
-  optimizer.generateReport();
+  optimizer && optimizer.analyzeBundle();
+  optimizer && optimizer.generateReport();
 }
 module.exports = PerformanceOptimizer;
 ursor/add-new-services-and-deploy-updates-0462
@@ -223,11 +224,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           }
         });
         // Add performance optimizations for React components
-        if (file.endsWith('.tsx') || file.endsWith('.jsx')) {
-          // Add React.memo import if not present
-          if (newContent.includes('React.memo') && !newContent.includes("import React, { memo }")) {
-            newContent = newContent.replace(;
-              /import React from 'react';/g,
+
+        if (file && file.endsWith('.tsx') || file && file.endsWith('.jsx')) {
+          // Add React && React.memo import if not present
+          if (newContent && newContent.includes('React && React.memo') && !newContent && newContent.includes("import React, { memo }")) {
+            newContent = newContent ;/g,
+
               "import React, { memo, useCallback, useMemo } from 'react';"
             );
             fileOptimizations++;

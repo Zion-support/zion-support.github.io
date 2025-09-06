@@ -7,6 +7,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+
 import {
   Search
   Filter
@@ -179,11 +180,15 @@ export default function SearchPage() {;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
-  const filteredResults = searchResults.filter(result => {
-    const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-                        result.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'All' |result.category === selectedCategory;
-    const matchesFilter = selectedFilter === 'All' |result.type === selectedFilter;
+
+
+  const filteredResults = searchResults && searchResults.filter(result => {;
+    const matchesQuery = result && result.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+                        result && result.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || result && result.category === selectedCategory;
+    const matchesFilter = selectedFilter === 'All' || result && result.type === selectedFilter;
+
+
     return matchesQuery && matchesCategory && matchesFilter;
   });
 
@@ -522,20 +527,22 @@ export default function SearchPage(req, res) {
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl font-bold mb-6">
-                Search Our Website
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-                Find the information you need quickly and easily.
-              </p>
+
+              transition={{ duration: 0 && 0.8 }}>;
+              <h1 className="text-5xl font-bold mb-6">;
+                Search Our Website;
+              </h1>;
+              <p className="text-xl mb-8 text-blue-100">;
+                Find the information you need quickly and easily.;
+              </p>;
+
+
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto">
       <SmartHeader />
@@ -590,6 +597,7 @@ export default function SearchPage(req, res) {
               <div className="flex-1 max-w-2xl">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
                   <input
                     type="text"
                     placeholder="Search for services, guides, articles..."
@@ -684,9 +692,36 @@ export default function SearchPage(req, res) {
             </div>
             {showFilters && (
               <motion.div
+=======
+                </button>;
+
+                {categories && categories.map((category) => (;
+                  <button
+                    key={category && category.name}
+                    onClick={() => setSelectedCategory(category && category.name)}
+                    className={`px-4 py-2 rounded-lg transition-colors ${;
+                      selectedCategory === category && category.name;
+                        ? 'bg-blue-600 text-white';
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200';
+                    }`}
+                  >;
+                    {category && category.name} ({category && category.count});
+                  </button>;
+                ))}
+              </div>;
+
+              <div className="text-sm text-gray-600">;
+                {filteredResults && filteredResults.length} results found;
+              </div>;
+            </div>;
+
+            {showFilters && (;
+              <motion&& motion.div
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
+
                 transition={{ duration: 0.3 }}
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
@@ -760,13 +795,14 @@ export default function SearchPage(req, res) {
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <button
-                      key={filter.name}
-                      onClick={() => setSelectedFilter(filter.name)}
-                      className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                        selectedFilter === filter.name
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-white text-gray-700 hover:bg-gray-100'
+                      key={filter && filter.name}
+                      onClick={() => setSelectedFilter(filter && filter.name)}
+                      className={`px-3 py-1 rounded-full text-sm transition-colors ${;
+                        selectedFilter === filter && filter.name;
+                          ? 'bg-blue-600 text-white';
+                          : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
                     >
                       {filter.name} ({filter.count})
@@ -784,17 +820,30 @@ origin/automation-improvements-final
             )}
           </div>
         </section>
+=======
+                    >;
+                      {filter && filter.name} ({filter && filter.count});
+                    </button>;
+                  ))}
+                </div>;
+              </motion && motion.div>;
+            )}
+          </div>;
+        </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Search Results */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            {filteredResults.length > 0 ? (
-              <div className="space-y-6">
-                {filteredResults.map((result, index) => (
-                  <motion.div
-                    key={result.id}
+        <section className="py-16">;
+          <div className="container mx-auto px-4">;
+            {filteredResults && filteredResults.length > 0 ? (;
+              <div className="space-y-6">;
+                {filteredResults && filteredResults.map((result, index) => (;
+                  <motion&& motion.div
+                    key={result && result.id}
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
+
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
@@ -1059,8 +1108,8 @@ origin/automation-improvements-final
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                           <Link
                             href={result.url}
-                            className="hover:text-blue-600 transition-colors"
-                          >
+                            className="hover:text - blue - 600 transition - colors";
+                          >;
                             {result.title}
                           </Link>
                         </h3>
@@ -1096,46 +1145,212 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </div>
       </section>
 
+      {/* Search Interface */}
+      <section className="px-6 pb-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+            {/* Search Bar */}
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
+              <div className="flex-1 max-w-2xl">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-6 h-6" />
+
+                  <input
+                    type="text"
+                    placeholder="Search for services, technologies, or solutions..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all text-lg"
+                  />
+                  <button
+
+                    onClick={performSearch}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+
+              {/* View Mode Toggle */}
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-all duration-300 ${
+                    viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
+                  }`}
+                >
+                  <Grid className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all duration-300 ${
+                    viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
+                  }`}
+                >
+                  <List className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Filters and Sort */}
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
+                >
+                  <Sliders className="w-4 h-4" />
+                  Filters
+                  {Object.values(filters).some(f => f !== 'all') && (
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                  )}
+                </button>
+                
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                >
+                  <option value="relevance">Sort by Relevance</option>
+                  <option value="price-low">Sort by Price: Low to High</option>
+                  <option value="price-high">Sort by Price: High to Low</option>
+                  <option value="name">Sort by Name</option>
+                  <option value="status">Sort by Status</option>
+                </select>
+              </div>
+
+              {Object.values(filters).some(f => f !== 'all') && (
+                <button
+                  onClick={clearFilters}
+                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                  Clear Filters
+                </button>
+              )}
+            </div>
+
+            {/* Expanded Filters */}
+            {showFilters && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mt-6 pt-6 border-t border-white/20"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {/* Category Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Category</label>
+                    <select
+                      value={filters.category}
+                      onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {categories.map(category => (
+                        <option key={category.id} value={category.id} className="bg-slate-800 text-white">
+                          {category.icon} {category.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Status Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Status</label>
+                    <select
+                      value={filters.status}
+                      onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {statuses.map(status => (
+                        <option key={status.id} value={status.id} className="bg-slate-800 text-white">
+                          {status.icon} {status.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Price Range Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Price Range</label>
+                    <select
+                      value={filters.priceRange}
+                      onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {priceRanges.map(range => (
+                        <option key={range.id} value={range.id} className="bg-slate-800 text-white">
+                          {range.icon} {range.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Technology Filter */}
+                  <div>
+                    <label className="block text-white font-medium mb-2">Technology</label>
+                    <select
+                      value={filters.technology}
+                      onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
+                    >
+                      {technologies.map(tech => (
+                        <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
+                          {tech.icon} {tech.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </motion.div>
+
+            )}
+          </div>
+        </div>
+      </section>
+
+
       {/* Search Results */}
-      <section className='px-6 pb-20'>
-        <div className='max-w-7xl mx-auto'>
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
           {/* Results Header */}
-          <div className='mb-8'>
-            <h2 className='text-3xl font-bold text-white mb-2'>
-              {searchTerm
-                ? `Search Results for "${searchTerm}"`
-                : 'All Services'}
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-white mb-2">
+              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'}
             </h2>
-            <p className='text-white/60'>
-              {isSearching
-                ? 'Searching...'
-                : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
+            <p className="text-white/60">
+              {isSearching ? 'Searching...' : `${searchResults.length} services found`}
+              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
             </p>
           </div>
 
           {/* Loading State */}
           {isSearching && (
-            <div className='text-center py-20'>
-              <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
-                <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
+            <div className="text-center py-20">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
+                <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
               </div>
-              <p className='text-white/60'>Searching our services...</p>            </div>
+              <p className="text-white/60">Searching our services...</p>
+            </div>
           )}
 
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
-            <div className='text-center py-20'>
-              <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
-                <Search className='w-12 h-12 text-white/40' />
+            <div className="text-center py-20">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
+                <Search className="w-12 h-12 text-white/40" />
               </div>
-              <h3 className='text-2xl font-semibold text-white mb-2'>
-                No services found
-              </h3>
-              <p className='text-white/60 mb-6'>                Try adjusting your search terms or filters
+              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
+              <p className="text-white/60 mb-6">
+                Try adjusting your search terms or filters
               </p>
               <button
                 onClick={clearFilters}
-                className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+              >
                 Clear All Filters
               </button>
             </div>
@@ -1143,31 +1358,25 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
           {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
-            <AnimatePresence mode='wait'>
-              <div
-                className={
-                  viewMode === 'grid'
-                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                    : 'space-y-6'
-                }
-              >                {searchResults.map((service, index) => (
+            <AnimatePresence mode="wait">
+              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+                {searchResults.map((service, index) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
-                      viewMode === 'grid'                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                      viewMode === 'grid' 
+                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
                     }`}
                   >
-                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
-                    <div className='relative z-10'>
-                      <div className='flex items-start justify-between mb-4'>
-                        <div
-                          className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}
-                        >
-                          <service.icon className='w-8 h-8 text-white' />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                    <div className="relative z-10">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}>
+                          <service.icon className="w-8 h-8 text-white" />
                         </div>
                         <div className='flex flex-col items-end gap-2'>
                           <span
@@ -1330,30 +1539,21 @@ origin/automation-improvements-final
                             service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
                             'bg-blue-500/20 text-blue-300'
                           }`}>
-                            {service.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                            {service.status}
                           </span>
                           <span className="text-xs text-white/40">{service.technology}</span>
                         </div>
                       </div>
+                      
                       <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
                       <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
-                      {/* Price */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      
+                      {/* Price */}
                       <div className="mb-4">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       </div>
-                      {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      
+                      {/* Features */}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
                         <div className="space-y-2">
@@ -1362,39 +1562,84 @@ origin/automation-improvements-final
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
                             </div>
-                          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                          ))}
                         </div>
                       </div>
+                      
                       <div className="flex items-center justify-between">
                         <a
-                          href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
+                          href={service.link}
+                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
                         >
                           <span className="text-sm font-medium">Learn More</span>
                           <ExternalLink className="w-4 h-4 ml-2" />
-                        </Link>
+                        </a>
                         <a
                           href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
+                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
                         >
                           Get Quote
-                        </Link>
+                        </a>
                       </div>
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+</Link>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     </div>
                   </motion.div>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                ))}
+              </div>
+
+
+            ) : (
+              <motion.div
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
+                    <div className="flex items-start justify-between">;
+                      <div className="flex-1">;
+                        <div className="flex items-center mb-2">;
+                          <result && result.icon className="w-5 h-5 text-blue-600 mr-2" />;
+                          <span className="text-sm text-gray-500">{result && result.category}</span>;
+                          <span className="mx-2 text-gray-300">•</span>;
+                          <span className="text-sm text-gray-500">{result && result.type}</span>;
+                        </div>;
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">;
+                          <Link
+                            href={result && result.url}
+                            className="hover:text-blue-600 transition-colors">;
+                            {result && result.title}
+                          </Link>;
+                        </h3>;
+
+                        <p className="text-gray-600 mb-4">;
+                          {result && result.description}
+                        </p>;
+
+                        <div className="flex items-center text-sm text-gray-500">;
+                          <Clock className="w-4 h-4 mr-1" />;
+                          <span className="mr-4">Updated {result && result.lastUpdated}</span>;
+                          <div className="flex items-center">;
+                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />;
+                            <span>{result && result.rating}</span>;
+                          </div>;
+                        </div>;
+                      </div>;
+
+                      <Link
+                        href={result && result.url}
+                        className="ml-4 text-blue-600 hover:text-blue-700 transition-colors">;
+                        <ArrowRight className="w-5 h-5" />;
+                      </Link>;
+                    </div>;
+                  </motion && motion.div>;
+                ))}
               </div>;
             </AnimatePresence>;
           )  } catch (error) {
@@ -1414,31 +1659,25 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
-            <div className='text-center py-20'>
-              <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
-                <Search className='w-12 h-12 text-white/40' />
+            <div className="text-center py-20">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
+                <Search className="w-12 h-12 text-white/40" />
               </div>
-              <h3 className='text-2xl font-semibold text-white mb-2'>
-                Start Your Search
-              </h3>
-              <p className='text-white/60 mb-6'>
-                Enter keywords above to find the perfect technology solutions
-                for your business
+              <h3 className="text-2xl font-semibold text-white mb-2">Start Your Search</h3>
+              <p className="text-white/60 mb-6">
+                Enter keywords above to find the perfect technology solutions for your business
               </p>
-              <div className='flex flex-wrap justify-center gap-2'>
-                <span className='text-sm text-white/40'>Popular searches:</span>
-                {[
-                  'AI',
-                  'Cybersecurity',
-                  'Quantum Computing',
-                  'Edge Computing',
-                ].map(term => (                  <button
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="text-sm text-white/40">Popular searches:</span>
+                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
+                  <button
                     key={term}
                     onClick={() => {
                       setSearchTerm(term);
-                      performSearch();
+                      performSearch()
                     }}
-                    className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >
+                    className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
+                  >
                     {term}
                   </button>
                 ))}
@@ -1450,6 +1689,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
       <SmartFooter />
     </div>
+
   );
   )
   } catch (error) {

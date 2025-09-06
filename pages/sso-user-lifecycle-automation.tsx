@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -46,10 +45,11 @@ export default function SsoUserLifecycleAutomationPage(req, res) {
   return (;
     <Layout>;
       <Head>;
-        <title>SSO User Lifecycle Automation | Zion Tech Group</title>;
-        <meta name="description" content="Automate Joiner/Mover/Leaver across SSO/SCIM apps with approvals, logging, and policies." />;
-        <link rel="canonical" href="https://ziontechgroup.com/sso-user-lifecycle-automation" />;
+        <title > SSO User Lifecycle Automation | Zion Tech Group</title>;
+        <meta name="description" content="Automate Joiner / Mover / Leaver across SSO / SCIM apps with approvals, logging, and policies." />;
+        <link rel="canonical" href="https://ziontechgroup.com / sso - user - lifecycle - automation" />;
       </Head>;
+
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">SSO User Lifecycle Automation</h1>;

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const GitHubActionsAutomationBlueprint: React.FC = () => {
-  const automationWorkflows = [
+  const automation_workflows = [;
     {
       name: 'Continuous Integration'
       description: 'Automated testing, building, and quality checks'
@@ -82,29 +82,29 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       name: 'Continuous Integration',
       description: 'Automated testing, building, and quality checks',
       status: 'active',
-      frequency: 'on-push',
-      health: 'excellent'
+      frequency: 'on - push',
+      health: 'excellent';
     },
     {
       name: 'Continuous Deployment',
       description: 'Automated deployment to staging and production',
       status: 'active',
-      frequency: 'on-merge',
-      health: 'excellent'
+      frequency: 'on - merge',
+      health: 'excellent';
     },
     {
       name: 'Security Scanning',
       description: 'Automated vulnerability and dependency scanning',
       status: 'active',
       frequency: 'daily',
-      health: 'excellent'
+      health: 'excellent';
     },
     {
       name: 'Performance Testing',
       description: 'Automated performance and load testing',
       status: 'active',
       frequency: 'weekly',
-      health: 'excellent'
+      health: 'excellent';
     },
     {
       name: 'Content Generation',
@@ -122,33 +122,34 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
   ];
   const automationFeatures = [
+
     {
-      feature: 'Self-Healing CI/CD',
+      feature: 'Self - Healing CI / CD',
       description: 'Automatic detection and resolution of pipeline failures',
       benefit: 'Reduced manual intervention and faster deployments',
-      status: 'implemented'
+      status: 'implemented';
     },
     {
       feature: 'Intelligent Branch Management',
       description: 'Automated branch synchronization and conflict resolution',
       benefit: 'Maintained code consistency across branches',
-      status: 'implemented'
+      status: 'implemented';
     },
     {
       feature: 'Automated Code Review',
-      description: 'AI-powered code quality analysis and suggestions',
+      description: 'AI - powered code quality analysis and suggestions',
       benefit: 'Improved code quality and reduced review time',
-      status: 'implemented'
+      status: 'implemented';
     },
     {
       feature: 'Smart Testing Strategy',
       description: 'Intelligent test selection based on code changes',
       benefit: 'Faster feedback and reduced test execution time',
-      status: 'implemented'
+      status: 'implemented';
     },
     {
       feature: 'Deployment Automation',
-      description: 'Zero-downtime deployments with health checks',
+      description: 'Zero - downtime deployments with health checks',
       benefit: 'Seamless updates and improved user experience',
       status: 'implemented'
     }
@@ -161,9 +162,10 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
   ];
   const performanceMetrics = [
+
     { metric: 'Build Time', value: '2.3 min', target: '5 min', status: 'exceeded' },
     { metric: 'Test Coverage', value: '94.7%', target: '90%', status: 'exceeded' },
-    { metric: 'Deployment Frequency', value: '12/day', target: '5/day', status: 'exceeded' },
+    { metric: 'Deployment Frequency', value: '12 / day', target: '5 / day', status: 'exceeded' },
     { metric: 'Lead Time', value: '1.2 hours', target: '4 hours', status: 'exceeded' },
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' },
     { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded' }
@@ -193,7 +195,12 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 }
   };
   const getFrequencyColor = (frequency: string) => {
+=======
+;
+  const getFrequencyColor = (frequency: string) =>: any {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (frequency) {
+
       case 'on-push': return 'bg-blue-500/20 text-blue-400';
       case 'on-merge': return 'bg-green-500/20 text-green-400';
       case 'daily': return 'bg-yellow-500/20 text-yellow-400';

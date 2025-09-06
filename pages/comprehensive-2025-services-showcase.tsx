@@ -211,6 +211,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Innovative Services Showcase
@@ -237,9 +238,9 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         </div>
       </section>
       {/* Search and Filter Section */}
-      <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+      <section className="py - 8 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
+        <div className="max - w-7xl mx - auto">;
+          <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
             {/* Search Bar */}
       {/* Search and Filter Section */  } catch (error) {
     console.error("Error:", error);
@@ -265,15 +266,15 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
               />
             </div>
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
+            <div className="flex flex - wrap gap - 2">;
+              {categories.map ((category) => (
+                <button;
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                  on_click={() => setSelectedCategory (category.id)}
+                  className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
+                    selected_category === category.id;
+                      ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                      : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                   }`}
                 >
                   {category.name} ({category.count})
@@ -321,15 +322,12 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 >;
                   {category.name} ({category.count});
-                </button>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                </button>))}
             </div>;
+
             {/* View Mode and Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -366,6 +364,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -395,24 +394,26 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-          >
-            {filteredServices.map((service, index) => (
-              <motion.div
+      <section className="py - 16 px - 6">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.div;
+            variants={container_variants}
+            initial="hidden";
+            animate="visible";
+            className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8' : 'space - y-6'}
+          >;
+            {filtered_services.map ((service, index) => (
+              <motion.div;
                 key={service.id}
-                variants={itemVariants}
+                variants={item_variants}
                 className={`group relative ${
-                  viewMode === 'grid'
-                    ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-                    : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+
+                  view_mode === 'grid';
+                    ? 'p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                    : 'p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300';
+
                 }`}
-              >
+              >;
                 {/* Popular Badge */}
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
@@ -486,6 +487,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -510,7 +512,8 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   </div>
                 </div>
                 {/* Description */}
-                <p className="text-white/80 leading-relaxed mb-6">{service.description}</p>
+                <p className="text - white / 80 leading - relaxed mb - 6">{service.description}</p>;
+
                 {/* Key Features */}
                 {/* Description */  } catch (error) {
     console.error("Error:", error);
@@ -536,6 +539,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {service.features.length > 3 && (
                       <div className="text-cyan-400 text-sm font-medium">
                         +{service.features.length - 3} more features
@@ -580,8 +584,8 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
                   </div>
                 </div>
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
+                <div className="flex flex - col sm:flex - row gap - 3">;
+                  <a;
                     href={service.link}
                 {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
@@ -715,6 +719,7 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -750,24 +755,24 @@ export default function Comprehensive2025ServicesShowcase(req, res) {
 };
   )
           >;
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
+            <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
             </h2>;
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
-              Our team of experts is ready to help you implement these cutting-edge solutions;
+            <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
+              Our team of experts is ready to help you implement these cutting - edge solutions;
               and drive innovation in your organization.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <a;
                 href="mailto:kleber@ziontechgroup.com";
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2";
+                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2";
               >;
                 Schedule Consultation;
-                <ArrowRight className="w-5 h-5" />;
+                <ArrowRight className="w - 5 h - 5" />;
               </a>;
               <a;
                 href="tel:+13024640950";
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10";
+                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
               >;
                 Call Us Now;
               </a>;

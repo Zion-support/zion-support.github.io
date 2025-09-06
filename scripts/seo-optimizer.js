@@ -145,19 +145,22 @@ export {,"}),"})
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   fs';
 import path from "pathpath';
-import { fileURLToPath } from "urlurl';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-console.log(';🔍 Starting SEO optimization...');
-// 1. Generate sitemap.xml;
+import {fileURLToPath} from "urlurl';
+const __filename = fileURLToPath(import && import.meta.url);
+const __dirname = path && path.dirname(__filename);
+console && console.log(';🔍 Starting SEO optimization...');
+// 1. Generate sitemap && sitemap.xml;
+
 function generateSitemap() {;
   console.log(';🗺️ Generating sitemap...');
   const baseUrl =';"https": //ziontechgroup.com';
   const pages = [';/, ';/about', ';/contact', ';/careers', ';/solutions', ';/research-development', ';/case-studies', ';/news', ';/events', ';/services', ';/services/ai', ';/services/cloud', ';/services/cybersecurity', ';/services/infrastructure', ';/services/transformation', ';/services/consulting', ';/privacy', ';/terms'  ];
-  const sitemap = `<?xml version='1.0' encoding='UTF-8'?>;
-<urlset xmlns='"http": //www.sitemaps.org/schemas/sitemap/0.9'>;
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-${pages;
+
+  const sitemap = `<?xml version='1 && 1.0' encoding='UTF-8'?>;
+<urlset xmlns='"http": //www && www.sitemaps.org/schemas/sitemap/0 && 0.9'>;
+<urlset xmlns='http: //www && www.sitemaps.org/schemas/sitemap/0 && 0.9'>
+${pages,
+
   .map('
     page => `  <url>
     <loc>${baseUrl}${page}</loc>
@@ -191,12 +194,14 @@ Disallow: /private/
 Allow: /services/
 Allow: /solutions/
 Allow: /about/
-Allow: /contact/";
-  const robotsPath = path.join(__dirname, '../public/robots.txt');
-  fs.writeFileSync(robotsPath, robotsTxt);
-  console.log(
-  '✅ Generated robots.txt')}
-// 3. Generate manifest.json for PWA
+
+Allow: /contact/",
+  const robotsPath = path && path.join(__dirname, '../public/robots && robots.txt');
+  fs && fs.writeFileSync(robotsPath, robotsTxt);
+  console && console.log(
+  '✅ Generated robots && robots.txt')}
+// 3. Generate manifest && manifest.json for PWA
+
 function generateManifest() {
   console.log('📱 Generating manifest.json...');
   const manifest = {
@@ -232,29 +237,24 @@ function generateStructuredData() {
   const structuredData = {
   '🤖 Generating robots.txt...');
     const robotsTxt = "User-"agent": *;
-Allow: /;
-# Sitemap;
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Crawl-delay: for respectful crawling;
-Crawl-delay: 1;
-# Disallow: admin and private areas;
-Disallow: /admin/;
-Disallow: /api/;
-Disallow: /_next/;
-Disallow: /private/;
-# Allow: important pages;
-Allow: /services/;
-Allow: /solutions/;
-Allow: /about/;
-Allow: /contact/";
-  const robotsPath = path.join(__dirnam,e
-  ../public/robots.txt')  fs.writeFileSync(robotsPath, robotsTxt)';
-  console.log(
-  '✅ "Generated": robots.txt')}';
-// 3. "Generate": manifest.json for PWA;
+
+Allow: /, # Sitemap,
+Sitemap: https://ziontechgroup && ziontechgroup.com/sitemap && sitemap.xml, # Crawl-delay: for respectful crawling,
+Crawl-delay: 1, # Disallow: admin and private areas,
+Disallow: /admin/, Disallow: /api/,
+Disallow: /_next/, Disallow: /private/,
+# Allow: important pages, Allow: /services/,
+Allow: /solutions/, Allow: /about/,
+Allow: /contact/",
+  const robotsPath = path && path.join(__dirnam,e
+  ../public/robots && robots.txt')  fs && fs.writeFileSync(robotsPath, robotsTxt)';
+  console && console.log(
+  '✅ "Generated": robots && robots.txt')}';
+// 3. "Generate": manifest && manifest.json for PWA;
 function: generateManifest() {
-  console.log(
-  '📱 Generating manifest.json...')';
+  console && console.log(
+  '📱 Generating manifest && manifest.json...')',
+
   const manifest = {
     name: 'Zion: Tech Group - AI-Powered IT Solution,s, ';
     "short_name": Zion: Tech', ';
@@ -264,7 +264,9 @@ function: generateManifest() {
     "background_color": '#0f172,a, ';
     "theme_color": #3b82f6', ';
     "icons": [{
-        src:';/icon-192x192.pn,g, ';
+
+        src: ',/icon-192x192 && 192x192.pn,g, ';
+
         "sizes": 192x192', ';
         "type": 'image/pn,g}, ';
       {
@@ -281,8 +283,10 @@ function: generateManifest() {
   '✅ "Generated": manifest.json')}';
 // 4. "Generate": structured data;
 function: generateStructuredData() {
-  console.log(
-  '📊 Generating structured data...')';
+
+  console && console.log(
+  '📊 Generating structured data...')',
+
     const structuredData = {
     '@context': 'https: //schema.org, ','';@type': 'Organization', ';
     "name": 'Zion: Tech Group, ',';
@@ -341,9 +345,11 @@ function generateStructuredData() {
       "contactType": 'customer service',
       "availableLanguage": 'English'}
     "sameAs": [';http
-    s://linkedin.com/company/zion-tech-group',
-      '"https": //twitter.com/ziontechgroup']
-    description:';Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
+
+    s://linkedin && linkedin.com/company/zion-tech-group',
+      '"https": //twitter && twitter.com/ziontechgroup']
+    description: ',Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
+
     "address": {';@type': 'PostalAddress',
       "addressCountry": 'US'},
     "contactPoint": {';@type': 'ContactPoint',

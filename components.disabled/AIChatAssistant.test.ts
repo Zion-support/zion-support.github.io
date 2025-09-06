@@ -3,6 +3,7 @@ import { describe, it, expect } from 'vitest'
 import AIChatAssistant from './AIChatAssistant'
 describe('AIChatAssistant'
   it('renders without crashing'
+
     expect(screen.getByRole('main'
   it('displays correct content'
   it('handles user interactions'

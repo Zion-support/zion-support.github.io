@@ -31,9 +31,10 @@ export const quoteRequestService = {
     
     // Format the data to include talent_name
     return data.map((item: any) => ({
+
       ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
-  },
+      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
+  };
   
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
@@ -68,12 +69,41 @@ export const quoteRequestService = {
       ...data;
       talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
   }
+;
+  // Get quote requests for a specific talent;
+  getByTalentId: async (talent_id: string) => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select ('*');
+      .eq ('talent_id', talent_id);
+      .order ('created_at', { ascending: false });
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return data as QuoteRequest[];
+  }
+;
+  // Get a single quote request by id;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  getById: async (id: string) => {
+    const { data, error } = await supabase;
+      .from ('quote_requests');
+      .select (`;
+        *;
+        talent:talent_id (
+
+      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+  };
+  
+
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
     // If marking as responded, set replied_at
     if (status === 'responded') {
-      updates.replied_at = new Date().toISOString()
+      updates && updates.replied_at = new Date().toISOString()
     }
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
@@ -82,8 +112,11 @@ export const quoteRequestService = {
         .select('viewed_at')
         .eq('id', id)
         .single();
-      if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString()
+
+      
+      if (!data && data.viewed_at) {
+        updates && updates.viewed_at = new Date().toISOString()
+
       }
     }
     const { data, error } = await supabase

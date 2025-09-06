@@ -49,58 +49,66 @@ import Link from 'next/link';
 const Services2024Page: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<
-    'name' | 'price' | 'rating' | 'customers'
+  const [sortBy, setSortBy] = useState<;
+    'name' | 'price' | 'rating' | 'customers';
   >('name');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-  // Combine all services
-  const allServices = [
-    ...realMicroSaasServices2024
-    ...innovativeITServices2024
+
+
+  // Combine all services;
+  const allServices = [;
+    ...realMicroSaasServices2024,;
+    ...innovativeITServices2024,;
   ];
-  // Filter and sort services
-  const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
-      const matchesSearch =
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
-        service.features.some(feature =>
-          feature.toLowerCase().includes(searchQuery.toLowerCase())
+
+  // Filter and sort services;
+  const filteredServices = useMemo(() => {;
+    let filtered = allServices && allServices.filter(service => {;
+      const matchesSearch =;
+        service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+        service && service.features.some(feature =>;
+          feature && feature.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
         );
-      const matchesCategory =
-        selectedCategory === 'all' |
-        (selectedCategory === 'ai' && service.variant.includes('ai')) |
-        (selectedCategory === 'quantum' &&
-          service.variant.includes('security')) |
-        (selectedCategory === 'it' && service.variant.includes('it')) |
-        (selectedCategory === 'api' && service.variant.includes('api')) |
-        (selectedCategory === 'cloud' && service.variant.includes('cloud')) |
-        (selectedCategory === 'marketing' &&
-          service.variant.includes('marketing')) |
-        (selectedCategory === 'project' &&
-          service.variant.includes('project')) |
-        (selectedCategory === 'customer' &&
-          service.variant.includes('customer'));
+
+      const matchesCategory =;
+        selectedCategory === 'all' ||;
+        (selectedCategory === 'ai' && service && service.variant.includes('ai')) ||;
+        (selectedCategory === 'quantum' &&;
+          service && service.variant.includes('security')) ||;
+        (selectedCategory === 'it' && service && service.variant.includes('it')) ||;
+        (selectedCategory === 'api' && service && service.variant.includes('api')) ||;
+        (selectedCategory === 'cloud' && service && service.variant.includes('cloud')) ||;
+        (selectedCategory === 'marketing' &&;
+          service && service.variant.includes('marketing')) ||;
+        (selectedCategory === 'project' &&;
+          service && service.variant.includes('project')) ||;
+        (selectedCategory === 'customer' &&;
+          service && service.variant.includes('customer'));
+
       return matchesSearch && matchesCategory;    });
-    // Sort services
-    filtered.sort((a, b) => {
+
+    // Sort services;
+    filtered && filtered.sort((a, b) => {;
+
       let aValue: any, bValue: any;
-      switch (sortBy) {
-        case 'price':
-          aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          bValue = parseFloat(b.price.replace(/[^0-9.]/g, ''));
+      switch (sortBy) {;
+        case 'price':;
+          aValue = parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
+          bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
+
           break;
-        case 'rating':
-          aValue = a.rating;
-          bValue = b.rating;
+        case 'rating':;
+          aValue = a && a.rating;
+          bValue = b && b.rating;
           break;
-        case 'customers':
-          aValue = parseInt(a.customers.replace(/[^0-9]/g, ''));
-          bValue = parseInt(b.customers.replace(/[^0-9]/g, ''));
+        case 'customers':;
+          aValue = parseInt(a && a.customers.replace(/[^0-9]/g, ''));
+          bValue = parseInt(b && b.customers.replace(/[^0-9]/g, ''));
           break;
-        default:
-          aValue = a.name.toLowerCase();
-          bValue = b.name.toLowerCase();
+        default:;
+          aValue = a && a.name.toLowerCase();
+          bValue = b && b.name.toLowerCase();
       }
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1;
@@ -174,7 +182,11 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return TrendingUp;
     if (variant.includes('project')) return Users;
     if (variant.includes('customer')) return CheckCircle;
-    return Sparkles;  }
+
+    return Sparkles
+  };
+
+
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -281,9 +293,15 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return 'from-gray-500 to-slate-500'
   },
   return (
+
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
+      </Head>;
+=======
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
@@ -294,8 +312,11 @@ const Services2024Page: React.FC = () => {;
       <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
       <div className='relative z-10 min-h-screen'>
         {/* Hero Section */}
-        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
+
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -351,14 +372,11 @@ const Services2024Page: React.FC = () => {;
                   </div>
                   <div className='text-gray-400'>Revolutionary Services</div>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Experience the next generation of AI, quantum security, and enterprise IT solutions.
+                Experience the next generation of AI, quantum security, and enterprise IT solutions. 
                 Transform your business with our revolutionary 2024 service portfolio.
               </p>
-              {/* Stats */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+              {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
@@ -376,6 +394,7 @@ const Services2024Page: React.FC = () => {;
                   <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
                   <div className="text-gray-400">Happy Customers</div>
                 </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -409,25 +428,19 @@ const Services2024Page: React.FC = () => {;
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
-                      value={searchQuery  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
                     />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
                 {/* Category Filter */}
-                <div>
+                <div>;
                   <select
                     value={selectedCategory}
-                    onChange={e => setSelectedCategory(e.target.value)}
-                    className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
-                  >
-                    {categories.map(category => (                      <option key={category.id} value={category.id}>
-                        {category.name} ({category.count})
-                      </option>
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </select>
                 </div>
@@ -457,6 +470,8 @@ const Services2024Page: React.FC = () => {;
 }
                   </select>;
                 </div>;
+
+=======
                 {/* Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -464,10 +479,17 @@ const Services2024Page: React.FC = () => {;
 }
                 <div className="flex space-x-2">
                   <select
-                    value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+                    value={sortBy}
+                    onChange={e => setSortBy(e && e.target.value as any)}
+                    className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200';
+=======
+        default:;
+          a_value = a.name.toLowerCase ();
+          b_value = b.name.toLowerCase ();
+      }
+      // Check condition
+if ( {) {
+  $2
 }
                     onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
                     <option value="name">Sort by Name</option>
@@ -496,6 +518,7 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </button>;
                 </div>;
               </div>;
@@ -550,27 +573,21 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
-                      {/* Service Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      {/* Service Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
-                          {React.createElement(getVariantIcon(service.variant), {
-                            className: `w-6 h-6 text-cyan-400`
-                          })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                          {React.createElement(getVariantIcon(service.variant), { 
+                            className: `w-6 h-6 text-cyan-400` 
+                          })}
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                           <div className="text-sm text-gray-400">per month</div>
                         </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
@@ -602,25 +619,44 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                        {service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        {service.name}
                       </h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        {service.tagline  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        {service.tagline}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                      </p>
+=======
+                      <div className='flex items-start justify-between mb-4'>;
+                        <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
+                          {React && React.createElement(;
+                            getVariantIcon(service && service.variant),;
+                            {;
+                              className: `w-6 h-6 text-cyan-400`,;
+                            }
+                          )}
+                        </div>;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                        <div className='text-right'>;
+                          <div className='text-2xl font-bold text-cyan-400'>;
+                            {service && service.price}
+                          </div>;
+                          <div className='text-sm text-gray-400'>per month</div>                        </div>;
+                      </div>;
+
+                      {/* Service Info */}
+                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
+                        {service && service.name}
+                      </h3>;
+                      <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
                       </p>;
-                      {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
+
+                      {/* Features */}
+
+=======
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
                         <div className="space-y-2">
@@ -654,13 +690,25 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                         </div>;
                       </div>;
-                      {/* Stats */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      {/* Stats */}
+                      <div className='grid grid - cols - 3 gap - 4 mb - 6'>;
+                        <div className='text - center'>;
+                          <div className='flex items - center justify - center space - x-1 mb - 1'>;
+                            <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
+                            <span className='text - sm font - semibold text - white'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                              {service.rating}
+                            </span>;
+                          </div>;
+                          <div className='text - xs text - gray - 400'>Rating</div>;
+                        </div>;
+                        <div className='text - center'>;
+                          <div className='text - sm font - semibold text - white mb - 1'>;
+                            {service.customers}
+
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
@@ -677,6 +725,7 @@ const Services2024Page: React.FC = () => {;
                           <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
@@ -692,11 +741,7 @@ const Services2024Page: React.FC = () => {;
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-                          {service.variant.replace('-futuristic', '').replace('- ')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                          {service.variant.replace('-futuristic', '').replace('- ')}
                         </div>
                       </div>
                     </div>
@@ -765,6 +810,7 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </div>;
         </section>;
         {/* CTA Section */  } catch (error) {
@@ -795,7 +841,7 @@ const Services2024Page: React.FC = () => {;
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of businesses already leveraging our revolutionary 2024 services.
+                Join thousands of businesses already leveraging our revolutionary 2024 services. 
                 Get started today and experience the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -809,6 +855,7 @@ const Services2024Page: React.FC = () => {;
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </motion.div>
           </div>
@@ -852,15 +899,18 @@ export default Services2024Page,
               </p>;
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
                 <Link;
-                  href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">;
-                  <Zap className="w-5 h-5" />;
-                  <span>Get Started Today</span>;
+                  href='/contact';
+                  className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 font - semibold';
+                >;
+                  <Zap className='w - 5 h - 5' />;
+                  <span > Get Started Today</span>;
                 </Link>;
                 <Link;
-                  href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">;
-                  <span>View Pricing Plans</span>;
-                  <ArrowRight className="w-4 h-4" />;
-                </Link>;
+                  href='/pricing - 2033';
+                  className='flex items - center space - x-2 border border - cyan - 500 / 30 text - cyan - 400 px - 8 py - 4 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 200 font - semibold';
+                >;
+                  <span > View Pricing Plans</span>;
+                  <ArrowRight className='w - 4 h - 4' />                </Link>;
               </div>;
             </motion.div>;
           </div>;

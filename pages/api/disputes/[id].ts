@@ -18,21 +18,30 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
   const { id } = req.query;
+
   if (typeof id !== "string")
-    return res.status(400).json({ error: "Invalid id" });
+
+    return res && res.status(400).json({ error: "Invalid id" });
+
+
   const user = parseUserFromRequest(req);
-  if (req.method === "GET") {
+
+  if (req && req.method === "GET") {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: "Dispute not found" });
+    if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
-      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-    } catch (e: any) {
-      return res.status(e.statusCode |403).json({ error: "Forbidden" });
+
+
     }
-    return res.status(200).json({ dispute });
+    return res && res.status(200).json({ dispute });
   }
-  res.setHeader("Allow", "GET");
-  return res.status(405).end("Method Not Allowed");
+
+
+  res && res.setHeader("Allow", "GET");
+  return res && res.status(405).end("Method Not Allowed");
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -76,18 +85,18 @@ export default async function handler(req, res) {
   }
 }
 ;
-  res.setHeader('AllowGET');
-  return res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { id } = req.query;
+  if (
+    return res.status (400).json ({ error: "Invalid id" })) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  const user = parseUserFromRequest (req);
+;
+  // Check condition
+if ( {) {
+  $2
 }

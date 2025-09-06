@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -567,54 +566,99 @@ export default function CaseStudyPage(req, res) {
                     <div>;
                       <h4 className="text-lg font-semibold text-white">System Design & Planning (Month 1)</h4>;
                       <p className="text-white/70">Customer service workflow analysis and system architecture design</p>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
-                  <div className="flex items-center gap-4">;
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">2</div>;
+                  <div>;
+                    <h3 className="text - 2xl font - semibold text - green - 400 mb - 6">Additional Benefits</h3>;
+                    <ul className="space - y-3 text - white / 80">;
+                      <li className="flex items - start gap - 3">;
+                        <div className="w - 2 h - 2 bg - green - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
+                        <span > Improved agent productivity and job satisfaction</span>;
+                      </li>;
+                      <li className="flex items - start gap - 3">;
+                        <div className="w - 2 h - 2 bg - green - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
+                        <span > Consistent service quality across all interactions</span>;
+                      </li>;
+                      <li className="flex items - start gap - 3">;
+                        <div className="w - 2 h - 2 bg - green - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
+                        <span > Real - time performance monitoring and optimization</span>;
+                      </li>;
+                      <li className="flex items - start gap - 3">;
+                        <div className="w - 2 h - 2 bg - green - 400 rounded - full mt - 3 flex - shrink - 0"></div>;
+                        <span > Scalable solution for business growth</span>;
+                      </li>;
+                    </ul>;
+                  </div>;
+                </div>;
+              </div>;
+            </section>;
+            {/* Technologies */}
+            <section className="mb - 16">;
+              <h2 className="text - 3xl font - bold text - white mb - 6">Technologies Used</h2>;
+              <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
+                <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 4">;
+                  {['ChatbotsNatural Language ProcessingTicket RoutingSentiment Analysis'].map ((tech) => (
+                    <div key={tech} className="bg - white / 5 rounded - lg p - 4 text - center border border - white / 10">;
+                      <span className="text - green - 400 font - semibold">{tech}</span>;
+                    </div>))}
+                </div>;
+              </div>;
+            </section>;
+            {/* Implementation */}
+            <section className="mb - 16">;
+              <h2 className="text - 3xl font - bold text - white mb - 6">Implementation Timeline</h2>;
+              <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20">;
+                <div className="space - y-6">;
+                  <div className="flex items - center gap - 4">;
+                    <div className="w - 12 h - 12 bg - green - 400 rounded - full flex items - center justify - center text - white font - bold">1</div>;
                     <div>;
-                      <h4 className="text-lg font-semibold text-white">AI Model Training (Months 2-3)</h4>;
-                      <p className="text-white/70">Training chatbots and routing algorithms on historical customer data</p>;
+                      <h4 className="text - lg font - semibold text - white">System Design & Planning (Month 1)</h4>;
+                      <p className="text - white / 70">Customer service workflow analysis and system architecture design</p>;
                     </div>;
                   </div>;
-                  <div className="flex items-center gap-4">;
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">3</div>;
+                  <div className="flex items - center gap - 4">;
+                    <div className="w - 12 h - 12 bg - green - 400 rounded - full flex items - center justify - center text - white font - bold">2</div>;
                     <div>;
-                      <h4 className="text-lg font-semibold text-white">Integration & Testing (Month 4)</h4>;
-                      <p className="text-white/70">System integration and comprehensive testing with live customer interactions</p>;
+                      <h4 className="text - lg font - semibold text - white">AI Model Training (Months 2 - 3)</h4>;
+                      <p className="text - white / 70">Training chatbots and routing algorithms on historical customer data</p>;
                     </div>;
                   </div>;
-                  <div className="flex items-center gap-4">;
-                    <div className="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center text-white font-bold">4</div>;
+                  <div className="flex items - center gap - 4">;
+                    <div className="w - 12 h - 12 bg - green - 400 rounded - full flex items - center justify - center text - white font - bold">3</div>;
                     <div>;
-                      <h4 className="text-lg font-semibold text-white">Deployment & Training (Month 5)</h4>;
-                      <p className="text-white/70">Full deployment and staff training on new systems</p>;
+                      <h4 className="text - lg font - semibold text - white">Integration & Testing (Month 4)</h4>;
+                      <p className="text - white / 70">System integration and comprehensive testing with live customer interactions</p>;
+                    </div>;
+                  </div>;
+                  <div className="flex items - center gap - 4">;
+                    <div className="w - 12 h - 12 bg - green - 400 rounded - full flex items - center justify - center text - white font - bold">4</div>;
+                    <div>;
+                      <h4 className="text - lg font - semibold text - white">Deployment & Training (Month 5)</h4>;
+                      <p className="text - white / 70">Full deployment and staff training on new systems</p>;
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </section>;
-            {/* Call to Action */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <section className="text-center">;
-              <div className="bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20">;
-                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Customer Service?</h2>;
-                <p className="text-white/80 mb-6 max-w-2xl mx-auto">;
+            {/* Call to Action */}
+            <section className="text - center">;
+              <div className="bg - gradient - to - r from - green - 500 / 10 to - cyan - 500 / 10 rounded - 2xl p - 8 border border - green - 500 / 20">;
+                <h2 className="text - 2xl font - bold mb - 4 text - white">Ready to Transform Your Customer Service?</h2>;
+                <p className="text - white / 80 mb - 6 max - w-2xl mx - auto">;
                   This case study demonstrates the real impact of customer service automation.;
-                  Let's discuss how we can help you achieve similar results.;
+                  Let & apos, s discuss how we can help you achieve similar results.;
                 </p>;
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
                   <Link;
                     href="/contact";
-                    className="bg-gradient-to-r from-green-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-500 hover:to-cyan-500 transition-all duration-300";
+                    className="bg - gradient - to - r from - green - 400 to - cyan - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - green - 500 hover:to - cyan - 500 transition - all duration - 300";
                   >;
                     Get Started;
                   </Link>;
                   <Link;
-                    href="/case-studies";
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-green-400/50 transition-all duration-300";
+                    href="/case - studies";
+                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - green - 400 / 50 transition - all duration - 300";
                   >;
                     View All Case Studies;
                   </Link>;
@@ -624,10 +668,5 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </>);
 }

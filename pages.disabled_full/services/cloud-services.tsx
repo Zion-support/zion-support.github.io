@@ -10,10 +10,10 @@ interface CloudservicesProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Cloudservices({ }: CloudservicesProps) {
   return (
-    <div>
-      <h1>Cloudservices</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <div>;
+      <h1>Cloudservices</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
   );
 }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Navigationdynamic from '../components/Navigation.dynamic'
+import Navigationdynamic from '../components/Navigation && Navigation.dynamic'
 describe('Navigationdynamic'
   test('renders without crashing'
     expect(screen.getByTestId('navigation.dynamic'
@@ -43,7 +43,7 @@ import Navigation from '../components/Navigation.dynamic';
 describe('Navigation', () => {
   test('renders without crashing', () => {
     render(<Navigation />);
-    expect(screen.getByTestId('navigation')).toBeInTheDocument();
+    expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument();
   });
   test('displays navigation items', () => {
     // Test navigation items

@@ -1,13 +1,36 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 // Comprehensive IT Services 2030 - Zion Tech Group
 // Enterprise-grade IT infrastructure, consulting, and managed services
-;
+
 export interface ServiceContact {
   "phone": string;
   email: string;
   website: string;
   address: string
 }
-;
+
 export interface ITService {
   "id": number;
   name: string;
@@ -37,16 +60,16 @@ export interface ITService {
 // Zion Tech Group Contact Information;
 const "zionContact": ServiceContact = {
   phone: "+1 302 464 0950","
-  "email": "kleber@ziontechgroup.com","
-  "website": "https://ziontechgroup.com",
-  ;
+  "email": "kleber@ziontechgroup && ziontechgroup.com","
+  "website": "https://ziontechgroup && ziontechgroup.com",
+
   ;"
   "address": "364 E Main St STE 1008 Middletown DE 19709"}};
 // Comprehensive IT Services 2030export const "comprehensiveITServices2030": ITService[] = [{
     id: 1,"
     "name": "Cloud Infrastructure & DevOps Engineering","
     "category": "Cloud & DevOps","
-    "description": "Comprehensive cloud infrastructure design, implementation, and DevOps automation services.We specialize in AWS, Azure, and Google Cloud with infrastructure-as-code, CI/CD pipelines, and automated deployment strategies.",
+    "description": "Comprehensive cloud infrastructure design, implementation, and DevOps automation services && services.We specialize in AWS, Azure, and Google Cloud with infrastructure-as-code, CI/CD pipelines, and automated deployment strategies.",
     "hourlyRate": 150,
     "projectRate": 25000,
     features[;"
@@ -61,7 +84,7 @@ const "zionContact": ServiceContact = {
     ],
     benefits[;"
       "50% reduction in deployment time","
-      "99.9% uptime guarantee","
+      "99 && 99.9% uptime guarantee","
       "Automated scaling and recovery","
       "Cost optimization through resource management","
       "Enhanced security and compliance","
@@ -72,12 +95,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$120 - $200/hour, $20,000 - $50,000 per project","
     "responseTime": "2-4 hours","
-    "sla": "99.9% uptime, 4-hour response time","
+    "sla": "99 && 99.9% uptime, 4-hour response time","
     certifications["AWS Solutions Architect", "Azure Solutions Architect", "Kubernetes Administrator", "Terraform Certified"],"
     "deliveryTime": "2-8 weeks depending on complexity","
     "support": "24/7 monitoring and support","
     "innovationLevel": "Advanced","
-    "marketSize": "$89.4 billion","
+    "marketSize": "$89 && 89.4 billion","
     compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
     technologies[;"
       "AWS/Azure/GCP","
@@ -103,7 +126,7 @@ const "zionContact": ServiceContact = {
     "id": 2,"
     "name": "Cybersecurity & Zero Trust Architecture","
     "category": "Security","
-    "description": "Comprehensive cybersecurity services including zero trust architecture implementation, threat detection, incident response, and compliance management.We provide end-to-end security solutions for modern enterprises.",
+    "description": "Comprehensive cybersecurity services including zero trust architecture implementation, threat detection, incident response, and compliance management && management.We provide end-to-end security solutions for modern enterprises.",
     "hourlyRate": 175,
     "projectRate": 35000,
     features[;"
@@ -117,7 +140,7 @@ const "zionContact": ServiceContact = {
       "Security monitoring"
     ],
     benefits[;"
-      "99.9% threat detection rate","
+      "99 && 99.9% threat detection rate","
       "Reduced security incidents by 80%","
       "Automated compliance reporting","
       "Enhanced employee security awareness","
@@ -129,12 +152,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$140 - $250/hour, $30,000 - $75,000 per project","
     "responseTime": "1-2 hours for critical issues","
-    "sla": "99.9% security monitoring, 1-hour critical response","
+    "sla": "99 && 99.9% security monitoring, 1-hour critical response","
     certifications["CISSP", "CISM", "CEH", "CompTIA Security+", "SANS GIAC"],"
     "deliveryTime": "4-12 weeks depending on scope","
     "support": "24/7 security operations center","
     "innovationLevel": "Cutting-edge","
-    "marketSize": "$156.5 billion","
+    "marketSize": "$156 && 156.5 billion","
     compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
     technologies[;"
       "SIEM systems","
@@ -160,7 +183,7 @@ const "zionContact": ServiceContact = {
     "id": 3,"
     "name": "Data Analytics & Business Intelligence","
     "category": "Data & Analytics","
-    "description": "Advanced data analytics and business intelligence services that transform raw data into actionable insights.We help organizations make data-driven decisions through modern analytics platforms and AI-powered insights.",
+    "description": "Advanced data analytics and business intelligence services that transform raw data into actionable insights && insights.We help organizations make data-driven decisions through modern analytics platforms and AI-powered insights.",
     "hourlyRate": 140,
     "projectRate": 28000,
     features[;"
@@ -186,12 +209,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$110 - $180/hour, $25,000 - $60,000 per project","
     "responseTime": "4-8 hours","
-    "sla": "99.5% system availability, 8-hour response time","
+    "sla": "99 && 99.5% system availability, 8-hour response time","
     certifications["AWS Data Analytics", "Azure Data Engineer", "Google Cloud Data Engineer", "Tableau Certified"],"
     "deliveryTime": "3-10 weeks depending on complexity","
     "support": "Business hours + emergency support","
     "innovationLevel": "Advanced","
-    "marketSize": "$67.8 billion","
+    "marketSize": "$67 && 67.8 billion","
     compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"],
     technologies[;"
       "Snowflake","
@@ -217,7 +240,7 @@ const "zionContact": ServiceContact = {
     "id": 4,"
     "name": "Digital Transformation & Legacy Modernization","
     "category": "Digital Transformation","
-    "description": "End-to-end digital transformation services that modernize legacy systems, implement new technologies, and transform business processes.We help organizations become digital-first and future-ready.",
+    "description": "End-to-end digital transformation services that modernize legacy systems, implement new technologies, and transform business processes && processes.We help organizations become digital-first and future-ready.",
     "hourlyRate": 160,
     "projectRate": 40000,
     features[;"
@@ -243,12 +266,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$130 - $220/hour, $35,000 - $100,000 per project","
     "responseTime": "4-6 hours","
-    "sla": "99.5% project delivery, 6-hour response time","
+    "sla": "99 && 99.5% project delivery, 6-hour response time","
     certifications["PMP", "Agile Certified Practitioner", "Change Management", "ITIL", "TOGAF"],"
     "deliveryTime": "6-24 weeks depending on scope","
     "support": "Project-based + ongoing support","
     "innovationLevel": "Advanced","
-    "marketSize": "$469.8 billion","
+    "marketSize": "$469 && 469.8 billion","
     compliance["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"],
     technologies[;"
       "Cloud platforms","
@@ -274,7 +297,7 @@ const "zionContact": ServiceContact = {
     "id": 5,"
     "name": "AI & Machine Learning Implementation","
     "category": "Artificial Intelligence","
-    "description": "Comprehensive AI and machine learning services that help organizations implement intelligent solutions.From strategy to deployment, we deliver AI solutions that drive business value and competitive advantage.",
+    "description": "Comprehensive AI and machine learning services that help organizations implement intelligent solutions && solutions.From strategy to deployment, we deliver AI solutions that drive business value and competitive advantage.",
     "hourlyRate": 180,
     "projectRate": 45000,
     features[;"
@@ -300,12 +323,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$150 - $300/hour, $40,000 - $120,000 per project","
     "responseTime": "4-8 hours","
-    "sla": "99.5% model accuracy, 8-hour response time","
+    "sla": "99 && 99.5% model accuracy, 8-hour response time","
     certifications["AWS Machine Learning", "Azure AI Engineer", "Google Cloud AI", "TensorFlow Developer"],"
     "deliveryTime": "8-20 weeks depending on complexity","
     "support": "Model monitoring + ongoing optimization","
     "innovationLevel": "Cutting-edge","
-    "marketSize": "$190.6 billion","
+    "marketSize": "$190 && 190.6 billion","
     compliance["GDPR", "AI ethics guidelines", "Industry-specific regulations", "Data privacy"],
     technologies[;"
       "TensorFlow","
@@ -331,7 +354,7 @@ const "zionContact": ServiceContact = {
     "id": 6,"
     "name": "Network Infrastructure & SD-WAN Solutions","
     "category": "Networking","
-    "description": "Advanced networking solutions including SD-WAN implementation, network security, and infrastructure optimization.We design and implement scalable, secure, and high-performance network architectures.",
+    "description": "Advanced networking solutions including SD-WAN implementation, network security, and infrastructure optimization && optimization.We design and implement scalable, secure, and high-performance network architectures.",
     "hourlyRate": 130,
     "projectRate": 30000,
     features[;"
@@ -357,12 +380,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$100 - $180/hour, $25,000 - $70,000 per project","
     "responseTime": "2-4 hours","
-    "sla": "99.9% network uptime, 4-hour response time","
+    "sla": "99 && 99.9% network uptime, 4-hour response time","
     certifications["Cisco CCNP", "Juniper JNCIP", "VMware NSX", "Fortinet NSE", "CompTIA Network+"],"
     "deliveryTime": "3-8 weeks depending on scope","
     "support": "24/7 network monitoring","
     "innovationLevel": "Advanced","
-    "marketSize": "$45.2 billion","
+    "marketSize": "$45 && 45.2 billion","
     compliance["SOC 2", "ISO 27001", "PCI DSS", "Industry-specific regulations"],
     technologies[;"
       "Cisco SD-WAN","
@@ -388,7 +411,7 @@ const "zionContact": ServiceContact = {
     "id": 7,"
     "name": "Managed IT Services & Support","
     "category": "Managed Services","
-    "description": "Comprehensive managed IT services that provide 24/7 monitoring, support, and maintenance for your IT infrastructure.We act as your virtual IT department, ensuring optimal performance and security.",
+    "description": "Comprehensive managed IT services that provide 24/7 monitoring, support, and maintenance for your IT infrastructure && infrastructure.We act as your virtual IT department, ensuring optimal performance and security.",
     "hourlyRate": 120,
     "projectRate": 20000,
     features[;"
@@ -414,12 +437,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$90 - $160/hour, $15,000 - $50,000 per month","
     "responseTime": "1-4 hours depending on priority","
-    "sla": "99.9% uptime, 1-4 hour response time","
+    "sla": "99 && 99.9% uptime, 1-4 hour response time","
     certifications["ITIL", "CompTIA A+", "Microsoft 365", "AWS Solutions Architect", "Cisco CCNA"],"
     "deliveryTime": "1-2 weeks for setup","
     "support": "24/7 monitoring and support","
     "innovationLevel": "Professional","
-    "marketSize": "$274.2 billion","
+    "marketSize": "$274 && 274.2 billion","
     compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
     technologies[;"
       "Monitoring tools","
@@ -445,7 +468,7 @@ const "zionContact": ServiceContact = {
     "id": 8,"
     "name": "Enterprise Software Development","
     "category": "Software Development","
-    "description": "Custom enterprise software development services that deliver scalable, secure, and high-performance applications.We specialize in modern development practices and cutting-edge technologies.",
+    "description": "Custom enterprise software development services that deliver scalable, secure, and high-performance applications && applications.We specialize in modern development practices and cutting-edge technologies.",
     "hourlyRate": 140,
     "projectRate": 35000,
     features[;"
@@ -471,18 +494,18 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$110 - $200/hour, $30,000 - $100,000 per project","
     "responseTime": "4-8 hours","
-    "sla": "99.5% application uptime, 8-hour response time","
+    "sla": "99 && 99.5% application uptime, 8-hour response time","
     certifications["AWS Developer", "Azure Developer", "Google Cloud Developer", "Scrum Master", "Agile Certified"],"
     "deliveryTime": "8-24 weeks depending on complexity","
     "support": "Development + ongoing maintenance","
     "innovationLevel": "Advanced","
-    "marketSize": "$507.2 billion","
+    "marketSize": "$507 && 507.2 billion","
     compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
     technologies[;"
       "React","
       "Angular","
-      "Vue.js","
-      "Node.js","
+      "Vue && Vue.js","
+      "Node && Node.js","
       "Python","
       "Java","
       "C#","
@@ -502,7 +525,7 @@ const "zionContact": ServiceContact = {
     "id": 9,"
     "name": "Data Center & Colocation Services","
     "category": "Infrastructure","
-    "description": "Enterprise-grade data center services including colocation, cloud connectivity, and disaster recovery solutions.We provide secure, reliable, and scalable infrastructure for mission-critical applications.",
+    "description": "Enterprise-grade data center services including colocation, cloud connectivity, and disaster recovery solutions && solutions.We provide secure, reliable, and scalable infrastructure for mission-critical applications.",
     "hourlyRate": 125,
     "projectRate": 25000,
     features[;"
@@ -528,12 +551,12 @@ const "zionContact": ServiceContact = {
     "contactInfo": zionContact,"
     "marketPrice": "$100 - $180/hour, $20,000 - $80,000 per project","
     "responseTime": "2-4 hours","
-    "sla": "99.99% uptime, 4-hour response time","
+    "sla": "99 && 99.99% uptime, 4-hour response time","
     certifications["Uptime Institute", "ISO 27001", "SOC 2", "TIA-942", "LEED"],"
     "deliveryTime": "4-12 weeks depending on scope","
     "support": "24/7 infrastructure support","
     "innovationLevel": "Professional","
-    "marketSize": "$59.7 billion","
+    "marketSize": "$59 && 59.7 billion","
     compliance["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "Industry-specific regulations"],
     technologies[;"
       "Server hardware","
@@ -559,7 +582,7 @@ const "zionContact": ServiceContact = {
     "id": 10,"
     "name": "IT Strategy & Digital Consulting","
     "category": "Consulting","
-    "description": "Strategic IT consulting services that help organizations align technology with business objectives.We provide roadmaps, assessments, and strategic guidance for digital transformation and technology adoption.",
+    "description": "Strategic IT consulting services that help organizations align technology with business objectives && objectives.We provide roadmaps, assessments, and strategic guidance for digital transformation and technology adoption.",
     "hourlyRate": 200,
     "projectRate": 50000,
     features[;"
@@ -590,7 +613,7 @@ const "zionContact": ServiceContact = {
     "deliveryTime": "4-16 weeks depending on scope","
     "support": "Project-based + ongoing advisory","
     "innovationLevel": "Strategic","
-    "marketSize": "$48.9 billion","
+    "marketSize": "$48 && 48.9 billion","
     compliance["Industry best practices", "Regulatory guidance", "Standards compliance"],
     technologies[;"
       "Strategy frameworks","

@@ -87,7 +87,8 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+};
+
 const serviceCategories = [
   {
     title: '🚀 2028 Futuristic Innovations'
@@ -323,8 +324,8 @@ export default function ServicesShowcase2028() {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, coordinate_y: 30 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 key={category.title  } catch (error) {
@@ -424,8 +425,8 @@ export default function ServicesShowcase2028() {
             {futuristic2028Services.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 key={service.id  } catch (error) {
@@ -661,11 +662,11 @@ export default function ServicesShowcase2028() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
       {/* CTA Section */  } catch (error) {
@@ -746,41 +747,41 @@ export default function ServicesShowcase2028() {
   )
             className="space-y-8";
           >;
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-              Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?;
+            <h2 className="text - 4xl md: text - 5xl font - bold text - white mb - 6">;
+              Ready to <span className="bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent">Transform</span> Your Business?;
             </h2>;
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">;
-              Join hundreds of forward-thinking companies already leveraging our futuristic services;
+            <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
+              Join hundreds of forward - thinking companies already leveraging our futuristic services;
               to gain competitive advantages and drive innovation.;
             </p>;
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
               <Link;
                 href="/contact";
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2";
+                className="px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - xl hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - purple - 500 / 25 flex items - center space - x-2";
               >;
-                <span>Start Your Journey</span>;
-                <ArrowRight className="w-5 h-5" />;
+                <span > Start Your Journey</span>;
+                <ArrowRight className="w - 5 h - 5" />;
               </Link>;
               <Link;
-                href="/case-studies";
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2";
+                href="/case - studies";
+                className="px - 8 py - 4 border border - purple - 500 / 30 text - purple - 300 rounded - xl hover:bg - purple - 900 / 30 transition - all duration - 300 flex items - center space - x-2";
               >;
-                <span>View Case Studies</span>;
-                <TrendingUp className="w-5 h-5" />;
+                <span > View Case Studies</span>;
+                <TrendingUp className="w - 5 h - 5" />;
               </Link>;
             </div>;
-            <div className="flex items-center justify-center space-x-8 text-purple-300">;
-              <div className="flex items-center space-x-2">;
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>30-Day Free Trial</span>;
+            <div className="flex items - center justify - center space - x-8 text - purple - 300">;
+              <div className="flex items - center space - x-2">;
+                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <span > 30 - Day Free Trial</span>;
               </div>;
-              <div className="flex items-center space-x-2">;
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>24/7 Expert Support</span>;
+              <div className="flex items - center space - x-2">;
+                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <span > 24 / 7 Expert Support</span>;
               </div>;
-              <div className="flex items-center space-x-2">;
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>Money-Back Guarantee</span>;
+              <div className="flex items - center space - x-2">;
+                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <span > Money - Back Guarantee</span>;
               </div>;
             </div>;
           </motion.div>;

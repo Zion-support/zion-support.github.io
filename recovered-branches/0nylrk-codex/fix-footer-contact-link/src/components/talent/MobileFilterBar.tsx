@@ -19,8 +19,6 @@ interface MobileFilterBarProps {
 export function MobileFilterBar({
   searchTerm;
 
-  setSearchTerm
-  setIsMobileFilterOpen
 
 
 export function MobileFilterBar({ ;
@@ -56,20 +54,21 @@ import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
+
 interface MobileFilterBarProps {;
   searchTerm: string,;
   setSearchTerm: (value: string) => void,;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
 }
-;
-export function MobileFilterBar({;
+
+export function MobileFilterBar(): any ({ ;
   searchTerm;
-  setSearchTerm;
-  setIsMobileFilterOpen;
+  setSearchTerm, ;
+  setIsMobileFilterOpen ;
 }: MobileFilterBarProps) {;
-  return (;
+  return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">;
-      <Button;
+      <Button
         onClick={() => setIsMobileFilterOpen(true)} ;
         variant="outline";
         className="w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light";
@@ -77,12 +76,13 @@ export function MobileFilterBar({;
         <Sliders className="h-4 w-4" />;
         Filter Talents;
       </Button>;
+
       <div className="relative mt-4">;
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />;
-        <Input;
-          placeholder="Search talents...";
+        <Input
+          placeholder="Search talents..."
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={e => setSearchTerm(e && e.target.value)}
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate";
         />;
       </div>;

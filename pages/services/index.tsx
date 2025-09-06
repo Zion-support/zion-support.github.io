@@ -130,8 +130,6 @@ import { realServicesQ22025 } from '../../data/real-services-q2-2025';
 
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
-// Define a common service interface
-interface Service {
 
   id?: string
   name: string
@@ -518,7 +516,7 @@ export default function ServicesIndexPage() {
                           {category === 'Government' && '🏛️'}
                           {category === 'Energy' && '⚡'}
                           {category === 'Transportation' && '🚗'}
-                        </span>
+                        </span>;
                         {category}
             <section className="mb-20">;
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
@@ -858,7 +856,7 @@ export default function ServicesIndexPage() {
                         {category === 'Government' && '🏛️'}
                         {category === 'Energy' && '⚡'}
                         {category === 'Transportation' && '🚗'}
-                      </span>
+                      </span>;
                       {category}
           <section className="mb-20">;
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">;
@@ -895,11 +893,7 @@ export default function ServicesIndexPage() {
 }
                           variant="default"
                         />
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      ))}
                     </div>
                     {categoryServices.length > 6 && (
                       <div className="text-center mt-6">
@@ -963,15 +957,15 @@ export default function ServicesIndexPage() {
                         <div key={featureIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">
+                        </div>))}
+                    </div>;
+                    <div className="flex items - center justify - between">;
+                      <div className="text - 2xl font - bold text - white">;
+
                         {service.price}
-                      </div>
+                      </div>;
                       {service.link && (
-                        <a
+                        <a;
                           href={service.link}
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                         >
@@ -1092,11 +1086,35 @@ export default function ServicesIndexPage() {
   )
         <section className="py-20 px-4">;
           <div className="container mx-auto max-w-4xl text-center">;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div;
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >;
+              <h2 className="text - 4xl font - bold text - white mb - 6">Ready to Get Started?</h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Contact us today to discuss how our services can transform your business.;
+              </p>;
+              <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300 transform hover:scale - 105";
+                >;
+                  Contact Sales;
+                </a>;
+                <a;
+                  href="/get - started";
+                  className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 hover:text - black transition - all duration - 300";
+                >;
+                  Get Started;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
 }
 
       <QuoteRequestModal

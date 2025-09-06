@@ -32,9 +32,10 @@ export const handleResumeError = (e: any, errorMessage: string) => {
     title: "Error"
     description: `${errorMessage}: ${e.message}`;
     title: "Error",
+
     description: `${errorMessage}: ${e.message}`,
     variant: "destructive"
-  }),
+  });
   return false
 }
 },

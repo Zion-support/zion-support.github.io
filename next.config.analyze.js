@@ -3,10 +3,10 @@ export const Next.config.analyze = () => {
   // Implementation here
   return null;
 };
-;
+
 ,;
 ;};
-;
+
 };
 ,
 };
@@ -26,10 +26,10 @@ origin/automation-improvements-final
 }
 origin/main
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-module.exports = {
+module && module.exports = {
   "webpack": (config, { isServer }) => {
   if (!isServer) {
-  config.plugins.push(;
+  config && config.plugins.push(;
         new BundleAnalyzerPlugin({
   "analyzerMode": "static"
           "openAnalyzer": false

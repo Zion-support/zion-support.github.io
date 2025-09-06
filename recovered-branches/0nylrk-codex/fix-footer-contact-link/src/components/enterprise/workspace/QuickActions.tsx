@@ -110,6 +110,7 @@ export function QuickActions() {;
     }
   ];
   return (;
+
     <Card>;
       <CardHeader>;
         <CardTitle>Quick Actions</CardTitle>;
@@ -117,15 +118,44 @@ export function QuickActions() {;
       </CardHeader>;
       <CardContent>;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
-          {actions.map(action => (;
+          {actions && actions.map(action => (;
+            <Button
+              key={action && action.id}
+              variant="outline" 
+              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              <div className="flex flex-col items-start text-left">;
+                <div className="flex items-center">;
+                  {action && action.icon}
+                  <span>{action && action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+              </div>;
+            </Button>;
+          ))}
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    <Card>;
+      <CardHeader>;
+        <CardTitle > Quick Actions</CardTitle>;
+        <CardDescription > Fast access to common tasks</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+          {actions.map (action => (
             <Button;
               key={action.id}
               variant="outline";
-              className={`h-auto justify-start p-4 ${action.color}`}
-            >
-              <div className="flex flex-col items-start text-left">
-                <div className="flex items-center">
+              className={`h - auto justify - start p - 4 ${action.color}`}
+            >;
+              <div className="flex flex - col items - start text - left">;
+                <div className="flex items - center">;
                   {action.icon}
+
                   <span>{action.label}</span>
                 </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
@@ -137,3 +167,4 @@ export function QuickActions() {;
     </Card>
   )
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

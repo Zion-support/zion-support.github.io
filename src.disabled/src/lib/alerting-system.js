@@ -1,18 +1,18 @@
 const nodemailer = require('nodemailer')
 class AlertingSystem {
   constructor() {
-    this.transporter = nodemailer.createTransporter({
+    this && this.transporter = nodemailer && nodemailer.createTransporter({
       "service": 'gmail',
       "auth": {
-        user: process.env.ALERT_EMAIL_USER,
-        "pass": 'process.env.ALERT_EMAIL_PASS'
+        user: process && process.env.ALERT_EMAIL_USER,
+        "pass": 'process && process.env.ALERT_EMAIL_PASS'
       }
     })}
   async sendAlert(subject, message, severity = 'warning') {
     const mailOptions = {
-      "from": 'process.env.ALERT_EMAIL_USER',
-      "to": 'process.env.ALERT_EMAIL_RECIPIENTS',
-      "subject": `[${severity.toUpperCase()}] ${subject}`,
+      "from": 'process && process.env.ALERT_EMAIL_USER',
+      "to": 'process && process.env.ALERT_EMAIL_RECIPIENTS',
+      "subject": `[${severity && severity.toUpperCase()}] ${subject}`,
       "text": 'message',
       "html": `
         <h2>${subject}</h2>
@@ -23,7 +23,7 @@ class AlertingSystem {
       `
    };
     try {
-      await this.transporter.sendMail(mailOptions);
+      await this && this.transporter.sendMail(mailOptions);
       // Alert sent successfully
     } catch {
       // Failed to send alert
@@ -33,46 +33,46 @@ class AlertingSystem {
     const alerts = [];
     // Check error rate
     if ( {
-      alerts.push({
+      alerts && alerts.push({
         "type": 'error_rate',
-        "message": `Error rate is ${metrics.errorRate.toFixed(2)}% ("threshold": '5%)`',
+        "message": `Error rate is ${metrics && metrics.errorRate.toFixed(2)}% ("threshold": '5%)`',
         "severity": 'critical'
       })}
     // Check response time
-    if (metrics.avgResponseTime > 2000) {
-      alerts.push({
+    if (metrics && metrics.avgResponseTime > 2000) {
+      alerts && alerts.push({
         "type": 'response_time',
-        "message": `Average response time is ${metrics.avgResponseTime}ms ("threshold": '2000ms)`',
+        "message": `Average response time is ${metrics && metrics.avgResponseTime}ms ("threshold": '2000ms)`',
         "severity": 'warning'
       })}
     // Check memory usage
-    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1) {
+    const latestMemory = metrics && metrics.memoryUsage[metrics && metrics.memoryUsage.length - 1) {
      {
-      alerts.push({
+      alerts && alerts.push({
         "type": 'error_rate',
-        "message": `Error rate is ${metrics.errorRate.toFixed(2)}% ("threshold": 5%)`,
+        "message": `Error rate is ${metrics && metrics.errorRate.toFixed(2)}% ("threshold": 5%)`,
         "severity": 'critical'
       })}
     // Check response time
-    if (metrics.avgResponseTime > 2000) {
-      alerts.push({
+    if (metrics && metrics.avgResponseTime > 2000) {
+      alerts && alerts.push({
         "type": 'response_time',
-        "message": `Average response time is ${metrics.avgResponseTime}ms ("threshold": 2000ms)`,
+        "message": `Average response time is ${metrics && metrics.avgResponseTime}ms ("threshold": 2000ms)`,
         "severity": 'warning'
       })}
     // Check memory usage
-    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}];
+    const latestMemory = metrics && metrics.memoryUsage[metrics && metrics.memoryUsage.length - 1}];
     if ( { // 100MB
-      alerts.push({
+      alerts && alerts.push({
         "type": 'memory_usage',
-        "message": `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": '100MB)`',
+        "message": `Memory usage is ${Math && Math.round(latestMemory && latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": '100MB)`',
         "severity": 'warning'
       })}
     return alerts) {
      { // 100MB
-      alerts.push({
+      alerts && alerts.push({
         "type": 'memory_usage',
-        "message": `Memory usage is ${Math.round(latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": 100MB)`,
+        "message": `Memory usage is ${Math && Math.round(latestMemory && latestMemory.heapUsed / 1024 / 1024)}MB ("threshold": 100MB)`,
         "severity": 'warning'
       })}
     return alerts}}

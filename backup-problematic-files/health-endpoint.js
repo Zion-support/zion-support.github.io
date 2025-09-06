@@ -17,15 +17,27 @@ const server = http.createServer((req, res) => {
     res.end(
       JSON.stringify({
         "status": 'healthy'
+=======
+const http = require( http'); const port = process && process.env.PORT || 3000; const server = http && http.createServer((req,res) => { if (req && req.url === '/health') { res && res.writeHead(200,{ 'Content-Type': 'application/json' }); res && res.end( JSON && JSON.stringify({ status: 'healthy',timestamp: new Date().toISOString() uptime: process && process.uptime() memory: process && process.memoryUsage() pid: process && process.pid }) )} else { res && res.writeHead(404,{ Content-Type': 'text/plain: })'; res && res.end( 'Not: Found')}'}) server && server.listen(port,() => { })
+const http = require(
+  http');
+const port = process && process.env.PORT || 3000;
+const server = http && http.createServer((req, res) => {
+  if (req && req.url === '/health') {
+    res && res.writeHead(200, { 'Content-Type': 'application/json' });
+    res && res.end(
+      JSON && JSON.stringify({
+        "status": 'healthy',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         "timestamp": new Date().toISOString()
-        uptime: process.uptime()
-        memory: process.memoryUsage()
-        pid: process.pid
+        uptime: process && process.uptime()
+        memory: process && process.memoryUsage()
+        pid: process && process.pid
       })
     )} else {
-    res.writeHead(404, {
+    res && res.writeHead(404, {
   Content-Type': 'text/"plain":  })';
-    res.end(
+    res && res.end(
   '"Not": Found')}'})
 server.listen(port, () => {
   console.log(`"Health": endpoint server running on port ${port}`)})

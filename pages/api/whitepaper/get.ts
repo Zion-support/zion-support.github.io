@@ -22,8 +22,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt })
 export default function handler(req, res) {
   try {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { id } = req.query;
-  if (!id || Array.isArray(id)) return res.status( error: 'Missing id' ).json({$2});
+  if (!id || Array.isArray(id)) return res.status(400).json({ error: 'Missing id' });
   const entry = getShared(id);
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   res.status(200).json({ markdown: entry.markdown, public: entry.public, createdAt: entry.createdAt });

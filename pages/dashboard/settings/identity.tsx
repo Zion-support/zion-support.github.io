@@ -38,6 +38,7 @@ export default function IdentitySettingsPage(req, res) {
   const [error, setError] = useState('');
   async function load() {;
     try {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);

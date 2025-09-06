@@ -17,17 +17,12 @@ export default function PerformanceDocRedirect(req, res) {
   return (;
     <>;
       <Head>;
-        <meta httpEquiv="refresh" content="0, url=/PERFORMANCE.md" />;
+        <meta http_equiv="refresh" content="0, url=/PERFORMANCE.md" />;
       </Head>;
       <main style={{ padding: 24 }}>;
-        <p>Redirecting to Performance documentation…</p>;
+        <p > Redirecting to Performance documentation…</p>;
       </main>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </>);
 }
 ;
 

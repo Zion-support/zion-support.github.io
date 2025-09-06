@@ -1,8 +1,5 @@
 
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -17,7 +14,7 @@ const corsHeaders = {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
@@ -25,13 +22,14 @@ serve(async (req) => {
   const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
   if (!openAiKey) {
     return new Response(
-      JSON.stringify({ error: "OpenAI API key is not configured" });
+      JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   try {
     const { applicationId } = await req.json();
+
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
@@ -55,6 +53,7 @@ serve(async (req) => {
 
   try {
     const { applicationId } = await req.json(),
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
     if (!applicationId) {
       throw new Error("Application ID is required")
@@ -76,7 +75,7 @@ serve(async (req) => {
       .single(),
 
     if (appError) {
-      throw new Error(`Failed to fetch application: ${appError.message}`)
+      throw new Error(`Failed to fetch application: ${appError && appError.message}`)
     }
     if (!application) {
       throw new Error("Application not found")
@@ -88,41 +87,53 @@ serve(async (req) => {
     let resumeSkills: string[] = [],
     
     if (application.resume_id) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
         .select(`
-          summary,
-          headline,
-          resume_skills!inner(name, category, years_experience),
-          work_history!inner(company_name, role_title, start_date, end_date, description),
+          summary;
+          headline;
+          resume_skills!inner(name, category, years_experience);
+          work_history!inner(company_name, role_title, start_date, end_date, description);
           education!inner(institution, degree, field_of_study)
         `)
+
         .eq("id", application.resume_id)
         .single();
         .single(),
         
       if (resumeError) {
-        console.error("Error fetching resume:", resumeError)
+        console && console.error("Error fetching resume:", resumeError)
       } else if (resume) {
         // Format resume content for analysis
         resumeContent = `
-          Summary: ${resume.summary |""}
-          Headline: ${resume.headline |""}
+
+          Summary: ${resume && resume.summary || ""}
+          Headline: ${resume && resume.headline || ""}
+          
           Work Experience:
-          ${resume.work_history.map((job: any) =>
-            `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'})
-            ${job.description |""}`
+          ${resume && resume.work_history.map((job: any) => 
+            `${job && job.role_title} at ${job && job.company_name} (${new Date(job && job.start_date).getFullYear()} - ${job && job.end_date ? new Date(job && job.end_date).getFullYear() : 'Present'})
+            ${job && job.description || ""}`
+
           ).join("\n\n")}
           Education:
-          ${resume.education.map((edu: any) =>
-            `${edu.degree} in ${edu.field_of_study |""} from ${edu.institution}`
+
+          ${resume && resume.education.map((edu: any) => 
+            `${edu && edu.degree} in ${edu && edu.field_of_study || ""} from ${edu && edu.institution}`
+
           ).join("\n")}
           Skills:
+
           ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
         `;
         `,
         
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
+=======
+        
+        resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     // 3. If no resume content, use talent profile and cover letter
@@ -132,7 +143,8 @@ serve(async (req) => {
         Cover Letter: ${application.cover_letter |""}
         Skills: ${application.talent_profile?.skills?.join(", ") |""}
       `;
-      resumeSkills = application.talent_profile?.skills |[]
+      resumeSkills = application && application.talent_profile?.skills || []
+
     }
     // 4. Prepare job details
     const jobTitle = application.job?.title |"";
@@ -240,7 +252,20 @@ serve(async (req) => {
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
       body: JSON.stringify({
-        model: "gpt-4o-mini",
+=======
+    const jobTitle = application && application.job?.title || "";
+    const jobDescription = application && application.job?.description || "";
+    const jobSkills = application && application.job?.skills || [];
+
+    // 5. Process using OpenAI to calculate match score
+    const openAIResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${openAiKey}`;
+        "Content-Type": "application/json"};
+      body: JSON && JSON.stringify({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        model: "gpt-4o-mini";
         messages: [
           {
             role: "system"
@@ -255,7 +280,10 @@ serve(async (req) => {
             # Job Details
             Title: ${jobTitle}
             Description: ${jobDescription}
-            Required Skills: ${jobSkills.join(", ")}
+
+            Required Skills: ${jobSkills && jobSkills.join(", ")}
+            
+
             # Resume Content
             ${resumeContent}
             Compare the resume to the job description and provide:
@@ -284,7 +312,7 @@ serve(async (req) => {
                   "missing": ["skill3"]
                 },
                 "experience_match": {
-                  "score": 70,
+                  "score": 70;
                   "analysis": "Candidate has X years experience in relevant field."
                 }
                 },
@@ -386,10 +414,17 @@ serve(async (req) => {
       
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
+=======
+      const content = aiResult && aiResult.choices[0].message && message.content;
+      matchResult = JSON && JSON.parse(content);
+      
+      // Validate required fields
+      if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         throw new Error("Invalid response format")
       }
     } catch (error) {
-      console.error("Error parsing AI response:", error),
+      console && console.error("Error parsing AI response:", error);
       throw new Error("Failed to parse AI analysis results")
     }
     // 6. Update the application with the match results
@@ -412,7 +447,7 @@ serve(async (req) => {
       .eq("id", applicationId),
 
     if (updateError) {
-      throw new Error(`Failed to update application with score: ${updateError.message}`)
+      throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
     }
     // 7. Return the match results
     return new Response(
@@ -437,12 +472,17 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: error.message });
       {
-        status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        status: 200,
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-    )
-  }
-});
+    );
+  } catch (error) {
+
+      JSON && JSON.stringify({ error: error && error.message });
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
       JSON.stringify({ error: error.message }),
       { 

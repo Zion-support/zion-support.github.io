@@ -35,7 +35,7 @@ export interface TenantInfo {;
     headline: string,;
     subtitle: string,;
     cta: string;
-  },;
+  }
   is_active: boolean;
 }
 ;
@@ -48,6 +48,7 @@ export interface TenantResponse {;
 
 export interface TenantResponse {
   tenant: TenantInfo | null,
-  error?: string
+  error?: string;
+
 }
 ;

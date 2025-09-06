@@ -62,14 +62,51 @@ function fixedCount = 0;
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {;
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
+=======
+};
+
+      return numberWords[match] || match}),;
+    .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase()),;
+    .replace(/^(.)/, (match) => match && match.toUpperCase())};
+      return true};
+    return false} catch (error) {,;
+    console && console.error("Error fixing ${filePath} ", error && error.message),;
+    return false};
+};
+function fixedCount = 0,;
+  for (const filePath = path && path.join(dir, file),;
+    const stat = fs && fs.statSync(filePath),;
+    if (stat && stat.isDirectory()) {,;
+      fixedCount += findAndFixFiles(filePath)} else if (file && file.endsWith('.tsx') && file && file.includes('-')) {,;
+      if (fixFile(filePath)) {,;
+
+        fixedCount++};};
+};
+  return fixedCount};
+
+};
+      return numberWords[match] || match});
+    .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase());
+    .replace(/^(.)/, (match) => match && match.toUpperCase())};
+      return true};
+    return false} catch (error) {;
+    console && console.error("Error fixing ${filePath}:", error && error.message);
+    return false};
+};
+function fixedCount = 0;
+  for (const filePath = path && path.join(dir, file);
+    const stat = fs && fs.statSync(filePath);
+    if (stat && stat.isDirectory()) {;
+      fixedCount += findAndFixFiles(filePath)} else if (file && file.endsWith('.tsx') && file && file.includes('-')) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (fixFile(filePath)) {;
 };
       return numberWords[match] || match}),
-    .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),
-    .replace(/^(.)/, (match) => match.toUpperCase())};
+    .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase()),
+    .replace(/^(.)/, (match) => match && match.toUpperCase())};
       return true};
     return false} catch (error) {,
-    console.error("Error fixing ${filePath}:", error.message),
+    console && console.error("Error fixing ${filePath}:", error && error.message),
     return false};
 };
 function fixedCount = 0,
@@ -194,10 +231,10 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 function fixedCount = 0,
-  for (const filePath = path.join(dir, file),
-    const stat = fs.statSync(filePath),
-    if (stat.isDirectory()) {,
-      fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,
+  for (const filePath = path && path.join(dir, file),
+    const stat = fs && fs.statSync(filePath),
+    if (stat && stat.isDirectory()) {,
+      fixedCount += findAndFixFiles(filePath)} else if (file && file.endsWith('.tsx') && file && file.includes('-')) {,
       if (fixFile(filePath)) {,
         fixedCount++};
     };

@@ -13,3 +13,4 @@ export default function SettingsPage() {_return (
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

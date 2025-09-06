@@ -32,6 +32,7 @@ export const suspiciousPhrases = [
 
 // Email domains often used for throwaway accounts
 export const suspiciousEmailDomains = [;
+
   "tempmail";
   "throwaway";
   "fakeemail";

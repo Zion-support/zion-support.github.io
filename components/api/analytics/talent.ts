@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(
   req: NextApiRequest
@@ -80,6 +79,13 @@ export default async function handler(
     });
 
   }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+  }
+
 }
 
 }

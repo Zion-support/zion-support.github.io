@@ -83,13 +83,12 @@ interface MilestonesListProps {;
 export const MilestonesList: React.FC<MilestonesListProps> = ({
   milestones;
   activities;
-  isLoading;
-  isClient;
+  is_loading;
+  is_client;
   onCreateMilestone;
   onUpdateStatus;
   onDeleteMilestone;
   onUploadDeliverable;
-  isSubmitting;
 
   onApprove
   onReject
@@ -144,20 +143,41 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             text: "Create First Milestone"
             onClick: () => setShowAddForm(true)
           } : undefined
+
+
+  if (milestones && milestones.length === 0 && !showAddForm) {;
+    return (
+      <EmptyState
+        icon={<span className="text-3xl">📊</span>}
+        title="No Milestones Yet";
+        description={isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." : ;
+          "No milestones have been created for this project yet."}
+        action={isClient ? ;
+          {;
+            text: "Create First Milestone",;
+            onClick: () => setShowAddForm(true);
+          } : undefined;
+
+        }
+      />;
+    );
+  }
+=======
         }
       />
     )
   }
 
   return (
-    <div className="space-y-6">
-      {isClient && !showAddForm && (
-        <div className="flex justify-end">
-          <Button onClick={() => setShowAddForm(true)}>
-            <Plus className="h-4 w-4 mr-2" />
-            Add Milestone
-          </Button>
-        </div>
+    <div className="space-y-6">;
+      {isClient && !showAddForm && (;
+        <div className="flex justify-end">;
+          <Button onClick={() => setShowAddForm(true)}>;
+            <Plus className="h-4 w-4 mr-2" />;
+            Add Milestone;
+          </Button>;
+        </div>;
       )}
       {showAddForm && (
         <Card>
@@ -168,25 +188,30 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
-            />
-          </CardContent>
-        </Card>
+            />;
+          </CardContent>;
+        </Card>;
       )}
       
       <div className="space-y-4">
         {milestones.map((milestone) => (
+=======
+
+      <div className="space-y-4">;
+        {milestones && milestones.map((milestone) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <MilestoneCard
-            key={milestone.id}
-            id={milestone.id}
-            projectId={milestone.project_id}
-            title={milestone.title}
-            description={milestone.description}
-            amount={parseFloat(milestone.amount.toString())}
-            status={milestone.status}
-            dueDate={milestone.due_date}
+            key={milestone && milestone.id}
+            id={milestone && milestone.id}
+            projectId={milestone && milestone.project_id}
+            title={milestone && milestone.title}
+            description={milestone && milestone.description}
+            amount={parseFloat(milestone && milestone.amount.toString())}
+            status={milestone && milestone.status}
+            dueDate={milestone && milestone.due_date}
             onApprove={onApprove}
             onReject={onReject}
-          />
+          />;
         ))}
       </div>
     </div>

@@ -17,9 +17,13 @@ export interface Service {;
     max: number;
     currency: string;
   }
+
+=======
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   features: string[];
   technologies: string[];
-  deliveryTime: string;
+  delivery_time: string;
   support: string;
   image?: string;
   popular?: boolean;
@@ -57,21 +61,56 @@ export interface LoadingState {;
 export interface SEOProps {
   title?: string;
   description?: string;
+=======
+
+  title: string;
+  href: string;
+  icon: string;
+  color: string;
+
+}
+export interface ServiceCategory {
+  title: string;
+  description: string;
+  count: number;
+  features: string[];
+  href: string;
+  color: string;
+
+  title: string, description: string,
+  features: string[], href: string,
+  icon: string, color: string,
+
+
+export interface ServiceCategory {;
+}
+
+export interface ServiceCategory {
+  title: string, description: string,
+  count: number, features: string[],
+  href: string, color: string,
+
+
+export interface SEOProps {;
+  title: string, description: string,
+
   keywords?: string;
   canonical?: string;
-  ogImage?: string;
+
+  og_image?: string;
   url?: string;
   type?: string;
+
   noindex?: boolean;
 ;
 ;
 export interface LoadingState {;
   isLoading: boolean, error?: string,
-;
-;
+
+
 export interface AnimationState {;
   isLoaded: boolean, hasError: boolean,
-;
+
 export interface ContactInfo {,
   phone: string,
   email: string,
@@ -115,7 +154,6 @@ export interface AnimationState {,
   isLoaded: boolean,
   hasError: boolean,
 };
-}
 
 export interface SEOProps {
   title: string, description: string,
@@ -123,9 +161,11 @@ export interface SEOProps {
   image?: string;
 }
 export interface LoadingState {
-  isLoading: boolean;
+  is_loading: boolean;
   error?: string;
-  progress?: number;
+
+;
+
 }
 export interface AnimationState {
   isLoaded: boolean;
@@ -145,6 +185,7 @@ export interface FormData {;
   service?: string;
   message: string;
 }
+
 export interface ContactForm {
   name: string;
   email: string;
@@ -174,12 +215,17 @@ export interface Testimonial {;
 }
 export interface BlogPost {
 
+  project?: string;
+}
+
+
 export interface BlogPost {;
   id: string;
   title: string;
   excerpt: string;
   content: string;
   author: string;
+
   date: string;
   tags: string[];
   image?: string;
@@ -191,18 +237,27 @@ export interface BlogPost {;
   readTime?: number;
   publishedAt: string;
   updatedAt: string;
+=======
+  published_at: string;
+  updated_at: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   tags: string[];
   category: string;
   image: string;
+
   slug: string;
   featured?: boolean;
   readTime: number;
 }
 export interface TeamMember {
 
+}
+
+
 export interface TeamMember {;
   id: string;
   name: string;
+
   role: string;
   bio: string;
   image: string;
@@ -380,8 +435,8 @@ origin/main
   featured: boolean;
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
   priority: 'low' | 'medium' | 'high' | 'critical';
-  startDate: Date;
-  endDate: Date;
+  start_date: Date;
+  end_date: Date;
   budget: {
     allocated: number;
     spent: number;
@@ -521,20 +576,26 @@ origin/automation-improvements-final
   startDate?: Date;
   endDate?: Date;
   budget?: {
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     allocated: number;
     spent: number;
     currency: string;
   };
+
   team?: {
+
     lead: string;
     members: string[];
     external: string[];
   };
+
   client?: {
+
     name: string;
     contact: string;
     industry: string;
   };
+
   deliverables?: {
     allocated: number;
     spent: number;
@@ -553,8 +614,8 @@ origin/automation-improvements-final
   deliverables: {
     name: string;
     description: string;
-    status: 'pending' | 'in-progress' | 'completed' | 'review';
-    dueDate: Date;
+    status: 'pending' | 'in - progress' | 'completed' | 'review';
+    due_date: Date;
   }[];
   risks?: {
   risks: {
@@ -585,6 +646,7 @@ origin/automation-improvements-final
 }
 export interface FAQ {
 
+
 export interface FAQ {;
   question: string;
   answer: string;
@@ -605,14 +667,13 @@ export interface PricingPlan {;
   limitations?: string[];
   description?: string;
 }
-export interface PricingTier {
-  id: string;
+export interface PricingPlan {
+
+
   name: string;
   price: number;
-  currency: string;
-  period: 'month' | 'year' | 'one-time';
+  period: string;
   features: string[];
-  limitations?: string[];
   popular?: boolean;
   cta: string;
   description: string;
@@ -623,10 +684,12 @@ export interface NavigationItem {;
   name: string;
   href: string;
   children?: NavigationItem[];
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   submenu?: NavigationItem[];
   external?: boolean;
 }
 export interface SocialLink {
+
 
 export interface SocialLink {;
   name: string;
@@ -649,6 +712,9 @@ export interface FooterSection {
 }
 export interface HeroSection {
 
+}
+
+
 export interface FooterLink {;
   name: string;
   href: string;
@@ -666,12 +732,22 @@ export interface HeroSection {;
     primary: {
       text: string;
       href: string;
+
     }
     secondary: {
       text: string;
       href: string;
     }
   }
+
+=======
+    }
+    secondary: {
+      text: string;
+      href: string;
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   image?: string;
 }
 export interface Feature {
@@ -690,6 +766,7 @@ export interface Stats {;
   description?: string;
 }
 export interface CaseStudy {
+
 
 export interface CaseStudy {;
   id: string;
@@ -750,32 +827,9 @@ export interface Event {;
   image?: string;
 }
 
-export interface Partner {;
-  name: string;
-  logo: string;
-  website: string;
-  description: string;
-  tier: 'platinum' | 'gold' | 'silver' | 'bronze';
-}
 
-export interface Award {;
-  title: string;
-  organization: string;
-  year: number;
-  description: string;
-  image?: string;
-}
 
-export interface Certification {;
-  name: string;
-  issuer: string;
-  date: string;
-  expiry?: string;
-  credentialId?: string;
-  image?: string;
-}
-
-export interface Technology {;
+export interface Technology {
   name: string;
   category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
   proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
@@ -783,7 +837,8 @@ export interface Technology {;
   projects: number;
 }
 
-export interface ContactFormData {;
+
+export interface ContactFormData {
   name: string;
   email: string;
   company?: string;
@@ -796,7 +851,7 @@ export interface ContactFormData {;
   preferredContact?: 'email' | 'phone' | 'both';
 }
 
-export interface NewsletterSubscription {;
+export interface NewsletterSubscription {
   email: string;
   interests: string[];
   frequency: 'daily' | 'weekly' | 'monthly';
@@ -804,7 +859,8 @@ export interface NewsletterSubscription {;
   subscribedAt: string;
 }
 
-export interface SearchResult {;
+
+export interface SearchResult {
   id: string;
   title: string;
   description: string;
@@ -814,32 +870,33 @@ export interface SearchResult {;
   highlights?: string[];
 }
 
-export interface FilterOption {;
+export interface FilterOption {
   label: string;
   value: string;
   count?: number;
 }
 
-export interface SortOption {;
+export interface SortOption {
   label: string;
   value: string;
   direction: 'asc' | 'desc';
 }
 
-export interface Pagination {;
+export interface Pagination {
   currentPage: number;
   totalPages: number;
   totalItems: number;
   itemsPerPage: number;
   hasNext: boolean;
   hasPrev: boolean;
+
   page?: number;
   limit?: number;
   total?: number;
   pages?: number;
 }
 
-export interface APIResponse<T> {;
+export interface APIResponse<T> {
   data: T;
   success: boolean;
   message?: string;
@@ -847,14 +904,14 @@ export interface APIResponse<T> {;
   pagination?: Pagination;
 }
 
-export interface ErrorResponse {;
+export interface ErrorResponse {
   success: false;
   message: string;
   errors: string[];
   code?: string;
 }
 
-export interface SuccessResponse<T> {;
+export interface SuccessResponse<T> {
   success: true;
   data: T;
   message?: string;
@@ -1016,6 +1073,7 @@ export interface ErrorInfo {
   userAgent?: string;
   url?: string;
 }
+
 export interface FormField {
   name: string;
   label: string;
@@ -1031,7 +1089,24 @@ export interface FormField {
   }
 }
 // Environment
-export interface Environment {;
+
+export interface Environment {
+  NODE_ENV: 'development' | 'production' | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: string;
+
+}
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+// Environment;
+export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
@@ -1239,7 +1314,7 @@ export interface Certification {
   issuer: string;
   date: string;
   expiry?: string;
-  credentialId?: string;
+  credential_id?: string;
   image?: string;
 }
 export interface Technology {
@@ -1265,14 +1340,14 @@ export interface NewsletterSubscription {
   interests: string[];
   frequency: 'daily' | 'weekly' | 'monthly';
   subscribed: boolean;
-  subscribedAt: string;
+  subscribed_at: string;
 }
 export interface SearchResult {
   id: string;
   title: string;
   description: string;
   url: string;
-  type: 'page' | 'blog' | 'service' | 'case-study' | 'job';
+  type: 'page' | 'blog' | 'service' | 'case - study' | 'job';
   score: number;
   highlights?: string[];
 }
@@ -1287,14 +1362,16 @@ export interface SortOption {
   direction: 'asc' | 'desc';
 }
 export interface Pagination {
-  currentPage: number;
-  totalPages: number;
-  totalItems: number;
+  current_page: number;
+  total_pages: number;
+  total_items: number;
   itemsPerPage: number;
-  hasNext: boolean;
-  hasPrev: boolean;
+  has_next: boolean;
+  has_prev: boolean;
 }
-export interface APIResponse<T> {
+
+export interface APIResponse < T> {
+
   data: T;
   success: boolean;
   message?: string;
@@ -1307,7 +1384,9 @@ export interface ErrorResponse {
   errors: string[];
   code?: string;
 }
-export interface SuccessResponse<T> {
+
+export interface SuccessResponse < T> {
+
   success: true;
   data: T;
   message?: string;

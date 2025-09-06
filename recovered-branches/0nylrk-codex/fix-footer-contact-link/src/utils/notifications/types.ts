@@ -1,11 +1,14 @@
 
 
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+;
+
 export interface CreateNotificationParams {
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 
 export interface CreateNotificationParams {;
   userId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
   type: NotificationType;
@@ -34,6 +37,7 @@ export interface HireRequestNotificationParams {;
 }
 export interface OnboardingNotificationParams {
 
+
 export interface OnboardingNotificationParams {;
   userId: string;
   missingMilestone: string
@@ -43,10 +47,9 @@ export interface SystemNotificationParams {
 
 export interface SystemNotificationParams {;
   userId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
-  actionUrl?: string | null;
-  actionText?: string | null
 
   sendEmail?: boolean
 }

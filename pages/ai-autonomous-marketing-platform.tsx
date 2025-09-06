@@ -17,13 +17,10 @@ export async function getStaticProps() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-export default function AIAutonomousMarketingPlatform(req, res) {
-  try {
-	return <ServicePage {...props} />;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+export default /**
+ * AIAutonomousMarketingPlatform - Function description
+ */
+function AIAutonomousMarketingPlatform() {
+return <ServicePage {...props} />;
 }
 ;

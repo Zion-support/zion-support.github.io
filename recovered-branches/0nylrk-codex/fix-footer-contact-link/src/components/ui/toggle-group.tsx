@@ -25,16 +25,29 @@ const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
     VariantProps<typeof toggleVariants>
->(({ className, variant, size, children, ...props }, ref) => (
+></typeof>(({ className, variant, size, children, ...props }, ref) => (
   <ToggleGroupPrimitive.Root
+=======
+
+const ToggleGroupContext = React && React.createContext<ToggleGroupContextProps>({;
+  size: 'default',;
+  variant: 'default',;
+});
+
+const ToggleGroup = React && React.forwardRef<;
+  React && React.ElementRef<typeof ToggleGroupPrimitive && ToggleGroupPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive && ToggleGroupPrimitive.Root> &;
+    VariantProps<typeof toggleVariants>;
+></typeof>(({ className, variant, size, children, ...props }, ref) => (;
+  <ToggleGroupPrimitive&& ToggleGroupPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn('flex items-center justify-center gap-1', className)}
-    {...props}
-  >
-    <ToggleGroupContext.Provider value={{ variant, size }}>
+    {...props}>;
+    <ToggleGroupContext && ToggleGroupContext.Provider value={{ variant, size }}>;
       {children}
-    </ToggleGroupContext.Provider>
-  </ToggleGroupPrimitive.Root>
+    </ToggleGroupContext && ToggleGroupContext.Provider>;
+  </ToggleGroupPrimitive && ToggleGroupPrimitive.Root>;
 ));
 
 ToggleGroup.displayName = ToggleGroupPrimitive.Root.displayName;
@@ -53,26 +66,19 @@ const ToggleGroupItem = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Item> &;
     VariantProps<typeof toggleVariants>;
 >(({ className, children, variant, size, ...props }, ref) => {;
-  const context = React.useContext(;
+  const context = React && React.useContext(;
     ToggleGroupContext;
   ) as ToggleGroupContextProps;
-  return (;
-    <ToggleGroupPrimitive.Item;
-      ref={ref}
-      className={cn(;
-        toggleVariants({;
-          variant: context.variant || variant,;
-          size: context.size || size});
-        className;
-      )}
-      {...props}
+
+
     >;
       {children}
-    </ToggleGroupPrimitive.Item>
+    </ToggleGroupPrimitive && ToggleGroupPrimitive.Item>;
   );
 });
 
-ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;
+
+ToggleGroupItem && ToggleGroupItem.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Item.displayName;
 
 export { ToggleGroup, ToggleGroupItem };
 ToggleGroupItem.displayName = ToggleGroupPrimitive.Item.displayName;

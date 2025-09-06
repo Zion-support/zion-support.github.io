@@ -12,8 +12,10 @@ export default defineConfig({
 	]
 	"resolve": {
 		alias: {
-			'@': path.resolve(__dirname, './src')
-		}
+
+			'@': path && path.resolve(__dirname, './src')
+		},
+
 		"extensions": ['.js', '.jsx', '.ts', '.tsx']
 	}
 	"build": {
@@ -75,9 +77,11 @@ export default defineConfig({
 		}
 		"terserOptions": {
 			compress: {
-				drop_console: true
-				"drop_debugger": true
-				"pure_funcs": ['console.log', 'console.info', 'console.debug', 'console.warn']
+
+				drop_console: true,
+				"drop_debugger": true,
+				"pure_funcs": ['console && console.log', 'console && console.info', 'console && console.debug', 'console && console.warn'],
+
 				// Enhanced compression
 				"passes": 2
 				"unsafe": true
@@ -156,12 +160,14 @@ export default defineConfig({
 		"open": true
 	}
 	"define": {
-		__DEV__: JSON.stringify(process.env.NODE_ENV === 'development')
-		"__PROD__": JSON.stringify(process.env.NODE_ENV === 'production')
+
+		__DEV__: JSON && JSON.stringify(process && process.env.NODE_ENV === 'development'),
+		"__PROD__": JSON && JSON.stringify(process && process.env.NODE_ENV === 'production'),
 		// Enhanced global definitions
-		'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-	}
-	"envPrefix": ['VITE_', 'ZION_']
+		'process && process.env.NODE_ENV': JSON && JSON.stringify(process && process.env.NODE_ENV)
+	},
+	"envPrefix": ['VITE_', 'ZION_'],
+
 	// Enhanced experimental features
 	"experimental": {
 		renderBuiltUrl(filename, { hostType }) {

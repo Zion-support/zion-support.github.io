@@ -9,6 +9,17 @@ export interface ModerationAction {;
   adminId: string;
   reason?: string;
   createdAt: string;
+
+;
+export interface ModerationAction {
+  id: string;
+  type: 'approve' | 'remove' | 'warn' | 'ban';
+  target_id: string;
+  target_type: 'post' | 'comment' | 'user';
+  admin_id: string;
+  reason?: string;
+  created_at: string,
+
 }
 export interface ModerationFlag {
 
@@ -16,9 +27,9 @@ export interface ModerationFlag {;
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
-  reporterId: string;
-  targetId: string;
-  targetType: 'post' | 'comment' | 'user';
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
   createdAt: string;
   updatedAt: string;

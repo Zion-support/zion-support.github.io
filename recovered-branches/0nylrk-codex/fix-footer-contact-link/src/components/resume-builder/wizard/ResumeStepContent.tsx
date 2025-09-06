@@ -73,26 +73,40 @@ interface ResumeStepContentProps {;
   onNextStep: () => void,;
   onPrevStep: () => void;
 }
-;
-export const ResumeStepContent = ({;
-  activeTab,;
-  resume,;
-  onNextStep;
-  onPrevStep;
+
+export const ResumeStepContent = ({ ;
+  activeTab;
+  resume, ;
+  onNextStep, ;
+  onPrevStep ;
 }: ResumeStepContentProps) => {;
-  return (;
+  return (
     <>;
       <TabsContent value="basic-info">;
-        <BasicInfoForm;
-          resumeId={resume?.id!} ;
+        <BasicInfoForm
+          resumeId={resume?.id!} 
+
           initialData={resume?.basic_info}
           onSave={(data) => {;
             // Here you would typically save the data to your backend;
-            // // // console.log("Saving basic info:", data);
+            console && console.log("Saving basic info:", data);
           }}
+
+          initialData={resume?.basic_info}
+          onSave={(data) => {
+            // Here you would typically save the data to your backend
+            // // // console.log("Saving basic info:", data)
+          }}
+
+          onComplete={onNextStep}
+        />
+      </TabsContent>
+      <TabsContent value="work-experience">
+
           onComplete={onNextStep} ;
         />;
       </TabsContent>;
+
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
           resumeId={resume?.id!}
@@ -108,9 +122,12 @@ export const ResumeStepContent = ({;
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
-        />
-      </TabsContent>
-      <TabsContent value="skills">
+
+        />;
+      </TabsContent>;
+
+      <TabsContent value="skills">;
+
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills |[]}

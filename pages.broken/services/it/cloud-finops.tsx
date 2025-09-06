@@ -9,10 +9,10 @@ interface CloudfinopsProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Cloudfinops({ }: CloudfinopsProps) {
   return (
-    <div>
-      <h1>Cloudfinops</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <div>;
+      <h1>Cloudfinops</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
   );
 }
 }

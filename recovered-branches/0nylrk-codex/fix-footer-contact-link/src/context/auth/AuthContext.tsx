@@ -20,4 +20,5 @@ import type { AuthContextType } from "@/types/auth",;
 // type definitions are unavailable, calling an untyped function with type;
 // arguments causes a TypeScript error (TS2347). Instead, we cast the;
 // default value so consumers still get some level of type safety.;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);

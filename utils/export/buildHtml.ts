@@ -34,6 +34,16 @@ export function buildPrintableHtml(project: BookProject): string {;
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
+=======
+    .join ('\n\n'),
+  const visuals_html = [;
+    ...visuals.timeline_images,
+    ...visuals.daoVoteCharts,
+    ...visuals.ui_screens];
+    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
+    .join ('\n'),
+  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return `<!doctype html>;
 <html>;
 <head>;
@@ -150,10 +160,26 @@ function escapeHtml(s: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 </style>;
 </head>;
 <body>;
   <section class="cover">;
+
+    <div>${escape_html (meta.publisher || '')}</div>;
+    <h1>${escape_html (meta.title)}</h1>;
+    <h3>${escape_html (meta.subtitle || '')}</h3>;
+    <div class="by">By ${escape_html (meta.author)}</div>;
+
+    ${barcode}
+  </section>;
+  ${quotesHtml}
+  ${chapterHtml}
+  ${visualsHtml}
+</body>;
+</html>`;
+}
+
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle || '')}</h3>;

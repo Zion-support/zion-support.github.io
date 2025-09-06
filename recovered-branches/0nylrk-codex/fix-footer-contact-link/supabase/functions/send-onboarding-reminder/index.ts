@@ -31,14 +31,14 @@ interface ReminderPayload {
 }
 serve(async (req: Request) => {
   // Handle CORS
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
   try {
     const supabase = createClient(
-      supabaseUrl,
+      supabaseUrl;
       supabaseServiceKey
     );
     const payload = await req.json() as ReminderPayload;
@@ -51,7 +51,7 @@ serve(async (req: Request) => {
     
     if (!user_id || !missing_milestone || !role) {
       return new Response(
-        JSON.stringify({ error: "Missing required fields" }),
+        JSON && JSON.stringify({ error: "Missing required fields" });
         {
           status: 400
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -68,7 +68,7 @@ serve(async (req: Request) => {
     
     if (userError || !userData) {
       return new Response(
-        JSON.stringify({ error: "User not found", details: userError }),
+        JSON && JSON.stringify({ error: "User not found", details: userError });
         {
           status: 404
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -118,9 +118,9 @@ serve(async (req: Request) => {
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
-            <a href="https://zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
+            <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
               Continue my setup
-            </Link>
+            </a>
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
@@ -129,7 +129,7 @@ serve(async (req: Request) => {
     
     if (emailError) {
       return new Response(
-        JSON.stringify({ error: "Failed to send email", details: emailError }),
+        JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -151,7 +151,7 @@ serve(async (req: Request) => {
     ),
     
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError)
+      console && console.error("Failed to create notification:", notificationError)
     }
     return new Response(
       JSON.stringify({
@@ -291,14 +291,15 @@ serve(async (req: Request) => {;
       {;
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
+
     );
-  } catch (error) {;
-    console.error(error),;
-    return new Response(;
-      JSON.stringify({ error: "Internal server error", details: error.message }),;
-      {;
-        status: 500,;
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+  } catch (error) {
+    console.error (error);
+    return new Response (
+      JSON.stringify ({ error: "Internal server error", details: error.message });
+      {
+        status: 500,
+        headers: { "Content - Type": "application / json", ...cors_headers }}
     );
   }
 });

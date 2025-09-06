@@ -31,12 +31,38 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
+=======
+import React from './react';
+import { SearchSuggestion, SearchHighlight } from '@/types / search';
+interface AutocompleteSuggestionsProps {
+  suggestions: SearchSuggestion[],
+  search_term: string,
+  onSelectSuggestion: (suggestion: string) => void,
+  visible: boolean;
+}
+// Helper function to highlight matching text;
+const highlight_match = (text: string, search_term: string): SearchHighlight => {
+  // Check condition
+if ( {) {
+  $2
+}
+    return { before: '', match: text, after: '' }
+  }
+  const lower_text = text.toLowerCase ();
+  const lowerSearchTerm = search_term.toLowerCase ();
+  const index = lower_text.index_of (lowerSearchTerm);
+;
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { before: '', match: text, after: '' }
   }
   return {
-    before: text.substring(0, index);
-    match: text.substring(index, index + searchTerm.length);
-    after: text.substring(index + searchTerm.length)
+    before: text.substring (0, index);
+    match: text.substring (index, index + search_term.length);
+    after: text.substring (index + search_term.length);
   }
 }
 export function AutocompleteSuggestions({
@@ -107,5 +133,8 @@ export function AutocompleteSuggestions({
       </ul>;
     </div>;
   );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
 }
 ;

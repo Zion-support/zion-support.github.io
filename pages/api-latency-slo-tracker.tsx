@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -46,10 +45,11 @@ export default function ApiLatencySloTrackerPage(req, res) {
   return (;
     <Layout>;
       <Head>;
-        <title>API Latency SLO Tracker | Zion Tech Group</title>;
-        <meta name="description" content="Define, monitor, and alert on p95/p99 API SLOs with synthetic and real-user monitoring and optional status pages." />;
-        <link rel="canonical" href="https://ziontechgroup.com/api-latency-slo-tracker" />;
+        <title > API Latency SLO Tracker | Zion Tech Group</title>;
+        <meta name="description" content="Define, monitor, and alert on p95 / p99 API SLOs with synthetic and real - user monitoring and optional status pages." />;
+        <link rel="canonical" href="https://ziontechgroup.com / api - latency - slo - tracker" />;
       </Head>;
+
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">API Latency SLO Tracker</h1>;

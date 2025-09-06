@@ -1,11 +1,5 @@
 import {
 
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from "@/components/ui/select";
 
 import { SortFilterProps } from "@/types/filters";
 

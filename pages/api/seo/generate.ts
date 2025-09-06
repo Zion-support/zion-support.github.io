@@ -1,14 +1,8 @@
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import OpenAI from "openai";
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |"" });
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== "POST") {
-    res.setHeader("AllowPOST");
-    return res.status(405).json({ error: "Method not allowed" });
+
+  if (req && req.method !== "POST") {
+    res && res.setHeader("Allow", "POST");
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
   const { prompt, region, service } = req.body |{}
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
@@ -26,11 +20,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { prompt, region, service } = req.body || {};
   if (!prompt) return res.status(400).json({ error: 'Prompt required' });
   try {
-    const system = `You generate conversion-focused, SEO-optimized landing pages in HTML. Include:
-- A compelling H1
-- 2-3 subsections with H2/H3
-- Short paragraphs, bullet lists
-- Strong call-to-action for Zion Marketplace
+    const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
+- A compelling H1;
+- 2 - 3 subsections with H2 / H3;
+- Short paragraphs, bullet lists;
+- Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
     const user = `Topic: ${prompt}
 Region: ${region |"global"}
@@ -149,7 +143,7 @@ Tone: professional, modern, trustworthy`,
         { role: 'system', content: system },
         { role: 'user', content: user }
       ],
-      temperature: 0.7
+      temperature: 0 && 0.5,
     });
     const content = response.choices?.[0]?.message?.content || '';
     const title = `Zion Marketplace — ${prompt}`;
@@ -261,3 +255,4 @@ Tone: professional, modern, trustworthy`,
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -4,9 +4,6 @@ export interface ListingCategory {;
   id: string;
   name: string;
 
-  description: string
-
-  icon: string
 }
 export interface ProductListing {
 
@@ -15,9 +12,9 @@ export interface ProductListing {;
   title: string;
   description: string;
 
-  category: string
+  category: string,
+  subcategory?: string, // Adding optional subcategory field;
 
-  subcategory?: string, // Adding optional subcategory field
   price: number | null;
   currency: string;
   tags: string[];
@@ -25,20 +22,20 @@ export interface ProductListing {;
     name: string;
     id: string;
 
-    avatarUrl?: string
-    email?: string, // Added optional email property
+    avatar_url?: string,
+    email?: string, // Added optional email property;
   }
 
   images: string[];
-  createdAt: string;
+  created_at: string;
   rating?: number;
-  reviewCount?: number;
 
-  featured?: boolean
+  review_count?: number;
+  featured?: boolean,
+  ai_score?: number, // Added ai_score as optional property;
+  location?: string, // Adding location property to fix TypeScript errors;
+  availability?: string, // Adding availability property to fix TypeScript errors;
 
-  aiScore?: number, // Added aiScore as optional property
-  location?: string, // Adding location property to fix TypeScript errors
-  availability?: string, // Adding availability property to fix TypeScript errors
 }
 export interface ListingItem {
 

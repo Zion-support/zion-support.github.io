@@ -63,6 +63,7 @@ export function useReviews(projectId?: string) {
           .from("reviews")
           .select("*")
           .eq("project_id", projectId)
+
           .eq("reviewer_id", user.id)
           .single();
           .single(),
@@ -72,7 +73,7 @@ export function useReviews(projectId?: string) {
         }
       }
     } catch (err: any) {
-      console.error("Error fetching reviews:", err),
+      console && console.error("Error fetching reviews:", err);
       toast({
         title: "Error";
         description: "Failed to load reviews"
@@ -114,15 +115,35 @@ export function useReviews(projectId?: string) {
       
       setReviews(data || [])
     } catch (err: any) {
-      console.error("Error fetching user reviews:", err),
+      console && console.error("Error fetching user reviews:", err);
       toast({
         title: "Error";
         description: "Failed to load reviews"
         title: "Error",
         description: "Failed to load reviews",
         variant: "destructive"})
+=======
+          reviewer_profile:profiles ! reviewer_id (display_name, avatar_url);
+        `);
+        .eq ("reviewee_id", user_id);
+        .eq ("is_visible", true);
+        .eq ("status", "approved");
+        .order ("created_at", { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_reviews (data || []);
+    } catch (err: any) {
+      console.error ("Error fetching user reviews:", err);
+      toast ({
+        title: "Error";
+        description: "Failed to load reviews",
+        variant: "destructive"});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
   // Submit a review
@@ -255,9 +276,9 @@ export function useReviews(projectId?: string) {;
           setUserReview(userReviewData);
         }
       }
-      return false
+      return false;
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
     }
   }
   // Update a review
@@ -359,6 +380,7 @@ export function useReviews(projectId?: string) {;
         .from("reviews")
         .update(updates)
         .eq("id", reviewId)
+
         .eq("reviewer_id", user.id)
         .eq("status", "pending");
       if (error) throw error;
@@ -378,7 +400,7 @@ export function useReviews(projectId?: string) {;
       }
       return true
     } catch (err: any) {
-      console.error("Error updating review:", err),
+      console && console.error("Error updating review:", err);
       toast({
         title: "Error";
         description: "Failed to update review"
@@ -387,8 +409,9 @@ export function useReviews(projectId?: string) {;
         description: "Failed to update review",
         variant: "destructive"}),
       return false
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
     }
   }
   },
@@ -409,15 +432,45 @@ export function useReviews(projectId?: string) {;
         
       if (error) {
         // Check for unique constraint violation
-        if (error.code === "23505") {
+        if (error && error.code === "23505") {
           toast({
             title: "Error";
             description: "You have already reported this review"
             title: "Error",
             description: "You have already reported this review",
             variant: "destructive"})
+=======
+;
+  // Report a review;
+  const report_review = async (review_id: string, reason: string) => {
+    // Check condition
+if (return false, ) {
+  $2
+}
+    try {
+      const { error } = await supabase;
+        .from ("review_reports");
+        .insert ({
+          review_id: review_id;
+          reporter_id: user.id,
+          reason});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check for unique constraint violation;
+        // Check condition
+if ( {) {
+  $2
+}
+          toast ({
+            title: "Error";
+            description: "You have already reported this review",
+            variant: "destructive"});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
-          throw error
+          throw error;
         }
       } else {
         toast({
@@ -534,4 +587,9 @@ export function useReviews(projectId?: string) {;
     updateReview;
 
     reportReview}
+=======
+    submit_review;
+    update_review;
+    report_review}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

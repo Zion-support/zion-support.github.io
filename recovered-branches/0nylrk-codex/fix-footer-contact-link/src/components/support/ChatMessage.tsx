@@ -66,7 +66,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
-        )}>
+        )}>;
           {format(timestamp, "h:mm a")}
         </div>
       </div>
@@ -147,20 +147,40 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   );
 }
 ;
+
 // Function to convert URLs and help links to actual clickable links;
-function formatMessageWithLinks(message: string): string {;
+function formatMessageWithLinks(): any (message: string): string {;
   // Replace URLs;
   const urlRegex = /(https?:\/\/[^\s]+)/g,;
-  let formattedMessage = message.replace(;
-    urlRegex,;
+  let formattedMessage = message && message.replace(;
+    urlRegex, ;
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  ),;
+  );
+
   // Replace help center references like [Getting Started];
   const helpCenterRegex = /\[([^\]]+)\]/g,;
-  formattedMessage = formattedMessage.replace(;
-    helpCenterRegex;
+  formattedMessage = formattedMessage && formattedMessage.replace(;
+    helpCenterRegex, ;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  );
+  ),;
+
   return formattedMessage;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from './react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { cn } from '@/lib / utils';
+import { format } from './date - fns';
+import { use_theme } from '@/hooks / use_theme';
+interface ChatMessageProps {
+  message: string,
+  is_user: boolean,
+  timestamp: Date;
+}
+export /**
+ * ChatMessage - Function description
+ */
+function ChatMessage() {
+  const { theme } = use_theme ();
 ;

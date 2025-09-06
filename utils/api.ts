@@ -3,7 +3,10 @@ interface File extends Blob {
   name: string;
   lastModified: number;
 }
+=======
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface Blob {
   size: number;
   type: string;
@@ -36,10 +39,13 @@ interface Headers {
   has(name: string): boolean;
   set(name: string, value: string): void;
 }
-type HeadersInit = Headers | string[][] | Record<string, string>;
-type RequestMode = 'navigate' | 'same-origin' | 'no-cors' | 'cors';
+
+type HeadersInit = Headers | string[][] | Record < string, string>;
+type RequestMode = 'navigate' | 'same - origin' | 'no - cors' | 'cors';
 type RequestRedirect = 'follow' | 'error' | 'manual';
-type ReferrerPolicy = 'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
+type ReferrerPolicy = 'no - referrer' | 'no - referrer - when - downgrade' | 'origin' | 'origin - when - cross - origin' | 'same - origin' | 'strict - origin' | 'strict - origin - when - cross - origin' | 'unsafe - url';
+;
+
 interface RequestInit {
   body?: BodyInit | null;
   cache?: RequestCache;
@@ -56,24 +62,22 @@ interface RequestInit {
   window?: any;
   timeout?: number;
 }
-// Define AbortController if not available
+
+// Define AbortController if not available;
+
 interface AbortController {
   signal: AbortSignal;
   abort(): void;
 }
-// Define AbortSignal if not available
+
+// Define AbortSignal if not available;
+
 interface AbortSignal extends EventTarget {
   aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 }
 
 
-;
-};
-;
-export const apiClient = new ApiClient(),;
-;
-export type { ApiResponse, RequestOptions };;
 
 };
 origin/cursor/integrate-build-improve-and-re-verify-242d
@@ -152,9 +156,6 @@ interface AbortController {
   abort(): void;
 }
 
-class AbortController {
-  signal: AbortSignal, abort(): void,
-}
 
 class ApiClient {
   private baseUrl: string, private defaultTimeout: number,
@@ -311,7 +312,10 @@ origin/main
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
-origin/automation-improvements-final
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
@@ -320,7 +324,13 @@ interface ApiResponse<T = unknown> {
 interface RequestOptions extends RequestInit {
   timeout?: number;
 }
-// Add global type definitions for Node.js environment
+
+
+// Add global type definitions for Node && Node.js environment
+
+=======
+// Add global type definitions for Node.js environment;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 declare global {
   interface RequestInit {
     timeout?: number;
@@ -328,38 +338,45 @@ declare global {
 }
 class ApiClient {
   private baseURL: string;
-  private defaultHeaders: HeadersInit;
-  constructor(baseURL: string = '', defaultHeaders: HeadersInit = {}) {
+
+  private default_headers: HeadersInit;
+;
+  constructor (baseURL: string = '', default_headers: HeadersInit = {}) {
     this.baseURL = baseURL;
-    this.defaultHeaders = defaultHeaders;
+    this.default_headers = default_headers;
   }
-
-  async request<T = unknown>(
-    endpoint: string
-
+  async request < T = unknown>(
+    endpoint: string,
     options: RequestOptions = {}
-  ): Promise<ApiResponse<T>> {
+  ): Promise < ApiResponse < T>> {
     const url = `${this.baseURL}${endpoint}`;
-    const controller = new AbortController();
-    // Set timeout if provided
-    if (options.timeout) {
-      setTimeout(() => controller.abort(), options.timeout);
+    const controller = new AbortController ();
+;
+    // Set timeout if provided;
+    // Check condition
+if ( {) {
+  $2
+}
+      set_timeout (() => controller.abort (), options.timeout);
+
     }
 
     try {
-      const response = await fetch(url, {
-        ...options
-        signal: controller.signal
-        headers: {
-...this.defaultHeaders
-          ...options.headers
-        }
 
+        ...options,
+        signal: controller && controller.signal,
+        headers: {
+          ...this && this.defaultHeaders,
+          ...options && options.headers,
+        },
       });
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`);
       }
-      const data = await response.json();
+
+      const data = await response && response.json();
+
       return {
 
         success: true
@@ -367,24 +384,36 @@ class ApiClient {
       }
     } catch (error) {
       return {
-        success: false
-        error: error instanceof Error ? error.message : 'Unknown error occurred'
-      }
 
-    }
-  }
-  async get<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { ...options, method: 'GET' });
-  }
-  async post<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, {
+        success: false,
 
-      ...options
-      method: 'POST'
-      body: data ? JSON.stringify(data) : undefined
-      headers: {
-        'Content-Type': 'application/json'
-        ...options?.headers
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+
+export type { ApiResponse, RequestOptions };
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+export type { ApiResponse, RequestOptions }
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+export type { ApiResponse, RequestOptions }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+        error: error instanceof Error ? error.message : 'Unknown error occurred',
       }
 
     });

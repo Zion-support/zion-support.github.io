@@ -63,8 +63,10 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar",;
 import { AppSidebar } from "@/components/creator/CreatorSidebar",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function CreatorDashboard() {;
-  return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
     <SidebarProvider>;
       <div className="min-h-screen flex w-full bg-zion-blue">;
         <AppSidebar />;

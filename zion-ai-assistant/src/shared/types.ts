@@ -5,7 +5,7 @@ export interface MilestoneSuggestionInput {;
   scopeOfWork: string,;
   startDateIso: string, // ISO 8601;
   endDateIso: string,   // ISO 8601;
-  projectType: ProjectType;
+  project_type: ProjectType;
 }
 export interface SuggestedMilestoneItem {title: string;
   description: string;

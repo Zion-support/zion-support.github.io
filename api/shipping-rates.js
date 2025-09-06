@@ -1,12 +1,5 @@
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
-  }
 
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
@@ -94,7 +87,6 @@ export: default async function handler(req, res) {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -102,16 +94,13 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   try {
     const { fromAddress, toAddress, parcel } = req.body || {};
-    
     if (!fromAddress || !toAddress || !parcel) {
       res.statusCode = 400;
       res.json({ error: 'Missing required fields' });
       return;
     }
-
     // TODO: Implement actual shipping rate calculation
     // This is a placeholder implementation
     const shippingRates = [
@@ -131,8 +120,6 @@ async function handler(req, res) {
         days: 'Next business day'
       }
     ];
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
     res.statusCode = 200;
     res.json({ "rates": data.rates })} catch (err) {
     console.error(',

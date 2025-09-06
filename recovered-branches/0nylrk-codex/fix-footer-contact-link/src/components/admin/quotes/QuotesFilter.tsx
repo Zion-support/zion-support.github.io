@@ -64,52 +64,21 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   dateRange,
   setDateRange,
   onReset
+=======
+  date_range;
+  setDateRange,
+  on_reset;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
+=======
+  setDateRange,;
+  onReset;
+}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">
-      <CardContent className="p-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-          <div className="relative">
-            <Input
-              placeholder="Search quotes..."
-              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-          <div>
-            <p className="text-zion-slate-light text-sm mb-2">Status</p>
-            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-                <SelectValue placeholder="Status" />
-              </SelectTrigger>
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectItem value="all">All Statuses</SelectItem>
-                <SelectItem value="new">New</SelectItem>
-                <SelectItem value="in_review">In Review</SelectItem>
-                <SelectItem value="responded">Responded</SelectItem>
-                <SelectItem value="accepted">Accepted</SelectItem>
-                <SelectItem value="closed">Closed</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <p className="text-zion-slate-light text-sm mb-2">Archive</p>
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-                <SelectValue placeholder="Archive Status" />
-              </SelectTrigger>
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectItem value="active">Active Only</SelectItem>
-                <SelectItem value="archived">Archived Only</SelectItem>
-                <SelectItem value="all">All Quotes</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
-            <Popover>
-              <PopoverTrigger asChild>
+
+              onChange={(e) => setSearchQuery(e && e.target.value)}
+=======
                 <Button
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
@@ -177,8 +146,10 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               className="pl-10 bg-zion-blue border-zion-blue-light text-white";
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+
             />;
           </div>;
+
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Status</p>;
             <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>;
@@ -186,6 +157,26 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
                 <SelectValue placeholder="Status" />;
               </SelectTrigger>;
               <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
+=======
+    <Card className="mb - 6 bg - zion - blue - dark border - zion - blue - light">;
+      <CardContent className="p - 6">;
+        <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4 items - end">;
+          <div className="relative">;
+            <Input;
+              placeholder="Search quotes...";
+              className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
+              value={search_query}
+              on_change={(e) => setSearchQuery (e.target.value)}
+            />;
+          </div>;
+          <div>;
+            <p className="text - zion - slate - light text - sm mb - 2">Status</p>;
+            <Select value={status_filter} onValueChange={(value: any) => setStatusFilter (value)}>;
+              <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
+                <SelectValue placeholder="Status" />;
+              </SelectTrigger>;
+              <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <SelectItem value="all">All Statuses</SelectItem>;
                 <SelectItem value="new">New</SelectItem>;
                 <SelectItem value="in_review">In Review</SelectItem>;
@@ -195,13 +186,15 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               </SelectContent>;
             </Select>;
           </div>;
+
           <div>;
-            <p className="text-zion-slate-light text-sm mb-2">Archive</p>;
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>;
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+            <p className="text - zion - slate - light text - sm mb - 2">Archive</p>;
+            <Select value={archive_filter} onValueChange={(value: any) => setArchiveFilter (value)}>;
+              <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
                 <SelectValue placeholder="Archive Status" />;
               </SelectTrigger>;
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
+              <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
+
                 <SelectItem value="active">Active Only</SelectItem>;
                 <SelectItem value="archived">Archived Only</SelectItem>;
                 <SelectItem value="all">All Quotes</SelectItem>;

@@ -1,5 +1,4 @@
 
-import React from 'react';
 
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -46,10 +45,11 @@ export default function IncidentPostmortemGeneratorPage(req, res) {
   return (;
     <Layout>;
       <Head>;
-        <title>Incident Postmortem Generator | Zion Tech Group</title>;
-        <meta name="description" content="AI-assisted incident RCA with timeline, impact, stakeholder comms, templates, and reviewer workflows." />;
-        <link rel="canonical" href="https://ziontechgroup.com/incident-postmortem-generator" />;
+        <title > Incident Postmortem Generator | Zion Tech Group</title>;
+        <meta name="description" content="AI - assisted incident RCA with timeline, impact, stakeholder comms, templates, and reviewer workflows." />;
+        <link rel="canonical" href="https://ziontechgroup.com / incident - postmortem - generator" />;
       </Head>;
+
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto space-y-6">;
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text text-transparent">Incident Postmortem Generator</h1>;

@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Missing required fields' })
     }
     const { data, error } = await supabase
-      .from('summit_registrations')
+      .from("summit_registrations")
       .insert([
         {
 
@@ -43,14 +43,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .select("*")
 
           name,
-    email,
+          email,
           role,
+
     country,
           source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
       .single();
-    
     if (error) {
       return res.status(500).json({ error: error.message });
     }
@@ -58,8 +58,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |"Unknown error" });
 
-    return res.status(200).json({ ok: true, registration: data })
+=======
+      return res.status(500).json({ error: error.message })
+    }
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+    return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
+
+
+  }
+
+}
+
+=======
+          source: source || "zion - global - 2025",
+          created_at: new Date ().toISOString (),
+        },
+      ]);
+      .select ("*");
+      .single ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (500).json ({ error: error.message });
+    }
+    return res.status (200).json ({ ok: true, registration: data });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message || "Unknown error" });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
     return res.status(500).json({ error: e?.message || 'Unknown error' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -158,3 +194,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

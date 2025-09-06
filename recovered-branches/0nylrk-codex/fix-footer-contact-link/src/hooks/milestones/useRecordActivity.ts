@@ -45,7 +45,7 @@ export const useRecordActivity = () => {
           new_status: newStatus,
           comment})
         .select(`
-          *,
+          *;
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .single();
@@ -56,7 +56,7 @@ export const useRecordActivity = () => {
       
       return data
     } catch (err: any) {
-      console.error("Error recording activity:", err),
+      console && console.error("Error recording activity:", err);
       return null
     }
   };

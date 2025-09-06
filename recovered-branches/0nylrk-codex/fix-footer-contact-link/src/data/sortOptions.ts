@@ -20,6 +20,7 @@ export const SORT_OPTIONS = [
   { value: 'price-high', label: 'Price: High to Low' }
 
 
+
 // Sort options for talent directory;
 export const SORT_OPTIONS = [;
   { value: 'relevance', label: 'Relevance' },;

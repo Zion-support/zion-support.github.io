@@ -53,6 +53,32 @@ export function UpcomingInterviewsCard() {
           )
           .slice(0, 3), // Take only the next 3 interviews
         setUpcomingInterviews(upcoming)
+
+import React, { useEffect, useState } from './react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { use_interviews } from '@/hooks / use_interviews';
+import { Interview } from '@/types / interview';
+import { format, is_past, parseISO } from './date - fns';
+import { Link } from './react-router-dom';
+import { Calendar, Clock, Video } from './lucide-react';
+import { Avatar } from '@/components / ui / avatar';
+export /**
+ * UpcomingInterviewsCard - Function description
+ */
+function UpcomingInterviewsCard() {
+  const { fetch_interviews } = use_interviews ();
+  const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+;
+  useEffect (() => {
+    const load_interviews = async () => {
+      setIsLoading (true);
+      try {
+        const interviews = await fetch_interviews ();
+        const now = new Date ();
+;
+=======
       } catch (error) {
         console.error("Error loading upcoming interviews:", error)
       } finally {
@@ -104,27 +130,50 @@ export function UpcomingInterviewsCard() {;
       try {;
         const interviews = await fetchInterviews(),;
         const now = new Date(),;
+
         // Filter for confirmed interviews in the future;
         const upcoming = interviews;
-          .filter(interview =>;
+          .filter (interview =>;
             interview.status === 'confirmed' &&;
-            !isPast(parseISO(interview.scheduled_date));
+            !is_past (parseISO (interview.scheduled_date)));
+          .sort ((a, b) =>;
+            parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
+          .slice (0, 3), // Take only the next 3 interviews;
+        setUpcomingInterviews (upcoming);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      } catch (error) {
+        console.error ("Error loading upcoming interviews:", error);
+      } finally {
+        setIsLoading (false);
+      }
+    }
+
+
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter(interview => ;
+            interview && interview.status === 'confirmed' && ;
+            !isPast(parseISO(interview && interview.scheduled_date));
           );
-          .sort((a, b) =>;
-            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
+          .sort((a, b) => ;
+            parseISO(a && a.scheduled_date).getTime() - parseISO(b && b.scheduled_date).getTime();
           );
           .slice(0, 3), // Take only the next 3 interviews;
+
         setUpcomingInterviews(upcoming);
       } catch (error) {;
-        console.error("Error loading upcoming interviews:", error);
+        console && console.error("Error loading upcoming interviews:", error);
       } finally {;
         setIsLoading(false);
       }
-    },;
+    };
+
     loadInterviews();
-  }, []),;
+  }, []);
+
   if (isLoading) {;
-    return (;
+
+    return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
@@ -143,34 +192,36 @@ export function UpcomingInterviewsCard() {;
                 </div>;
               </div>;
             ))}
-          </div>
-        </CardContent>
-      </Card>
-    )
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
   }
 
   if (upcomingInterviews.length === 0) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />
-            Upcoming Interviews
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="text-center py-6">
-            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />
-            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>
-            <Button asChild className="mt-4" variant="outline" size="sm">
-              <Link to="/interviews">Schedule Interview</Link>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    )
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle className="text-lg flex items-center">;
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+            Upcoming Interviews;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className="text-center py-6">;
+            <Calendar className="h-10 w-10 mx-auto mb-2 text-muted-foreground" />;
+            <p className="text-sm text-muted-foreground">No upcoming interviews scheduled</p>;
+            <Button asChild className="mt-4" variant="outline" size="sm">;
+              <Link to="/interviews">Schedule Interview</Link>;
+            </Button>;
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
   }
   return (
+
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">

@@ -79,11 +79,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 type Datum = { label: string, value: number };
 function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0)),;
+
   let acc = 0;
   const radius = size / 2;
   const center = radius;
   const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'];
-  const slices = data.map((d, i) => {;
+
+  const slices = data.map((d, i) => {
     const start = (acc / total) * 2 * Math.PI;
     acc += d.value;
     const end = (acc / total) * 2 * Math.PI;
@@ -93,6 +95,7 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     const y2 = center + radius * Math.sin(end);
     const largeArc = end - start > Math.PI ? 1 : 0;
     const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
   });
   return (;
@@ -103,23 +106,21 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
-  const max = Math.max(1, ...data.map((d) => d.value))
+  const max = Math.max(1, ...data.map((d) => d.value));
   const points = data.map((d, i) => {
-    const x = (i / Math.max(1, data.length - 1)) * width
-    const y = height - (d.value / max) * height
+    const x = (i / Math.max(1, data.length - 1)) * width;
+    const y = height - (d.value / max) * height;
     return `${x},${y}`
-  }).join(' ')
+  }).join(' ');
   return (
     <svg width={width} height={height} className="border rounded bg-white/40 dark:bg-gray-900/40">
       <polyline fill="none" stroke="#3b82f6" strokeWidth="2" points={points} />
     </svg>
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+
 function Funnel({ data }: { data: Datum[] }) {
   return (
     <div className="flex flex-col gap-2">
@@ -131,30 +132,58 @@ function Funnel({ data }: { data: Datum[] }) {
     </div>
   )
 }
-export default function UsageAnalytics() {
-  const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000))
-  const [end, setEnd] = useState<Date>(new Date())
-  const [userType, setUserType] = useState<string>('all')
-  const [loading, setLoading] = useState(false)
-  const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([])
-  const [events, setEvents] = useState<Datum[]>([])
-  const [line, setLine] = useState<{ date: string, value: number }[]>([])
-  const [funnel, setFunnel] = useState<Datum[]>([])
-  const refresh = useCallback(async () => {
-    setLoading(true)
-    try {
-      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType })
-      const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`)
-      const json = await res.json()
-      setPagesMostUsed(json.pagesMostUsed |[])
-      setEvents(json.events |[])
-      setLine(json.line |[])
-      setFunnel(json.funnel |[])
-    } finally {
-      setLoading(false)
-    }
-  }, [start, end, userType])
-  useEffect(() => { refresh() }, [])
+  return result;
+},
+type Datum = { label: string, value: number },
+/**
+ * PieChart - Function description
+ */
+function PieChart() {
+  const total = Math.max (1, data.reduce ((s, d) => s + d.value, 0)),
+  let acc = 0,
+  const radius = size / 2,
+  const center = radius,
+  const colors = ['#3b82f6#10b981#f59e0b#8b5cf6#ef4444#06b6d4'],
+  const slices = data.map ((d, i) => {
+    const start = (acc / total) * 2 * Math.PI,
+    acc += d.value,
+    const end = (acc / total) * 2 * Math.PI,
+    const x1 = center + radius * Math.cos (start),
+    const y1 = center + radius * Math.sin (start),
+    const x2 = center + radius * Math.cos (end),
+    const y2 = center + radius * Math.sin (end),
+    const large_arc = end - start > Math.PI ? 1 : 0,
+    const path = `M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${large_arc} 1 ${x2} ${y2} Z`,
+    return <path key={d.label} d={path} fill={colors[i % colors.length]} />;
+  }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+    <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
+}
+
+/**
+ * LineChart - Function description
+ */
+function LineChart() {
+  const max = Math.max (1, ...data.map ((d) => d.value)),
+  const points = data.map ((d, i) => {
+    const coordinate_x = (i / Math.max (1, data.length - 1)) * width,
+    const coordinate_y = height - (d.value / max) * height,
+    return `${x}, ${y}`;
+  }).join (' '),
+
+  return (
+    <svg width={width} height={height} className="border rounded bg - white / 40 dark:bg - gray - 900 / 40">;
+      <polyline fill="none" stroke="#3b82f6" stroke_width="2" points={points} />;
+    </svg>);
+}
+
+/**
+ * Funnel - Function description
+ */
+function Funnel() {
+
+  return (
 
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
@@ -177,18 +206,15 @@ export default function UsageAnalytics() {
 ;
 export default function UsageAnalytics(req, res) {
   try {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
   const [end, setEnd] = useState<Date>(new Date());
   const [userType, setUserType] = useState<string>('all');
   const [loading, setLoading] = useState(false);
   const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
   const [events, setEvents] = useState<Datum[]>([]);
-  const [line, setLine] = useState<{ date: string, value: number }[]>([]),;
-  const [funnel, setFunnel] = useState<Datum[]>([]);
-  const refresh = useCallback(async () => {;
-    setLoading(true);
-    try {
-      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType }),;
+
+
       const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`);
       const json = await res.json();
       setPagesMostUsed(json.pagesMostUsed || []);
@@ -251,6 +277,8 @@ export default function UsageAnalytics(req, res) {
               </ul>
             </div>
           </div>
+
+
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />
@@ -260,14 +288,12 @@ export default function UsageAnalytics(req, res) {
                   <span>{e.label}</span>
                   <span className="text-gray-500">{e.value}</span>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
           </div>
         </div>
+
+
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />

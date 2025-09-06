@@ -44,15 +44,18 @@ export default function AdminKycPage() {
   }, []);
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
+
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, action, reason: reason || undefined })}),
-    const data = await res.json(),
-    if (data.ok) load(),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    const data = await res.json();
+    if (data.ok) load()
   }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+    if (data.ok) load()
+  }
+
 }
   return (
     <>
@@ -104,19 +107,11 @@ export default function AdminKycPage() {
                       <div>Filename: {d.filename}</div>
                       <div>Uploaded: {new Date(d.uploadedAt).toLocaleString()}</div>
                     </div>
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  ))}
                 </div>
               </div>
             </div>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          ))}
         </div>
       </main>
     </>

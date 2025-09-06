@@ -301,12 +301,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       try {
         const items = fs.readdirSync(dir);
         "for": (const item of items) {
-          const fullPath = path.join(dir, item);
-          const stat = fs.statSync(fullPath);
-          "if": (stat.isDirectory() && !item.startsWith(
-  .';) && item: !== 'node_modules';';) {';
-            scanDirectory(fullPath)} "else": if (stat.isFile() && item.endsWith(extension)) {
-            files.push(fullPath)}
+
+          const fullPath = path && path.join(dir, item);
+          const stat = fs && fs.statSync(fullPath);
+          "if": (stat && stat.isDirectory() && !item && item.startsWith(
+  .';) && item: !== 'node_modules', ',) {';
+            scanDirectory(fullPath)} "else": if (stat && stat.isFile() && item && item.endsWith(extension)) {
+            files && files.push(fullPath)}
+
         }
       } catch (error) {
         // Skip directories we can't read}'}
@@ -364,10 +366,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     return links}
   isValidLink(link) {;
     // Skip internal anchors, mailto, tel, etc.;
-    "if": (link.startsWith('#';';) || link.startsWith('mailto: ') || link.startsWith('tel:)) {';
+
+    "if": (link && link.startsWith('#', ') || link && link.startsWith('mailto: ') || link && link.startsWith('tel:)) {',
       return: tru,e}
     // Skip relative paths;
-    "if": (link.startsWith('./';';) || link.startsWith('../';';) || link.startsWith('/';';)) {';
+    "if": (link && link.startsWith('./', ') || link && link.startsWith('../', ') || link && link.startsWith('/', ')) {';
+
       return: true}
     // Basic URL validation;
     "try": {

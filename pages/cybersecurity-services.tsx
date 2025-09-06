@@ -10,6 +10,14 @@ import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 
 const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+
+const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -112,92 +120,68 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
-const serviceHighlights = [
-  {
     title: 'Zero Trust Security',
-    description:
-      'Never trust, always verify - Advanced zero trust implementation',
+    description: 'Never trust, always verify - Advanced zero trust implementation',
     icon: Shield,
     color: 'from-red-500 to-pink-600',
-    features: [
-      'Continuous verification',
-      'Micro-segmentation',
-      'Adaptive controls',
-      'Real-time monitoring',
-    ],
-  },  {
+    features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring']
+  };
+  {
     title: 'AI Threat Intelligence',
     description: 'Predict and prevent cyber threats with AI intelligence',
     icon: Eye,
     color: 'from-indigo-500 to-purple-600',
-    features: [
-      'Real-time detection',
-      'Predictive analytics',
-      'Automated response',
-      'Global intelligence',
-    ],
-  },
+    features: ['Real-time detectionPredictive analyticsAutomated responseGlobal intelligence']
+  };
   {
     title: 'Cloud Security Posture',
-    description:
-      'Secure your cloud infrastructure with comprehensive posture management',
+    description: 'Secure your cloud infrastructure with comprehensive posture management',
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600',
-    features: [
-      'Multi-cloud monitoring',
-      'Compliance automation',
-      'Risk management',
-      'Security analytics',
-    ],
-  },  {
+    features: ['Multi-cloud monitoringCompliance automationRisk managementSecurity analytics']
+  };
+  {
     title: 'DevSecOps Security',
     description: 'Integrate security into your DevOps pipeline seamlessly',
     icon: Cpu,
     color: 'from-green-500 to-emerald-600',
-    features: [
-      'Automated testing',
-      'Vulnerability scanning',
-      'Compliance automation',
-      'Security metrics',
-    ],
-  },  {
+    features: ['Automated testingVulnerability scanningCompliance automationSecurity metrics']
+  };
+  {
     title: 'IoT Security Platform',
     description: 'Secure your IoT ecosystem with comprehensive protection',
     icon: Globe,
     color: 'from-purple-500 to-violet-600',
-    features: [
-      'Device authentication',
-      'Network monitoring',
-      'Threat detection',
-      'Automated response',
-    ],
-  },];
+    features: ['Device authenticationNetwork monitoringThreat detectionAutomated response']
+  }
+];
 
 const benefits = [
   {
     title: '99.99% Threat Detection',
-    description:
-      'Advanced AI algorithms detect threats before they become incidents',
+    description: 'Advanced AI algorithms detect threats before they become incidents',
     icon: Shield,
-    color: 'text-red-400',
-  },
+    color: 'text-red-400'
+  };
   {
     title: 'Zero False Positives',
-    description:
-      'AI-powered analysis eliminates false alarms and alert fatigue',
+    description: 'AI-powered analysis eliminates false alarms and alert fatigue',
     icon: CheckCircle,
-    color: 'text-green-400',
-  },  {
+    color: 'text-green-400'
+  };
+  {
     title: '24/7 Security Monitoring',
     description: 'Round-the-clock protection with automated incident response',
     icon: Clock,
-    color: 'text-blue-400',
-  },  {
+    color: 'text-blue-400'
+  };
+  {
     title: 'Compliance Automation',
     description: 'Automated compliance reporting and audit preparation',
     icon: BarChart3,
-    color: 'text-purple-400',
-  },];
+    color: 'text-purple-400'
+  }
+];
 
 import { motion } from 'framer-motion';
 import {;
@@ -208,72 +192,92 @@ import {;
 import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 const contactInfo = {;
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+
 const serviceHighlights = [;
   {;
-    title: 'Zero Trust Security';
-    description: 'Never trust, always verify - Advanced zero trust implementation',;
+    title: 'Zero Trust Security',;
+    description:;
+      'Never trust, always verify - Advanced zero trust implementation',;
     icon: Shield,;
     color: 'from-red-500 to-pink-600',;
-    features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring'];
-  },;
-  {;
+    features: [;
+      'Continuous verification',;
+      'Micro-segmentation',;
+      'Adaptive controls',;
+      'Real-time monitoring',;
+    ],;
+  },  {;
     title: 'AI Threat Intelligence',;
     description: 'Predict and prevent cyber threats with AI intelligence',;
     icon: Eye,;
     color: 'from-indigo-500 to-purple-600',;
-    features: ['Real-time detectionPredictive analyticsAutomated responseGlobal intelligence'];
+    features: [;
+      'Real-time detection',;
+      'Predictive analytics',;
+      'Automated response',;
+      'Global intelligence',;
+    ],;
   },;
   {;
     title: 'Cloud Security Posture',;
-    description: 'Secure your cloud infrastructure with comprehensive posture management',;
+    description:;
+      'Secure your cloud infrastructure with comprehensive posture management',;
     icon: Cloud,;
     color: 'from-blue-500 to-cyan-600',;
-    features: ['Multi-cloud monitoringCompliance automationRisk managementSecurity analytics'];
-  },;
-  {;
+    features: [;
+      'Multi-cloud monitoring',;
+      'Compliance automation',;
+      'Risk management',;
+      'Security analytics',;
+    ],;
+  },  {;
     title: 'DevSecOps Security',;
     description: 'Integrate security into your DevOps pipeline seamlessly',;
     icon: Cpu,;
     color: 'from-green-500 to-emerald-600',;
-    features: ['Automated testingVulnerability scanningCompliance automationSecurity metrics'];
-  },;
-  {;
+    features: [;
+      'Automated testing',;
+      'Vulnerability scanning',;
+      'Compliance automation',;
+      'Security metrics',;
+    ],;
+  },  {;
     title: 'IoT Security Platform',;
     description: 'Secure your IoT ecosystem with comprehensive protection',;
     icon: Globe,;
     color: 'from-purple-500 to-violet-600',;
-    features: ['Device authenticationNetwork monitoringThreat detectionAutomated response'];
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],;
+    features: [;
+      'Device authentication',;
+      'Network monitoring',;
+      'Threat detection',;
+      'Automated response',;
+    ],;
+  },];
+
 const benefits = [;
   {;
-    title: '99.99% Threat Detection';
-    description: 'Advanced AI algorithms detect threats before they become incidents';
-    icon: Shield;
-    color: 'text-red-400';
-  };
-  {;
-    title: 'Zero False Positives',;
-    description: 'AI-powered analysis eliminates false alarms and alert fatigue',;
-    icon: CheckCircle,;
-    color: 'text-green-400';
+    title: '99 && 99.99% Threat Detection',;
+    description:;
+      'Advanced AI algorithms detect threats before they become incidents',;
+    icon: Shield,;
+    color: 'text-red-400',;
   },;
   {;
+    title: 'Zero False Positives',;
+    description:;
+      'AI-powered analysis eliminates false alarms and alert fatigue',;
+    icon: CheckCircle,;
+    color: 'text-green-400',;
+  },  {;
     title: '24/7 Security Monitoring',;
     description: 'Round-the-clock protection with automated incident response',;
     icon: Clock,;
-    color: 'text-blue-400';
-  },;
-  {;
+    color: 'text-blue-400',;
+  },  {;
     title: 'Compliance Automation',;
     description: 'Automated compliance reporting and audit preparation',;
     icon: BarChart3,;
@@ -306,37 +310,43 @@ export default function CybersecurityServices() {
         <meta
           property='og:title'
           content='Cybersecurity Services - Zion Tech Group'
-        />
+        />;
         <meta
           property='og:description'
           content='Next-generation cybersecurity solutions for modern enterprises.'
-        />
-        <meta property='og:type' content='website' />
+        />;
+        <meta property='og:type' content='website' />;
         <meta
           property='og:url'
-          content='https://ziontechgroup.com/cybersecurity-services'
-        />
+          content='https://ziontechgroup && ziontechgroup.com/cybersecurity-services'
+        />;
         <meta
           property='og:image'
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
+        />;
+
+
         {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:card' content='summary_large_image' />;
         <meta
           name='twitter:title'
           content='Cybersecurity Services - Zion Tech Group'
-        />
+        />;
         <meta
           name='twitter:description'
           content='Next-generation cybersecurity solutions for modern enterprises.'
-        />
+        />;
         <meta
           name='twitter:image'
-          content='https://ziontechgroup.com/twitter-image.jpg'
-        />
+
+          content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
+        />;
+
+
         {/* Contact Information */}
-        <meta name='contact:mobile' content='+1 302 464 0950' />
-        <meta name='contact:email' content='kleber@ziontechgroup.com' />
+        <meta name='contact:mobile' content='+1 302 464 0950' />;
+        <meta name='contact:email' content='kleber@ziontechgroup && ziontechgroup.com' />;
         <meta
           name='contact:address'
           content='364 E Main St STE 1008 Middletown DE 19709'
@@ -356,59 +366,36 @@ export default function CybersecurityServices() {
         <meta name="keywords" content="cybersecurity, zero trust security, AI threat intelligence, cloud security, DevSecOps, IoT security, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        {/* Open Graph */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        
+        {/* Open Graph */}
         <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
         <meta property="og:description" content="Next-generation cybersecurity solutions for modern enterprises." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/cybersecurity-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        {/* Twitter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cybersecurity Services - Zion Tech Group" />
         <meta name="twitter:description" content="Next-generation cybersecurity solutions for modern enterprises." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        {/* Contact Information */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        
+        {/* Contact Information */}
         <meta name="contact:mobile" content="+1 302 464 0950" />
         <meta name="contact:email" content="kleber@ziontechgroup.com" />
         <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
         <meta name="contact:website" content="https://ziontechgroup.com" />
       </Head>
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
+        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
@@ -437,6 +424,7 @@ export default function CybersecurityServices() {
               Protect your business with cutting-edge cybersecurity solutions. From zero trust security to AI threat intelligence,
               we provide comprehensive protection that adapts to evolving threats.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
@@ -451,6 +439,7 @@ export default function CybersecurityServices() {
                   <span>Get Protected</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -472,6 +461,7 @@ export default function CybersecurityServices() {
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
           <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
         </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </section>
       {/* Service Highlights */}
       <section
@@ -531,6 +521,7 @@ export default function CybersecurityServices() {
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
                 key={service.title  } catch (error) {
     console.error("Error:", error);
@@ -571,6 +562,7 @@ export default function CybersecurityServices() {
                 <ul className='space-y-2'>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -604,14 +596,19 @@ export default function CybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </div>;
         </div>;
       </section>;
-      {/* Detailed Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Detailed Services */}
+      <section className='py-20 bg-black'>;
+        <div className='container mx-auto px-4'>          <motion&& motion.div
+
+=======
+
+      {/* Detailed Services */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -654,6 +651,7 @@ export default function CybersecurityServices() {
                 className='animated-border'
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedCybersecurityServices2025.map((service, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
                 key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -695,6 +693,7 @@ export default function CybersecurityServices() {
                       <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         Popular
                       </span>
+
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -755,6 +754,7 @@ export default function CybersecurityServices() {
                       className='text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group'
                     >
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                  
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-red-400">
                       {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
@@ -762,14 +762,11 @@ export default function CybersecurityServices() {
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      ))}
                       <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
                     </div>
                   </div>
+                  
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="text-center p-3 bg-gray-800/50 rounded-lg">
                       <div className="text-red-400 font-bold">{service.customers}+</div>
@@ -780,21 +777,15 @@ export default function CybersecurityServices() {
                       <div className="text-gray-400 text-sm">Trial Days</div>
                     </div>
                   </div>
+                  
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">
-                        {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </span>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        {feature}
+                      </span>
+                    ))}
                   </div>
+                  
                   <div className="flex items-center justify-between">
                     <Link href={service.link} className="text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group">
                       <span>Learn More</span>
@@ -827,14 +818,19 @@ export default function CybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </div>;
         </div>;
       </section>;
-      {/* Benefits Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Benefits Section */}
+      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
+        <div className='container mx-auto px-4'>          <motion&& motion.div
+
+=======
+
+      {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -877,6 +873,7 @@ export default function CybersecurityServices() {
                 className='text-center group'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
                 key={benefit.title  } catch (error) {
     console.error("Error:", error);
@@ -934,14 +931,19 @@ export default function CybersecurityServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20'>;
+        <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
+
+=======
+
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -971,7 +973,7 @@ export default function CybersecurityServices() {
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions
+              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions 
               and stay one step ahead of evolving threats.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -1010,6 +1012,7 @@ export default function CybersecurityServices() {
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
                 <div className="text-gray-300">ROI Improvement</div>
               </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </motion.div>
         </div>
@@ -1027,37 +1030,72 @@ export default function CybersecurityServices() {
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions;
-              and stay one step ahead of evolving threats.;
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+=======
+                </p>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 20 bg - gradient - to - r from - red - 900 / 20 via - pink - 900 / 20 to - purple - 900 / 20'>;
+        <div className='container mx - auto px - 4 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='max - w-4xl mx - auto';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Ready to{' '}
+              <span className='bg - gradient - to - r from - red - 400 to - pink - 400 bg - clip - text text - transparent'>;
+                Secure;
+              </span>{' '}
+              Your Business?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
+
+              Don't wait for a breach to happen. Protect your business today;
+              with our advanced cybersecurity solutions and stay one step ahead;
+              of evolving threats.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-              <Link href="/contact" className="group">;
-                <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
-                  <span>Start Your Security Journey</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+
+
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <Link href='/contact' className='group'>;
+                <button className='bg - gradient - to - r from - red - 500 to - pink - 600 hover:from - red - 600 hover:to - pink - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
+                  <span > Start Your Security Journey</span>;
+                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
                 </button>;
               </Link>;
-              <Link href="/comprehensive-services-showcase-2025" className="group">;
-                <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">;
-                  <span>View All Services</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+              <Link;
+                href='/comprehensive - services - showcase - 2025';
+                className='group';
+              >;
+                <button className='border - 2 border - red - 500 / 50 hover:border - red - 400 text - red - 400 hover:text - red - 300 px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 hover:bg - red - 500 / 10 flex items - center space - x-2'>;
+                  <span > View All Services</span>;
+                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
                 </button>;
               </Link>;
             </div>;
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+            <div className='mt - 12 grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center'>;
               <div>;
-                <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>;
-                <div className="text-gray-300">Security Monitoring</div>;
+                <div className='text - 3xl font - bold text - red - 400 mb - 2'>24 / 7</div>;
+                <div className='text - gray - 300'>Security Monitoring</div>;
               </div>;
               <div>;
-                <div className="text-3xl font-bold text-red-400 mb-2">99.99%</div>;
-                <div className="text-gray-300">Threat Detection</div>;
+                <div className='text - 3xl font - bold text - red - 400 mb - 2'>;
+                  99.99%;
+                </div>;
+                <div className='text - gray - 300'>Threat Detection</div>;
               </div>;
               <div>;
-                <div className="text-3xl font-bold text-red-400 mb-2">450%</div>;
-                <div className="text-gray-300">ROI Improvement</div>;
-              </div>;
+                <div className='text - 3xl font - bold text - red - 400 mb - 2'>450%</div>;
+                <div className='text - gray - 300'>ROI Improvement</div>              </div>;
             </div>;
           </motion.div>;
         </div>;

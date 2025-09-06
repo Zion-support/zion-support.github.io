@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 
-const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false })
 
 import dynamic from 'next/dynamic'
 import dynamic from 'next/dynamic',;

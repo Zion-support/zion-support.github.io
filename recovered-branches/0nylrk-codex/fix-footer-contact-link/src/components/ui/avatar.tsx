@@ -11,8 +11,16 @@ import { cn } from "@/lib/utils"
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
->(({ className, ...props }, ref) => (
+></typeof>(({ className, ...props }, ref) => (
   <AvatarPrimitive.Root
+=======
+
+const Avatar = React && React.forwardRef<;
+  React && React.ElementRef<typeof AvatarPrimitive && AvatarPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof AvatarPrimitive && AvatarPrimitive.Root>;
+></typeof>(({ className, ...props }, ref) => (;
+  <AvatarPrimitive&& AvatarPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
       'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full'
@@ -20,7 +28,7 @@ const Avatar = React.forwardRef<
       className
     )}
     {...props}
-  />
+  />;
 ));
 Avatar.displayName = AvatarPrimitive.Root.displayName;
 
@@ -60,7 +68,7 @@ const AvatarFallback = React.forwardRef<;
       className
     )}
     {...props}
-  />
+  />;
 ));
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 export { Avatar, AvatarImage, AvatarFallback }

@@ -35,11 +35,11 @@ export default useDebounce
 origin/main
 ;
 import { useState, useEffect } from 'react';
-export const useDebounce = <T>(value: T, delay: number): T => {;
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value)}, delay);
+export const use_debounce = <T>(value: T, delay: number): T => {
+  const [debounced_value, setDebouncedValue] = useState < T>(value);
+  useEffect (() => {
+    const handler = set_timeout (() => {
+      setDebouncedValue (value)}, delay);
     return () => {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final

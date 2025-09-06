@@ -24,18 +24,23 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 if (req.method === 'POST') {
     try {
-      const { keywords, rankings, issues, recommendations } = req.body;
+      const { keywords, rankings, issues, recommendations } = req && req.body;
+      
+
       const report = {
         keywords: keywords |[]
         rankings: rankings |[]
         issues: issues |[]
         recommendations: recommendations |[]
         generatedAt: new Date().toISOString()
-      }
-      fs.writeFileSync(p, JSON.stringify(report, null, 2));
-      return res.status(201).json(report);
+
+      };
+
+      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
+      return res && res.status(201).json(report);
+
     } catch (error) {
-      return res.status(500).json({ error: 'Failed to update SEO report' });
+      return res && res.status(500).json({ error: 'Failed to update SEO report' });
     }
   }
   res.setHeader('Allow', 'GET, POST');

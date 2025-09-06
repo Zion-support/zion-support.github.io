@@ -3,13 +3,10 @@ import React, { useEffect, useState } from 'react',;
 ;
 export default function InternationalProposals() {
 
-  const [items, setItems] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-  useEffect(() => {
-    (async () => {
-      const res = await fetch('/api/proposals/list')
-      const data = await res.json()
-      setItems(data.proposals |[])
+      const res = await fetch('/api/proposals/list');
+      const data = await res.json();
+      setItems(data.proposals || []);
+
       setLoading(false)
     })()
   }, [])
@@ -19,6 +16,32 @@ export default function InternationalProposals() {
     const data = await res.json()
     setItems(data.proposals |[])
 
+=======
+import React, { useEffect, useState } from 'react',
+;
+export default /**
+ * InternationalProposals - Function description
+ */
+function InternationalProposals() {
+  const [items, set_items] = useState < any[]>([]),
+  const [loading, set_loading] = useState (true),
+  useEffect (() => {
+    (async () => {
+      const res = await fetch ('/api / proposals / list'),
+      const data = await res.json (),
+      set_items (data.proposals || []),
+      set_loading (false);
+    })();
+  }, []),
+  async /**
+ * update_status - Function description
+ */
+function update_status() {
+    await fetch ('/api / proposals / status', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id, status }) }),
+    const res = await fetch ('/api / proposals / list'),
+    const data = await res.json (),
+    set_items (data.proposals || []);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
     const res = await fetch('/api/proposals/list'),
@@ -48,8 +71,8 @@ export default function InternationalProposals(req, res) {
   }
 }
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">International Proposals</h1>
+    <div className="space - y-6">;
+      <h1 className="text - 2xl font - semibold">International Proposals</h1>;
       {loading ? (
         <div>Loading…</div>
       ) : (

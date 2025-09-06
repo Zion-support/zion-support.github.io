@@ -1,15 +1,19 @@
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
-const url = process.env.NEXT_PUBLIC_SUPABASE_URL |"";
-const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"";
+
+
+const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {;
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "POST") {
+    res && res.setHeader("Allow", "POST");
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
   try {
     const { projectId, roomName, inviterName } = req.body |{}
@@ -35,10 +39,34 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+=======
+    const { projectId, roomName, inviterName } = req && req.body || {};
+    if (!projectId || !roomName)
+      return res && res.status(400).json({ error: "Missing required fields" });
+    if (!url || !key)
+      return res && res.status(500).json({ error: "Supabase not configured" });
+
+    const supabase = createClient(url, key);
+    await supabase && supabase.channel(`project_${projectId}_calls`).send({
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { create_client  } from '@supabase / supabase - js';
+;
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "POST");
+    return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
     const { projectId, roomName, inviterName } = req.body || {};
@@ -58,6 +86,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -200,8 +200,9 @@ export default function FAQ() {
               Still Have Questions?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Our team is here to help. Contact us for personalized answers to your specific questions
-              and to discuss how we can help your business.
+              Our team is here to help. Contact us for personalized answers to
+              your specific questions and to discuss how we can help your
+              business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">

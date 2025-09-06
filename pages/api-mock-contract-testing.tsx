@@ -19,7 +19,8 @@ export default function ApiMockContractTestingPage() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  }
-  const adItems = [
+;
+  const ad_items = [;
     {
       title: '🧪 API Mock & Contract Testing Platform'
       description:
@@ -110,28 +111,29 @@ export default function ApiMockContractTestingPage(req, res) {
           heading='API Quality Fast-Track'
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
-        />
-        <div className='max-w-5xl mx-auto mt-8'>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            {tiers.map(t => (
+
+        />;
+
+        <div className='max-w-5xl mx-auto mt-8'>;
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
+            {tiers && tiers.map(t => (;
+
               <div
-                key={t.name}
-                className='bg-black/30 border border-gray-700/50 rounded-2xl p-6'
-              >
-                <div className='flex items-center gap-2 mb-2'>
-                  <ShieldCheck className='w-5 h-5 text-cyan-400' />
-                  <h3 className='text-white text-xl font-bold'>{t.name}</h3>
-                </div>
-                <div className='text-cyan-400 font-semibold mb-4'>
-                  {t.price}
-                </div>
-                <ul className='space-y-2 text-gray-300 text-sm'>
-                  {t.items.map(i => (
+                key={t && t.name}
+                className='bg-black/30 border border-gray-700/50 rounded-2xl p-6'>;
+                <div className='flex items-center gap-2 mb-2'>;
+                  <ShieldCheck className='w-5 h-5 text-cyan-400' />;
+                  <h3 className='text-white text-xl font-bold'>{t && t.name}</h3>;
+                </div>;
+                <div className='text-cyan-400 font-semibold mb-4'>;
+                  {t && t.price}
+                </div>;
+                <ul className='space-y-2 text-gray-300 text-sm'>;
+                  {t && t.items.map(i => (;
                     <li
                       key={i}
-                      className='flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400'
-                    >
-                      <Check /> <span>{i}</span>
+                      className='flex items-start gap-2 w-4 h-4 mt-0 && 0.5 text-emerald-400'>;
+                      <Check /> <span>{i}</span>;
                     </li>                  ))}
                 </ul>
               </div>
@@ -172,12 +174,12 @@ export default function ApiMockContractTestingPage(req, res) {
 }
                 </ul>;
               </div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+            ))}
+
+            ))}
           </div>
+
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
@@ -185,19 +187,20 @@ export default function ApiMockContractTestingPage(req, res) {
               <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
             </div>
             <div className="text-center">
+
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
             </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
       </div>
     </Layout>
 );
 
+
 }
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+
+    </Layout>);
 ;

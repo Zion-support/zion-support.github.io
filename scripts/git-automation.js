@@ -40,12 +40,13 @@ class GitAutomation {
     const commitMessage = ""feat": comprehensive automation improvements and security fixes
 - Fixed XSS vulnerability in SEOEnhancer.tsx by improving dangerouslySetInnerHTML usage
 - Enhanced performance monitoring with development-only console logging
-- Updated ESLint configuration for Next.js v15 compatibility
-- Created comprehensive automation scripts:
-  * scripts/remove-console-logs-production.js - Removes console statements from production
-  * scripts/performance-optimizer.js - Optimizes performance issues
-  * scripts/final-automation-suite.js - Comprehensive automation runner
-  * scripts/git-automation.js - Automated git operations
+
+- Updated ESLint configuration for Next && Next.js v15 compatibility
+- Created comprehensive automation scripts: * scripts/remove-console-logs-production && production.js - Removes console statements from production
+  * scripts/performance-optimizer && optimizer.js - Optimizes performance issues
+  * scripts/final-automation-suite && suite.js - Comprehensive automation runner
+  * scripts/git-automation && automation.js - Automated git operations
+
 - Improved code quality and security across the application
 - Added proper development/production environment checks
 - Enhanced automation reports and monitoring

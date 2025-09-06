@@ -47,12 +47,20 @@ export function useWorkExperience() {;
           resume_id: resumeId;
           company_name: work.company_name;
           role_title: work.role_title;
-          start_date: formatDateForDB(work.start_date);
-          end_date: work.is_current ? null : formatDateForDB(work.end_date);
+          start_date: formatDateForDB (work.start_date);
+          end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-          company_logo_url: work.company_logo_url
-          location: work.location
+
+          company_name: work && work.company_name;
+          role_title: work && work.role_title;
+          start_date: formatDateForDB(work && work.start_date);
+          end_date: work && work.is_current ? null : formatDateForDB(work && work.end_date);
+          is_current: work && work.is_current;
+          description: work && work.description;
+          company_logo_url: work && work.company_logo_url,
+          location: work && work.location
+
         });
       if (error) throw error;
           resume_id: resumeId,
@@ -122,12 +130,20 @@ export function useWorkExperience() {;
         .update({
           company_name: work.company_name;
           role_title: work.role_title;
-          start_date: formatDateForDB(work.start_date);
-          end_date: work.is_current ? null : formatDateForDB(work.end_date);
+          start_date: formatDateForDB (work.start_date);
+          end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-          company_logo_url: work.company_logo_url
-          location: work.location
+
+          company_name: work && work.company_name;
+          role_title: work && work.role_title;
+          start_date: formatDateForDB(work && work.start_date);
+          end_date: work && work.is_current ? null : formatDateForDB(work && work.end_date);
+          is_current: work && work.is_current;
+          description: work && work.description;
+          company_logo_url: work && work.company_logo_url,
+          location: work && work.location
+
         })
         .eq('id', workId);
       if (error) throw error;
@@ -208,9 +224,29 @@ export function useWorkExperience() {;
     } finally {
       setIsLoading(false)
     }
-  }
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
+      const { error } = await supabase;
+        .from ('work_history');
+        .delete ();
+        .eq ('id', work_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      return showSuccessToast ("Work experience deleted", "Your work experience has been removed from your resume");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } catch (e: any) {
+      return handleResumeError (e, 'Could not delete work experience');
+    } finally {
+
+;
+
   return {
-    isLoading;
+    is_loading;
     error;
     addWorkExperience;
     updateWorkExperience;

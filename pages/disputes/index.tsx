@@ -11,6 +11,18 @@ export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
   const disputes = data?.disputes |[]
 
+=======
+import useSWR from 'swr',
+import EnhancedLayout from '../../components / layout / EnhancedLayout',
+import Link from 'next / link',
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
+export default /**
+ * DisputesIndexPage - Function description
+ */
+function DisputesIndexPage() {
+  const { data } = useSWR ('/api / disputes', fetcher),
+  const disputes = data?.disputes || [],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <EnhancedLayout>
       <div className="max-w-4xl mx-auto">
@@ -38,11 +50,7 @@ export default function DisputesIndexPage() {
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                 </tr>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
               {disputes.length === 0 && (
                 <tr>
                   <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
@@ -60,6 +68,11 @@ export default function DisputesIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+=======
+                <tr>;
+                  <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
+                </tr>)}
             </tbody>;
           </table>;
         </div>;

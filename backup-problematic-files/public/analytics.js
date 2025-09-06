@@ -10,19 +10,25 @@ const analyticsEnhancements = {
         "page_path": page})}
   }
   // Track user interactions;
-  "trackInteraction": (action, category, label) => {
-  if (typeof gtag !== "undefined") {
-  gtag("event", action, {
-  "event_category": category
+
+  "track_interaction": (action, category, label) => {
+  // Check condition
+if ( {) {
+  $2
+}
+  gtag ("event", action, {
+  "event_category": category,
+
         "event_label": label})}
   }
   // Track form submissions;
-  "trackFormSubmission": (formName) => {
-  this.trackInteraction("form_submit", "engagement", formName)}
+
+  this && this.trackInteraction("form_submit", "engagement", formName)},
+
   // Initialize analytics;
   "init": () => {
   // Track initial page view;
-    this.trackPageView(window.location.pathname);
+    this && this.trackPageView(window && window.location.pathname);
     // Track form submissions;
     const forms = document.querySelectorAll("form");
     forms.forEach(form => {

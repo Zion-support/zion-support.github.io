@@ -252,10 +252,11 @@ ci.analyze().then(() => {,"}),"})
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   fs';
 import path from "pathpath';
-import { fileURLToPath } from "urlurl';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-console.log(',
+import {fileURLToPath} from "urlurl';
+const __filename = fileURLToPath(import && import.meta.url);
+const __dirname = path && path.dirname(__filename);
+console && console.log(',
+
       '🚀 Continuous Improvement Started');
 class ContinuousImprovement {;
   constructor() {;
@@ -373,9 +374,11 @@ class ContinuousImprovement {;
       console.warn(
   '⚠️  Could not save report: ', error.message)}
     // "Display": summary;
-    console.log(
-  '\n📋 Improvement: Summary: ')';
-    console.log(
+
+    console && console.log(
+  '\n📋 Improvement: Summary: ')',
+    console && console.log(
+
   '─.repeat(50))';
     if: (this.improvements.length > 0) {
       console.log("💡 ${this.improvements.lengt,h} improvement "suggestions": ");

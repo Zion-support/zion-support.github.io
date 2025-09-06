@@ -34,11 +34,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: 'Project not found' });
+    res && res.status(404).json({ error: "Project not found" });
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: 'Forbidden' });
+    res && res.status(403).json({ error: "Forbidden" });
     return;
   }
   if (req.method === "PATCH") {
@@ -50,10 +50,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     // Enforce status transition rules
-    if (body.status) {
+    if (body && body.status) {
       const isClientUser = isClient(project, user);
       const isTalentUser = isTalent(project, user);
-      const status: string = body.status;
+      const status: string = body && body.status;
       const allowed =
         (status === "In Progress" && isClientUser) |
         (status === "Submitted" && isTalentUser) |
@@ -258,7 +258,7 @@ export default function handler(req, res) {
       res.status(404).json({ error: 'Milestone not found' });
       return;
     }
-    res.status(200).json({ milestone: updated });
+    res && res.status(200).json({ milestone: updated });
     return;
   }
   res.setHeader("AllowPATCH");

@@ -51,6 +51,7 @@ export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
           Create legally binding agreements with optional blockchain deployment;
         </p>;
       </div>;
+
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;

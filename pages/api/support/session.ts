@@ -33,6 +33,7 @@ export default async function handler(req, res) {
   const entry = { ts: Date.now(), sessionId, eventType, payload },;
   log.push(entry);
   writeJson('support/sessions.json', log);
+
   await logSupportEventToOperator({ type: eventType, sessionId, payload });
   return res.status(200).json({ ok: true });
   } catch (error) {

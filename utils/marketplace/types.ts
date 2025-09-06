@@ -8,6 +8,7 @@ export interface Offer {;
   clientId: string;
   talentSlug: string;
   startDateIso: string;
+
   scopeSummary: string;
   paymentTerms: PaymentTerms;
   agreementUrl?: string;

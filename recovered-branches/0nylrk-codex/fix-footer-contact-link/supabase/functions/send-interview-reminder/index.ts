@@ -17,15 +17,15 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Resend } from "npm: resend@2.0.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
-const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "",
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || "";
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -80,31 +80,49 @@ serve(async (req) => {
     const results = [],
     
     if (interviews && interviews.length > 0) {
+
       for (const interview of interviews) {
-        // Send email to client
-        const clientEmail = interview.clients?.email,
-        const talentName = interview.talents?.display_name || interview.talents?.full_name || "Talent",
-        const interviewDate = new Date(interview.scheduled_date),
+        // Send email to client;
+        const client_email = interview.clients?.email;
+        const talent_name = interview.talents?.display_name || interview.talents?.full_name || "Talent";
+        const interview_date = new Date (interview.scheduled_date);
+;
+        // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          try {
+            await resend.emails.send ({
+              from: "Zion Marketplace <onboarding@resend.dev>";
+
+        const clientEmail = interview && interview.clients?.email;
+        const talentName = interview && interview.talents?.display_name || interview && interview.talents?.full_name || "Talent";
+        const interviewDate = new Date(interview && interview.scheduled_date);
         
         if (clientEmail) {
           try {
-            await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
+            await resend && resend.emails.send({
+              from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [clientEmail],
               subject: `Your interview with ${talentName} is starting soon!`,
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</Link></p>` : ''}
+                <p><strong>Time:</strong> ${interviewDate && interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
+                ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
               `});
               `}),
             
             results.push(`Reminder sent to client: ${clientEmail}`)
+=======
+            
+            results && results.push(`Reminder sent to client: ${clientEmail}`)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           } catch (emailError) {
-            console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
+            console && console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
           }
         }
         // Send email to talent
@@ -112,25 +130,27 @@ serve(async (req) => {
         const clientName = interview.clients?.display_name |"Client";
         if (talentEmail) {
           try {
-            await resend.emails.send({
+            await resend.emails.send ({
               from: "Zion Marketplace <onboarding@resend.dev>";
               to: [talentEmail]
               subject: `Your interview with ${clientName} is starting soon!`;
         const talentEmail = interview.talents?.email,
         const clientName = interview.clients?.display_name || "Client",
+
         
         if (talentEmail) {
           try {
-            await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>",
+            await resend && resend.emails.send({
+              from: "Zion Marketplace <onboarding@resend && resend.dev>";
               to: [talentEmail],
+
               subject: `Your interview with ${clientName} is starting soon!`,
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
-                <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</Link></p>` : ''}
+                <p><strong>Time:</strong> ${interviewDate && interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Duration:</strong> ${interview && interview.duration_minutes} minutes</p>
+                ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
               `});
             results.push(`Reminder sent to talent: ${talentEmail}`)
@@ -248,7 +268,7 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
-    console.error("Error in send-interview-reminder function:", error),
+    console.error("Error in send-interview-reminder function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 500})

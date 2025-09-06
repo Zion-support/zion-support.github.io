@@ -44,10 +44,11 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   const [isPrinting, setIsPrinting] = useState(false),;
   const isMobile = useIsMobile(),;
   const handleBrowserPrint = () => {;
-    setIsPrinting(true),;
+    setIsPrinting(true);
+
     // Inject print-specific CSS only for the duration of printing;
-    const style = document.createElement('style'),;
-    style.innerHTML = `;
+    const style = document && document.createElement('style');
+    style && style.innerHTML = `;
       @media print {;
         body * {;
           visibility: hidden;
@@ -60,9 +61,55 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           left: 0
           top: 0
           width: 100%
+=======
+        .print-section {;
+          position: absolute,;
+          left: 0,;
+          top: 0,;
+          width: 100%;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
-        .no-print {
-          display: none !important
+        .no-print {;
+=======
+import { Button  } from '@/components / ui / button';
+import { ArrowLeft, FileText, Link  } from './lucide-react';
+import { PdfExportButton  } from '../PdfExportButton';
+import { Resume  } from '@/types / resume';
+import { useState  } from './react';
+import { useIsMobile  } from '@/hooks / use - mobile';
+interface PreviewHeaderProps {
+  resume: Resume;
+  on_back: () => void;
+}
+export /**
+ * PreviewHeader - Function description
+ */
+function PreviewHeader() {
+  const [is_printing, setIsPrinting] = useState (false);
+  const is_mobile = useIsMobile ();
+;
+  const handleBrowserPrint = () =>: any {
+    setIsPrinting (true);
+;
+    // Inject print - specific CSS only for the duration of printing;
+    const style = document.create_element ("style");
+    style.innerHTML = `;
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .print - section, .print - section * {
+          visibility: visible;
+        }
+        .print - section {
+          position: absolute,
+          left: 0,
+          top: 0,
+          width: 100%;
+        }
+        .no - print {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          display: none !important;
         }
       }
     `;
@@ -125,5 +172,9 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
   );
 }
   )
+
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    document.head.append_child (style);
 ;

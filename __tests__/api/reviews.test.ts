@@ -9,6 +9,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest'
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
+
 describe('/api/reviews API Endpoint'
   describe('POST /api/reviews'
     it('should successfully create a review (201)'

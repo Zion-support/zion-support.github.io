@@ -1,98 +1,28 @@
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 
-interface ProviderMeta {
+
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
-interface ConnectionMap {
-  [providerId: string]: any
-function StatusIcon({
-  status
-}: {
-  status: 'connected' | 'warning' | 'disconnected'
-}) {
-  const label =
+
+
+interface ConnectionMap {;
+  [providerId: string]: any,;
+
+function StatusIcon(): any ({;
+  status,;
+}: {;
+  status: 'connected' | 'warning' | 'disconnected',;
+}) {;
+  const label =;
+
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
   return (
-    <span className='text-xl' title={status}>
+    <span className='text-xl' title={status}>;
       {label}
-    </span>
-  );
-interface ConnectionMap {
-  [key: string]: boolean
-const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders] = useState<ProviderMeta[]>([]);
-  const [connections, setConnections] = useState<ConnectionMap>({});
-  const [loading, setLoading] = useState(false);
-  const [selected, setSelected] = useState<string | null>(null);
-  const [syncRules, setSyncRules] = useState<any>({
-    autoCreateContacts: true
-    pushNotesMode: 'auto'
-    autoSyncApplicants: true
-    autoUploadResumes: true
-  });
-  async function refresh() {
-    const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json())
-      fetch('/api/integrations/status').then(r => r.json())
-    ]);
-    setProviders(p.providers |[]);
-    setConnections(s.connections |{});
-  }
-  useEffect(() => {
-    refresh();
-  }, []);
-  async function connect(providerId: string) {
-    setLoading(true)
-    try {
-      // Open mock oauth popup
-      window.open(
-        `/api/integrations/oauth/${providerId}/start`
-        'oauth'
-        'width=500,height=700'
-      );
-      await new Promise(r => setTimeout(r, 500));
-      await fetch('/api/integrations/connect', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ providerId, syncRules })
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }  }
-  async function disconnect(providerId: string) {
-    setLoading(true)
-    try {
-      await fetch('/api/integrations/disconnect', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ providerId })
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }  }
-  async function resync(providerId: string) {
-    setLoading(true)
-    try {
-      await fetch('/api/integrations/resync', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ providerId })
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }
-  }
-  const grouped = useMemo(
-    () => ({
-      crm: providers.filter(p => p.category === 'crm')
-      ats: providers.filter(p => p.category === 'ats')
-    })
-    [providers]
+    </span>;
   );
 import { useEffect, useMemo, useState } from 'react';
 import React, { useState } from 'react';
@@ -116,11 +46,96 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AdminIntegrationsPage() {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+
+  const [syncRules, setSyncRules] = useState<any>({;
+    autoCreateContacts: true,;
+    pushNotesMode: 'auto',;
+    autoSyncApplicants: true,;
+    autoUploadResumes: true,;
+  });
+
+  async function refresh() {;
+    const [p, s] = await Promise && Promise.all([;
+      fetch('/api/integrations/providers').then(r => r && r.json()),;
+      fetch('/api/integrations/status').then(r => r && r.json()),;
+    ]);
+    setProviders(p && p.providers || []);
+    setConnections(s && s.connections || {});
+  }
+
+  useEffect(() => {;
+    refresh();
+  }, []);
+  async function connect(): any (providerId: string) {;
+    setLoading(true),;
+    try {;
+      // Open mock oauth popup;
+      window && window.open(;
+        `/api/integrations/oauth/${providerId}/start`,;
+        'oauth',;
+        'width=500,height=700';
+      );
+      await new Promise(r => setTimeout(r, 500));
+      await fetch('/api/integrations/connect', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ providerId, syncRules }),;
+
+      });
+      await refresh();
+    } finally {;
+      setLoading(false);
+    }  }
+
+      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
+      await new Promise(r => setTimeout(r, 500));
+      await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
+      await refresh()
+    } finally { setLoading(false) }
+  }
+
+
+  async function disconnect(providerId: string) {
+    setLoading(true)
+    try {
+
+
+  async function disconnect(): any (providerId: string) {;
+    setLoading(true),;
+    try {;
+      await fetch('/api/integrations/disconnect', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ providerId }),;
+
+      });
+      await refresh();
+    } finally {;
+      setLoading(false);
+    }  }
+
+
+  async function resync(): any (providerId: string) {;
+    setLoading(true),;
+    try {;
+      await fetch('/api/integrations/resync', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ providerId }),;
+
+      });
+      await refresh();
+    } finally {;
+      setLoading(false);
+    }
+  }
+
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
   async function refresh() {
     const [p, s] = await Promise.all([
@@ -147,32 +162,7 @@ export default function AdminIntegrationsPage() {
       setLoading(false);
     }  }
 
-  async function disconnect(providerId: string) {
-    setLoading(true),
-    try {
-      await fetch('/api/integrations/disconnect', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId }),
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }  }
 
-  async function resync(providerId: string) {
-    setLoading(true),
-    try {
-      await fetch('/api/integrations/resync', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId }),
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }
-  }
 
   const grouped = useMemo(
     () => ({
@@ -329,18 +319,28 @@ export default function AdminIntegrationsPage() {
                           setSyncRules({ ...syncRules, pushNotesMode: 'auto' })
                         }
                       />{' '}
-                      Auto
-                    </label>
-                    <label className='flex items-center gap-2'>
-                      <input
-                        type='radio'
-                        name='pushNotes'
-                        checked={syncRules.pushNotesMode === 'manual'}
-                        onChange={() =>
-                          setSyncRules({
-                            ...syncRules
-                            pushNotesMode: 'manual'
-                          })
+                      Auto;
+                    </label>;
+
+                        checked={syncRules && syncRules.pushNotesMode === 'manual'}
+                        onChange={() =>;
+                          setSyncRules({;
+                            ...syncRules,;
+                            pushNotesMode: 'manual',;
+                          });
+
+=======
+                    <label className='flex items - center gap - 2'>;
+                      <input;
+                        type='radio';
+                        name='push_notes';
+                        checked={sync_rules.pushNotesMode === 'manual'}
+                        on_change={() =>;
+                          setSyncRules ({
+                            ...sync_rules,
+                            pushNotesMode: 'manual',
+                          });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }
                       />{' '}
                       Manual only
@@ -367,17 +367,19 @@ export default function AdminIntegrationsPage() {
                       })
                     }
                   />{' '}
-                  Auto-sync applicants
-                </label>
-                <label className='flex items-center gap-2'>
+                  Auto-sync applicants;
+                </label>;
+                <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
-                    checked={!!syncRules.autoUploadResumes}
-                    onChange={e =>
-                      setSyncRules({
-                        ...syncRules
-                        autoUploadResumes: e.target.checked
-                      })
+
+                    checked={!!syncRules && syncRules.autoUploadResumes}
+                    onChange={e =>;
+                      setSyncRules({;
+                        ...syncRules,;
+                        autoUploadResumes: e && e.target.checked,;
+                      });
+
                     }
                   />{' '}
                   Auto-upload resumes
@@ -414,25 +416,28 @@ export default function AdminIntegrationsPage() {
             {grouped.crm.map(p => (
               <Card key={p.id} p={p} />
             ))}
-          </div>
-        </section>
-        <section className='mb-10'>
-          <h2 className='text-lg font-semibold mb-3'>ATS</h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {grouped.ats.map(p => (
-              <Card key={p.id} p={p} />
+          </div>;
+        </section>;
+
+        <section className='mb-10'>;
+          <h2 className='text-lg font-semibold mb-3'>ATS</h2>;
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>;
+            {grouped && grouped.ats.map(p => (;
+              <Card key={p && p.id} p={p} />;
             ))}
-          </div>
-        </section>
-        <section className='mb-10'>
-          <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
-          <div className='text-sm text-gray-600'>Polling endpoints:</div>
-          <ul className='list-disc pl-6 text-sm mt-2'>
-            <li>
+          </div>;
+        </section>;
+
+        <section className='mb-10'>;
+          <h2 className='text-lg font-semibold mb-2'>Zapier</h2>;
+          <div className='text-sm text-gray-600'>Polling endpoints:</div>;
+          <ul className='list-disc pl-6 text-sm mt-2'>;
+            <li>;
+
               New Zion Job Posted → GET{' '}
-              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
-            </li>
-            <li>
+              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>;
+            </li>;
+            <li>;
               Talent Matched → GET{' '}
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
@@ -516,27 +521,32 @@ export default function AdminIntegrationsPage() {
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
           </ul>
         </section>
+
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </section>
       </main>
       <RulesModal />
     </>
   );
-function ManualOverrideForm() {
+function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
-  async function save() {
+
+
+  async function save() {;
     setMessage('');
-    const res = await fetch('/api/integrations/overrides', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync })
+    const res = await fetch('/api/integrations/overrides', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),;
+
     });
-    if (res.ok) setMessage('Saved');
+    if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
 
   }
@@ -575,6 +585,7 @@ function ManualOverrideForm() {
       </div>
     </div>
 );
+
 
 }
 }

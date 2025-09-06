@@ -9,26 +9,34 @@ export type AdminActionType =
   | 'escalate';
 export interface AdminAction {
 
+
 export interface AdminAction {;
   id: string;
-  caseId: string;
+  case_id: string;
   type: AdminActionType;
-  adminId: string;
-  reason: string
-  details: Record<string, any>;
-  createdAt: string;
-  executedAt?: string;
-  status: 'pending' | 'executed' | 'failed'
+
+  admin_id: string;
+  reason: string,
+  details: Record < string, any>;
+  created_at: string;
+  executed_at?: string;
+  status: 'pending' | 'executed' | 'failed',
+
 }
+<<<<<<< HEAD
 export interface FraudDetectionResult {
 
 export interface FraudDetectionResult {;
   isFraud: boolean;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
-  suggestedActions: AdminActionType[]
-  metadata: Record<string, any>;
+
+  suggested_actions: AdminActionType[],
+  metadata: Record < string, any>;
+
 }
+<<<<<<< HEAD
 export interface FraudDetectionConfig {
 
 export interface FraudDetectionConfig {;
@@ -36,22 +44,23 @@ export interface FraudDetectionConfig {;
   rules: {
     suspiciousActivity: {
       enabled: boolean;
-      threshold: number
+
+      threshold: number,
     }
-    fakeProfile: {
+    fake_profile: {
       enabled: boolean;
-      threshold: number
+      threshold: number,
     }
-    paymentFraud: {
+    payment_fraud: {
       enabled: boolean;
-      threshold: number
+      threshold: number,
     }
     spam: {
       enabled: boolean;
-      threshold: number
+      threshold: number,
     }
   }
-  autoActions: {
+  auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
     confidenceThreshold: number

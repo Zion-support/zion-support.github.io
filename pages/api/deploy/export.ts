@@ -16,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json(fake)
     id,
-    exportedAt: new Date().toISOString(),
+
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
   res.setHeader('Content-Typeapplication/json'),
   return res.status(200).json(fake);
@@ -47,6 +47,7 @@ export default function handler(req, res) {
   const fake = {;
     id;
     exportedAt: new Date().toISOString();
+
     note: 'This is a stub export. Connect to persistence to return real deployment state.'};
   res.setHeader('Content-Typeapplication/json');
   return res.status(200).json(fake);

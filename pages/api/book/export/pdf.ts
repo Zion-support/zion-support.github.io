@@ -79,13 +79,16 @@ export default async function handler(req, res) {
   const browser = await puppeteer.launch({;
     headless: true;
     args: ['--no-sandbox--disable-setuid-sandbox']});
+
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
-    await browser.close(),;
+    await browser.close();
+
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
+
     res.status(200).send(pdfBuffer);
   } catch (error) {
     try { await browser.close() } catch {  } catch (error) {

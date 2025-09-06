@@ -12,9 +12,9 @@ import _React from 'react'; import { render,screen } from '@testing-library/reac
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/main
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Navigation from '../components/Navigation';
+
+
+
 describe('Navigation', () => {
   test('renders without crashing', () => {
     render(<Navigation />);

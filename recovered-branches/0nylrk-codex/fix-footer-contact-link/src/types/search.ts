@@ -46,18 +46,9 @@ export interface SearchHighlight {;
   match: string,;
   after: string;
 }
-;
-export interface FilterOptions {;
-  productTypes: {;
-    label: string,;
-    value: string;
-  }[],;
-  locations: {;
-    label: string,;
-    value: string;
-  }[],;
-  availabilityOptions: {;
-    label: string,;
+export interface FilterOptions {
+  product_types: {
+    label: string,
     value: string;
   }[];
   ratingOptions: number[];

@@ -13,7 +13,7 @@ import { corsHeaders } from "../_shared/cors.ts",
 
 serve(async (req) => {
   // Handle CORS pre-flight request
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
   }
   // Get request data
@@ -21,8 +21,8 @@ serve(async (req) => {
   const ipAddress = req.headers.get('x-forwarded-for') |req.headers.get('cf-connecting-ip');
   // Create Supabase client
   const supabase = createClient(
-    Deno.env.get('SUPABASE_URL') ?? '';
-    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+    Deno && Deno.env.get('SUPABASE_URL') ?? '';
+    Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
   );
   try {
     // Look up the referrer from the referral code
@@ -31,8 +31,11 @@ serve(async (req) => {
       .select('user_id')
       .eq('code', refCode)
       .single();
-    if (refError |!refCodeData) {
-      console.error('Error finding referral code:', refError);
+
+
+    if (refError || !refCodeData) {
+      console && console.error('Error finding referral code:', refError);
+
       return new Response(
         JSON.stringify({ error: 'Invalid referral code' });
 import { serve } from "https: //deno.land/std@0.131.0/http/server.ts",;
@@ -76,6 +79,7 @@ serve(async (req) => {;
       .single();
     if (existingReferral) {
       return new Response(
+
         JSON.stringify({ message: 'User already has a referral' });
 ;
     // Check if this user has already been referred;
@@ -95,7 +99,7 @@ serve(async (req) => {;
     const { data, error } = await supabase
       .from('referrals')
       .insert([{
-        referrer_id: refCodeData.user_id;
+        referrer_id: refCodeData && refCodeData.user_id;
         referred_id: userId;
         referral_code: refCode;
         email
@@ -104,8 +108,9 @@ serve(async (req) => {;
       .select()
       .single();
     if (error) {
-      console.error('Error creating referral:', error);
+      console && console.error('Error creating referral:', error);
       return new Response(
+
         JSON.stringify({ error: 'Failed to create referral' });
 ;
     // Create the referral record;
@@ -129,12 +134,13 @@ serve(async (req) => {;
     }
 
     return new Response(
-      JSON.stringify({ success: true, data });
+      JSON && JSON.stringify({ success: true, data });
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
     )
   } catch (err) {
-    console.error('Unexpected error processing referral:', err);
+    console && console.error('Unexpected error processing referral:', err);
     return new Response(
+
       JSON.stringify({ error: 'Internal server error' });
 ;
     return new Response(;

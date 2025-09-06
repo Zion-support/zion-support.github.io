@@ -18,8 +18,26 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean
+=======
+import * as React from &quot;react & quot;
+import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
+import { Check, ChevronRight, Circle } from &quot;lucide-react & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+;
+const DropdownMenu = DropdownMenuPrimitive.Root;
+const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
+const DropdownMenuGroup = DropdownMenuPrimitive.Group;
+const DropdownMenuPortal = DropdownMenuPrimitive.Portal;
+const DropdownMenuSub = DropdownMenuPrimitive.Sub;
+const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
+const DropdownMenuSubTrigger = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.SubTrigger>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
+    inset?: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
 className={cn(
@@ -87,7 +105,7 @@ const DropdownMenuItem = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Item;
     ref={ref}
 className={cn(
@@ -120,14 +138,32 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className
     )}
+=======
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+DropdownMenuItem.display_name = DropdownMenuPrimitive.Item.display_name;
+const DropdownMenuCheckboxItem = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.CheckboxItem>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.CheckboxItem>;
+>(({ class_name, children, checked, ...props }, ref) => (
+  <DropdownMenuPrimitive.CheckboxItem;
+    ref={ref}
+className={cn (
+      &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </DropdownMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <DropdownMenuPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </DropdownMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
   </DropdownMenuPrimitive.CheckboxItem>;
 ));
@@ -167,7 +203,7 @@ const DropdownMenuLabel = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
 className={cn(
@@ -189,23 +225,36 @@ const DropdownMenuSeparator = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
+=======
+className={cn (
+      &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  />));
+DropdownMenuLabel.display_name = DropdownMenuPrimitive.Label.display_name;
+const DropdownMenuSeparator = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.Separator>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Separator>;
+>(({ class_name, ...props }, ref) => (
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <DropdownMenuPrimitive.Separator;
     ref={ref}
-    className={cn("-mx-1 my-1 h-px bg-muted", className)}
+    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
     {...props}
-/>
-))
-DropdownMenuSeparator.displayName = DropdownMenuPrimitive.Separator.displayName
+
+/>));
+DropdownMenuSeparator.display_name = DropdownMenuPrimitive.Separator.display_name;
 const DropdownMenuShortcut = ({
-  className
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => {
+  class_name,
+  ...props;
+}: React.HTMLAttributes < HTMLSpanElement>) =>: any {
+
   return (
-    <span
-      className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
+    <span;
+      className={cn (&quot;ml - auto text - xs tracking - widest opacity - 60 & quot;, class_name)}
       {...props}
-    />;
-  );
+    />);
 }
 DropdownMenuShortcut.displayName = &quot;DropdownMenuShortcut&quot;
 export {
@@ -225,6 +274,7 @@ export {
   DropdownMenuSubTrigger
   DropdownMenuRadioGroup}
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
+
 
 export {
   DropdownMenu,

@@ -138,12 +138,15 @@ console.log('🔄 CI/CD Pipeline Started')';class CICDPipeline {';  constructor(
           "name": 'Build Application', ';          "description": 'Build application for production', ';          "critical": true,";          "skip": false},";        {;
           "name": 'Performance Testing', ';          "description": 'Run performance tests', ';          "critical": false,";          "skip": false},";        {;
           "name": 'Deploy to Staging', ';          "description": 'Deploy to staging environment', ';          "critical": true,";          "skip": this.pipelineLog.environment === 'development'}, ';        {';          "name": 'Deploy to Production', ';          "description": 'Deploy to production environment', ';          "critical": true,";          "skip": this.pipelineLog.environment !== 'production'}']';      // Execute each pipeline stage;
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
       for (const stage of pipelineStages) {;
       console.log('🎯 Starting CI/CD Pipeline...');
       console.log("🌍 "Environment": ${this.pipelineLog.environment}");"
-      for (const stage of pipelineStages) {;
-      console.log('🎯 Starting CI/CD Pipeline...');
-      console.log("🌍 "Environment": ${this.pipelineLog.environment}");"
+=======
       ");"
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -273,10 +276,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           "skip": this.pipelineLog.environment !== 'production'}
       ];
       // Execute each pipeline stage;
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
       for (const stage of pipelineStages) {
         await this.executeStage(stage)}
-      for (const stage of pipelineStages) {
-        await this.executeStage(stage)}
+=======
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -430,7 +437,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // "Run": the CI/CD pipeline;
 const pipeline = new CICDPipeline();
 pipeline.run().catch(error: => {
@@ -498,7 +512,14 @@ pipeline.run().catch(error: => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 // Run the CI/CD pipeline;
 const pipeline = new CICDPipeline();
 pipeline.run().catch(error => {',

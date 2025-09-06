@@ -29,17 +29,22 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 if (req.method === 'POST') {
     try {
-      const { uptime, downtime, incidents } = req.body;
+      const { uptime, downtime, incidents } = req && req.body;
+      
+
       const report = {
         uptime: uptime |0
         downtime: downtime |0
         incidents: incidents |[]
         generatedAt: new Date().toISOString()
-      }
-      fs.writeFileSync(p, JSON.stringify(report, null, 2));
-      return res.status(201).json(report);
+
+      };
+
+      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
+      return res && res.status(201).json(report);
+
     } catch (error) {
-      return res.status(500).json({ error: 'Failed to update uptime report' });
+      return res && res.status(500).json({ error: 'Failed to update uptime report' });
     }
   }
   res.setHeader('Allow', 'GET, POST');

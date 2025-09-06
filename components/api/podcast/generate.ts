@@ -4,41 +4,14 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
-episodes.unshift (episode);
-writeEpisodes (episodes);
-function writeEpisodes(episodes: any[]) {
-  ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+
 function readEpisodes(): any[] {
   ensureStorage();
-  return JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8'))
+  return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
 }
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
+  fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -141,10 +114,19 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console.error(error);
     return res.status(500).json({ error: error?.message |'Unknown error' })
 
+
+    writeEpisodes(episodes);
+    return res && res.status(200).json({ episode })
+  } catch (error: any) {
+    console && console.error(error);
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+  };
 }
 }
     const episode = {
 
 }
+  }
+
 }
     const episode = {

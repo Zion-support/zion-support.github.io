@@ -332,14 +332,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }};
-; async analyzeBuild() {; try {; this.log('🏗️ Analyzing current build...');
-; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this.projectRoot; stdio: 'pipe'})};
-; const buildStats = {; totalSize: 0; fileCount: 0; largestFiles: []; jsFiles: []; cssFiles: []; assetFiles: []};
-; const analyzeDirectory = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
-; if (stat.isDirectory()) {; analyzeDirectory(fullPath)} else {; const fileInfo = {; path: fullPath.replace(this.projectRoot + '/dist/', ''); size: stat.size; sizeKB: Math.round(stat.size / 1024 * 100) / 100};
-; buildStats.totalSize + = stat.size; buildStats.fileCount++;
-; if (item.endsWith('.js')) {; buildStats.jsFiles.push(fileInfo)} else if (item.endsWith('.css')) {; buildStats.cssFiles.push(fileInfo)} else {; buildStats.assetFiles.push(fileInfo)}}})};
+; async analyzeBuild() {; try {; this && this.log('🏗️ Analyzing current build...');
+; if (!fs && fs.existsSync('dist')) {; this && this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this && this.projectRoot,
+    stdio: 'pipe'})};
+; const buildStats = {; totalSize: 0, fileCount: 0, largestFiles: [], jsFiles: [], cssFiles: [],
+    assetFiles: []};
+; const analyzeDirectory = (dir) = > {; const items = fs && fs.readdirSync(dir); items && items.forEach(item = > {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
+; if (stat && stat.isDirectory()) {; analyzeDirectory(fullPath)} else {; const fileInfo = {; path: fullPath && fullPath.replace(this && this.projectRoot + '/dist/', ''); size: stat && stat.size,
+    sizeKB: Math && Math.round(stat && stat.size / 1024 * 100) / 100};
+; buildStats && buildStats.totalSize + = stat && stat.size; buildStats && buildStats.fileCount++;
+; if (item && item.endsWith('.js')) {; buildStats && buildStats.jsFiles.push(fileInfo)} else if (item && item.endsWith('.css')) {; buildStats && buildStats.cssFiles.push(fileInfo)} else {; buildStats && buildStats.assetFiles.push(fileInfo)}}})};
 ; analyzeDirectory('dist');
+
+=======
 ; // Sort files by size; const allFiles = [...buildStats.jsFiles, ...buildStats.cssFiles, ...buildStats.assetFiles]; buildStats.largestFiles = allFiles; .sort((a, b) = > b.size - a.size); .slice(0, 10);
 ; buildStats.totalSizeMB = Math.round(buildStats.totalSize / (1024 * 1024) * 100) / 100;
 ; return {; success: true; stats: buildStats}} catch (error) {; return {; success: false; error: error.message; stats: null}}};
@@ -1818,6 +1823,7 @@ optimizer.run().catch(error => {,;
         this.log('\n✨ Build is well optimized!');
       }
 ;
+
     } catch (error) {,;
       this.log(`❌ Error running build: optimizer: ${error.message}`),;
       process.exit(1);

@@ -1,16 +1,5 @@
 
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Monitor, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-  Database, Network, Server, Laptop, Smartphone
-} from 'lucide-react'
-const AIPoweredITAssetManagement = () => {
-  const features = [
+
     {
       icon: Brain
       title: "AI-Powered Asset Discovery"
@@ -112,16 +101,23 @@ const AIPoweredITAssetManagement = () => {
       title: "Real-Time Monitoring",
       description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     },
     {
       icon: Shield,
       title: "Security Compliance",
       description: "Automated security audits and compliance monitoring for all assets",
+
       color: "from-emerald-500 to-teal-500"
+
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
+
+  ],
+  const asset_types = [;
+=======
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
     }
@@ -140,20 +136,26 @@ const AIPoweredITAssetManagement = () => {
 }
   ],
   const assetTypes = [
+
     "Hardware devices (servers, workstations, mobile devices)",
     "Software licenses and applications",
     "Network infrastructure and equipment",
     "Cloud resources and virtual machines",
     "Security devices and appliances",
+
     "Peripheral devices and accessories",
     "Peripheral devices and accessories"
   ],
 
   const benefits = [
+
     {
       icon: DollarSign,
       title: "Cost Optimization",
       value: "35%",
+
+
+=======
       description: "Reduction in IT asset costs"
     },
     {
@@ -528,50 +530,41 @@ const AIPoweredITAssetManagement = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             >;
-              <div className="flex justify-center mb-6">;
-                <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full">;
-                  <Monitor className="w-8 h-8 text-white" />;
+              <div className="flex justify - center mb - 6">;
+                <div className="p - 3 bg - gradient - to - r from - indigo - 500 to - purple - 500 rounded - full">;
+                  <Monitor className="w - 8 h - 8 text - white" />;
                 </div>;
               </div>;
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
-                AI-Powered IT Asset;
-                <span className="block bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
+              <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">;
+                AI - Powered IT Asset;
+                <span className="block bg - gradient - to - r from - indigo - 400 to - purple - 400 bg - clip - text text - transparent">;
                   Management;
                 </span>;
               </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-                Transform your IT operations with intelligent asset management that discovers,;
+              <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
+                Transform your IT operations with intelligent asset management that discovers,
                 monitors, and optimizes every piece of your technology infrastructure.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 3 bg - gradient - to - r from - indigo - 500 to - purple - 500 text - white font - semibold rounded - lg hover:from - indigo - 600 hover:to - purple - 600 transition - all duration - 200">;
                   Get Started;
-                  <ArrowRight className="ml-2 w-5 h-5" />;
+                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
                 </Link>;
-                <Link href="/services" className="inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200">;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 3 border border - indigo - 500 text - indigo - 400 font - semibold rounded - lg hover:bg - indigo - 500 hover:text - white transition - all duration - 200">;
                   Learn More;
                 </Link>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
-        {/* Features Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* Features Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
             <motion.div;
+
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -637,8 +630,8 @@ const AIPoweredITAssetManagement = () => {;
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   key={index  } catch (error) {
@@ -719,11 +712,11 @@ const AIPoweredITAssetManagement = () => {;
           </div>
         </section>
         {/* Asset Types Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               ))  } catch (error) {
@@ -819,12 +812,14 @@ const AIPoweredITAssetManagement = () => {;
                 Manage every type of IT asset across your entire infrastructure
               </p>
             </motion.div>
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, coordinate_x: -20 }}
+                  whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   key={index  } catch (error) {
@@ -902,11 +897,11 @@ const AIPoweredITAssetManagement = () => {;
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               ))  } catch (error) {
@@ -1006,8 +1001,8 @@ const AIPoweredITAssetManagement = () => {;
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   key={index  } catch (error) {
@@ -1091,11 +1086,11 @@ const AIPoweredITAssetManagement = () => {;
           </div>
         </section>
         {/* Capabilities Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - slate - 800 / 50 to - slate - 900 / 50">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               ))  } catch (error) {
@@ -1195,8 +1190,8 @@ const AIPoweredITAssetManagement = () => {;
               {capabilities.map((capability, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, coordinate_x: -20 }}
+                  whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   key={index  } catch (error) {
@@ -1389,18 +1384,18 @@ export default AIPoweredITAssetManagement,;
 ;
 export default AIPoweredITAssetManagement,
             >;
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
+              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;
               </h2>;
-              <p className="text-xl text-gray-400 mb-8">;
+              <p className="text - xl text - gray - 400 mb - 8">;
                 Join the AI revolution and optimize your IT infrastructure today;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-200 text-lg">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - indigo - 500 to - purple - 500 text - white font - semibold rounded - lg hover:from - indigo - 600 hover:to - purple - 600 transition - all duration - 200 text - lg">;
                   Get Started;
-                  <Monitor className="ml-2 w-6 h-6" />;
+                  <Monitor className="ml - 2 w - 6 h - 6" />;
                 </Link>;
-                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200 text-lg">;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 4 border border - indigo - 500 text - indigo - 400 font - semibold rounded - lg hover:bg - indigo - 500 hover:text - white transition - all duration - 200 text - lg">;
                   Explore All Services;
                 </Link>;
               </div>;

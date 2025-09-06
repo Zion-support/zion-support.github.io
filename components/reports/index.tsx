@@ -2,6 +2,11 @@ import Link from 'next/link';
 import ContentCategorizer from '../../components/ContentCategorizer';
 
 export default function ReportsIndex() {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export default function ReportsIndex() {;
+export default function ReportsIndex() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="container mx-auto px-4 py-12 max-w-7xl">

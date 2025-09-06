@@ -43,8 +43,8 @@ export function TemplateManager({
   const { templates, isLoading } = useContractTemplates();
   const { toast } = useToast();
 
-  const handleSelectTemplate = (template: ContractTemplate) => {
-    if (template && template.template_data) {
+  const handleSelectTemplate = (template: ContractTemplate) => {;
+    if (template && template.template_data) {;
       onSelectTemplate(template.template_data);
       onClose()
   const { templates, isLoading } = useContractTemplates(),
@@ -73,6 +73,7 @@ export function TemplateManager({
         <DialogHeader>
           <DialogTitle>
             {mode === "list" ? "Contract Templates" : "Save Template"}
+
           </DialogTitle>
         </DialogHeader>
         {mode === "list" ? (
@@ -164,10 +165,11 @@ export function TemplateManager({;
                 setSelectedTemplate(template);
                 setMode("save");
               }}
+
             />;
           </div>;
         ) : (;
-          <TemplateSaveForm;
+          <TemplateSaveForm
             onCancel={() => {;
               setMode("list");
               setSelectedTemplate(null);
@@ -175,7 +177,7 @@ export function TemplateManager({;
             onComplete={handleSaveComplete}
             editTemplate={selectedTemplate}
             currentValues={currentValues}
-          />
+          />;
         )}
       </DialogContent>
     </Dialog>
@@ -185,4 +187,29 @@ export function TemplateManager({;
     </Dialog>;
   );
 }
+
+            <TemplateList;
+              templates={templates}
+              is_loading={is_loading}
+              on_select={handleSelectTemplate}
+              on_edit={(template) => {
+                setSelectedTemplate (template);
+                set_mode ("save");
+              }}
+            />;
+          </div>) : (
+          <TemplateSaveForm;
+            on_cancel={() => {
+              set_mode ("list");
+              setSelectedTemplate (null);
+            }}
+            on_complete={handleSaveComplete}
+            edit_template={selected_template}
+            current_values={current_values}
+          />)}
+      </DialogContent>;
+    </Dialog>);
+}
+
+=======
 ;

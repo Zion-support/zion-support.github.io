@@ -9,8 +9,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!companyId |typeof companyId !== "string") {
     return res.status(400).json({ error: "companyId required" });
   }
-const invoices = store.listInvoices(companyId);
-  return res.status(200).json(invoices);
+  const invoices = store && store.listInvoices(companyId);
+  return res && res.status(200).json(invoices);
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,6 +30,13 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+    return res.status (400).json ({ error: "company_id required" });
+  }
+  const invoices = store.list_invoices (company_id);
+  return res.status (200).json (invoices);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -14,8 +14,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function IntegrationsPage() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-    <ProtectedRoute adminOnly={true}>
+    <ProtectedRoute adminOnly={true}>;
       <SEO
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
@@ -40,6 +41,7 @@ export default function IntegrationsPage() {;
       <SEO;
         title="Integrations - Zion AI Marketplace";
         description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
+
       />;
       <Header />;
       <main className="min-h-screen bg-background">;

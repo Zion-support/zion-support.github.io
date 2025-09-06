@@ -20,9 +20,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Calendar, ArrowRight } from "lucide-react",
+    </section>);
 
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">

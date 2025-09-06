@@ -3,7 +3,7 @@
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
 const sharp = // // require('sharp')
 const fs = // // require('fs')
@@ -159,13 +159,6 @@ async function ensureDeps() {
   try { require('imagemin'); } catch { console.error('Missing imagemin deps'); process.exit(1); }
 }
 
-async function run() {
-  await ensureDeps();
-  const imagemin = require('imagemin');
-  const mozjpeg = require('imagemin-mozjpeg');
-  const pngquant = require('imagemin-pngquant');
-  const svgo = require('imagemin-svgo');
-  const fg = require('fast-glob');
 
   const base = path.join(process.cwd(), 'public');
   if (!fs.existsSync(base)) { console.log('No public/ directory'); return; }

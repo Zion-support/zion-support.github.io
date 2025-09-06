@@ -38,30 +38,56 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
           props.className
         )}
+=======
+import * as React from &quot;react & quot;
+import type { CSSProperties } from &quot;react & quot;
+import { Sheet, SheetContent } from &quot;@/components / ui / sheet & quot;
+import { cn } from &quot;@/lib / utils & quot;
+import { use_sidebar } from &quot;./sidebar - context & quot;
+import type { SafeRef } from &quot;../sidebar.types & quot;
+;
+export interface SidebarProps extends React.ComponentProps<&quot;div & quot;> {
+  side?: &quot;left & quot; | &quot;right & quot;
+  variant?: &quot;sidebar & quot; | &quot;floating & quot; | &quot;inset & quot;
+  collapsible?: &quot;offcanvas & quot; | &quot;icon & quot; | &quot;none & quot;
+}
+export const Sidebar = React.forward_ref < HTMLDivElement SidebarProps>((props, ref) => {
+  const { is_mobile, state, open_mobile, setOpenMobile } = use_sidebar ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div;
+        className={cn (
+          &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
+          props.class_name)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ref={ref}
         {...props}
       >;
         {props.children}
-      </div>;
-    );
+      </div>);
   }
-if (isMobile) {
+// Check condition
+if ( {) {
+  $2
+}
     return (
-      <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
-        <SheetContent
-          data-sidebar="sidebar"
-          data-mobile="true"
-          className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
+      <Sheet open={open_mobile} onOpenChange={setOpenMobile} {...props}>;
+        <SheetContent;
+          data - sidebar=&quot;sidebar & quot;
+          data - mobile=&quot;true & quot;
+          className=&quot;w-[--sidebar - width] bg - sidebar p - 0 text - sidebar - foreground [&>button]:hidden & quot;
           style={
             {
-              "--sidebar-width": "18rem"} as CSSProperties
+              &quot;--sidebar - width & quot;: &quot;18rem & quot;} as CSSProperties;
           }
           side={props.side}
-        >
-          <div className="flex h-full w-full flex-col">{props.children}</div>
-        </SheetContent>
-      </Sheet>
-    )
+        >;
+          <div className=&quot;flex h - full w - full flex - col & quot;>{props.children}</div>;
+        </SheetContent>;
+      </Sheet>);
   }
   return (;
     <div;
@@ -78,6 +104,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     >;
       {/* This is what handles the sidebar gap on desktop */}
 <div

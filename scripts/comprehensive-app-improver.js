@@ -303,7 +303,14 @@ const nextConfig = {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 module."exports": = nextConfig;";
     fs.writeFileSync(nextConfigPath, performanceOptimizations);
     this.fixes.push('"Optimized": Next.js configuration for performance')}';
@@ -816,7 +823,14 @@ export const focusElement = ("selector": string) => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 ;
 export const announceToScreenReader = ("message": string) => {;";  const announcement = document.createElement('div')';  announcement.setAttribute('aria-live', 'polite')';  announcement.setAttribute('aria-atomic', 'true')';  announcement.className = 'sr-only'';  announcement.textContent = message';  ;
   const announcement = document.createElement('div');

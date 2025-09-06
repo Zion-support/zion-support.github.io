@@ -14,16 +14,19 @@ import Head from 'next/head',
 import { useState } from 'react',
 import EnhancedButton from '../../components/ui/EnhancedButton',
 const PostJob: NextPage = () => {
-  const [title, setTitle] = useState(''),
-  const [description, setDescription] = useState(''),
-  const [budget, setBudget] = useState(''),
-  const [preview, setPreview] = useState(false),
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [budget, setBudget] = useState('');
+  const [preview, setPreview] = useState(false);
+
   return (
     <div className="space-y-6 pb-20">
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
+
       <h1 className="text-2xl font-semibold">Post a Job</h1>
+
       <div className="grid md:grid-cols-2 gap-6">
         <form className="space-y-4">
           <div>
@@ -40,11 +43,7 @@ const PostJob: NextPage = () => {
           </div>
           <div className="flex gap-2">
             <EnhancedButton type="button" variant="secondary" onClick={() => setPreview((p) => !p)}>
-              {preview ? 'Edit' : 'Preview'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              {preview ? 'Edit' : 'Preview'}
             </EnhancedButton>
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>

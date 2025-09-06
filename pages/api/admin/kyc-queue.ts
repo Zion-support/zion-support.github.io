@@ -18,8 +18,6 @@ const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
-    const raw = fs.readFileSync(FILE, 'utf8')
-    return JSON.parse(raw)
 
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
@@ -33,9 +31,7 @@ function load(): Record<string, KycProfile> {
     return {};
   }
 }
-function save(db: Record<string, KycProfile>) {
 
-fs.mkdirSync(DATA_DIR, { recursive: true })
 
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }

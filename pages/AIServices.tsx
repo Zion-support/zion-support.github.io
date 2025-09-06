@@ -259,8 +259,7 @@ export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
-      description="Comprehensive AI solutions for modern businesses"
-      description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -449,6 +448,7 @@ origin/automation-improvements-final
                 </motion.button>
               </div>
             </motion.div>
+
           </div>
         </section>
         {/* Services Grid */  } catch (error) {

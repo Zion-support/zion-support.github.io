@@ -59,62 +59,151 @@ export default function Comprehensive2026ServicesShowcase() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-  }
+  };
+
   // Combine all services
   const allServices = [
-    ...nextGenAIServices2026
-    ...revolutionaryITInfrastructure2026
+    ...nextGenAIServices2026;
+    ...revolutionaryITInfrastructure2026;
     ...innovativeMicroSaas2026
-  ]
+  ];
+
   // Categories for filtering
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length }
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length }
-    { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length }
-    { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length }
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length }
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length }
+    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length },
+    { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length },
+    { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length },
     { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
-  ]
+  ];
+
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      const matchesCategory = selectedCategory === 'all' |
-                             service.category.toLowerCase().includes(selectedCategory)
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || 
+                             service.category.toLowerCase().includes(selectedCategory);
+
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
-        case 'price-high':
-          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
+
+
         case 'rating':
           return b.rating - a.rating
         case 'customers':
-          return b.customers - a.customers
+
+          return b.customers - a.customers;
+
         default: return a.popular ? -1 : 1
       }
     })
   const containerVariants = {
     hidden: { opacity: 0 }
+=======
+import React, { useState, useEffect } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  Search, Filter, Star, TrendingUp, Zap, Brain, Shield,
+  Globe, Database, Cloud, Lock, Palette, Target, Layers,
+  Sparkles, Atom, Microscope, Satellite, CheckCircle,
+  ArrowRight, Phone, Mail, MapPin, Rocket, Users,
+  BarChart3, Award, Clock, DollarSign;
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation',
+import { nextGenAIServices2026 } from '../data / next - gen - ai - services - 2026',
+import { revolutionaryITInfrastructure2026 } from '../data / revolutionary - it - infrastructure - 2026',
+import { innovativeMicroSaas2026 } from '../data / innovative - micro - saas - 2026',
+export default /**
+ * Comprehensive2026ServicesShowcase - Function description
+ */
+function Comprehensive2026ServicesShowcase() {
+  const [search_term, setSearchTerm] = useState (''),
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [sort_by, setSortBy] = useState ('popularity'),
+  const [view_mode, setViewMode] = useState ('grid'),
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
+  },
+  // Combine all services;
+  const all_services = [;
+    ...nextGenAIServices2026,
+    ...revolutionaryITInfrastructure2026,
+    ...innovativeMicroSaas2026;
+  ],
+  // Categories for filtering;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Globe, count: all_services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length },
+    { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length },
+    { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: all_services.filter (string => s.category.includes ('Quantum')).length },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: all_services.filter (string => s.category.includes ('Blockchain')).length },
+    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: all_services.filter (string => s.category.includes ('Emerging')).length }
+  ],
+  // Filter and sort services;
+  const filtered_services = all_services;
+    .filter (service => {
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.category.toLowerCase ().includes (search_term.toLowerCase ()),
+      const matches_category = selected_category === 'all' ||;
+                            service.category.toLowerCase ().includes (selected_category),
+      return matches_search && matches_category;
+    });
+    .sort ((a, b) => {
+      switch (sort_by) {
+        case 'price - low':;
+          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, '')),
+        case 'price - high':;
+          return parse_float (b.price.replace ('$', '').replace (, '')) - parse_float (a.price.replace ('$', '').replace (, '')),
+        case 'rating':;
+          return b.rating - a.rating,
+        case 'customers':;
+          return b.customers - a.customers,
+        default: return a.popular ? -1 : 1;
+      }
+    }),
+  const container_variants = {
+    hidden: { opacity: 0 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     visible: {
       opacity: 1
       transition: {
-        staggerChildren: 0.1
+
+        stagger_children: 0.1;
       }
     }
-  }
+
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
+
       y: 0
       opacity: 1
+=======
+  },
+  const item_variants = {
+    hidden: { coordinate_y: 20, opacity: 0 },
+    visible: {
+      coordinate_y: 0,
+      opacity: 1,
+
       transition: {
-        duration: 0.5
+        duration: 0.5;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }
@@ -555,29 +644,20 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             >;
               <AnimatePresence>;
-                {filteredServices.map((service) => (;
+                {filtered_services.map ((service) => (
                   <motion.div;
-                    key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    variants={itemVariants  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    key={service.id}
+                    variants={item_variants}
                     layout;
-                    className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-600/30 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 group ${;
-                      viewMode === 'list' ? 'flex flex-col lg:flex-row' : '';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    className={`bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl rounded - 3xl border border - gray - 600 / 30 overflow - hidden transition - all duration - 500 hover:scale - 105 hover:border - cyan - 500 / 50 group ${
+                      view_mode === 'list' ? 'flex flex - col lg:flex - row' : '';
+                    }`}
                   >;
+
                     {/* Service Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -587,16 +667,13 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
                         {service.popular && (
-                          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold flex items-center gap-1">
-                            <Star className="w-3 h-3" />
-                            Popular
-                          </div>
-                        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </div>
+=======
+                    <div className={`p - 6 ${view_mode === 'list' ? 'lg:w - 1/3' : ''}`}>;
+                      <div className="flex items - start justify - between mb - 4">;
+                        <div className="text - 4xl">{service.icon}</div>;
+                        {service.popular && (
+
+
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {service.name}
                       </h3>
@@ -748,8 +825,8 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
                         <div className="text-green-400 font-semibold">{service.roi}</div>
                       </div>
                       {/* Action Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-3">
-                        <Link
+                      <div className="flex flex - col sm:flex - row gap - 3">;
+                        <Link;
                           href={service.link}
                       {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
@@ -897,6 +974,8 @@ export default function Comprehensive2026ServicesShowcase(req, res) {
                   Email Us
                 </Link>
               </div>
+
+
               <div className="mt-8 text-gray-400">
                 <p>📍 {contactInfo.address}</p>
                 <p>🌐 <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</a></p>

@@ -11,7 +11,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const courses = JSON.parse(raw);
     const { category, level, isFree } = req.query;
 
-    const { category, level, isFree } = req.query;
+    const raw = fs && fs.readFileSync(dataPath, 'utf-8');
+    const courses = JSON && JSON.parse(raw);
 
     const filtered = courses.filter((c: any) => {
       if (category && c.category !== category) return false;
@@ -38,24 +39,30 @@ import path from 'path';
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),;
 export default function handler(req, res) {
   try {
-    const raw = fs.readFileSync(dataPath, 'utf-8');
-    const courses = JSON.parse(raw);
-    const { category, level, isFree } = req.query;
-    const filtered = courses.filter((c: any) => {;
-      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    const raw = fs.readFileSync (data_path, 'utf - 8');
+    const courses = JSON.parse (raw);
+;
+    const { category, level, is_free } = req.query;
+;
+    const filtered = courses.filter ((c: any) => {
+      // Check condition
+if (return false) {
+  $2
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+      // Check condition
+if (return false) {
+  $2
 }
+      // Check condition
+if ( {) {
+  $2
+}
+        const free_val = is_free === 'true' || is_free === true;
+        // Check condition
+if (return false) {
+  $2
+}
+      }
       return true;
     });
     res.status(200).json({ courses: filtered });
@@ -86,6 +93,9 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
 
 }

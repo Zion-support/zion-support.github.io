@@ -22,31 +22,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
       return res.status(400).json({ error: "name and email required" });
     const r: EnterpriseRole = role |"viewer";
     const r: EnterpriseRole = role || "viewer";
-    const member = store.addMember(companyId, name, email, r);
-    return res.status(201).json(member);
+    const member = store.add_member (company_id, name, email, r);
+    return res.status (201).json (member);
   }
-
-  if (req.method === "PATCH") {
-    const { memberId, role } = req.body || {};
-    if (!memberId || !role)
-      return res.status(400).json({ error: "memberId and role required" });
-    const ok = store.updateMemberRole(companyId, memberId, role);
-    return res
-      .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: "member_not_found" });
-  }
-
-  if (req.method === "DELETE") {
-    const { memberId } = req.query;
-    if (!memberId || typeof memberId !== "string")
-      return res.status(400).json({ error: "memberId required" });
-    const ok = store.removeMember(companyId, memberId);
-    return res
-      .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: "member_not_found" });
-  }
-
-return res.status(405).json({ error: "method_not_allowed" });
+  // Check condition
+if ( {) {
+  $2
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

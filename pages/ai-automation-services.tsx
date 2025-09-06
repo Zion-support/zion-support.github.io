@@ -8,6 +8,15 @@ import { Zap, Brain, Code, Shield, Users, TrendingUp;
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -15,70 +24,43 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',}
 const serviceHighlights = [
   {
-    title: 'AI Code Generation'
-    description:
-      'Generate production-ready code across multiple languages with AI intelligence'
-    icon: Code
-    color: 'from-emerald-500 to-teal-600'
-    features: [
-      'Multi-language support'
-      'Security scanning'
-      'Performance optimization'
-      'Team collaboration'
-    ]
-  }
+
+    title: 'AI Code Generation',
+    description: 'Generate production-ready code across multiple languages with AI intelligence',
+    icon: Code,
+    color: 'from-emerald-500 to-teal-600',
+    features: ['Multi-language supportSecurity scanningPerformance optimizationTeam collaboration']
+  };
   {
-    title: 'DevOps Automation'
-    description:
-      'Intelligent automation for modern DevOps workflows with predictive analytics'
-    icon: Cpu
-    color: 'from-purple-500 to-indigo-600'
-    features: [
-      'CI/CD optimization'
-      'Self-healing infrastructure'
-      'Cost optimization'
-      'Multi-cloud support'
-    ]
-  }
+    title: 'DevOps Automation',
+    description: 'Intelligent automation for modern DevOps workflows with predictive analytics',
+    icon: Cpu,
+    color: 'from-purple-500 to-indigo-600',
+    features: ['CI/CD optimizationSelf-healing infrastructureCost optimizationMulti-cloud support']
+  };
   {
-    title: 'Customer Support AI'
-    description:
-      'Transform customer support with intelligent automation and sentiment analysis'
-    icon: Users
-    color: 'from-blue-500 to-cyan-600'
-    features: [
-      'Intelligent chatbots'
-      'Multi-language support'
-      'Predictive resolution'
-      '24/7 availability'
-    ]
-  }
+    title: 'Customer Support AI',
+    description: 'Transform customer support with intelligent automation and sentiment analysis',
+    icon: Users,
+    color: 'from-blue-500 to-cyan-600',
+    features: ['Intelligent chatbotsMulti-language supportPredictive resolution24/7 availability']
+  };
   {
-    title: 'Marketing Automation'
-    description:
-      'AI-powered marketing automation with predictive analytics and optimization'
-    icon: BarChart3
-    color: 'from-pink-500 to-rose-600'
-    features: [
-      'Campaign optimization'
-      'Customer personalization'
-      'ROI tracking'
-      'Multi-channel automation'
-    ]
-  }
+    title: 'Marketing Automation',
+    description: 'AI-powered marketing automation with predictive analytics and optimization',
+    icon: BarChart3,
+    color: 'from-pink-500 to-rose-600',
+    features: ['Campaign optimizationCustomer personalizationROI trackingMulti-channel automation']
+  };
   {
-    title: 'Sales Intelligence'
-    description:
-      'Boost sales performance with AI-powered insights and predictive analytics'
-    icon: TrendingUp
-    color: 'from-yellow-500 to-orange-600'
-    features: [
-      'Lead scoring'
-      'Sales forecasting'
-      'Customer insights'
-      'Performance optimization'
-    ]
-  },];
+    title: 'Sales Intelligence',
+    description: 'Boost sales performance with AI-powered insights and predictive analytics',
+    icon: TrendingUp,
+    color: 'from-yellow-500 to-orange-600',
+    features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
+  }
+];
+
 const benefits = [
   {
     title: '80% Reduction in Manual Work'
@@ -107,23 +89,23 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-const contactInfo = {
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+const contact_info = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-
-const serviceHighlights = [
+  website: 'https://ziontechgroup.com', }
+;
+const service_highlights = [;
   {
     title: 'AI Code Generation',
-    description:
-      'Generate production-ready code across multiple languages with AI intelligence',
+    description:;
+      'Generate production - ready code across multiple languages with AI intelligence',
     icon: Code,
-    color: 'from-emerald-500 to-teal-600',
-    features: [
-      'Multi-language support',
+    color: 'from - emerald - 500 to - teal - 600',
+    features: [;
+      'Multi - language support',
       'Security scanning',
       'Performance optimization',
       'Team collaboration',
@@ -131,81 +113,63 @@ const serviceHighlights = [
   },
   {
     title: 'DevOps Automation',
-    description:
+    description:;
       'Intelligent automation for modern DevOps workflows with predictive analytics',
     icon: Cpu,
-    color: 'from-purple-500 to-indigo-600',
-    features: [
-      'CI/CD optimization',
-      'Self-healing infrastructure',
+    color: 'from - purple - 500 to - indigo - 600',
+    features: [;
+      'CI / CD optimization',
+      'Self - healing infrastructure',
       'Cost optimization',
-      'Multi-cloud support',
+      'Multi - cloud support',
     ],
   },
   {
     title: 'Customer Support AI',
-    description:
+    description:;
       'Transform customer support with intelligent automation and sentiment analysis',
     icon: Users,
-    color: 'from-blue-500 to-cyan-600',
-    features: [
+    color: 'from - blue - 500 to - cyan - 600',
+    features: [;
       'Intelligent chatbots',
-      'Multi-language support',
+      'Multi - language support',
       'Predictive resolution',
-      '24/7 availability',
+      '24 / 7 availability',
     ],
   },
   {
     title: 'Marketing Automation',
-    description:
-      'AI-powered marketing automation with predictive analytics and optimization',
+    description:;
+      'AI - powered marketing automation with predictive analytics and optimization',
     icon: BarChart3,
-    color: 'from-pink-500 to-rose-600',
-    features: [
+    color: 'from - pink - 500 to - rose - 600',
+    features: [;
       'Campaign optimization',
       'Customer personalization',
       'ROI tracking',
-      'Multi-channel automation',
+      'Multi - channel automation',
     ],
   },
   {
     title: 'Sales Intelligence',
-    description:
-      'Boost sales performance with AI-powered insights and predictive analytics',
+    description:;
+      'Boost sales performance with AI - powered insights and predictive analytics',
     icon: TrendingUp,
-    color: 'from-yellow-500 to-orange-600',
-    features: [
+    color: 'from - yellow - 500 to - orange - 600',
+    features: [;
       'Lead scoring',
       'Sales forecasting',
       'Customer insights',
       'Performance optimization',
     ],
-  },];
+  }, ];
+;
+const benefits = [;
 
-const benefits = [
   {
     title: '80% Reduction in Manual Work',
-    description: 'Automate repetitive tasks and focus on high-value activities',
+    description: 'Automate repetitive tasks and focus on high - value activities',
     icon: Zap,
-    color: 'text-emerald-400',
-  },
-  {
-    title: '300% ROI Improvement',
-    description:
-      'Significant returns through increased efficiency and productivity',
-    icon: TrendingUp,
-    color: 'text-blue-400',
-  },  {
-    title: '24/7 Operation',
-    description: 'Round-the-clock automation without human intervention',
-    icon: Clock,
-    color: 'text-purple-400',
-  },  {
-    title: 'Real-time Insights',
-    description: 'Instant analytics and decision-making support',
-    icon: BarChart3,
-    color: 'text-pink-400',
-  },];
 
 import { motion } from 'framer-motion';
 import {;
@@ -216,72 +180,97 @@ import {;
 import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {;
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+
 const serviceHighlights = [;
   {;
-    title: 'AI Code Generation';
-    description: 'Generate production-ready code across multiple languages with AI intelligence';
-    icon: Code;
-    color: 'from-emerald-500 to-teal-600';
-    features: ['Multi-language supportSecurity scanningPerformance optimizationTeam collaboration'];
+    title: 'AI Code Generation',;
+    description:;
+      'Generate production-ready code across multiple languages with AI intelligence',;
+    icon: Code,;
+    color: 'from-emerald-500 to-teal-600',;
+    features: [;
+      'Multi-language support',;
+      'Security scanning',;
+      'Performance optimization',;
+      'Team collaboration',;
+    ],;
   },;
   {;
     title: 'DevOps Automation',;
-    description: 'Intelligent automation for modern DevOps workflows with predictive analytics',;
+    description:;
+      'Intelligent automation for modern DevOps workflows with predictive analytics',;
     icon: Cpu,;
     color: 'from-purple-500 to-indigo-600',;
-    features: ['CI/CD optimizationSelf-healing infrastructureCost optimizationMulti-cloud support'];
+    features: [;
+      'CI/CD optimization',;
+      'Self-healing infrastructure',;
+      'Cost optimization',;
+      'Multi-cloud support',;
+    ],;
   },;
   {;
     title: 'Customer Support AI',;
-    description: 'Transform customer support with intelligent automation and sentiment analysis',;
+    description:;
+      'Transform customer support with intelligent automation and sentiment analysis',;
     icon: Users,;
     color: 'from-blue-500 to-cyan-600',;
-    features: ['Intelligent chatbotsMulti-language supportPredictive resolution24/7 availability'];
+    features: [;
+      'Intelligent chatbots',;
+      'Multi-language support',;
+      'Predictive resolution',;
+      '24/7 availability',;
+    ],;
   },;
   {;
     title: 'Marketing Automation',;
-    description: 'AI-powered marketing automation with predictive analytics and optimization',;
+    description:;
+      'AI-powered marketing automation with predictive analytics and optimization',;
     icon: BarChart3,;
     color: 'from-pink-500 to-rose-600',;
-    features: ['Campaign optimizationCustomer personalizationROI trackingMulti-channel automation'];
+    features: [;
+      'Campaign optimization',;
+      'Customer personalization',;
+      'ROI tracking',;
+      'Multi-channel automation',;
+    ],;
   },;
   {;
     title: 'Sales Intelligence',;
-    description: 'Boost sales performance with AI-powered insights and predictive analytics',;
+    description:;
+      'Boost sales performance with AI-powered insights and predictive analytics',;
     icon: TrendingUp,;
     color: 'from-yellow-500 to-orange-600',;
-    features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization'];
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],;
+    features: [;
+      'Lead scoring',;
+      'Sales forecasting',;
+      'Customer insights',;
+      'Performance optimization',;
+    ],;
+  },];
+
 const benefits = [;
   {;
-    title: '80% Reduction in Manual Work';
-    description: 'Automate repetitive tasks and focus on high-value activities';
-    icon: Zap;
-    color: 'text-emerald-400';
-  };
-  {;
-    title: '300% ROI Improvement',;
-    description: 'Significant returns through increased efficiency and productivity',;
-    icon: TrendingUp,;
-    color: 'text-blue-400';
+    title: '80% Reduction in Manual Work',;
+    description: 'Automate repetitive tasks and focus on high-value activities',;
+    icon: Zap,;
+    color: 'text-emerald-400',;
   },;
   {;
+    title: '300% ROI Improvement',;
+    description:;
+      'Significant returns through increased efficiency and productivity',;
+    icon: TrendingUp,;
+    color: 'text-blue-400',;
+  },  {;
     title: '24/7 Operation',;
     description: 'Round-the-clock automation without human intervention',;
     icon: Clock,;
-    color: 'text-purple-400';
-  },;
-  {;
+    color: 'text-purple-400',;
+  },  {;
     title: 'Real-time Insights',;
     description: 'Instant analytics and decision-making support',;
     icon: BarChart3,;
@@ -314,37 +303,43 @@ export default function AIAutomationServices() {
         <meta
           property='og:title'
           content='AI Automation Services - Zion Tech Group'
-        />
+        />;
         <meta
           property='og:description'
           content='Advanced AI-powered automation solutions for modern businesses.'
-        />
-        <meta property='og:type' content='website' />
+        />;
+        <meta property='og:type' content='website' />;
         <meta
           property='og:url'
-          content='https://ziontechgroup.com/ai-automation-services'
-        />
+          content='https://ziontechgroup && ziontechgroup.com/ai-automation-services'
+        />;
         <meta
           property='og:image'
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
+        />;
+
+
         {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:card' content='summary_large_image' />;
         <meta
           name='twitter:title'
           content='AI Automation Services - Zion Tech Group'
-        />
+        />;
         <meta
           name='twitter:description'
           content='Advanced AI-powered automation solutions for modern businesses.'
-        />
+        />;
         <meta
           name='twitter:image'
-          content='https://ziontechgroup.com/twitter-image.jpg'
-        />
+
+          content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
+        />;
+
+
         {/* Contact Information */}
-        <meta name='contact:mobile' content='+1 302 464 0950' />
-        <meta name='contact:email' content='kleber@ziontechgroup.com' />
+        <meta name='contact:mobile' content='+1 302 464 0950' />;
+        <meta name='contact:email' content='kleber@ziontechgroup && ziontechgroup.com' />;
         <meta
           name='contact:address'
           content='364 E Main St STE 1008 Middletown DE 19709'
@@ -453,6 +448,7 @@ export default function AIAutomationServices() {
               Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
@@ -467,6 +463,7 @@ export default function AIAutomationServices() {
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -488,6 +485,7 @@ export default function AIAutomationServices() {
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </section>
       {/* Service Highlights */}
       <section
@@ -547,6 +545,7 @@ export default function AIAutomationServices() {
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceHighlights.map((service, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
                 key={service.title  } catch (error) {
     console.error("Error:", error);
@@ -587,6 +586,7 @@ export default function AIAutomationServices() {
                 <ul className='space-y-2'>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -612,21 +612,14 @@ export default function AIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 </ul>;
-              </motion.div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Detailed Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              </motion && motion.div>;
+            ))}
+
+
+      {/* Detailed Services */}
+
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -669,6 +662,7 @@ export default function AIAutomationServices() {
                 className='animated-border'
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {advancedAIAutomationServices2025.map((service, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
                 key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -710,6 +704,7 @@ export default function AIAutomationServices() {
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         Popular
                       </span>
+
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -770,6 +765,7 @@ export default function AIAutomationServices() {
                       className='text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group'
                     >
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                  
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-emerald-400">
                       {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
@@ -777,14 +773,11 @@ export default function AIAutomationServices() {
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className={`w-4 h-4 ${i < service.rating ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} />
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      ))}
                       <span className="text-gray-400 text-sm ml-2">({service.reviews})</span>
                     </div>
                   </div>
+                  
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="text-center p-3 bg-gray-800/50 rounded-lg">
                       <div className="text-emerald-400 font-bold">{service.customers}+</div>
@@ -795,21 +788,15 @@ export default function AIAutomationServices() {
                       <div className="text-gray-400 text-sm">Trial Days</div>
                     </div>
                   </div>
+                  
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm">
-                        {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </span>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                        {feature}
+                      </span>
+                    ))}
                   </div>
+                  
                   <div className="flex items-center justify-between">
                     <Link href={service.link} className="text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group">
                       <span>Learn More</span>
@@ -842,14 +829,19 @@ export default function AIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </div>;
         </div>;
       </section>;
-      {/* Benefits Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Benefits Section */}
+      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
+        <div className='container mx-auto px-4'>          <motion&& motion.div
+
+=======
+
+      {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
@@ -892,6 +884,7 @@ export default function AIAutomationServices() {
                 className='text-center group'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
                 key={benefit.title  } catch (error) {
     console.error("Error:", error);
@@ -949,44 +942,42 @@ export default function AIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>;
+        <div className='container mx-auto px-4 text-center'>          <motion&& motion.div
+
+=======
+
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  <span>Start Your Automation Journey</span>
+                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                </button>
+              </Link>
+
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already transforming their operations with AI automation.
+              Join thousands of companies already transforming their operations with AI automation. 
               Get started today and see the difference intelligent automation can make.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -1025,6 +1016,7 @@ export default function AIAutomationServices() {
                 <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>
                 <div className="text-gray-300">Average ROI</div>
               </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
           </motion.div>
         </div>
@@ -1042,37 +1034,76 @@ export default function AIAutomationServices() {
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join thousands of companies already transforming their operations with AI automation.;
-              Get started today and see the difference intelligent automation can make.;
+            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
+=======
+                </p>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 20 bg - gradient - to - r from - emerald - 900 / 20 via - teal - 900 / 20 to - cyan - 900 / 20'>;
+        <div className='container mx - auto px - 4 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='max - w-4xl mx - auto';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+              Ready to{' '}
+              <span className='bg - gradient - to - r from - emerald - 400 to - teal - 400 bg - clip - text text - transparent'>;
+                Automate;
+              </span>{' '}
+              Your Business?;
+            </h2>;
+            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
+
+              Join thousands of companies already transforming their operations;
+              with AI automation. Get started today and see the difference;
+              intelligent automation can make.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-              <Link href="/contact" className="group">;
-                <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">;
-                  <span>Start Your Automation Journey</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+
+
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <Link href='/contact' className='group'>;
+                <button className='bg - gradient - to - r from - emerald - 500 to - teal - 600 hover:from - emerald - 600 hover:to - teal - 700 text - white px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center space - x-2'>;
+                  <span > Start Your Automation Journey</span>;
+                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
                 </button>;
               </Link>;
-              <Link href="/comprehensive-services-showcase-2025" className="group">;
-                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">;
-                  <span>View All Services</span>;
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+              <Link;
+                href='/comprehensive - services - showcase - 2025';
+                className='group';
+              >;
+                <button className='border - 2 border - emerald - 500 / 50 hover:border - emerald - 400 text - emerald - 400 hover:text - emerald - 300 px - 8 py - 4 rounded - full font - semibold text - lg transition - all duration - 300 hover:bg - emerald - 500 / 10 flex items - center space - x-2'>;
+                  <span > View All Services</span>;
+                  <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
                 </button>;
               </Link>;
             </div>;
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+            <div className='mt - 12 grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center'>;
               <div>;
-                <div className="text-3xl font-bold text-emerald-400 mb-2">24/7</div>;
-                <div className="text-gray-300">AI Monitoring</div>;
+                <div className='text - 3xl font - bold text - emerald - 400 mb - 2'>;
+                  24 / 7;
+                </div>;
+                <div className='text - gray - 300'>AI Monitoring</div>;
               </div>;
               <div>;
-                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>;
-                <div className="text-gray-300">Uptime Guarantee</div>;
+                <div className='text - 3xl font - bold text - emerald - 400 mb - 2'>;
+                  99.9%;
+                </div>;
+                <div className='text - gray - 300'>Uptime Guarantee</div>;
               </div>;
               <div>;
-                <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>;
-                <div className="text-gray-300">Average ROI</div>;
-              </div>;
+                <div className='text - 3xl font - bold text - emerald - 400 mb - 2'>;
+                  350%;
+                </div>;
+                <div className='text - gray - 300'>Average ROI</div>              </div>;
             </div>;
           </motion.div>;
         </div>;

@@ -30,16 +30,18 @@ export default function ComposePage(req, res) {
   React.useEffect(() => {
     if (!loading && !user) router.replace('/auth');  }, [loading, user, router]);
   if (!user) return null;
-  const headerTitle =
-    type === 'invite'
-      ? `Invite ${recipientName |talentName |'Talent'}`
-      : type === 'apply'
-        ? `Apply to ${jobTitle |'Job'}`
+
+  const headerTitle =;
+    type === 'invite';
+      ? `Invite ${recipientName || talentName || 'Talent'}`;
+      : type === 'apply';
+        ? `Apply to ${jobTitle || 'Job'}`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : 'New Message';
-  const context =
-    type === 'invite'
+  const context =;
+    type === 'invite';
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
-      : type === 'apply'
+      : type === 'apply';
         ? { type: 'application', jobId, jobTitle }
         : { type: 'general' }
   const onSend = async () => {
@@ -66,8 +68,31 @@ export default function ComposePage(req, res) {
   const onSend = async () => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     setSending(true);
-    let attachmentBase64: string | undefined;
-    if (file) {;
+=======
+
+    if (!loading && !user) router.replace('/auth')
+  }, [loading, user, router]);
+
+  if (!user) return null;
+
+  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
+  const context = type === 'invite'
+    ? { type: 'invite', jobId, jobTitle, talentId, talentName }
+    : type === 'apply'
+    ? { type: 'application', jobId, jobTitle }
+    : { type: 'general' },
+
+  const onSend = async () => {
+=======
+        : { type: 'general' };
+  const onSend = async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    if (!recipientId && !talentId) return alert('Missing recipient');
+    if (!message && message.trim() && !file && !linkUrl) return;
+    setSending(true);
+
+    let attachmentBase64: string | undefined,
+    if (file) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
       const mime = file.type |'application/octet-stream';
@@ -93,33 +118,36 @@ export default function ComposePage(req, res) {
         context
       })
     });
-    const data = await res.json();
+    const data = await res && res.json();
     setSending(false);
-    if (data?.conversation?.id)
-      router.replace(`/messages/${data.conversation.id}`);
-  }
+
+    if (data?.conversation?.id);
+      router && router.replace(`/messages/${data && data.conversation.id}`);
+  };
 
   return (
-    <div className='min-h-screen bg-gray-50'>
-      <div className='max-w-2xl mx-auto p-4'>
-        <div className='bg-white rounded-xl shadow-sm'>
-          <div className='p-4 border-b'>
-            <h1 className='text-xl font-semibold'>{headerTitle}</h1>
-            <p className='text-sm text-gray-500'>
-              {type === 'invite' && jobTitle
-                ? `Hi ${talentName |recipientName |''}, I’d like to invite you to discuss a project: ${jobTitle}`
+    <div className='min-h-screen bg-gray-50'>;
+      <div className='max-w-2xl mx-auto p-4'>;
+        <div className='bg-white rounded-xl shadow-sm'>;
+          <div className='p-4 border-b'>;
+            <h1 className='text-xl font-semibold'>{headerTitle}</h1>;
+            <p className='text-sm text-gray-500'>;
+              {type === 'invite' && jobTitle;
+                ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`;
+
                 : null}
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
-        attachmentBase64,
+        attachmentBase64;
         attachmentName: file?.name,
-        context})}),
-    const data = await res.json(),
-    setSending(false),
+        context})});
+    const data = await res.json();
+    setSending(false);
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`)
-  },
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-2xl mx-auto p-4">
@@ -127,6 +155,7 @@ export default function ComposePage(req, res) {
           <div className="p-4 border-b">
             <h1 className="text-xl font-semibold">{headerTitle}</h1>
             <p className="text-sm text-gray-500">
+
               {type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}` : null  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -197,8 +226,4 @@ export default function ComposePage(req, res) {
 
 }
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }

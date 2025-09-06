@@ -31,7 +31,7 @@ export default function WalletPage(req, res) {
   try {
   return (;
     <EnhancedLayout title="Your ZION$ Wallet">;
-      <div className="max-w-2xl mx-auto">;
+      <div className="max - w-2xl mx - auto">;
         <WalletPanel />;
       </div>;
     </EnhancedLayout>;

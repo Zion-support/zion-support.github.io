@@ -1261,6 +1261,7 @@ class TestAutomation {,;
         this.log('\n✨ All tests passed!');
       }
 ;
+
     } catch (error) {,;
       this.log(`❌ Error running test: automation: ${error.message}`),;
       process.exit(1);

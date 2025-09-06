@@ -275,11 +275,86 @@ export default function ForumPostPage() {
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
-      }),
-      return
+=======
+
+  const handleUpvote = () => {;
+    if (!user) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to vote on posts"}),;
+      return;
     }
-    // Update the replies
-    const updatedReplies = replies.map(reply => ({
+
+    setPost({ ...post, upvotes: post && post.upvotes + 1 }),;
+    toast({;
+      title: "Vote recorded",;
+      description: "You upvoted this post"});
+  };
+
+  const handleDownvote = () => {;
+    if (!user) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to vote on posts"}),;
+      return;
+    }
+
+    setPost({ ...post, downvotes: post && post.downvotes + 1 }),;
+    toast({;
+      title: "Vote recorded",;
+      description: "You downvoted this post"});
+  };
+
+  const handleSubmitReply = async (content: string) => {;
+    if (!user) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to reply"}),;
+      return;
+    }
+
+    // Create a new reply;
+    const newReply: ForumReply = {;
+      id: `reply${Date && Date.now()}`,;
+      postId: post && post.id,;
+      content;
+      authorId: user && user.id || 'unknown',;
+      authorName: user && user.displayName || 'Anonymous',;
+      authorAvatar: user && user.avatarUrl,;
+      createdAt: new Date().toISOString(),;
+      updatedAt: new Date().toISOString(),;
+      upvotes: 0,;
+      downvotes: 0;
+    };
+
+    setReplies([...replies, newReply]);
+    setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
+
+    toast({;
+      title: "Reply posted",;
+      description: "Your reply has been added to the discussion"});
+  };
+
+  const handleMarkAsAnswer = (replyId: string) => {;
+    // Only post author or admin can mark an answer;
+    if (!isAuthor && !isAdminOrMod) {;
+      toast({;
+        title: "Permission denied",;
+        description: "Only the original poster or moderators can mark answers",;
+        variant: "destructive";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+      return;
+    }
+
+
+    // Update the replies;
+    const updatedReplies = replies && replies.map(reply => ({;
+
+      ...reply;
+      isAnswer: reply && reply.id === replyId;
+    }));
+
       ...reply,
       isAnswer: reply.id === replyId
     }));
@@ -638,65 +713,170 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
+=======
+
+    setReplies(updatedReplies);
+    setPost({ ...post, isAnswered: true }),;
+
+    toast({;
+      title: "Answer marked",;
+      description: "The reply has been marked as the accepted answer"});
+  };
+
+  const handleReportPost = () => {;
+    if (!user) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to report content"}),;
+      return;
+    }
+
+    toast({;
+      title: "Report submitted",;
+      description: "A moderator will review this content"});
+  };
+
+  const handlePinPost = () => {;
+    if (!isAdminOrMod) return;
+
+    setPost({ ...post, isPinned: !post && post.isPinned }),;
+
+    toast({;
+      title: post && post.isPinned ? "Post unpinned" : "Post pinned",;
+      description: post && post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
+  };
+
+  const handleLockPost = () => {;
+    if (!isAdminOrMod) return;
+
+    setPost({ ...post, isLocked: !post && post.isLocked }),;
+
+    toast({;
+      title: post && post.isLocked ? "Post unlocked" : "Post locked",;
+      description: post && post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
+  };
+
+  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
+  const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
+
+  return (
+    <AppLayout>;
+      <SEO
+        title={`${post && post.title} | Community Forum | Zion AI Marketplace`}
+        description={post && post.content.substring(0, 160)}
+        keywords={`community, forum, discussion, ${post && post.tags.join()}`}
+      />;
+
+      <div className="container py-8">;
+        <div className="flex items-center gap-3 mb-6">;
+          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
+            Forum;
+          </Link>;
+          <span className="text-muted-foreground">/</span>;
+          <Link to={`/community/category/${post && post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
+            {post && post.categoryId.split('-').map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1)).join(' ')}
+          </Link>;
+          <span className="text-muted-foreground">/</span>;
+          <span className="text-sm font-medium truncate max-w-[200px]">{post && post.title}</span>;
+        </div>;
+
+        <Card>;
+          <CardContent className="p-6">;
+            <div className="flex justify-between items-start mb-6">;
+              <div className="flex items-center gap-4">;
+                <Avatar className="h-12 w-12">;
+                  <AvatarImage src={post && post.authorAvatar} />;
+                  <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
+                </Avatar>;
+                <div>;
+                  <div className="font-medium text-lg">{post && post.authorName}</div>;
+                  {post && post.authorRole && (;
+                    <Badge variant="outline" className="mt-1">;
+                      {post && post.authorRole}
+                    </Badge>;
+                  )}
+                </div>;
+              </div>;
+
+              <div className="flex items-center text-sm text-muted-foreground">;
+                <Calendar className="h-4 w-4 mr-1" />;
+                <time dateTime={post && post.createdAt} title={formattedDate}>;
+                  {timeAgo}
+                </time>;
+              </div>;
+            </div>;
+
+            <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;
+
+            <div className="flex flex-wrap gap-2 mb-6">;
+              {post && post.tags.map(tag => (;
+                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {tag}
-                </Badge>
+                </Badge>;
               ))}
-            </div>
-            <div className="prose dark:prose-invert max-w-none mb-6">
-              {post.content.split('\n\n').map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
+
+            </div>;
+
+            <div className="prose dark:prose-invert max-w-none mb-6">;
+              {post && post.content.split('\n\n').map((paragraph, i) => (;
+                <p key={i}>{paragraph}</p>;
               ))}
-            </div>
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-              <div className="flex items-center gap-4">
+            </div>;
+
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">;
+              <div className="flex items-center gap-4">;
+
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsUp className="h-4 w-4" />
-                  <span>{post.upvotes}</span>
-                </Button>
+                  className="flex items-center gap-2">;
+                  <ThumbsUp className="h-4 w-4" />;
+                  <span>{post && post.upvotes}</span>;
+                </Button>;
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsDown className="h-4 w-4" />
-                  <span>{post.downvotes}</span>
-                </Button>
-              </div>
-              <div className="flex items-center gap-2">
-                {(isAuthor |isAdminOrMod) && (
-                  <Button variant="ghost" size="sm" asChild>
-                    <Link to={`/community/edit/${post.id}`}>
-                      <Edit className="h-4 w-4 mr-1" />
-                      Edit
-                    </Link>
-                  </Button>
+
+                  className="flex items-center gap-2">;
+                  <ThumbsDown className="h-4 w-4" />;
+                  <span>{post && post.downvotes}</span>;
+                </Button>;
+              </div>;
+
+              <div className="flex items-center gap-2">;
+                {(isAuthor || isAdminOrMod) && (;
+                  <Button variant="ghost" size="sm" asChild>;
+                    <Link to={`/community/edit/${post && post.id}`}>;
+                      <Edit className="h-4 w-4 mr-1" />;
+                      Edit;
+                    </Link>;
+                  </Button>;
                 )}
-                {isAdminOrMod && (
-                  <>
+
+                {isAdminOrMod && (;
+                  <>;
+
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handlePinPost}
-                    >
-                      <Pin className="h-4 w-4 mr-1" />
-                      {post.isPinned ? "Unpin" : "Pin"}
-                    </Button>
+                      onClick={handlePinPost}>;
+                      <Pin className="h-4 w-4 mr-1" />;
+                      {post && post.isPinned ? "Unpin" : "Pin"}
+                    </Button>;
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handleLockPost}
-                    >
-                      <Lock className="h-4 w-4 mr-1" />
-                      {post.isLocked ? "Unlock" : "Lock"}
-                    </Button>
-                  </>
+                      onClick={handleLockPost}>;
+                      <Lock className="h-4 w-4 mr-1" />;
+                      {post && post.isLocked ? "Unlock" : "Lock"}
+                    </Button>;
+                  </>;
                 )}
+
+
                 <Button
                   variant="ghost"
                   size="sm"
@@ -765,6 +945,7 @@ export default function ForumPostPage() {;
 }
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
+
               ))}
           </div>;
         </div>;
@@ -772,4 +953,51 @@ export default function ForumPostPage() {;
     </AppLayout>;
   );
 }
+
+        <div className="mt - 8">;
+          <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
+          {post.is_answered && (
+            <div className="mb - 6">;
+              <h3 className="flex items - center text - green - 600 font - medium mb - 2">;
+                <CheckCircle className="h - 4 w - 4 mr - 2" />;
+                Accepted Answer;
+              </h3>;
+              {replies.filter (reply => reply.is_answer).map (reply => (
+                <ReplyCard key={reply.id} reply={reply} className="border - green - 500" />))}
+            </div>)}
+          {!post.is_locked && (
+            <div className="mb - 8">;
+              <h3 className="text - lg font - medium mb - 4">Your Response</h3>;
+              {user ? (
+                <ReplyForm on_submit={handleSubmitReply} />) : (
+                <Alert>;
+                  <AlertDescription>;
+                    Please <Link to="/login" className="font - medium text - zion - purple hover:underline">sign in</Link> to join the discussion.;
+                  </AlertDescription>;
+                </Alert>)}
+            </div>)}
+          {post.is_locked && (
+            <Alert className="mb - 8">;
+              <AlertDescription className="flex items - center">;
+                <Lock className="h - 4 w - 4 mr - 2" />;
+                This thread has been locked and is no longer open for responses.;
+              </AlertDescription>;
+            </Alert>)}
+          <div className="space - y-6">;
+            {replies;
+              .filter (reply => !reply.is_answer);
+              .map (reply => (
+                <ReplyCard;
+                  key={reply.id}
+                  reply={reply}
+                  onMarkAnswer={() => handleMarkAsAnswer (reply.id)}
+                  canMarkAnswer={!post.is_answered && (is_author || isAdminOrMod)}
+                />))}
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>);
+}
+
+=======
 ;

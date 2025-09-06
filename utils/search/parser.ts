@@ -7,14 +7,16 @@ export const parseSearchQuery = (query: string) => {
     location: null
     type: null
   }
-}
-export const searchAll = (parsed: any, access: any) => {
-  // Add search functionality here
-  return {
-    all: []
-    talent: []
-    jobs: []
-    projects: []
+
+  const words = query && query.toLowerCase().split(/\s+/);
+  const keywords: string[] = [];
+  const skills: string[] = [];
+  
+  // Simple keyword extraction
+  for (const word of words) {
+    if (word && word.length > 2) {
+      keywords && keywords.push(word);
+    }
   }
 }
     keywords: [],
@@ -31,6 +33,7 @@ export const searchAll = (parsed: any, access: any) => {
     talent: [],
     jobs: [],
     projects: [];
+
   };
 };
 

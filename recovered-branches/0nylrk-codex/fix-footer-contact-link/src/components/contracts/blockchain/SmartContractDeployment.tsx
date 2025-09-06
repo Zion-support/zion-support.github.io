@@ -50,14 +50,17 @@ export function SmartContractDeployment({
   }),
 
   const handleDeployContract = async () => {
-    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
-      toast.error("Please enter a wallet address for blockchain deployment"),
-      return
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("Please enter a wallet address for blockchain deployment");
+      return;
     }
     try {
-      await onDeploy(deploymentOptions)
+      await on_deploy (deployment_options);
     } catch (error) {
-      console.error("Deployment error:", error)
+      console.error ("Deployment error:", error);
     }
   }
   const handleDownloadSolidity = () => {
@@ -133,10 +136,10 @@ interface SmartContractDeploymentProps {;
   onDeploy: (options: DeploymentOptions) => Promise<void>,;
   isDeploying: boolean;
 }
-;
-export function SmartContractDeployment({;
-  solidityCode,;
-  onDeploy,;
+
+export function SmartContractDeployment(): any ({ ;
+  solidityCode;
+  onDeploy;
   isDeploying;
 }: SmartContractDeploymentProps) {;
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
@@ -144,39 +147,72 @@ export function SmartContractDeployment({;
     useEscrow: true,;
     deployToChain: false,;
     walletAddress: '';
-  }),;
+  });
+
   const handleDeployContract = async () => {;
-    if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {;
-      toast.error("Please enter a wallet address for blockchain deployment"),;
+    if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;
+      toast && toast.error("Please enter a wallet address for blockchain deployment");
       return;
     }
-;
+
     try {;
       await onDeploy(deploymentOptions);
     } catch (error) {;
-      console.error("Deployment error:", error);
+      console && console.error("Deployment error:", error);
     }
-  },;
+  };
+
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
     const blob = new Blob([solidityCode], { type: 'text/plain' }),;
-    const url = URL.createObjectURL(blob),;
+    const url = URL && URL.createObjectURL(blob);
+
     // Create a temporary anchor to trigger download;
-    const a = document.createElement('a'),;
-    a.href = url,;
-    a.download = 'ZionContract.sol',;
-    document.body.appendChild(a),;
-    a.click(),;
+    const a = document && document.createElement('a');
+    a && a.href = url;
+    a && a.download = 'ZionContract && ZionContract.sol';
+    document && document.body.appendChild(a);
+    a && a.click();
+
     // Clean up;
-    URL.revokeObjectURL(url),;
-    document.body.removeChild(a),;
-    toast.success("Solidity contract downloaded");
-  },;
-  return (;
+    URL && URL.revokeObjectURL(url);
+    document && document.body.removeChild(a);
+
+    toast && toast.success("Solidity contract downloaded");
+  };
+
+  return (
     <Card className="w-full">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
+=======
+;
+  const handleDownloadSolidity = () =>: any {
+    // Create a blob from the Solidity code;
+    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
+    const url = URL.createObjectURL (blob);
+;
+    // Create a temporary anchor to trigger download;
+    const array = document.create_element ('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.append_child (a);
+    a.click ();
+;
+    // Clean up;
+    URL.revokeObjectURL (url);
+    document.body.remove_child (a);
+;
+    toast.success ("Solidity contract downloaded");
+  }
+;
+  return (
+    <Card className="w - full">;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <ShieldCheck className="h - 5 w - 5 text - primary" />;
+
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -229,10 +265,11 @@ export function SmartContractDeployment({;
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input
-                  id="wallet-address"
-                  placeholder="0x..."
-                  value={deploymentOptions.walletAddress |''}
-                  onChange={(e) => setDeploymentOptions({
+                  id="wallet-address" 
+                  placeholder="0x..." 
+                  value={deploymentOptions && deploymentOptions.walletAddress || ''}
+                  onChange={(e) => setDeploymentOptions({;
+
                     ...deploymentOptions;
                     walletAddress: e.target.value
                 <Input 
@@ -254,8 +291,8 @@ export function SmartContractDeployment({;
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
-                  checked={deploymentOptions.useEscrow}
-                  onCheckedChange={(checked) => setDeploymentOptions({
+                  checked={deploymentOptions && deploymentOptions.useEscrow}
+                  onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
 
                     useEscrow: checked
@@ -272,10 +309,10 @@ export function SmartContractDeployment({;
                     ...deploymentOptions;
                     useEscrow: checked;
                   })}
-                />
-                <Label htmlFor="use-escrow">Use escrow for payments</Label>
-              </div>
-            </>
+                />;
+                <Label htmlFor="use-escrow">Use escrow for payments</Label>;
+              </div>;
+            </>;
           )}
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>

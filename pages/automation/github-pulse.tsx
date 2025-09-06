@@ -29,10 +29,6 @@ export default function GithubPulsePage() {
       </div>
     </EnhancedLayout>
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 function Metric({ label, value }: { label: string, value: any }) {
   return (

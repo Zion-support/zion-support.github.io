@@ -32,7 +32,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Usage analytics and quotas'
 				],
 				"ctaLabel": 'Generate PDFs',
-				"href": 'https://ziontechgroup.com/services/pdf-render-api'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services/pdf-render-api'
 			},
 			{
 				"id": 'api-documentation-generator',
@@ -48,7 +48,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'CI publish workflows'
 				],
 				"ctaLabel": 'Publish Docs',
-				"href": 'https://ziontechgroup.com/services/api-documentation-generator'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services/api-documentation-generator'
 			},
 			{
 				"id": 'smart-contract-risk-scanner',
@@ -64,7 +64,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'24/7 monitoring dashboard'
 				],
 				"ctaLabel": 'Start Free Trial',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-content-optimizer',
@@ -80,7 +80,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Automated A/B testing'
 				],
 				"ctaLabel": 'Get Started',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-workflow-automation',
@@ -96,7 +96,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Enterprise integration'
 				],
 				"ctaLabel": 'Schedule Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'edge-ai-inference-engine',
@@ -112,7 +112,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cross-platform support'
 				],
 				"ctaLabel": 'Deploy Now',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'autonomous-crm-optimizer',
@@ -128,7 +128,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Multi-channel integration'
 				],
 				"ctaLabel": 'Optimize CRM',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-supply-chain-optimizer',
@@ -144,7 +144,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Risk assessment'
 				],
 				"ctaLabel": 'Optimize Supply Chain',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'soc2-compliance-automation-saas',
@@ -160,7 +160,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Audit-ready export'
 				],
 				"ctaLabel": 'Start Compliance',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			},
 			{
 				"id": 'mlops-observability',
@@ -176,7 +176,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Compliance logging'
 				],
 				"ctaLabel": 'Monitor Models',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			},
 			// New innovative micro SaaS services
 			{
@@ -193,7 +193,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Collaborative editing'
 				],
 				"ctaLabel": 'Create Videos',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'smart-invoice-processor',
@@ -209,7 +209,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Fraud detection'
 				],
 				"ctaLabel": 'Process Invoices',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-customer-support-automation',
@@ -225,7 +225,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Automate Support',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'predictive-inventory-manager',
@@ -241,7 +241,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cost analysis'
 				],
 				"ctaLabel": 'Optimize Inventory',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-powered-email-marketing',
@@ -257,7 +257,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'ROI tracking'
 				],
 				"ctaLabel": 'Boost Engagement',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -274,7 +274,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Admin analytics'
 				],
 				"ctaLabel": 'Try Meeting Copilot',
-				"href": 'https://ziontechgroup.com/services/ai-meeting-notes'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services/ai-meeting-notes'
 			},
 			{
 				"id": 'smart-forms-intake',
@@ -290,7 +290,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics and insights'
 				],
 				"ctaLabel": 'Build Smart Forms',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-customer-success-platform',
@@ -306,7 +306,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'ROI tracking and analytics'
 				],
 				"ctaLabel": 'Optimize Customer Success',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-workflow-orchestrator',
@@ -322,7 +322,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Integration with 100+ tools'
 				],
 				"ctaLabel": 'Automate Workflows',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-data-governance-platform',
@@ -338,7 +338,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Custom governance policies'
 				],
 				"ctaLabel": 'Govern Your Data',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-cybersecurity-suite',
@@ -354,7 +354,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'24/7 security operations'
 				],
 				"ctaLabel": 'Secure Your Business',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-ai-platform',
@@ -370,7 +370,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Quantum machine learning'
 				],
 				"ctaLabel": 'Explore Quantum AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-healthcare-analytics',
@@ -386,7 +386,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'HIPAA compliance'
 				],
 				"ctaLabel": 'Transform Healthcare',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'edge-computing-platform',
@@ -402,7 +402,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Multi-cloud integration'
 				],
 				"ctaLabel": 'Deploy Edge AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-financial-trading-platform',
@@ -418,7 +418,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Risk management'
 				],
 				"ctaLabel": 'Trade with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-supply-chain-optimization',
@@ -434,7 +434,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Real-time tracking'
 				],
 				"ctaLabel": 'Optimize Supply Chain',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-hr-platform',
@@ -450,7 +450,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Workforce planning'
 				],
 				"ctaLabel": 'Transform HR',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-marketing-automation',
@@ -466,7 +466,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'ROI tracking and analytics'
 				],
 				"ctaLabel": 'Automate Marketing',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-legal-research-platform',
@@ -482,7 +482,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Compliance monitoring'
 				],
 				"ctaLabel": 'Research with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-education-platform',
@@ -498,7 +498,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Automated assessment'
 				],
 				"ctaLabel": 'Transform Education',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-project-management-platform',
@@ -514,7 +514,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Time tracking'
 				],
 				"ctaLabel": 'Manage Projects with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-content-orchestrator',
@@ -530,7 +530,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics and insights'
 				],
 				"ctaLabel": 'Orchestrate Content',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-sales-automation-suite',
@@ -546,7 +546,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Automate Sales',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-customer-support-platform',
@@ -562,7 +562,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Multi-language support'
 				],
 				"ctaLabel": 'Support with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-financial-analytics-platform',
@@ -578,7 +578,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Compliance reporting'
 				],
 				"ctaLabel": 'Analyze Finances',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-learning-management-system',
@@ -594,7 +594,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Multi-format content support'
 				],
 				"ctaLabel": 'Learn with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-legal-document-automation',
@@ -610,7 +610,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Document templates'
 				],
 				"ctaLabel": 'Automate Legal Docs',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -632,7 +632,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Custom dashboard creation'
 				],
 				"ctaLabel": 'Get AI Insights',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-sales-copilot',
@@ -648,7 +648,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Predictive sales forecasting'
 				],
 				"ctaLabel": 'Boost Sales with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-compliance-assistant',
@@ -664,7 +664,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Audit trail management'
 				],
 				"ctaLabel": 'Ensure Compliance',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-auto-email-responder',
@@ -680,7 +680,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Automate Email',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-content-studio',
@@ -696,7 +696,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Content analytics'
 				],
 				"ctaLabel": 'Create with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-finops-advisor',
@@ -712,7 +712,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'ROI optimization'
 				],
 				"ctaLabel": 'Optimize FinOps',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-lead-scoring',
@@ -728,7 +728,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance tracking'
 				],
 				"ctaLabel": 'Score Leads with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-chatbot',
@@ -744,7 +744,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Conversation analytics'
 				],
 				"ctaLabel": 'Add AI Chatbot',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-rag-search',
@@ -760,7 +760,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Search analytics'
 				],
 				"ctaLabel": 'Implement RAG Search',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-mlops',
@@ -776,7 +776,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Drift detection'
 				],
 				"ctaLabel": 'Deploy MLOps',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-ecommerce-personalization',
@@ -792,7 +792,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Conversion optimization'
 				],
 				"ctaLabel": 'Personalize Shopping',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-returns-management',
@@ -808,7 +808,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Integration with e-commerce platforms'
 				],
 				"ctaLabel": 'Manage Returns with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-vendor-risk',
@@ -824,7 +824,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Automated alerts'
 				],
 				"ctaLabel": 'Manage Vendor Risk',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-seo-optimizer',
@@ -840,7 +840,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance tracking'
 				],
 				"ctaLabel": 'Optimize SEO with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-churn-predictor',
@@ -856,7 +856,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Intervention recommendations'
 				],
 				"ctaLabel": 'Predict Churn',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-incident-postmortems',
@@ -872,7 +872,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Team learning insights'
 				],
 				"ctaLabel": 'Analyze Incidents',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-api-monitoring',
@@ -888,7 +888,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Uptime tracking'
 				],
 				"ctaLabel": 'Monitor APIs with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-gdpr-compliance',
@@ -904,7 +904,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Regulatory updates'
 				],
 				"ctaLabel": 'Ensure GDPR Compliance',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-proofreading',
@@ -920,7 +920,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Quality scoring'
 				],
 				"ctaLabel": 'Proofread with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-customer-feedback',
@@ -936,7 +936,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Integration with CRM systems'
 				],
 				"ctaLabel": 'Collect Feedback with AI',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-meeting-notes',
@@ -952,7 +952,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Meeting analytics'
 				],
 				"ctaLabel": 'Automate Meeting Notes',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-smart-forms',
@@ -968,7 +968,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics and insights'
 				],
 				"ctaLabel": 'Build Smart Forms',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-customer-success',
@@ -984,7 +984,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'ROI analytics'
 				],
 				"ctaLabel": 'Optimize Customer Success',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-workflow-orchestrator',
@@ -1000,7 +1000,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Automate Workflows',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-data-governance',
@@ -1016,7 +1016,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Governance policies'
 				],
 				"ctaLabel": 'Govern Your Data',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -1038,7 +1038,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Post-migration support'
 				],
 				"ctaLabel": 'Start Migration',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'cybersecurity-audit',
@@ -1054,7 +1054,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Remediation roadmap'
 				],
 				"ctaLabel": 'Secure Your Business',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'network-infrastructure-design',
@@ -1070,7 +1070,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Implementation support'
 				],
 				"ctaLabel": 'Design Network',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'data-backup-recovery',
@@ -1086,7 +1086,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Quick recovery solutions'
 				],
 				"ctaLabel": 'Protect Your Data',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'it-project-management',
@@ -1102,7 +1102,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Quality assurance'
 				],
 				"ctaLabel": 'Manage IT Projects',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'system-integration',
@@ -1118,7 +1118,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Ongoing support'
 				],
 				"ctaLabel": 'Integrate Systems',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'it-consulting',
@@ -1134,7 +1134,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'ROI analysis'
 				],
 				"ctaLabel": 'Get IT Strategy',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'managed-it-services',
@@ -1150,7 +1150,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Help desk support'
 				],
 				"ctaLabel": 'Manage IT Infrastructure',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'software-development',
@@ -1166,7 +1166,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Maintenance and support'
 				],
 				"ctaLabel": 'Develop Custom Software',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'data-analytics-implementation',
@@ -1182,7 +1182,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Ongoing optimization'
 				],
 				"ctaLabel": 'Implement Analytics',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'devops-implementation',
@@ -1198,7 +1198,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Process optimization'
 				],
 				"ctaLabel": 'Implement DevOps',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'cloud-optimization',
@@ -1214,7 +1214,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cost monitoring setup'
 				],
 				"ctaLabel": 'Optimize Cloud Costs',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'security-compliance',
@@ -1230,7 +1230,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Ongoing compliance monitoring'
 				],
 				"ctaLabel": 'Achieve Compliance',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'business-continuity',
@@ -1246,7 +1246,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Staff training'
 				],
 				"ctaLabel": 'Plan Continuity',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'it-training',
@@ -1262,7 +1262,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Progress tracking'
 				],
 				"ctaLabel": 'Train Your Team',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'vendor-management',
@@ -1278,7 +1278,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cost optimization'
 				],
 				"ctaLabel": 'Manage Vendors',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'digital-transformation',
@@ -1294,7 +1294,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Success measurement'
 				],
 				"ctaLabel": 'Transform Digitally',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'it-audit',
@@ -1310,7 +1310,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Recommendation report'
 				],
 				"ctaLabel": 'Audit IT Infrastructure',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'performance-tuning',
@@ -1326,7 +1326,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance monitoring'
 				],
 				"ctaLabel": 'Optimize Performance',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'data-migration',
@@ -1342,7 +1342,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Post-migration verification'
 				],
 				"ctaLabel": 'Migrate Data',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -1364,7 +1364,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Compliance-ready reports'
 				],
 				"ctaLabel": 'Harden M365',
-				"href": 'https://ziontechgroup.com/services/m365-security-hardening'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services/m365-security-hardening'
 			},
 			{
 				"id": 'ai-threat-intelligence',
@@ -1380,7 +1380,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Incident management'
 				],
 				"ctaLabel": 'Security Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-cryptography',
@@ -1396,7 +1396,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Compliance ready'
 				],
 				"ctaLabel": 'Quantum Security',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1413,7 +1413,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Incident response retainers'
 				],
 				"ctaLabel": 'Activate MDR',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			},
 			{
 				"id": 'sase-rollout',
@@ -1429,7 +1429,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Runbooks and training'
 				],
 				"ctaLabel": 'Deploy SASE',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -1451,7 +1451,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'S3/Snowflake/BigQuery connectors'
 				],
 				"ctaLabel": 'Generate Data',
-				"href": 'https://ziontechgroup.com/services/synthetic-data-generator'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services/synthetic-data-generator'
 			},
 			{
 				"id": 'quantum-data-analytics',
@@ -1467,7 +1467,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Visualization tools'
 				],
 				"ctaLabel": 'Analytics Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-business-intelligence',
@@ -1483,7 +1483,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Data integration'
 				],
 				"ctaLabel": 'BI Assessment',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1500,7 +1500,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Root-cause analysis'
 				],
 				"ctaLabel": 'Improve Data Trust',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			},
 			{
 				"id": 'modern-etl-migration',
@@ -1516,7 +1516,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Knowledge transfer'
 				],
 				"ctaLabel": 'Migrate Workloads',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -1538,7 +1538,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'CI/CD release gates'
 				],
 				"ctaLabel": 'Monitor Reliability',
-				"href": 'https://ziontechgroup.com/services/uptime-slo-monitor'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services/uptime-slo-monitor'
 			},
 			{
 				"id": 'kubernetes-cost-analyzer',
@@ -1554,7 +1554,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Slack/Grafana integrations'
 				],
 				"ctaLabel": 'Cut K8s Spend',
-				"href": 'https://ziontechgroup.com/services/kubernetes-cost-analyzer'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services/kubernetes-cost-analyzer'
 			},
 			{
 				"id": 'autonomous-devops-platform',
@@ -1570,7 +1570,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Continuous monitoring'
 				],
 				"ctaLabel": 'DevOps Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-cloud-infrastructure',
@@ -1586,7 +1586,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Enterprise support'
 				],
 				"ctaLabel": 'Cloud Migration',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1603,7 +1603,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cost-efficiency targets'
 				],
 				"ctaLabel": 'Build Serverless',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			},
 			{
 				"id": 'disaster-recovery-blueprints',
@@ -1619,7 +1619,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Executive tabletop exercises'
 				],
 				"ctaLabel": 'Harden Resilience',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -1641,7 +1641,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Trading Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-drug-discovery',
@@ -1657,7 +1657,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Regulatory support'
 				],
 				"ctaLabel": 'Research Access',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -1679,7 +1679,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Community-driven'
 				],
 				"ctaLabel": 'Marketplace Access',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-blockchain-platform',
@@ -1695,7 +1695,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Enterprise features'
 				],
 				"ctaLabel": 'Blockchain Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -1717,7 +1717,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Scalable deployment'
 				],
 				"ctaLabel": 'IoT Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'autonomous-edge-ai',
@@ -1733,7 +1733,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance monitoring'
 				],
 				"ctaLabel": 'Edge AI Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1750,7 +1750,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Dashboards and alerts'
 				],
 				"ctaLabel": 'Reduce Downtime',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			},
 			{
 				"id": 'digital-twin-starter',
@@ -1766,7 +1766,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Pilot-to-production plan'
 				],
 				"ctaLabel": 'Build a Twin',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -1788,7 +1788,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Sustainability reporting'
 				],
 				"ctaLabel": 'Energy Assessment',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-climate-prediction',
@@ -1804,7 +1804,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Policy recommendations'
 				],
 				"ctaLabel": 'Climate Demo',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1821,7 +1821,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Target tracking (SBTi)'
 				],
 				"ctaLabel": 'Start ESG Tracking',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -1843,7 +1843,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Global coverage'
 				],
 				"ctaLabel": 'Launch Satellites',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-space-communications',
@@ -1859,7 +1859,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Interplanetary network'
 				],
 				"ctaLabel": 'Connect Space',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1876,7 +1876,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Tasking provider integrations'
 				],
 				"ctaLabel": 'Analyze Imagery',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -1898,7 +1898,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Regulatory compliance'
 				],
 				"ctaLabel": 'Discover Drugs',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'quantum-genome-analyzer',
@@ -1914,7 +1914,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Research collaboration'
 				],
 				"ctaLabel": 'Analyze Genome',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1931,7 +1931,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Privacy and consent management'
 				],
 				"ctaLabel": 'Enable Triage',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -1953,7 +1953,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Regulatory compliance'
 				],
 				"ctaLabel": 'Start Trading',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'autonomous-defi-protocol',
@@ -1969,7 +1969,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Smart contract security'
 				],
 				"ctaLabel": 'Deploy Protocol',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -1986,7 +1986,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Audit and model governance'
 				],
 				"ctaLabel": 'Strengthen Compliance',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -2008,7 +2008,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'AI-powered NPCs'
 				],
 				"ctaLabel": 'Enter Metaverse',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'autonomous-ar-navigation',
@@ -2024,7 +2024,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Safety monitoring'
 				],
 				"ctaLabel": 'Navigate AR',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -2041,7 +2041,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Operations and support'
 				],
 				"ctaLabel": 'Build Simulator',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -2063,7 +2063,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Multi-system coordination'
 				],
 				"ctaLabel": 'Control Systems',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'autonomous-robotics-platform',
@@ -2079,7 +2079,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Deploy Robots',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -2096,7 +2096,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'KPIs and optimization'
 				],
 				"ctaLabel": 'Orchestrate Robots',
-				"href": 'https://ziontechgroup.com/services'
+				"href": 'https://ziontechgroup && ziontechgroup.com/services'
 			}
 		]
 	},
@@ -2119,7 +2119,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Brand voice consistency'
 				],
 				"ctaLabel": 'Manage Social Media',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'predictive-marketing-analytics',
@@ -2135,7 +2135,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Real-time insights'
 				],
 				"ctaLabel": 'Analyze Marketing',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-seo-optimizer',
@@ -2151,7 +2151,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Technical SEO audit'
 				],
 				"ctaLabel": 'Optimize SEO',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2173,7 +2173,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics dashboard'
 				],
 				"ctaLabel": 'Boost Sales',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'smart-inventory-optimizer',
@@ -2189,7 +2189,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cost optimization'
 				],
 				"ctaLabel": 'Optimize Inventory',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-customer-chatbot',
@@ -2205,7 +2205,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Human handoff'
 				],
 				"ctaLabel": 'Deploy Chatbot',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2227,7 +2227,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Searchable archives'
 				],
 				"ctaLabel": 'Assist Meetings',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'collaborative-project-manager',
@@ -2243,7 +2243,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Risk management'
 				],
 				"ctaLabel": 'Manage Projects',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'virtual-office-platform',
@@ -2259,7 +2259,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Productivity analytics'
 				],
 				"ctaLabel": 'Create Virtual Office',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2281,7 +2281,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Legal research integration'
 				],
 				"ctaLabel": 'Review Contracts',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'legal-research-assistant',
@@ -2297,7 +2297,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Research summaries'
 				],
 				"ctaLabel": 'Research Legal',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'compliance-monitoring-system',
@@ -2313,7 +2313,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Reporting automation'
 				],
 				"ctaLabel": 'Monitor Compliance',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2335,7 +2335,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics dashboard'
 				],
 				"ctaLabel": 'Adapt Learning',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'virtual-reality-classroom',
@@ -2351,7 +2351,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Progress tracking'
 				],
 				"ctaLabel": 'Create VR Classroom',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'ai-tutor-assistant',
@@ -2367,7 +2367,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Learning analytics'
 				],
 				"ctaLabel": 'Get AI Tutor',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2389,7 +2389,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Investment insights'
 				],
 				"ctaLabel": 'Value Property',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'virtual-property-tour',
@@ -2405,7 +2405,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics dashboard'
 				],
 				"ctaLabel": 'Create Virtual Tours',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'smart-property-manager',
@@ -2421,7 +2421,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Predictive maintenance'
 				],
 				"ctaLabel": 'Manage Properties',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2443,7 +2443,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Risk assessment'
 				],
 				"ctaLabel": 'Optimize Supply Chain',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'blockchain-tracking-system',
@@ -2459,7 +2459,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Stakeholder access'
 				],
 				"ctaLabel": 'Track Supply Chain',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'predictive-logistics',
@@ -2475,7 +2475,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cost optimization'
 				],
 				"ctaLabel": 'Optimize Logistics',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2497,7 +2497,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Cost reduction'
 				],
 				"ctaLabel": 'Optimize Grid',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'renewable-energy-manager',
@@ -2513,7 +2513,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Maintenance scheduling'
 				],
 				"ctaLabel": 'Manage Renewables',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'energy-efficiency-analyzer',
@@ -2529,7 +2529,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Sustainability reporting'
 				],
 				"ctaLabel": 'Analyze Efficiency',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2551,7 +2551,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Environmental impact'
 				],
 				"ctaLabel": 'Optimize Traffic',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'smart-parking-platform',
@@ -2567,7 +2567,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'City integration'
 				],
 				"ctaLabel": 'Smart Parking',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'environmental-monitoring',
@@ -2583,7 +2583,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Regulatory compliance'
 				],
 				"ctaLabel": 'Monitor Environment',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2605,7 +2605,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Resource management'
 				],
 				"ctaLabel": 'Optimize Agriculture',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'drone-farming-system',
@@ -2621,7 +2621,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics platform'
 				],
 				"ctaLabel": 'Deploy Drones',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'livestock-monitoring',
@@ -2637,7 +2637,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Breeding optimization'
 				],
 				"ctaLabel": 'Monitor Livestock',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2659,7 +2659,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Quality assurance'
 				],
 				"ctaLabel": 'Create Content',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'personalized-streaming',
@@ -2675,7 +2675,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Engagement optimization'
 				],
 				"ctaLabel": 'Personalize Streaming',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'virtual-production-studio',
@@ -2691,7 +2691,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Asset management'
 				],
 				"ctaLabel": 'Create Virtually',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2713,7 +2713,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Customer notification'
 				],
 				"ctaLabel": 'Automate Delivery',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'warehouse-automation',
@@ -2729,7 +2729,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Maintenance scheduling'
 				],
 				"ctaLabel": 'Automate Warehouse',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'supply-chain-visibility',
@@ -2745,7 +2745,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Compliance reporting'
 				],
 				"ctaLabel": 'Track Supply Chain',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2767,7 +2767,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics dashboard'
 				],
 				"ctaLabel": 'Recruit Smarter',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'employee-engagement-monitor',
@@ -2783,7 +2783,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Action planning'
 				],
 				"ctaLabel": 'Monitor Engagement',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'learning-management-system',
@@ -2799,7 +2799,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics reporting'
 				],
 				"ctaLabel": 'Manage Learning',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2821,7 +2821,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Growth insights'
 				],
 				"ctaLabel": 'Predict Sales',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'sales-automation-platform',
@@ -2837,7 +2837,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Automate Sales',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'customer-success-platform',
@@ -2853,7 +2853,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Churn prediction'
 				],
 				"ctaLabel": 'Succeed with Customers',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2875,7 +2875,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance optimization'
 				],
 				"ctaLabel": 'Unify Experience',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'sentiment-analysis-engine',
@@ -2891,7 +2891,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Action recommendations'
 				],
 				"ctaLabel": 'Analyze Sentiment',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'customer-feedback-automation',
@@ -2907,7 +2907,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'ROI measurement'
 				],
 				"ctaLabel": 'Automate Feedback',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -2929,7 +2929,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Performance analytics'
 				],
 				"ctaLabel": 'Manage Tasks',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'workflow-automation-engine',
@@ -2945,7 +2945,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics dashboard'
 				],
 				"ctaLabel": 'Automate Workflows',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			},
 			{
 				"id": 'collaborative-workspace',
@@ -2961,7 +2961,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 					'Analytics insights'
 				],
 				"ctaLabel": 'Collaborate Better',
-				"href": 'https://ziontechgroup.com/contact'
+				"href": 'https://ziontechgroup && ziontechgroup.com/contact'
 			}
 		]
 	}

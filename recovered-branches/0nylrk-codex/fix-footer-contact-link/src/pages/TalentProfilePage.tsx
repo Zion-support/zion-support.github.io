@@ -15,9 +15,10 @@ import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 import {UserProfile} from "@/types/auth";
 import {toast} from "@/hooks/use-toast";
-export default function TalentProfilePage() {
+export default function TalentProfilePage() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
+
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
@@ -232,6 +233,91 @@ export default function TalentProfilePage() {;
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
+=======
+
+  // Create a compatible UserProfile from UserDetails or the authenticated user;
+  const userProfile: UserProfile = user ? {;
+    id: user && user.id || '',;
+    displayName: user && user.displayName || '',;
+    email: user && user.email || '', // Ensure email is always a string;
+    userType: user && user.userType || '',;
+    profileComplete: user && user.profileComplete || false,;
+    createdAt: user && user.createdAt || new Date().toISOString(),;
+    updatedAt: user && user.updatedAt || new Date().toISOString(),;
+    role: user && user.role || '';
+  } : {;
+    id: userDetails?.id || '',;
+    displayName: userDetails?.name || '',;
+    email: userDetails?.email || '', // Ensure email is always a string;
+    userType: '', // Default empty string since userDetails doesn't have this property;
+    profileComplete: false, // Default value since userDetails doesn't have this property;
+    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;
+    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;
+    role: '' // Default empty string since userDetails doesn't have this property;
+  };
+
+  // Handle loading error gracefully;
+  useEffect(() => {;
+    if (error) {;
+      toast({;
+        title: "Error loading profile",;
+        description: "There was a problem loading this talent profile. Please try again.",;
+        variant: "destructive"});
+    }
+  }, [error]);
+
+  if (isLoading) {;
+    return <ProfileLoadingState />;
+  }
+
+  if (error || !profile) {;
+    return <ProfileErrorState error={error} />;
+  }
+
+  const handleRequestHire = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to hire this talent.",;
+        variant: "default"}),;
+      navigate('/login', { state: { from: `/talent/${id}` } }),;
+      return;
+    }
+    setIsHireModalOpen(true);
+  };
+
+  const handleMessageTalent = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to message this talent.",;
+        variant: "default"}),;
+      navigate('/login', { state: { from: `/talent/${id}` } }),;
+      return;
+    }
+    setIsMessageModalOpen(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-zion-blue pb-12">;
+      <TalentProfile
+        profile={profile} 
+        onRequestHire={handleRequestHire}
+        onMessageTalent={handleMessageTalent}
+      />;
+      <BackToDirectoryButton />;
+
+      {/* Sticky action buttons that appear when scrolling */}
+      <StickyAction>;
+        <div className="p-2 flex gap-2">;
+          <Button
+            size="sm"
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+            onClick={handleRequestHire}>;
+            <Handshake className="mr-2 h-4 w-4" />;
+            Hire Now;
+          </Button>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             size="sm"
             variant="outline"
@@ -261,7 +347,26 @@ export default function TalentProfilePage() {;
   )
 }
       />;
-    </div>;
-  );
+
+
+=======
+      {/* Request to Hire Modal */}
+      <HireRequestModal;
+        talent={profile}
+        is_open={isHireModalOpen}
+        on_close={() => setIsHireModalOpen (false)}
+        user_details={user_profile}
+      />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {/* Message Talent Modal */}
+      <MessageTalentModal;
+        talent={profile}
+
+        is_open={isMessageModalOpen}
+        on_close={() => setIsMessageModalOpen (false)}
+      />;
+    </div>);
 }
+
+=======
 ;

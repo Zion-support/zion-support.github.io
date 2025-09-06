@@ -17,7 +17,8 @@ import {TalentOnboardingSteps} from "@/components/onboarding/TalentOnboardingSte
 import {MyApplications} from "@/components/jobs/MyApplications";
 import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
-function TalentDashboardContent() {
+function TalentDashboardContent() {;
+
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
 import { useState, useEffect } from "react",
@@ -304,12 +305,14 @@ export default function TalentDashboard() {
   )
 }
 ;
+
 export default function TalentDashboard() {;
-  return (;
+  return (
     <ProtectedRoute>;
       <TalentDashboardContent />;
     </ProtectedRoute>;
   );
 }
+
 ;
 ;

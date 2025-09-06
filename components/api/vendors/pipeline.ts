@@ -12,8 +12,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ items });
   res.status(200).json({ items });
 }
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { listPipelineForVendor } from '../../../utils/vendor-store';
+  const items = listPipelineForVendor (vendor_id);
+  res.status (200).json ({ items });
+  res.status (200).json ({ items });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
   const vendorId = String(req.query.vendorId || '');
   if (!vendorId) return res.status(400).json({ error: 'vendorId required' });

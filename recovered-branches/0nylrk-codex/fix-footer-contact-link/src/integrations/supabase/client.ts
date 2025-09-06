@@ -88,6 +88,8 @@ export const safeFetch: typeof fetch = async (input, init) => {;
 },;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
   global: { fetch: safeFetch }
+
 });
+;
 // Helper function to get profiles table;
 export const getFromProfiles = () => supabase.from('profiles');

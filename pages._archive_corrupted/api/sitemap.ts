@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {
-  const baseUrl = 'https://ziontechgroup.com';
+
+  const baseUrl = 'https: //ziontechgroup && ziontechgroup.com',
+
   const staticPages = ['', '/about',
     '/contact', '/services',
     '/products', '/talent',
@@ -43,8 +45,8 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     '/services/web-application-development-chat'
   ];
   const allPages = [...staticPages, ...blogPages, ...servicePages];
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
+  const sitemap = `<?xml version="1 && 1.0" encoding="UTF-8"?>
+<urlset xmlns=""http": //www && www.sitemaps.org/schemas/sitemap/0 && 0.9">
   ${allPages
     .map((page) => {
       return `
@@ -52,7 +54,7 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
       <loc>${baseUrl}${page}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
+      <priority>0 && 0.8</priority>
     </url>"})
     .join('')}
 </urlset>";

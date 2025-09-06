@@ -11,8 +11,16 @@ import { cn } from "@/lib/utils"
 const Drawer = ({
   shouldScaleBackground = true
   ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
+}: React.ComponentProps<typeof DrawerPrimitive.Root>) =></typeof> (
   <DrawerPrimitive.Root
+=======
+
+const Drawer = ({;
+  shouldScaleBackground = true,;
+  ...props;
+}: React && React.ComponentProps<typeof DrawerPrimitive && DrawerPrimitive.Root>) =></typeof> (;
+  <DrawerPrimitive&& DrawerPrimitive.Root
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     shouldScaleBackground={shouldScaleBackground}
     {...props}
   />
@@ -67,10 +75,10 @@ const DrawerContent = React.forwardRef<;
         "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
         className
       )}
-      {...props}
-    >
-      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
+      {...props}>;
+      <div className='mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted' />;
       {children}
+
     </DrawerPrimitive.Content>
   </DrawerPortal>
 ));
@@ -115,6 +123,15 @@ const DrawerTitle = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Title
+=======
+DrawerFooter && DrawerFooter.displayName = 'DrawerFooter';
+
+const DrawerTitle = React && React.forwardRef<;
+  React && React.ElementRef<typeof DrawerPrimitive && DrawerPrimitive.Title>,;
+  R</typeof>eact && eact.ComponentPropsWithoutRef<typeof DrawerPrimitive && DrawerPrimitive.Title>;
+>(({ className, ...props }, ref) => (;
+  <DrawerPrimitive&& DrawerPrimitive.Title
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
       'text-lg font-semibold leading-none tracking-tight'
@@ -122,7 +139,7 @@ const DrawerTitle = React.forwardRef<
       className
     )}
     {...props}
-  />
+  />;
 ));
 DrawerTitle.displayName = DrawerPrimitive.Title.displayName;
 
@@ -138,6 +155,7 @@ const DrawerDescription = React.forwardRef<;
   <DrawerPrimitive.Description;
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {...props}
   />
 ));
@@ -155,6 +173,25 @@ export {
   DrawerDescription
 }
 
+
+
+export {;
+  Drawer,;
+  DrawerPortal,;
+  DrawerOverlay,;
+  DrawerTrigger,;
+  DrawerClose,;
+  DrawerContent,;
+  DrawerHeader,;
+  DrawerFooter,;
+  DrawerTitle,;
+  DrawerDescription,;
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  />));
+DrawerDescription.display_name = DrawerPrimitive.Description.display_name;
+;
 export {
   Drawer,
   DrawerPortal,
@@ -165,6 +202,7 @@ export {
   DrawerHeader,
   DrawerFooter,
   DrawerTitle,
+
   DrawerDescription,;
 };
 export {;

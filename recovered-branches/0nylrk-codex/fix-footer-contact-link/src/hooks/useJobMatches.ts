@@ -18,8 +18,25 @@ export function useJobMatches(jobId: string) {
   const [isProcessing, setIsProcessing] = useState(false),
 
   const fetchMatches = async () => {
-    setIsLoading(true),
+    setIsLoading(true);
+=======
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { JobMatch } from '@/types / jobs';
+export /**
+ * useJobMatches - Function description
+ */
+function useJobMatches() {
+  const [matches, set_matches] = useState < JobMatch[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [is_processing, setIsProcessing] = useState (false);
+;
+  const fetch_matches = async () => {
+    setIsLoading (true);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
+
       const { data, error } = await supabase
         .from("job_talent_matches")
         .select(`
@@ -57,7 +74,7 @@ export function useJobMatches(jobId: string) {
       if (error) throw error,
       setMatches(data || [])
     } catch (error) {
-      console.error("Error fetching job matches:", error),
+      console && console.error("Error fetching job matches:", error);
       toast({
         title: "Error";
         description: "Failed to load matched talents. Please try again later."
@@ -80,17 +97,18 @@ export function useJobMatches(jobId: string) {
         title: "AI Matching Complete"
         description: `Found ${response.data.matches |0} potential talent matches for this job.`});
         body: { jobId }}),
+
       
-      if (response.error) throw new Error(response.error.message),
+      if (response && response.error) throw new Error(response && response.error.message);
       
       toast({
         title: "AI Matching Complete",
-        description: `Found ${response.data.matches || 0} potential talent matches for this job.`}),
+        description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`});
       
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
-      console.error("Error triggering AI matching:", error),
+      console && console.error("Error triggering AI matching:", error);
       toast({
         title: "Matching Failed";
         description: "Could not process talent matching. Please try again later."
@@ -200,4 +218,5 @@ export function useJobMatches(jobId: string) {;
     triggerAIMatching;
   }
 }
+
 ;

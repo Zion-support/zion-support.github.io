@@ -1,12 +1,7 @@
 
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumFinancialTradingPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'))
-  if (!service) return null
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'));
+  if (!service) return null;
+
 
 import React from 'react',;
 import Head from 'next/head',;

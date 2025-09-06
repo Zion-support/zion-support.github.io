@@ -32,33 +32,60 @@ import {
   SupportedLanguage,
   LanguageContextType,;
 } from "../context/LanguageContext";
+export function LanguageDetectionPopup() {
+=======
+import {;
+  AlertDialog,;
+  AlertDialogAction,;
+  AlertDialogCancel,;
+  AlertDialogContent,;
+  AlertDialogDescription,;
+  AlertDialogFooter,;
+  AlertDialogHeader,;
+  AlertDialogTitle,;
+} from "../components/ui/alert-dialog";
+import {;
+  useLanguage,;
+  SupportedLanguage,;
+  LanguageContextType,;
+} from "../context/LanguageContext";
+
 export function LanguageDetectionPopup() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
-  const { changeLanguage, currentLanguage, supportedLanguages } =
+  const { changeLanguage, currentLanguage, supportedLanguages } =;
     useLanguage() as LanguageContextType;
-  const [detectedLanguage, setDetectedLanguage] =
+  const [detectedLanguage, setDetectedLanguage] =;
     useState<SupportedLanguage | null>(null);
-  useEffect(() => {
-    // Check if this is first visit
-    const hasVisited = localStorage.getItem("zion_has_visited");
+
+
+  useEffect(() => {;
+    // Check if this is first visit;
+    const hasVisited = localStorage && localStorage.getItem("zion_has_visited");
     if (hasVisited) return;
-    // Mark as visited
-    localStorage.setItem("zion_has_visitedtrue");
-    // Get browser language
-    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
-    // Check if browser language is supported and different from current language
-    const isSupported = supportedLanguages.some(
-      (lang) => lang.code === browserLang
+
+    // Mark as visited;
+    localStorage && localStorage.setItem("zion_has_visitedtrue");
+
+    // Get browser language;
+    const browserLang = navigator && navigator.language.substring(0, 2) as SupportedLanguage;
+
+    // Check if browser language is supported and different from current language;
+    const isSupported = supportedLanguages && supportedLanguages.some(;
+      (lang) => lang && lang.code === browserLang,;
+
     );
-    if (isSupported && browserLang !== currentLanguage) {
+    if (isSupported && browserLang !== currentLanguage) {;
       setDetectedLanguage(browserLang);
       setOpen(true);
     }
   }, []);
   if (!detectedLanguage) return null;
-  const languageName =
-    supportedLanguages.find((lang) => lang.code === detectedLanguage)?.name |
+
+
+  const languageName =;
+    supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage);
@@ -141,6 +168,7 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t('general.yes')}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;

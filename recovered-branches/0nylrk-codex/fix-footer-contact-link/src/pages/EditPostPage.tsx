@@ -94,16 +94,42 @@ export default function EditPostPage() {
   }, [postId]),
   
   if (isLoading) {
+=======
+
+  useEffect(() => {;
+    // In a real app, we would fetch the post data here;
+    // For now, we'll just use the mock data;
+    setIsLoading(false);
+  }, [postId]);
+
+  if (isLoading) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-      <AppLayout>
-        <div className="container py-8">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
-          </div>
-        </div>
-      </AppLayout>
-    )
+      <AppLayout>;
+        <div className="container py-8">;
+          <div className="flex justify-center items-center h-64">;
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
+          </div>;
+        </div>;
+      </AppLayout>;
+    );
   }
+
+
+  if (!post) {;
+
+    return (
+      <AppLayout>;
+        <div className="container py-8">;
+          <h1>Post not found</h1>;
+          <Button asChild className="mt-4">;
+            <Link to="/community">Back to Community</Link>;
+          </Button>;
+        </div>;
+      </AppLayout>;
+    );
+  }
+
   if (!post) {
     return (
       <AppLayout>
@@ -161,12 +187,42 @@ export default function EditPostPage() {
         description: "There was a problem updating your post"
         variant: "destructive"
       })
+
+
+  const initialValues: Partial<PostFormValues> = {;
+    title: post && post.title,;
+    content: post && post.content,;
+    categoryId: post && post.categoryId as ForumCategory,;
+    tags: post && post.tags.join(", ");
+  };
+
+  const handleSubmit = async (values: PostFormValues) => {;
+    try {;
+      // Here we would normally update the post in the database;
+      // For now, we'll just simulate a successful update;
+
+      toast({;
+        title: "Post updated",;
+        description: "Your post has been updated successfully";
+      });
+
+      // Redirect back to the post;
+      navigate(`/community/post/${postId}`);
+    } catch (error) {;
+      toast({;
+        title: "Error",;
+        description: "There was a problem updating your post",;
+        variant: "destructive";
+      });
+
     }
   }
   },
 
   return (
-    <AppLayout>
+
+    <AppLayout>;
+
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
@@ -317,7 +373,9 @@ export default function EditPostPage() {;
         title="Edit Post | Community Forum | Zion AI Marketplace";
         description="Edit your discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, edit post";
+
       />;
+
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -330,11 +388,13 @@ export default function EditPostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Edit</span>;
         </div>;
+
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
-        <PostForm;
-          initialValues={initialValues} ;
-          onSubmit={handleSubmit} ;
-          isEditing={true} ;
+
+        <PostForm
+          initialValues={initialValues} 
+          onSubmit={handleSubmit} 
+          isEditing={true} 
         />;
       </div>;
     </AppLayout>;

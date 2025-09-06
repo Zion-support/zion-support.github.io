@@ -137,17 +137,40 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
               {unreadCount} New;
             </Badge>;
           )}
+
         </div>;
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
       </div>;
+
       <div className="flex gap-3 mt-4 md:mt-0">;
-        <Select;
-          value={statusFilter} ;
+        <Select
+          value={statusFilter} 
           onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
         >;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+=======
+    <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
+      <div>;
+        <div className="flex items - center gap - 3">;
+          <h1 className="text - 3xl font - bold text - white">Hire Requests</h1>;
+          {unread_count > 0 && (
+            <Badge className="bg - blue - 500">;
+              {unread_count} New;
+            </Badge>)}
+        </div>;
+        <p className="text - zion - slate - light mt - 2">;
+          Manage client requests to hire your services;
+        </p>;
+      </div>;
+      <div className="flex gap - 3 mt - 4 md:mt - 0">;
+        <Select;
+          value={status_filter}
+          onValueChange={(value) => setStatusFilter (value as QuoteStatus | 'all')}
+        >;
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -159,11 +182,13 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
+
         <Select;
-          value={archiveFilter} ;
-          onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
+          value={archive_filter}
+          onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
         >;
-          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+
             <SelectValue placeholder="Active Only" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -173,8 +198,11 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
           </SelectContent>;
         </Select>;
       </div>;
-    </div>;
-  );
-};
+
+    </div>);
+}
+;
+
+=======
 
 export default RequestsHeader;

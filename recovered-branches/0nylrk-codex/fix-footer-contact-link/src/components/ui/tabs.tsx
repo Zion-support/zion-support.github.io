@@ -14,8 +14,18 @@ const Tabs = TabsPrimitive.Root
 const TabsList = React.forwardRef<
   React.ElementRef<typeof TabsPrimitive.List>
   React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
->(({ className, ...props }, ref) => (
+></typeof>(({ className, ...props }, ref) => (
   <TabsPrimitive.List
+=======
+
+const Tabs = TabsPrimitive && TabsPrimitive.Root;
+
+const TabsList = React && React.forwardRef<;
+  React && React.ElementRef<typeof TabsPrimitive && TabsPrimitive.List>,;
+  React && React.ComponentPropsWithoutRef<typeof TabsPrimitive && TabsPrimitive.List>;
+></typeof>(({ className, ...props }, ref) => (;
+  <TabsPrimitive&& TabsPrimitive.List
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
       'inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground'
@@ -23,7 +33,7 @@ const TabsList = React.forwardRef<
       className
     )}
     {...props}
-  />
+  />;
 ));
 TabsList.displayName = TabsPrimitive.List.displayName;
 
@@ -46,7 +56,7 @@ const TabsTrigger = React.forwardRef<;
       className
     )}
     {...props}
-  />
+  />;
 ));
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
 
@@ -69,7 +79,7 @@ const TabsContent = React.forwardRef<;
       className
     )}
     {...props}
-  />
+  />;
 ));
 TabsContent.displayName = TabsPrimitive.Content.displayName;
 export { Tabs, TabsList, TabsTrigger, TabsContent }

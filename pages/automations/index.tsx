@@ -1,5 +1,3 @@
-import type { NextPage } from 'next';
-import Link from 'next/link';
 
 const AutomationsIndex: NextPage = () => {
   const items = [
@@ -33,6 +31,7 @@ export default AutomationsIndex,;
   }
 }
       </div>;
+
     </main>;
   );
 },;

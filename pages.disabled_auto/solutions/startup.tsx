@@ -9,10 +9,10 @@ interface StartupProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Startup({ }: StartupProps) {
   return (
-    <div>
-      <h1>Startup</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <div>;
+      <h1>Startup</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
   );
 }
 }

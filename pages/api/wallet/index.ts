@@ -11,8 +11,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   }
   try {
-    const summary = null;
-    return res.status(200).json(summary)
+    const summary = getWalletSummary (user_id);
+    return res.status (200).json (summary);
   } catch (err: any) {
     return res.status(500).json({ error: err.message |'Unknown error' });
   }

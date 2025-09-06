@@ -16,7 +16,23 @@ interface MainNavigationProps {
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
 
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface MainNavigationProps {
+  class_name?: string;
+}
+
+import {Link} from 'react-router-dom';
+import {cn} from "@/lib/utils";
+import {NavLink} from "react-router-dom";
+interface MainNavigationProps {;
+  className?: string;
+}
+
+export function MainNavigation(): any ({ className }: MainNavigationProps) {;
+  return (
+    <nav className={cn("hidden md:flex items-center space-x-6", className)}>;
       <NavLink
         to="/"
         className={({ isActive }) =>

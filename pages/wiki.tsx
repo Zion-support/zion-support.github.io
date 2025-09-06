@@ -7,12 +7,7 @@ import {
   operatorPrompt,
   slugify} from '../utils/data/zionContent',
 
-import {
-  generateZionWiki
-  buildMarkdownFromWiki
-  buildWikitextFromWiki
-  operatorPrompt
-  slugify} from '../utils/data/zionContent'
+
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -67,6 +62,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
@@ -88,17 +84,15 @@ export default function WikiPage() {
 }
               </Link>
             </li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          ))}
           <li>
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
           </li>
         </ul>
       </aside>
+
+
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -110,6 +104,8 @@ export default function WikiPage() {
           </div>
         </div>
         <p>{wiki.intro}</p>
+
+
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
@@ -134,12 +130,10 @@ export default function WikiPage() {
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          ))}
         </ol>
+
+
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>

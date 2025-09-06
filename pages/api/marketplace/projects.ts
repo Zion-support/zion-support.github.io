@@ -34,8 +34,8 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 }
 
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
-  if (user.role === "client" && user.id === project.clientId) return true;
-  if (user.role === "talent" && user.talentSlug === project.talentSlug)
+  if (user && user.role === "client" && user && user.id === project && project.clientId) return true;
+  if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
 
@@ -90,13 +90,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           createdAtIso: new Date().toISOString()
         }
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
-    if (req.method === "GET") {
-      return res.json({ ok: true, project })
-    }
 
     if (req.method === "PATCH") {
       const { action } = req.body as { action: string };

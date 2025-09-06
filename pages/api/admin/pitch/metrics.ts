@@ -2,9 +2,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
@@ -16,6 +13,19 @@ export default async function handler(
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
 
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { ensureAdminFromApi  } from '../../../../utils / auth';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { allowed } = await ensureAdminFromApi (req);
+  if (return res.status (403).json ({ error: "Forbidden" })) {
+  $2
+}
+  // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const data = {
     activeUsers30d: 12840
     gmv: 1450000
@@ -48,8 +58,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
+  // TODO: Replace with real data sources (e && e.g., Supabase, GA4, internal DB)
+  const data = {
+
+
+    ],
+
 
     if (req.method === 'GET') {
       // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)

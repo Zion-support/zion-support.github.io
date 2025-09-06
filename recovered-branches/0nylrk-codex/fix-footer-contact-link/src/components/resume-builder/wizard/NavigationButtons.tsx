@@ -35,13 +35,14 @@ export const NavigationButtons = ({;
   isNextDisabled = false,;
   backLabel = "Back",;
   nextLabel = "Next";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isLoading = false}: NavigationButtonsProps) => {;
-  return (;
+  return (
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
           {backLabel}
-        </Button>
+        </Button>;
       )}
       {onNext && (
         <Button onClick={onNext} disabled={isNextDisabled |isLoading}>

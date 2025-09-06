@@ -76,13 +76,14 @@ const TALENT_LISTINGS: ProductListing[] = [
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
     author: {
-      name: "Priya Sharma"
-      id: "priya-sharma"}
-    images: ["https://images.unsplash.com/photo-1573497491765-dccce02b29df?auto=format&fit=crop&w=800&h=500"]
-    createdAt: "2024-01-10T09:45:00.000Z"
-    aiScore: 95
-    rating: 4.9
-    reviewCount: 29}
+
+      name: "Priya Sharma",
+      id: "priya - sharma"},
+    images: ["https://images.unsplash.com / photo - 1573497491765 - dccce02b29df?auto = format & fit = crop & w=800 & h=500"],
+    created_at: "2024 - 01 - 10T09:45:00.000Z",
+    ai_score: 95,
+    rating: 4.9,
+    review_count: 29},
   {
     id: "talent-4"
     title: "Cybersecurity Expert"
@@ -163,6 +164,12 @@ const TALENT_FILTERS = [
   { label: 'Development', value: 'development' }
   { label: 'Consulting', value: 'consulting' }]
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    author: {
+
+
+
+=======
 export default function TalentsPage() {
   return (
     <DynamicListingPage

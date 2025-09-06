@@ -48,7 +48,10 @@ import { EnterpriseCallToAction } from "@/components/services/PageSections/Enter
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams(),
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
-  const [searchQuery, setSearchQuery] = useState(""),
+  const [searchQuery, setSearchQuery] = useState("");
+
+
+
   
   // Check for success parameter in URL
   const success = searchParams.get("success"),
@@ -125,8 +128,10 @@ export default function ITOnsiteServicesPage() {;
   const [searchParams] = useSearchParams(),;
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
+
   // Check for success parameter in URL;
-  const success = searchParams.get("success"),;
+  const success = searchParams && searchParams.get("success");
+
   // Show success toast if redirected from successful payment;
   useEffect(() => {;
     if (success === "true") {;
@@ -134,36 +139,46 @@ export default function ITOnsiteServicesPage() {;
         title: "Payment Successful",;
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
-  }, [success]),;
+  }, [success]);
+
   // Popular countries for the featured cards;
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],;
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+
   // Filter countries based on search query;
   const filteredCountries = onsiteServicePricing;
-    .filter(country =>;
-      country.country.toLowerCase().includes(searchQuery.toLowerCase());
+    .filter(country => ;
+      country && country.country.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     );
     .sort((a, b) => {;
       // First, sort by popular status;
-      const aIsPopular = popularCountries.includes(a.country),;
-      const bIsPopular = popularCountries.includes(b.country),;
-      if (aIsPopular && !bIsPopular) return -1,;
-      if (!aIsPopular && bIsPopular) return 1,;
+      const aIsPopular = popularCountries && popularCountries.includes(a && a.country);
+      const bIsPopular = popularCountries && popularCountries.includes(b && b.country);
+
+      if (aIsPopular && !bIsPopular) return -1;
+      if (!aIsPopular && bIsPopular) return 1;
+
       // Then sort alphabetically;
-      return a.country.localeCompare(b.country);
-    }),;
+      return a && a.country.localeCompare(b && b.country);
+    });
+
   const handleCountrySelect = (country: CountryPricing) => {;
-    setSelectedCountry(country);
+    setSelectedCountry(country),;
+
     // Scroll to the service details section;
     setTimeout(() => {;
-      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
+      document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   };
-  return (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
           {/* Hero Section with Features */}
-          <PageHero />
+
+          <PageHero />;
+
           {/* Country Selection Tabs */}
           <div className="mb-12">
             <CountryTabs
@@ -173,17 +188,24 @@ export default function ITOnsiteServicesPage() {;
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-            />
-          </div>
+
+            />;
+          </div>;
+
+
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
-          />
+
+          />;
+
           {/* How It Works Section */}
-          <ServiceProcessSteps />
+          <ServiceProcessSteps />;
+
           {/* What's Included Section */}
-          <ServiceIncludes />
+          <ServiceIncludes />;
+
           {/* Complete Pricing Table */}
           <div id="pricing-table" className="my-16">
             <div className="text-center mb-8">

@@ -1,8 +1,5 @@
 
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4"
-import {corsHeaders} from "../_shared/cors.ts";
 interface AnalyzeRequest {
   content: string;
   contentType: string
@@ -63,8 +60,10 @@ const initializeServices = () => {
   const supabaseUrl = Deno.env.get("SUPABASE_URL"),
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),
+
   
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw new Error("Missing required environment variables")
   }
   
@@ -75,16 +74,20 @@ const initializeServices = () => {
 };
 ;
 // Initialize environment and clients;
-const initializeServices = () => {;
-  const supabaseUrl = Deno.env.get("SUPABASE_URL"),;
-  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"),;
-  const openaiApiKey = Deno.env.get("OPENAI_API_KEY"),;
-  if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {;
-    throw new Error("Missing required environment variables");
-  }
+const initialize_services = () =>: any {
+  const supabase_url = Deno.env.get ("SUPABASE_URL");
+  const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY");
+  const openaiApiKey = Deno.env.get ("OPENAI_API_KEY");
 ;
-  return {;
-    supabase: createClient(supabaseUrl, supabaseServiceKey),;
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ("Missing required environment variables");
+
+  }
+  return {
+    supabase: create_client (supabase_url, supabaseServiceKey);
     openaiApiKey;
   }
 },
@@ -102,6 +105,14 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
     throw new Error("No content provided for analysis")
   }
   if (!request.contentType) {
+=======
+  
+  if (!request && request.content) {
+    throw new Error("No content provided for analysis")
+  }
+  
+  if (!request && request.contentType) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw new Error("No content type provided")
   }
   return request
@@ -125,8 +136,8 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
 // Call OpenAI API for content analysis
 const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
   try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST";
       headers: {
         "Content-Type": "application/json"
         "Authorization": `Bearer ${openaiApiKey}`}
@@ -158,14 +169,16 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     // Parse the result
     let classification = "SAFE";
     let explanation = "No issues detected.";
-    if (analysisText.includes("SUSPICIOUS")) {
+    
+    if (analysisText && analysisText.includes("SUSPICIOUS")) {
+
       classification = "SUSPICIOUS"
-    } else if (analysisText.includes("DANGEROUS")) {
+    } else if (analysisText && analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
     }
     // Extract explanation
-    if (analysisText.includes(": ")) {
-      explanation = analysisText.split(":")[1].trim()
+    if (analysisText && analysisText.includes(": ")) {
+      explanation = analysisText && analysisText.split(":")[1].trim()
     }
       throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
     }
@@ -194,7 +207,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 ;
     return { classification, explanation }
   } catch (error) {
-    console.error("Error calling OpenAI:", error),
+    console && console.error("Error calling OpenAI:", error);
     throw error
   }
 }
@@ -216,14 +229,16 @@ const updateFraudFlag = async (
   const { error } = await supabase
     .from("fraud_flags")
     .update({
-      gpt_classification: classification.toLowerCase();
-      gpt_explanation: explanation
+
+      gpt_classification: classification && classification.toLowerCase();
+      gpt_explanation: explanation,
+
       updated_at: new Date().toISOString()
     })
     .eq("id", flagId);
   if (error) {
-    console.error("Error updating fraud flag:", error);
-    throw new Error(`Error updating fraud flag: ${error.message}`)
+    console && console.error("Error updating fraud flag:", error);
+    throw new Error(`Error updating fraud flag: ${error && error.message}`)
   }
   console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 }
@@ -234,7 +249,7 @@ const updateFraudFlag = async (
 // Main request handler
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -244,8 +259,8 @@ serve(async (req) => {
     // Initialize services
     const { supabase, openaiApiKey } = initializeServices();
     // Parse and validate request
-    const requestData = await req.json().catch(err => {
-      console.error("Error parsing request JSON:", err);
+    const requestData = await req && req.json().catch(err => {
+      console && console.error("Error parsing request JSON:", err);
       throw new Error("Invalid JSON in request body")
     });
     const { content, contentType, flagId } = validateRequest(requestData);
@@ -259,20 +274,27 @@ serve(async (req) => {
     }
     // Return the analysis result
     const result: AnalysisResult = {
-      classification: classification.toLowerCase();
-      explanation
-      success: true}
-    console.log("Analysis completed successfully:", result);
-    return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" }
+
+      classification: classification && classification.toLowerCase();
+      explanation,
+      success: true};
+    
+    console && console.log("Analysis completed successfully:", result);
+    return new Response(JSON && JSON.stringify(result), { 
+      headers: { ...corsHeaders, "Content-Type": "application/json" } 
+
     })
   } catch (error) {
-    console.error("Error analyzing content:", error);
+
+    console && console.error("Error analyzing content:", error);
+    
     // Determine appropriate status code based on error
-    const statusCode = error.message?.includes("Invalid") ? 400 : 500;
+    const statusCode = error && error.message?.includes("Invalid") ? 400 : 500;
+    
     return new Response(
-      JSON.stringify({
-        error: error.message |"An unexpected error occurred"
+      JSON && JSON.stringify({ 
+        error: error && error.message || "An unexpected error occurred",
+
         success: false});
       {
         status: statusCode

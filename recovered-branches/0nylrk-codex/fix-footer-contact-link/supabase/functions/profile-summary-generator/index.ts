@@ -1,9 +1,5 @@
 
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
@@ -18,7 +14,7 @@ const corsHeaders = {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
@@ -28,7 +24,9 @@ serve(async (req) => {
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
     const { bio, skills, title, name } = await req.json(),
 
-    if (!bio || bio.length < 20) {
+
+    if (!bio || bio && bio.length < 20) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
@@ -54,12 +52,14 @@ serve(async (req) => {;
     }
 
     // Create a request to OpenAI API
-    const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST'
+
+    const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
+      method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
-        'Content-Type': 'application/json'}
-      body: JSON.stringify({
+        'Content-Type': 'application/json'};
+      body: JSON && JSON.stringify({
+
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -114,9 +114,15 @@ serve(async (req) => {;
           }
         ],
         temperature: 0.7})}),
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-    const openAIData = await openAIResponse.json(),
+    const openAIData = await openAIResponse && openAIResponse.json();
     
+
+    const responseContent = openAIData && openAIData.choices[0].message && message.content;
+    
+
+=======
     if (!openAIData.choices || openAIData.choices.length === 0) {
       throw new Error("Failed to generate profile content")
     }
@@ -125,16 +131,41 @@ serve(async (req) => {;
     const responseContent = openAIData.choices[0].message.content,
     
     // Parse the JSON response
-    let parsedResponse,
+    let parsedResponse;
     try {
       // Find the JSON object in the response
       const jsonMatch = responseContent.match(/\{[\s\S]*\}/);
       const jsonMatch = responseContent.match(/\{[\s\S]*\}/),
       
       if (jsonMatch) {
-        parsedResponse = JSON.parse(jsonMatch[0])
+        parsedResponse = JSON && JSON.parse(jsonMatch[0])
+=======
+;
+    const openAIData = await openAIResponse.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ("Failed to generate profile content");
+    }
+    // Extract the generated content from the response;
+    const response_content = openAIData.choices[0].message.content;
+;
+    // Parse the JSON response;
+    let parsed_response;
+    try {
+      // Find the JSON object in the response;
+      const json_match = response_content.match (/\{[\s\S]*\}/);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        parsed_response = JSON.parse (json_match[0]);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
-        throw new Error("Could not extract JSON from response")
+        throw new Error ("Could not extract JSON from response");
       }
     } catch (e) {
       console.error("Error parsing OpenAI response:", e);
@@ -155,10 +186,11 @@ serve(async (req) => {;
     return new Response(
       JSON.stringify(parsedResponse);
       console.error("Error parsing OpenAI response:", e),
+
       
       // Fallback parsing approach if the standard parsing fails
-      const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/),
-      const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s),
+      const summaryMatch = responseContent && responseContent.match(/"summary"\s*:\s*"([^"]*)"/);
+      const skillsMatch = responseContent && responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s);
       
       if (summaryMatch && skillsMatch) {
         const summary = summaryMatch[1];
@@ -231,7 +263,9 @@ serve(async (req) => {;
     return new Response(
       JSON.stringify({ error: error.message });
     console.error("Error in profile-summary-generator function:", error),
+
     
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return new Response(
       JSON.stringify({ error: error.message });
       JSON.stringify({ error: error.message }),

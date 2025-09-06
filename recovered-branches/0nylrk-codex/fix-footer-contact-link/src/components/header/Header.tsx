@@ -91,8 +91,20 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query)}`),
-      setQuery("")
+=======
+
+  const headerStyle = effectiveTheme ? {;
+    backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
+    color: effectiveTheme && effectiveTheme.textColor,;
+    borderColor: `${effectiveTheme && effectiveTheme.primaryColor}20`;
+  } : {};
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault(),;
+    if (query && query.trim()) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      navigate(`/search?q=${encodeURIComponent(query)}`);
+      setQuery("");
     }
   }
 
@@ -101,14 +113,16 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
-      style={headerStyle}
-    >
-      <div className="container flex h-16 items-center px-4 sm:px-6">
-        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
-        <div className="ml-6 flex-1">
-          <MainNavigation />
-        </div>
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+
+      style={headerStyle}>;
+      <div className="container flex h-16 items-center px-4 sm:px-6">;
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />;
+
+        <div className="ml-6 flex-1">;
+          <MainNavigation />;
+        </div>;
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
+
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -185,8 +199,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
+
           />;
         </form>;
+
         <div className="flex items-center gap-2">;
           <LanguageSelector />;
           {!hideLogin && <UserMenu />}
@@ -195,4 +211,31 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     </header>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import {MainNavigation} from '@/layout / MainNavigation';
+import {use_auth} from '@/hooks / use_auth';
+import {use_whitelabel} from '@/context / WhitelabelContext';
+import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data / marketplace_data';
+import { use_navigate } from './react-router-dom';
+import { useState } from './react';
+export interface HeaderProps {
+  hide_login?: boolean;
+  custom_logo?: string;
+  custom_theme?: {
+    primary_color: string,
+    background_color: string,
+    text_color: string;
+  }
+}
+export /**
+ * Header - Function description
+ */
+function Header() {
+  const { user } = use_auth ();
+  const { is_whitelabel, primary_color } = use_whitelabel ();
+  const navigate = use_navigate ();
+  const [query, set_query] = useState ("");
+  const search_suggestions = generateSearchSuggestions ();
 ;

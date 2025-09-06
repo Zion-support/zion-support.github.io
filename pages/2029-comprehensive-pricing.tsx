@@ -79,13 +79,15 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+};
+
+
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState('monthly')
   const allServices = [
-    ...aiAutonomousEcosystemServices2029
-    ...emergingTechBreakthroughServices2029
+
+
     ...practicalBusinessSolutionServices2029
   ]
   const categories = [
@@ -109,7 +111,8 @@ export default function ComprehensivePricing2029() {
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
-  }
+
+
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     if (billingCycle === 'monthly') {
@@ -231,18 +234,33 @@ export default function ComprehensivePricing2029(req, res) {
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
               <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${;
-                  billingCycle === 'annual' ? 'bg-purple-600' : '';
-                }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
+                className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${
+                  billingCycle === 'annual' ? 'bg-purple-600' : ''
+                }`}
+              >
+                <div
+                  className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
+                    billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
+=======
+=======
+          >;
+            <h1 className="text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - blue - 400 bg - clip - text text - transparent mb - 8">;
+              2029 Comprehensive Pricing;
+            </h1>;
+            <p className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto">;
+              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan;
+              for your business transformation journey.;
+            </p>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            {/* Billing Toggle */}
+            <div className="flex items - center justify - center gap - 4 mb - 12">;
+              <span className="text - gray - 400">Monthly</span>;
+              <button;
+                on_click={() => setBillingCycle (billing_cycle === 'monthly' ? 'annual' : 'monthly')}
+                className={`relative w - 16 h - 8 bg - gray - 700 rounded - full transition - colors duration - 300 ${
+                  billing_cycle === 'annual' ? 'bg - purple - 600' : '';
+                }`}
               >;
                 <div;
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${;
@@ -322,16 +340,13 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 </span>;
-              </motion.button>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              </motion.button>))}
           </div>;
         </div>;
       </section>;
+
       {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -615,6 +630,8 @@ export default function ComprehensivePricing2029(req, res) {
                   Contact Sales
                 </Link>
               </div>
+
+
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
@@ -629,6 +646,8 @@ export default function ComprehensivePricing2029(req, res) {
                   Contact Sales
                 </Link>
               </div>
+
+
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Globe className="w-8 h-8 text-white" />
@@ -699,18 +718,12 @@ export default function ComprehensivePricing2029(req, res) {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
+
+
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -719,16 +732,8 @@ export default function ComprehensivePricing2029(req, res) {
                 </Link>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Link
                   href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">
@@ -745,60 +750,44 @@ export default function ComprehensivePricing2029(req, res) {
 };
   )
           >;
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">;
+            <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">;
+            <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto">;
               Contact our team to discuss your specific needs and get a personalized quote;
               for our revolutionary 2029 services.;
             </p>;
-            <div className="grid md:grid-cols-3 gap-8 mb-12">;
-              <div className="flex items-center justify-center gap-4 text-gray-300">;
-                <Phone className="w-6 h-6 text-purple-400" />;
-                <span>{contactInfo.mobile}</span>;
+            <div className="grid md:grid - cols - 3 gap - 8 mb - 12">;
+              <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+                <Phone className="w - 6 h - 6 text - purple - 400" />;
+                <span>{contact_info.mobile}</span>;
               </div>;
-              <div className="flex items-center justify-center gap-4 text-gray-300">;
-                <Mail className="w-6 h-6 text-blue-400" />;
-                <span>{contactInfo.email}</span>;
+              <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+                <Mail className="w - 6 h - 6 text - blue - 400" />;
+                <span>{contact_info.email}</span>;
               </div>;
-              <div className="flex items-center justify-center gap-4 text-gray-300">;
-                <MapPin className="w-6 h-6 text-green-400" />;
-                <span>{contactInfo.address}</span>;
+              <div className="flex items - center justify - center gap - 4 text - gray - 300">;
+                <MapPin className="w - 6 h - 6 text - green - 400" />;
+                <span>{contact_info.address}</span>;
               </div>;
             </div>;
-            <div className="flex flex-wrap justify-center gap-4">;
+            <div className="flex flex - wrap justify - center gap - 4">;
               <motion.div;
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
               >;
                 <Link;
-                  href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">;
+                  href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - full hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 text - lg">;
                   Contact Us Now;
-                  <ArrowRight className="ml-2 h-5 w-5" />;
+                  <ArrowRight className="ml - 2 h - 5 w - 5" />;
                 </Link>;
               </motion.div>;
               <motion.div;
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
               >;
                 <Link;
-                  href="/2029-innovative-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover: bg-purple-500 hover:text-white transition-all duration-300 text-lg">;
+                  href="/2029 - innovative - services - showcase" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover: bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
                   View All Services;
                 </Link>;
               </motion.div>;

@@ -21,7 +21,7 @@ interface ReplyCardProps {
 
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
-  className?: string
+  className?: string;
 }
 
 export const ReplyCard = ({
@@ -85,38 +85,42 @@ export const ReplyCard = ({;
   reply,;
   onMarkAnswer,;
   canMarkAnswer = false,;
+
   className;
 }: ReplyCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),;
-  return (;
-    <Card className={cn(;
-      "transition-shadow",;
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",;
-      className;
+  const timeAgo = formatDistanceToNow(new Date(reply && reply.createdAt), { addSuffix: true }),;
+
+  return (
+    <CardclassName={cn(
+      "transition-shadow"
+      reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
-          <AvatarImage src={reply.authorAvatar} />;
-          <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
+          <AvatarImage src={reply && reply.authorAvatar} />;
+          <AvatarFallback>{reply && reply.authorName.charAt(0)}</AvatarFallback>;
         </Avatar>;
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
-              {reply.authorName}
+              {reply && reply.authorName}
             </span>;
-            {reply.authorRole && (;
+            {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
                 {reply.authorRole}
               </Badge>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
-            {reply.isAnswer && (
-              <Badge className="ml-2 bg-green-500 text-white">
-                <CheckCircle className="h-3 w-3 mr-1" />
-                Answer
-              </Badge>
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
             )}
-          </div>
-          <div className="text-xs text-muted-foreground">
+          </div>;
+          <div className="text-xs text-muted-foreground">;
             {timeAgo}
           </div>
         </div>

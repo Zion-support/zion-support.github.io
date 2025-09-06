@@ -59,17 +59,20 @@ export default function ToolResourcePage() {
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-      `
+
+
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     }
     {
-      id: 'ai-maturity-model'
-      title: 'AI Maturity Model'
-      description: 'Assess your current AI capabilities and plan your transformation journey.'
-      type: 'Framework'
-      estimatedTime: '30 minutes'
+
+      id: 'ai-maturity-model',
+      title: 'AI Maturity Model',
+      description: 'Assess your current AI capabilities and plan your transformation journey.',
+      type: 'Framework',
+      estimatedTime: '30 minutes',
+
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -94,7 +97,10 @@ export default function ToolResourcePage() {
           <li><strong>Processes & Governance:</strong> AI governance, risk management, and operational processes</li>
         </ul>
         <h2>Using the Framework</h2>
-        <p>To effectively use this framework:</p>
+        <p>To effectively use this framework: </p>
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -111,17 +117,20 @@ export default function ToolResourcePage() {
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-      `
+
+
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     }
     {
-      id: 'performance-benchmark'
-      title: 'Performance Benchmarking Tool'
-      description: 'Compare your automation performance against industry standards.'
-      type: 'Analytics Tool'
-      estimatedTime: '20 minutes'
+
+      id: 'performance-benchmark',
+      title: 'Performance Benchmarking Tool',
+      description: 'Compare your automation performance against industry standards.',
+      type: 'Analytics Tool',
+      estimatedTime: '20 minutes',
+
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -163,7 +172,10 @@ export default function ToolResourcePage() {
           <li>Use results to drive continuous improvement initiatives</li>
         </ul>
         <h2>Action Planning</h2>
-        <p>Based on benchmark results, develop action plans that include:</p>
+        <p>Based on benchmark results, develop action plans that include: </p>
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -171,7 +183,8 @@ export default function ToolResourcePage() {
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-      `
+
+
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
@@ -382,9 +395,6 @@ export default function ToolResourcePage(req, res) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
   return (
@@ -437,6 +447,8 @@ export default function ToolResourcePage(req, res) {
                   />
                 </div>
               </div>
+
+
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
@@ -544,6 +556,8 @@ export default function ToolResourcePage(req, res) {
 }
                   </ul>
                 </div>
+
+
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -559,6 +573,8 @@ export default function ToolResourcePage(req, res) {
                 </div>
               </div>
             </div>
+
+
             <div className="text-center">
               <Link
               <Link 
@@ -578,25 +594,25 @@ export default function ToolResourcePage(req, res) {
   )
                   </ul>;
                 </div>;
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
-                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>;
-                  <div className="space-y-3">;
+                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20">;
+                  <h3 className="font - semibold text - blue - 400 text - lg mb - 4">Tool Details</h3>;
+                  <div className="space - y-3">;
                     <div>;
-                      <span className="text-white/60 text-sm">Type:</span>;
-                      <p className="text-white font-medium">{tool.type}</p>;
+                      <span className="text - white / 60 text - sm">Type:</span>;
+                      <p className="text - white font - medium">{tool.type}</p>;
                     </div>;
                     <div>;
-                      <span className="text-white/60 text-sm">Time Required:</span>;
-                      <p className="text-white font-medium">{tool.estimatedTime}</p>;
+                      <span className="text - white / 60 text - sm">Time Required:</span>;
+                      <p className="text - white font - medium">{tool.estimated_time}</p>;
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-            <div className="text-center">;
+            <div className="text - center">;
               <Link;
                 href="/contact";
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
+                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
               >;
                 Get Started with Your Project;
               </Link>;

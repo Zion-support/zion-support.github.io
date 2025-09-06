@@ -17,7 +17,7 @@ import {
 
 import { Checkbox } from "@/components/ui/checkbox";
 import { ContractFormValues } from "./ContractForm";
-interface AdditionalClausesFieldsProps {
+interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -114,10 +114,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
             />;
             <FormField;
               control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
+                  <FormControl>;
                     <Checkbox
                       checked={field.value?.includes("ip")}
                       onCheckedChange={(checked) => {
@@ -128,9 +129,29 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                               currentValues.filter((value) => value !== "ip")
                               currentValues.filter((value) => value !== "ip"),
                       checked={field.value?.includes('ip')}
+
                       onCheckedChange={(checked) => {;
-                        const currentValues = field.value || [],;
+                        const currentValues = field && field.value || [];
                         return checked;
+
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="additional_clauses";
+              render={({ field }) => (
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes ("ip")}
+                      onCheckedChange={(checked) => {
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "ip"]);
+                          : field.on_change (
+                              current_values.filter ((value) => value !== "ip"),
+
+=======
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
@@ -153,10 +174,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
             />;
             <FormField;
               control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
+                  <FormControl>;
                     <Checkbox
                       checked={field.value?.includes("termination")}
                       onCheckedChange={(checked) => {
@@ -195,10 +217,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
             />;
             <FormField;
               control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                  <FormControl>
+              render={({ field }) => (;
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
+                  <FormControl>;
                     <Checkbox
                       checked={field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {
@@ -240,4 +263,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
     />
     />;
   );
+=======
+                </FormItem>)}
+            />;
+          </div>;
+        </FormItem>)}
+    />);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

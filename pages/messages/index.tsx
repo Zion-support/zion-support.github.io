@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
+
 
 const Messages: NextPage = () => {
   return (
@@ -8,6 +6,8 @@ const Messages: NextPage = () => {
       <Head>
         <title>Messages - Zion</title>
       </Head>
+
+
       <h1 className="text-2xl font-semibold">Messages</h1>
       <EmptyState
         title="No messages yet"
@@ -38,6 +38,7 @@ export default Messages,;
   }
 }
       />;
+
     </div>;
   );
 },;

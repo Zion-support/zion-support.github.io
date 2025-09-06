@@ -7,14 +7,16 @@ export type ProjectParticipants = {;
   talentUserId: string;
 }
 export type Project = {  id: string;
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   title: string;
   description?: string;
-  dueDate: string;
-  amountUsd: number;
+  due_date: string;
+  amount_usd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
-  createdAt: string;
+
   updatedAt: string
+
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
@@ -35,18 +37,22 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   url: string;
   type: string;
   size: number;
-  uploadedAt: string
+
+  uploaded_at: string,
+
 }
+<<<<<<< HEAD
 export interface CreateMilestoneRequest {
 
 export interface CreateMilestoneRequest {;
   title: string;
   description?: string;
-  dueDate: string;
-  amountUsd: number;
+
   attachments?: MilestoneAttachment[]
+
 }
 export interface UpdateMilestoneRequest {
+
 
 export interface UpdateMilestoneRequest {;
   title?: string;
@@ -55,8 +61,27 @@ export interface UpdateMilestoneRequest {;
   amountUsd?: number;
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
+
+=======
+
+
+
+
+=======
+
+export function isOverdue(milestone: Milestone): boolean {
+  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
+    return false;
+  }
+  return new Date(milestone.dueDate) < new Date();
 }
 
 
+export function getDaysUntilDue(milestone: Milestone): number | null {
+  if (!milestone.dueDate) return null;
+  const dueDate = new Date(milestone.dueDate);
+  const now = new Date();
+  const diffTime = dueDate.getTime() - now.getTime();
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 }
 

@@ -294,9 +294,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     <Layout
       title="Data Analytics Services - Zion Tech Group"
       description="Transform your data into actionable insights with our comprehensive data analytics services. Business intelligence, predictive analytics, and AI-powered insights."
-      keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights"
-    >
-      <div className="min-h-screen bg-white">
+      keywords="data analytics, business intelligence, data warehousing, predictive analytics, data visualization, AI insights">;
+      <div className="min-h-screen bg-white">;
         {/* Hero Section */}
   {
     icon: BarChart3,
@@ -388,11 +387,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
         {/* Services Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {analyticsServices.map((service, index) => (
-                <motion.div
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {analyticsServices && analyticsServices.map((service, index) => (;
+                <motion&& motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -436,23 +435,23 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose Our Data Analytics Services?
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our data analytics experts help you transform raw data into
-                  actionable insights that drive business growth and innovation.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+              <div>;
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                  Why Choose Our Data Analytics Services?;
+                </h2>;
+                <p className="text-xl text-gray-600 mb-8">;
+                  Our data analytics experts help you transform raw data into;
+                  actionable insights that drive business growth and innovation.;
+                </p>;
+                <ul className="space-y-4">;
+                  {benefits && benefits.map((benefit, index) => (;
+                    <li key={index} className="flex items-start">;
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
+                      <span className="text-gray-700">{benefit}</span>;
+                    </li>;
                   ))}
                 </ul>
               </div>
@@ -473,23 +472,23 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose Our Data Analytics Services?
-                </h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Our data analytics experts help you transform raw data into
-                  actionable insights that drive business growth and innovation.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
+        <section className="py-20">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+              <div>;
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                  Why Choose Our Data Analytics Services?;
+                </h2>;
+                <p className="text-xl text-gray-600 mb-8">;
+                  Our data analytics experts help you transform raw data into;
+                  actionable insights that drive business growth and innovation.;
+                </p>;
+                <ul className="space-y-4">;
+                  {benefits && benefits.map((benefit, index) => (;
+                    <li key={index} className="flex items-start">;
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
+                      <span className="text-gray-700">{benefit}</span>;
+                    </li>;
                   ))}
                 </ul>
               </div>
@@ -541,3 +540,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
   );
+    </>;
+  ),;
+}
+

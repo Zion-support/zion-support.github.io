@@ -24,8 +24,10 @@ export function useTalentData() {;
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
   // In a real app, we would fetch data from an API here;
   // For now, we'll just return our mock data;
-  return {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return {
     talents;
+
     isLoading;
   }
 }

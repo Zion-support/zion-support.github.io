@@ -28,4 +28,7 @@ export interface ResumeOption {;
 ;
 export interface ResumeSelectorProps {;
   onResumeSelected: (resumeOption: ResumeOption) => void;
+=======
+  onResumeSelected: (resume_option: ResumeOption) => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -9,10 +9,10 @@ interface AidevelopmentProps {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function Aidevelopment({ }: AidevelopmentProps) {
   return (
-    <div>
-      <h1>Aidevelopment</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <div>;
+      <h1>Aidevelopment</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
   );
 }
 }

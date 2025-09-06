@@ -32,9 +32,11 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 export default function QuantumSecureCommunication() {
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
     website: 'https://ziontechgroup.com'
   }
   },
@@ -111,15 +113,16 @@ export default function QuantumSecureCommunication() {
         </Head>
         <UltraAdvancedNavigation />
         {/* Hero Section */}
-        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+
+        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <motion.div
+              className="text - center mb - 16";
+            >;
+              <motion.div;
                 initial={{ scale: 0.8, rotate: -5 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -319,21 +322,9 @@ export default function QuantumSecureCommunication() {
                   </div>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
                 >
                   <Button
                     href="/contact"
@@ -352,7 +343,7 @@ export default function QuantumSecureCommunication() {
                 </motion.div>
               </motion.div>
               {/* Key Benefits */}
-              <motion.div
+              <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.8 }}
@@ -396,11 +387,11 @@ export default function QuantumSecureCommunication() {
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
         {/* Features Section */  } catch (error) {
@@ -446,8 +437,8 @@ export default function QuantumSecureCommunication() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, y: -5 }}
@@ -509,17 +500,14 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                     </h3>;
                   </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                </motion.div>))}
             </div>;
           </div>;
         </section>;
+
         {/* Use Cases Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -563,8 +551,8 @@ export default function QuantumSecureCommunication() {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02, y: -5 }}
@@ -628,31 +616,22 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                     </h3>;
                   </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                </motion.div>))}
             </div>;
           </div>;
         </section>;
-        {/* Technology & Integrations */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Technology Stack */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        {/* Technology & Integrations */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - b from - transparent to - gray - 900 / 20">;
+          <div className="max - w-7xl mx - auto">;
+            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16">;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              {/* Technology Stack */}
               <motion.div;
+
                 initial={{ opacity: 0, x: -20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -683,8 +662,8 @@ export default function QuantumSecureCommunication() {
                   {technology.map((tech, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       key={index  } catch (error) {
@@ -731,14 +710,13 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 </div>;
               </motion.div>;
-              {/* Integrations */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              {/* Integrations */}
               <motion.div;
+
                 initial={{ opacity: 0, x: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -769,8 +747,8 @@ export default function QuantumSecureCommunication() {
                   {integrations.map((integration, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, coordinate_y: 10 }}
+                      whileInView={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       key={index  } catch (error) {
@@ -822,11 +800,13 @@ export default function QuantumSecureCommunication() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 </div>;
               </motion.div>;
             </div>;
           </div>;
         </section>;
+
         {/* Market Position & ROI */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -863,6 +843,8 @@ export default function QuantumSecureCommunication() {
                 </span>
               </h2>
             </motion.div>
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1034,21 +1016,9 @@ export default function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
                 <motion.div
-                  whileHover={{ scale: 1.05, y: -2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.2, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
                 >
                   <Button
                     href="/contact"
@@ -1066,6 +1036,8 @@ export default function QuantumSecureCommunication() {
                   </Button>
                 </motion.div>
               </div>
+
+
               <div className="mt-8 text-gray-400">
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</a></p>
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-purple-400 hover:text-purple-300">{contactInfo.mobile}</Link> | <a href={`mailto:${contactInfo.email}`} className="text-purple-400 hover:text-purple-300">{contactInfo.email}</Link></p>

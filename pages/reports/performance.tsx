@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const PerformancePage: React.FC = () => {
-  const performanceMetrics = [
+  const performance_metrics = [;
     {
       category: 'System Performance'
       metrics: [
@@ -55,9 +55,9 @@ const PerformancePage: React.FC = () => {
       status: 'completed'
     }
       category: 'System Performance',
-      metrics: [
+      metrics: [;
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
-        { name: 'Throughput', value: '2.4k req/s', status: 'good', trend: '+8%' },
+        { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
         { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%' }
         { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
@@ -66,12 +66,14 @@ const PerformancePage: React.FC = () => {
   }
 }
       ]
+
     },
     {
       category: 'Resource Utilization',
-      metrics: [
+      metrics: [;
         { name: 'CPU Usage', value: '23%', status: 'good', trend: '-5%' },
         { name: 'Memory Usage', value: '67%', status: 'good', trend: '+3%' },
+
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%' }
         { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
@@ -80,11 +82,13 @@ const PerformancePage: React.FC = () => {
   }
 }
       ]
+
     },
     {
       category: 'User Experience',
-      metrics: [
+      metrics: [;
         { name: 'Page Load Time', value: '1.2s', status: 'excellent', trend: '-20%' },
+
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
         { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%' }
@@ -105,25 +109,27 @@ const PerformancePage: React.FC = () => {
 }
   ];
   const recentReports = [
+
     {
-      id: 'performance-weekly-2025-01-17',
+      id: 'performance - weekly - 2025 - 01 - 17',
       title: 'Weekly Performance Report',
-      date: '2025-01-17',
+      date: '2025 - 01 - 17',
       summary: 'System performance metrics for the week ending January 17, 2025',
-      status: 'completed'
+      status: 'completed';
     },
     {
-      id: 'lighthouse-audit-2025-01-16',
+      id: 'lighthouse - audit - 2025 - 01 - 16',
       title: 'Lighthouse Performance Audit',
-      date: '2025-01-16',
+      date: '2025 - 01 - 16',
       summary: 'Comprehensive performance audit using Google Lighthouse',
-      status: 'completed'
+      status: 'completed';
     },
     {
-      id: 'load-testing-2025-01-15',
+      id: 'load - testing - 2025 - 01 - 15',
       title: 'Load Testing Results',
-      date: '2025-01-15',
+      date: '2025 - 01 - 15',
       summary: 'Stress testing results under high traffic conditions',
+
       status: 'completed'
     }
   ];

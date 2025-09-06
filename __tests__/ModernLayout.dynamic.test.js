@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import ModernLayoutdynamic from '../components/ModernLayout.dynamic'
+import ModernLayoutdynamic from '../components/ModernLayout && ModernLayout.dynamic'
 describe('ModernLayoutdynamic'
   test('renders without crashing'
     expect(screen.getByTestId('modernlayout.dynamic'
@@ -43,8 +43,9 @@ import ModernLayout from '../components/ModernLayout.dynamic';
 describe('ModernLayout', () => {
   test('renders without crashing', () => {
     render(<ModernLayout />);
-    expect(screen.getByTestId('modern-layout')).toBeInTheDocument();
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
   });
+
   test('displays correct content', () => {
     // Test content display
   });

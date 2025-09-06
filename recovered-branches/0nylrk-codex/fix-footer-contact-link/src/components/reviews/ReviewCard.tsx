@@ -17,14 +17,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
 
-  Dialog
-  DialogContent
-  DialogDescription
-  DialogFooter
-  DialogHeader
-  DialogTitle
-  DialogTrigger
-} from "@/components/ui/dialog";
 
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button",
@@ -40,7 +32,7 @@ import {
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
   review: Review;
-  onReport: (reviewId: string, reason: string) => Promise<boolean>
+  on_report: (review_id: string, reason: string) => Promise < boolean>;
 }
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {;
@@ -85,9 +77,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     if (!rating) return null,
     
     return (
-      <div className="flex">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <Star
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map ((star) => (
+          <Star;
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
@@ -106,6 +98,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .toUpperCase()
       .substring(0, 2);
   }
+;
 
       .substring(0, 2)
   },
@@ -208,9 +201,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 <AvatarFallback>;
                   {review.reviewer_profile?.display_name ?;
                     getInitials(review.reviewer_profile.display_name) : "??"}
+
                 </AvatarFallback>;
               )}
-            </Avatar>
+            </Avatar>;
           )}
           
           <div>
@@ -246,39 +240,67 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {review.communication_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Communication
-                <span className="ml-1 text-yellow-500">
-                  {review.communication_rating}/5
-                </span>
-              </Badge>
-            )}
+
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Communication;
+                <span className="ml - 1 text - yellow - 500">;
+                  {review.communication_rating}/5;
+                </span>;
+              </Badge>)}
             {review.quality_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Quality
-                <span className="ml-1 text-yellow-500">
-                  {review.quality_rating}/5
-                </span>
-              </Badge>
-            )}
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Quality;
+                <span className="ml - 1 text - yellow - 500">;
+                  {review.quality_rating}/5;
+                </span>;
+              </Badge>)}
             {review.timeliness_rating && (
-              <Badge variant="outline" className="flex gap-1 items-center">
-                Timeliness
-                <span className="ml-1 text-yellow-500">
-                  {review.timeliness_rating}/5
-                </span>
-              </Badge>
-            )}
+              <Badge variant="outline" className="flex gap - 1 items - center">;
+                Timeliness;
+                <span className="ml - 1 text - yellow - 500">;
+                  {review.timeliness_rating}/5;
+                </span>;
+              </Badge>)}
+
             {review.would_work_again !== undefined && (
-              <Badge
+              <Badge;
                 variant={review.would_work_again ? "default" : "secondary"}
-                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
-              >
-                {review.would_work_again
-                  ? "Would work again"
+                className={`${review.would_work_again ? "bg - green - 100 text - green - 800 hover:bg - green - 200" : "bg - gray - 100 text - gray - 800 hover:bg - gray - 200"}`}
+              >;
+                {review.would_work_again;
+                  ? "Would work again";
                   : "Would not work again"}
-              </Badge>
+
+
+          <div>;
+            <div className="font-medium">;
+              {review && review.is_anonymous ? "Anonymous" : review && review.reviewer_profile?.display_name || "User"}
+            </div>;
+            <div className="text-sm text-muted-foreground">;
+              {formatDistanceToNow(new Date(review && review.created_at), { addSuffix: true })}
+            </div>;
+          </div>;
+        </div>;
+
+        <div className="flex">;
+          {renderStars(review && review.rating)}
+        </div>;
+      </div>;
+
+      <div className="mb-4">;
+        <p className="text-sm whitespace-pre-wrap">{review && review.review_text}</p>;
+      </div>;
+
+      {(review && review.communication_rating || review && review.quality_rating || review && review.timeliness_rating || review && review.would_work_again !== undefined) && (;
+        <div className="border-t pt-3 mt-3">;
+          <div className="flex flex-wrap gap-2">;
+            {review && review.communication_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Communication;
+                <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
+              </Badge>;
             )}
           </div>
         </div>

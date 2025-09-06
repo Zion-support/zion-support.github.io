@@ -1,13 +1,4 @@
-import React, { useState } from 'react'
-import { useRouter } from 'next/router'
-import { Button } from '@/components/ui/button'
-import { ChatBotPanel } from './ChatBotPanel'
-import { MessageSquare, Info, X } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTheme } from "@/hooks/useTheme";
-export function SupportWidget() {
-
-  const [isOpen, setIsOpen] = useState(false)
+const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
   return (
@@ -102,54 +93,3 @@ export function SupportWidget() {;
             </div>
             <div className="flex items-center gap-2">
               <Button
-                variant='ghost'
-                size='icon'
-                className='h-8 w-8 rounded-full'
-                onClick={() => router.push('/help')}
-                aria-label='Help center'              >
-                <Info className='h-5 w-5' />
-              </Button>
-              <Button
-                variant='ghost'
-                size='icon'
-                className='h-8 w-8 rounded-full'
-                onClick={() => setIsOpen(false)}
-                aria-label='Close support'              >
-                <X className='h-5 w-5' />
-              </Button>
-            </div>
-          </div>
-          <ChatBotPanel />
-        </div>
-      )}
-    </>
-  )
-}
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 rounded-full"
-                onClick={() => router.push('/help')}
-                aria-label="Help center"
-              >
-                <Info className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 rounded-full"
-                onClick={() => setIsOpen(false)}
-                aria-label="Close support"
-              >
-                <X className="h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-          
-          <ChatBotPanel />
-        </div>
-      )}
-    </>;
-  );
-};
-}
-;

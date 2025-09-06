@@ -1,9 +1,6 @@
 import Stripe from 'stripe';
 import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16',
-});
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -74,4 +71,3 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 };
 export default withErrorLogging(handler),
 ,
-origin/cursor/integrate-build-improve-and-re-verify-c7b5

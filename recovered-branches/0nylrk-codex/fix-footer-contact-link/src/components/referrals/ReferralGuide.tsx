@@ -8,6 +8,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export function ReferralGuide() {
 
   const steps = [
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+export /**
+ * ReferralGuide - Function description
+ */
+function ReferralGuide() {
+  const steps = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
@@ -27,6 +35,9 @@ export function ReferralGuide() {
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+
 
   return (
     <Card>
@@ -53,6 +64,7 @@ export function ReferralGuide() {
   )
 }
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+
 export function ReferralGuide() {;
   const steps = [;
     {;
@@ -60,14 +72,16 @@ export function ReferralGuide() {;
       description: "Copy your unique referral link and share it with potential clients or talent"},;
     {;
       title: "They sign up",;
-      description: "When someone clicks your link and creates an account, they're tagged as your referral"},;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
     {;
       title: "They complete onboarding",;
-      description: "Once they complete their profile setup, your referral is confirmed"},;
+      description: "Once they complete their profile setup, your referral is confirmed"};
     {;
-      title: "You earn rewards";
-      description: "Rewards are issued based on the type of user who completes onboarding"}];
-  return (;
+      title: "You earn rewards",;
+      description: "Rewards are issued based on the type of user who completes onboarding"}],;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  return (
     <Card>;
       <CardHeader>;
         <CardTitle>How Referrals Work</CardTitle>;
@@ -75,7 +89,7 @@ export function ReferralGuide() {;
       </CardHeader>;
       <CardContent>;
         <div className="space-y-4">;
-          {steps.map((step, index) => (;
+          {steps && steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
 }

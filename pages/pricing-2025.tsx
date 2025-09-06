@@ -43,17 +43,19 @@ export default function Pricing2025() {
     visible: {
       opacity: 1
       transition: {
-        staggerChildren: 0.1
+        stagger_children: 0.1;
       }
     }
-  }
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 }
+
+  },
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      coordinate_y: 0,
+
       transition: {
-        duration: 0.5
+        duration: 0.5;
       }
     }
   }
@@ -161,6 +163,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Pricing & Services
@@ -172,6 +175,7 @@ export default function Pricing2025(req, res) {
             </p>
             {/* Billing Toggle */}
               Transparent pricing for our comprehensive collection of innovative micro SAAS services,
+
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
             {/* Billing Toggle */  } catch (error) {
@@ -196,6 +200,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
@@ -313,12 +318,9 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >;
-                {/* Popular Badge */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
                     MOST POPULAR
@@ -343,6 +345,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
@@ -417,6 +420,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <span className="text-white/60 text-sm">
                     {service.rating} ({service.reviews} reviews)
@@ -441,6 +445,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {service.features.length > 5 && (
                       <div className="text-cyan-400 text-sm font-medium text-center">
                         +{service.features.length - 5} more features
@@ -499,8 +504,8 @@ export default function Pricing2025(req, res) {
                   </div>
                 </div>
                 {/* Action Buttons */}
-                <div className="space-y-3">
-                  <a
+                <div className="space - y-3">;
+                  <a;
                     href={service.link}
                 {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
@@ -639,6 +644,7 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
@@ -669,11 +675,11 @@ export default function Pricing2025(req, res) {
         </div>
       </section>
       {/* FAQ Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py - 20 px - 6">;
+        <div className="max - w-4xl mx - auto">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
       {/* FAQ Section */  } catch (error) {
@@ -745,26 +751,27 @@ export default function Pricing2025(req, res) {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 question: "What payment methods do you accept?",
-                answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms."
+                answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms.";
               },
               {
                 question: "Do you offer free trials?",
-                answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity."
+                answer: "Yes! All our services come with free trial periods ranging from 14 to 60 days, depending on the service complexity.";
               },
               {
                 question: "Can I cancel my subscription anytime?",
-                answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period."
+                answer: "Absolutely. You can cancel your subscription at any time with no cancellation fees. Your service will remain active until the end of your billing period.";
               },
               {
                 question: "Do you offer volume discounts?",
-                answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions."
+                answer: "Yes, we offer volume discounts for organizations using multiple services. Contact our sales team for custom pricing and enterprise solutions.";
               },
               {
                 question: "What kind of support do you provide?",
-                answer: "We provide comprehensive support including documentation, tutorials, email support, and priority support for enterprise customers. Some services include dedicated account managers."
+                answer: "We provide comprehensive support including documentation, tutorials, email support, and priority support for enterprise customers. Some services include dedicated account managers.";
               },
               {
                 question: "Can I upgrade or downgrade my plan?",
+
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
               }
             ].map((faq, index) => (
@@ -824,11 +831,23 @@ export default function Pricing2025(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
+
+=======
+}
+
+=======
+                className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
+              >;
+                <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
+                <p className="text - white / 70 leading - relaxed">{faq.answer}</p>;
+              </motion.div>))}
           </div>;
         </div>;
       </section>;
       <EnhancedFooter />;
+
     </div>;
   );
   } catch (error) {

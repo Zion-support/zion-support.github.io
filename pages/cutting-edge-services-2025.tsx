@@ -67,15 +67,36 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-}
+};
+
 const serviceCategories = [
+=======
+import React from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+import { motion } from 'framer-motion',
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react',
+import Layout from '../components / layout / Layout',
+import { cuttingEdgeAIServices2025 } from '../data / 2025 - cutting - edge - ai - services',
+import { cuttingEdgeITServices2025 } from '../data / 2025 - cutting - edge - it - services',
+import { cuttingEdgeMicroSaasServices2025 } from '../data / 2025 - cutting - edge - micro - saas',
+import { cuttingEdgeEmergingTechServices2025 } from '../data / 2025 - cutting - edge - emerging - tech',
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+},
+const service_categories = [;
+
   {
-    title: 'AI & Consciousness'
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
-    services: cuttingEdgeAIServices2025
-    icon: Brain
-    color: 'from-violet-500 to-purple-600'
-    bgColor: 'from-violet-900/20 to-purple-900/20'
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
+    services: cuttingEdgeAIServices2025,
+    icon: Brain,
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     borderColor: 'border-violet-500/30'
   }
   {
@@ -179,21 +200,9 @@ export default function CuttingEdgeServices2025() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -252,11 +261,11 @@ export default function CuttingEdgeServices2025() {
         </div>
       </section>
       {/* Service Categories */}
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+      <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
       {/* Service Categories */  } catch (error) {
@@ -403,11 +412,7 @@ export default function CuttingEdgeServices2025() {
                                 <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                                 <span className="text-gray-300">{feature}</span>
                               </div>
-                            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                            ))}
                           </div>
                         </div>
                         <div className="mb-6">
@@ -468,16 +473,13 @@ export default function CuttingEdgeServices2025() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                 </div>;
-              </motion.div>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              </motion.div>))}
           </div>;
         </div>;
       </section>;
+
       {/* Pricing Comparison */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -527,17 +529,18 @@ export default function CuttingEdgeServices2025() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
             className="text-center mb-16";
+
           >;
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">;
+            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent">;
               Transparent Pricing Plans;
             </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Choose the plan that best fits your business needs. All plans include our cutting-edge technology;
+            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+              Choose the plan that best fits your business needs. All plans include our cutting - edge technology;
               and expert support.;
             </p>;
           </motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {['StarterProfessionalEnterprise'].map((plan, index) => (;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+            {['StarterProfessionalEnterprise'].map ((plan, index) => (
               <motion.div;
                 key={plan  } catch (error) {
     console.error("Error:", error);
@@ -569,40 +572,28 @@ export default function CuttingEdgeServices2025() {
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
                   <div className="space-y-4 mb-8">
+=======
+                className="group";
+              >;
+                <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 p - 8 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
+                  <h3 className="text - 2xl font - bold text - white mb - 4">{plan}</h3>;
+                  <div className="space - y-4 mb - 8">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {plan === 'Starter' && (
-                      <>
-                        <div className="text-sm text-gray-400">Perfect for small businesses and startups</div>
-                        <div className="text-sm text-gray-400">Basic features and standard support</div>
-                        <div className="text-sm text-gray-400">Email support included</div>
-                      </>
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+                      <>;
+                        <div className="text - sm text - gray - 400">Perfect for small businesses and startups</div>;
+                        <div className="text - sm text - gray - 400">Basic features and standard support</div>;
+                        <div className="text - sm text - gray - 400">Email support included</div>;
+                      </>)}
                     {plan === 'Professional' && (
-                      <>
-                        <div className="text-sm text-gray-400">Ideal for growing businesses</div>
-                        <div className="text-sm text-gray-400">Advanced features and priority support</div>
-                        <div className="text-sm text-gray-400">Custom configurations available</div>
-                      </>
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      <>;
+                        <div className="text - sm text - gray - 400">Ideal for growing businesses</div>;
+                        <div className="text - sm text - gray - 400">Advanced features and priority support</div>;
+                        <div className="text - sm text - gray - 400">Custom configurations available</div>;
+                      </>)}
                     {plan === 'Enterprise' && (
-                      <>
-                        <div className="text-sm text-gray-400">For large enterprises and organizations</div>
-                        <div className="text-sm text-gray-400">Full platform access and custom development</div>
-                        <div className="text-sm text-gray-400">Dedicated specialists and 24/7 support</div>
-                      </>
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </div>
+
                   <div className="text-center mb-8">
                     <div className="text-4xl font-bold text-cyan-400 mb-2">
                       {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
@@ -741,63 +732,47 @@ export default function CuttingEdgeServices2025() {
 };
   )
           >;
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">;
+            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 600 bg - clip - text text - transparent">;
               Ready to Experience the Future?;
             </h2>;
-            <p className="text-xl text-gray-300 mb-8">;
-              Contact our team of experts to learn how our cutting-edge services can transform your business;
+            <p className="text - xl text - gray - 300 mb - 8">;
+              Contact our team of experts to learn how our cutting - edge services can transform your business;
               and give you a competitive advantage in the digital age.;
             </p>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-              <div className="text-center">;
-                <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />;
-                <div className="text-white font-semibold">Call Us</div>;
-                <div className="text-cyan-400">{contactInfo.mobile}</div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
+              <div className="text - center">;
+                <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 3" />;
+                <div className="text - white font - semibold">Call Us</div>;
+                <div className="text - cyan - 400">{contact_info.mobile}</div>;
               </div>;
-              <div className="text-center">;
-                <Mail className="w-8 h-8 text-purple-400 mx-auto mb-3" />;
-                <div className="text-white font-semibold">Email Us</div>;
-                <div className="text-purple-400">{contactInfo.email}</div>;
+              <div className="text - center">;
+                <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 3" />;
+                <div className="text - white font - semibold">Email Us</div>;
+                <div className="text - purple - 400">{contact_info.email}</div>;
               </div>;
-              <div className="text-center">;
-                <MapPin className="w-8 h-8 text-green-400 mx-auto mb-3" />;
-                <div className="text-white font-semibold">Visit Us</div>;
-                <div className="text-green-400 text-sm">{contactInfo.address}</div>;
+              <div className="text - center">;
+                <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 3" />;
+                <div className="text - white font - semibold">Visit Us</div>;
+                <div className="text - green - 400 text - sm">{contact_info.address}</div>;
               </div>;
             </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
               <motion.a;
                 href="/contact";
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl";
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 300 shadow - lg hover:shadow - xl";
               >;
                 Get Started Today;
-                <ArrowRight className="ml-2 w-5 h-5" />;
+                <ArrowRight className="ml - 2 w - 5 h - 5" />;
               </motion.a>;
               <motion.a;
                 href="tel:+13024640950";
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileTap={{ scale: 0.95 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300";
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}
+                className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - xl hover: bg - cyan - 500 hover:text - white transition - all duration - 300";
               >;
-                <Phone className="mr-2 w-5 h-5" />;
+                <Phone className="mr - 2 w - 5 h - 5" />;
                 Call Now;
               </motion.a>;
             </div>;

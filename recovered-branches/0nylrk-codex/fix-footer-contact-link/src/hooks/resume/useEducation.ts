@@ -225,20 +225,15 @@ export function useEducation() {;
   }
 }
 ;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;
-        .from('education');
-        .delete();
-        .eq('id', eduId),;
-      if (error) throw error,;
-      return showSuccessToast("Education deleted", "Your education has been removed from your resume");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not delete education');
-    } finally {;
-      setIsLoading(false);
+  const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to add education'),
+      return false;
     }
+
   },;
   return {;
     isLoading,;
@@ -248,4 +243,5 @@ export function useEducation() {;
     deleteEducation;
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

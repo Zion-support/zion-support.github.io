@@ -1,3 +1,26 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useMemo, useState } from 'react';
 export default function ServiceDescriptionGeneratorPage() {
 export default function ServiceDescriptionGeneratorPage(req, res) {
@@ -13,6 +36,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
+
   >('professional');
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
   const [loading, setLoading] = useState(false);
@@ -147,83 +171,49 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
             type="text"
             className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="e.g., On-Demand Web Performance Audit"
-            value={title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            onChange={(e) => setTitle(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
             required
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
         <div>
-          <label className="block text-sm font-medium mb-1">Target Audience</label>
+
+            onChange={e => setTitle(e && e.target.value)}            required;
+          />;
+        </div>;
+
+
+        <div>;
+          <label className='block text-sm font-medium mb-1'>;
+            Target Audience;
+          </label>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <input
-            type="text"
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="e.g., CTOs and product teams at growth-stage SaaS"
-            value={targetAudience  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            onChange={(e) => setTargetAudience(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Key Features (one per line)</label>
+            type='text'
+            className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            placeholder='e && e.g., CTOs and product teams at growth-stage SaaS'
+            value={targetAudience}
+
+
           <textarea
-            className="w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder={"e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance"  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            value={featuresInput  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            onChange={(e) => setFeaturesInput(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            required
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Tone</label>
-          <select
-            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={tone  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            onChange={(e) => setTone(e.target.value as any)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <option value="professional">Professional</option>
-            <option value="friendly">Friendly</option>
-            <option value="persuasive">Persuasive</option>
-            <option value="technical">Technical</option>
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1">Additional Notes (optional)</label>
+            className='w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            placeholder={
+              'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
+            }
+            value={featuresInput}
+
+
+          >;
+            <option value='professional'>Professional</option>;
+            <option value='friendly'>Friendly</option>;
+            <option value='persuasive'>Persuasive</option>;
+            <option value='technical'>Technical</option>          </select>;
+        </div>;
+
+
           <textarea
             className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
@@ -243,49 +233,31 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
         <div className="flex items-center gap-3">
           <button
             type="submit"
-            disabled={loading  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            disabled={loading}
             className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
           >
-            {loading ? 'Generating…' : 'Generate Description'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            {loading ? 'Generating…' : 'Generate Description'}
           </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          {error && <span className="text-red-600 text-sm">{error}</span>}
         </div>
       </form>
+
       {generated && (
         <div className="mt-8 space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold">Generated Description</h2>
             <div className="flex items-center gap-2">
               <button
-                onClick={handleCopy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                onClick={handleCopy}
                 className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
               >
                 Copy
               </button>
               <button
-                onClick={handleAccept  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                onClick={handleAccept}
                 className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
               >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Accept
               </button>
             </div>
@@ -307,10 +279,26 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>
               Accepted. You can copy and paste this into your CMS.
             </div>          )}
+        </div>;
+      )}
+
+    </div>;
+  );
+
+=======
+            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={generated}
+            onChange={(e) => setGenerated(e.target.value)}
+          />
+
+          {accepted && (
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )}
         </div>
       )}
     </div>
 );
+
 
 }
             <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
@@ -320,6 +308,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   }
 }
         </div>;
+
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -27,12 +27,12 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
 import { Loader2 } from "lucide-react",;
 interface ResultsHeaderProps {;
-  isLoading: boolean;
+  isLoading: boolean,;
   resultCount: number;
 }
-;
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
-  return (;
+
+export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
+  return (
     <div className="flex items-center mb-6 text-zion-slate-light">;
       {isLoading ? (;
         <div className="flex items-center">;

@@ -25,26 +25,27 @@ import {
   MessageSquare,;
   Globe,;
 } from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import {revolutionary2027AIServices} from '../data/revolutionary-2027-ai-services';
-import {revolutionary2027ITServices} from '../data/revolutionary-2027-it-services';
-import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-micro-saas';
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
+import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
+import {revolutionary2027AIServices} from '../data / revolutionary - 2027 - ai - services';
+import {revolutionary2027ITServices} from '../data / revolutionary - 2027 - it - services';
+import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027 - micro - saas';
+;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: all_services.length },
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: ai_count },
     {
-      id: 'quantum'
-      name: 'Quantum Services'
-      icon: '⚛️'
-      count: quantumCount
-    }
-    { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount }
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount }
+      id: 'quantum',
+      name: 'Quantum Services',
+      icon: '⚛️',
+      count: quantum_count,
+    },
+    { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: it_count },
+    { id: 'micro - saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     {
-      id: 'holographic'
-      name: 'Holographic'
-      icon: '🎭'
-      count: holographicCount
+      id: 'holographic',
+      name: 'Holographic',
+      icon: '🎭',
+      count: holographic_count,
     },  ];
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' }
@@ -190,48 +191,63 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   const microSaasCount = allServices.filter(service => service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')).length;
   const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length;
   const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },;
-    { id: 'quantum', name: 'Quantum Services', icon: '⚛️', count: quantumCount },;
+    {;
+      id: 'quantum',;
+      name: 'Quantum Services',;
+      icon: '⚛️',;
+      count: quantumCount,;
+    },;
     { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount },;
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },;
-    { id: 'holographic', name: 'Holographic', icon: '🎭', count: holographicCount   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
+    {;
+      id: 'holographic',;
+      name: 'Holographic',;
+      icon: '🎭',;
+      count: holographicCount,;
+    },  ];
+
   const priceRanges = [;
     { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'under-500', name: 'Under $500', range: 'Under $500' },;
     { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },;
     { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },;
-    { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
+    { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' },  ];
+
   const sortOptions = [;
     { id: 'name', name: 'Name' },;
     { id: 'price', name: 'Price' },;
     { id: 'rating', name: 'Rating' },;
     { id: 'customers', name: 'Customers' },;
-    { id: 'launchDate', name: 'Launch Date'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],;
+    { id: 'launchDate', name: 'Launch Date' },  ];
+
   const filteredServices = useMemo(() => {;
     let filtered = allServices;
+
     // Category filter;
     if (selectedCategory !== 'all') {;
-      filtered = filtered.filter(service => {;
-        if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-        if (selectedCategory === 'it') return service.category.includes('IT') || service.category.includes('Infrastructure');
-        if (selectedCategory === 'micro-saas') return service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health');
-        if (selectedCategory === 'holographic') return service.category.includes('Holographic');
+      filtered = filtered && filtered.filter(service => {;
+        if (selectedCategory === 'ai') return service && service.category.includes('AI');
+        if (selectedCategory === 'quantum');
+          return service && service.category.includes('Quantum');
+        if (selectedCategory === 'it');
+          return (
+            service && service.category.includes('IT') ||;
+            service && service.category.includes('Infrastructure');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          );
+        if (selectedCategory === 'micro-saas');
+          return (
+
+            service && service.category.includes('Micro SaaS') ||;
+            service && service.category.includes('Marketing') ||;
+            service && service.category.includes('Legal') ||;
+            service && service.category.includes('Health');
+
+          );
+        if (selectedCategory === 'holographic');
+          return service && service.category.includes('Holographic');
         return true;
       });
       } catch (error) {
@@ -348,8 +364,8 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               delivers measurable ROI and transforms industries.
             </p>
             {/* Contact Information */}
-            <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>
-              <motion.div
+            <div className='flex flex-wrap items-center justify-center gap-6 text-center mb-8'>;
+              <motion&& motion.div
                 className='flex items-center gap-2 text-cyan-400'
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: 'spring', stiffness: 300 }}
@@ -385,35 +401,20 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <span className="font-semibold">{contactInfo.mobile}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-purple-400"
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ type: "spring", stiffness: 300 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <Mail className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.email}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-green-400"
-                whileHover={{ scale: 1.05 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ type: "spring", stiffness: 300 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <MapPin className="w-5 h-5" />
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
               </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             {/* CTA Buttons */}
             <div className='flex flex-wrap items-center justify-center gap-4'>
@@ -431,11 +432,12 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
                 Get Started Today
-              </Link>
+              </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
                 <Globe className="w-5 h-5 mr-2" />
                 View All Services
-              </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              </a>
             </div>
           </motion.div>
         </div>
@@ -465,16 +467,15 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               <input
                 type="text"
                 placeholder="Search revolutionary services..."
-                value={searchTerm  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-12 pr-4 py-4 bg-gray-900/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
             {/* Filters */}
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
+
+=======
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Category Filter */}
             {/* Filters */  } catch (error) {
     console.error("Error:", error);
@@ -490,11 +491,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                 <select
-                  value={selectedCategory  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -538,19 +535,18 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
-                      {range.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </option>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      {range.name}
+                    </option>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  ))}
+
                 </select>;
               </div>;
+
+                  ))}
+
+=======
               {/* Sort By */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -607,6 +603,7 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-end">
                 <div className="text-gray-300">
                   <span className="text-sm">Showing </span>
@@ -752,27 +749,43 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="flex items-baseline gap-2 mb-4">
                           <span className="text-3xl font-bold text-white">{service.price}</span>
                           <span className="text-gray-400">{service.period}</span>
                         </div>
-                        {/* Description */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+                        {/* Description */}
                         <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                          {service.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                          {service.description}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                        </p>
+=======
+                        </div>;
+
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>;
+                          {service && service.name}
+                        </h3>;
+                        <p className='text-gray-300 text-sm mb-3 line-clamp-2'>                          {service && service.tagline}
                         </p>;
-                        {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+                        {/* Price */}
+                        <div className='flex items-baseline gap-2 mb-4'>;
+                          <span className='text-3xl font-bold text-white'>;
+                            {service && service.price}
+                          </span>;
+                          <span className='text-gray-400'>;
+                            {service && service.period}
+                          </span>;
+                        </div>;
+
+                        {/* Description */}
+                        <p className='text-gray-300 text-sm mb-4 line-clamp-3'>                          {service && service.description}
+                        </p>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                        {/* Features */}
+
                         <div className="mb-4">
                           <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
                           <ul className="space-y-1">
@@ -826,15 +839,22 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                         <div className="mb-4">
                           <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service.color} text-white`}>
-                            {service.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                            {service.category}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                          </span>
+                        </div>
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                            className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service && service.color} text-white`}>                            {service && service.category}
                           </span>;
                         </div>;
+
+
+                        {/* Action Buttons */}
+
                         {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -846,10 +866,33 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                             <ArrowRight className="w-4 h-4 mr-1" />
                             Learn More
                           </Link>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <a
+                            href={service && service.link}
+                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'>;
+                            <ArrowRight className='w-4 h-4 mr-1' />;
+                            Learn More;
+                          </a>;
+                          <a
+                            href='/contact'
+                            className='px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300'>;
+                            <MessageSquare className='w-4 h-4' />                          </a>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </motion && motion.div>;
+
+=======
+                        <div className="flex gap-2">
+                          <a 
+                            href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
+                            <ArrowRight className="w-4 h-4 mr-1" />
+                            Learn More
+                          </a>
+                          <a 
                             href="/contact" className="px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300">
                             <MessageSquare className="w-4 h-4" />
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -899,9 +942,51 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             ) : (;
+              <motion&& motion.div
+=======
+                            </div>;
+                            <div className='text - xs text - gray - 400'>Reviews</div>                          </div>;
+                        </div>;
+                        {/* Category Badge */}
+                        <div className='mb - 4'>;
+                          <span;
+                            className={`inline - block px - 3 py - 1 rounded - full text - xs font - semibold ${service.color} text - white`}
+                          >                            {service.category}
+                          </span>;
+                        </div>;
+                        {/* Action Buttons */}
+                        <div className='flex gap - 2'>;
+                          <a;
+                            href={service.link}
+                            className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - sm py - 2 hover:from - cyan - 600 hover:to - blue - 700 transform hover:scale - 105 transition - all duration - 300';
+                          >;
+                            <ArrowRight className='w - 4 h - 4 mr - 1' />;
+                            Learn More;
+                          </a>;
+                          <a;
+                            href='/contact';
+                            className='px - 4 py - 2 border border - gray - 600 text - gray - 200 hover:bg - gray - 700 hover:border - gray - 500 transform hover:scale - 105 transition - all duration - 300';
+                          >;
+                            <MessageSquare className='w - 4 h - 4' />                          </a>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </motion.div>))}
+              </div>) : (
               <motion.div;
+
+
+      {/* Contact CTA Section */}
+      <section className='py-16 px-4'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
                 initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -939,19 +1024,15 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>;
                 <button;
-                  onClick={() => {;
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                    setSelectedPriceRange('all');
-                  }} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">;
-                  Clear Filters;
+                  on_click={() => {
+                    setSearchTerm ('');
+                    setSelectedCategory ('all');
+                    setSelectedPriceRange ('all');
+                  }}
+                  className='bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                >                  Clear Filters;
                 </button>;
-              </motion.div>;
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              </motion.div>)}
           </AnimatePresence>;
         </div>;
       </section>;
@@ -1014,11 +1095,12 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Your Transformation
-              </Link>
+              </a>
               <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
                 <Globe className="w-5 h-5 mr-2" />
                 Explore All Services
-              </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              </a>
             </div>
           </motion.div>
         </div>
@@ -1026,59 +1108,44 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     </UltraQuantumHolographicBackground>
 );
   )
-      <section className="py-16 px-4">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30">;
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Join the future of technology with our revolutionary 2027 services.;
-              Each solution is designed to deliver measurable ROI and competitive advantage.;
-            </p>;
-            <div className="flex flex-wrap items-center justify-center gap-6 mb-8">;
-              <div className="flex items-center gap-2 text-cyan-400">;
-                <Phone className="w-5 h-5" />;
-                <span className="font-semibold">{contactInfo.mobile}</span>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+            <div className='flex flex - wrap items - center justify - center gap - 6 mb - 8'>;
+              <div className='flex items - center gap - 2 text - cyan - 400'>;
+                <Phone className='w - 5 h - 5' />;
+                <span className='font - semibold'>{contact_info.mobile}</span>;
               </div>;
-              <div className="flex items-center gap-2 text-purple-400">;
-                <Mail className="w-5 h-5" />;
-                <span className="font-semibold">{contactInfo.email}</span>;
+              <div className='flex items - center gap - 2 text - purple - 400'>;
+                <Mail className='w - 5 h - 5' />;
+                <span className='font - semibold'>{contact_info.email}</span>;
               </div>;
-              <div className="flex items-center gap-2 text-green-400">;
-                <MapPin className="w-5 h-5" />;
-                <span className="text-sm font-semibold">{contactInfo.address}</span>;
+              <div className='flex items - center gap - 2 text - green - 400'>;
+                <MapPin className='w - 5 h - 5' />;
+                <span className='text - sm font - semibold'>;
+                  {contact_info.address}
+                </span>;
               </div>;
             </div>;
-            <div className="flex flex-wrap items-center justify-center gap-4">;
-              <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">;
-                <Rocket className="w-5 h-5 mr-2" />;
+            <div className='flex flex - wrap items - center justify - center gap - 4'>;
+              <a;
+                href='/contact';
+                className='bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white text - lg px - 8 py - 4 hover:from - cyan - 600 hover:to - blue - 700 transform hover:scale - 105 transition - all duration - 300';
+              >;
+                <Rocket className='w - 5 h - 5 mr - 2' />;
                 Start Your Transformation;
               </a>;
-              <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">;
-                <Globe className="w-5 h-5 mr-2" />;
-                Explore All Services;
+              <a;
+                href='/services';
+                className='border - 2 border - purple - 500 text - purple - 400 text - lg px - 8 py - 4 hover:bg - purple - 500 hover:text - white transform hover:scale - 105 transition - all duration - 300';
+              >;
+                <Globe className='w - 5 h - 5 mr - 2' />                Explore All Services;
               </a>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
+
     </UltraQuantumHolographicBackground>;
   );
   } catch (error) {

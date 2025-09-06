@@ -28,27 +28,17 @@ export default function EditJobPage(req, res) {
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
-      method: 'PATCH'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ title, description, category })
-    });
-    router.push('/client/dashboard');  }
-  if (!job) return <div>Loading…</div>;
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
   useEffect(() => {;
     if (job) {;
-      setTitle(job.title || '');
-      setDescription(job.description || '');
-      setCategory(job.category || '');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [job]),;
+      setTitle(job && job.title || '');
+      setDescription(job && job.description || '');
+      setCategory(job && job.category || '');    }
+  }, [job]);
+
   async function save() {;
     await fetch(`/api/jobs/${id}`, {;
       method: 'PATCH',;

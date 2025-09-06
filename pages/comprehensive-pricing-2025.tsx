@@ -1,9 +1,5 @@
 
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom
+
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
@@ -22,24 +18,48 @@ export default function ComprehensivePricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
   const [expandedService, setExpandedService] = useState<string | null>(null)
   // Combine all services
-  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices]
+
+  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
+
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' }
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' }
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' }
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰' }
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' }
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' }
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' }
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' }
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' }
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' }
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽' }
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡' }
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' }
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' }
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐' }
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' }
+=======
+import React, { useState } from 'react',
+import Head from 'next / head',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
+  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown;
+} from 'lucide-react',
+import { comprehensiveMicroSaasServices } from '../data / comprehensive - 2025 - micro - saas - expansion',
+import { specializedEmergingTechServices } from '../data / specialized - emerging - tech - services - 2025',
+export default /**
+ * ComprehensivePricingPage - Function description
+ */
+function ComprehensivePricingPage() {
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [expanded_service, setExpandedService] = useState < string | null>(null),
+  // Combine all services;
+  const all_services = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],
+  const categories = [;
+
+    { id: 'all', name: 'All Services', icon: '🚀' },
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰' },
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' },
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },
+    { id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽' },
+    { id: '5G / 6G Networks', name: '5G / 6G', icon: '📡' },
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐' },
+
+
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
   ]
   const filteredServices = selectedCategory === 'all'
@@ -248,20 +268,21 @@ export default function ComprehensivePricingPage(req, res) {
               {categories.map((category) => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
-                      : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                  on_click={() => setSelectedCategory (category.id)}
+                  className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
+                    selected_category === category.id;
+                      ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
+                      : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                   }`}
-                >
-                  <span>{category.icon}</span>
+                >;
+                  <span>{category.icon}</span>;
                   {category.name}
-                </button>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+
+                </button>))}
+            </motion.div>;
+          </div>;
+        </section>;
+
         {/* Services Grid */}
                   key={category.id  } catch (error) {
     console.error("Error:", error);
@@ -310,9 +331,9 @@ export default function ComprehensivePricingPage(req, res) {
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -30 }}
+                    initial={{ opacity: 0, coordinate_y: 30 }}
+                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    exit={{ opacity: 0, coordinate_y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -341,11 +362,7 @@ export default function ComprehensivePricingPage(req, res) {
 }
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
-                    {/* Popular Badge */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    {/* Popular Badge */}
                     {service.popular && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                         <Star className="w-3 h-3" />
@@ -388,6 +405,8 @@ export default function ComprehensivePricingPage(req, res) {
                           </div>
                         </div>
                       </div>
+
+
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
                       {/* Key Features */}
@@ -448,28 +467,18 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                       <button;
-                        onClick={() => toggleServiceExpansion(service.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        className="w-full bg-white/10 text-white py-3 px-4 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 mb-4"
-                      >
-                        {expandedService === service.id ? 'Show Less' : 'View Details'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${;
-                          expandedService === service.id ? 'rotate-180' : '';
+                        on_click={() => toggleServiceExpansion (service.id)}
+                        className="w - full bg - white / 10 text - white py - 3 px - 4 rounded - xl font - medium hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center gap - 2 mb - 4";
+                      >;
+                        {expanded_service === service.id ? 'Show Less' : 'View Details'}
+                        <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${
+                          expanded_service === service.id ? 'rotate - 180' : '';
                         }`} />;
                       </button>;
-                      {/* CTA Button */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      {/* CTA Button */}
                       <a;
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -485,16 +494,17 @@ export default function ComprehensivePricingPage(req, res) {
                       </a>
                     </div>
                     {/* Expanded Details */}
-                    <AnimatePresence>
-                      {expandedService === service.id && (
-                        <motion.div
+                    <AnimatePresence>;
+                      {expanded_service === service.id && (
+                        <motion.div;
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
-                          className="overflow-hidden border-t border-white/10"
-                        >
-                          <div className="p-6 bg-white/5">
+
+                          className="overflow - hidden border - t border - white / 10";
+                        >;
+                          <div className="p - 6 bg - white / 5">;
                             {/* Market Position */}
                       </Link>
                     </div>
@@ -666,17 +676,14 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                     </AnimatePresence>;
-                  </motion.div>;
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  </motion.div>))}
               </AnimatePresence>;
             </div>;
           </div>;
         </section>;
+
         {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -741,24 +748,24 @@ export default function ComprehensivePricingPage(req, res) {
   )
               className="text-center";
             >;
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">;
-                <h2 className="text-3xl font-bold text-white mb-4">;
+              <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
+                <h2 className="text - 3xl font - bold text - white mb - 4">;
                   Ready to Get Started?;
                 </h2>;
-                <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+                <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
                   Contact our sales team to discuss your specific needs and get a customized quote for our revolutionary micro SAAS services.;
                 </p>;
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
                   <a;
                     href="mailto:kleber@ziontechgroup.com";
-                    className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2";
+                    className="bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white py - 4 px - 8 rounded - xl font - medium hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 flex items - center justify - center gap - 2";
                   >;
                     Contact Sales Team;
-                    <ArrowRight className="w-5 h-5" />;
+                    <ArrowRight className="w - 5 h - 5" />;
                   </a>;
                   <a;
                     href="tel:+13024640950";
-                    className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2";
+                    className="bg - white / 10 text - white py - 4 px - 8 rounded - xl font - medium hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center gap - 2";
                   >;
                     Call +1 302 464 0950;
                   </a>;

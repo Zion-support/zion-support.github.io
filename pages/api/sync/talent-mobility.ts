@@ -7,6 +7,8 @@ import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -23,6 +25,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
+
+  };
+
+  if (!personId || !fromNation || !toNation || !role || !startDate) {
+    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
+
   }
   if (!personId |!fromNation |!toNation |!role |!startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
@@ -49,13 +57,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     version,
     timestamp: Date.now()},
 
-  upsertEvent(state, event),
-  writeState(state),
 
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
+
+  upsertEvent(state, event);
+  writeState(state);
+
+  const body = { ...event, propagate: false };
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+
 
   await Promise.all(
     state.config.peers

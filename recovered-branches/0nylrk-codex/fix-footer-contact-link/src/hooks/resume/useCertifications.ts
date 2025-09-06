@@ -207,20 +207,15 @@ export function useCertifications() {;
   }
 }
 ;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;
-        .from('certifications');
-        .delete();
-        .eq('id', certId),;
-      if (error) throw error,;
-      return showSuccessToast("Certification deleted", "Your certification has been removed from your resume");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not delete certification');
-    } finally {;
-      setIsLoading(false);
+  const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to add certifications'),
+      return false;
     }
+
   },;
   return {;
     isLoading,;
@@ -230,4 +225,5 @@ export function useCertifications() {;
     deleteCertification;
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

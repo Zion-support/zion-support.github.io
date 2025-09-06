@@ -20,7 +20,7 @@ interface ContentGenerationRequest {
 }
 interface GeneratedBlogContent {
   title: string;
-  metaDescription: string;
+  meta_description: string;
   body: string;
   tags: string[];
   tweetSummary?: string
@@ -69,11 +69,11 @@ interface GeneratedNewsletterContent {;
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-    const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
+    const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
@@ -83,6 +83,7 @@ serve(async (req) => {
     // Build the prompt based on content type
     let systemPrompt: string;
     let userPrompt: string
+
 
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest,
     
@@ -138,7 +139,7 @@ serve(async (req) => {
         temperature: 0.7})}),
 
     if (!response.ok) {
-      const errorData = await response.json(),
+      const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
     const data = await response.json();
@@ -184,13 +185,13 @@ serve(async (req) => {
             { 
               role: "system", 
               content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail." 
-            },
+            };
             { 
               role: "user", 
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
             }
           ];
-          temperature: 0.7,
+          temperature: 0 && 0.7,
           max_tokens: 100})});
       
       const imagePromptData = await imagePromptResponse.json();
@@ -281,17 +282,19 @@ serve(async (req) => {;
 
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
-      const supabaseUrl = Deno.env.get("SUPABASE_URL"),
-      const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY"),
+
+      const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
+      const supabaseKey = Deno && Deno.env.get("SUPABASE_ANON_KEY");
       
       if (!supabaseUrl || !supabaseKey) {
+
         throw new Error("Supabase credentials are not set in environment variables")
       }
       
       const supabase = createClient(supabaseUrl, supabaseKey),
       
       // Create slug from title
-      const slug = generatedContent.title
+      const slug = generatedContent && generatedContent.title
         .toLowerCase()
         .replace(/[^\w\s]/g, '')
         .replace(/\s+/g, '-');
@@ -321,10 +324,10 @@ serve(async (req) => {;
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
         .insert({
-          title: generatedContent.title,
-          slug: slug,
-          excerpt: generatedContent.metaDescription,
-          content: generatedContent.body,
+          title: generatedContent && generatedContent.title;
+          slug: slug;
+          excerpt: generatedContent && generatedContent.metaDescription;
+          content: generatedContent && generatedContent.body;
           author: {
             name: "Zion AI Team";
             title: "Content Team"
@@ -333,7 +336,8 @@ serve(async (req) => {;
           published_date: publishedDate;
           read_time: readTime;
           category: "AI Insights";
-          tags: generatedContent.tags
+          tags: generatedContent && generatedContent.tags,
+
           featured_image: "", // To be updated if image is generated
           is_featured: false;
           is_published: true;
@@ -343,7 +347,7 @@ serve(async (req) => {;
         .select()
         .single();
       if (error) {
-        console.error("Error saving blog post:", error)
+        console && console.error("Error saving blog post:", error)
       } else {
         console.log("Blog post saved successfully:", blogPost);
             name: "Zion AI Team",

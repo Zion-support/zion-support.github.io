@@ -27,6 +27,7 @@ interface FraudFiltersProps {
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
+
   searchQuery;
   setSearchQuery;
   statusFilter;
@@ -37,9 +38,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery;
   setSearchQuery;
-  statusFilter;
+  status_filter;
   setStatusFilter;
-  severityFilter;
+  severity_filter;
   setSeverityFilter;
   contentTypeFilter;
 
@@ -53,10 +54,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   contentTypeFilter,
   setContentTypeFilter,
   resetFilters}) => {
+=======
+  setContentTypeFilter,;
+  resetFilters}) => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <div className="flex flex-col md:flex-row gap-4 mb-6">
-      <div className="relative flex-1">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+    <div className="flex flex-col md:flex-row gap-4 mb-6">;
+      <div className="relative flex-1">;
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
         <Input
           placeholder="Search by user or content..."
           value={searchQuery}
@@ -147,10 +152,28 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           placeholder="Search by user or content...";
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
+
           className="pl-10";
         />;
       </div>;
+
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
+=======
+  setContentTypeFilter,
+  reset_filters}) => {
+  return (
+    <div className="flex flex - col md:flex - row gap - 4 mb - 6">;
+      <div className="relative flex - 1">;
+        <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
+        <Input;
+          placeholder="Search by user or content...";
+          value={search_query}
+          on_change={(e) => setSearchQuery (e.target.value)}
+          className="pl - 10";
+        />;
+      </div>;
+      <Select value={status_filter || ""} onValueChange={value => setStatusFilter (value || null)}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
@@ -162,7 +185,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
+
+      <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;
+
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
@@ -173,7 +198,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
+
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter (value || null)}>;
+
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
@@ -186,11 +213,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
-      <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
-        <Filter className="h-4 w-4 mr-2" /> Reset Filters;
+
+      <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
+        <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
       </Button>;
-    </div>;
-  );
-};
+    </div>);
+}
+;
+
+=======
 
 export default FraudFilters;

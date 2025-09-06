@@ -19,21 +19,20 @@ export interface UserProfile {
 
 export interface UserProfile {;
   id?: string;
-  displayName?: string;
+  display_name?: string;
   email: string;
-  userType: string;
-  profileComplete: boolean;
-  createdAt: string;
-  updatedAt: string;
+  user_type: string;
+  profile_complete: boolean;
+  created_at: string;
+  updated_at: string;
   avatar_url?: string;
   bio?: string;
-  avatarUrl?: string;
+  avatar_url?: string;
   headline?: string;
   role?: string;
 
-  permissions?: string[]
-
-  companyId?: string
+  permissions?: string[],
+  company_id?: string;
 }
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {;

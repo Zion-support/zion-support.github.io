@@ -32,20 +32,23 @@ export const useToast = useToastHook,
 
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
-  const { toast } = useToastHook(),
+  const { toast } = useToastHook();
   toast(props)
 }
 // Convenience helpers mirroring common toast variants.
-baseToast.title = (title: string) => {
+baseToast && baseToast.title = (title: string) => {
   baseToast({ title })
 }
 baseToast.description = (description: string) => {
   baseToast({ description })
-}
-baseToast.error = (error: string) => {
+};
+
+baseToast && baseToast.error = (error: string) => {
   baseToast({ variant: "destructive", title: "Error", description: error })
-}
-baseToast.success = (message: string) => {
+};
+
+baseToast && baseToast.success = (message: string) => {
+
   baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.

@@ -12,22 +12,15 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOEnhancerdynamic from '../components/SEOEnhancer.dynamic'; describe('SEOEnhancerdynamic',() => { test('renders without crashing',() => { render(<SEOEnhancerdynamic />); expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOEnhancerdynamic />)}); test('handles user interactions',() => { render(<SEOEnhancerdynamic />)}); test('applies correct styling',() => { render(<SEOEnhancerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import SEOEnhancerdynamic from '../components/SEOEnhancer.dynamic';
-describe('SEOEnhancerdynamic', () => {
-  test('renders without crashing', () => {
-    render(<SEOEnhancerdynamic />);
-    expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument();
-  });
-  test('displays correct content', () => {
-    render(<SEOEnhancerdynamic />);
-  });
-  test('handles user interactions', () => {
-    render(<SEOEnhancerdynamic />);
-  });
-  test('applies correct styling', () => {
-    render(<SEOEnhancerdynamic />);
+
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import SEOEnhancer from '../components / SEOEnhancer.dynamic';
+describe ('SEOEnhancer', () => {
+  test ('renders without crashing', () => {
+    render (<SEOEnhancer />);
+    expect (screen.getByTestId ('seo - enhancer')).toBeInTheDocument ();
+
   });
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEOEnhancerdynamic from "./components/SEOEnhancer.dynamic"; describe("SEOEnhancerdynamic",() => { test("renders without crashing",() => { render(<SEOEnhancerdynamic />); expect(screen.getByTestId("seoenhancer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SEOEnhancerdynamic />)}); test("handles user interactions",() => { render(<SEOEnhancerdynamic />)}); test("applies correct styling",() => { render(<SEOEnhancerdynamic />)})});''"
@@ -50,7 +43,7 @@ origin/main
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import SEOEnhancerdynamic from '../components/SEOEnhancer.dynamic'
+import SEOEnhancerdynamic from '../components/SEOEnhancer && SEOEnhancer.dynamic'
 describe('SEOEnhancerdynamic'
   test('renders without crashing'
     expect(screen.getByTestId('seoenhancer.dynamic'

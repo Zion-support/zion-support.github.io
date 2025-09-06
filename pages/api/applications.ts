@@ -5,8 +5,6 @@ import type { Application } from '../../utils/types',;
 import { rateLimit } from '../../utils/rateLimit',;
 const FILE = 'applications.json',
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return,
 
   if (req.method === 'GET') {
     const { jobId, talentSlug } = req.query,

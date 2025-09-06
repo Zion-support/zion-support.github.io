@@ -1,7 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-import AIAssistant from '../../components/ui/AIAssistant';
 
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist')
@@ -37,6 +33,8 @@ const ResumeBuilder: NextPage = () => {
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
+
+
       <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
@@ -55,6 +53,8 @@ const ResumeBuilder: NextPage = () => {
           </label>
         </div>
       </section>
+
+
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>

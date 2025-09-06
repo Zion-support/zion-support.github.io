@@ -104,8 +104,50 @@ export default function AutomationInsightsPage() {
       label: 'Pages Generated'
       description: 'Content created autonomously'
     },  ];      description: 'Content created autonomously'
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
     }
-  ];
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+
+    <>;
+      <Head>;
+        <title>;
+          Automation Insights | Zion Tech Group - AI Automation Expertise;
+        </title>;
+
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+
+
+      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
+        <main className='container mx-auto px-6 py-12'>;
+          <section className='text-center mb-16'>;
+            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
+              Automation Insights;
+            </h1>;
+            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
 
   return (
     <>
@@ -162,11 +204,15 @@ export default function AutomationInsightsPage() {
               </div>
             </div>
 
-                  </div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              Deep insights into AI automation, autonomous systems, and the;
+              future of intelligent technology;
+            </p>;
+          </section>;
 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
-              </div>
-            </div>
 
             {/* Automation Trends */}
             <div className='mb-16'>
@@ -176,6 +222,7 @@ export default function AutomationInsightsPage() {
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
                 {automationTrends.map((trend, index) => (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300'
@@ -264,6 +311,7 @@ export default function AutomationInsightsPage() {
 
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
@@ -272,16 +320,18 @@ export default function AutomationInsightsPage() {
                 </Link>
                 <Link
                   href='/case-studies'
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
-              <div className="flex flex-wrap justify-center gap-4">
+
+
                 <Link
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started
                 </Link>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <Link
                   href="/case-studies"
+
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
                   View Case Studies
@@ -292,9 +342,18 @@ export default function AutomationInsightsPage() {
         </main>
       </div>
     </>
-);
-  );
+
+                  View Case Studies;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
+
 }
+    </>);
 }
   );
 }

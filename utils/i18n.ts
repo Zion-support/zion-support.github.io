@@ -1,6 +1,7 @@
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
 export function isRtl(locale: string): boolean {
 
+
 export function isRtl(locale: string): boolean {;
   return ['ar', 'he', 'fa', 'ur'].includes(locale);
 }

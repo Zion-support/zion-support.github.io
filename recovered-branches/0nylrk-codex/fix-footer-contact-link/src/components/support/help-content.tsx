@@ -232,26 +232,22 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         id: "file-dispute"
         title: "How to file a dispute"
         content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.";
-        lastUpdated: "2023-11-05"
-        tags: ["dispute", "resolution", "conflict"]
-      }
-      {
-        id: "mediation-process"
-        title: "The mediation process"
+        lastUpdated: "2023-11-05",;
+        tags: ["dispute", "resolution", "conflict"];
+      };
+      {;
+        id: "mediation-process",;
+        title: "The mediation process",;
         content: "When disputes can't be resolved directly between parties, our mediation process helps find a fair solution. Here's how mediation works:\n\n1. After a dispute is filed, both parties have 72 hours to attempt direct resolution\n2. If unresolved, a mediator from our support team is assigned to the case\n3. The mediator reviews all details and evidence from both sides\n4. A mediation call is scheduled with all parties (optional but recommended)\n5. The mediator proposes a resolution based on contract terms and platform policies\n6. Both parties can accept the proposed resolution or request escalation\n\nMost disputes are successfully resolved during mediation, avoiding the need for further escalation.";
-        lastUpdated: "2023-11-18"
-        tags: ["mediation", "dispute", "resolution"]
-      }
-      {
-        id: "dispute-prevention"
-        title: "Tips for preventing disputes"
+        lastUpdated: "2023-11-18",;
+        tags: ["mediation", "dispute", "resolution"];
+      };
+      {;
+        id: "dispute-prevention",;
+        title: "Tips for preventing disputes",;
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.";
-        lastUpdated: "2023-12-05"
-        tags: ["prevention", "best practices", "communication"]
-      }
-    ]
-  }
-];
+        lastUpdated: "2023-12-05",;
+        tags: ["prevention", "best practices", "communication"];
 
         id: "file-dispute",
         title: "How to file a dispute",

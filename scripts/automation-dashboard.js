@@ -317,9 +317,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   child_process';
 import fs from "fsfs';
 import path from "pathpath';
-import { fileURLToPath } from "urlurl';
-const __dirname = path.dirname(__filename);
-// // // // // // // console.log(',
+import {fileURLToPath} from "urlurl';
+const __dirname = path && path.dirname(__filename);
+// // // // // // // console && console.log(',
+
       '🚀 Starting PM2 Automation Dashboard...');
 class AutomationDashboard {;
   constructor() {;
@@ -331,13 +332,15 @@ class AutomationDashboard {;
     try {
       const output = execSync(
   'pm2 jlist', { "encoding": 'utf8})';
-      const processes = JSON.parse(output);
-      this."processes": = processes.filter(proc =>;
-        proc.name: !==';pm2-logrotate' &&';
-        proc.name: !==';zion-app' &&';
-        proc.name: !==';zion-backend')';
-      // // // // // // // console.error(
-  '❌ Failed: to get PM2 status:', error.message)';
+
+      const processes = JSON && JSON.parse(output);
+      this."processes": = processes && processes.filter(proc =>;
+        proc && proc.name: !==', pm2-logrotate' &&',
+        proc && proc.name: !==', zion-app' &&',
+        proc && proc.name: !==', zion-backend')',
+      // // // // // // // console && console.error(
+  '❌ Failed: to get PM2 status:', error && error.message)';
+
       "return": [];
       return: this.processes} catch (error) {
       console.error(
@@ -353,16 +356,18 @@ class AutomationDashboard {;
         totalProcesses: this.processes.lengt,h
         "onlineProcesses": this.processes.filter(p: => p.pm2_env.status ==,=
   online').length, ';
-        "erroredProcesses": this.processes.filter(p: => p.pm2_env.status ===';errored).lengt,h, ';
-  "stoppedProcesses": this.processes.filter(p: => p.pm2_env.status ===';stopped').lengt,h}, ';
-      "processes": this.processes.map(proc: => ({
-        name: proc.nam,e
-        "status": proc.pm2_env.statu,s
-        "memory": `${Math.round(proc.monit.memory: / 1024 / 1024)}MB`
-        "cpu": `${proc.monit.cp,u}%`
-        "uptime": this.formatUptime(proc.pm2_env.pm_uptime)
-        restarts: proc.pm2_env.restart_tim,e
-        "pm_id": proc.pm_i,d}))
+
+        "erroredProcesses": this && this.processes.filter(p: => p && p.pm2_env.status ===',errored).lengt,h, ';
+  "stoppedProcesses": this && this.processes.filter(p: => p && p.pm2_env.status ===',stopped').lengt,h}, ';
+      "processes": this && this.processes.map(proc: => ({
+        name: proc && proc.nam,e
+        "status": proc && proc.pm2_env.statu,s
+        "memory": `${Math && Math.round(proc && proc.monit.memory: / 1024 / 1024)}MB`
+        "cpu": `${proc && proc.monit.cp,u}%`
+        "uptime": this && this.formatUptime(proc && proc.pm2_env.pm_uptime)
+        restarts: proc && proc.pm2_env.restart_tim,e
+        "pm_id": proc && proc.pm_i,d}))
+
       recommendations[]}
     // "Generate": recommendations;
     if: (report.summary.erroredProcesses > 0) {
@@ -411,8 +416,10 @@ class AutomationDashboard {;
     s: this.processes.length
         onlineProcesses: this.processes.filter(p => p.pm2_env.status ===
   online').length
-        erroredProcesses: this.processes.filter(p => p.pm2_env.status ===';errored).length,
-  "stoppedProcesses": this.processes.filter(p => p.pm2_env.status ===;
+
+        erroredProcesses: this && this.processes.filter(p => p && p.pm2_env.status ===',errored).length,
+  "stoppedProcesses": this && this.processes.filter(p => p && p.pm2_env.status ===;
+
   "stopped").length}
       "processes": this.processes.map(proc => ({
         nam
@@ -475,17 +482,18 @@ class AutomationDashboard {;
     // // // // // // // console.log(
   ')';
     // "Display": process table;
-    // // // // // // // console.log('🔄 Automation: Processes: ')';
-    // // // // // // // console.log('─';';.repeat(80))';
-    // // // // // // // console.log('Name';';.padEnd(25) + 'Status';';.padEnd(10) + 'Memory';';.padEnd(10) + 'CPU';';.padEnd(8) + 'Uptime';';.padEnd(15) + 'Restarts';';)';
-    // // // // // // // console.log('─';';.repeat(80))';
-    health.processes.forEach(proc: => {
-      const statusIcon = proc.status === 'online';'; ? '🟢';'; : proc.status: === 'errored';'; ? '🔴';'; : '🟡';';=' .repeat(50));
-    const status = await this.getPM2Status();
-    const health = await this.generateHealthReport();
-    // // // // // // // console.log("📊 Status: ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online");"
-    // // // // // // // console.log(`⏰ Last "Updated": ${new Date().toLocaleTimeString()}`);
-    // // // // // // // console.log(
+
+    // // // // // // // console && console.log('🔄 Automation: Processes: ')', // // // // // // // console && console.log('─',';.repeat(80))';
+    // // // // // // // console && console.log('Name';';.padEnd(25) + 'Status';';.padEnd(10) + 'Memory';';.padEnd(10) + 'CPU';';.padEnd(8) + 'Uptime';';.padEnd(15) + 'Restarts';';)';
+    // // // // // // // console && console.log('─';';.repeat(80))';
+    health && health.processes.forEach(proc: => {
+      const statusIcon = proc && proc.status === 'online';'; ? '🟢';', : proc && proc.status: === 'errored', ', ? '🔴';'; : '🟡';';=' .repeat(50));
+    const status = await this && this.getPM2Status();
+    const health = await this && this.generateHealthReport();
+    // // // // // // // console && console.log("📊 Status: ${health && health.summary.onlineProcesses}/${health && health.summary.totalProcesses} processes online");"
+    // // // // // // // console && console.log(`⏰ Last "Updated": ${new Date().toLocaleTimeString()}`);
+    // // // // // // // console && console.log(
+
   ")';);
     // Display process table;
     // // // // // // // console.log("🔄 Automation "Processes": ');

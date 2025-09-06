@@ -77,14 +77,19 @@ import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface JobMatchesProps {;
   jobId: string;
 }
-;
-export function JobMatches({ jobId }: JobMatchesProps) {;
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId);
+
+
+export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
+  const { matches, isLoading, isProcessing, triggerAIMatching } =;
+
+    useJobMatches(jobId);
+
   if (isLoading) {;
-    return (;
+    return (
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -108,14 +113,26 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
       </Card>;
     );
   }
+
+
+  if (matches && matches.length === 0) {;
+
+    return (
+      <EmptyMatchesCard
+        onRefresh={triggerAIMatching}
+        isProcessing={isProcessing}
+      />;
+    );
+  }
+=======
 ;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
   }
 
   return (
-    <div className="space-y-4">
-      {matches.map((match) => (
+    <div className="space-y-4">;
+      {matches && matches.map((match) => (;
         <JobMatchCard
           key={match.id}
           matchId={match.id}
@@ -132,18 +149,21 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
       ))}
     </div>
           talentId={match.talent_profile?.id || ""}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name={match.talent_profile?.full_name || ""}
           title={match.talent_profile?.professional_title || ""}
           company={match.talent_profile?.company_name || ""}
           avatar={match.talent_profile?.profile_picture_url || ""}
           location={match.talent_profile?.location || "Remote"}
           category={match.talent_profile?.category || "Development"}
-          matchPercent={match.match_score || 0}
+          match_percent={match.match_score || 0}
           skills={match.talent_profile?.skills || []}
+
         />
       ))}
     </div>;
     </div>
     </div>;
   );
+
 }

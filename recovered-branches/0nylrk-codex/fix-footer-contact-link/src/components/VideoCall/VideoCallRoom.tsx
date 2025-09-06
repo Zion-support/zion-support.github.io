@@ -13,8 +13,11 @@ interface VideoCallRoomProps {
   serverUrl?: string,
   onDisconnect?: () => void,
   className?: string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {
+
+
+export function VideoCallRoom(): any ({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (
     <Card className={className |"w-full max-w-3xl mx-auto"}>
       <CardHeader>
@@ -45,6 +48,7 @@ interface VideoCallRoomProps {;
 ;
 export function VideoCallRoom({ room, token, serverUrl, onDisconnect, className }: VideoCallRoomProps) {;
   return (;
+
     <Card className={className || "w-full max-w-3xl mx-auto"}>;
       <CardHeader>;
         <CardTitle>Video Call</CardTitle>;

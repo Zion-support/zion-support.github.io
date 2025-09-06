@@ -45,37 +45,124 @@ export default function AIEvalsPage() {
     'LLM version comparison reports'
     'CI quality gates and webhooks'
     'Latency and cost KPIs with budgets'
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next/head';
+
+
   ];
   return (
-    <QuantumHolographicMatrixBackground>
-      <Head>
-        <title>AI Evals & Observability | Zion Tech Group</title>
+    <QuantumHolographicMatrixBackground>;
+      <Head>;
+        <title>AI Evals & Observability | Zion Tech Group</title>;
         <meta
           name='description'
           content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
-      </Head>
-      <section className='min-h-screen pt-28 pb-20 px-4'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='text-center mb-12'>
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-              AI Evals & Observability
-            </h1>
-            <p className='mt-4 text-xl text-gray-300'>
-              Continuous evaluation, drift detection, and quality gates to ship
-              safe, trustworthy AI.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10'>
-            <Card className='lg:col-span-2 bg-black/30 border border-cyan-500/30'>
-              <div className='p-6'>
-                <h2 className='text-2xl font-semibold text-white mb-4'>
-                  What you get
-                </h2>
-                <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-                  {features.map(f => (
-                    <li
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-evals' />;
+      </Head>;
+
+
+      <section className='min-h-screen pt-28 pb-20 px-4'>;
+        <div className='max-w-6xl mx-auto'>;
+          <div className='text-center mb-12'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
+              AI Evals & Observability;
+            </h1>;
+            <p className='mt-4 text-xl text-gray-300'>;
+=======
+import React from 'react';
+import Head from 'next / head';
+import {
+  Check,
+  ShieldCheck,
+  TrendingUp,
+  Clock,
+  Phone,
+  Mail,
+<<<<<<< HEAD
+  MapPin,
+  ExternalLink,
+} from 'lucide-react';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+export default /**
+ * AIEvalsPage - Function description
+ */
+function AIEvalsPage() {
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+  }
+;
+  const features = [;
+    'Golden datasets and synthetic evals',
+    'Hallucination and grounding score',
+    'Toxicity, bias and safety metrics',
+    'LLM version comparison reports',
+    'CI quality gates and webhooks',
+    'Latency and cost KPIs with budgets',
+  ];
+;
+  return (
+    <QuantumHolographicMatrixBackground>;
+      <Head>;
+        <title > AI Evals & Observability | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included.';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / ai - evals' />;
+      </Head>;
+      <section className='min - h-screen pt - 28 pb - 20 px - 4'>;
+        <div className='max - w-6xl mx - auto'>;
+          <div className='text - center mb - 12'>;
+            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent'>;
+              AI Evals & Observability;
+            </h1>;
+            <p className='mt - 4 text - xl text - gray - 300'>;
+
+              Continuous evaluation, drift detection, and quality gates to ship;
+              safe, trustworthy AI.;
+            </p>;
+          </div>;
+
+                    className='w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
+=======
+          <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 10'>;
+            <Card className='lg:col - span - 2 bg - black / 30 border border - cyan - 500 / 30'>;
+              <div className='p - 6'>;
+                <h2 className='text - 2xl font - semibold text - white mb - 4'>;
+                  What you get;
+                </h2>;
+                <ul className='grid grid - cols - 1 md:grid - cols - 2 gap - 3'>;
+                  {features.map (function => (
+                    <li;
                       key={f}
                       className='flex items-start gap-2 text-gray-200'
                     >

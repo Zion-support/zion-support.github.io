@@ -4,15 +4,22 @@ export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
   const [message, setMessage] = useState(''),
 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
-  const [message, setMessage] = useState('')
+
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState('');
+
+
   async function saveCourse() {
     setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+
       body: JSON.stringify(form)
     })
     const data = await resp.json()

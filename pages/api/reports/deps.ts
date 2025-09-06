@@ -29,17 +29,22 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 if (req.method === 'POST') {
     try {
-      const { dependencies, vulnerabilities, outdated } = req.body;
+      const { dependencies, vulnerabilities, outdated } = req && req.body;
+      
+
       const report = {
         dependencies: dependencies |[]
         vulnerabilities: vulnerabilities |[]
         outdated: outdated |[]
         generatedAt: new Date().toISOString()
-      }
-      fs.writeFileSync(p, JSON.stringify(report, null, 2));
-      return res.status(201).json(report);
+
+      };
+
+      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
+      return res && res.status(201).json(report);
+
     } catch (error) {
-      return res.status(500).json({ error: 'Failed to update deps report' });
+      return res && res.status(500).json({ error: 'Failed to update deps report' });
     }
   }
   res.setHeader('Allow', 'GET, POST');

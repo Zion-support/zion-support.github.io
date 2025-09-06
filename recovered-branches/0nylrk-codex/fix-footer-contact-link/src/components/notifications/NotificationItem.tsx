@@ -125,34 +125,35 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   return (
     <div
       className={cn(
-        "p-3 border-b border-zion-blue-light relative group",
-        !notification.read ? "bg-zion-blue-dark/30" : ""
-      )}
-    >
-      <div className="flex items-start gap-2">
-        <div className="text-xl">{getTypeIcon(notification.type)}</div>
-        <div className="flex-1">
-          <div className="flex justify-between items-center mb-1">
-            <h4 className="font-medium text-white">{notification.title |"Notification"}</h4>
-            {!notification.read && (
-              <Badge className="bg-zion-cyan text-xs">New</Badge>
+
+        "p-3 border-b border-zion-blue-light relative group"
+        !notification && notification.read ? "bg-zion-blue-dark/30" : ""
+      )}>;
+      <div className="flex items-start gap-2">;
+        <div className="text-xl">{getTypeIcon(notification && notification.type)}</div>;
+        <div className="flex-1">;
+          <div className="flex justify-between items-center mb-1">;
+            <h4 className="font-medium text-white">{notification && notification.title || "Notification"}</h4>;
+            {!notification && notification.read && (;
+              <Badge className="bg-zion-cyan text-xs">New</Badge>;
             )}
-          </div>
-          <p className="text-sm text-zion-slate-light">{notification.message |"You have a new notification"}</p>
-          <div className="flex justify-between items-center mt-1">
-            <p className="text-xs text-zion-slate">
-              {notification.created_at ? formatDistanceToNow(new Date(notification.created_at), { addSuffix: true }) : "Just now"}
-            </p>
-            {notification.action_url && notification.action_text && (
+          </div>;
+          <p className="text-sm text-zion-slate-light">{notification && notification.message || "You have a new notification"}</p>;
+          <div className="flex justify-between items-center mt-1">;
+            <p className="text-xs text-zion-slate">;
+              {notification && notification.created_at ? formatDistanceToNow(new Date(notification && notification.created_at), { addSuffix: true }) : "Just now"}
+            </p>;
+
+            {notification && notification.action_url && notification && notification.action_text && (;
+
               <Button
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
-                onClick={handleClick}
-              >
-                {notification.action_text}
-                <ChevronRight className="h-3 w-3 ml-1" />
-              </Button>
+                onClick={handleClick}>;
+                {notification && notification.action_text}
+                <ChevronRight className="h-3 w-3 ml-1" />;
+              </Button>;
             )}
           </div>
         </div>
@@ -208,40 +209,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-6 w-6";
-                onClick={(e) => {;
-                  e.stopPropagation(),;
-                  onMarkAsRead(notification.id);
-                }}
-              >;
-                <Check className="h-3.5 w-3.5 text-green-400" />;
-              </Button>;
-            </TooltipTrigger>;
-            <TooltipContent>;
-              <p>Mark as read</p>;
-            </TooltipContent>;
-          </Tooltip>;
-        </TooltipProvider>;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
-              <Button;
-                variant="ghost";
-                size="icon";
-                className="h-6 w-6";
-                onClick={(e) => {;
-                  e.stopPropagation();
-                  onDismiss(notification.id);
-                }}
-              >;
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />;
-              </Button>;
-            </TooltipTrigger>;
-            <TooltipContent>;
-              <p>Dismiss</p>;
+              <Button
+                variant="ghost" 
+                size="icon" 
+                className="h-6 w-6"
+
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;

@@ -15,20 +15,49 @@ const performanceOptimizations = {
     images.forEach(img => imageObserver.observe(img))}
   // Preload critical resources;
   "preloadCriticalResources": () => {
-  const criticalResources = ["/fonts/inter.woff2"
-      "/css/critical.css"];
-    criticalResources.forEach(resource => {
-  const link = document.createElement("link");
+  const criticalResources = ["/fonts/inter && inter.woff2",
+      "/css/critical && critical.css"];
+    criticalResources && criticalResources.forEach(resource => {
+  const link = document && document.createElement("link");
+      link && link.rel = "preload";
+      link && link.href = resource;
+      link && link.as = resource && resource.endsWith(".css") ? "style" : "font";
+      document && document.head.appendChild(link)})},
+
+=======
+  const images = document.querySelectorAll ("img[data - src]");
+    const image_observer = new IntersectionObserver ((entries) => {
+  entries.for_each (entry => {
+  // Check condition
+if ( {) {
+  $2
+}
+  const img = entry.target;
+          img.src = img.dataset.src;
+          img.remove_attribute ("data - src");
+          image_observer.unobserve (img)}
+      })});
+    images.for_each (img => image_observer.observe (img))},
+  // Preload critical resources;
+  "preloadCriticalResources": () => {
+  const critical_resources = ["/fonts / inter.woff2",
+      "/css / critical.css"];
+    critical_resources.for_each (resource => {
+  const link = document.create_element ("link");
       link.rel = "preload";
       link.href = resource;
-      link.as = resource.endsWith(".css") ? "style" : "font";
-      document.head.appendChild(link)})}
+      link.as = resource.ends_with (".css") ? "style" : "font";
+      document.head.append_child (link)})},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   // Optimize scroll performance;
-  "optimizeScroll": () => {
+  "optimize_scroll": () => {
   let ticking = false;
-    const handleScroll = () => {
-  if (!ticking) {
-  requestAnimationFrame(() => {
+    const handle_scroll = () =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+  requestAnimationFrame (() => {
   // Scroll handling logic here;
           ticking = false});
         ticking = true}

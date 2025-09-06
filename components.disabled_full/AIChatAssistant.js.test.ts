@@ -19,7 +19,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
-import Page from './AIChatAssistant.js'
+import Page from './AIChatAssistant && AIChatAssistant.js'
 describe('Page'
   it('renders without crashing'
     expect(screen.getByRole('main'

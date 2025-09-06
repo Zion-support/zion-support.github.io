@@ -49,9 +49,48 @@ export default function ProjectPage() {
         const json = await res.json(),
         if (!json.ok) throw new Error(json.error || "Failed to load project"),
         setProject(json.project)
+=======
+import { useEffect, useState  } from './react';,
+import { use_router  } from './next / router';,
+import FeedbackModal from "../../components / ui / FeedbackModal",
+export default /**
+ * ProjectPage - Function description
+ */
+function ProjectPage() {
+  const router = use_router (),
+  const { project_id } = router.query as { project_id?: string },
+  const [project, set_project] = useState < any | null>(null),
+  const [loading, set_loading] = useState (true),
+  const [error, set_error] = useState < string | null>(null),
+  const [note, set_note] = useState (""),
+  const headers = {
+    "x - demo - user - role": "client",
+    "x - demo - user - id": "client - 1",
+    // For talent view demo, swap role and provide slug;
+    // "x - demo - user - role": "talent",
+    // "x - demo - talent - slug": "ava - chen"} as Record < string, string>,
+  useEffect (() => {
+    async /**
+ * load - Function description
+ */
+function load() {
+      // Check condition
+if (return, ) {
+  $2
+}
+      try {
+        set_loading (true),
+        const res = await fetch (`/api / marketplace / projects?id=${project_id}`, { headers }),
+        const json = await res.json (),
+        if (throw new Error (json.error || "Failed to load project"), ) {
+  $2
+}
+        set_project (json.project);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (e: any) {
-        setError(e.message)
+        set_error (e.message);
       } finally {
+
         setLoading(false)
         } catch (error) {
     console.error("Error:", error);
@@ -165,7 +204,24 @@ export default function ProjectPage() {
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
+=======
+            </span>;
+          </div>;
+          <section className="rounded border p - 4">;
+            <h2 className="font - medium mb - 2">Project Summary</h2>;
+            <div className="text - sm">;
+              <div><b > Client</b>: {project.client_id}</div>;
+              <div><b > Talent</b>: {project.talent_slug}</div>;
+              <div><b > Start</b>: {new Date (project.startDateIso).toLocaleDateString ()}</div>;
+              <div className="mt - 2">{project.summary}</div>;
+            </div>;
+          </section>;
+          <section className="rounded border p - 4">;
+            <h2 className="font - medium mb - 2">Timeline</h2>;
+            <ul className="list - disc pl - 6 space - y-1 text - sm">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {project.timeline?.length ? (
+
                 project.timeline.map((m: any) => (
                   <li key={m.id}>
                     <span className="font-medium">{m.title}</span>
@@ -351,11 +407,7 @@ export default function ProjectPage(req, res) {
                 ))
               ) : (
                 <li>No documents</li>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              )}
             </ul>
           </section>
           <section className="rounded border p-4 space-y-3">

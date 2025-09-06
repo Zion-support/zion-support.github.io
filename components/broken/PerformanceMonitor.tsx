@@ -7,6 +7,15 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
+  return new Promise ( (resolve) => {;
+  if (typeof window !== 'undefined' && 'performance' in window) {;
+  //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
+
+}) ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics.loadTime > 3000) {
@@ -79,4 +88,11 @@ if (score >= 50) return 'Needs Improvement';
 }
 export default PerformanceMonitor;
 
+
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 }

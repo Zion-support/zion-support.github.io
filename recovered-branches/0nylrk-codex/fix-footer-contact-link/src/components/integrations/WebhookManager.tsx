@@ -9,7 +9,7 @@ import {PlusCircle, Save, Trash, Play} from "lucide-react";
 import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {toast} from "sonner";
-export function WebhookManager() {
+export function WebhookManager() {;
   const { ;
     webhooks;
 import React, { useEffect, useState } from "react",
@@ -34,7 +34,7 @@ export function WebhookManager() {
     createWebhook;
     toggleWebhook;
     deleteWebhook;
-    testWebhook
+    testWebhook;
   } = useWebhooks();
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
@@ -84,12 +84,12 @@ export function WebhookManager() {
     if (!newWebhook.selectedEvent) return,
     
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
-      toast.error("This event is already added"),
+      toast.error("This event is already added");
       return
     }
     setNewWebhook({
-      ...newWebhook,
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+      ...newWebhook;
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
       selectedEvent: "" as WebhookEventType
     })
   }
@@ -417,12 +417,12 @@ export function WebhookManager() {;
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
                       ))}
-                    </SelectContent>
-                  </Select>
-                </CardFooter>
-              </Card>
+                    </SelectContent>;
+                  </Select>;
+                </CardFooter>;
+              </Card>;
             ))}
-          </div>
+          </div>;
         )}
         {testResult && (
           <Card className="mt-4 border-blue-200">
@@ -452,3 +452,60 @@ export function WebhookManager() {;
     </div>
   )
 }
+=======
+
+        {testResult && (;
+          <Card className="mt-4 border-blue-200">;
+            <CardHeader>;
+              <CardTitle className="text-lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space-y-2">;
+                <div className="flex justify-between">;
+                  <span className="font-medium">Status:</span>;
+                  <span className={testResult && testResult.status >= 200 && testResult && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>;
+                    {testResult && testResult.status} {testResult && testResult.statusText}
+                  </span>;
+                </div>;
+                <div>;
+                  <span className="font-medium">Response:</span>;
+                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
+                    {testResult && testResult.responseBody || '<empty>'}
+=======
+                      {webhook.event_types.map (event => (
+                        <SelectItem key={event} value={event}>;
+                          Test {event_options.find (e => e.value === event)?.label || event}
+                        </SelectItem>))}
+                    </SelectContent>;
+                  </Select>;
+                </CardFooter>;
+              </Card>))}
+          </div>)}
+        {test_result && (
+          <Card className="mt - 4 border - blue - 200">;
+            <CardHeader>;
+              <CardTitle className="text - lg">Webhook Test Result</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space - y-2">;
+                <div className="flex justify - between">;
+                  <span className="font - medium">Status:</span>;
+                  <span className={test_result.status >= 200 && test_result.status < 300 ? 'text - green - 600' : 'text - red - 600'}>;
+                    {test_result.status} {test_result.status_text}
+                  </span>;
+                </div>;
+                <div>;
+                  <span className="font - medium">Response:</span>;
+                  <pre className="mt - 1 p - 2 bg - gray - 100 rounded text - sm overflow - x-auto">;
+                    {test_result.response_body || '<empty>'}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  </pre>;
+                </div>;
+              </div>;
+            </CardContent>;
+
+          </Card>)}
+      </div>;
+    </div>);
+}
+

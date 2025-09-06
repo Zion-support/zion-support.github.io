@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr / bin / env node;
 // SEO Optimization Implementation Script;
 const fs = require('fs');
 const path = require('path');

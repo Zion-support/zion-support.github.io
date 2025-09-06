@@ -16,11 +16,13 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
         return { error: "User ID is required" }
       }
       // Update user metadata
-      const { error: authError } = await supabase.auth.updateUser({
-        data: {;
-          display_name: data.displayName;
-          user_type: data.userType
-          headline: data.headline}});
+      const { error: authError } = await supabase && supabase.auth.updateUser({
+        data: {
+
+          display_name: data && data.displayName;
+          user_type: data && data.userType,
+          headline: data && data.headline}});
+
       if (authError) {
         toast({
           title: "Profile update failed";
@@ -61,11 +63,38 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           headline: data.headline,
           avatar_url: data.avatarUrl || data.avatar_url,
           profile_complete: data.profileComplete,
+
           updated_at: new Date().toISOString()})
-        .eq("id", data.id),
+        .eq("id", data && data.id);
 
       if (profileError) {
         toast({
+
+      // Update profiles table;
+      const { error: profile_error } = await supabase;
+        .from ("profiles");
+        .update ({
+          display_name: data.display_name;
+          user_type: data.user_type;
+          bio: data.bio;
+          headline: data.headline;
+          avatar_url: data.avatar_url || data.avatar_url;
+          profile_complete: data.profile_complete,
+          updated_at: new Date ().toISOString ()});
+        .eq ("id", data.id);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Profile update failed";
+          description: profile_error.message,
+
+          variant: "destructive"});
+        return { error: profile_error }
+      }
+
           title: "Profile update failed",
           description: profileError.message,
           variant: "destructive"}),
@@ -79,18 +108,23 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
       return { success: true }
     } catch (error: any) {
-      console.error("Profile update error:", error),
+      console && console.error("Profile update error:", error);
       toast({
         title: "Profile update failed";
-        description: error.message |"An unexpected error occurred"
+
+        description: error && error.message || "An unexpected error occurred",
+
         variant: "destructive"});
       return { error }
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
-  return { updateProfile }
+
+;
+  return { update_profile }
 }
+;
 
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",

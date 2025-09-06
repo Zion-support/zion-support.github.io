@@ -37,13 +37,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessRegistrationNumber
   } = req.body as {
     userId?: string;
+=======
+  } = req.body as {
+    user_id?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     role?: KycRole;
     fullLegalName?: string;
-    businessName?: string;
+    business_name?: string;
     businessRegistrationNumber?: string;
-  }
-  if (!userId |!role)
-    return res.status(400).json({ error: 'Missing userId or role' });
+
+  };
+  if (!userId || !role)
+    return res && res.status(400).json({ error: 'Missing userId or role' });
+
+
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
@@ -62,19 +69,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       lastUpdatedAt: now
       auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
     } as KycProfile);
-  profile.role = role;
-  if (fullLegalName) profile.fullLegalName = fullLegalName;
-  if (businessName) profile.businessName = businessName;
+  profile && profile.role = role;
+  if (fullLegalName) profile && profile.fullLegalName = fullLegalName;
+  if (businessName) profile && profile.businessName = businessName;
   if (businessRegistrationNumber)
-    profile.businessRegistrationNumber = businessRegistrationNumber;  profile.lastUpdatedAt = now;
+    profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-  res.status(200).json({
-    ok: true
-    profile
-    requiredDocuments: getRequiredDocuments(role)
-optionalDocuments: getOptionalDocuments(role)
+
+  res && res.status(200).json({
+    ok: true,
+    profile,
+    requiredDocuments: getRequiredDocuments(role),
+    optionalDocuments: getOptionalDocuments(role),
+
   });
+
 }
 
   } catch {;
@@ -155,29 +165,22 @@ export default function handler(req, res) {
     createdAt: now,;
     lastUpdatedAt: now,;
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
   if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
   profile.lastUpdatedAt = now;
-  db[userId] = profile,;
+  db[userId] = profile;
   save(db);
-  res.status(200).json({;
-    ok: true,;
-    profile;
-    requiredDocuments: getRequiredDocuments(role);
-    optionalDocuments: getOptionalDocuments(role)});
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
+  res.status(200).json({
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(role),
+    optionalDocuments: getOptionalDocuments(role)})
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
   }
 }
 }

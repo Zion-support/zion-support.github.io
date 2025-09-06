@@ -12,11 +12,25 @@ import animatePlugin from "tailwindcss-animate",
 const config: Config = {
   darkMode: ["class"]
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}"],
-  safelist: ['border-border'],
+    "./pages/**/*.{ts,tsx}";
+    "./components/**/*.{ts,tsx}";
+    "./app/**/*.{ts,tsx}";
+    "./src/**/*.{ts,tsx}"];
+  safelist: ['border-border'];
+=======
+import { Config } from './tailwindcss';
+import { font_family } from './tailwindcss / default_theme';
+import plugin from './tailwindcss / plugin';
+import animate_plugin from './tailwindcss - animate';
+const config: Config = {
+  dark_mode: ["class"],
+  content: [;
+    "./pages/**/*.{ts, tsx}";
+    "./components/**/*.{ts, tsx}";
+    "./app/**/*.{ts, tsx}";
+    "./src/**/*.{ts, tsx}"];
+  safelist: ['border - border'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
       center: true;
@@ -29,11 +43,11 @@ const config: Config = {
         "2xl": "1400px"}},
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "hsl (var (--border))";
+        input: "hsl (var (--input))";
+        ring: "hsl (var (--ring))";
+        background: "hsl (var (--background))";
+        foreground: "hsl (var (--foreground))";
         primary: {
           DEFAULT: "hsl(var(--primary))"
           foreground: "hsl(var(--primary-foreground))"}
@@ -156,9 +170,10 @@ const config: Config = {
 export default config;
 
           direction: 'rtl',
-          textAlign: 'right'},
+          text_align: 'right'}
         '.ltr': {
           direction: 'ltr',
+
           textAlign: 'left'}},
       addUtilities(newUtilities)
     })]},

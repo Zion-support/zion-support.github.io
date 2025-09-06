@@ -11,6 +11,7 @@ export interface NavigationButtonsProps {
 export interface NavigationButtonsProps {;
   onBack?: () => void;
   onNext?: () => void;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isNextDisabled?: boolean;
   backLabel?: string;
   nextLabel?: string;

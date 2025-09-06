@@ -80,8 +80,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           </p>;
         </div>;
       ),;
+
     case 'actioned':;
-      return (;
+      return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">;
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>;
@@ -89,7 +90,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.;
           </p>;
         </div>;
-      );
+      ),;
+
     default:;
       return null;
   }

@@ -28,6 +28,7 @@ export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
   
   const getStatusBadge = (status: ApplicationStatus) => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>,
       case "viewed":
@@ -196,16 +197,15 @@ export function MyApplications() {;
                   variant="default" 
                   size="sm"
                   className="text-xs"
-                  asChild
-                >
-                  <Link to={`/messages?jobId=${application.job_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+                  asChild>;
+                  <Link to={`/messages?jobId=${application && application.job_id}`}>;
+                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client;
+                  </Link>;
+                </Button>;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>;
       ))}
     </div>
   )
@@ -213,4 +213,17 @@ export function MyApplications() {;
     </div>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
+      case "interview":;
+        return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
+      case "hired":;
+        return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
+      case "rejected":;
+        return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>,
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  }
 ;

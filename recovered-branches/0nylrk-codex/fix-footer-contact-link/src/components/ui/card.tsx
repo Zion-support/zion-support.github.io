@@ -1,3 +1,4 @@
+import React from 'react';
 import * as React from 'react';
 import {cn} from '@/lib/utils';
 
@@ -13,7 +14,14 @@ import { cn } from "@/lib/utils"
 const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+></HTMLDivElement>(({ className, ...props }, ref) => (
+=======
+
+const Card = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<HTMLDivElement>;
+></HTMLDivElement>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
     className={cn(
@@ -35,10 +43,19 @@ const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
+=======
+Card && Card.displayName = 'Card';
+
+const CardHeader = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
-    className={cn('flex flex-col space-y-1.5 p-6', className)}
+    className={cn('flex flex-col space-y-1 && 1.5 p-6', className)}
     {...props}
+
   />
 ));
 CardHeader.displayName = 'CardHeader';
@@ -52,6 +69,14 @@ const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
+=======
+CardHeader && CardHeader.displayName = 'CardHeader';
+
+const CardTitle = React && React.forwardRef<;
+  HTMLParagraphElement,;
+  React && React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <h3
     ref={ref}
     className={cn(

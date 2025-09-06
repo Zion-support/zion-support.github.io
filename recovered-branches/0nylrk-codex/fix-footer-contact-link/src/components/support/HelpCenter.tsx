@@ -13,19 +13,6 @@ export default function HelpCenter() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleCategorySelect = (categoryId: string) => {
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  }
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  }
-  const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  }
-  const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  }
 
 
 
@@ -40,6 +27,7 @@ import {HELP_CATEGORIES} from "./help-content";
 import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -125,18 +113,22 @@ export default function HelpCenter() {;
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
-  },;
+  };
+
   const handleArticleSelect = (articleId: string) => {;
     setSelectedArticle(articleId);
-  },;
+  };
+
   const handleBackToCategories = () => {;
-    setSelectedCategory(null),;
+    setSelectedCategory(null);
     setSelectedArticle(null);
   };
+
   const handleBackToArticles = () => {;
     setSelectedArticle(null);
   };
-  return (;
+
+  return (
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto">;
@@ -146,21 +138,24 @@ export default function HelpCenter() {;
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
           </p>;
+
           <div className="relative mb-8">;
-            <Input;
-              placeholder="Search for help articles...";
+            <Input
+              placeholder="Search for help articles..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => setSearchQuery(e && e.target.value)}
               className="pl-10";
             />;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
           </div>;
+
           <Tabs defaultValue="articles" className="mb-8">;
             <TabsList className="w-full grid grid-cols-3 mb-6">;
               <TabsTrigger value="articles">Articles</TabsTrigger>;
               <TabsTrigger value="faq">FAQ</TabsTrigger>;
               <TabsTrigger value="contact">Contact Us</TabsTrigger>;
             </TabsList>;
+
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
                 <HelpCategoryList;
@@ -184,21 +179,25 @@ export default function HelpCenter() {;
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
-                  />
-                </>
+                  />;
+                </>;
               )}
               
               {selectedArticle && (
                 <>
+=======
+
+              {selectedArticle && (;
+                <>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant="ghost"
                     onClick={handleBackToArticles}
-                    className="mb-4"
-                  >
-                    ← Back to Articles
-                  </Button>
-                  <HelpArticleView articleId={selectedArticle} />
-                </>
+                    className="mb-4">;
+                    ← Back to Articles;
+                  </Button>;
+                  <HelpArticleView articleId={selectedArticle} />;
+                </>;
               )}
             </TabsContent>
             <TabsContent value="faq">
@@ -284,7 +283,7 @@ export default function HelpCenter() {;
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
-                      </Link>
+                      </a>
                     </div>
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">

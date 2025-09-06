@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import LoadingSpinnerdynamic from '../components/LoadingSpinner.dynamic'
+import LoadingSpinnerdynamic from '../components/LoadingSpinner && LoadingSpinner.dynamic'
 describe('LoadingSpinnerdynamic'
   test('renders without crashing'
     expect(screen.getByTestId('loadingspinner.dynamic'
@@ -43,7 +43,7 @@ import LoadingSpinner from '../components/LoadingSpinner.dynamic';
 describe('LoadingSpinner', () => {
   test('renders without crashing', () => {
     render(<LoadingSpinner />);
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
+    expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument();
   });
   test('displays loading text', () => {
     expect(screen.getByText('Loading...')).toBeInTheDocument();

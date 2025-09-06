@@ -30,17 +30,17 @@ export default function ErrorPage() {
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
               <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
             </div>
-            <CardTitle className="text-2xl font-bold">Authentication Error</CardTitle>
-            <p className="text-sm text-muted-foreground">
+            <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
+            <p className=&quot;text-sm text-muted-foreground&quot;>
               There was an issue with your authentication request
             </p>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="text-center space-y-4">
-              <p className="text-sm text-muted-foreground">
+          <CardContent className=&quot;space-y-4&quot;>
+            <div className=&quot;text-center space-y-4&quot;>
+              <p className=&quot;text-sm text-muted-foreground&quot;>
                 This could be due to:
               </p>
-              <ul className="text-sm text-muted-foreground space-y-1 text-left">
+              <ul className=&quot;text-sm text-muted-foreground space-y-1 text-left&quot;>
                 <li>• Invalid email or password</li>
                 <li>• Account not verified</li>
                 <li>• Network connectivity issues</li>
@@ -55,8 +55,8 @@ export default function ErrorPage() {
                     Try Again
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="w-full">
-                  <Link href="/">
+                <Button asChild variant=&quot;outline&quot; className=&quot;w-full&quot;>
+                  <Link href=&quot;/&quot;>
                     Go to Homepage
                   </Link>
                 </Button>

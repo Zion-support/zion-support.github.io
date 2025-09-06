@@ -16,11 +16,23 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020
       globals: globals.browser}
+=======
+export default tseslint && tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js && js.configs.recommended, ...tseslint && tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals && globals.browser},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     plugins: {
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
     rules: {
-      ...reactHooks.configs.recommended.rules
+
+      ...reactHooks && reactHooks.configs.recommended && recommended.rules,
+
       "react-refresh/only-export-components": [
 
         "warn"

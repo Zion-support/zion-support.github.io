@@ -11,7 +11,6 @@ interface Milestone {
   title: string;
   description: string;
 
-  dueDate: string
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
@@ -47,17 +46,21 @@ export async function generateContract(
         estimatedHours: m.estimatedHours
       }))
     : [];
-  const { data, error } = await supabase.functions.invoke("generate-contract", {
+  
+  const { data, error } = await supabase && supabase.functions.invoke("generate-contract", {
+
     body: {
-      talentName: talent.full_name;
+      talentName: talent && talent.full_name;
       clientName: clientName;
-      projectName: values.projectName;
-      scopeSummary: values.scopeSummary;
-      startDate: values.startDate.toISOString();
-      endDate: values.endDate?.toISOString();
-      paymentTerms: values.paymentTerms;
-      paymentAmount: values.paymentAmount;
-      additionalClauses: additionalClauses
+
+      projectName: values && values.projectName;
+      scopeSummary: values && values.scopeSummary;
+      startDate: values && values.startDate.toISOString();
+      endDate: values && values.endDate?.toISOString();
+      paymentTerms: values && values.paymentTerms;
+      paymentAmount: values && values.paymentAmount;
+      additionalClauses: additionalClauses,
+
       milestones: milestoneData}
   });
 
@@ -133,13 +136,52 @@ export async function generateContract(;
   
   if (data.success && data.contract) {
     return data.contract
+=======
+  
+  if (data && data.success && data && data.contract) {
+    return data && data.contract
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
     throw new Error("Failed to generate contract")
   }
 }
 ;
-  if (data.success && data.contract) {;
+  // Prepare milestone data if we have AI - generated milestones;
+  const milestone_data = generated_milestones.length > 0;
+    ? generated_milestones.map (m => ({
+        title: m.title;
+        description: m.description;
+        due_date: m.due_date,
+        estimated_hours: m.estimated_hours;
+      }));
+    : [];
+;
+  const { data, error } = await supabase.functions.invoke ("generate - contract", {
+    body: {
+      talent_name: talent.full_name;
+      client_name: client_name;
+      project_name: values.project_name;
+      scope_summary: values.scope_summary;
+      start_date: values.start_date.toISOString ();
+      end_date: values.end_date?.toISOString ();
+      payment_terms: values.payment_terms;
+      payment_amount: values.payment_amount;
+      additional_clauses: additional_clauses,
+      milestones: milestone_data}
+  });
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    throw error;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
     return data.contract;
+
   } else {;
     throw new Error("Failed to generate contract");
   }

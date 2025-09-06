@@ -130,20 +130,15 @@ export function useSkills() {;
   }
 }
 ;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;
-        .from('resume_skills');
-        .delete();
-        .eq('id', skillId),;
-      if (error) throw error,;
-      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not delete skill');
-    } finally {;
-      setIsLoading(false);
+  const add_skill = async (resume_id: string, skill: Skill): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to add skills'),
+      return false;
     }
+
   },;
   return {;
     isLoading,;
@@ -152,4 +147,5 @@ export function useSkills() {;
     deleteSkill;
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

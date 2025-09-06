@@ -14,10 +14,11 @@ import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
+  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
+
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
@@ -138,24 +139,103 @@ export default function AdvancedServicesShowcase2025() {
       }
     })
   const containerVariants = {
+
     hidden: { opacity: 0 }
+=======
+import React, { useState, useEffect } from 'react',
+import Head from 'next / head',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
+  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
+  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon;
+} from 'lucide-react',
+import EnhancedNavigation from '../components / EnhancedNavigation',
+import EnhancedFooter from '../components / EnhancedFooter',
+import { advancedInnovativeServices } from '../data / 2025 - advanced - innovative - services - expansion',
+import { emergingTechInnovations } from '../data / 2025 - emerging - tech - innovations',
+export default /**
+ * AdvancedServicesShowcase2025 - Function description
+ */
+function AdvancedServicesShowcase2025() {
+  const [search_term, setSearchTerm] = useState (''),
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sort_by, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
+  const [price_range, setPriceRange] = useState<[number, number]>([0, 10000]),
+  // Combine all services;
+  const all_services = [...advancedInnovativeServices, ...emergingTechInnovations],
+  const categories = [;
+    { id: 'all', name: 'All Services', count: all_services.length, icon: '🚀' },
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: all_services.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning')).length, icon: '🧠' },
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: all_services.filter (string => s.category.includes ('Quantum')).length, icon: '⚛️' },
+    { id: 'Cybersecurity', name: 'Security', count: all_services.filter (string => s.category.includes ('Cybersecurity') || s.category.includes ('Security')).length, icon: '🛡️' },
+    { id: 'Edge Computing & IoT', name: 'Edge & IoT', count: all_services.filter (string => s.category.includes ('Edge') || s.category.includes ('IoT')).length, icon: '🌐' },
+    { id: 'Space Technology & Innovation', name: 'Space Tech', count: all_services.filter (string => s.category.includes ('Space')).length, icon: '🚀' },
+    { id: 'Neural Technology & BCI', name: 'Neural & BCI', count: all_services.filter (string => s.category.includes ('Neural') || s.category.includes ('BCI')).length, icon: '🧠' },
+    { id: 'Healthcare AI', name: 'Healthcare', count: all_services.filter (string => s.category.includes ('Healthcare')).length, icon: '🏥' },
+    { id: 'Climate & Sustainability', name: 'Climate', count: all_services.filter (string => s.category.includes ('Climate') || s.category.includes ('Sustainability')).length, icon: '🌍' },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', count: all_services.filter (string => s.category.includes ('Blockchain') || s.category.includes ('DeFi')).length, icon: '🔗' },
+    { id: 'Metaverse & VR / AR', name: 'Metaverse', count: all_services.filter (string => s.category.includes ('Metaverse') || s.category.includes ('VR / AR')).length, icon: '🌐' }
+  ],
+  const filtered_services = all_services;
+    .filter (service => {
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.tagline.toLowerCase ().includes (search_term.toLowerCase ()),
+      const matches_category = selected_category === 'all' || service.category.includes (selected_category),
+      const price = parse_float (service.price.replace ('$', '').replace (, '')),
+      const matches_price = price >= price_range[0] && price <= price_range[1],
+      return matches_search && matches_category && matches_price;
+    });
+    .sort ((a, b) => {
+      switch (sort_by) {
+        case 'popularity':;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        case 'price':;
+          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, '')),
+        case 'rating':;
+          return b.rating - a.rating,
+        case 'newest':;
+          return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time (),
+        default: return 0;
+      }
+    }),
+  const container_variants = {
+    hidden: { opacity: 0 },
+
     visible: {
       opacity: 1
       transition: {
-        staggerChildren: 0.1
+        stagger_children: 0.1;
       }
     }
-  }
+
+
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
+=======
+  },
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       transition: {
-        duration: 0.5
+
+        duration: 0.5;
       }
     }
-  }
+
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category)
     return categoryData?.icon |'🚀'
@@ -327,14 +407,15 @@ export default function AdvancedServicesShowcase2025(req, res) {
         </div>
       </section>
       {/* Search and Filters */}
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+
+      <section className="px - 6 pb - 12">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
-          >
+            className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
+          >;
             {/* Search Bar */}
       {/* Search and Filters */  } catch (error) {
     console.error("Error:", error);
@@ -524,18 +605,10 @@ export default function AdvancedServicesShowcase2025(req, res) {
               <div className="flex items-end">
                 <div className="flex bg-white/10 rounded-xl p-1">
                   <button
-                    onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`p-2 rounded-lg transition-all duration-300 ${;
-                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded-lg transition-all duration-300 ${
+                      viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
+                    }`}
                   >
                     <Grid className="w-5 h-5" />
                   </button>
@@ -565,7 +638,7 @@ export default function AdvancedServicesShowcase2025(req, res) {
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Results Count */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -639,8 +712,8 @@ export default function AdvancedServicesShowcase2025(req, res) {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  variants={itemVariants}
-                  className={viewMode === 'grid'
+
+
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
                   }
@@ -685,6 +758,7 @@ export default function AdvancedServicesShowcase2025(req, res) {
                           <p className="text-white/70 text-sm">{service.tagline}</p>
                         </div>
                       </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.popular && (
                         <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full">
                           Popular
@@ -892,14 +966,12 @@ export default function AdvancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             </AnimatePresence>;
           </motion.div>;
-          {/* No Results */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {filteredServices.length === 0 && (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          {/* No Results */}
+          {filtered_services.length === 0 && (
             <motion.div;
               initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
@@ -918,8 +990,9 @@ export default function AdvancedServicesShowcase2025(req, res) {
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
               <button
                 onClick={() => {
-                  setSearchTerm('')
-                  setSelectedCategory('all')
+
+                  setSearchTerm('');
+                  setSelectedCategory('all');
 
                   setPriceRange([0, 10000])
                 }}
@@ -1004,23 +1077,23 @@ export default function AdvancedServicesShowcase2025(req, res) {
 };
   )
           >;
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">;
+            <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - cyan - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
             </h2>;
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">;
+            <p className="text - xl text - white / 80 mb - 8 max - w-2xl mx - auto">;
               Our advanced services are designed to give you a competitive edge in the rapidly evolving technology landscape.;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <a;
                 href="mailto:kleber@ziontechgroup.com";
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2";
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2";
               >;
                 Schedule Consultation;
-                <ArrowRight className="w-5 h-5" />;
+                <ArrowRight className="w - 5 h - 5" />;
               </a>;
               <a;
                 href="tel:+13024640950";
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2";
+                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10 flex items - center justify - center gap - 2";
               >;
                 Call +1 302 464 0950;
               </a>;

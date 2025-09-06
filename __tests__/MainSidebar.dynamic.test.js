@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import MainSidebardynamic from '../components/MainSidebar.dynamic'
+import MainSidebardynamic from '../components/MainSidebar && MainSidebar.dynamic'
 describe('MainSidebardynamic'
   test('renders without crashing'
     expect(screen.getByTestId('mainsidebar.dynamic'
@@ -43,7 +43,7 @@ import MainSidebar from '../components/MainSidebar.dynamic';
 describe('MainSidebar', () => {
   test('renders without crashing', () => {
     render(<MainSidebar />);
-    expect(screen.getByTestId('main-sidebar')).toBeInTheDocument();
+    expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument();
   });
   test('displays navigation items', () => {
     // Test navigation items

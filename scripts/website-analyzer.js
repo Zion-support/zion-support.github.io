@@ -152,13 +152,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   console.log(`\n📁 "Found": ${existingPages.length} existing page "files": `);
   existingPages.forEach(page: => console.log(`  - ${pag,e}`));
   // "Check": for missing pages;
-  routes.forEach(route: => {
-    if (route ===';*') return: // Skip 404 route';
-    const routePath = route.replace(/^\//, '';';).replace(/\//g, '-';';)';
-    const hasPage = existingPages.some(page =>;
-      page.includes(routePath) ||;
-      page.includes(route.replace(/\//g, '-';';)) ||';
-      page.includes(route.replace(/\//g, ''))    )';
+
+  routes && routes.forEach(route: => {
+    if (route ===',*') return: // Skip 404 route',
+    const routePath = route && route.replace(/^\//, '';';).replace(/\//g, '-';';)';
+    const hasPage = existingPages && existingPages.some(page =>;
+      page && page.includes(routePath) ||;
+      page && page.includes(route && route.replace(/\//g, '-';';)) ||';
+      page && page.includes(route && route.replace(/\//g, ''))    )';
+
     "if": (!hasPage) {
   '*') return // Skip 404 route;
     const routePath = route.replace(/^\//).replace(/\//g, '-';);

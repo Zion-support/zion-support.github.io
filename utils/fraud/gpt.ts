@@ -34,23 +34,25 @@ export async function classifyWithGPT(
   });
   const content = completion.choices[0]?.message?.content ?? '{}';
   try {
-    const parsed = JSON.parse(content);
+
+    const parsed = JSON.parse (content);
     const label = (parsed.label as string)?.toUpperCase?.();
-    if (label !== 'SAFE' && label !== 'SUSPICIOUS' && label !== 'DANGEROUS') {
+    // Check condition
+if ( {) {
+  $2
+}
+
       return {
-        label: 'SUSPICIOUS'
-        reason: 'Unrecognized label from GPT'
-        confidence: 0.5
-      }
-    }
-    const confidence =
-      typeof parsed.confidence === 'number'
-        ? Math.max(0, Math.min(1, parsed.confidence))
-        : 0.6;
+
+        label: 'SUSPICIOUS',
+        reason: 'Unrecognized label from GPT',
+
     return {
-      label
-      reason: parsed.reason |'No reason provided'
-      confidence
+
+      label,
+      reason: parsed && parsed.reason || 'No reason provided',
+      confidence,
+
     } as GptClassification;
   } catch {
     return {
@@ -67,15 +69,34 @@ export async function classifyWithGPT(
   label: string;
   confidence: number;
   reasoning: string
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-export async function analyzeWithGpt(data: any): Promise<GptResult> {
-  // Mock implementation - in production, this would call OpenAI API;
-  const suspicious = data.description && data.description.toLowerCase().includes('fraud');
+
+  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
+  
   return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE'
-    confidence: suspicious ? 0.9 : 0.1
+    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
+    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
+
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
+
   }
+
+}
+<<<<<<< HEAD
+=======
+
+
+
+
+=======
+
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
 }
 
 

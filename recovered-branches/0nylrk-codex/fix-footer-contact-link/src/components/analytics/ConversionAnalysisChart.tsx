@@ -14,11 +14,12 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,;
+
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
-interface ConversionAnalysisProps {
+interface ConversionAnalysisProps {;
   data: Array<Record<string, any>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void
@@ -37,9 +38,9 @@ import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
 interface ConversionAnalysisProps {
-  data: Array<Record<string any>>,
-  timeRange: string,
-  onTimeRangeChange: (range: string) => void
+  data: Array < Record < string, any>>;
+  time_range: string;
+  onTimeRangeChange: (range: string) => void;
 }
 
 export function ConversionAnalysisChart({
@@ -56,6 +57,9 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
     ? Object.keys(data[0]).filter(key => key !== 'date')
     : [],
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -98,10 +102,23 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
           data={data || []}
           dataKeys={dataKeys}
           type="bar"
+
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;
   );
+=======
+        <AnalyticsChart;
+          title="";
+          data={data || []}
+          data_keys={data_keys}
+          type="bar";
+          time_range={time_range}
+          onTimeRangeChange={onTimeRangeChange}
+        />;
+      </CardContent>;
+    </Card>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,13 +1,11 @@
-// Mock file system database utility
-export function readJson<T>(filePath: string, defaultValue: T): T {
-  try {
-    const fs = require('fs')
-    if (fs.existsSync(filePath)) {
-    const fs = require('fs'),
-    if (fs.existsSync(filePath)) {;
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
+
+
     }
+  } catch (error) {
+    console.error('Error reading file:', error);
+=======
+
+  await writeAllDisputes(all);
   } catch (error) {
     console.error('Error reading file:', error);
 
@@ -39,6 +37,8 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
   }
 }
 export async function createDispute(dispute: DisputeCase): Promise<void> {
@@ -56,6 +56,11 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   await mkdir(dir, { recursive: true });
   return dir;
 }
+
+
+
+}
+=======
 
 export function getDisputeUploadDir(caseId: string): string {;
   return path.join(UPLOADS_ROOT, caseId);

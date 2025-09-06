@@ -72,22 +72,33 @@ import {;
   FormLabel,;
   FormControl,;
   FormDescription,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { Calendar } from "@/components/ui/calendar",;
+  FormMessage,;
+
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+
+} from "@/components/ui/popover";
+
+import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
+
+
+export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
+
   return (
-    <>
+    <>;
       <FormField
-        control={form.control}
+        control={form && form.control}
         name="projectName"
         render={({ field }) => (
           <FormItem>
@@ -103,14 +114,37 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       />;
       <FormField;
         control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         name="scopeSummary"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Scope Summary</FormLabel>
-            <FormControl>
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Scope Summary</FormLabel>;
+            <FormControl>;
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
+
+          </FormItem>)}
+      />;
+      <FormField;
+        control={form.control}
+        name="scope_summary";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Scope Summary</FormLabel>;
+            <FormControl>;
+              <Textarea;
+                placeholder="Describe the project scope, deliverables, and expectations...";
+                className="min - h-[120px]";
+
+                {...field}
+              />;
+            </FormControl>;
+            <FormDescription>;
+              Be specific about what is included and any limitations;
+            </FormDescription>;
+            <FormMessage />;
+
                 {...field}
               />
             </FormControl>
@@ -123,67 +157,71 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+=======
+      />;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
-          control={form.control}
+          control={form && form.control}
           name="startDate"
-          render={({ field }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>Start Date</FormLabel>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <FormControl>
+          render={({ field }) => (;
+            <FormItem className="flex flex-col">;
+              <FormLabel>Start Date</FormLabel>;
+              <Popover>;
+                <PopoverTrigger asChild>;
+                  <FormControl>;
                     <Button
                       variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
-                    >
-                      {field.value ? (
-                        format(field.value, "PPP")
-                      ) : (
-                        <span>Pick a date</span>
+                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
+                      {field && field.value ? (;
+                        format(field && field.value, "PPP");
+                      ) : (;
+                        <span>Pick a date</span>;
                       )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
-                    selected={field.value}
-                    onSelect={field.onChange}
+                    selected={field && field.value}
+                    onSelect={field && field.onChange}
                     disabled={(date) => date < new Date()}
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-              <FormMessage />
-            </FormItem>
+                    initialFocus;
+                  />;
+                </PopoverContent>;
+              </Popover>;
+              <FormMessage />;
+            </FormItem>;
           )}
         />
         <FormField
         />;
         <FormField;
           control={form.control}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           name="endDate"
-          render={({ field }) => (
-            <FormItem className="flex flex-col">
-              <FormLabel>End Date (Optional)</FormLabel>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <FormControl>
+          render={({ field }) => (;
+            <FormItem className="flex flex-col">;
+              <FormLabel>End Date (Optional)</FormLabel>;
+              <Popover>;
+                <PopoverTrigger asChild>;
+                  <FormControl>;
                     <Button
                       variant={"outline"}
-                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
-                    >
-                      {field.value ? (
-                        format(field.value, "PPP")
-                      ) : (
-                        <span>Pick a date</span>
+                      className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
+                      {field && field.value ? (;
+                        format(field && field.value, "PPP");
+                      ) : (;
+                        <span>Pick a date</span>;
                       )}
-                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                    </Button>
-                  </FormControl>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
+                      <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
                     selected={field.value |undefined}
@@ -206,4 +244,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       </div>;
     </>;
   );
+=======
+            </FormItem>)}
+        />;
+      </div>;
+    </>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

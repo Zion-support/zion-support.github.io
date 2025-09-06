@@ -1,7 +1,31 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
-type DistributionItem = { label: string; percent: number }
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useMemo, useState } from 'react';
+
+
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 export default function TokenomicsWhitepaperBuilder() {
 type DistributionItem = { label: string, percent: number };
@@ -41,7 +65,8 @@ export default function TokenomicsWhitepaperBuilder() {;
   );
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [activeSection, setActiveSection] =
+
+  const [activeSection, setActiveSection] =;
     useState<string>('Executive Summary');
   const previewMarkdown = useMemo(() => {
     return (
@@ -156,23 +181,40 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('Executive Summary');
   const previewMarkdown = useMemo(() => {;
-    return generatedMarkdown || buildLocalMarkdown({;
-      tokenName;
-      tokenSupply;
-      useCases;
-      rewardsLogic;
-      distribution,;
-      governance,;
-      jurisdiction,;
-      legalReview});
-  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),;
+    return (
+      generatedMarkdown ||;
+      buildLocalMarkdown({;
+        tokenName,;
+        tokenSupply,;
+        useCases,;
+        rewardsLogic,;
+        distribution,;
+        governance,;
+        jurisdiction,;
+        legalReview,;
+      });
+    );
+  }, [;
+    generatedMarkdown,;
+    tokenName,;
+    tokenSupply,;
+    useCases,;
+    rewardsLogic,;
+    distribution,;
+    governance,;
+    jurisdiction,;
+    legalReview,;
+  ]);
   async function handleGenerate() {;
-    try {
+    try {;
       setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {;
         method: 'POST',;
-        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },;
-        body: JSON.stringify({;
+        headers: {;
+          'Content-Type': 'application/json',;
+          'X-Admin': isAdmin ? 'true' : 'false',;
+        },;
+        body: JSON && JSON.stringify({;
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -181,49 +223,79 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
           governance,;
           jurisdiction,;
           operatorPrompt,;
-          legalReview})}),;
-      if (!res.ok) throw new Error('Failed to generate');
-      const data = await res.json();
-      setGeneratedMarkdown(data.markdown || '');
-    } catch (error) {
-      console.error(e);
+          legalReview,;
+        }),;
+      });
+      if (!res && res.ok) throw new Error('Failed to generate');
+      const data = await res && res.json();
+      setGeneratedMarkdown(data && data.markdown || '');
+    } catch (e) {;
+      console && console.error(e);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       alert('Generation failed');
     } finally {;
-      setIsGenerating(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+      setIsGenerating(false);    }
   }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  async function handleDownload(ext: 'md' | 'pdf') {;
-    if (ext === 'md') {;
+
       const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
       const url = URL.createObjectURL(blob);
+
       const a = document.createElement('a');
       a.href = url;
-      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`,;
+      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
       document.body.appendChild(a);
-      a.click(),;
+      a.click();
       document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    } else {;
+
+
+  async function handleDownload(): any (ext: 'md' | 'pdf') {;
+    if (ext === 'md') {;
+      const blob = new Blob([previewMarkdown], {;
+        type: 'text/markdown;charset=utf-8',;
+      });      const url = URL && URL.createObjectURL(blob);
+      const a = document && document.createElement('a');
+      a && a.href = url;
+      a && a.download = `${tokenName && tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper && whitepaper.md`;
+      document && document.body.appendChild(a);
+      a && a.click();
+      document && document.body.removeChild(a);
+      URL && URL.revokeObjectURL(url);    } else {;
       const res = await fetch('/api/whitepaper/export', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })}),;
-      if (!res.ok) {;
+        body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),;
+
+      });
+      if (!res && res.ok) {;
         alert('PDF export failed');
         return;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+      }
+      const { url } = await res && res.json();
+      window && window.open(url, '_blank');
+    }
   }
+
+      const item = { ...copy[index] }
+=======
+      URL.revokeObjectURL(url)
+    } else {
+      const res = await fetch('/api/whitepaper/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
+      if (!res.ok) {
+        alert('PDF export failed');
+        return
+      }
+      const { url } = await res.json();
+      window.open(url, '_blank')
+    }
+  }
+
+  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
+    setDistribution((prev) => {
+      const copy = [...prev];
+=======
 }
       const { url } = await res.json();
       window.open(url, '_blank');
@@ -432,6 +504,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
                 </div>
               </div>
             </div>
+
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Distribution</h3>
               <div className="space-y-2">
@@ -441,11 +514,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
                     <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
                     <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
                   </div>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                ))}
                 <div className="flex items-center justify-between text-xs opacity-70">
                   <span>Total: {totalPercent}%</span>
                   <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
@@ -481,6 +550,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
               <div className="flex gap-3">
+
                 <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
                   {isGenerating ? 'Generating…' : 'Generate with GPT'  } catch (error) {
     console.error("Error:", error);
@@ -528,11 +598,13 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
               </div>
             </div>
           </div>
+
           <div className="rounded-lg border p-4">
             <div className="flex items-center justify-between mb-3">
               <div className="flex gap-2 overflow-x-auto">
                 {sections.map((s) => (
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
+
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -549,11 +621,8 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   );
 function buildLocalMarkdown(input: {
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+
 ;
 function buildLocalMarkdown(input: {;
   tokenName: string;
@@ -565,6 +634,7 @@ function buildLocalMarkdown(input: {;
   jurisdiction: string;
   legalReview: boolean;
 }) {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;

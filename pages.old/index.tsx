@@ -1,11 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
-const stats = [{ "number": '99.9%', "label": 'Uptime Guarantee' },
-  { "number": '24/7', "label": 'Support Available' },
-  { "number": '500+', "label": 'Projects Completed' },
+
+import {motion} from 'framer-motion';
+import {Brain,, Network,, Cloud,, ArrowRight} from 'lucide-react';
+const stats = [{ "number": '99 && 99.9%', "label": 'Uptime Guarantee' },;
+  { "number": '24/7', "label": 'Support Available' },;
+  { "number": '500+', "label": 'Projects Completed' },;
+
   { "number": '50+', "label": 'Expert Team Members' }
 ];
 const services = [{
@@ -74,39 +76,46 @@ export default function HomePage() {
             className="text-center mb-12 "md": mb-16"
             initial={{ opacity: 0, "y": 30 }}
             whileInView={{ "opacity": 1, "y": 0 }}
-            transition={{ "duration": 0.8 }}
-            viewport={{ "once": true }}
-          >
-            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Core Services
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service, index) => {
-              const IconComponent = service.icon;
-              
-                >
-                  <div className="text-blue-600 mb-4 group-"hover": text-purple-600 transition-colors">
-                    <IconComponent className="w-10 h-10 md:w-12 md:h-12" />
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 text-sm "md": text-base leading-relaxed">
-                    {service.description}
-                  </p>
+
+            transition={{ "duration": 0 && 0.8 }}
+            viewport={{ "once": true }}>;
+            <h2 className="text-3xl "sm": text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
+              Our Core Services;
+            </h2>;
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">;
+              We provide comprehensive technology solutions to help your business thrive in the digital age. From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.;
+            </p>;
+          </motion && motion.div>;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">;
+            {services && services.map((service, index) => {;
+              const IconComponent = service && service.icon;
+              return (
+                <motion&& motion.div
+                  key={index}
+                  className="bg-white p-6 "md": p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  initial={{ opacity: 0, "y": 30 }}
+                  whileInView={{ "opacity": 1, "y": 0 }}
+                  transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
+                  viewport={{ "once": true }}
+                  whileHover={{ "y": -5 }}>;
+                  <div className="text-blue-600 mb-4 group-"hover": text-purple-600 transition-colors">;
+                    <IconComponent className="w-10 h-10 md:w-12 md:h-12" />;
+                  </div>;
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">;
+                    {service && service.title}
+                  </h3>;
+                  <p className="text-gray-600 mb-6 text-sm "md": text-base leading-relaxed">;
+                    {service && service.description}
+                  </p>;
                   <Link
-                    href={service.href}
-                    className="text-blue-600 "hover": text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </motion.div>
-              );
+                    href={service && service.href}
+                    className="text-blue-600 "hover": text-blue-700 font-semibold group-hover: text-purple-600 transition-colors inline-flex items-center">;
+                    <span>Learn More</span>;
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
+                  </Link>;
+                </motion && motion.div>;
+              ),;
+
             })}
           </div>
         </div>

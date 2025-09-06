@@ -125,10 +125,12 @@ export function useResumeActions() {;
           title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
+
         })
         .eq('id', resumeId)
-        .eq('user_id', user.id),
+        .eq('user_id', user && user.id);
       
+
       if (error) throw error,
       
       return showSuccessToast("Resume updated", "Your resume information has been updated")
@@ -208,28 +210,58 @@ export function useResumeActions() {;
     isLoading;
     error;
 ;
-    setIsLoading(true),;
-    setError(null),;
-    try {;
+  const setActiveResume = async (resume_id: string): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to set active resume'),
+      return false;
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
       // First, set all user's resumes to inactive;
-      const { error: resetError } = await supabase;
-        .from('talent_resumes');
-        .update({ is_active: false });
-        .eq('user_id', user.id),;
-      if (resetError) throw resetError,;
+      const { error: reset_error } = await supabase;
+        .from ('talent_resumes');
+        .update ({ is_active: false });
+        .eq ('user_id', user.id);
+;
+      // Check condition
+if (throw reset_error) {
+  $2
+}
       // Then, set the selected resume as active;
       const { error } = await supabase;
-        .from('talent_resumes');
-        .update({ is_active: true });
-        .eq('id', resumeId);
-        .eq('user_id', user.id),;
-      if (error) throw error,;
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active");
-    } catch (e: any) {;
-      return handleResumeError(e, 'Could not set active resume');
-    } finally {;
-      setIsLoading(false);
+        .from ('talent_resumes');
+        .update ({ is_active: true });
+        .eq ('id', resume_id);
+        .eq ('user_id', user.id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      return showSuccessToast ("Active resume set", "Your selected resume is now marked as active");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } catch (e: any) {
+      return handleResumeError (e, 'Could not set active resume');
+    } finally {
+      setIsLoading (false);
     }
+
+;
+
+  return {
+    is_loading;
+    error;
+    create_resume;
+    updateBasicInfo;
+
+    setActiveResume}
+}
+=======
   },;
   return {;
     isLoading,;

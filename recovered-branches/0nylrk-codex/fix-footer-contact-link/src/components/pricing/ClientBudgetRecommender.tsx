@@ -19,39 +19,54 @@ import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
 
-  jobTitle: string
-  category: string
+import {Button} from "@/components/ui/button";
+import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
+interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
 
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;
 }
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
+
+
+export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
+
   jobTitle;
   category;
   timeline;
   scope;
 
-  experienceLevel
+  experienceLevel,;
+  onSuggestionApplied}) => {;
 
-  onSuggestionApplied}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
 
-  const generateSuggestion = async () => {
-    if (!jobTitle |!category) {
-      return
+
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
+      return;
+
     }
     setIsLoading(true);
-    try {
-      const params: ClientBudgetParams = {
-        jobTitle
-        category}
-      if (timeline) params.timeline = timeline;
-      if (scope) params.scope = scope;
-      if (experienceLevel) params.experienceLevel = experienceLevel;
+
+    try {;
+      const params: ClientBudgetParams = {;
+        jobTitle,;
+        category};
+
+      if (timeline) params && params.timeline = timeline;
+      if (scope) params && params.scope = scope;
+      if (experienceLevel) params && params.experienceLevel = experienceLevel;
+
+
       const result = await getClientBudgetSuggestion(params);
 import { useAuth } from "@/hooks/useAuth",
 import { Sparkles } from "lucide-react",
@@ -64,16 +79,6 @@ interface ClientBudgetRecommenderProps {
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 }
 
-export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({;
-  jobTitle;
-  category;
-  timeline;
-  scope;
-  experienceLevel,
-  onSuggestionApplied}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
-  const { user } = useAuth();
 
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
@@ -164,26 +169,30 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       setIsLoading(false);
     }
   },;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleApplySuggestion = () => {;
     if (suggestion) {;
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate),;
+      onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
+
       // Track this suggestion application;
       if (user) {;
         trackPricingSuggestion({;
-          userId: user.id,;
+          userId: user && user.id,;
           suggestionType: 'client',;
-          suggestedMin: suggestion.minRate,;
-          suggestedMax: suggestion.maxRate,;
+          suggestedMin: suggestion && suggestion.minRate,;
+          suggestedMax: suggestion && suggestion.maxRate,;
           accepted: true;
         });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
+
   },
 
   return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
+    <div className="space-y-4">;
+      <div>;
+        {!suggestion && !isLoading ? (;
           <Button
             type="button"
             variant="outline"

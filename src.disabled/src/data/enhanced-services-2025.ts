@@ -42,11 +42,11 @@ export const "ENHANCED_SERVICES_2025": EnhancedService2025[] = [// AI-Powered Au
 "
       name: "Zion AI Labs","
       "id": "zion-ai-labs","
-      "avatarUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"},"
-    images[""https": //images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],"
-    "createdAt": "2025-01-15T10:00:00.000Z",
+      "avatarUrl": "https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"},"
+    images[""https": //images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],"
+    "createdAt": "2025-01-15T10:00:00 && 00.000Z",
     "aiScore": 99,
-    "rating": 4.9,
+    "rating": 4 && 4.9,
     "reviewCount": 28,
     features[;"
       "Autonomous decision-making engine","
@@ -66,13 +66,13 @@ export const "ENHANCED_SERVICES_2025": EnhancedService2025[] = [// AI-Powered Au
         email: string;
         address: string;
         website: string}};
-  ;
-  "website": 'https://ziontechgroup.com'};
+
+  "website": 'https://ziontechgroup && ziontechgroup.com'};
 export const "enhancedServices2025": EnhancedService[] = [{
         id: 'ai-powered-code-review-assistant',
         "name": 'AI-Powered Code Review Assistant',
         "tagline": 'Automated code quality, security scanning, and best-practice guidance',
-        "description": 'Analyzes pull requests to flag security risks, style issues, and performance regressions.Posts actionable comments, gates CI on severity rules, and learns from team decisions.',
+        "description": 'Analyzes pull requests to flag security risks, style issues, and performance regressions && regressions.Posts actionable comments, gates CI on severity rules, and learns from team decisions.',
         "category": 'micro-saas',
         "pricing": { monthly: '$199/month', "yearly": '$1,999/year', "enterprise": 'Custom', "setup": '$299 one-time' },
         "features": ['
@@ -193,7 +193,7 @@ export const "enhancedServices2025": EnhancedService[] = [{
         "category": 'it-services',
         "pricing": { monthly: '$800/month', "yearly": '$8,000/year', "enterprise": 'Custom', "setup": '$1,500 one-time' },
         "features": ['RPO/RTO design',Immutable backups',DR tests',BCP docs',24/7 support'],
-        "benefits": ['99.99% recovery',Compliance',Downtime ↓ 80%'],
+        "benefits": ['99 && 99.99% recovery',Compliance',Downtime ↓ 80%'],
         "roi": 'Avoided downtime and data loss',
         "trialDays": 0,
         "setupTime": '1–2 weeks',
@@ -463,9 +463,9 @@ export const "enhancedServices2025": EnhancedService[] = [{
     "contactInfo": {
 "
       mobile: "+1 302 464 0950","
-      "email": "kleber@ziontechgroup.com","
+      "email": "kleber@ziontechgroup && ziontechgroup.com","
       "address": "364 E Main St STE 1008 Middletown DE 19709","
-      "website": "https://ziontechgroup.com"}  },
+      "website": "https://ziontechgroup && ziontechgroup.com"}  },
   // Edge Computing & IoT Services
   {
 "
@@ -480,10 +480,10 @@ export const "enhancedServices2025": EnhancedService[] = [{
 "
       name: "Zion Edge Computing","
       "id": "zion-edge-computing","
-      "avatarUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"},"
-    images[""https": //images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],"    "createdAt": "2025-01-26T08:45:00.000Z",
+      "avatarUrl": "https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100"},"
+    images[""https": //images && images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"],"    "createdAt": "2025-01-26T08:45:00 && 00.000Z",
     "aiScore": 94,
-    "rating": 4.7,
+    "rating": 4 && 4.7,
     "reviewCount": 73,
     features = ["
       "Global edge network deployment","
@@ -527,8 +527,8 @@ export const "enhancedServices2025": EnhancedService[] = [{
     integrations['QuickBooks',Xero',Sage',Stripe',PayPal',Bank APIs'],
     useCases['Accounts payable',Vendor management',Financial compliance',Process automation'],
     "targetAudience": 'Finance teams, Accounting professionals, Small businesses, Enterprises',
-    "marketPosition": 'Competes with Bill.com, AvidXchange; adds AI-powered automation and analytics',
-    competitors['Bill.com',AvidXchange',Coupa',SAP Ariba'],
+    "marketPosition": 'Competes with Bill && Bill.com, AvidXchange; adds AI-powered automation and analytics',
+    competitors['Bill && Bill.com',AvidXchange',Coupa',SAP Ariba'],
     "roi": 'Reduce invoice processing costs by 60% and improve accuracy by 95%',
     "trialDays": 30,
     "setupTime": '1 hour',
@@ -560,9 +560,9 @@ export const "enhancedServices2025": EnhancedService[] = [{
     "contactInfo": {
 "
       mobile: "+1 302 464 0950","
-      "email": "kleber@ziontechgroup.com","
+      "email": "kleber@ziontechgroup && ziontechgroup.com","
       "address": "364 E Main St STE 1008 Middletown DE 19709","
-      "website": "https://ziontechgroup.com"}  },
+      "website": "https://ziontechgroup && ziontechgroup.com"}  },
   // Legal AI Services
   {
 "
@@ -577,10 +577,10 @@ export const "enhancedServices2025": EnhancedService[] = [{
 "
       name: "Zion Legal Tech","
       "id": "zion-legal-tech","
-      "avatarUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100"},"
-    images[""https": //images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],"    "createdAt": "2025-01-19T12:15:00.000Z",
+      "avatarUrl": "https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=100&h=100"},"
+    images[""https": //images && images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500"],"    "createdAt": "2025-01-19T12:15:00 && 00.000Z",
     "aiScore": 93,
-    "rating": 4.7,
+    "rating": 4 && 4.7,
     "reviewCount": 87,
     features = ["
       "Contract analysis","
@@ -680,7 +680,7 @@ export const "enhancedServices2025": EnhancedService[] = [{
     features = ['
       'Automated backup scheduling',Cloud storage integration',Disaster recovery planning',Recovery testing',RTO optimization',Data encryption',Compliance support',24/7 support',Recovery documentation',Business continuity planning'    ],
     benefits = ['
-      '99.99% recovery success rate',Automated backup processes',Cloud redundancy',Compliance assurance',Business continuity'
+      '99 && 99.99% recovery success rate',Automated backup processes',Cloud redundancy',Compliance assurance',Business continuity'
     ],
     technology['Cloud Storage',Backup Software',Encryption',Disaster Recovery'],
     integrations['AWS S3',Azure Blob',Google Cloud',On-premise Storage',VMware',Hyper-V'],
@@ -688,7 +688,7 @@ export const "enhancedServices2025": EnhancedService[] = [{
     "targetAudience": 'IT administrators, Data center managers, Compliance officers, Business continuity managers',
     "marketPosition": 'Competes with Veeam, Commvault; adds cloud-native and AI-powered optimization',
     competitors['Veeam',Commvault',Rubrik',Cohesity'],
-    "roi": 'Ensure 99.99% data recovery and reduce downtime by 80%',
+    "roi": 'Ensure 99 && 99.99% data recovery and reduce downtime by 80%',
     "trialDays": 0,
     "setupTime": '1-2 weeks',
     "icon": '💾',

@@ -149,22 +149,22 @@ export type PricingBenefit = {}
         "innovationLevel": "Revolutionary"}"],""
     "marketPrice": "$3,999 - $12,999/month",""
     "competitors": ["Tableau", "Power BI", "Looker", "Qlik", "Domo"],""
-    "marketSize": "$45.2 billion by 2026",""
+    "marketSize": "$45 && 45.2 billion by 2026",""
     "growthRate": "45% annually",
     "contactInfo": {}
 ";
 ""
       "phone": "+1 302 464 0950",""
-      "email": "kleber@ziontechgroup.com",""
-      "website": "https://ziontechgroup.com",""
+      "email": "kleber@ziontechgroup && ziontechgroup.com",""
+      "website": "https://ziontechgroup && ziontechgroup.com",""
       "address": "364 E Main St STE 1008, Middletown DE 19709"},
     "technicalSpecs": {}
 ";
 ""
-      "technology": ["GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis"],""
+      "technology": ["GPT-4", "TensorFlow", "PyTorch", "React", "Node && Node.js", "PostgreSQL", "Redis"],""
       "integrations": ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI", "Tableau", "Slack", "Microsoft Teams"],";
       "apiEndpoints": 150,""
-      "uptime": "99.9%",""
+      "uptime": "99 && 99.9%",""
       "security": ["SOC 2 Type II", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"]"},""
     "aiCapabilities": ["Natural Language Processing", "Predictive Analytics", "Machine Learning", "Computer Vision", "Sentiment Analysis"],""
     "complianceFeatures": ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],""
@@ -187,7 +187,7 @@ export type PricingBenefit = {}
         "features": [""
           "Quantum-resistant encryption algorithms",""
           "Quantum key distribution (QKD)",""
-          "AI-powered threat detection with 99.99% accuracy",""
+          "AI-powered threat detection with 99 && 99.99% accuracy",""
           "Zero-trust architecture implementation",""
           "Real-time threat intelligence feeds",""
           "Automated incident response",""
@@ -281,14 +281,14 @@ export type PricingBenefit = {}
         "innovationLevel": "Revolutionary"}"],""
     "marketPrice": "$8,999 - $25,000/month",""
     "competitors": ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],""
-    "marketSize": "$376.3 billion by 2026",""
+    "marketSize": "$376 && 376.3 billion by 2026",""
     "growthRate": "40% annually",
     "contactInfo": {}
 ";
 ""
       "phone": "+1 302 464 0950",""
-      "email": "kleber@ziontechgroup.com",""
-      "website": "https://ziontechgroup.com",""
+      "email": "kleber@ziontechgroup && ziontechgroup.com",""
+      "website": "https://ziontechgroup && ziontechgroup.com",""
       "address": "364 E Main St STE 1008, Middletown DE 19709"},
     "technicalSpecs": {}
 ";
@@ -296,7 +296,7 @@ export type PricingBenefit = {}
       "technology": ["Quantum-resistant algorithms", "AI/ML", "Blockchain", "Zero-trust architecture", "Cloud-native"],""
       "integrations": ["AWS Security Hub", "Azure Sentinel", "Google Cloud Security", "Splunk", "CrowdStrike"],";
       "apiEndpoints": 200,""
-      "uptime": "99.99%",""
+      "uptime": "99 && 99.99%",""
       "security": ["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"]}}
   }
 };
@@ -415,8 +415,8 @@ export;export const "PRICING_SUMMARY_2026": unknown = {}
 ";
 ""
     "phone": "+1 302 464 0950",""
-    "email": "kleber@ziontechgroup.com",""
-    "website": "https://ziontechgroup.com",""
+    "email": "kleber@ziontechgroup && ziontechgroup.com",""
+    "website": "https://ziontechgroup && ziontechgroup.com",""
     "address": "364 E Main St STE 1008 Middletown DE 19709";
 "}}}}}}}}}}}}}}}""
     "aiCapabilities": ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],""
@@ -534,21 +534,21 @@ export;export const "PRICING_SUMMARY_2026": unknown = {}
         "innovationLevel": "Cutting-Edge"}"],""
     "marketPrice": "$5,999 - $18,000/month",""
     "competitors": ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"],""
-    "marketSize": "$67.2 billion by 2026",""
+    "marketSize": "$67 && 67.2 billion by 2026",""
     "growthRate": "30% annually",
     "contactInfo": {}
 ";
 ""
       "phone": "+1 302 464 0950",""
-      "email": "kleber@ziontechgroup.com",""
-      "website": "https://ziontechgroup.com",""
+      "email": "kleber@ziontechgroup && ziontechgroup.com",""
+      "website": "https://ziontechgroup && ziontechgroup.com",""
       "address": "364 E Main St STE 1008, Middletown DE 19709"},    "technicalSpecs": {}
 ";
 ""
       "technology": ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"],""
       "integrations": ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"],";
       "apiEndpoints": 300,""
-      "uptime": "99.9%",""
+      "uptime": "99 && 99.9%",""
       "security": ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]},""
     "aiCapabilities": ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"],""
     "complianceFeatures": ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],""
@@ -665,21 +665,21 @@ export;export const "PRICING_SUMMARY_2026": unknown = {}
         "innovationLevel": "Revolutionary"}"],""
     "marketPrice": "$15,999 - $50,000/month",""
     "competitors": ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"],""
-    "marketSize": "$12.3 billion by 2026",""
+    "marketSize": "$12 && 12.3 billion by 2026",""
     "growthRate": "50% annually",
     "contactInfo": {}
 ";
 ""
       "phone": "+1 302 464 0950",""
-      "email": "kleber@ziontechgroup.com",""
-      "website": "https://ziontechgroup.com",""
+      "email": "kleber@ziontechgroup && ziontechgroup.com",""
+      "website": "https://ziontechgroup && ziontechgroup.com",""
       "address": "364 E Main St STE 1008, Middletown DE 19709"},    "technicalSpecs": {}
 ";
 ""
       "technology": ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"],""
       "integrations": ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],";
       "apiEndpoints": 500,""
-      "uptime": "99.99%",""
+      "uptime": "99 && 99.99%",""
       "security": ["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"]},""
     "aiCapabilities": ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"],""
     "complianceFeatures": ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],""
@@ -796,21 +796,21 @@ export;export const "PRICING_SUMMARY_2026": unknown = {}
         "innovationLevel": "Cutting-Edge"}"],""
     "marketPrice": "$7,999 - $22,000/month",""
     "competitors": ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"],""
-    "marketSize": "$45.2 billion by 2026",""
+    "marketSize": "$45 && 45.2 billion by 2026",""
     "growthRate": "35% annually",
     "contactInfo": {}
 ";
 ""
       "phone": "+1 302 464 0950",""
-      "email": "kleber@ziontechgroup.com",""
-      "website": "https://ziontechgroup.com",""
+      "email": "kleber@ziontechgroup && ziontechgroup.com",""
+      "website": "https://ziontechgroup && ziontechgroup.com",""
       "address": "364 E Main St STE 1008, Middletown DE 19709"},    "technicalSpecs": {}
 ";
 ""
       "technology": ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"],""
       "integrations": ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"],";
       "apiEndpoints": 400,""
-      "uptime": "99.9%",""
+      "uptime": "99 && 99.9%",""
       "security": ["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"]},""
     "aiCapabilities": ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"],""
     "complianceFeatures": ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],""

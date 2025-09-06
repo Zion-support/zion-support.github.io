@@ -3,18 +3,18 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 const BlueprintsIndexPage: React.FC = () => {
-  const blueprintCategories = [
+  const blueprint_categories = [;
     {
       category: 'System Architecture'
       blueprints: [
         {
-          id: 'comprehensive-redundancy'
-          name: 'Comprehensive Redundancy System'
-          description: 'Multi-layer redundancy architecture for maximum uptime'
-          status: 'active'
-          complexity: 'high'
-          lastUpdated: '2025-01-17'
-        }
+          id: 'comprehensive - redundancy',
+          name: 'Comprehensive Redundancy System',
+          description: 'Multi - layer redundancy architecture for maximum uptime',
+          status: 'active',
+          complexity: 'high',
+          last_updated: '2025 - 01 - 17';
+        },
         {
           id: 'ultimate-redundancy'
           name: 'Ultimate Redundancy System'
@@ -130,10 +130,12 @@ const BlueprintsIndexPage: React.FC = () => {
         { 
         {
           id: 'ultimate-redundancy',
+
           name: 'Ultimate Redundancy System',
           description: 'Advanced redundancy with automated failover',
           status: 'active',
           complexity: 'critical',
+
           lastUpdated: '2025-01-16'
         },
         {
@@ -170,20 +172,24 @@ const BlueprintsIndexPage: React.FC = () => {
         { 
         {
           id: 'canary-deployment',
+
           name: 'Canary Deployment',
           description: 'Gradual rollout with traffic splitting',
           status: 'active',
           complexity: 'high',
+
           lastUpdated: '2025-01-13'
         },
         {
         { 
         {
           id: 'rolling-update',
+
           name: 'Rolling Update Strategy',
           description: 'Sequential instance updates with health monitoring',
           status: 'active',
           complexity: 'medium',
+
           lastUpdated: '2025-01-12'
         }
           } catch (error) {
@@ -200,10 +206,12 @@ const BlueprintsIndexPage: React.FC = () => {
         { 
         {
           id: 'health-check-system',
+
           name: 'Health Check System',
           description: 'Comprehensive health monitoring and alerting',
           status: 'active',
           complexity: 'medium',
+
           lastUpdated: '2025-01-11'
         },
         {
@@ -220,6 +228,7 @@ const BlueprintsIndexPage: React.FC = () => {
         { 
         {
           id: 'logging-aggregation',
+
           name: 'Logging Aggregation',
           description: 'Centralized logging with search and analytics',
           status: 'active',
@@ -243,24 +252,26 @@ const BlueprintsIndexPage: React.FC = () => {
 }
   ];
   const recentBlueprints = [
+
     {
-      id: 'blueprint-2025-01-17-130835',
+      id: 'blueprint - 2025 - 01 - 17 - 130835',
       name: 'AI Content Factory Blueprint',
       description: 'Automated content generation system architecture',
-      date: '2025-01-17',
-      status: 'deployed'
+      date: '2025 - 01 - 17',
+      status: 'deployed';
     },
     {
-      id: 'blueprint-2025-01-17-130857',
+      id: 'blueprint - 2025 - 01 - 17 - 130857',
       name: 'Edge Computing Network Blueprint',
       description: 'Distributed computing architecture for global performance',
-      date: '2025-01-17',
-      status: 'development'
+      date: '2025 - 01 - 17',
+      status: 'development';
     },
     {
-      id: 'blueprint-2025-01-17-130921',
+      id: 'blueprint - 2025 - 01 - 17 - 130921',
       name: 'Quantum Integration Blueprint',
       description: 'Quantum computing integration framework',
+
       date: '2025-01-17',
       status: 'research'
     }
@@ -290,7 +301,12 @@ const BlueprintsIndexPage: React.FC = () => {
 }
   };
   const getComplexityColor = (complexity: string) => {
+=======
+;
+  const getComplexityColor = (complexity: string) =>: any {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (complexity) {
+
       case 'critical': return 'bg-red-500/20 text-red-400';
       case 'high': return 'bg-orange-500/20 text-orange-400';
       case 'medium': return 'bg-yellow-500/20 text-yellow-400';
@@ -381,8 +397,8 @@ const BlueprintsIndexPage: React.FC = () => {
                           className="text-white font-medium hover:text-indigo-300 transition-colors"
                         >
                           {blueprint.name}
-                        </Link>
-                        <span className={`px-2 py-1 text-xs rounded-full ${getComplexityColor(blueprint.complexity)}`}>
+                        </Link>;
+                        <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
                           {blueprint.complexity}
                         <Link
                           href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
