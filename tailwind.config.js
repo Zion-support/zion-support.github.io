@@ -21,9 +21,12 @@ module.exports = {
           800: '#1e40af',
           900: '#1e3a8a',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           950: '#172554',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
         },
         gray: {
           50: '#f9fafb',
@@ -37,12 +40,17 @@ module.exports = {
           800: '#1f2937',
           900: '#111827',
 <<<<<<< HEAD
+<<<<<<< HEAD
           950: '#030712'
         }
 =======
           950: '#030712',
         },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          950: '#030712'
+        }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -97,7 +105,11 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd

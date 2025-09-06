@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FooterNewsletter } from '@/components/FooterNewsletter';
 import { 
   Twitter,
@@ -428,6 +429,16 @@ export const Footer: React.FC = () => {
             <ChevronUp className="h-4 w-4" aria-hidden="true" />
             <span>Back to Top</span>
           </button>
+=======
+import React from 'react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-800 text-white py-8 mt-auto">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
         </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
       </div>

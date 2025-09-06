@@ -40,8 +40,8 @@ export default function ServicesOverviewPage() {;
           title="Micro SaaS"
           description="End-to-end product development with billing,auth,and analytics"
           bullets={[
-            "Foundational architecture"
-            "Billing + subscriptions"
+            "Foundational architecture",
+            "Billing + subscriptions",
             "Growth analytics"
 <<<<<<< HEAD
           ]}
@@ -77,7 +77,7 @@ export default function ServicesOverviewPage() {;
         />
       </div>
       <CTA />{" "}
-    </div>;
+    </div>
   );
 =======
 =======
@@ -88,6 +88,7 @@ export const metadata = {
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }
+<<<<<<< HEAD
 export default /**
  * ServicesOverviewPage - Function description
  */
@@ -145,6 +146,15 @@ function ServiceCard(): any ({;
   icon,;
 }: {;
 
+=======
+function ServiceCard({
+  href,
+  title,
+  description,
+  bullets,
+  icon
+}: {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
   href: string;
   title: string;
   description: string;

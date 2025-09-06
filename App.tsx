@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
@@ -39,6 +42,7 @@ export default function App(): React.JSX.Element {
       </Router>
     </ErrorBoundary>
   );
+<<<<<<< HEAD
 }
 =======
 
@@ -88,3 +92,6 @@ function App() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd

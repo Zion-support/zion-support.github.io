@@ -19,8 +19,12 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
+<<<<<<< HEAD
 
 
+=======
+      isFallback: false
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
     };
   },
 }));
@@ -32,6 +36,7 @@ jest.mock("next/image", () => {
   };
 });
 
+<<<<<<< HEAD
 
 
 // Mock Next.js Link component
@@ -43,6 +48,18 @@ jest.mock('next/link', () => ({
   },
 
 }));
+=======
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -73,7 +90,17 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+<<<<<<< HEAD
 
 };
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+};
+
+// Global test setup
+beforeEach(() => {
+  // Reset all mocks before each test
+  jest.clearAllMocks();
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd

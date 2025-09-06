@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 export const metadata = {
   title: "About | Zion Tech Group",
+<<<<<<< HEAD
   description:
 
 =======
@@ -17,6 +18,9 @@ export const metadata = {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  description: "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 };
 export default function AboutPage() {;
   return (
@@ -210,7 +214,12 @@ function AboutPage() {
           </div>{" "}
         </div>{" "}
       </div>{" "}
+<<<<<<< HEAD
 
     </div>);
 
+=======
+    </div>
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 }

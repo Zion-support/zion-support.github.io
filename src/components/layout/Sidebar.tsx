@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -254,6 +255,8 @@ export default function Sidebar({ isOpen, onClose, className = '' }: SidebarProp
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 import React from 'react'
 import { Link } from 'react-router-dom'
 =======
@@ -266,7 +269,11 @@ import {
   Settings,
   DollarSign,
   Phone
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+} from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
 
 <<<<<<< HEAD
 
@@ -282,9 +289,14 @@ export const Sidebar: React.FC = () => {
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
+<<<<<<< HEAD
   ];
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
+=======
+  ]
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
   return (
     <aside className="hidden lg:block w-64 bg-slate-800 text-white min-h-screen">
       <div className="p-6">
@@ -311,6 +323,7 @@ export const Sidebar: React.FC = () => {
 <<<<<<< HEAD
   )
 }
+<<<<<<< HEAD
 export default Sidebar
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -318,3 +331,7 @@ export default Sidebar
   );
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-64f2
+=======
+
+export default Sidebar
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd

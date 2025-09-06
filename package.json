@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "next dev",
+    "build": "next build",
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
+    "export": "next build",
+    "start": "next start",
     "postbuild": "echo \"Build completed\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -396,8 +396,11 @@
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
+<<<<<<< HEAD
     "@vitejs/plugin-react": "^5.0.2",
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-17cd
     "autoprefixer": "^10.4.21",
     "eslint": "^9.35.0",
 =======
@@ -430,7 +433,6 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
   },
   "engines": {
