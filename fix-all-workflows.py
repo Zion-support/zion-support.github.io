@@ -184,10 +184,20 @@ def main():
     """Main function to fix all workflow files"""
     print("🚀 GitHub Actions Workflow Auto-Fixer")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     print("=====================================")
 =======
     print("==")
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    print("==")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
     # Find all workflow files
     workflow_dir = Path('.github/workflows')
@@ -213,10 +223,20 @@ def main():
         print()
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     print("=====================================")
 =======
     print("==")
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    print("==")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     print(f"📊 Fix Summary:")
     print(f"Total files: {total_count}")
     print(f"Successfully processed: {fixed_count}")

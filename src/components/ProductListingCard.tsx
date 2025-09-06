@@ -332,6 +332,10 @@ setImageError (true) ;
 
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }> {;
   /* Image */ ;
 }<div ;
@@ -392,4 +396,32 @@ router.push ('/checkout') ;
 }className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground" > Request Quote </Button>) ;
 }</div> </div> </div> </div>) ;
 };
+<<<<<<< HEAD
 '"
+=======
+'"
+=======
+
+<<<<<<< HEAD
+
+
+  const stockStatus =
+    listing.stock === undefined
+
+<<<<<<< HEAD
+
+  
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+
+<<<<<<< HEAD
+
+
+export const ProductListingCard = React.memo(ProductListingCardComponent),
+ProductListingCard.displayName = 'ProductListingCard';
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -207,4 +215,24 @@ export function OnboardingWizard({
         )}
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   );
+=======
+  );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+        url: "/profile?tab=skills"
+      };
+<<<<<<< HEAD
+  ];
+  
+  const steps = type === 'client' ? clientSteps : talentSteps;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

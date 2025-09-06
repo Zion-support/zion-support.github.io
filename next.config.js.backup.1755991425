@@ -315,9 +315,18 @@ const nextConfig = {
       );
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
     
     // Development optimizations to prevent memory leaks with 176+ pages
@@ -903,6 +912,10 @@ const nextConfig = {
   async rewrites() {
     return [
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
       {
         source: '/docs/zion-protocol.pdf',
@@ -975,6 +988,15 @@ const nextConfig = {
         destination: '/api/zion-whitepaper-pdf?edition=full',
       },    ];
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+      {
+        source: '/docs/zion-protocol.pdf',
+        destination: '/api/zion-whitepaper-pdf?edition=full',
+      },    ];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   },
   
   // Skip ESLint during build for faster deployment  

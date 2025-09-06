@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
@@ -18,6 +23,11 @@ import {
 } from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 import { Checkbox } from '@/components/ui/checkbox';
 // Form validation schema
@@ -287,6 +297,11 @@ export function LoginForm() {
       </form>
     </Form>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }else {;
   fireEvent ('login', {';
@@ -355,4 +370,25 @@ return ;
 }<div className=" flex justify-between mt-4" > <Button > {';
   isResending ? 'Sending...': 'Resend / Verify e-mail' ;
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+
+<<<<<<< HEAD
+
+  rememberMe: z.boolean()}),
+
+
+type LoginFormValues = z.infer<typeof loginSchema>;
+
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

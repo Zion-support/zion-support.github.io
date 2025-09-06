@@ -1,9 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
+<<<<<<< HEAD
+=======
+=======
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import CodeBlock from "./CodeBlock";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface Param {
   name: string;
 type: string;
@@ -134,6 +149,10 @@ export function ApiPlayground({
   );
 
 export default ApiPlayground;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const val = paramValues[p.name];
 if (val) searchParams.append (p.name, val) ;
 });
@@ -160,4 +179,22 @@ if (contentType?.includes ('application/json') ) {;
   p.name ;
 }</div>) ;
 }export default ApiPlayground;
+<<<<<<< HEAD
 '"
+=======
+'"
+=======
+
+<<<<<<< HEAD
+    let url = `${baseUrl}${path}`;
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+export default ApiPlayground;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

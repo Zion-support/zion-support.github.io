@@ -16,6 +16,10 @@ class User(db.Model):
     enrollments = db.relationship('Enrollment', back_populates='user', cascade="all, delete-orphan")
     certificates = db.relationship('Certificate', backref='user', lazy=True, cascade="all, delete-orphan")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
     analytics_events = db.relationship('AnalyticsEvent', backref='user', lazy='dynamic', cascade="all, delete-orphan")
     feedback_submissions = db.relationship('FeedbackSubmission', backref='user', lazy='dynamic', cascade="all, delete-orphan")
@@ -28,6 +32,13 @@ class User(db.Model):
     analytics_events = db.relationship('AnalyticsEvent', backref='user', lazy='dynamic', cascade="all, delete-orphan")
     feedback_submissions = db.relationship('FeedbackSubmission', backref='user', lazy='dynamic', cascade="all, delete-orphan")
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    analytics_events = db.relationship('AnalyticsEvent', backref='user', lazy='dynamic', cascade="all, delete-orphan")
+    feedback_submissions = db.relationship('FeedbackSubmission', backref='user', lazy='dynamic', cascade="all, delete-orphan")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     def __repr__(self):
         return f'<User {self.username}>'
 
@@ -134,9 +145,18 @@ class Certificate(db.Model):
 
     def __repr__(self):
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         return f'<Certificate {self.id} - User {self.user_id} for Course {self.course_id}>'
 
 # New Analytics Models
@@ -221,6 +241,10 @@ class ContentAnalytics(db.Model):
     
     def __repr__(self):
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
         return f'<ContentAnalytics {self.content_type} {self.content_id} on {self.date}>'
 =======
         return f'<Certificate {self.id} for U{self.user_id} - C{self.course_id}>'
@@ -278,3 +302,9 @@ class UpdateComment(db.Model):
 =======
         return f'<ContentAnalytics {self.content_type} {self.content_id} on {self.date}>'
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+        return f'<ContentAnalytics {self.content_type} {self.content_id} on {self.date}>'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

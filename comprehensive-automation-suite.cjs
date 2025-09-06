@@ -13,6 +13,7 @@ class ComprehensiveAutomationSuite {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
     this.results = {
+<<<<<<< HEAD
       dependencyFi: { succes: false, duratio: 0, error: [], warning: [] },
       codeQualit: { succes: false, duratio: 0, error: [], warning: [] },
       securityAudi: { succes: false, duratio: 0, error: [], warning: [] },
@@ -41,6 +42,36 @@ class ComprehensiveAutomationSuite {
         warning: [],
       },
       deploymen: { succes: false, duratio: 0, error: [], warning: [] },
+=======
+      dependencyFix: { success: false, duration: 0, errors: [], warnings: [] },
+      codeQuality: { success: false, duration: 0, errors: [], warnings: [] },
+      securityAudit: { success: false, duration: 0, errors: [], warnings: [] },
+      buildOptimization: {
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
+      seoOptimization: {
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
+      accessibilityImprovements: {
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
+      performanceOptimization: {
+        success: false,
+        duration: 0,
+        errors: [],
+        warnings: [],
+      },
+      deployment: { success: false, duration: 0, errors: [], warnings: [] },
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
   }
 
@@ -58,6 +89,7 @@ class ComprehensiveAutomationSuite {
   }
 
   async runCommand(command, description, options = {}) {
+<<<<<<< HEAD
     this.log(`Runnin: ${description}`);
     try {
       const result = execSync(command, {
@@ -74,6 +106,24 @@ class ComprehensiveAutomationSuite {
         succes: false,
         erro: error.message,
         outpu: error.stdout || error.stderr,
+=======
+    this.log(`Running: ${description}`);
+    try {
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8',
+        ...options,
+      });
+      this.log(`✅ ${description} completed successfully`);
+      return { success: true, output: result };
+    } catch (error) {
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -108,6 +158,7 @@ class ComprehensiveAutomationSuite {
       );
 
       this.results.dependencyFix = {
+<<<<<<< HEAD
         succes: installResult.success && eslintResult.success,
         duratio: Date.now() - startTime,
         error: [
@@ -122,6 +173,22 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: installResult.success && eslintResult.success,
+        duration: Date.now() - startTime,
+        errors: [
+          ...(installResult.success ? [] : [installResult.error]),
+          ...(eslintResult.success ? [] : [eslintResult.error]),
+        ],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.dependencyFix = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -150,6 +217,7 @@ class ComprehensiveAutomationSuite {
       );
 
       this.results.codeQuality = {
+<<<<<<< HEAD
         succes: typeCheckResult.success && lintResult.success,
         duratio: Date.now() - startTime,
         error: [
@@ -164,6 +232,22 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: typeCheckResult.success && lintResult.success,
+        duration: Date.now() - startTime,
+        errors: [
+          ...(typeCheckResult.success ? [] : [typeCheckResult.error]),
+          ...(lintResult.success ? [] : [lintResult.error]),
+        ],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.codeQuality = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -186,6 +270,7 @@ class ComprehensiveAutomationSuite {
       );
 
       this.results.securityAudit = {
+<<<<<<< HEAD
         succes: auditResult.success,
         duratio: Date.now() - startTime,
         error: [...(auditResult.success ? [] : [auditResult.error])],
@@ -197,6 +282,19 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: auditResult.success,
+        duration: Date.now() - startTime,
+        errors: [...(auditResult.success ? [] : [auditResult.error])],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.securityAudit = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -222,6 +320,7 @@ class ComprehensiveAutomationSuite {
       );
 
       this.results.buildOptimization = {
+<<<<<<< HEAD
         succes: cleanBuild.success && productionBuild.success,
         duratio: Date.now() - startTime,
         error: [
@@ -236,6 +335,22 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: cleanBuild.success && productionBuild.success,
+        duration: Date.now() - startTime,
+        errors: [
+          ...(cleanBuild.success ? [] : [cleanBuild.error]),
+          ...(productionBuild.success ? [] : [productionBuild.error]),
+        ],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.buildOptimization = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -258,6 +373,7 @@ class ComprehensiveAutomationSuite {
       );
 
       this.results.seoOptimization = {
+<<<<<<< HEAD
         succes: sitemapResult.success && searchIndexResult.success,
         duratio: Date.now() - startTime,
         error: [
@@ -272,6 +388,22 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: sitemapResult.success && searchIndexResult.success,
+        duration: Date.now() - startTime,
+        errors: [
+          ...(sitemapResult.success ? [] : [sitemapResult.error]),
+          ...(searchIndexResult.success ? [] : [searchIndexResult.error]),
+        ],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.seoOptimization = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -283,17 +415,26 @@ class ComprehensiveAutomationSuite {
     try {
       // Run accessibility checks with basic rules
       const accessibilityCheck = await this.runCommand(
+<<<<<<< HEAD
         'npx eslint . --rule "jsx-a11y/alt-tex: warn" --rule "jsx-a11y/aria-rol: warn"',
+=======
+        'npx eslint . --rule "jsx-a11y/alt-text: warn" --rule "jsx-a11y/aria-role: warn"',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'Accessibility Check'
       );
 
       // Check for keyboard navigation
       const keyboardCheck = await this.runCommand(
+<<<<<<< HEAD
         'npx eslint . --rule "jsx-a11y/tabindex-no-positiv: warn"',
+=======
+        'npx eslint . --rule "jsx-a11y/tabindex-no-positive: warn"',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         'Keyboard Navigation Check'
       );
 
       this.results.accessibilityImprovements = {
+<<<<<<< HEAD
         succes: accessibilityCheck.success,
         duratio: Date.now() - startTime,
         error: [
@@ -307,6 +448,21 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: accessibilityCheck.success,
+        duration: Date.now() - startTime,
+        errors: [
+          ...(accessibilityCheck.success ? [] : [accessibilityCheck.error]),
+        ],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.accessibilityImprovements = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -329,6 +485,7 @@ class ComprehensiveAutomationSuite {
       );
 
       this.results.performanceOptimization = {
+<<<<<<< HEAD
         succes: bundleAnalysis.success || performanceCheck.success,
         duratio: Date.now() - startTime,
         error: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
@@ -340,6 +497,19 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: bundleAnalysis.success || performanceCheck.success,
+        duration: Date.now() - startTime,
+        errors: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.performanceOptimization = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -353,13 +523,18 @@ class ComprehensiveAutomationSuite {
       await this.runCommand('git add .', 'Git Add');
 
       // Commit changes
+<<<<<<< HEAD
       const commitMessage = `fea: Comprehensive automation improvements and fixes - ${new Date().toISOString()}`;
+=======
+      const commitMessage = `feat: Comprehensive automation improvements and fixes - ${new Date().toISOString()}`;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       await this.runCommand(`git commit -m "${commitMessage}"`, 'Git Commit');
 
       // Push changes
       await this.runCommand('git push origin HEAD', 'Git Push');
 
       this.results.deployment = {
+<<<<<<< HEAD
         succes: true,
         duratio: Date.now() - startTime,
         error: [],
@@ -371,6 +546,19 @@ class ComprehensiveAutomationSuite {
         duratio: Date.now() - startTime,
         error: [error.message],
         warning: [],
+=======
+        success: true,
+        duration: Date.now() - startTime,
+        errors: [],
+        warnings: [],
+      };
+    } catch (error) {
+      this.results.deployment = {
+        success: false,
+        duration: Date.now() - startTime,
+        errors: [error.message],
+        warnings: [],
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       };
     }
   }
@@ -394,21 +582,37 @@ class ComprehensiveAutomationSuite {
       this.log(`${status} ${task}: ${duration}`);
 
       if (result.errors.length > 0) {
+<<<<<<< HEAD
         result.errors.forEach(error => this.log(`   Erro: ${error}`));
       }
       if (result.warnings.length > 0) {
         result.warnings.forEach(warning => this.log(`   Warnin: ${warning}`));
+=======
+        result.errors.forEach(error => this.log(`   Error: ${error}`));
+      }
+      if (result.warnings.length > 0) {
+        result.warnings.forEach(warning => this.log(`   Warning: ${warning}`));
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
     });
 
     // Save detailed report
     const report = {
+<<<<<<< HEAD
       timestam: new Date().toISOString(),
       totalDuration,
       successfulTasks,
       totalTasks,
       result: this.results,
       recommendation: this.generateRecommendations(),
+=======
+      timestamp: new Date().toISOString(),
+      totalDuration,
+      successfulTasks,
+      totalTasks,
+      results: this.results,
+      recommendations: this.generateRecommendations(),
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
 
     fs.writeFileSync(

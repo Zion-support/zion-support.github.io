@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../utils/sync/storage';
 import { Peer } from '../../../utils/sync/types';
@@ -11,6 +12,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const peer = req.body as Partial<Peer>;
   if (!peer.baseUrl) return res.status(400).json({ error: 'baseUrl required' });
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../utils/sync/storage";
+import { Peer } from "../../../utils/sync/types";
+import { v4 as uuidv4 } from "uuid";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status($1).json({$2});
+  const state = readState();
+  const peer = req.body as Partial<Peer>;
+  if (!peer.baseUrl) return res.status($1).json({$2});
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const id = peer.id || uuidv4();
   const existing = state.config.peers.find(p => p.baseUrl === peer.baseUrl);
   if (existing) {
@@ -26,5 +38,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
   }
 
+<<<<<<< HEAD
   writeState(state);
   return res.status(200).json({ peers: state.config.peers });
+=======
+  writeState(state),
+  return res.status(200).json({ peers: state.config.peers })
+}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

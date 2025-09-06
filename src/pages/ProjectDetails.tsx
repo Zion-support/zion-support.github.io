@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { format } from 'date-fns';
@@ -746,6 +755,10 @@ function ProjectDetailsContent() {
     </>
   );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 setIsSubmittingNote (true);
 try {;
@@ -836,4 +849,37 @@ default: return <Badge variant="outline"> {;
 }</p> </CardFooter>) ;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;
+<<<<<<< HEAD
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
+=======
+  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
+=======
+
+<<<<<<< HEAD
+
+        .order("created_at", { ascending: false }),
+      
+
+<<<<<<< HEAD
+
+      
+
+    if (!project) return;
+    
+<<<<<<< HEAD
+
+        ...project;
+        status: newStatus}),
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default function ProjectDetails() {
+  return (
+    <ProtectedRoute>
+      <ProjectDetailsContent />
+    </ProtectedRoute>
+  );
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

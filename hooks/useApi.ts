@@ -2,6 +2,10 @@ import { useState, useEffect, useCallback } from 'react';
 
 interface UseApiOptions {
   immediate?: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   onSuccess?: (data: any) => void, onError?: (error: Error) => void,
 }
 
@@ -23,10 +27,25 @@ export const useApi = <T = unknown>(
   apiFunction: (...args: unknown[]) => Promise<T>,
   options: UseApiOptions<T> = {}
 ) => {
+<<<<<<< HEAD
+=======
+=======
+}
+
+export function useApi<T>(
+  apiCall: () => Promise<T>;
+  options: UseApiOptions = {}
+): ApiState<T> & { refetch: () => void } {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const execute = useCallback(async (...args: unknown[]) => {
     try {
       setLoading(true);
@@ -40,6 +59,20 @@ export const useApi = <T = unknown>(
       setError(error);
       options.onError?.(error);
       throw error;
+<<<<<<< HEAD
+=======
+=======
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      const result = await apiCall();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } finally {
       setLoading(false);
     }
@@ -51,6 +84,10 @@ export const useApi = <T = unknown>(
     }
   }, [execute, options.immediate]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return { data, loading, error, execute };
 };
 
@@ -99,3 +136,15 @@ export function useApi<T>(
   return state;
 
 }
+<<<<<<< HEAD
+=======
+=======
+  return {
+    data;
+    loading;
+    error;
+    refetch: fetchData;
+  };
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

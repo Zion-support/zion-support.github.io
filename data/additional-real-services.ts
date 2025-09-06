@@ -33,6 +33,32 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     category: 'AI & Automation',
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
+=======
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  };
+  {
+    id: "data-warehouse-solution";
+    name: "Data Warehouse Solution";
+    tagline: "Enterprise-grade data management and analytics";
+    price: "$149/month";
+    description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.";
+    features: [
+      "Data integration";
+      "Real-time processing";
+      "Advanced analytics";
+      "Scalable architecture";
+      "Security compliance"
+    ];
+    link: "/services/data-warehouse-solution";
+    category: "Data & Analytics";
+    realImplementation: true;
+    contactInfo: {
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -56,9 +82,44 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     category: 'Data & Analytics',
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  };
+  {
+    id: "data-warehouse-solution", name: "Data Warehouse Solution",
+    tagline: "Enterprise-grade data management and analytics", price: "$149/month",
+    description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",
+    features: [
+      "Data integration";
+      "Real-time processing";
+      "Advanced analytics";
+      "Scalable architecture";
+      "Security compliance"
+    ];
+    link: "/services/data-warehouse-solution", category: "Data & Analytics",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

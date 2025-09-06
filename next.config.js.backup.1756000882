@@ -1,6 +1,10 @@
 const path = require('path');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Define assetPrefix based on environment
 const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
@@ -27,6 +31,13 @@ const nextConfig = {
 // Define assetPrefix based on environment
 const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+// Define assetPrefix based on environment
+const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -82,10 +93,19 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
   },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Experimental features for better performance
   experimental: {
     optimizeCss: true,
@@ -112,9 +132,18 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 
   // Webpack configuration
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   webpack: (config, { dev, isServer }) => {
     // Simple webpack configuration
     if (!isServer) {
@@ -127,6 +156,10 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
       };
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -202,6 +235,11 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     return config;
   },
 };

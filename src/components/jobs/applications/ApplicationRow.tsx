@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,6 +14,22 @@ import { ScoreBadge } from './ScoreBadge';
 import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
+<<<<<<< HEAD
+=======
+=======
+import { formatDistanceToNow } from "date-fns";
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { TableRow, TableCell } from "@/components/ui/table";
+import { JobApplication, ApplicationStatus } from "@/types/jobs";
+import { StatusBadge } from "./StatusBadge";
+import { ScoreBadge } from "./ScoreBadge";
+import { ApplicationActions } from "./ApplicationActions";
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ApplicationRowProps {
   application: JobApplication;
@@ -107,4 +128,19 @@ export function ApplicationRow({
         />
       </TableCell>
     </TableRow>
+<<<<<<< HEAD
   );
+=======
+  );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  const talentName = application.talent_profile?.full_name || "Unknown";
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

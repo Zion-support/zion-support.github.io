@@ -13,6 +13,17 @@ export default async function handler(
       raiseAmount,
       tokenName,
     } = req.body || {};
+<<<<<<< HEAD
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { type = 'launch', companyName = 'Zion', date = new Date().toISOString().substring(0,10), raiseAmount, tokenName } = req.body || {};
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { type = 'launch', companyName = 'Zion', date = new Date().toISOString().substring(0,10), raiseAmount, tokenName } = req.body || {};
+ursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const apiKey = process.env.OPENAI_API_KEY;
     if (apiKey) {
       try {
@@ -24,14 +35,31 @@ export default async function handler(
           messages: [
             { role: 'system', content: 'You are a seasoned tech PR writer.' },
             { role: 'user', content: prompt },
+            { role: 'user', content: prompt }
+ursor/integrate-build-improve-and-re-verify-b76c
           ],
           temperature: 0.4,
-          max_tokens: 500,
+          max_tokens: 500
         });
         const text = completion.choices?.[0]?.message?.content?.trim();
         if (text) {
           res.status(200).json({ ok: true, text });
+<<<<<<< HEAD
           return;        }
+=======
+          return;
+            { role: 'user', content: prompt }
+          ],
+          temperature: 0.4,
+          max_tokens: 500});
+        const text = completion.choices?.[0]?.message?.content?.trim();
+        if (text) {
+          res.status(200).json({ ok: true, text });
+          return
+          return
+ursor/integrate-build-improve-and-re-verify-b76c
+        }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       } catch (_) {
         // fall through to template
       }
@@ -44,6 +72,23 @@ export default async function handler(
       tokenName,
     } as any);
     res.status(200).json({ ok: true, text, fallback: true });
+<<<<<<< HEAD
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
   }
+=======
+    const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
+    res.status(200).json({ ok: true, text, fallback: true })
+ursor/integrate-build-improve-and-re-verify-b76c
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
+  }
+    const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
+    res.status(200).json({ ok: true, text, fallback: true })
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
+  }
+}
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

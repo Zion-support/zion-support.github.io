@@ -16,6 +16,12 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <h1>Next.js Page Structure Validation Report</h1>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <p>Generated 8/21/2025, 12:58:31 AM</p>
 <div class="build-status build-failure">❌ BUILD WILL FAIL</div>
 =======
@@ -28,12 +34,21 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <p><strong>Files with Issues:</strong> 1</p>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
 <p>Generated 8/21/2025, 12:58:31 AM</p>
 <div class="build-status build-failure">❌ BUILD WILL FAIL</div><div class="card success">
 <h2>Summary</h2>
 <p><strong>Total Files:</strong> 1</p>
 <p><strong>Files with Issues:</strong> 1</p>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <p><strong>Critical Issues:</strong> 3</p>
 <p><strong>Warnings:</strong> 1</p>
 <p><strong>Build Breaking Files:</strong> 1</p>
@@ -53,6 +68,10 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <div class="pill error">MISSING_RETURN_STATEMENT: Missing return statement or JSX</div>
 <h4>Warnings:</h4>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <div class="pill warning">PAGE_TOO_SHORT: Page content seems too short, may be incomplete</div>
 =======
 <p><strong>Critical Issues:</strong> 0</p>
@@ -68,3 +87,9 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 =======
 <div class="pill warning">PAGE_TOO_SHORT: Page content seems too short, may be incomplete</div></div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+<div class="pill warning">PAGE_TOO_SHORT: Page content seems too short, may be incomplete</div></div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

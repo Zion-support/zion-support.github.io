@@ -38,32 +38,122 @@ interface TextAnalysisResult {
     isEnglish: boolean;
   };
   keywords: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     topWords: Array<{ word: string; count: number; frequency: number }>;
     bigrams: Array<{ phrase: string; count: number }>;
     trigrams: Array<{ phrase: string; count: number }>;
   };
+<<<<<<< HEAD
+=======
+=======
+  text: string,
+  statistics: {
+      
+    characters: number, charactersNoSpaces: number,
+    words: number, sentences: number,
+    paragraphs: number, syllables: number,
+    readingTime: number,
+    speakingTime: number
+  
+    },
+    readability: {
+    fleschReadingEase: number, fleschKincaidGrade: number,
+    gunningFog: number, smog: number,
+    colemanLiau: number, automatedReadability: number,
+    averageGrade: number
+  };
+  sentiment: {
+      
+    score: number, label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive',
+    positiveWords: string[],
+    negativeWords: string[]
+  
+    },
+    language: {
+    detectedLanguage: string, confidence: number,
+    isEnglish: boolean
+  };
+  keywords: {
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    topWords: Array<{ word: string, count: number, frequency: number }>;
+    bigrams: Array<{ phrase: string, count: number }>;
+    trigrams: Array<{ phrase: string, count: number }>
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    return res.status(405).json({ error: 'Method not allowed' });
+=======
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   try {
     const { text } = req.body;
 
     if (!text || typeof text !== 'string') {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return res.status(400).json({ error: 'Text is required' });
     }
 
     if (text.length > 10000) {
       return res
         .status(400)
+<<<<<<< HEAD
         .json({ error: 'Text too long (max 10,000 characters)' });    }
+=======
+        .json({ error: 'Text too long (max 10,000 characters)' });
+=======
+      return res.status(400).json({ error: 'Text is required' })
+    }
+
+    if (text.length > 10000) {
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return res.status(400).json({ error: 'Text is required' })
+    }
+
+    if (text.length > 10000) {
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Basic statistics
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const words = text
       .trim()
       .split(/\s+/)
@@ -74,6 +164,20 @@ export default async function handler(
     const paragraphs = text
       .split(/\n\s*\n/)
       .filter(para => para.trim().length > 0).length;
+<<<<<<< HEAD
+=======
+=======
+    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
+    const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
+    const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -81,17 +185,46 @@ export default async function handler(
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return matches ? matches.length : 1;
     };
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
+<<<<<<< HEAD
       return total + syllableCount(word);    }, 0);
+=======
+      return total + syllableCount(word);
+=======
+      return matches ? matches.length : 1
+    };
+
+    const syllables = text.split(/\s+/).reduce((total, word) => {
+      return total + syllableCount(word)
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      return matches ? matches.length : 1
+    };
+
+    const syllables = text.split(/\s+/).reduce((total, word) => {
+      return total + syllableCount(word)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    }, 0);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
     const readingTime = Math.ceil(words / 200);
     const speakingTime = Math.ceil(words / 150);
 
     // Readability scores
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const fleschReadingEase = Math.max(
       0,
       Math.min(
@@ -129,6 +262,17 @@ export default async function handler(
       0,
       4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43
     );
+<<<<<<< HEAD
+=======
+=======
+    const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
+    const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
+    const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
+    const smog = Math.max(0, 1.043 * Math.sqrt(text.split(/\s+/).filter(word => word.length > 2).length * (30 / sentences)) + 3.1291);
+    const colemanLiau = Math.max(0, 0.0588 * (charactersNoSpaces / words * 100) - 0.296 * (sentences / words * 100) - 15.8);
+    const automatedReadability = Math.max(0, 4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const averageGrade = Math.round(
       (fleschKincaidGrade +
@@ -182,6 +326,11 @@ export default async function handler(
 
     // Keyword analysis
     const wordCounts = new Map<string, number>();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     text
       .toLowerCase()
       .split(/\s+/)
@@ -191,27 +340,91 @@ export default async function handler(
           wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1);
         }
       });
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    text.toLowerCase().split(/\s+/).forEach(word => {
+      const cleanWord = word.replace(/[^\w]/g, '');
+      if (cleanWord.length > 2) {
+        wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)
+      }
+    });
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([word, count]) => ({
+<<<<<<< HEAD
         word,
         count,
         frequency: Math.round((count / words) * 1000) / 10,      }));
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        word,
+        count,
+        frequency: Math.round((count / words) * 1000) / 10,
+=======
+        word;
+        count;
+        frequency: Math.round((count / words) * 1000) / 10
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        word;
+        count;
+        frequency: Math.round((count / words) * 1000) / 10
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      }));
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Bigrams and trigrams
     const wordsArray = text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
 
+<<<<<<< HEAD
     for (let i = 0; i < wordsArray.length - 1; i++) {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    for (let i = 0; i < wordsArray.length - 1; i++) {
+=======
+    for (let i = 0, i < wordsArray.length - 1, i++) {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1);
     }
 
     for (let i = 0; i < wordsArray.length - 2; i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
+<<<<<<< HEAD
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);    }
+=======
+<<<<<<< HEAD
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
+=======
+    for (let i = 0, i < wordsArray.length - 1, i++) {
+      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
+      bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
+    }
+
+    for (let i = 0, i < wordsArray.length - 2, i++) {
+      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -224,11 +437,33 @@ export default async function handler(
       .map(([phrase, count]) => ({ phrase, count }));
 
     // Language detection (simplified - assume English for demo)
+<<<<<<< HEAD
     const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
     const result: TextAnalysisResult = {
       text,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
+=======
+    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    const detectedLanguage = isEnglish ? 'en' : 'unknown';
+    const confidence = isEnglish ? 0.95 : 0.5;
+
+    const result: TextAnalysisResult = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      text,
+=======
+      text;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       statistics: {
         characters,
         charactersNoSpaces,
@@ -249,8 +484,51 @@ export default async function handler(
         averageGrade,
       },
       sentiment: {
+<<<<<<< HEAD
         score: sentimentScore,
         label: sentimentLabel,
+=======
+        score: sentimentScore;
+        label: sentimentLabel;
+        positiveWords: textWords.filter(word => positiveWords.includes(word));
+        negativeWords: textWords.filter(word => negativeWords.includes(word))};
+      language: {
+        detectedLanguage;
+        confidence;
+        isEnglish};
+      keywords: {
+        topWords;
+        bigrams;
+        trigrams}};
+
+    res.status(200).json(result)
+  } catch (error) {
+    console.error('Text analysis error:', error);
+    res.status(500).json({ error: 'Internal server error' })
+  }
+<<<<<<< HEAD
+=======
+      text;
+      statistics: {
+      
+        characters;
+        charactersNoSpaces;
+        words;
+        sentences;
+        paragraphs;
+        syllables;
+        readingTime;
+        speakingTime
+    },
+    readability: {
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
+        gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100,
+        colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100,
+        averageGrade};
+      sentiment: {
+      
+        score: sentimentScore, label: sentimentLabel,
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         positiveWords: textWords.filter(word => positiveWords.includes(word)),
         negativeWords: textWords.filter(word => negativeWords.includes(word)),
       },
@@ -269,5 +547,15 @@ export default async function handler(
     res.status(200).json(result);
   } catch (error) {
     console.error('Text analysis error:', error);
+<<<<<<< HEAD
     res.status(500).json({ error: 'Internal server error' });
   }
+=======
+    res.status(500).json({ error: 'Internal server error' })
+  }
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

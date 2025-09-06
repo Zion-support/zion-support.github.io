@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import {
   Table,
@@ -22,6 +27,11 @@ import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Trash, Mail, UserPlus } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
@@ -231,6 +241,10 @@ export function TeamManagement() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   //In a real app, this would make an API call to remove the member toast ({;
   ;
@@ -256,4 +270,20 @@ export function TeamManagement() {
 }> <Trash className="h-4 w-4" /> </Button>) ;
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+
+<<<<<<< HEAD
+
+      description: `An invitation has been sent to ${newMemberEmail}`}),
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

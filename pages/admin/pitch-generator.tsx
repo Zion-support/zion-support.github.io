@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+import React, { useCallback, useMemo, useState } from 'react';
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Head from 'next/head';
 
 interface Slide {
@@ -45,19 +50,87 @@ export default function PitchGenerator() {
     roundType: '',
     targetRaise: '',
     assets: [],
+<<<<<<< HEAD
   });  const [slides, setSlides] = useState<Slide[]>([]);
+=======
+  });
+import React, { useCallback, useMemo, useState } from 'react';
+import Head from 'next/head';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { GetServerSideProps } from 'next';
+import { requireAdminRole } from '../../utils/auth';
+export type Slide = {
+  id: string,
+  title: string,
+  content: string,
+  chart?: {
+    type: 'bar' | 'funnel' | 'timeline',
+    data: Array<{ label: string, value: number }>
+  }
+};
+
+type BuilderState = {
+  mission: string,
+  fundingStage: string,
+  vision: string,
+  roundType: 'Seed' | 'Series A' | 'Token Sale' | '',
+  targetRaise: string,
+  assets: File[]
+};
+
+function uid() {
+  return Math.random().toString(36).slice(2)
+}
+
+function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: boolean, onClick: () => void }) {
+  return (
+    <button onClick={onClick} className={`w-56 shrink-0 border rounded-md p-3 text-left bg-white/70 dark:bg-gray-900 ${isActive ? 'ring-2 ring-blue-500' : 'border-gray-200 dark:border-gray-800'}`}>
+      <div className="font-semibold text-sm line-clamp-2">{slide.title || 'Untitled'}</div>
+      <div className="text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap">{slide.content || '—'}</div>
+    </button>
+  )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const result = await requireAdminRole(ctx);
+  // @ts-ignore
+  if ('redirect' in result) return result;
+  return result
+};
+
+export default function PitchGenerator() {
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+  const [builder, setBuilder] = useState<BuilderState>({ mission: '', fundingStage: '', vision: '', roundType: '', targetRaise: '', assets: [] }),
+ursor/integrate-build-improve-and-re-verify-b76c
+  const [slides, setSlides] = useState<Slide[]>([]);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
   const [history, setHistory] = useState<
     { id: string; createdAt: string; version: string }[]
   >([]);
+<<<<<<< HEAD
+=======
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
+  const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
+ursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const activeSlide = slides[activeIndex];
 
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     const files = Array.from(e.dataTransfer.files || []);
+<<<<<<< HEAD
     setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
+=======
+    setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+ursor/integrate-build-improve-and-re-verify-b76c
+  }, []);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
@@ -69,16 +142,46 @@ export default function PitchGenerator() {
       `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,
     []
   );
+<<<<<<< HEAD
+=======
+    e.stopPropagation()
+  };
+
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
+    e.stopPropagation()
+  };
+
+  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
+ursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const autoFetchMetrics = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
       return data;
+<<<<<<< HEAD
+=======
+      return data
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } catch (e) {
       return {};
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+      return data
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false)
+      setLoading(false)
+ursor/integrate-build-improve-and-re-verify-b76c
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, []);
 
   const buildDeck = useCallback(async () => {
@@ -90,12 +193,29 @@ export default function PitchGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           operatorPrompt,
+<<<<<<< HEAD
+=======
+          operatorPrompt;
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           inputs: builder,
           metrics,
         }),
       });
       const json = await res.json();
+<<<<<<< HEAD
       const newSlides: Slide[] = json.slides || [];      setSlides(newSlides);
+=======
+      const newSlides: Slide[] = json.slides || [];
+          operatorPrompt;
+          inputs: builder,
+          metrics})});
+      const json = await res.json();
+      const newSlides: Slide[] = json.slides || [],
+      const newSlides: Slide[] = json.slides || [],
+ursor/integrate-build-improve-and-re-verify-b76c
+      setSlides(newSlides);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       setActiveIndex(0);
       const v = json.version || `v${new Date().toISOString()}`;
       setVersionTag(v);
@@ -103,6 +223,11 @@ export default function PitchGenerator() {
         { id: uid(), createdAt: new Date().toISOString(), version: v },
         ...h,
       ]);
+<<<<<<< HEAD
+=======
+      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } catch (e) {
       // noop
     } finally {
@@ -139,10 +264,44 @@ export default function PitchGenerator() {
     },
     [slides]
   );
+<<<<<<< HEAD
+=======
+      setHistory((h) => [{ id: uid(), createdAt: new Date().toISOString(), version: v }, ...h])
+    } catch (e) {
+      // noop
+    } finally {
+      setLoading(false)
+    }
+  }, [autoFetchMetrics, builder, operatorPrompt]);
+
+ursor/integrate-build-improve-and-re-verify-b76c
+  const rephraseSlide = useCallback(async (idx: number) => {
+    if (!slides[idx]) return;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/rewrite', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slide: slides[idx] })}),
+      const json = await res.json();
+      setSlides((arr) => arr.map((s, i) => (i === idx ? { ...s, title: json.title || s.title, content: json.content || s.content } : s)))
+    } catch (e) {
+    } finally {
+      setLoading(false)
+    }
+  }, [slides]);
+ursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const addSlide = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
+<<<<<<< HEAD
+=======
+      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const json = await res.json();
       setSlides(arr => [
         ...arr,
@@ -155,7 +314,21 @@ export default function PitchGenerator() {
       setActiveIndex(slides.length);
     } catch (e) {
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+      const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' }),
+      const json = await res.json();
+      setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),
+      setActiveIndex(slides.length)
+    } catch (e) {
+    } finally {
+      setLoading(false)
+      setLoading(false)
+ursor/integrate-build-improve-and-re-verify-b76c
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [slides.length]);
 
   const exportPdf = useCallback(async () => {
@@ -165,7 +338,15 @@ export default function PitchGenerator() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag }),
+<<<<<<< HEAD
       });      const blob = await res.blob();
+=======
+      });
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),
+ursor/integrate-build-improve-and-re-verify-b76c
+      const blob = await res.blob();
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -174,7 +355,21 @@ export default function PitchGenerator() {
       URL.revokeObjectURL(url);
     } catch (e) {
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+      URL.revokeObjectURL(url)
+    } catch (e) {
+    } finally {
+      setLoading(false)
+      URL.revokeObjectURL(url)
+    } catch (e) {
+    } finally {
+      setLoading(false)
+ursor/integrate-build-improve-and-re-verify-b76c
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [slides, versionTag]);
 
   const exportGoogleSlides = useCallback(async () => {
@@ -189,19 +384,47 @@ export default function PitchGenerator() {
           version: versionTag,
         }),
       });
+<<<<<<< HEAD
+=======
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const json = await res.json();
       if (json && json.url) {
         window.open(json.url, '_blank');
       }
     } catch (e) {
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }
+=======
+      setLoading(false);
+      const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),
+      const json = await res.json();
+      if (json && json.url) {
+        window.open(json.url, '_blank')
+      }
+    } catch (e) {
+    } finally {
+      setLoading(false)
+      setLoading(false)
+ursor/integrate-build-improve-and-re-verify-b76c
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [slides, versionTag]);
 
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
+<<<<<<< HEAD
     );  };
+=======
+    );
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
+    setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
+ursor/integrate-build-improve-and-re-verify-b76c
+  };
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null;
@@ -221,6 +444,16 @@ export default function PitchGenerator() {
                 title={`${d.label}: ${d.value}`}
               />
             ))}
+<<<<<<< HEAD
+=======
+      <div className="mt-3">
+        <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
+        <div className="flex gap-2 items-end h-24 mt-2">
+          {type === 'bar' && data.map((d) => (
+            <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+          ))}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {type === 'funnel' && (
             <div className='w-full'>
               <div className='flex flex-col gap-1'>
@@ -231,7 +464,25 @@ export default function PitchGenerator() {
                     style={{ width: `${100 - idx * 12}%` }}
                   >
                     {d.label}: {d.value}
+<<<<<<< HEAD
                   </div>                ))}
+=======
+                  </div>
+      <div className="mt-3">
+        <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
+        <div className="flex gap-2 items-end h-24 mt-2">
+          {type === 'bar' && data.map((d) => (
+            <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+          ))}
+          {type === 'funnel' && (
+            <div className="w-full">
+              <div className="flex flex-col gap-1">
+                {data.map((d, idx) => (
+                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+                  <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
+ursor/integrate-build-improve-and-re-verify-b76c
+                ))}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             </div>
           )}
@@ -239,7 +490,18 @@ export default function PitchGenerator() {
             <div className='text-xs grid grid-cols-4 gap-2 w-full'>
               {data.map(d => (
                 <div key={d.label} className='border p-1 rounded'>
+<<<<<<< HEAD
                   <div className='font-medium'>{d.label}</div>                  <div>{d.value}</div>
+=======
+                  <div className='font-medium'>{d.label}</div>
+ursor/integrate-build-improve-and-re-verify-b76c
+            <div className="text-xs grid grid-cols-4 gap-2 w-full">
+              {data.map((d) => (
+                <div key={d.label} className="border p-1 rounded">
+                  <div className="font-medium">{d.label}</div>
+ursor/integrate-build-improve-and-re-verify-b76c
+                  <div>{d.value}</div>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               ))}
             </div>
@@ -247,6 +509,11 @@ export default function PitchGenerator() {
         </div>
       </div>
     );
+<<<<<<< HEAD
+=======
+    )
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
   return (
@@ -322,7 +589,45 @@ export default function PitchGenerator() {
                 }
                 className='w-full border rounded px-2 py-1 bg-transparent'
               >
+<<<<<<< HEAD
                 <option value=''>Select</option>                <option>Seed</option>
+=======
+                <option value=''>Select</option>
+    )
+  };
+
+  return (
+    <EnhancedLayout>
+      <Head>
+        <title>Pitch Generator - Admin</title>
+      </Head>
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h1 className="text-2xl font-semibold">Pitch Generator</h1>
+          <div className="flex gap-2">
+            <button onClick={buildDeck} disabled={loading} className="px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50">Generate Deck</button>
+            <button onClick={exportPdf} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50">Download PDF</button>
+            <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
+          </div>
+        </div>
+
+ursor/integrate-build-improve-and-re-verify-b76c
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-1 space-y-4">
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">Inputs</div>
+              <label className="block text-sm mb-1">Company mission</label>
+              <input value={builder.mission} onChange={(e) => setBuilder({ ...builder, mission: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Current funding stage</label>
+              <input value={builder.fundingStage} onChange={(e) => setBuilder({ ...builder, fundingStage: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+              <label className="block text-sm mt-3 mb-1">Vision/goals</label>
+              <textarea value={builder.vision} onChange={(e) => setBuilder({ ...builder, vision: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" rows={3} />
+              <label className="block text-sm mt-3 mb-1">Round type</label>
+              <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">
+                <option value="">Select</option>
+ursor/integrate-build-improve-and-re-verify-b76c
+                <option>Seed</option>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <option>Series A</option>
                 <option>Token Sale</option>
               </select>
@@ -336,6 +641,12 @@ export default function PitchGenerator() {
                 }
                 className='w-full border rounded px-2 py-1 bg-transparent'
               />
+<<<<<<< HEAD
+=======
+              <label className="block text-sm mt-3 mb-1">Target raise amount</label>
+              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
               <div
                 onDrop={onAssetDrop}
@@ -358,7 +669,27 @@ export default function PitchGenerator() {
               >
                 Refresh
               </button>
+<<<<<<< HEAD
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
+=======
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>
+              <label className="block text-sm mt-3 mb-1">Target raise amount</label>
+              <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
+
+              <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+                Drag & drop logos, photos here
+                <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
+              </div>
+            </div>
+
+ursor/integrate-build-improve-and-re-verify-b76c
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">Auto Data</div>
+              <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
+              <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
+ursor/integrate-build-improve-and-re-verify-b76c
+                <li>Active users (30d)</li>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -381,7 +712,29 @@ export default function PitchGenerator() {
                     <span>{h.version}</span>
                     <span className='text-gray-500 dark:text-gray-400'>
                       {new Date(h.createdAt).toLocaleString()}
+<<<<<<< HEAD
                     </span>                  </li>
+=======
+                    </span>
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">History</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
+              <ul className="mt-2 space-y-1 text-sm">
+                {history.map((h) => (
+                  <li key={h.id} className="flex justify-between border rounded px-2 py-1">
+                    <span>{h.version}</span>
+                    <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="font-medium mb-2">History</div>
+              <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
+              <ul className="mt-2 space-y-1 text-sm">
+                {history.map((h) => (
+                  <li key={h.id} className="flex justify-between border rounded px-2 py-1">
+                    <span>{h.version}</span>
+                    <span className="text-gray-500 dark:text-gray-400">{new Date(h.createdAt).toLocaleString()}</span>
+ursor/integrate-build-improve-and-re-verify-b76c
+                  </li>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 ))}
               </ul>
             </div>
@@ -394,6 +747,15 @@ export default function PitchGenerator() {
                 <div className='text-sm text-gray-500 dark:text-gray-400'>
                   {slides.length} total
                 </div>
+<<<<<<< HEAD
+=======
+          <div className="lg:col-span-2 space-y-4">
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="flex items-center justify-between">
+                <div className="font-medium">Slides</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>
                 {slides.map((s, i) => (
@@ -439,6 +801,7 @@ export default function PitchGenerator() {
                   rows={10}
                 />
 
+<<<<<<< HEAD
                 <div className='mt-4 grid grid-cols-3 gap-2 text-sm'>
                   <button
                     onClick={() =>
@@ -493,9 +856,64 @@ export default function PitchGenerator() {
                     Timeline
                   </button>
                 </div>              </div>
+=======
+                <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
+                </div>
+          <div className="lg:col-span-2 space-y-4">
+            <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+              <div className="flex items-center justify-between">
+                <div className="font-medium">Slides</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">{slides.length} total</div>
+              </div>
+              <div className="mt-3 flex gap-3 overflow-x-auto py-2">
+                {slides.map((s, i) => (
+                  <SlidePreview key={s.id} slide={s} isActive={i === activeIndex} onClick={() => setActiveIndex(i)} />
+                ))}
+                <button onClick={addSlide} className="w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500">+ Add Slide</button>
+              </div>
+            </div>
+
+            {activeSlide && (
+              <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
+                <div className="flex items-center justify-between">
+                  <input value={activeSlide.title} onChange={(e) => updateActiveSlide({ title: e.target.value })} className="font-semibold text-lg bg-transparent border-b focus:outline-none" />
+                  <div className="flex gap-2">
+                    <button onClick={() => rephraseSlide(activeIndex)} disabled={loading} className="px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50">Rephrase</button>
+                  </div>
+                </div>
+                <textarea value={activeSlide.content} onChange={(e) => updateActiveSlide({ content: e.target.value })} className="w-full mt-3 border rounded px-2 py-1 bg-transparent" rows={10} />
+
+                <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'bar', data: [{ label: 'Q1', value: 20 }, { label: 'Q2', value: 40 }, { label: 'Q3', value: 60 }, { label: 'Q4', value: 80 }] } })} className="border rounded px-2 py-1">Bar Chart</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'funnel', data: [{ label: 'Visitors', value: 100 }, { label: 'Signups', value: 40 }, { label: 'Projects', value: 15 }] } })} className="border rounded px-2 py-1">Funnel</button>
+                  <button onClick={() => updateActiveSlide({ chart: { type: 'timeline', data: [{ label: 'MVP', value: 2023 }, { label: 'Seed', value: 2024 }, { label: 'Series A', value: 2025 }] } })} className="border rounded px-2 py-1">Timeline</button>
+                </div>
+
+                {renderChartPreview(activeSlide)}
+
+                {renderChartPreview(activeSlide)}
+ursor/integrate-build-improve-and-re-verify-b76c
+              </div>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             )}
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+      </div>
+    </EnhancedLayout>
+  )
+}
+      </div>
+    </EnhancedLayout>
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -217,6 +217,10 @@ export function PrimaryNav() {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 };
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo /> ;
@@ -265,4 +269,22 @@ setLoginOpen (true) ;
 }onOpenChange= {;
   setLoginOpen ;
 }/> </>) ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+
+<<<<<<< HEAD
+
+
+  let unreadCount = 0;
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+                  
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

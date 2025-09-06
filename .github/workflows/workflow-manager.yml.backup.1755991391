@@ -30,9 +30,18 @@ jobs:
       - name: Analyze workflow health
         run: |
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {
             echo "## 🔍 Workflow Health Analysis";
             echo "Analyzing workflow performance and health...";
@@ -57,6 +66,10 @@ jobs:
             fi
 
             echo "Health analysis completed";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           } >> "$GITHUB_STEP_SUMMARY"
 =======
@@ -88,6 +101,12 @@ jobs:
 =======
           } >> "$GITHUB_STEP_SUMMARY"  workflow-optimization:
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          } >> "$GITHUB_STEP_SUMMARY"  workflow-optimization:
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     name: Workflow Optimization
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -115,6 +134,10 @@ jobs:
           - Total workflows: $(find .github/workflows -name "*.yml" | wc -l)
           - High frequency workflows: $(grep -r "cron.*\*/[0-9]" .github/workflows/ | wc -l)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
           - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
 =======
@@ -124,6 +147,12 @@ jobs:
 =======
           - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           ## Recommendations
 
           ### 1. Schedule Optimization
@@ -132,6 +161,10 @@ jobs:
           - Implement staggered scheduling to avoid resource conflicts
 
           ### 2. Error Handling
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
           - Add `continue-on-error: true` to non-critical steps
@@ -145,6 +178,13 @@ jobs:
           - Add `continue-on-error: true` to non-critical steps
           - Use `if: always()` for cleanup and reporting steps          - Implement proper retry mechanisms for flaky operations
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          - Add `continue-on-error: true` to non-critical steps
+          - Use `if: always()` for cleanup and reporting steps          - Implement proper retry mechanisms for flaky operations
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           ### 3. Resource Management
           - Use concurrency groups to prevent overlapping runs
@@ -181,9 +221,18 @@ jobs:
       - name: Analyze current scheduling
         run: |
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {
             echo "## 📅 Current Workflow Schedule Analysis";
             echo "";
@@ -211,6 +260,10 @@ jobs:
             echo "- Afternoon: Security scans and dependency updates";
             echo "- Evening: Maintenance and optimization";
             echo "- Night: Light monitoring and cleanup";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           } >> "$GITHUB_STEP_SUMMARY"
 =======
@@ -245,6 +298,12 @@ jobs:
 =======
           } >> "$GITHUB_STEP_SUMMARY"  workflow-summary:
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          } >> "$GITHUB_STEP_SUMMARY"  workflow-summary:
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     name: Workflow Summary
     runs-on: ubuntu-latest
     needs:
@@ -256,9 +315,18 @@ jobs:
       - name: Generate comprehensive summary
         run: |
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {
             echo "## 🎯 Workflow Management Summary";
             echo "";
@@ -282,6 +350,10 @@ jobs:
             echo "2. Implement suggested improvements";
             echo "3. Monitor workflow performance";
             echo "4. Schedule next review";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           } >> "$GITHUB_STEP_SUMMARY"
 =======
@@ -312,3 +384,9 @@ jobs:
 =======
           } >> "$GITHUB_STEP_SUMMARY"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          } >> "$GITHUB_STEP_SUMMARY"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

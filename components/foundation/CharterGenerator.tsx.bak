@@ -1,6 +1,10 @@
 import React, { useMemo, useState } from 'react';
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 export type LegalStructure =
   | 'Cayman Foundation'
   | 'Swiss Verein'
@@ -16,6 +20,15 @@ export type LegalStructure = 'Cayman Foundation' | 'Swiss Verein' | 'US 501(c)(6
 export default function CharterGenerator() {
   const [legalStructure, setLegalStructure] = useState<LegalStructure>('Cayman Foundation');
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+export type LegalStructure = 'Cayman Foundation' | 'Swiss Verein' | 'US 501(c)(6)' | 'DAO-native Wrapper';
+
+export default function CharterGenerator() {
+  const [legalStructure, setLegalStructure] = useState<LegalStructure>('Cayman Foundation');
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [protocolName, setProtocolName] = useState('Zion');
   const [tokenSymbol, setTokenSymbol] = useState('ZION$');
   const [includeContributorRules, setIncludeContributorRules] = useState(true);
@@ -56,8 +69,16 @@ export default function CharterGenerator() {
     const amendments = `10. Amendments\n- Amendable via DAO supermajority or Foundation supermajority plus DAO simple majority.\n- All amendments versioned and time-stamped on IPFS and Git repositories.`;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     const liability = `11. Limitations and Disclaimers\n- No warranties; the ${name} Protocol is experimental.\n- The Foundation does not offer securities and does not guarantee token value.\n- Jurisdictional compliance: local obligations remain with individual actors.`;
+=======
+    const liability = `11. Limitations and Disclaimers\n- No warranties, the ${name} Protocol is experimental.\n- The Foundation does not offer securities and does not guarantee token value.\n- Jurisdictional compliance: local obligations remain with individual actors.`;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
+<<<<<<< HEAD
     return [
       header,
       '',
@@ -85,6 +106,9 @@ export default function CharterGenerator() {
       '',
       liability,
     ]
+=======
+    return [header, '', preamble, '', registry, '', mission, '', neutrality, '', treasury, '', contributors, '', dao, '', grants, '', governance, '', transparency, '', amendments, '', liability]
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       .filter(Boolean)
       .join('\n');
   }, [
@@ -174,6 +198,10 @@ export default function CharterGenerator() {
             <button
               className='px-3 py-2 rounded bg-cyan-600 text-white hover:bg-cyan-700'
               onClick={() => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 const blob = new Blob([charterText], {
                   type: 'text/markdown;charset=utf-8',
                 });
@@ -224,26 +252,52 @@ export default function CharterGenerator() {
               onClick={() => {
                 const blob = new Blob([charterText], { type: 'text/markdown,charset=utf-8' });
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+                const blob = new Blob([charterText], { type: 'text/markdown,charset=utf-8' });
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
                 a.download = `${protocolName || 'zion'}-foundation-charter.md`;
                 a.click();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
                 URL.revokeObjectURL(url);
 =======
                 URL.revokeObjectURL(url)
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+                URL.revokeObjectURL(url)
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               }}
             >
               Download .md
             </button>
             <button
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
               className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700'
 =======
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+              className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               onClick={() => navigator.clipboard.writeText(charterText)}
             >
               Copy to clipboard
@@ -252,6 +306,10 @@ export default function CharterGenerator() {
         </div>
       </div>
       <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
         <h2 className='text-lg font-semibold mb-2'>
           Generated Charter Preview
@@ -272,3 +330,14 @@ export default function CharterGenerator() {
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+        <h2 className="text-lg font-semibold mb-2">Generated Charter Preview</h2>
+        <textarea className="w-full h-96 rounded border border-gray-300 dark:border-gray-700 bg-transparent p-3 font-mono text-sm" value={charterText} readOnly />
+      </div>
+    </div>
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

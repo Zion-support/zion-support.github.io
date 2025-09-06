@@ -3,6 +3,10 @@
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 
 const improvements = [
@@ -223,6 +227,12 @@ console.log('📄 Quality report saved to automation/reports/quality-report.json
 
 // Run the improvement suite
 runAllImprovements().catch(console.error);
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 /**
  * Comprehensive App Improvement Suite
  * Advanced automation for app enhancement
@@ -729,8 +739,20 @@ class ComprehensiveAppImprovementSuite {
 
 // Run the comprehensive app improvement suite
 if (require.main === module) {
+<<<<<<< HEAD
     const suite = new ComprehensiveAppImprovementSuite(),
     suite.run().catch(console.error)
   }
+=======
+<<<<<<< HEAD
+    const suite = new ComprehensiveAppImprovementSuite(),
+    suite.run().catch(console.error)
+  }
+=======
+  const suite = new ComprehensiveAppImprovementSuite();
+  suite.run().catch(console.error);
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 module.exports = ComprehensiveAppImprovementSuite;

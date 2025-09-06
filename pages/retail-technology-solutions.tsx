@@ -4,4 +4,35 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function RetailTechnologySolutions() {
   
     />
+<<<<<<< HEAD
   );
+=======
+  );
+export default function RetailTechnologySolutions() {
+export default function RetailTechnologySolutions() {
+ursor/integrate-build-improve-and-re-verify-b76c
+	return (
+		<ServiceLanding
+			title="Retail Technology Solutions"
+			slug="retail-technology-solutions"
+			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
+			subtitle="Higher margins and better experiences powered by AI."
+			pricePerMonthUSD={1999}
+			implementationWeeks="Implementation: 4–8 weeks"
+			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
+			features={[
+				"Demand forecasting and dynamic pricing";
+				"Assortment optimization and store clustering";
+				"Customer 360 and propensity modeling";
+				"Store ops: labor planning and task automation",
+				"Omni-channel journey orchestration";
+				"Integrations: POS, eCom, WMS, ESP, CDP"
+			]}
+			industries={["Retail", "CPG", "E‑commerce"]}
+			canonical="https: //ziontechgroup.com/retail-technology-solutions"
+		/>
+	)
+}
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,5 +1,25 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+
+ursor/integrate-build-improve-and-re-verify-b76c
+const Verify: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Verify - Zion Tech Solutions</title>
+        <meta name='description' content='Verify page' />
+      </Head>
+
+        <meta name="description" content="Verify page" />
+      </Head>
+      
+        <meta name="description" content="Verify page" />
+      </Head>
+      
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <main>
         <h1>Verify</h1>
         <p>This page is under construction.</p>
@@ -8,4 +28,17 @@ import Head from 'next/head';
   );
 };
 
+<<<<<<< HEAD
 export default Verify;
+=======
+export default Verify;
+  )
+};
+
+export default Verify;
+  )
+};
+
+export default Verify;
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

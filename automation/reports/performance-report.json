@@ -1,10 +1,17 @@
 {
+<<<<<<< HEAD
   "timestam": "2025-09-05T23:08:10.268Z",
   "optimization": [
     "Found 3 images",
     "Analyzed 113 dependencies"
+=======
+  "timestamp": "2025-09-05T22:37:01.439Z",
+  "optimizations": [
+    "Found 4 images",
+    "Analyzed 111 dependencies"
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ],
-  "recommendation": [
+  "recommendations": [
     "Consider implementing code splitting",
     "Optimize images using WebP format",
     "Remove unused dependencies",

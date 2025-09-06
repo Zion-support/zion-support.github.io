@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import { TalentCard } from '@/components/talent/TalentCard';
@@ -5,6 +10,18 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { TalentProfile } from '@/types/talent';
 import { toast } from '@/components/ui/use-toast';
+<<<<<<< HEAD
+=======
+=======
+import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO";
+import { TalentCard } from "@/components/talent/TalentCard";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { toast } from "@/components/ui/use-toast";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from '@/components/ui/empty-state';
@@ -226,6 +243,10 @@ export default function SavedTalentsPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }, [user, router]);
 }const {;
@@ -287,4 +308,21 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }/>) ) ;
 }</div>) ;
 }</div> </>) ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

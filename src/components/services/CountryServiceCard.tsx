@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Card,
   CardContent,
@@ -5,6 +10,14 @@ import {
   CardHeader,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+=======
+=======
+
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
@@ -152,4 +165,20 @@ export function CountryServiceCard({
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   );
+=======
+  );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

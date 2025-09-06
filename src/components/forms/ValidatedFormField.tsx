@@ -354,6 +354,37 @@ export const commonValidations = {
         return 'Please enter a valid phone number';
       }
       return null;
+<<<<<<< HEAD
     },
   },
 };
+=======
+<<<<<<< HEAD
+    },
+  },
+};
+=======
+
+<<<<<<< HEAD
+
+  const fieldError = form.formState.errors[name];
+  const isTouched = form.formState.touchedFields[name];
+
+
+<<<<<<< HEAD
+
+
+      default:
+        return (
+
+<<<<<<< HEAD
+      return null;
+    };
+  }},
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    };
+  }},
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

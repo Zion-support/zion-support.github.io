@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from 'react';
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface Note {
   id: string;
@@ -11,6 +16,7 @@ interface Note {
   tags: string[];
   isPrivate: boolean;
 
+<<<<<<< HEAD
 const mockNotes: Note[] = [
   {
     id: '1',
@@ -51,6 +57,29 @@ const AdminNotesPage: React.FC = () => {
   const [filterTag, setFilterTag] = useState('');
   const [showPrivate, setShowPrivate] = useState(false);
   const [isAdmin, setIsAdmin] = useState(true);
+=======
+export default function AdminNotesConsole() {
+  const [isAdmin, setIsAdmin] = useState(true);
+import { useEffect, useState } from 'react';
+
+type Note = {
+  id: string,
+  targetType: string,
+  targetId: string,
+  text: string,
+  authorId: string,
+  createdAt: number
+};
+
+export default function AdminNotesConsole() {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+ursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   useEffect(() => {
     async function load() {
       setLoading(true);
@@ -58,6 +87,11 @@ const AdminNotesPage: React.FC = () => {
         const res = await fetch('/api/admin/notes-all', {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         });
+<<<<<<< HEAD
+=======
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         if (!res.ok) return;
         const data = await res.json();
         setNotes(data.notes || []);
@@ -77,7 +111,31 @@ const AdminNotesPage: React.FC = () => {
             type='checkbox'
             checked={isAdmin}
             onChange={e => setIsAdmin(e.target.checked)}
+<<<<<<< HEAD
           />          <span>Admin</span>
+=======
+          />
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
+        if (!res.ok) return;
+        const data = await res.json();
+        setNotes(data.notes || [])
+      } finally {
+        setLoading(false)
+      }
+    }
+    if (isAdmin) load()
+  }, [isAdmin]);
+
+  return (
+ursor/integrate-build-improve-and-re-verify-b76c
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl font-semibold">Admin Notes</h1>
+        <label className="inline-flex items-center gap-2 text-sm">
+          <input type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+ursor/integrate-build-improve-and-re-verify-b76c
+          <span>Admin</span>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </label>
       </div>
 
@@ -94,7 +152,23 @@ const AdminNotesPage: React.FC = () => {
               </div>
               <div className='font-medium mb-1'>
                 {n.targetType} • {n.targetId}
+<<<<<<< HEAD
               </div>              <div>{n.text}</div>
+=======
+              </div>
+        <div className="opacity-70">No notes found.</div>
+      ) : (
+        <div className="opacity-70">No notes found.</div>
+      ) : (
+ursor/integrate-build-improve-and-re-verify-b76c
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {notes.map((n) => (
+            <div key={n.id} className="rounded border p-3 text-sm">
+              <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+              <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
+ursor/integrate-build-improve-and-re-verify-b76c
+              <div>{n.text}</div>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
           ))}
         </div>
@@ -201,4 +275,17 @@ const AdminNotesPage: React.FC = () => {
         )}
       </main>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+      )}
+    </div>
+  )
+}
+      )}
+    </div>
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

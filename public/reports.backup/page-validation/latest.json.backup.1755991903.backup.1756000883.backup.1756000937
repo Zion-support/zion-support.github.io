@@ -1,9 +1,18 @@
 {
   "summary": {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "totalFiles": 1,
     "filesWithIssues": 1,
     "totalIssues": 3,
@@ -42,6 +51,10 @@
           "type": "WARNING",
           "code": "PAGE_TOO_SHORT",
           "message": "Page content seems too short, may be incomplete",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           "line": 0,
 =======
@@ -106,10 +119,20 @@
 =======
           "line": 0,          "severity": "warning"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          "line": 0,          "severity": "warning"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         }
       ]
     }
   ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   "buildBreakingFiles": [
@@ -131,3 +154,12 @@
   ],
   "generatedAt": "2025-08-21T00:33:41.084Z"}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  "buildBreakingFiles": [
+    "pages/enhanced-services.tsx"
+  ],
+  "generatedAt": "2025-08-21T00:33:41.084Z"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

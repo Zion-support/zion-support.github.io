@@ -274,4 +274,24 @@ const PerformanceDashboard: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PerformanceDashboard;
+=======
+<<<<<<< HEAD
+export default PerformanceDashboard;
+=======
+
+<<<<<<< HEAD
+
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
+      default: return <AlertCircle className="h-4 w-4 text-gray-500" />
+
+export default PerformanceDashboard, 
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+export default PerformanceDashboard, 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

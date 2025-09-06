@@ -1,5 +1,9 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
   "generatedAt": "2025-08-12T01:34:18.216Z",
 =======
@@ -9,6 +13,12 @@
 =======
   "generatedAt": "2025-08-12T01:34:18.216Z",  "functions": [
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  "generatedAt": "2025-08-12T01:34:18.216Z",  "functions": [
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "a11y-alt-text-runner",
     "ai-changelog-runner",
     "ai-trends-radar-runner",
@@ -22,6 +32,10 @@
     "broken-image-scanner",
     "broken-image-scanner-runner",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "canonical-auditor",
@@ -31,6 +45,13 @@
     "canonical-auditor",
     "cloud-brain-orchestrator",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "canonical-auditor",
+    "cloud-brain-orchestrator",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "cloud_orchestrator",
     "code-smell-audit-runner",
     "component-props-docs-runner",

@@ -44,7 +44,11 @@ export default function AIServices() {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+<<<<<<< HEAD
     category: 'predictive',
+=======
+      category: 'predictive',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
@@ -64,7 +68,11 @@ export default function AIServices() {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+<<<<<<< HEAD
     category: 'nlp',
+=======
+      category: 'nlp',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
@@ -84,7 +92,11 @@ export default function AIServices() {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+<<<<<<< HEAD
     category: 'computer-vision',
+=======
+      category: 'computer-vision',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
@@ -104,7 +116,11 @@ export default function AIServices() {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+<<<<<<< HEAD
     category: 'nlp',
+=======
+      category: 'nlp',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
@@ -124,7 +140,11 @@ export default function AIServices() {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+<<<<<<< HEAD
     category: 'predictive',
+=======
+      category: 'predictive',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
@@ -134,7 +154,11 @@ export default function AIServices() {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
+<<<<<<< HEAD
     category: 'specialized',
+=======
+      category: 'specialized',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,

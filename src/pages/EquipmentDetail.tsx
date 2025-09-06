@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+=======
+import { useState, useEffect } from "react";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
 import { Badge } from '@/components/ui/badge';
@@ -541,6 +550,12 @@ export default function EquipmentDetail() {
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+}
+
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }finally {;
   setIsAdding (false) ;
@@ -592,4 +607,18 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   equipment.returnPolicy ;
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+
+<<<<<<< HEAD
+            const stored = sessionStorage.getItem(`equipment:${id}`);
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

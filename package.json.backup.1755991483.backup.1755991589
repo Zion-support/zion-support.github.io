@@ -1,8 +1,17 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "name": "bolt.new.zion.app",
   "version": "0.1.0",
   "private": true,
@@ -454,6 +463,10 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "prepare": "husky install",
 =======
 <<<<<<< HEAD
@@ -489,6 +502,12 @@
 =======
     "prepare": "husky install",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "prepare": "husky install",    "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "changelog": "node automation/generate-changelog.cjs",
@@ -498,6 +517,10 @@
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "prepare": "husky install",
@@ -530,6 +553,12 @@
 =======
     "prepare": "husky install",    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "prepare": "husky install",    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
     "linkedin:run": "ts-node scripts/linkedin-automation.ts run",
@@ -581,6 +610,10 @@
     "autonomous:cron": "bash automation/autonomous-error-cron-system.sh run",
     "autonomous:cron:start": "bash automation/autonomous-error-cron-system.sh start",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "autonomous:cloud": "node automation/intelligent-autonomous-orchestrator.cjs",
@@ -590,6 +623,13 @@
     "autonomous:cloud": "node automation/intelligent-autonomous-orchestrator.cjs",
     "autonomous:curate": "node automation/ai-content-curator.cjs",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "autonomous:cloud": "node automation/intelligent-autonomous-orchestrator.cjs",
+    "autonomous:curate": "node automation/ai-content-curator.cjs",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "autonomous:cron:stop": "bash automation/autonomous-error-cron-system.sh stop",
     "autonomous:cron:status": "bash automation/autonomous-error-cron-system.sh status",
     "autonomous:cron:fix": "bash automation/autonomous-error-cron-system.sh fix",
@@ -653,6 +693,10 @@
     "saas:analyze": "node automation/saas-services-analyzer.cjs && node automation/saas-services-factory.cjs",
     "homepage-promo:start": "node automation/homepage-promo-orchestrator.cjs",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "innovation:digest": "node automation/autonomous-innovation-digest.cjs",
@@ -665,6 +709,11 @@
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "homepage-promo:cron:start": "bash automation/homepage-promo-cron.sh",
     "homepage-promo:analyze": "node automation/homepage-promo-analyzer.cjs && node automation/homepage-promo-factory.cjs",
     "feature-marketing:start": "node automation/feature-marketing-orchestrator.cjs",
@@ -679,6 +728,10 @@
     "links:start": "node automation/site-link-orchestrator.cjs",
     "links:cron:start": "bash automation/site-link-cron.sh",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs && node automation/external-link-check.cjs",
 =======
@@ -688,6 +741,12 @@
 =======
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs && node automation/external-link-check.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs && node automation/external-link-check.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "promo:cron:start": "bash automation/site-promo-cron.sh",
     "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
     "spec-dev:start": "node automation/spec-dev-orchestrator.cjs",
@@ -722,17 +781,30 @@
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "admin:dashboard": "node automation/admin-dashboard-updater.cjs",
     "admin:dashboard:watch": "node automation/admin-dashboard-updater.cjs --watch",
     "admin:insights": "node automation/admin-insights-researcher.cjs",
     "admin:insights:watch": "node automation/admin-insights-researcher.cjs --watch",
     "admin:cron:start": "bash automation/admin-dashboard-cron.sh start",
     "admin:cron:stop": "bash automation/admin-dashboard-cron.sh stop",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"
 =======
@@ -762,6 +834,15 @@
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
     "git:cron:status": "bash automation/git-sync-cron.sh status",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "admin:cron:status": "bash automation/admin-dashboard-cron.sh status"    "git:pull": "node automation/git-pull-rebase.cjs",
+    "git:cron:start": "bash automation/git-sync-cron.sh start",
+    "git:cron:stop": "bash automation/git-sync-cron.sh stop",
+    "git:cron:status": "bash automation/git-sync-cron.sh status",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "sync-health:run": "node automation/sync-health-check.cjs --fix",
     "sync-health:cron:start": "bash automation/sync-health-cron.sh start",
     "sync-health:cron:stop": "bash automation/sync-health-cron.sh stop",
@@ -776,6 +857,10 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "deploy:ipfs": "ts-node scripts/deploy-zion-ipfs.ts"
@@ -798,6 +883,15 @@
   "bin": {
     "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.cjs"    "homepage:update": "node automation/homepage-updater.cjs",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "deploy:ipfs": "ts-node scripts/deploy-zion-ipfs.ts"
+  },
+  "bin": {
+    "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.cjs"    "homepage:update": "node automation/homepage-updater.cjs",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "front:futurize": "node automation/front-futurizer.cjs",
     "front:futurize:cron": "node -e \"const cp=require('child_process'); setInterval(()=>cp.exec('node automation/front-futurizer.cjs',()=>{}), 1000*60*60*6)\"",
     "front:directory": "node automation/front-index-directory-builder.cjs",
@@ -885,10 +979,19 @@
     "master:status": "node automation/master-automation-launcher.cjs status",
     "master:report": "node automation/master-automation-launcher.cjs report"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -900,6 +1003,12 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "@pinata/sdk": "^2.1.0",
     "@spruceid/didkit-wasm-node": "^0.2.1",
 =======
@@ -931,6 +1040,10 @@
     "glob": "^11.0.3",
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
     "@pinata/sdk": "^2.1.0",
     "@spruceid/didkit-wasm-node": "^0.2.1",    "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
@@ -943,6 +1056,11 @@
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "ipfs-http-client": "^60.0.0",
@@ -974,6 +1092,10 @@
     "@nomicfoundation/hardhat-verify": "^2.1.1",
     "@testing-library/jest-dom": "^6.6.4",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "@testing-library/react": "12.1.5",
 =======
     "html2canvas": "^1.4.1",
@@ -987,12 +1109,22 @@
 =======
     "@testing-library/react": "12.1.5",    "lucide-react": "^0.536.0",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "@testing-library/react": "12.1.5",    "lucide-react": "^0.536.0",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "next": "^11.1.4",
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
     "react": "^17.0.2",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "react-chartjs-2": "^5.3.0",
@@ -1037,11 +1169,25 @@
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.2.0",    "@types/node-cron": "^3.0.11",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "react-chartjs-2": "^5.3.0",    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.2.0",    "@types/node-cron": "^3.0.11",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
     "autoprefixer": "^10.4.16",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "dotenv": "^17.2.1",
@@ -1104,6 +1250,13 @@
     "dotenv": "^17.2.1",  },
   "type": "module"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "dotenv": "^17.2.1",  },
+  "type": "module"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",
@@ -1123,7 +1276,16 @@
     "js-yaml": "^4.1.0"
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }

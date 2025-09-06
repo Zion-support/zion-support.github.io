@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+=======
+import { useState, useEffect } from "react";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { SEO } from '@/components/SEO';
@@ -117,8 +126,18 @@ export default function BlogPost() {
         return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
       case 'linkedin':
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+<<<<<<< HEAD
       default:
         return '#';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      default:
+        return '#';
+=======
+      default: return '#'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   };
 
@@ -351,6 +370,10 @@ export default function BlogPost() {
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 };
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {';
@@ -366,4 +389,15 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) ) ;
 }</div> </div>) ";
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

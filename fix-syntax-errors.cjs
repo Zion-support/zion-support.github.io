@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Function to fix corrupted syntax in files
 function fixSyntaxErrors(filePath) {
   try {
@@ -139,26 +140,75 @@ function fixFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+=======
+const fs = require('fs');
+const path = require('path');
+
+// Common syntax error patterns to fix
+const fixes = [
+  // Fix missing semicolons after return statements
+  { pattern: /return res\.status\(\d+\)\.json\(\{[^}]+\}\),\s*$/gm, replacement: 'return res.status($1).json({$2});' },
+  { pattern: /return res\.status\(\d+\)\.end\(\),\s*$/gm, replacement: 'return res.status($1).end();' },
+  { pattern: /return res\.status\(\d+\)\.json\(\{[^}]+\}\),\s*return\s*$/gm, replacement: 'return res.status($1).json({$2});\n    return;' },
+  
+  // Fix missing semicolons after variable declarations
+  { pattern: /const [^=]+ = [^;]+,\s*$/gm, replacement: (match) => match.replace(',', ';') },
+  { pattern: /let [^=]+ = [^;]+,\s*$/gm, replacement: (match) => match.replace(',', ';') },
+  
+  // Fix missing semicolons after if statements
+  { pattern: /if \([^)]+\) return [^;]+,\s*$/gm, replacement: (match) => match.replace(',', ';') },
+  
+  // Fix object property syntax errors
+  { pattern: /(\w+);\s*(\w+);/g, replacement: '$1,\n    $2,' },
+  
+  // Fix array syntax errors
+  { pattern: /\[\s*([^]]+)\s*\]/g, replacement: (match, content) => {
+    const items = content.split(',').map(item => item.trim()).filter(item => item);
+    return '[\n    ' + items.join(',\n    ') + '\n  ]';
+  }}
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let changed = false;
+    
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        changed = true;
+      }
+    });
+    
+    if (changed) {
+      fs.writeFileSync(filePath, content);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       console.log(`Fixed: ${filePath}`);
-      return true;
     }
+<<<<<<< HEAD
     return false;
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
+<<<<<<< HEAD
 // Function to recursively find and fix files
 function fixAllFiles(dir) {
+=======
+function walkDir(dir) {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const files = fs.readdirSync(dir);
-  let fixedCount = 0;
   
-  for (const file of files) {
+  files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+<<<<<<< HEAD
       fixedCount += fixAllFiles(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       if (fixSyntaxErrors(filePath)) {
@@ -190,3 +240,14 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
+=======
+      walkDir(filePath);
+    } else if (file.endsWith('.ts') || file.endsWith('.js')) {
+      fixFile(filePath);
+    }
+  });
+}
+
+// Start fixing from the pages/api directory
+walkDir('./pages/api');
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

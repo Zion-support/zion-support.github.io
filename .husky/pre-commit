@@ -1,8 +1,17 @@
 #!/usr/bin/env sh
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 echo "🔍 Running pre-commit checks..."
 
@@ -31,6 +40,10 @@ if git diff --cached --name-only | grep -E "package\.json|package-lock\.json" > 
 fi
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 echo "✅ Pre-commit checks completed"
 =======
 . "$(dirname -- "$0")/_/husky.sh"
@@ -40,3 +53,9 @@ npx --yes lint-staged
 =======
 echo "✅ Pre-commit checks completed"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+echo "✅ Pre-commit checks completed"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

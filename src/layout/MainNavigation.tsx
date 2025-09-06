@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -13,6 +18,20 @@ import {
   ShoppingCart,
   Wallet,;
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { useTranslation } from "react-i18next";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useCart } from "@/context/CartContext";
+import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { LanguageSelector } from '@/components/header/LanguageSelector';
 import {
   HoverCard,
@@ -265,4 +284,34 @@ export function MainNavigation({
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
   );
+=======
+<<<<<<< HEAD
+  );
+=======
+
+<<<<<<< HEAD
+
+      matches: (path: string) => path === '/'
+    };
+
+                    "nav-link";
+                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
+<<<<<<< HEAD
+
+                  className={cn(
+
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
+
+                    router.pathname === "/wishlist"
+
+<<<<<<< HEAD
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary',
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  )
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

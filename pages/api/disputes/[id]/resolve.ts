@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
 import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth';
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -15,21 +16,48 @@ export default async function handler(
       ensureAdmin(user);
     } catch (e: any) {
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' });    }
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status($1).json({$2});
+  const user = parseUserFromRequest(req);
+  if (req.method === 'POST') {
+    try {
+      ensureAdmin(user)
+    } catch (e: any) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const dispute = await getDisputeById(id);
-    if (!dispute) return res.status(404).json({ error: 'Not found' });
+    if (!dispute) return res.status($1).json({$2});
     const { resolutionSummary, status } = req.body || {};
     const now = new Date().toISOString();
+<<<<<<< HEAD
 
     if (status && !['Resolved', 'Under Review', 'Open'].includes(status)) {
       return res.status(400).json({ error: 'Invalid status' });    }
+=======
+    if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {
+      return res.status(400).json({ error: 'Invalid status' })
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-    dispute.status = status || 'Resolved';
+    dispute.status = status || 'Resolved',
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
+<<<<<<< HEAD
     return res.status(200).json({ dispute });
   }
 
   res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed');
+=======
+    return res.status(200).json({ dispute })
+  }
+
+  res.setHeader('AllowPOST');
+  return res.status(405).end('Method Not Allowed')
+}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

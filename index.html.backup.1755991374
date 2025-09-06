@@ -4,9 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <title>Zion — AI‑Powered Marketplace</title>
     <meta name="description" content="Zion is the AI-powered marketplace for IT services, AI talents, advanced equipment, and innovation projects. Build faster with verified experts and secure transactions." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,6 +56,10 @@
           <div class="trust">
             <span class="trust-badge">Verified experts</span>
             <span class="trust-badge">Secure escrow</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
             <span class="trust-badge">AI‑matched</span>
 =======
@@ -153,6 +166,15 @@
       </section>
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+            <span class="trust-badge">AI‑matched</span>          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <!-- Featured Categories -->
       <section id="categories" class="section">
         <div class="container">
@@ -183,6 +205,10 @@
               <div class="icon" aria-hidden="true">🚀</div>
               <h3 class="card-title">Innovation</h3>
               <p class="card-body">Pilot programs, R&D collaborations, and venture‑ready solutions to accelerate outcomes.</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
               <a class="card-link" href="#signup">Explore innovation</a>
 =======
@@ -227,14 +253,29 @@
 =======
               <a class="card-link" href="#signup">Explore innovation</a>            </article>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+              <a class="card-link" href="#signup">Explore innovation</a>            </article>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <!-- Why Choose Us -->
       <section id="why" class="section muted">
         <div class="container">
@@ -262,6 +303,10 @@
               <div class="icon" aria-hidden="true">🌐</div>
               <h3 class="card-title">Enterprise‑Ready</h3>
               <p class="card-body">Compliance‑friendly workflows, NDAs, and role‑based access for teams.</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
             </article>
 =======
@@ -301,6 +346,15 @@
       </section>
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+            </article>          </div>
+        </div>
+      </section>
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <!-- Testimonials -->
       <section id="testimonials" class="section">
         <div class="container">
@@ -341,6 +395,10 @@
                 <img class="avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=120&auto=format&fit=crop" alt="Portrait of satisfied customer" />
                 <div class="who">
                   <span class="name">Sofia Ibrahim</span>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
                   <span class="role">CTO, Atlas Robotics</span>
 =======
@@ -408,6 +466,12 @@
 =======
                   <span class="role">CTO, Atlas Robotics</span>                </div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+                  <span class="role">CTO, Atlas Robotics</span>                </div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </figcaption>
             </figure>
           </div>
@@ -415,9 +479,18 @@
       </section>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <!-- Signup CTA -->
       <section id="signup" class="section cta">
         <div class="container cta-inner">
@@ -428,6 +501,10 @@
             <input id="email" name="email" type="email" placeholder="Work email" required />
             <button class="button button-primary" type="submit">Sign up</button>
           </form>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           <p class="cta-footnote">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
 =======
@@ -607,14 +684,29 @@
 =======
           <p class="cta-footnote">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>        </div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          <p class="cta-footnote">By signing up, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>        </div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </section>
     </main>
 
     <footer class="site-footer">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <div class="container footer-inner">
         <div class="brand-row">
           <a class="brand" href="#" aria-label="Zion home">
@@ -636,6 +728,10 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 </html>
 =======
@@ -692,3 +788,9 @@
 =======
 </html>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+</html>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

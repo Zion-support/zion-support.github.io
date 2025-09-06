@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TUTORIALS } from '@/data/tutorials';
@@ -7,6 +12,19 @@ import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import type { Tutorial as TutorialType } from '@/types/tutorial';
 
+<<<<<<< HEAD
+=======
+=======
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { TUTORIALS } from "@/data/tutorials";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from 'lucide-react'
+import ReactMarkdown from "react-markdown";
+import type { Tutorial as TutorialType } from "@/types/tutorial";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface TutorialPageProps {
   tutorial?: TutorialType;
 
@@ -57,4 +75,18 @@ export default function Tutorial({
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const slug = router.query.slug as string | undefined;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

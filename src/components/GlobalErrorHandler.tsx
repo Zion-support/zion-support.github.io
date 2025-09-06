@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, {
   createContext,
   useContext,
@@ -5,6 +10,12 @@ import React, {
   useCallback,
   ReactNode,;
 } from 'react';
+<<<<<<< HEAD
+=======
+=======
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -227,7 +238,35 @@ export function useErrorHandler() {
   );
 
   return {
+<<<<<<< HEAD
     reportError,
     handleApiError,
     handleAsyncOperation,
   };
+=======
+<<<<<<< HEAD
+    reportError,
+    handleApiError,
+    handleAsyncOperation,
+  };
+=======
+
+<<<<<<< HEAD
+
+    const errorKey = error.message;
+    const currentRetryCount = retryCount[errorKey] || 0;
+
+    reportError(error, { retryCount: currentRetryCount }),
+
+
+<<<<<<< HEAD
+      
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    reportError;
+    handleApiError;
+    handleAsyncOperation}
+} 
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

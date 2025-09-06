@@ -1,7 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from "react";
+import { useForm, useFieldArray } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
@@ -196,6 +210,10 @@ export function TalentOnboardingForm() {
   // [Previous implementation continues...]
 
   return null;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   //Step 1: Basic Info basicInfo: z.object ({;
   ) .optional () .default ([]);
@@ -225,4 +243,28 @@ reader.readAsDataURL (file);
 return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
+<<<<<<< HEAD
 }'
+=======
+}'
+=======
+
+<<<<<<< HEAD
+
+    cv: z.any().optional()})}),
+
+type TalentFormValues = z.infer<typeof talentSchema>;
+
+
+<<<<<<< HEAD
+  
+  const totalSteps = 4;
+  
+<<<<<<< HEAD
+    
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

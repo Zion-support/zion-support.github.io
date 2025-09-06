@@ -4,6 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
@@ -86,6 +90,110 @@ class PerformanceOptimizer {
       return { error: error.message };
     }
   }
+<<<<<<< HEAD
+=======
+=======
+function log(message, level = 'INFO') {
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] [${level}] ${message}`)}
+
+function createPerformanceOptimizations() {
+  log('⚡ Creating performance optimizations...');
+  
+  // Create a performance monitoring component
+  const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number, memoryUsage: number,
+  renderTime: number}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    renderTime: 0
+  });
+
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    // Measure page load time
+    if (window.performance.timing) {
+      const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+      setMetrics(prev => ({ ...prev, loadTime }))}
+
+    // Measure memory usage (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({ 
+        ...prev, 
+        memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
+      }))}
+
+    // Measure render time
+    const endTime = performance.now();
+    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);
+
+  return (
+    <div className="bg-gray-100 p-4 rounded-lg">
+      <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white p-3 rounded">
+          <div className="text-sm text-gray-600">Load Time</div>
+          <div className="text-2xl font-bold text-blue-600">{metrics.loadTime}ms</div>
+        </div>
+        <div className="bg-white p-3 rounded">
+          <div className="text-sm text-gray-600">Memory Usage</div>
+          <div className="text-2xl font-bold text-green-600">{metrics.memoryUsage}MB</div>
+        </div>
+        <div className="bg-white p-3 rounded">
+          <div className="text-sm text-gray-600">Render Time</div>
+          <div className="text-2xl font-bold text-purple-600">{metrics.renderTime}ms</div>
+        </div>
+      </div>
+    </div>
+  )};
+
+export default PerformanceMonitor;
+`;
+
+  const performancePath = path.join(process.cwd(), 'src/components/PerformanceMonitor.tsx');
+  fs.writeFileSync(performancePath, performanceMonitorContent);
+  log('Created PerformanceMonitor component')}
+
+function createBundleAnalyzer() {
+  log('📊 Creating bundle analyzer...');
+  
+  const bundleAnalyzerContent = `import React, { useEffect, useState } from 'react';
+
+interface BundleInfo {
+  totalSize: number, jsSize: number,
+  cssSize: number,
+  imageSize: number}
+
+const BundleAnalyzer: React.FC = () => {
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo>({
+    totalSize: 0,
+    jsSize: 0,
+    cssSize: 0,
+    imageSize: 0
+  });
+
+  useEffect(() => {
+    // Simulate bundle analysis
+    const analyzeBundle = () => {
+      // In a real implementation, this would analyze the actual bundle
+      setBundleInfo({
+        totalSize: 1024 * 1024, // 1MB
+        jsSize: 800 * 1024,      // 800KB
+        cssSize: 200 * 1024,     // 200KB
+        imageSize: 24 * 1024     // 24KB
+      })};
+
+    analyzeBundle()}, []);
+>>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getFilesRecursively(dir) {
     let files = [];
     const items = fs.readdirSync(dir);
@@ -109,8 +217,18 @@ class PerformanceOptimizer {
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
+<<<<<<< HEAD
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
+=======
+<<<<<<< HEAD
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+=======
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
+>>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getBundleRecommendations(totalSize, fileCount) {
     const recommendations = [];
     
@@ -143,11 +261,40 @@ class PerformanceOptimizer {
         const stats = fs.statSync(file);
         totalSize += stats.size;
         
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         // Check if image is already optimized (WebP, compressed)
         if (file.endsWith('.webp') || file.endsWith('.avif')) {
           optimizedCount++;
         }
       });
+<<<<<<< HEAD
+=======
+=======
+        <div className="space-y-2">
+          <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
+            <span>JavaScript</span>
+            <span className="font-medium">{formatBytes(bundleInfo.jsSize)}</span>
+          </div>
+          
+          <div className="flex justify-between items-center p-2 bg-green-50 rounded">
+            <span>CSS</span>
+            <span className="font-medium">{formatBytes(bundleInfo.cssSize)}</span>
+          </div>
+          
+          <div className="flex justify-between items-center p-2 bg-purple-50 rounded">
+            <span>Images</span>
+            <span className="font-medium">{formatBytes(bundleInfo.imageSize)}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )};
+>>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return {
         totalImages: imageFiles.length,
         optimizedImages: optimizedCount,
@@ -159,6 +306,10 @@ class PerformanceOptimizer {
     }
   }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getImageFiles(dir) {
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif', '.svg'];
     const files = this.getFilesRecursively(dir);
@@ -205,6 +356,7 @@ class PerformanceOptimizer {
       return { error: error.message };
     }
   }
+<<<<<<< HEAD
 
   findUnusedDependencies(dependencies) {
     // This is a simplified check - in a real scenario, you'd use tools like depcheck
@@ -259,12 +411,88 @@ class PerformanceOptimizer {
     this.log(`Performance report saved to: ${reportFile}`);
   }}
 
+=======
+
+  findUnusedDependencies(dependencies) {
+    // This is a simplified check - in a real scenario, you'd use tools like depcheck
+    const potentiallyUnused = [];
+    
+    // Check for common unused dependencies
+    const commonUnused = ['lodash', 'moment', 'jquery'];
+    commonUnused.forEach(dep => {
+      if (dependencies.includes(dep)) {
+        potentiallyUnused.push(dep);
+      }
+    });
+    
+    return potentiallyUnused;
+  }
+
+  getDependencyRecommendations(dependencies, devDependencies) {
+    const recommendations = [];
+    
+    if (dependencies.length > 20) {
+      recommendations.push('Consider removing unused dependencies to reduce bundle size');
+    }
+    
+    if (devDependencies.length > 30) {
+      recommendations.push('Review dev dependencies for unused packages');
+    }
+    
+    recommendations.push('Use npm audit to check for security vulnerabilities');
+    recommendations.push('Consider using lighter alternatives for heavy dependencies');
+    
+    return recommendations;
+  }
+
+  generateRecommendations() {
+    return [
+      'Implement code splitting for better performance',
+      'Use React.memo for expensive components',
+      'Implement lazy loading for routes and components',
+      'Optimize images and use modern formats (WebP, AVIF)',
+      'Enable gzip compression on your server',
+      'Use a CDN for static assets',
+      'Implement service workers for caching',
+      'Minimize and compress CSS and JavaScript',
+      'Use tree shaking to eliminate dead code',
+      'Implement proper error boundaries'
+    ];
+  }
+
+  saveReport(report) {
+    const reportFile = path.join(__dirname, '..', 'logs', 'performance-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Performance report saved to: ${reportFile}`);
+  }
+=======
+  const bundlePath = path.join(process.cwd(), 'src/components/BundleAnalyzer.tsx');
+  fs.writeFileSync(bundlePath, bundleAnalyzerContent);
+  log('Created BundleAnalyzer component')}
+
+function main() {
+  log('🚀 Starting Performance Optimizations');
+  
+  try {
+    createPerformanceOptimizations();
+    createBundleAnalyzer();
+    log('✅ Performance optimizations completed successfully')} catch (error) {
+    log(`❌ Performance optimizations failed: ${error.message}`, 'ERROR');
+    process.exit(1)}
+>>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
+}
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
+<<<<<<< HEAD
     console.log('==');
+=======
+    console.log('=====================================');
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     console.log(`Bundle Size: ${report.bundleSize.totalSize || 'N/A'}`);
     console.log(`Gzipped Size: ${report.bundleSize.gzippedSize || 'N/A'}`);
     console.log(`Total Images: ${report.imageOptimization.totalImages || 0}`);

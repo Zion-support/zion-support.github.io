@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -10,6 +15,24 @@ import {
 import { PricingSuggestionBox } from './PricingSuggestionBox';
 import { useAuth } from '@/hooks/useAuth';
 import { Sparkles } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { 
+  getClientBudgetSuggestion;
+  PricingSuggestion;
+  ClientBudgetParams;
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService";
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from 'lucide-react'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string;
@@ -41,9 +64,26 @@ export const ClientBudgetRecommender: React.FC<
     setIsLoading(true);
     try {
       const params: ClientBudgetParams = {
+<<<<<<< HEAD
         jobTitle,
         category,
       };
+=======
+<<<<<<< HEAD
+        jobTitle,
+        category,
+      };
+=======
+
+<<<<<<< HEAD
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        jobTitle;
+        category};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
@@ -101,6 +141,10 @@ export const ClientBudgetRecommender: React.FC<
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 if (scope) params.scope = scope;
 if (experienceLevel) params.experienceLevel = experienceLevel;
 //Track this suggestion application if (user && user.id) {;
@@ -114,4 +158,14 @@ return (<div className="space-y-4" > <div> {";
 }> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
 }</div> </div>) ;
 };
+<<<<<<< HEAD
 '"
+=======
+'"
+=======
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

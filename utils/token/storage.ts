@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { TokenConfig, TokenTransaction, Wallet } from './types';
@@ -49,11 +50,20 @@ class InMemoryTokenStore {
   }
 
 const store = new InMemoryTokenStore();
+=======
+// Mock token storage utility
+let config = {
+  enabled: true,
+  rate: 1.0,
+  maxPerDay: 1000
+};
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const tokenStore = {
-  getConfig(): TokenConfig {
-    return store.getData().config;
+  getConfig() {
+    return config;
   },
+<<<<<<< HEAD
   setConfig(config: TokenConfig): void {
     store.getData().config = config;
     store.save();
@@ -81,4 +91,9 @@ export const tokenStore = {
     if (!userId) return txs;
     return txs.filter(t => t.userId === userId);
   },
+=======
+  setConfig(newConfig: any) {
+    config = { ...config, ...newConfig };
+  }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };

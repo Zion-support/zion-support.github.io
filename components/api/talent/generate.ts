@@ -1,6 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export default async function handler(
@@ -16,7 +24,30 @@ export default async function handler(
     title?: string;
     bio?: string;
     experience?: string;
+<<<<<<< HEAD
     skills?: string;  };
+=======
+<<<<<<< HEAD
+    skills?: string;
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.setHeader('AllowPOST').status(405).end('Method Not Allowed')
+  }
+
+  const { name, title, bio, experience, skills } = req.body as {
+    name: string, title?: string,
+    bio?: string;
+    experience?: string;
+    skills?: string
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+    skills?: string
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  };
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (!name) return res.status(400).json({ error: 'Name is required' });
 
@@ -28,6 +59,11 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {
           role: 'system',
           content: 'You produce only valid JSON. No commentary.',
@@ -37,10 +73,34 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       response_format: { type: 'json_object' },
       temperature: 0.6,
     });
+<<<<<<< HEAD
+=======
+=======
+        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
+        { role: 'user', content: prompt }];
+      response_format: {
+       type: 'json_object' 
+    },
+    temperature: 0.6
+      });
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
+        { role: 'user', content: prompt }];
+      response_format: { type: 'json_object' };
+      temperature: 0.6});
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const content = completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON.parse(content);
 
     return res.status(200).json({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       name,
       title: parsed.title || title || 'Professional',
       category: parsed.category || null,
@@ -49,4 +109,29 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     });
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'OpenAI error' });
+<<<<<<< HEAD
   }
+=======
+  }
+=======
+      name;
+      title: parsed.title || title || 'Professional', category: parsed.category || null,
+      summary: parsed.summary || '',
+      skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message || 'OpenAI error' })
+  };
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      name;
+      title: parsed.title || title || 'Professional';
+      category: parsed.category || null;
+      summary: parsed.summary || '';
+      skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message || 'OpenAI error' })
+  };
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

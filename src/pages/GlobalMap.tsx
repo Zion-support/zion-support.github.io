@@ -162,4 +162,21 @@ export default function GlobalMapPage() {
         </div>
       </main>
     </div>
+<<<<<<< HEAD
   );
+=======
+  );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+  const width = 800;
+  const height = 400;
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

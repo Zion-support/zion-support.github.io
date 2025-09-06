@@ -8,65 +8,119 @@
       "title": "Home",
       "url": "/",
       "description": "Zion Tech Group - AI and Technology Solutions",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "keywords": [
         "AI",
         "technology",
         "solutions",
         "automation"
       ],
+<<<<<<< HEAD
+=======
+=======
+      "keywords": ["AI", "technology", "solutions", "automation"],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 1
     },
     {
       "title": "About",
       "url": "/about",
       "description": "About Zion Tech Group - Leading AI and Technology Company",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "keywords": [
         "about",
         "company",
         "team",
         "mission"
       ],
+<<<<<<< HEAD
+=======
+=======
+      "keywords": ["about", "company", "team", "mission"],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 2
     },
     {
       "title": "Services",
       "url": "/services",
       "description": "Our Services - AI Development, Automation, and Technology Solutions",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "keywords": [
         "services",
         "AI",
         "automation",
         "development"
       ],
+<<<<<<< HEAD
+=======
+=======
+      "keywords": ["services", "AI", "automation", "development"],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 3
     },
     {
       "title": "Contact",
       "url": "/contact",
       "description": "Contact Us - Get in Touch with Zion Tech Group",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "keywords": [
         "contact",
         "support",
         "help"
       ],
+<<<<<<< HEAD
+=======
+=======
+      "keywords": ["contact", "support", "help"],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 4
     },
     {
       "title": "Portfolio",
       "url": "/portfolio",
       "description": "Our Portfolio - AI and Technology Projects",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "keywords": [
         "portfolio",
         "projects",
         "work",
         "examples"
       ],
+<<<<<<< HEAD
+=======
+=======
+      "keywords": ["portfolio", "projects", "work", "examples"],
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 5
     },
     {
       "title": "Blog",
       "url": "/blog",
       "description": "Blog - Latest AI and Technology Insights",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "keywords": [
         "blog",
         "articles",
@@ -75,5 +129,12 @@
       ],
       "id": 6
     }
+<<<<<<< HEAD
+=======
+=======
+      "keywords": ["blog", "articles", "insights", "news"],
+      "id": 6    }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ]
 }

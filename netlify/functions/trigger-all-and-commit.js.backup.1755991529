@@ -1,7 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -14,6 +23,10 @@ exports.handler = async function(event, context) {
     const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
     
     const reportContent = `# trigger-all-and-commit Report
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
 exports.handler = async function() {
@@ -39,6 +52,11 @@ exports.handler = async function() {
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 Generated: ${timestamp}
 
 ## Status
@@ -63,6 +81,10 @@ Generated: ${timestamp}
     } catch (gitError) {
       console.log('Git error:', gitError.message);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -154,6 +176,14 @@ Generated: ${timestamp}
     console.log('✅ trigger-all-and-commit completed successfully');
         return {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    
+    console.log('✅ trigger-all-and-commit completed successfully');
+        return {
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       statusCode: 200,
       body: JSON.stringify({
         message: 'trigger-all-and-commit completed successfully',

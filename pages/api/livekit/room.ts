@@ -11,7 +11,21 @@ export default async function handler(
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  }
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+ursor/integrate-build-improve-and-re-verify-b76c
+  }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   try {
     const { projectId, preferredName } = req.body || {};
@@ -20,7 +34,21 @@ export default async function handler(
       return res.status(400).json({ error: 'Missing projectId' });
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
+<<<<<<< HEAD
       return res.status(500).json({ error: 'LiveKit env vars not configured' });    }
+=======
+      return res.status(500).json({ error: 'LiveKit env vars not configured' });
+      return res.status(400).json({ error: 'Missing projectId' })
+    }
+    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
+      return res.status(500).json({ error: 'LiveKit env vars not configured' })
+      return res.status(400).json({ error: 'Missing projectId' })
+    }
+    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
+      return res.status(500).json({ error: 'LiveKit env vars not configured' })
+ursor/integrate-build-improve-and-re-verify-b76c
+    }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const date = new Date();
     const pad = (n: number) => String(n).padStart(2, '0');
@@ -32,16 +60,31 @@ export default async function handler(
         LIVEKIT_HOST,
         LIVEKIT_API_KEY,
         LIVEKIT_API_SECRET
+<<<<<<< HEAD
       );      const opts: CreateRoomOptions = {
         name: roomName,
+=======
+      );
+      const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
+      const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
+ursor/integrate-build-improve-and-re-verify-b76c
+      const opts: CreateRoomOptions = {
+        name: roomName;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         emptyTimeout: 60 * 10, // 10 minutes
         maxParticipants: 24,
         metadata: JSON.stringify({
           projectId,
           createdBy: preferredName || 'host',
         }),
+        metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })
+ursor/integrate-build-improve-and-re-verify-b76c
       };
+<<<<<<< HEAD
       await roomService.createRoom(opts).catch(() => Promise.resolve());
+=======
+      await roomService.createRoom(opts).catch(() => Promise.resolve())
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } catch (e) {
       // In some deployments without server access, proceed with computed room name
       console.warn(
@@ -52,5 +95,25 @@ export default async function handler(
     return res.status(200).json({ roomName });
   } catch (err: any) {
     console.error('Room create error', err);
+<<<<<<< HEAD
     return res.status(500).json({ error: 'Failed to create room' });
   }
+=======
+    return res.status(500).json({ error: 'Failed to create room' })
+  }
+        metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })};
+      await roomService.createRoom(opts).catch(() => Promise.resolve())
+    } catch (e) {
+      // In some deployments without server access, proceed with computed room name
+      console.warn('Room create skipped or failed, proceeding with roomName only')
+    }
+
+    return res.status(200).json({ roomName })
+  } catch (err: any) {
+    console.error('Room create error', err);
+    return res.status(500).json({ error: 'Failed to create room' })
+  }
+}
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

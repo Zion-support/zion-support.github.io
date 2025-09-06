@@ -667,6 +667,10 @@
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
     "cloud:auto": "node scripts/cloud-autonomous-run.mjs",
     "cloud:auto:cron": "node -e \"setInterval(()=>{require('./scripts/cloud-autonomous-run.mjs')}, 1000*60*30)\""
@@ -681,6 +685,13 @@
     "cloud:auto": "node scripts/cloud-autonomous-run.mjs",
     "cloud:auto:cron": "node -e \"setInterval(()=>{require('./scripts/cloud-autonomous-run.mjs')}, 1000*60*30)\""  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "cloud:auto": "node scripts/cloud-autonomous-run.mjs",
+    "cloud:auto:cron": "node -e \"setInterval(()=>{require('./scripts/cloud-autonomous-run.mjs')}, 1000*60*30)\""  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           "postautomation": "npm run automation:git-sync",
       "lint:staged": "lint-staged",
       "performance:audit": "node automation/performance-audit.cjs",

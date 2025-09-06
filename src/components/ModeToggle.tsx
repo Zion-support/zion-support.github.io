@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -11,6 +16,16 @@ import {
   darkModeMessages,
   lightModeMessages,;
 } from '@/utils/themeToggleMessages';
+<<<<<<< HEAD
+=======
+=======
+import { Moon, Sun } from 'lucide-react'
+import { Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { toast } from "@/hooks/use-toast"
+import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from '@/components/ThemeProvider';
@@ -38,6 +53,7 @@ export function ModeToggle() {
     return theme;
   })();
 
+<<<<<<< HEAD
   const isDarkMode = resolvedTheme === 'dark';
   const handleToggle = () => {
     try {
@@ -45,6 +61,32 @@ export function ModeToggle() {
       const newTheme = isDarkMode ? 'light' : 'dark';
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
+=======
+<<<<<<< HEAD
+  const isDarkMode = resolvedTheme === 'dark';
+=======
+
+<<<<<<< HEAD
+
+
+  const isDarkMode = resolvedTheme === "dark";
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  const isDarkMode = resolvedTheme === "dark";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+  const handleToggle = () => {
+    try {
+      // Determine the new theme we are switching TO
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const newTheme = isDarkMode ? 'light' : 'dark';
+
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
+=======
+      const newTheme = isDarkMode ? "light" : "dark";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Apply the new theme via ThemeProvider
       toggleTheme();
@@ -151,6 +193,10 @@ export function ModeToggle() {
       </Tooltip>
     </TooltipProvider>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 };
 if (!isClient) {";
@@ -166,4 +212,18 @@ if (!isClient) {";
 }opacity-70 group-hover:opacity-100` ;
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+      const newTheme = isDarkMode ? "light" : "dark";
+
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

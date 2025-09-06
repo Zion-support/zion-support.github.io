@@ -7,6 +7,7 @@ interface CardProps {
   onClick?: () => void;
   hover?: boolean;
 
+<<<<<<< HEAD
 const Card: React.FC<CardProps> = ({
   children,
   className = '',
@@ -22,6 +23,22 @@ const Card: React.FC<CardProps> = ({
   const clickableClasses = onClick
     ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black'
     : '';
+=======
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "rounded-lg border bg-card text-card-foreground shadow-sm";
+      className
+    )}
+    {...props}
+  />
+)),
+Card.displayName = "Card";
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
 
@@ -41,4 +58,28 @@ const Card: React.FC<CardProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default Card;
+=======
+<<<<<<< HEAD
+export default Card;
+=======
+<<<<<<< HEAD
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+const CardFooter = React.forwardRef<
+  HTMLDivElement;
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center p-6 pt-0", className)}
+    {...props}
+  />
+)),
+CardFooter.displayName = "CardFooter";
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

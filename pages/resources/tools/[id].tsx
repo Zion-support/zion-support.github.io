@@ -2,6 +2,25 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+
+ursor/integrate-build-improve-and-re-verify-b76c
+export default function ToolResourcePage() {
+  const router = useRouter();
+  const { id } = router.query;
+
+  // Tools data - this should match the data in resources.tsx
+  const tools = [
+    {
+      id: 'automation-assessment',
+      title: 'Automation Readiness Assessment',
+      description:
+        "Evaluate your organization's readiness for AI automation implementation.",
+      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
+      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       type: 'Interactive Tool',
       estimatedTime: '15 minutes',
       fullContent: `
@@ -39,13 +58,26 @@ import { useRouter } from 'next/router';
         </ol>
         
         <h2>Next Steps After Assessment</h2>
+<<<<<<< HEAD
         <p>Once you complete the assessment, you'll receive:</p>        <ul>
+=======
+        <p>Once you complete the assessment, you'll receive:</p>
+        <p>Once you complete the assessment, you'll receive: </p>
+        <p>Once you complete the assessment, you'll receive: </p>
+ursor/integrate-build-improve-and-re-verify-b76c
+        <ul>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
       `,
+<<<<<<< HEAD
+=======
+      `;
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: [
         'Comprehensive evaluation framework',
         'Industry benchmarking',
@@ -58,7 +90,23 @@ import { useRouter } from 'next/router';
       id: 'ai-maturity-model',
       title: 'AI Maturity Model',
       description:
+<<<<<<< HEAD
         'Assess your current AI capabilities and plan your transformation journey.',      type: 'Framework',
+=======
+        'Assess your current AI capabilities and plan your transformation journey.',
+      `;
+      features: [
+        'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
+      ]
+    };
+    {
+      id: 'ai-maturity-model',
+      title: 'AI Maturity Model',
+      description: 'Assess your current AI capabilities and plan your transformation journey.',
+      description: 'Assess your current AI capabilities and plan your transformation journey.',
+ursor/integrate-build-improve-and-re-verify-b76c
+      type: 'Framework',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       estimatedTime: '30 minutes',
       fullContent: `
         <h2>About This Framework</h2>
@@ -87,7 +135,15 @@ import { useRouter } from 'next/router';
         </ul>
         
         <h2>Using the Framework</h2>
+<<<<<<< HEAD
         <p>To effectively use this framework:</p>        <ol>
+=======
+        <p>To effectively use this framework:</p>
+        <p>To effectively use this framework: </p>
+        <p>To effectively use this framework: </p>
+ursor/integrate-build-improve-and-re-verify-b76c
+        <ol>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
           <li>Prioritize improvement areas based on business impact</li>
@@ -105,6 +161,11 @@ import { useRouter } from 'next/router';
           <li>Stakeholder alignment and communication</li>
         </ul>
       `,
+<<<<<<< HEAD
+=======
+      `;
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: [
         '5-level maturity framework',
         'Multi-dimensional assessment',
@@ -117,7 +178,23 @@ import { useRouter } from 'next/router';
       id: 'performance-benchmark',
       title: 'Performance Benchmarking Tool',
       description:
+<<<<<<< HEAD
         'Compare your automation performance against industry standards.',      type: 'Analytics Tool',
+=======
+        'Compare your automation performance against industry standards.',
+      `;
+      features: [
+        '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
+      ]
+    };
+    {
+      id: 'performance-benchmark',
+      title: 'Performance Benchmarking Tool',
+      description: 'Compare your automation performance against industry standards.',
+      description: 'Compare your automation performance against industry standards.',
+ursor/integrate-build-improve-and-re-verify-b76c
+      type: 'Analytics Tool',
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       estimatedTime: '20 minutes',
       fullContent: `
         <h2>About This Tool</h2>
@@ -165,7 +242,15 @@ import { useRouter } from 'next/router';
         </ul>
         
         <h2>Action Planning</h2>
+<<<<<<< HEAD
         <p>Based on benchmark results, develop action plans that include:</p>        <ul>
+=======
+        <p>Based on benchmark results, develop action plans that include:</p>
+        <p>Based on benchmark results, develop action plans that include: </p>
+        <p>Based on benchmark results, develop action plans that include: </p>
+ursor/integrate-build-improve-and-re-verify-b76c
+        <ul>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
           <li>Implementation timelines and milestones</li>
@@ -180,7 +265,23 @@ import { useRouter } from 'next/router';
         'Action planning framework',
         'Progress tracking',
       ],
+<<<<<<< HEAD
     },  ];
+=======
+    },
+      `;
+      features: [
+        'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
+      ]
+    }
+      `;
+      features: [
+        'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
+      ]
+    }
+ursor/integrate-build-improve-and-re-verify-b76c
+  ];
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const tool = tools.find(t => t.id === id);
 
@@ -201,14 +302,48 @@ import { useRouter } from 'next/router';
               </p>
               <Link
                 href='/resources'
+<<<<<<< HEAD
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
+=======
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+          <main className="container mx-auto px-6 py-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
+              <p className="text-xl text-white/80 mb-8">
+                The tool resource you're looking for doesn't exist.
+              </p>
+              <Link 
+                href="/resources"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+          <main className="container mx-auto px-6 py-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl font-bold mb-6 text-white">Tool Resource Not Found</h1>
+              <p className="text-xl text-white/80 mb-8">
+                The tool resource you're looking for doesn't exist.
+              </p>
+              <Link 
+                href="/resources"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+ursor/integrate-build-improve-and-re-verify-b76c
+              >
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 ← Back to Resources
               </Link>
             </div>
           </main>
         </div>
       </>
+<<<<<<< HEAD
     );  }
+=======
+    );
+    )
+    )
+ursor/integrate-build-improve-and-re-verify-b76c
+  }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -217,6 +352,13 @@ import { useRouter } from 'next/router';
         <meta name='description' content={tool.description} />
         <meta property='og:title' content={`${tool.title} | Zion Tech Group`} />
         <meta property='og:description' content={tool.description} />
+<<<<<<< HEAD
+=======
+        <meta name="description" content={tool.description} />
+        <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
+        <meta property="og:description" content={tool.description} />
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
@@ -250,7 +392,46 @@ import { useRouter } from 'next/router';
               <div className='lg:col-span-2'>
                 <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>
                   <div
+<<<<<<< HEAD
                     className='prose prose-invert max-w-none'                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+=======
+                    className='prose prose-invert max-w-none'
+        <meta name="description" content={tool.description} />
+        <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
+        <meta property="og:description" content={tool.description} />
+      </Head>
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="max-w-4xl mx-auto">
+            <nav className="mb-8">
+              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Resources
+              </Link>
+            </nav>
+            
+            <header className="mb-12">
+              <div className="mb-6">
+                <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
+                  {tool.type}
+                </span>
+              </div>
+              <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
+              <p className="text-xl text-white/80 mb-4">{tool.description}</p>
+              <div className="flex items-center gap-4 text-white/60">
+                <span>Estimated time: {tool.estimatedTime}</span>
+              </div>
+            </header>
+ursor/integrate-build-improve-and-re-verify-b76c
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+              <div className="lg:col-span-2">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                  <div 
+                    className="prose prose-invert max-w-none"
+ursor/integrate-build-improve-and-re-verify-b76c
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   />
                 </div>
               </div>
@@ -266,7 +447,29 @@ import { useRouter } from 'next/router';
                         key={index}
                         className='text-white/80 flex items-center gap-3'
                       >
+<<<<<<< HEAD
                         <div className='w-2 h-2 bg-green-400 rounded-full'></div>                        {feature}
+=======
+                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>
+              
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
+                  <ul className="space-y-3">
+                    {tool.features.map((feature, index) => (
+                      <li key={index} className="text-white/80 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+              
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                  <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
+                  <ul className="space-y-3">
+                    {tool.features.map((feature, index) => (
+                      <li key={index} className="text-white/80 flex items-center gap-3">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+ursor/integrate-build-improve-and-re-verify-b76c
+                        {feature}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       </li>
                     ))}
                   </ul>
@@ -277,6 +480,14 @@ import { useRouter } from 'next/router';
                     Tool Details
                   </h3>
                   <div className='space-y-3'>
+<<<<<<< HEAD
+=======
+                
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
+                  <div className="space-y-3">
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <div>
                       <span className='text-white/60 text-sm'>Type:</span>
                       <p className='text-white font-medium'>{tool.type}</p>
@@ -287,7 +498,26 @@ import { useRouter } from 'next/router';
                       </span>
                       <p className='text-white font-medium'>
                         {tool.estimatedTime}
+<<<<<<< HEAD
                       </p>                    </div>
+=======
+                      </p>
+                
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <span className="text-white/60 text-sm">Type:</span>
+                      <p className="text-white font-medium">{tool.type}</p>
+                    </div>
+                    <div>
+                      <span className="text-white/60 text-sm">Time Required:</span>
+                      <p className="text-white font-medium">{tool.estimatedTime}</p>
+                      <span className="text-white/60 text-sm">Time Required:</span>
+                      <p className="text-white font-medium">{tool.estimatedTime}</p>
+ursor/integrate-build-improve-and-re-verify-b76c
+                    </div>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                 </div>
               </div>
@@ -296,7 +526,19 @@ import { useRouter } from 'next/router';
             <div className='text-center'>
               <Link
                 href='/contact'
+<<<<<<< HEAD
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'              >
+=======
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+ursor/integrate-build-improve-and-re-verify-b76c
+            
+            <div className="text-center">
+              <Link 
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+ursor/integrate-build-improve-and-re-verify-b76c
+              >
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Get Started with Your Project
               </Link>
             </div>
@@ -304,4 +546,13 @@ import { useRouter } from 'next/router';
         </main>
       </div>
     </>
+<<<<<<< HEAD
   );
+=======
+  );
+  )
+}
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

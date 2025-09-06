@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { FooterNewsletter } from '@/components/FooterNewsletter';
 import {
   Twitter,
@@ -10,6 +15,15 @@ import {
 import Link from 'next/link'; // Changed from react-router-dom
 import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
 
+<<<<<<< HEAD
+=======
+=======
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === '' || envVar === '#' || envVar === '/') {
     return fallback;
@@ -300,4 +314,18 @@ export function Footer() {
         <FeedbackWidget />
       </div>
     </footer>
+<<<<<<< HEAD
   );
+=======
+  );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

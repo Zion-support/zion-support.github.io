@@ -2,6 +2,39 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+  const id = String(req.query.id || '');
+  const updates = readJsonFile('updates.json', [] as any[]);
+<<<<<<< HEAD
+  const u = updates.find((x: any) => x.id === id);
+  if (!u) return res.status(404).json({ error: 'Not found' });
+<<<<<<< HEAD
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(
+    'Content-Disposition',
+    `attachment; filename="${u.title.replace(/[^a-z0-9]/gi, '_')}.pdf"`
+  );
+=======
+  const u = updates.find((x: any) => x.id === id),
+  if (!u) return res.status(404).json({ error: 'Not found' });
+  res.setHeader('Content-Typeapplication/pdf');
+  res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  res.setHeader('Content-Typeapplication/pdf');
+  res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const doc = new PDFDocument({ size: 'A4', margin: 50 });
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
@@ -13,4 +46,19 @@ import PDFDocument from 'pdfkit';
   doc.moveDown();
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
+<<<<<<< HEAD
   doc.end();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  doc.end();
+
+=======
+  doc.end()
+}
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  doc.end()
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

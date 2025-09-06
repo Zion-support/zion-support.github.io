@@ -5,6 +5,10 @@ import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 
+<<<<<<< HEAD
+=======
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function CourseView() {
   const router = useRouter();
   const { courseId } = router.query as { courseId: string };
@@ -12,7 +16,19 @@ export default function CourseView() {
   const [progress, setProgress] = useState<any>({
     percent: 0,
     completedLessons: [],
+<<<<<<< HEAD
   });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+=======
+  });
+export default function CourseView() {
+  const router = useRouter();
+  const { courseId } = router.query as { courseId: string },
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),
+ursor/integrate-build-improve-and-re-verify-b76c
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [finalPassed, setFinalPassed] = useState(false);
 
   useEffect(() => {
@@ -20,7 +36,17 @@ export default function CourseView() {
     async function load() {
       const [courseResp, progResp] = await Promise.all([
         fetch(`/api/learn/courses/${courseId}`),
+<<<<<<< HEAD
         fetch(`/api/learn/progress?userId=demo-user`),      ]);
+=======
+        fetch(`/api/learn/progress?userId=demo-user`),
+        fetch(`/api/learn/courses/${courseId}`);
+        fetch(`/api/learn/progress?userId=demo-user`)
+        fetch(`/api/learn/courses/${courseId}`);
+        fetch(`/api/learn/progress?userId=demo-user`)
+ursor/integrate-build-improve-and-re-verify-b76c
+      ]);
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const courseData = await courseResp.json();
       const progData = await progResp.json();
       setCourse(courseData.course);
@@ -28,6 +54,11 @@ export default function CourseView() {
         percent: 0,
         completedLessons: [],
       };
+<<<<<<< HEAD
+=======
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
     }
@@ -38,6 +69,20 @@ export default function CourseView() {
     () => course?.lessons?.find((l: any) => l.id === currentLessonId),
     [course, currentLessonId]
   );
+<<<<<<< HEAD
+=======
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
+      setProgress(cp);
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)
+    }
+    load()
+  }, [courseId]);
+
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
+ursor/integrate-build-improve-and-re-verify-b76c
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   async function markLessonComplete(lessonId: string) {
     const completedCount = (progress.completedLessons || []).includes(lessonId)
       ? (progress.completedLessons || []).length
@@ -45,6 +90,11 @@ export default function CourseView() {
     const percent = Math.round(
       (completedCount / (course?.lessons?.length || 1)) * 100
     );
+<<<<<<< HEAD
+=======
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const resp = await fetch('/api/learn/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -56,22 +106,59 @@ export default function CourseView() {
       }),
     });
     const data = await resp.json();
+<<<<<<< HEAD
     setProgress(data.progress);  }
 
   function onModuleQuizComplete(score: number) {
     // For demo, simply mark as completed when quiz attempted
     if (currentLessonId) markLessonComplete(currentLessonId);  }
+=======
+    setProgress(data.progress);
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    const resp = await fetch('/api/learn/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
+    });
+    const data = await resp.json();
+    setProgress(data.progress)
+    setProgress(data.progress)
+ursor/integrate-build-improve-and-re-verify-b76c
+  }
+
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+    if (currentLessonId) markLessonComplete(currentLessonId);
+    if (currentLessonId) markLessonComplete(currentLessonId)
+    if (currentLessonId) markLessonComplete(currentLessonId)
+ursor/integrate-build-improve-and-re-verify-b76c
+  }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
+<<<<<<< HEAD
     setFinalPassed(passed);  }
+=======
+    setFinalPassed(passed);
+    setFinalPassed(passed)
+    setFinalPassed(passed)
+ursor/integrate-build-improve-and-re-verify-b76c
+  }
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (!course) return <div>Loading...</div>;
 
   return (
     <div className='grid lg:grid-cols-3 gap-6'>
       <div className='lg:col-span-2 space-y-4'>
+<<<<<<< HEAD
+=======
+    <div className="grid lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2 space-y-4">
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         <div>
           <h1 className='text-2xl font-semibold'>{course.title}</h1>
           <div className='text-gray-500 text-sm'>
@@ -94,7 +181,32 @@ export default function CourseView() {
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
+<<<<<<< HEAD
                   >                    {l.title}
+=======
+                  >
+    <div className="grid lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2 space-y-4">
+        <div>
+          <h1 className="text-2xl font-semibold">{course.title}</h1>
+          <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
+          <div className="mt-3">
+            <ProgressBar value={progress.percent || 0} />
+            <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-5 gap-4">
+          <aside className="lg:col-span-2 border rounded p-3 h-max">
+            <div className="font-medium mb-2">Lessons</div>
+            <ul className="space-y-2">
+              {course.lessons?.map((l: any) => (
+                <li key={l.id}>
+                  <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
+                  <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
+ursor/integrate-build-improve-and-re-verify-b76c
+                    {l.title}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </button>
                 </li>
               ))}
@@ -102,6 +214,11 @@ export default function CourseView() {
           </aside>
 
           <section className='lg:col-span-3 space-y-4'>
+<<<<<<< HEAD
+=======
+          <section className="lg:col-span-3 space-y-4">
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {currentLesson ? (
               <div className='border rounded p-4'>
                 <div className='font-medium'>{currentLesson.title}</div>
@@ -138,15 +255,62 @@ export default function CourseView() {
                 {finalPassed && (
                   <div className='mt-3 text-green-700'>
                     Passed! You can download your certificate below.
+<<<<<<< HEAD
                   </div>                )}
               </div>
             ) : null}
 
             {finalPassed && <CertificatePreview courseId={courseId} />}          </section>
+=======
+                  </div>
+          <section className="lg:col-span-3 space-y-4">
+            {currentLesson ? (
+              <div className="border rounded p-4">
+                <div className="font-medium">{currentLesson.title}</div>
+                <div className="mt-2 text-sm whitespace-pre-line">{currentLesson.content}</div>
+                {currentLesson.quiz?.questions?.length ? (
+                  <div className="mt-4">
+                    <Quiz questions={currentLesson.quiz.questions} onComplete={onModuleQuizComplete} />
+                  </div>
+                ) : (
+                  <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+                )}
+              </div>
+            ) : (
+              <div className="text-sm text-gray-500">Select a lesson</div>
+            )}
+
+            {course.finalQuiz?.questions?.length ? (
+              <div className="border rounded p-4">
+                <div className="font-medium mb-2">Final Certification Quiz</div>
+                <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
+                {finalPassed && (
+                  <div className="mt-3 text-green-700">Passed! You can download your certificate below.</div>
+                  <div className="mt-3 text-green-700">Passed! You can download your certificate below.</div>
+ursor/integrate-build-improve-and-re-verify-b76c
+                )}
+              </div>
+            ) : null}
+
+            {finalPassed && <CertificatePreview courseId={courseId} />}
+            {finalPassed && (
+              <CertificatePreview courseId={courseId} />
+            )}
+            {finalPassed && (
+              <CertificatePreview courseId={courseId} />
+            )}
+ursor/integrate-build-improve-and-re-verify-b76c
+          </section>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </div>
       </div>
 
       <div className='space-y-4'>
+<<<<<<< HEAD
+=======
+      <div className="space-y-4">
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         <CoachWidget />
         <div className='border rounded p-3'>
           <div className='font-medium'>Profile Boost</div>
@@ -163,4 +327,22 @@ export default function CourseView() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  );
+      <div className="space-y-4">
+        <CoachWidget />
+        <div className="border rounded p-3">
+          <div className="font-medium">Profile Boost</div>
+          <div className="text-sm text-gray-600 mt-1">Opt-in to boost your visibility in matches when certified skills apply.</div>
+          <button className="mt-2 px-3 py-2 bg-indigo-600 text-white rounded" onClick={() => alert('Preference saved (demo)')}>Enable Boost</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

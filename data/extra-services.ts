@@ -33,6 +33,32 @@ export const extraServices: ExtraService[] = [
     category: 'Cloud Services',
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
+=======
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  };
+  {
+    id: "cybersecurity-audit";
+    name: "Cybersecurity Audit Pro";
+    tagline: "Comprehensive security assessment and protection";
+    price: "$199/hour";
+    description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.";
+    features: [
+      "Vulnerability assessment";
+      "Penetration testing";
+      "Security policy review";
+      "Compliance audit";
+      "Remediation guidance"
+    ];
+    link: "/services/cybersecurity-audit";
+    category: "Security";
+    realImplementation: true;
+    contactInfo: {
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -56,9 +82,44 @@ export const extraServices: ExtraService[] = [
     category: 'Security',
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  };
+  {
+    id: "cybersecurity-audit", name: "Cybersecurity Audit Pro",
+    tagline: "Comprehensive security assessment and protection", price: "$199/hour",
+    description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.",
+    features: [
+      "Vulnerability assessment";
+      "Penetration testing";
+      "Security policy review";
+      "Compliance audit";
+      "Remediation guidance"
+    ];
+    link: "/services/cybersecurity-audit", category: "Security",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,7 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 ## Zion Assistant Monorepo
 
 Cross-platform assistant for hiring managers and remote workers.
@@ -49,6 +58,10 @@ This README is auto-generated. Do not edit manually.
 
 - Intelligent Orchestrator (1m): /.netlify/functions/intelligent-orchestrator
 - Anomaly Watchdog (10m): /.netlify/functions/anomaly-watchdog
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 - Pulse Sync (1m): /.netlify/functions/pulse-sync
 =======
@@ -121,3 +134,9 @@ The widget creates a floating button and a panel (bottom-right on desktop, full-
 =======
 - Pulse Sync (1m): /.netlify/functions/pulse-sync
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+- Pulse Sync (1m): /.netlify/functions/pulse-sync
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

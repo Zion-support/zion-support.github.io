@@ -30,6 +30,10 @@ jobs:
           node-version: '20'
       - name: Install dependencies
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD:.github/workflows/auto-media-release.yml.backup
         run: npm ci
       - name: Run Autonomous Meta Orchestrator (once)
@@ -41,6 +45,15 @@ jobs:
       - name: Run Autonomous Meta Orchestrator (once)
         run: node automation/autonomous-meta-orchestrator.cjs once
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+:.github/workflows/auto-media-release.yml.backup
+        run: npm ci
+      - name: Run Autonomous Meta Orchestrator (once)
+        run: node automation/autonomous-meta-orchestrator.cjs once
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         run: npm ci --no-audit --no-fund
       - name: Run automations bundle
         run: |
@@ -52,9 +65,18 @@ jobs:
       - name: Build (non-blocking)
         run: npm run build || true
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 >>>>>>> origin/cursor/check-and-fix-github-actions-workflows-d32c:.github/workflows/rapid-sync.yml
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       - name: Commit and push changes
         run: |
           if [ -n "$(git status --porcelain)" ]; then

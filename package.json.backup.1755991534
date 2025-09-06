@@ -184,9 +184,18 @@
     "meta:orchestrator": "node automation/autonomous-meta-orchestrator.cjs",
     "meta:cron:start": "bash automation/autonomous-meta-cron.sh",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "venture:start": "node automation/venture-orchestrator.cjs continuous",
     "venture:once": "node automation/venture-orchestrator.cjs once",
     "venture:analyze": "node automation/venture-services-analyzer.cjs && node automation/venture-services-factory.cjs && node automation/ads-generator.cjs && node automation/service-sales-agents-factory.cjs",
@@ -221,6 +230,10 @@
     "detect:economy": "ts-node scripts/economy-anomaly-detector.ts",
     "governance:brief": "ts-node scripts/economy-governance-brief.ts",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
     "postbuild": "mkdir -p public/reports/economy && cp -r data/reports/economy/* public/reports/economy/ || true && mkdir -p public/reports/economy/optimizer && cp -r data/reports/economy/optimizer/* public/reports/economy/optimizer/ || true && mkdir -p public/reports/economy/anomalies && cp -r data/reports/economy/anomalies/* public/reports/economy/anomalies/ || true && mkdir -p public/docs/governance && cp -r docs/governance/* public/docs/governance/ || true"
 =======
     "admin:dashboard": "node automation/admin-dashboard-updater.cjs",
@@ -235,6 +248,12 @@
 =======
     "postbuild": "mkdir -p public/reports/economy && cp -r data/reports/economy/* public/reports/economy/ || true && mkdir -p public/reports/economy/optimizer && cp -r data/reports/economy/optimizer/* public/reports/economy/optimizer/ || true && mkdir -p public/reports/economy/anomalies && cp -r data/reports/economy/anomalies/* public/reports/economy/anomalies/ || true && mkdir -p public/docs/governance && cp -r docs/governance/* public/docs/governance/ || true"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "postbuild": "mkdir -p public/reports/economy && cp -r data/reports/economy/* public/reports/economy/ || true && mkdir -p public/reports/economy/optimizer && cp -r data/reports/economy/optimizer/* public/reports/economy/optimizer/ || true && mkdir -p public/reports/economy/anomalies && cp -r data/reports/economy/anomalies/* public/reports/economy/anomalies/ || true && mkdir -p public/docs/governance && cp -r docs/governance/* public/docs/governance/ || true"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -292,8 +311,17 @@
   "type": "module"
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
     "@typescript-eslint/parser": "^7.7.0",

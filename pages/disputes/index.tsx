@@ -3,6 +3,13 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+<<<<<<< HEAD
+=======
+
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher);
   const disputes = data?.disputes || [];
@@ -16,6 +23,14 @@ export default function DisputesIndexPage() {
               Raise Dispute
             </a>
           </Link>
+<<<<<<< HEAD
+=======
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-2xl font-semibold">My Disputes</h1>
+          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </div>
         <div className='overflow-auto border rounded'>
           <table className='min-w-full text-sm'>
@@ -24,7 +39,27 @@ export default function DisputesIndexPage() {
                 <th className='text-left px-3 py-2'>Case ID</th>
                 <th className='text-left px-3 py-2'>Project</th>
                 <th className='text-left px-3 py-2'>Created At</th>
+<<<<<<< HEAD
                 <th className='text-left px-3 py-2'>Status</th>              </tr>
+=======
+                <th className='text-left px-3 py-2'>Status</th>
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-2xl font-semibold">My Disputes</h1>
+          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</a></Link>
+        </div>
+        <div className="overflow-auto border rounded">
+          <table className="min-w-full text-sm">
+            <thead className="bg-gray-50 dark:bg-gray-900">
+              <tr>
+ursor/integrate-build-improve-and-re-verify-b76c
+                <th className="text-left px-3 py-2">Case ID</th>
+                <th className="text-left px-3 py-2">Project</th>
+                <th className="text-left px-3 py-2">Created At</th>
+                <th className="text-left px-3 py-2">Status</th>
+ursor/integrate-build-improve-and-re-verify-b76c
+              </tr>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </thead>
             <tbody>
               {disputes.map((d: any) => (
@@ -38,7 +73,19 @@ export default function DisputesIndexPage() {
                   <td className='px-3 py-2'>
                     {new Date(d.createdAt).toLocaleString()}
                   </td>
+<<<<<<< HEAD
                   <td className='px-3 py-2'>{d.status}</td>                </tr>
+=======
+                  <td className='px-3 py-2'>{d.status}</td>
+ursor/integrate-build-improve-and-re-verify-b76c
+                <tr key={d.id} className="border-t">
+                  <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</a></Link></td>
+                  <td className="px-3 py-2">{d.projectId}</td>
+                  <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
+                  <td className="px-3 py-2">{d.status}</td>
+ursor/integrate-build-improve-and-re-verify-b76c
+                </tr>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               ))}
               {disputes.length === 0 && (
                 <tr>
@@ -47,11 +94,28 @@ export default function DisputesIndexPage() {
                     className='px-3 py-6 text-center text-sm text-gray-500'
                   >
                     No disputes yet
+<<<<<<< HEAD
                   </td>                </tr>
+=======
+                  </td>
+                  <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
+                  <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
+ursor/integrate-build-improve-and-re-verify-b76c
+                </tr>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               )}
             </tbody>
           </table>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
+=======
+  );
+  )
+}
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

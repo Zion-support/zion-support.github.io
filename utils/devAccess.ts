@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -49,3 +50,10 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+=======
+// Mock dev access utility
+export function requireRoles(req: any, res: any, roles: string[]) {
+  // Mock implementation - in a real app, this would check user roles
+  return { user: 'admin', roles: ['admin'] };
+}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

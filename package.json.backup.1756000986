@@ -11,15 +11,28 @@
     "build": "next build",
     "start": "next start",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "lint": "next lint"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.56.0",
     "next": "^13.5.6",
     "react": "^18.2.0",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     "react-dom": "^18.2.0"
 =======
@@ -411,6 +424,12 @@
 =======
     "react-dom": "^18.2.0"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "react-dom": "^18.2.0"  },
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/plugin-transform-runtime": "^7.28.3",
@@ -436,6 +455,10 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
     "lint-staged": "^16.1.4",
 =======
@@ -446,6 +469,12 @@
 =======
     "lint-staged": "^16.1.4",    "postcss": "^8.4.32",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+    "lint-staged": "^16.1.4",    "postcss": "^8.4.32",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "tailwindcss": "^3.4.0",
     "typescript": "^5.0.0"
   }

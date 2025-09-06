@@ -3,9 +3,14 @@ import type { KycProfile } from '../../../utils/kyc';
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
+=======
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -13,11 +18,20 @@ function load(): Record<string, KycProfile> {
   } catch {
     return {};
   }
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET')
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.query as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
+=======
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  const { userId } = req.query as { userId?: string };
+  if (!userId) return res.status(400).json({ error: 'userId is required' });
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const db = load();
   const profile = db[userId];
   if (!profile) return res.status(404).json({ error: 'Profile not found' });
@@ -25,5 +39,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(profile.role),
+<<<<<<< HEAD
     optionalDocuments: getOptionalDocuments(profile.role),
   });
+=======
+    optionalDocuments: getOptionalDocuments(profile.role)
+  });
+}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

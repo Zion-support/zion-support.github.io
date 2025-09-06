@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState } from 'react';
 import { BookOpen, Terminal } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -10,6 +15,11 @@ import {
 } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 import CodeBlock from './CodeBlock';
 import { logInfo } from '@/utils/productionLogger';
@@ -1208,4 +1218,42 @@ function EndpointSection({
         </div>
       )}
     </div>
+<<<<<<< HEAD
   );
+=======
+  );
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}';
+    headers=headers
+
+<<<<<<< HEAD
+    'https: //api.ziontechgroup.com/v1/jobs', headers=headers,
+
+    data=json.dumps(payload)
+
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}';
+    headers=headers
+
+<<<<<<< HEAD
+    'https: //api.ziontechgroup.com/v1/quotes', headers=headers,
+
+    data=json.dumps(payload)
+
+<<<<<<< HEAD
+  const webhookSecret = process.env.WEBHOOK_SECRET;
+  
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

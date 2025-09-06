@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   LucideIcon,
   BadgeCheck,
@@ -7,6 +12,14 @@ import {
   BadgePlus,
   BadgeDollarSign,;
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+
+import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
+import { Star } from 'lucide-react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export type BadgeKey =
   | 'first_listing'
@@ -76,4 +89,21 @@ export const badgeList: BadgeMeta[] = [
 ];
 
 export const getBadgeMeta = (key: BadgeKey) =>
+<<<<<<< HEAD
   badgeList.find(b => b.key === key);
+=======
+<<<<<<< HEAD
+  badgeList.find(b => b.key === key);
+=======
+<<<<<<< HEAD
+  | "monetized";
+
+<<<<<<< HEAD
+  badgeList.find((b) => b.key === key);
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+  badgeList.find((b) => b.key === key);
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

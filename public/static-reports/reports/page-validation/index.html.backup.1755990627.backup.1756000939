@@ -15,9 +15,18 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 </style>
 <h1>Next.js Page Structure Validation Report</h1>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <p>Generated 8/19/2025, 5:23:22 PM</p>
 <div class="build-status build-success">✅ BUILD READY</div>
 <div class="card success">
@@ -31,6 +40,10 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 <div class="card warning">
 <h3><code>pages/_app.tsx</code></h3>
 <h4>Warnings:</h4>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <div class="pill warning">INCOMPLETE_HTML: Incomplete HTML tags detected</div>
 =======
@@ -48,3 +61,9 @@ code{background:rgba(0,0,0,.4);padding:2px 4px;border-radius:6px}
 =======
 <div class="pill warning">INCOMPLETE_HTML: Incomplete HTML tags detected</div></div>
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+<div class="pill warning">INCOMPLETE_HTML: Incomplete HTML tags detected</div></div>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

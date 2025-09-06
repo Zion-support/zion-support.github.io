@@ -1,5 +1,8 @@
 import { IntegrationProviderMeta } from './types';
+<<<<<<< HEAD
 
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {
     id: 'salesforce',
@@ -45,8 +48,14 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: 'HRIS & ATS',
   },
 ];
+<<<<<<< HEAD
 
 export function getProviderById(
   id: string
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
+=======
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find(p => p.id === id);
+}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

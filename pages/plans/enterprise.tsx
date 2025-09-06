@@ -1,4 +1,20 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+ursor/integrate-build-improve-and-re-verify-b76c
+const features = [
+  { key: 'private_portal', label: 'Private hiring portal' },
+  { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
+  { key: 'custom_sla', label: 'Custom SLA' },
+  { key: 'branded_onboarding', label: 'Branded onboarding' },
+  { key: 'admin_dashboards', label: 'Admin dashboards' },
+];
+
+  { key: 'admin_dashboards', label: 'Admin dashboards' }],
+  { key: 'admin_dashboards', label: 'Admin dashboards' }],
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const tiers = [
   {
     id: 'teams',
@@ -13,7 +29,18 @@ const tiers = [
       branded_onboarding: true,
       admin_dashboards: true,
     },
+<<<<<<< HEAD
   },  {
+=======
+  },
+    highlights: ['10 seatsPrivate portalAdmin dashboard'],
+    includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }},
+    blurb: 'Up to 10 users, core collaboration features';
+    highlights: ['10 seatsPrivate portalAdmin dashboard'],
+    includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }},
+ursor/integrate-build-improve-and-re-verify-b76c
+  {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'business',
     name: 'Business',
     price: '$499/mo',
@@ -26,7 +53,18 @@ const tiers = [
       branded_onboarding: true,
       admin_dashboards: true,
     },
+<<<<<<< HEAD
   },  {
+=======
+  },
+    highlights: ['50 seatsDedicated talent poolSLA options'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }},
+    blurb: 'Up to 50 users, advanced controls and limits';
+    highlights: ['50 seatsDedicated talent poolSLA options'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }},
+ursor/integrate-build-improve-and-re-verify-b76c
+  {
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'enterprise-custom',
     name: 'Enterprise',
     price: 'Custom',
@@ -41,6 +79,16 @@ const tiers = [
     },
   },
 ];
+<<<<<<< HEAD
+=======
+
+    highlights: ['Unlimited seatsCustom SLADedicated CSM'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
+    blurb: 'Unlimited users, custom contracts and SLAs';
+    highlights: ['Unlimited seatsCustom SLADedicated CSM'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -50,6 +98,11 @@ export default function EnterprisePlans() {
           Team-based access with admin controls, branded environments, and usage
           limits.
         </p>
+<<<<<<< HEAD
+=======
+        <p>Team-based access with admin controls, branded environments, and usage limits.</p>
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </header>
 
       <section
@@ -67,7 +120,20 @@ export default function EnterprisePlans() {
               borderRadius: 12,
               padding: '1.25rem',
             }}
+<<<<<<< HEAD
           >            <h3 style={{ marginBottom: 4 }}>{t.name}</h3>
+=======
+          >
+        <p>Team-based access with admin controls, branded environments, and usage limits.</p>
+      </header>
+
+      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+        {tiers.map(t => (
+          <div key={t.id} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: '1.25rem' }}>
+          <div key={t.id} style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: '1.25rem' }}>
+ursor/integrate-build-improve-and-re-verify-b76c
+            <h3 style={{ marginBottom: 4 }}>{t.name}</h3>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             <div style={{ fontSize: 28, fontWeight: 700 }}>{t.price}</div>
             <p style={{ color: '#4b5563' }}>{t.blurb}</p>
             <ul style={{ marginTop: 8 }}>
@@ -97,7 +163,21 @@ export default function EnterprisePlans() {
                 }}
               >
                 Schedule a Demo
+<<<<<<< HEAD
               </a>            </div>
+=======
+              </a>
+              <Link href="/enterprise" passHref legacyBehavior>
+                <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</a>
+              </Link>
+              <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>
+              <Link href="/enterprise" passHref legacyBehavior>
+                <a style={{ padding: '0.5rem 0.75rem', background: '#111827', color: 'white', borderRadius: 8 }}>Request Quote</a>
+              </Link>
+              <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</a>
+ursor/integrate-build-improve-and-re-verify-b76c
+            </div>
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         ))}
       </section>
@@ -127,7 +207,19 @@ export default function EnterprisePlans() {
                     }}
                   >
                     {t.name}
+<<<<<<< HEAD
                   </th>                ))}
+=======
+                  </th>
+                <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Feature</th>
+                {tiers.map(t => (
+                  <th key={t.id} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>{t.name}</th>
+                <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Feature</th>
+                {tiers.map(t => (
+                  <th key={t.id} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>{t.name}</th>
+ursor/integrate-build-improve-and-re-verify-b76c
+                ))}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </tr>
             </thead>
             <tbody>
@@ -144,7 +236,19 @@ export default function EnterprisePlans() {
                         padding: 8,
                         borderBottom: '1px solid #f3f4f6',
                       }}
+<<<<<<< HEAD
                     >                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
+=======
+                    >
+                  <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
+                  {tiers.map(t => (
+                    <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                  <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
+                  {tiers.map(t => (
+                    <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+ursor/integrate-build-improve-and-re-verify-b76c
+                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </td>
                   ))}
                 </tr>
@@ -162,6 +266,11 @@ export default function EnterprisePlans() {
           alignItems: 'center',
         }}
       >
+<<<<<<< HEAD
+=======
+      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         <div style={{ display: 'flex', gap: 8 }}>
           <span
             style={{
@@ -196,4 +305,24 @@ export default function EnterprisePlans() {
         </div>
       </section>
     </main>
+<<<<<<< HEAD
   );
+=======
+  );
+      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
+          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>ISO 27001</span>
+          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>
+        </div>
+        <div style={{ marginLeft: 'auto' }}>
+          <Link href="/enterprise/admin">Admin Dashboard</Link>
+        </div>
+      </section>
+    </main>
+  )
+}
+  )
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

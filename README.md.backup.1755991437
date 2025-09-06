@@ -1,7 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 # Zion OS SDK Monorepo
 
 Developer-ready SDKs, CLI, and boilerplates for launching, customizing, and extending Zion OS across web, mobile, and CLI.
@@ -9,6 +18,10 @@ Developer-ready SDKs, CLI, and boilerplates for launching, customizing, and exte
 - Docs: `docs/zion-sdk.md`
 - TypeScript SDK: `packages/zion-sdk`
 - CLI scaffolder: `packages/create-zion-instance` (run with `npx create-zion-instance`)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 - Python SDK: `packages/zion-python`
 =======
@@ -48,3 +61,9 @@ Add `.github/workflows/link-check.yml` to run weekly and on PRs.
 =======
 - Python SDK: `packages/zion-python`
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+- Python SDK: `packages/zion-python`
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

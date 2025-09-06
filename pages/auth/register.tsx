@@ -6,6 +6,41 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
+=======
+
+ursor/integrate-build-improve-and-re-verify-b76c
+const RegisterPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    fireEvent('signup_page_view');
+    fireEvent('signup_page_view')
+ursor/integrate-build-improve-and-re-verify-b76c
+  }, []);
+
+  const handleSuccess = ({ email, emailVerificationRequired }: {
+    email: string,
+    emailVerificationRequired: boolean
+  }) => {
+    if (emailVerificationRequired) {
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+    } else {
+      router.push('/auth/login?registrationSuccess=true');
+    fireEvent('signup_page_view')
+  }, []);
+
+  const handleSuccess = ({ email, emailVerificationRequired }: {
+    email: string,
+    emailVerificationRequired: boolean
+  }) => {
+    if (emailVerificationRequired) {
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+    } else {
+      router.push('/auth/login?registrationSuccess=true')
+      router.push('/auth/login?registrationSuccess=true')
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   };
 
@@ -17,6 +52,11 @@ import { useRouter } from 'next/router';
           name='description'
           content='Create your Zion Tech Marketplace account'
         />
+<<<<<<< HEAD
+=======
+        <meta name="description" content="Create your Zion Tech Marketplace account" />
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </Head>
 
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
@@ -40,7 +80,40 @@ import { useRouter } from 'next/router';
               Or{' '}
               <Link
                 href='/auth/login'
+<<<<<<< HEAD
                 className='font-medium text-blue-600 hover:text-blue-500 underline'              >
+=======
+                className='font-medium text-blue-600 hover:text-blue-500 underline'
+        <meta name="description" content="Create your Zion Tech Marketplace account" />
+      </Head>
+
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-md w-full space-y-8">
+          <div>
+            <img
+              className="mx-auto h-12 w-auto"
+              src="/logos/zion-logo.png"
+              alt="Zion Tech"
+              width={48}
+              height={48}
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none'
+              }}
+            />
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              Create your account
+            </h2>
+            <p className="mt-2 text-center text-sm text-gray-600">
+              Or{' '}
+              <Link
+                href="/auth/login"
+                className="font-medium text-blue-600 hover:text-blue-500 underline"
+                href="/auth/login"
+                className="font-medium text-blue-600 hover:text-blue-500 underline"
+ursor/integrate-build-improve-and-re-verify-b76c
+              >
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 sign in if you already have an account
               </Link>
             </p>
@@ -53,6 +126,14 @@ import { useRouter } from 'next/router';
             <div className='relative'>
               <div className='absolute inset-0 flex items-center'>
                 <div className='w-full border-t border-gray-300' />
+<<<<<<< HEAD
+=======
+          <div className="mt-6">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300" />
+ursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
               <div className='relative flex justify-center text-sm'>
                 <span className='px-2 bg-gray-50 text-gray-500'>
@@ -76,7 +157,34 @@ import { useRouter } from 'next/router';
               <Link
                 href='/legal/privacy'
                 className='text-blue-600 hover:text-blue-500'
+<<<<<<< HEAD
               >                Privacy Policy
+=======
+              >
+          <div className="mt-6">
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300" />
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-2 bg-gray-50 text-gray-500">Or continue with</span>
+              </div>
+            </div>
+            <AuthButtons providers={["google", "github"]} />
+          </div>
+
+          <div className="text-center mt-4">
+            <p className="text-xs text-gray-500">
+              By creating an account, you agree to our{' '}
+              <Link href="/legal/terms" className="text-blue-600 hover: text-blue-500">
+                Terms of Service
+              </Link>{' '}
+              and{' '}
+              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
+              <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
+ursor/integrate-build-improve-and-re-verify-b76c
+                Privacy Policy
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </Link>
             </p>
           </div>
@@ -84,4 +192,16 @@ import { useRouter } from 'next/router';
       </div>
     </>
   );
+<<<<<<< HEAD
 };export default RegisterPage;
+=======
+};
+  )
+};
+
+  )
+};
+
+ursor/integrate-build-improve-and-re-verify-b76c
+export default RegisterPage;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

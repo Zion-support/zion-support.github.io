@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 name: Scheduled Automations
 =======
 name: Autonomous Automations
@@ -10,15 +16,28 @@ on:
     - cron: '*/30 * * * *'
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+=======
 name: Scheduled Automations
 on:
   schedule:
     - cron: '*/30 * * * *'
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   workflow_dispatch:
 
 permissions:
   contents: write
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
   push:
@@ -26,6 +45,11 @@ permissions:
   workflow_dispatch: {}
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 jobs:
   run-automations:
     runs-on: ubuntu-latest
@@ -33,6 +57,10 @@ jobs:
 =======
     permissions:
       contents: write
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 jobs:
@@ -41,14 +69,28 @@ jobs:
     permissions:
       contents: write
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -88,6 +130,10 @@ jobs:
           git add -A
           git commit -m "chore(automation): scheduled automations artifacts [skip ci]" || echo "No changes"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
           git push origin HEAD:${GITHUB_REF#refs/heads/}
 =======
           persist-credentials: true
@@ -122,3 +168,9 @@ jobs:
 =======
           git push origin HEAD:${GITHUB_REF#refs/heads/}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+          git push origin HEAD:${GITHUB_REF#refs/heads/}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

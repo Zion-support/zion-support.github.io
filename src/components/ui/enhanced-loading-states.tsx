@@ -436,4 +436,26 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+<<<<<<< HEAD
+};
+=======
+
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+  const Icon = config.icon;
+  const canRetry = showRetry && onRetry && retryCount < maxRetries;
+
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+};
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

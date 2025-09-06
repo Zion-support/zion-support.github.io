@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -10,6 +15,22 @@ import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
+<<<<<<< HEAD
+=======
+=======
+import React, { useState } from "react";
+import Image from "next/image";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import axios from "axios";
+import { Loader2 } from 'lucide-react'
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export function ITServiceRequestHero() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -179,6 +200,11 @@ export function ITServiceRequestHero() {
       </div>
     </section>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }catch (err: any) {;
   logErrorToProduction (err);
@@ -215,4 +241,17 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105" > {";
   isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" /> ;
 }Request Service </Button> </form> </div> ;
+<<<<<<< HEAD
 }'"
+=======
+}'"
+=======
+
+<<<<<<< HEAD
+
+
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
