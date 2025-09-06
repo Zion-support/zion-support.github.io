@@ -24,7 +24,7 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App() {
+export default function App(): JSX.Element {
   const services = [
     {
       title: 'AI Solutions',
@@ -64,13 +64,7 @@ export default function App() {
     },
   ];
 
-export default function App(): JSX.Element {
   return (
-<<<<<<< HEAD
-    <main>
-
-    </main>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
       <Header />
@@ -140,7 +134,6 @@ export default function App(): JSX.Element {
       <ChatAssistant />
       <ScrollToTop />
     </div>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   );
 }
 <<<<<<< HEAD
