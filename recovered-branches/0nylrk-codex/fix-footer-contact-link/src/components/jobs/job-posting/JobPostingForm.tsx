@@ -1,3 +1,4 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
 
 import React, { useState, useEffect, useCallback } from 'react';
 import {useNavigate} from 'react-router-dom';

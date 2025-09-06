@@ -1,14 +1,16 @@
   const pageKey = `search-${routeKey}-${router.asPath}`;
-
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Loader2} from 'lucide-react'
-
+import {
+  Tabs;
+  TabsContent;
+  TabsList;
+  TabsTrigger} from "@/components/ui/tabs";
+import { Loader2 } from 'lucide-react'
 interface SearchResult {
   id: string,
   type: "product" | "service" | "talent" | "blog" | "doc",
@@ -23,7 +25,7 @@ function highlight(text: string, term: string) {
   const parts = text.split(regex);
   return (
     <>
-      {parts.map((part, i) =>
+      {parts.map((part, i,) =>
         regex.test(part) ? (
           <mark key={i} className="bg-yellow-200 text-black">
             {part}
@@ -44,8 +46,7 @@ export default function SearchPage() {
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
-    setResults([]);
-    setLoading(false)
+    setResults([]);    setLoading(false)
   });
 
   const productResults = results.filter(
@@ -58,8 +59,7 @@ export default function SearchPage() {
 
   // Sync query with URL parameter changes
   useEffect(() => {
-    if (!router.isReady) return;
-    
+    if (!router.isReady) return;    
     const urlQuery = (router.query.q as string) || "";
     if (urlQuery !== query) {
       setQuery(urlQuery)
@@ -68,8 +68,7 @@ export default function SearchPage() {
 
   // Fetch results when query changes
   useEffect(() => {
-    if (!router.isReady) return;
-    
+    if (!router.isReady) return;    
     if (query.trim()) {
       fetchResults(query.trim())
     } else {
@@ -77,7 +76,7 @@ export default function SearchPage() {
     }
   }, [router.isReady, query]), // Fixed dependency array
 
-  const fetchResults = async (term: string) => {
+  const fetchResults = async (term: string,) => {
     if (!term.trim()) {
       setResults([]),
       return
@@ -102,8 +101,7 @@ export default function SearchPage() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    if (query.trim()) {
+    e.preventDefault();    if (query.trim()) {
       router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
   };
@@ -120,10 +118,9 @@ export default function SearchPage() {
             onChange={setQuery}
             onSelectSuggestion={(suggestion) => {
               const searchTerm = suggestion.text.trim();
-              setQuery(searchTerm);
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
+              setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
-            searchSuggestions={suggestions}
+            searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -167,8 +164,8 @@ export default function SearchPage() {
             </TabsList>
             <TabsContent value="products" className="space-y-4">
               {results
-                .filter((r) => r.type === "product" || r.type === "service")
-                .map((r) => (
+                .filter((r,) => r.type === "product" || r.type === "service")
+                .map((r,) => (
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -184,8 +181,8 @@ export default function SearchPage() {
             </TabsContent>
             <TabsContent value="talent" className="space-y-4">
               {results
-                .filter((r) => r.type === "talent")
-                .map((r) => (
+                .filter((r,) => r.type === "talent")
+                .map((r,) => (
                   <div
                     key={`talent-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -201,8 +198,8 @@ export default function SearchPage() {
             </TabsContent>
             <TabsContent value="docs" className="space-y-4">
               {results
-                .filter((r) => r.type === "doc")
-                .map((r) => (
+                .filter((r,) => r.type === "doc")
+                .map((r,) => (
                   <div
                     key={`doc-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -218,8 +215,8 @@ export default function SearchPage() {
             </TabsContent>
             <TabsContent value="blog" className="space-y-4">
               {results
-                .filter((r) => r.type === "blog")
-                .map((r) => (
+                .filter((r,) => r.type === "blog")
+                .map((r,) => (
                   <div
                     key={`blog-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -264,7 +261,6 @@ if (data && data.results && Array.isArray (data.results) ) {;
 logErrorToProduction ('Search API response structure is not as expected:', {;
   data: data ;
 }) ;
-
 }catch (error) {';
   logErrorToProduction ('Search failed:', {;
   data: error ;
@@ -304,9 +300,77 @@ router.push (`/search?q=$ {;
 }className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) ) ;
 }</TabsContent> </Tabs>) ;
 }</main> </div>) ;
-}'"
-=======
-  )
+}'"  )
+              {/* Sort Options */}
+              <div  className="mb-6">;
+                <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>;
+                <select;
+                  value={sortBy}
+                  onChange={ (e) => setSortBy(e.target.value as any) }
+                  className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500">;
+                  <option value="relevance">Relevance</option>;
+                  <option value="date">Date</option>;
+                  <option value="popularity">Popularity</option>;
+                </select>;
+              </div>;
+
+              {/* Filter Options */}
+              <div  className="space - y-3">;
+                {filterOptions.map(filter => (<button     key={filter.id}
+                    onClick={ () => toggleFilter(filter.id) }
+                    className={`w-full flex items - center justify - between p - 3 rounded-lg transition - colors ${selectedFilters.has(filter.id) ? 'bg-blue - 50 border border-blue - 200';
+                        : 'hover:bg-gray - 50';
+}`}
+                  >;
+                    <div  className="flex items - center space - x-3">;
+                      <filter.icon className="h-5 w-5 text-gray -600" />;
+                      <span className="text-sm font - medium text-gray -700">{filter.name}</span>;
+                    </div>;
+                    <span className="text-sm text-gray -500">{filter.count}</span>;
+                  </button>) ) }
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
+
+        {/* Search Results */}
+        <motion.div;
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="max - w-6xl mx -auto">;
+          {/* Results Count */}
+          <div  className="mb-6">;
+            <p className="text-slate -300">;
+              {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
+            </p>;
+            <div className="grid md:grid-cols-2 gap-8 mb-12">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
+                <ul className="text-gray-600 space-y-2">;
+                  <li>• Professional Solutions</li>;
+                  <li>• Expert Implementation</li>;
+                  <li>• 24/7 Support</li>;
+                  <li>• Custom Development</li>;
+                </ul>;
+              </div>;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
+                <ul className="text-gray-600 space-y-2">;
+                  <li>• Industry Expertise</li>;
+                  <li>• Proven Results</li>;
+                  <li>• Scalable Solutions</li>;
+                  <li>• Competitive Pricing</li>;
+                </ul>;
+              </div>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+                View Pricing;
+              </Link>;
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+                Contact Us;
+              </Link>;
+            </div>;
+    </>;
+  );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

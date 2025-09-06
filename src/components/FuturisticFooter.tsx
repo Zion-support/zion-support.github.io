@@ -40,26 +40,20 @@
 </Award>; </span>; </div>; </div>; </div>; </div>; </div>; </footer>";            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             viewport={{ once: true }};
-            transition={{ duration: 0.6, staggerChildren: 0.1 }};
-            initial={{ opacity: 0, y: 20 }};
+            transition={{ duration: 0.6, staggerChildren: 0.1 }};            initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             viewport={{ once: true }};
             transition={{ duration: 0.6, staggerChildren: 0.1 }};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           >;
-</motion>;
-              <motion.div;
+</motion>;              <motion.div;
                 key={stat.label}";
-<<<<<<< HEAD
                 className="text-center"";                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 viewport={{ once: true }};
-                transition={{ duration: 0.6, delay: index * 0.1 }};
-                initial={{ opacity: 0, y: 20 }};
+                transition={{ duration: 0.6, delay: index * 0.1 }};                initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 viewport={{ once: true }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               >;
 </motion>";
                 <div className="flex justify-center mb-3">";
@@ -91,8 +85,7 @@
                 <div>;
 </div>";
                   <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"";
-                  <p className="text-slate-400 text-sm">Future Technology Solutions</p>";
-                </div>;
+                  <p className="text-slate-400 text-sm">Future Technology Solutions</p>";                </div>;
               </motion.div>;
               ";
               <p className="text-slate-300 mb-6 leading-relaxed">";
@@ -166,13 +159,9 @@
 </span>";
                   <Award className="w-4 h-4 text-yellow-400 mr-2" />";
 </Award>;
-                </span>;
-              </div>;
+                </span>;              </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </footer>";
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

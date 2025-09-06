@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface ComprehensiveService {
   id: string;
   name: string;
@@ -48,9 +47,7 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
-  {
-=======
-  mobile: '+1 302 464 0950';
+  {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -58,8 +55,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-powered-code-review-assistant',
     name: 'AI-Powered Code Review Assistant',
     tagline:
@@ -68,8 +63,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     period: '/month',
     description:
       'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     features: [
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
@@ -896,9 +889,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     rating: 4.8,
     reviews: 178,
   },
-];
-=======
-      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
+];      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
       'Real-time insights dashboard'
     ];
     popular: true;
@@ -929,5 +920,3 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 178
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

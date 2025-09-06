@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Security Intelligence System;
@@ -26,3 +27,5 @@ const { execSync } = require('child_process')
         const httpsCheck = execSync(`grep -r -i "https"`)
         const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options"`)
         const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

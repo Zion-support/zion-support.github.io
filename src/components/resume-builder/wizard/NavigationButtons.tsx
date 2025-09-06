@@ -2,10 +2,9 @@ import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import { NavigationButtonsProps } from './types';
 
-
-import {Button} from "@/components/ui/button";
-import {Loader2} from 'lucide-react'
-import {NavigationButtonsProps} from "./types";
+import { Button } from "@/components/ui/button";
+import { Loader2 } from 'lucide-react'
+import { NavigationButtonsProps } from "./types";
 export const NavigationButtons = ({
   onBack;
   onNext;
@@ -29,10 +28,12 @@ export const NavigationButtons = ({
     <div className='flex justify-between'>
       {onBack && (
         <Button variant='outline' onClick={onBack}>          {backLabel}
-=======
+        <Button variant="outline" onClick={onBack}>
+  return (
+    <div className="flex justify-between">
+      {onBack && (
         <Button variant="outline" onClick={onBack}>
           {backLabel}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </Button>
       )}
       {onNext && (
@@ -43,19 +44,12 @@ export const NavigationButtons = ({
     </div>
   );
 };
-"
-=======
-          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>
       )}
     </div>
-<<<<<<< HEAD
   );
 };
-"
-=======
-  )
+"  )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

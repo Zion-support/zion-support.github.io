@@ -1,4 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -24,7 +23,6 @@ interface AIMilestoneGeneratorProps {
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
   onAddMilestone: (milestone: GeneratedMilestone) => void;
-
 export function AIMilestoneGenerator({
   scope,
   startDate,
@@ -73,8 +71,7 @@ export function AIMilestoneGenerator({
     clearGeneratedMilestones();
     setSelectedMilestones({});
   };
-
-  const toggleMilestoneSelection = (index: number) => {
+  const toggleMilestoneSelection = (index: number,) => {
     setSelectedMilestones(prev => ({
       ...prev,
       [index]: !prev[index],
@@ -84,8 +81,7 @@ export function AIMilestoneGenerator({
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
     onAddMilestone(milestone);
   };
-
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string,) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {
@@ -103,8 +99,7 @@ export function AIMilestoneGenerator({
         <Button
           variant='outline'
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scope || !startDate || !projectType}
-        >
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -129,8 +124,7 @@ export function AIMilestoneGenerator({
               </p>
               <Button
                 onClick={handleAddToProject}
-                disabled={!Object.values(selectedMilestones).some(Boolean)}
-              >
+                disabled={!Object.values(selectedMilestones).some(Boolean)}              >
                 Add Selected to Project
               </Button>
             </div>
@@ -143,14 +137,12 @@ export function AIMilestoneGenerator({
                   className='border p-2 rounded-md mb-2'
                 >
                   <div className='flex items-center justify-between'>
-                    <div className='flex items-center flex-1'>
-                      <input
+                    <div className='flex items-center flex-1'>                      <input
                         type='checkbox'
                         id={`milestone-${index}`}
                         checked={selectedMilestones[index] || false}
                         onChange={() => toggleMilestoneSelection(index)}
-                        className='mr-2 w-4 h-4 rounded text-primary'
-                      />
+                        className='mr-2 w-4 h-4 rounded text-primary'                      />
                       <AccordionTrigger className='hover:no-underline flex-1 text-left'>
                         <div className='flex items-center'>
                           <span className='font-medium'>{milestone.title}</span>
@@ -169,8 +161,7 @@ export function AIMilestoneGenerator({
                       size='sm'
                       onClick={e => {
                         e.stopPropagation();
-                        handleAddSingleMilestone(milestone);
-                      }}
+                        handleAddSingleMilestone(milestone);                      }}
                       className='mr-2'
                     >
                       <Plus className='h-4 w-4' />
@@ -196,7 +187,4 @@ export function AIMilestoneGenerator({
       )}
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

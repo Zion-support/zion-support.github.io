@@ -50,21 +50,7 @@ resolve_conflicts() {
     echo "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-    if grep -q "<<<<<<< HEAD" "$file"; then
-=======
-    if grep -q "" "$file"; then
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    if grep -q "" "$file"; then
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    if grep -q "" "$file"; then    if grep -q "" "$file"; then
         echo "⚠️  Found conflicts in $file, resolving..."
         
         # Create backup
@@ -73,34 +59,11 @@ resolve_conflicts() {
         # Strategy: Keep both versions where possible, prefer main for critical files
         if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
             echo "📦 Critical file detected, keeping main version..."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
-<<<<<<< HEAD
-=======
-=======
-            sed -i '//,//d' "$file"
-            sed -i '/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+            sed -i '//,/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
+            sed -i '//,/        else
             echo "📝 Regular file, attempting to merge both versions..."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
-=======
+            sed -i '//,/        fi
             sed -i '//,//d' "$file"
             sed -i '/        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" || "$file" == "tailwind.config.js" ]]; then
             echo "⚙️  Config file detected, keeping main version..."
@@ -109,14 +72,6 @@ resolve_conflicts() {
             echo "📝 Regular file, attempting to merge both versions..."
             sed -i '//,//d' "$file"
             sed -i '/        fi
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-            sed -i '//,//d' "$file"
-            sed -i '/        fi
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         
         echo "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))

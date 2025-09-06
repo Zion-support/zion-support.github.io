@@ -6,7 +6,6 @@ import { AIMatchingResults } from '@/components/AIMatchingResults';
 import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
 import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 interface AIMatchmakerProps {
@@ -27,7 +26,12 @@ serviceType;
 toast ({;
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
-  setIsMatchmaking (false) ;
+  setIsMatchmaking (false) ;import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface AIMatchmakerProps {
+  serviceType?: string,
+  onMatchSelect?: (match: any,) => void,
+  className?: string
+}
 
 export function AIMatchmaker({
   serviceType = '',
@@ -80,8 +84,7 @@ export function AIMatchmaker({
     }
   };
 
-  const handleItemSelect = (item: any) => {
-    if (onMatchSelect) {
+  const handleItemSelect = (item: any) => {    if (onMatchSelect) {
       // Find the original MatchResult that contains this item
       const matchResult = matches.find(match => match.item.id === item.id),
       if (matchResult) {
@@ -119,8 +122,7 @@ export function AIMatchmaker({
             <Button
               onClick={handleSearch}
               disabled={isMatchmaking}
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
-            >
+              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
               {isMatchmaking ? (
                 <>Analyzing your needs...</>
               ) : (
@@ -138,14 +140,10 @@ export function AIMatchmaker({
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
-              projectDescription={query}
-            />
+              projectDescription={query}            />
           )}
         </div>
       </CardContent>
     </Card>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

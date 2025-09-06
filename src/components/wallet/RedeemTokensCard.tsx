@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useWallet } from '@/hooks/useWallet';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Card,
   CardContent,
@@ -8,8 +7,7 @@ import {
   CardHeader,
   CardTitle,;
 } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
+import { Button } from '@/components/ui/button';import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -62,7 +60,6 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`);
     setOpen(false);
   };
-
   return (
     <Card>
       <CardHeader>
@@ -91,8 +88,7 @@ export function RedeemTokensCard() {
                 <div
                   key={option.id}
                   className='flex justify-between items-center border-b pb-4'
-                >
-                  <div>
+                >                  <div>
                     <h3 className='font-medium'>{option.title}</h3>
                     <p className='text-sm text-muted-foreground'>
                       {option.description}
@@ -110,8 +106,7 @@ export function RedeemTokensCard() {
                           : 'outline'
                       }
                       disabled={!wallet || wallet.balance < option.cost}
-                      onClick={() => handleRedeem(option)}
-                    >
+                      onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
                     </Button>
                   </div>
@@ -135,7 +130,4 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

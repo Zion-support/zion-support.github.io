@@ -10,12 +10,9 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 import { QuoteFormData } from '@/types/quotes';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
-
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
     <div className='space-y-6'>
@@ -32,8 +29,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   ? 'bg-zion-purple/20 border-zion-purple'
                   : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
               }`}
-              onClick={() => updateFormData({ timeline: 'fixed' })}
-            >
+              onClick={() => updateFormData({ timeline: 'fixed' })}            >
               <h4 className='font-medium text-white'>Fixed Dates</h4>
               <p className='text-sm text-zion-slate-light'>
                 I have specific start and end dates
@@ -68,8 +64,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       className={cn(
                         'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark',
                         !formData.startDate && 'text-zion-slate-light'
-                      )}
-                    >
+                      )}                    >
                       <CalendarIcon className='mr-2 h-4 w-4' />
                       {formData.startDate ? (
                         format(formData.startDate, 'PPP')
@@ -85,8 +80,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Calendar
                       mode='single'
                       selected={formData.startDate}
-                      onSelect={date => updateFormData({ startDate: date })}
-                      initialFocus
+                      onSelect={date => updateFormData({ startDate: date })}                      initialFocus
                       className='p-3 pointer-events-auto'
                     />
                   </PopoverContent>
@@ -104,8 +98,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       className={cn(
                         'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark',
                         !formData.endDate && 'text-zion-slate-light'
-                      )}
-                    >
+                      )}                    >
                       <CalendarIcon className='mr-2 h-4 w-4' />
                       {formData.endDate ? (
                         format(formData.endDate, 'PPP')
@@ -126,8 +119,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       className='p-3 pointer-events-auto'
                       disabled={date =>
                         date < (formData.startDate || new Date())
-                      }
-                    />
+                      }                    />
                   </PopoverContent>
                 </Popover>
               </div>
@@ -137,7 +129,4 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

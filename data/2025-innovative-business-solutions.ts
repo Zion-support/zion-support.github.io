@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeBusinessSolution {
   id: string;
   name: string;
   tagline: string;
@@ -42,16 +40,12 @@ export interface InnovativeBusinessSolution {
   reviews: number;
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-business-intelligence-suite',
     name: 'AI Business Intelligence Suite',
     tagline: 'Intelligent business insights and analytics',
@@ -59,9 +53,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     period: '/month',
     description:
       'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'AI-powered data analysis and insights',
       'Predictive analytics and forecasting',
       'Automated report generation',
@@ -626,9 +617,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     rating: 4.7,
     reviews: 26,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -641,5 +630,3 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     reviews: 26
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

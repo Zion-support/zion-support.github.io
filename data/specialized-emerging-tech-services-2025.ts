@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface SpecializedEmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -576,8 +574,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       marketAdvantage:
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
     },
-  ];
-    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
+  ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
     features: [
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
       'Advanced pattern recognitionCustom neuromorphic algorithms'
@@ -601,5 +598,3 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

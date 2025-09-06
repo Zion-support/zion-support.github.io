@@ -1,22 +1,20 @@
       let fullMessage = message;
       
-
 import React, { useState } from 'react';
-import {Button} from "@/components/ui/button";
-import {Loader2} from 'lucide-react'
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {useJobApplications} from "@/hooks/useJobApplications";
-import {useMessaging} from "@/context/MessagingContext";
-import {toast} from "@/hooks/use-toast";
-import {ResumeSelector, ResumeOption} from "../resume-selector";
-import {MessageTab} from "./MessageTab";
-import {ResumeTab} from "./ResumeTab";
-import {Job} from "./types";
+import { Button } from "@/components/ui/button";
+import { Loader2 } from 'lucide-react'import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useJobApplications } from "@/hooks/useJobApplications";
+import { useMessaging } from "@/context/MessagingContext";
+import { toast } from "@/hooks/use-toast";
+import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { MessageTab } from "./MessageTab";
+import { ResumeTab } from "./ResumeTab";
+import { Job } from "./types";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
-  onApplySuccess?: (jobId: string) => Promise<void>
+  onApplySuccess?: (jobId: string,) => Promise<void>
 }
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
@@ -32,8 +30,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   
   const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume),
-    setSelectedResumeId(resume.id)
+    setSelectedResume(resume);    setSelectedResumeId(resume.id)
   };
   
   const handleApply = async () => {
@@ -132,17 +129,17 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         
         <TabsContent value="message">
           <MessageTab 
-            message={message}
-            setMessage={setMessage}
-            proposalLink={proposalLink}
-            setProposalLink={setProposalLink}
+            message = {message,}
+            setMessage = {setMessage,}
+            proposalLink = {proposalLink,}
+            setProposalLink = {setProposalLink,}
           />
         </TabsContent>
         
         <TabsContent value="resume">
           <ResumeTab 
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId} 
+            onResumeSelected = {handleResumeSelected,}
+            selectedResumeId = {selectedResumeId,}
           />
         </TabsContent>
       </Tabs>
@@ -151,15 +148,15 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         <Button
           type="button"
           variant="outline"
-          onClick={onClose}
+          onClick = {onClose,}
           className="border-zion-purple/30 text-white"
         >
           Cancel
         </Button>
         <Button
           type="button" 
-          onClick={handleApply}
-          disabled={isSubmitting}
+          onClick = {handleApply,}
+          disabled = {isSubmitting,}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
         >
           {isSubmitting ? (
@@ -232,8 +229,4 @@ return (<> <Tabs value= {;
 }/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'";
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

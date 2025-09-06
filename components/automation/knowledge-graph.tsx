@@ -1,11 +1,8 @@
  
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
-
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
@@ -40,5 +37,3 @@ export default function KnowledgeGraph({ report }: Props) {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

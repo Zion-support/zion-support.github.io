@@ -1,7 +1,5 @@
 import { Job } from '@/types/jobs';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export const JOB_POSTS: Job[] = [
   {
     id: 'job-1',
     client_id: 'client-1',
@@ -34,6 +32,3 @@ status: "new";
 created at: "2024-05-05";
 updated at: "2024-05-05" 
 }];
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

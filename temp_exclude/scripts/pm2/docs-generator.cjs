@@ -307,4 +307,8 @@ if (require.main === module) {}
   const docsGenerator = new DocsGenerator();
   docsGenerator.start().catch(console.error);
 };
+<<<<<<< HEAD
 module.exports = DocsGenerator;module.exports = DocsGenerator;
+=======
+module.exports = DocsGenerator;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

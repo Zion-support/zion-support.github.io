@@ -1,7 +1,8 @@
 <<<<<<< HEAD
 =======
-module.exports = {
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {

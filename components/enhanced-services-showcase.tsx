@@ -20,8 +20,6 @@ const containerVariants = {
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 };
 
 };
@@ -185,7 +183,6 @@ visible: {
   children 
 }</button>) 
 };
-
 // Button component (if not imported)
 const Button = ({ 
   href,
@@ -229,5 +226,3 @@ const Button = ({
     </button>
   )
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

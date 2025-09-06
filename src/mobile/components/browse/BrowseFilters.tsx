@@ -22,15 +22,13 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Label } from '@/components/ui/label';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
 
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
-  const addFilter = (filter: string) => {
-    if (!activeFilters.includes(filter)) {
+  const addFilter = (filter: string) => {    if (!activeFilters.includes(filter)) {
       setActiveFilters([...activeFilters, filter]);
     }
   };
@@ -38,7 +36,6 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter));
   };
-
   return (
     <div className='space-y-3'>
       <div className='flex justify-between items-center px-4'>
@@ -153,8 +150,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
-                        className='my-4'
-                      />
+                        className='my-4'                      />
                       <div className='flex justify-between text-xs text-muted-foreground'>
                         <span>0+ years</span>
                         <span>20+ years</span>
@@ -269,15 +265,11 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
               {filter}
               <X
                 className='h-3 w-3 cursor-pointer'
-                onClick={() => removeFilter(filter)}
-              />
+                onClick={() => removeFilter(filter)}              />
             </Badge>
           ))}
         </div>
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,8 @@ interface AccessibilityContextType {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   announceToScreenReade: r: (messag: e: string) => void;
   setFocu: s: (elementI: d: string) => void;
 }
@@ -121,6 +124,7 @@ const: PerformanceMonitor: React.FC = () => {
         const entries = list.getEntries();
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         if (navigationEntry) {
           setMetrics({            loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
@@ -131,46 +135,9 @@ const: PerformanceMonitor: React.FC = () => {
           setMetrics({
 =======
   announceToScreenReade: r: (messag: e: string) => void, setFocu: s: (elementI: d: string) => void,
-
-}
-;
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
-  childre: n: ReactNode,
-    }
-  };
-;
-  return (;
-    <AccessibilityContext.Provider value={{ announceToScreenReader, setFocus }}>;
-      {children}
-
-    </AccessibilityContext.Provider>;
-  );
-
-};
-;
-export const useAccessibility = () => {;
-  const context = useContext(AccessibilityContext);
-
-  if (context === undefined) {;
-    throw new Error('useAccessibility must be used within an AccessibilityProvider');
-
-  }
-
-  return context;
-
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-;
-  useEffect(() => {;
-    if (typeof window !== 'undefined' && 'performance' in window) {;
-      const observer = new PerformanceObserver((list) => {;
-        const entries = list.getEntries();
-        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
@@ -181,6 +148,7 @@ export const useAccessibility = () => {;
 
       observer.observe({ entryType: s: ['navigation'] });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       return () => observer.disconnect();
 =======
@@ -227,6 +195,12 @@ interface SEOHeadProps {
   ogImage?: string;
   url?: string;
 }
+=======
+    }
+  }, []);
+;
+  if (!metrics) return null;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 <<<<<<< HEAD
 const: SEOHead: React.FC<SEOHeadProps> = ({
@@ -238,10 +212,6 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
 =======
   url = 'http: s://ziontechgroup.com'
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }) => {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
@@ -260,6 +230,7 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitte: r:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 =======
@@ -295,6 +266,8 @@ console.log('Fixed individual components');
 =======
   ),
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
 ;
 export default SEOHead;`;
@@ -313,9 +286,12 @@ files.forEach(file => {;
 });
 ;
 console.log('Fixed individual components');
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 ;
 console.log('Fixed individual components');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { useDisputes } from '@/hooks/useDisputes';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';import { useRouter } from 'next/router';
+import { useDisputes } from "@/hooks/useDisputes";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Dispute,
   disputeReasonLabels,
@@ -64,7 +65,6 @@ export function DisputeDetail() {
 
   useEffect(() => {
     if (!disputeId) return;
-
     const loadDisputeData = async () => {
       setIsLoading(true);
       try {
@@ -90,8 +90,7 @@ export function DisputeDetail() {
   }, [disputeId, getDisputeById, getDisputeMessages, router]);
 
   const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return,
-
+    if (!disputeId) return;
     const success = await updateDisputeStatus(disputeId, status);
     if (success) {
       // Update the dispute object with the new status
@@ -161,14 +160,13 @@ export function DisputeDetail() {
         <Button
           onClick={() => router.push('/dashboard/disputes')}
           className='mt-4'
-        >
-          Back to Disputes
+        >          Back to Disputes
         </Button>
       </div>
     );
   }
 
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
+  const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
         return 'default';
@@ -209,8 +207,7 @@ export function DisputeDetail() {
             Back to List
           </Button>
           {isAdmin && dispute?.status === 'open' && (
-            <Button onClick={() => handleStatusChange('under_review')}>
-              Start Review
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
             </Button>
           )}
         </div>
@@ -369,8 +366,7 @@ export function DisputeDetail() {
                         .filter(msg => !msg.is_admin_note)
                         .map(msg => {
                           const isCurrentUser = user?.id === msg.user_id;
-                          
-                            >
+                                                      >
                               <div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
@@ -420,8 +416,7 @@ export function DisputeDetail() {
                       value={message}
                       onChange={e => setMessage(e.target.value)}
                       className='min-h-[100px]'
-                      disabled={isSending}
-                    />
+                      disabled={isSending}                    />
                     <div className='flex justify-end'>
                       <Button
                         onClick={handleSendMessage}
@@ -484,8 +479,7 @@ export function DisputeDetail() {
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('closed')}
-                          disabled={dispute.status === 'closed'}
-                        >
+                          disabled={dispute.status === 'closed'}                        >
                           Close Dispute
                         </Button>
                       </div>
@@ -504,8 +498,7 @@ export function DisputeDetail() {
                                 summary: e.target.value,
                               })
                             }
-                            className='min-h-[100px]'
-                          />
+                            className='min-h-[100px]'                          />
 
                           <div className='grid grid-cols-2 gap-4'>
                             <div>
@@ -521,8 +514,7 @@ export function DisputeDetail() {
                                     resolution_type: e.target
                                       .value as ResolutionType,
                                   })
-                                }
-                              >
+                                }                              >
                                 <option value='client_favor'>
                                   In Client's Favor
                                 </option>
@@ -575,8 +567,7 @@ export function DisputeDetail() {
                                   {format(
                                     new Date(msg.created_at),
                                     'MMM d, h:mm a'
-                                  )}
-                                </span>
+                                  )}                                </span>
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
                                 {msg.message}
@@ -597,8 +588,7 @@ export function DisputeDetail() {
                         <Textarea
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
-                          onChange={e => setAdminNote(e.target.value)}
-                        />
+                          onChange={e => setAdminNote(e.target.value)}                        />
                         <Button
                           variant='outline'
                           onClick={() => {
@@ -612,8 +602,7 @@ export function DisputeDetail() {
                                   setMessages
                                 );
                                 setAdminNote('');
-                              });
-                            }
+                              });                            }
                           }}
                         >
                           Add Admin Note
@@ -823,9 +812,5 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm"> <div className="flex justify-between"> <span className="font-medium">Case ID:</span> <span className="font-mono"> {;
   dispute.id ";
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
-}'"
-=======
-  )
+}'"  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

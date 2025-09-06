@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Form,
   FormControl,
@@ -26,7 +25,6 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AIListingGenerator } from '@/components/listing/AIListingGenerator';
 import { Sparkles } from 'lucide-react';
-
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, 'Title must be at least 3 characters'),
@@ -51,7 +49,6 @@ const productSchema = z.object({
       : z.instanceof(File).optional(),
   tags: z.string().optional(),
 });
-
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
 
@@ -79,8 +76,7 @@ export function ProductSubmissionForm() {
 
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0],
-    if (file) {
+    const file = e.target.files?.[0];    if (file) {
       form.setValue('image', file);
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -91,15 +87,13 @@ export function ProductSubmissionForm() {
   };
 
   const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0],
-    if (file) {
+    const file = e.target.files?.[0];    if (file) {
       form.setValue('video', file);
     }
   };
 
   const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0],
-    if (file) {
+    const file = e.target.files?.[0];    if (file) {
       form.setValue('model', file);
     }
   };
@@ -108,7 +102,6 @@ export function ProductSubmissionForm() {
   const handleApplyGenerated = (content: any) => {
     form.setValue('description', content.description);
     form.setValue('tags', content.tags.join(', '));
-
     // Set a default price as the middle of the suggested range
     const averagePrice = (
       (content.suggestedPrice.min + content.suggestedPrice.max) /
@@ -121,7 +114,7 @@ export function ProductSubmissionForm() {
   };
 
   // Handle form submission
-  const onSubmit = async (values: ProductFormValues) => {
+  const onSubmit = async (values: ProductFormValues,) => {
     if (!user) {
       toast({
         title: 'Authentication Required',
@@ -305,8 +298,7 @@ export function ProductSubmissionForm() {
               }: {
                 field: ControllerRenderProps<ProductFormValues, 'title'>;
               }) => {
-                const { onChange, onBlur, value, ref } = field;
-                return (
+                const { onChange, onBlur, value, ref } = field;                return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
@@ -315,8 +307,7 @@ export function ProductSubmissionForm() {
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
-                        ref={ref}
-                      />
+                        ref={ref}                      />
                     </FormControl>
                     <FormDescription>
                       Create a compelling title that describes your product
@@ -334,8 +325,7 @@ export function ProductSubmissionForm() {
                 field,
               }: {
                 field: ControllerRenderProps<ProductFormValues, 'description'>;
-              }) => (
-                <FormItem>
+              }) => (                <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea
@@ -360,8 +350,7 @@ export function ProductSubmissionForm() {
                   field,
                 }: {
                   field: ControllerRenderProps<ProductFormValues, 'price'>;
-                }) => (
-                  <FormItem>
+                }) => (                  <FormItem>
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input
@@ -385,8 +374,7 @@ export function ProductSubmissionForm() {
                   field,
                 }: {
                   field: ControllerRenderProps<ProductFormValues, 'category'>;
-                }) => (
-                  <FormItem>
+                }) => (                  <FormItem>
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
@@ -415,8 +403,7 @@ export function ProductSubmissionForm() {
                 field,
               }: {
                 field: ControllerRenderProps<ProductFormValues, 'tags'>;
-              }) => (
-                <FormItem>
+              }) => (                <FormItem>
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
                     <Input
@@ -444,8 +431,7 @@ export function ProductSubmissionForm() {
                       type='file'
                       accept='image/*'
                       onChange={handleImageChange}
-                      className='cursor-pointer'
-                    />
+                      className='cursor-pointer'                    />
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended
@@ -458,8 +444,7 @@ export function ProductSubmissionForm() {
                       <AspectRatio ratio={3 / 2}>
                         <Image
                           src={imagePreview}
-                          alt='Product image preview'
-                          width={600} // Example width, adjust as needed
+                          alt='Product image preview'                          width={600} // Example width, adjust as needed
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
                           priority={false} // Preview images are not LCP
@@ -476,8 +461,7 @@ export function ProductSubmissionForm() {
 
             <FormField
               control={form.control}
-              name='video'
-              render={() => (
+              name='video'              render={() => (
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -498,8 +482,7 @@ export function ProductSubmissionForm() {
 
             <FormField
               control={form.control}
-              name='model'
-              render={() => (
+              name='model'              render={() => (
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -522,8 +505,7 @@ export function ProductSubmissionForm() {
               <Button
                 type='submit'
                 disabled={isSubmitting}
-                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
-              >
+                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'              >
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
               </Button>
             </div>
@@ -533,8 +515,7 @@ export function ProductSubmissionForm() {
 
       <TabsContent value='ai'>
         <AIListingGenerator
-          onApplyGenerated={handleApplyGenerated}
-          initialValues={{
+          onApplyGenerated={handleApplyGenerated}          initialValues={{
             title: form.getValues('title'),
             category: form.getValues('category'),
           }}
@@ -629,9 +610,5 @@ const {;
 }className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
-}'"
-=======
-  )
+}'"  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

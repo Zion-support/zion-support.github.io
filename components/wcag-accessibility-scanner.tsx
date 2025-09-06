@@ -8,13 +8,10 @@ import { extraServices } from '../data/extra-services';
 export default function WCAGScannerPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/wcag-accessibility-scanner')
-  );  if (!service) return null;
-=======
-import { Star } from 'lucide-react';
+  );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -25,8 +22,6 @@ export default function WCAGScannerPage() {
           rel='canonical'
           href='https://ziontechgroup.com/wcag-accessibility-scanner'
         />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>
@@ -92,15 +87,11 @@ export default function WCAGScannerPage() {
                 <div className='flex items-center space-x-2'>
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
-                </div>              </div>
-              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
+                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
           </div>
         </div>
@@ -109,8 +100,3 @@ export default function WCAGScannerPage() {
   );
 }
 
-=======
-}
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

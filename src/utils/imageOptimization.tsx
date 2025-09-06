@@ -9,16 +9,14 @@
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
 }` ;
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const imgRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (!lazy || priority || isInView) return;
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry],) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
@@ -37,7 +35,7 @@
   }, [lazy, priority, isInView]);
 
   // Generate WebP-compatible src
-  const getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string,) => {
     // If it's already optimized or external, return as-is
     if (
       originalSrc.startsWith('http') ||
@@ -93,10 +91,9 @@
           }
           onLoad={handleLoad}
           onError={handleError}
-          className={cn(
-            'transition-opacity duration-300',
+          className={cn(            'transition-opacity duration-300',
             isLoading ? 'opacity-0' : 'opacity-100'
-          )}
+          ),}
           {...props}
         />
       )}
@@ -114,8 +111,7 @@
               src={fallbackSrc}
               alt={alt}
               className='max-w-full max-h-full object-contain'
-              onLoad={handleLoad}
-            />
+              onLoad={handleLoad}            />
           ) : (
             <div className='text-gray-400 text-center'>
               <svg
@@ -171,10 +167,10 @@ export function getImageDimensions(
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
-  });
-=======
+  });    img.src = src
+  })
+} 
+    img.onerror = reject;
     img.src = src
   })
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

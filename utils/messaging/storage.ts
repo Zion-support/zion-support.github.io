@@ -1,8 +1,7 @@
 // Messaging storage utilities
 export interface Message {
   id: string;
-  conversationId: string;
-  senderId: string;
+  conversationId: string;  senderId: string;
   recipientId: string;
   body: string;
   linkUrl?: string;

@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface AdvancedAIAutomationService {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface AdvancedAIAutomationService {
   reviews: number;
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-code-generation-review',
     name: 'AI Code Generation & Review Platform',
     tagline: 'Generate, review, and optimize code with AI intelligence',
@@ -59,9 +54,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description:
       'Advanced AI platform that generates production-ready code, performs automated code reviews, identifies security vulnerabilities, and suggests optimizations across multiple programming languages.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Multi-language code generation (Python, JavaScript, Java, Go, Rust)',
       'Automated code review and quality analysis',
       'Security vulnerability detection',
@@ -357,9 +349,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 89,
     rating: 4.8,
     reviews: 38,
-  },
-];
-=======
+  },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -373,5 +363,3 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 38
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -55,28 +55,13 @@ console.log('==');
 function removeMergeConflictMarkers(content) {
   return content
 <<<<<<< HEAD
-<<<<<<< HEAD:scripts/comprehensive-merge-resolver.cjs
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
     .replace(/}
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '')
-    .replace(/<<<<<<< HEAD/g, '')
-    .replace(/=======/g, '')
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-merge-resolver.cjs
-=======
-    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
-    .replace(//g, '')
-    .replace(/}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

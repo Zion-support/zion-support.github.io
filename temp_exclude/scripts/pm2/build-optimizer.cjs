@@ -249,4 +249,8 @@ if (require.main === module) {}
   const buildOptimizer = new BuildOptimizer();
   buildOptimizer.start().catch(console.error);
 };
+<<<<<<< HEAD
 module.exports = BuildOptimizer;module.exports = BuildOptimizer;
+=======
+module.exports = BuildOptimizer;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -2,13 +2,13 @@
 
 interface FraudFiltersProps {
   searchQuery: string,
-  setSearchQuery: (value: string) => void,
+  setSearchQuery: (value: string,) => void,
   statusFilter: string | null,
-  setStatusFilter: (value: string | null) => void,
+  setStatusFilter: (value: string | null,) => void,
   severityFilter: string | null,
-  setSeverityFilter: (value: string | null) => void,
+  setSeverityFilter: (value: string | null,) => void,
   contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null) => void,
+  setContentTypeFilter: (value: string | null,) => void,
   resetFilters: () => void
 }
 
@@ -20,16 +20,15 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   severityFilter;
   setSeverityFilter;
   contentTypeFilter;
-  setContentTypeFilter,
-  resetFilters}) => {
-  return (
+  setContentTypeFilter;
+  resetFilters}) => {  return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          value = {searchQuery,}
+          onChange = {(e,) => setSearchQuery(e.target.value),}
           className="pl-10"
         />
       </div>
@@ -79,7 +78,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     </div>
   )
 };
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+'"},
+;
+};

@@ -1,5 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-#!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
 import {execSync, spawn} from "child_process";
@@ -64,5 +62,3 @@ class ComprehensiveAutomationRunner {; constructor() {; this.logFile = path.join
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const runner = new ComprehensiveAutomationRunner(); runner.runAll().catch(console.error)};
 ;
 export default ComprehensiveAutomationRunner;
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

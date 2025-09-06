@@ -10,22 +10,3 @@ import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; 
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
 import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const RDPage = () => {; return (; <> <SEOHead title=\"Research & Development - Zion Tech Group\" description=\"Explore our R&D initiatives and innovation programs.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Research & Development></div> <p className=\"text-gray-600\">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
 import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages.broken/research-development.tsx
-<<<<<<< HEAD
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const RDPage = () => {; return (; <> <SEOHead title=\"Research & Development - Zion Tech Group\" description=\"Explore our R&D initiatives and innovation programs.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Research & Development></div> <p className=\"text-gray-600\">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
-=======
-<<<<<<< HEAD
-=======
-import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const RDPage = () => {; return (; <> <SEOHead title=\"Research & Development - Zion Tech Group\" description=\"Explore our R&D initiatives and innovation programs.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Research & Development></div> <p className=\"text-gray-600\">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
-import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.broken/research-development.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

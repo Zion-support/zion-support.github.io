@@ -224,22 +224,7 @@ main().catch(error => {})
   process.exit(1);
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/pm2/continuous-improvement.cjs
 });});
 =======
 });
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-});
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/pm2/continuous-improvement.cjs
-=======
-});});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

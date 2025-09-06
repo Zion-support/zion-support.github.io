@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const fs = require('fs');
@@ -153,6 +154,91 @@ class ComprehensiveSyntaxFixer {
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔧 Starting Comprehensive Syntax Fixer...');
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.fixedFiles = [];
+    this.errors = [];
+    this.reportPath = path.join(__dirname, '..', 'automation-reports', 'syntax-fix-report.json');
+    this.ensureReportDir();
+  }
+
+  ensureReportDir() {
+    const reportDir = path.dirname(this.reportPath);
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async fixImportStatements(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+
+      // Fix import statements with commas instead of semicolons
+      const importRegex = /^import\s+.*?,\s*$/gm;
+      const matches = content.match(importRegex);
+      
+      if (matches) {
+        content = content.replace(importRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      // Fix export statements with commas
+      const exportRegex = /^export\s+.*?,\s*$/gm;
+      const exportMatches = content.match(exportRegex);
+      
+      if (exportMatches) {
+        content = content.replace(exportRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      // Fix function declarations with commas
+      const functionRegex = /^export\s+.*?function\s+.*?,\s*$/gm;
+      const functionMatches = content.match(functionRegex);
+      
+      if (functionMatches) {
+        content = content.replace(functionRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      // Fix const/let/var declarations with commas
+      const constRegex = /^(const|let|var)\s+.*?,\s*$/gm;
+      const constMatches = content.match(constRegex);
+      
+      if (constMatches) {
+        content = content.replace(constRegex, (match) => {
+          return match.replace(/,\s*$/, ';');
+        });
+        modified = true;
+      }
+
+      if (modified) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed syntax in: ${filePath}`);
+        return true;
+      }
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       return false;
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } catch (error) {
@@ -163,6 +249,7 @@ class ComprehensiveSyntaxFixer {
   }
 
   async findAndFixFiles() {
+<<<<<<< HEAD
     this.log('🔍 Finding files with syntax errors...');
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
@@ -196,6 +283,8 @@ class ComprehensiveSyntaxFixer {
 
   async run() {
     this.log('🚀 Starting Comprehensive Syntax Fixer');
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     
     const totalFiles = await this.findAndFixFiles();
     
@@ -225,14 +314,24 @@ fixer.run().catch(console.error);    }
   }
 }
 
+<<<<<<< HEAD
 =======
       this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
       process.exit(1);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+      this.log('🎉 Comprehensive syntax fixing completed successfully!');
+      this.log(`📊 Fixed ${this.fixedFiles.length} files`);
+      this.log(`❌ ${this.errors.length} errors encountered`);
+    } catch (error) {
+      this.log(`❌ Comprehensive syntax fixing failed: ${error.message}`);
+      process.exit(1);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Main execution
@@ -244,13 +343,16 @@ if (require.main === module) {
 module.exports = ComprehensiveSyntaxFixer;
 <<<<<<< HEAD
 =======
-// Run the syntax fixer
-const fixer = new ComprehensiveSyntaxFixer();
-fixer.run().catch(console.error);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
+// Run the syntax fixer
+const fixer = new ComprehensiveSyntaxFixer();
+fixer.run().catch(console.error);
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

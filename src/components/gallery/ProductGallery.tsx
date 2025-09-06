@@ -10,7 +10,6 @@ const ModelViewer = React.lazy(async () => {
     default: (props: any) => React.createElement('model-viewer', props),
   };
 });
-
 interface ProductGalleryProps {
   images: string[];
   videoUrl?: string;
@@ -38,7 +37,6 @@ export function ProductGallery({
           {videoUrl && <TabsTrigger value='video'>Video</TabsTrigger>}
           {modelUrl && <TabsTrigger value='model'>3D</TabsTrigger>}
         </TabsList>
-
         <TabsContent value='images' className='pt-4'>
           <div className='aspect-video w-full relative'>
             <DialogTrigger asChild>
@@ -126,13 +124,10 @@ export function ProductGallery({
               src={images[selected] || images[0] || ''}
               alt='Zoomed view'
               className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
-            />
-          </div>
+            />          </div>
         </DialogContent>
       )}
     </Dialog>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

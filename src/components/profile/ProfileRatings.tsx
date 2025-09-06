@@ -5,7 +5,6 @@ import { ReviewsList } from '@/components/reviews/ReviewsList';
 import { useReviews } from '@/hooks/useReviews';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ProfileRatingsProps {
   userId: string;
@@ -40,7 +39,7 @@ export function ProfileRatings({
   >({});
 
   // Calculate rating distribution
-  useEffect(() => {
+  useEffect((,) => {
     if (reviews.length > 0) {
       const distribution: Record<number, number> = {
         1: 0,
@@ -50,8 +49,7 @@ export function ProfileRatings({
         5: 0,
       };
 
-      reviews.forEach(review => {
-        if (review.rating >= 1 && review.rating <= 5) {
+      reviews.forEach(review => {        if (review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
         }
       });
@@ -64,21 +62,25 @@ export function ProfileRatings({
   useEffect(() => {
     fetchUserReviews(userId);
   }, [userId]);
-
   return (
     <div className='space-y-6'>
       <div className='flex flex-col md:flex-row gap-6'>
         <div className='md:w-1/3'>          <ReviewStats
-=======
+    <div className="space-y-6">
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="md:w-1/3">
+  useEffect(() => {
+    fetchUserReviews(userId)
+  }, [userId]);
+  
+  return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             averageRating={averageRating}
             totalReviews={ratingCount}
-            ratingDistribution={ratingDistribution}
-          />
+            ratingDistribution={ratingDistribution}          />
         </div>
 
         <div className='md:w-2/3'>
@@ -91,9 +93,7 @@ export function ProfileRatings({
               <TabsTrigger value='critical'>Critical</TabsTrigger>
             </TabsList>
 
-            <TabsContent value='all'>              <ReviewsList
-=======
-        
+            <TabsContent value='all'>              <ReviewsList        
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -103,12 +103,9 @@ export function ProfileRatings({
             </TabsList>
             
             <TabsContent value="all">
-              <ReviewsList
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 reviews={reviews}
                 isLoading={isLoading}
-                onReportReview={reportReview}
-              />
+                onReportReview={reportReview}              />
             </TabsContent>
 
             <TabsContent value='positive'>
@@ -120,8 +117,7 @@ export function ProfileRatings({
 
             <TabsContent value='critical'>
               <ReviewsList
-                reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}
-=======
+                reviews={reviews.filter(r => r.rating < 4)}                isLoading={isLoading}                reviews={reviews.filter((r) => r.rating >= 4)}
             
             <TabsContent value="positive">
               <ReviewsList
@@ -130,19 +126,15 @@ export function ProfileRatings({
                 onReportReview={reportReview}
               />
             </TabsContent>
-<<<<<<< HEAD
 
             <TabsContent value='critical'>
               <ReviewsList
-                reviews={reviews.filter(r => r.rating < 4)}
-=======
+                reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
             
             <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 isLoading={isLoading}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 onReportReview={reportReview}
               />
             </TabsContent>
@@ -178,8 +170,4 @@ export function ProfileRatings({
 }onReportReview= {;
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

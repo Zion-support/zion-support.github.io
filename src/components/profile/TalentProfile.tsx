@@ -13,8 +13,6 @@ import { ProfileRatings } from './ProfileRatings';
 import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 import { Availability } from '@/types/profile';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface TalentProfileProps {
   profile: TalentProfileType;
   onRequestHire: () => void;
@@ -53,7 +51,6 @@ export function TalentProfile({
       description: proj.description,
       date: new Date().toISOString(), // Default date since we don't have this data
     })) || [];
-
   return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
@@ -63,8 +60,7 @@ export function TalentProfile({
         avatarUrl={profile.profile_picture_url}
         profileType='talent'
         rating={profile.average_rating}
-        reviewCount={profile.rating_count}
-      />
+        reviewCount={profile.rating_count}      />
 
       {/* Main content area */}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>
@@ -75,8 +71,7 @@ export function TalentProfile({
           <ProfileContact
             email={profile.user_id}
             profileName={profile.full_name}
-            profileType='talent'
-          />
+            profileType='talent'          />
         </div>
 
         {/* Right Column - Bio & Projects */}
@@ -105,8 +100,7 @@ export function TalentProfile({
             <ProfileRatings
               userId={profile.id}
               averageRating={profile.average_rating}
-              ratingCount={profile.rating_count}
-            />
+              ratingCount={profile.rating_count}            />
           </div>
 
           {/* Hire Now CTA */}
@@ -127,8 +121,7 @@ export function TalentProfile({
                   <Button
                     size='lg'
                     className='bg-zion-purple text-white hover:bg-zion-purple-dark'
-                    onClick={onRequestHire}
-                  >
+                    onClick={onRequestHire}                  >
                     <Handshake className='mr-2 h-5 w-5' />
                     Hire Now
                   </Button>
@@ -138,8 +131,7 @@ export function TalentProfile({
                       size='lg'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={onMessageTalent}
-                    >
+                      onClick={onMessageTalent}                    >
                       <MessageSquare className='mr-2 h-5 w-5' />
                       Message
                     </Button>
@@ -152,7 +144,4 @@ export function TalentProfile({
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

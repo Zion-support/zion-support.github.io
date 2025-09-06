@@ -66,7 +66,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <AnimatePresence>
@@ -82,8 +81,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           />
 
           
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          {/* Sidebar */}
           <motion.div
             initial={{ x: -300 }}
             animate={{ x: 0 }}
@@ -91,8 +88,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          >
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
@@ -105,8 +100,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <button
                   onClick={onClose}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -119,8 +112,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       onClick={() => handleDropdownToggle(title)}
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors"
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2">
@@ -159,8 +150,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <span>Get Started</span>
                     <ExternalLink className="w-4 h-4" />
                   </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                </div>
               </div>
             </div>
           </motion.div>
@@ -171,4 +160,3 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

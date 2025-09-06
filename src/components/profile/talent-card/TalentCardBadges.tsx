@@ -1,7 +1,7 @@
 import React from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Badge } from '@/components/ui/badge';
 import { Award } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
@@ -16,8 +16,8 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
         <span>Featured</span>
       </Badge>
     </div>
+  );  )
+};
+;
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

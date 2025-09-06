@@ -20,7 +20,6 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
-
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
@@ -31,7 +30,6 @@ export function PrimaryNav() {
   const router = useRouter();
   const [query, setQuery] = useState('');
   const suggestions = generateSearchSuggestions();
-
   let unreadCount = 0;
   try {
     const messaging = useMessaging();
@@ -42,8 +40,7 @@ export function PrimaryNav() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmed = query.trim();
-    if (trimmed) {
+    const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed });
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
@@ -53,8 +50,7 @@ export function PrimaryNav() {
             query: trimmed,
             component: 'PrimaryNav',
           })
-        );
-    }
+        );    }
   };
 
   return (
@@ -72,8 +68,7 @@ export function PrimaryNav() {
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
-            />
-          </div>
+            />          </div>
 
           {/* Actions container with responsive layout */}
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>
@@ -89,8 +84,7 @@ export function PrimaryNav() {
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
-                  });
-                  // Handle different suggestion types with proper navigation
+                  });                  // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id}`);
@@ -118,8 +112,36 @@ export function PrimaryNav() {
                       suggestion_id: sugg.id || sugg.slug,
                     });
                   }
+                  // // // // // console.log('PrimaryNav search suggestion selected:',
+  sugg);
+                  // Handle different suggestion types with proper navigation;
+                  if(sugg.id) {;
+
+                    // Product listings with IDs go to product detail page`;
+                    router.push(`/marketplace/listing/${sugg.id;
+'`;
+}`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
+
+                    // Documentation suggestions navigate directly to their path';
+                    router.push(sugg.slug)} else if(sugg.type === 'blog' && sugg.slug) {;
+
+                    // Blog posts navigate to blog detail page`;
+                    router.push(`/blog/${sugg.slug}`)} else {;
+
+                    // Default: search results page with slug;`;
+                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
+                  setQuery('');
+                  // Track analytics event';
+                  if(typeof window !== 'null' && window.gtag) {;
+
+                    window.gtag('event',search_suggestion_click', {;
+
+                      search_term: sugg.text,
+                      suggestion_type: sugg.type,
+                      suggestion_id: sugg.id || sugg.slug;
+})}
                 }}
-                searchSuggestions={suggestions}
+                searchSuggestions = {suggestions,}
               />
             </form>
 
@@ -134,7 +156,6 @@ export function PrimaryNav() {
               <ModeToggle />
               <LanguageSelector />
             </div>
-
             {/* Auth links - flex wrap for very small screens */}
             <div className='flex items-center gap-1 flex-wrap'>
               {!isLoggedIn && (
@@ -145,8 +166,7 @@ export function PrimaryNav() {
                     data-testid='login-link'
                     onClick={e => {
                       e.preventDefault();
-                      setLoginOpen(true);
-                    }}
+                      setLoginOpen(true);                    }}
                   >
                     {t('auth.login')}
                   </Link>
@@ -173,8 +193,7 @@ export function PrimaryNav() {
                 data-testid='login-link'
                 onClick={e => {
                   e.preventDefault();
-                  setLoginOpen(true);
-                }}
+                  setLoginOpen(true);                }}
               >
                 {t('auth.login')}
               </Link>
@@ -182,13 +201,15 @@ export function PrimaryNav() {
             {isLoggedIn && <UserMenu />}
           </div>
 
+              {isLoggedIn && <UserMenu  />}
+            </div>;
+          </div>;
           {/* Mobile menu button */}
           <button
             className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
-          >
+            aria-label={t('general.toggle_mobile_menu')}          >
             {mobileMenuOpen ? (
               <X className='h-6 w-6' />
             ) : (
@@ -202,14 +223,12 @@ export function PrimaryNav() {
           <div
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden='true'
-          />
+            aria-hidden='true'          />
           <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={returnToPath => setLoginOpen(true)}
-            />
+              openLoginModal={returnToPath => setLoginOpen(true)}            />
           </div>
         </div>
       )}
@@ -265,8 +284,74 @@ setLoginOpen (true) ;
 }onOpenChange= {;
   setLoginOpen ;
 }/> </>) ;
-}'"
-=======
+}'"  { opacity: 0,
+  height: 0;
+}}
+              animate = {;
+
+  { opacity: 1,
+  height: 'auto';
+}}
+              exit = {;
+
+  { opacity: 0,
+  height: 0;
+}}
+              transition={{ duration: 0.3 }}";
+              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
+              <div className="px-4 py-6 space-y-4">;
+                {services.map((category, index) => (;
+                  <div key={index}>";
+                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">;
+                      {category.category}
+                    </h3>";
+                    <div className="space-y-2 ml-4">;
+                      {category.items.map((service: unknown, serviceIndex: unknown ;
+                        <Link;
+                          key={serviceIndex}
+                          to={service.path}";
+                          className="block text-gray-300 hover:text-white transition-colors duration-200";
+                          onClick={( setIsOpen(false)}
+                        >;
+                          {service.name}
+                        </Link>;
+                      ))}
+                    </div>;
+                  </div>;
+                ))}
+
+                <div className="pt-4 border-t border-white/10 space-y-2">;
+                  <Link                    to="/solutions";
+                    className="block text-gray-300 hover:text-white transition-colors duration-200";
+                    onClick={: unknown setIsOpen(false)}
+                  >;
+                    Solutions;
+                  </Link>;
+                  <Link                    to="/about";
+                    className="block text-gray-300 hover:text-white transition-colors duration-200";
+                    onClick={: unknown setIsOpen(false)}
+                  >;
+                    About;
+                  </Link>;
+                  <Link                    to="/blog";
+                    className="block text-gray-300 hover:text-white transition-colors duration-200";
+                    onClick={: unknown setIsOpen(false)}
+                  >;
+                    Blog;
+                  </Link>;
+                  <Link                    to="/contact";
+                    className="block text-gray-300 hover:text-white transition-colors duration-200";
+                    onClick={: unknown setIsOpen(false)}
+                  >;
+                    Contact;
+                  </Link>;
+                </div>;
+              </div>;
+            </motion.div>;
+          )};
+        </AnimatePresence>;
+      </nav>;
+    </header>;
+  )}
+'"`;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

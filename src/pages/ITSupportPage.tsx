@@ -3,24 +3,21 @@ import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemp
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {
   const benefits = [
-    {
-=======
-import React from "react";
-import {ServiceLandingTemplate} from "@/components/services/ServiceLandingTemplate";
-import {Phone, ShieldCheck, Clock} from 'lucide-react'
+    {import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {
   const benefits = [
     {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       title: '24/7 Assistance',
       description:
         'Our experts are available around the clock to keep your systems running.',
       icon: <Clock className='h-8 w-8' />,
     },
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       title: 'Certified Professionals',
       description:
@@ -50,10 +47,21 @@ export default function ITSupportPage() {
     },
   ];
 
-  
+    return (
+    <ServiceLandingTemplate
+      title="IT Support Services"
+      subtitle="Reliable assistance to keep your business technology operating smoothly."
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+      benefits = {benefits,}
+      testimonials = {testimonials,}
+      ctaText="Get IT Support"
+      ctaLink="/request-quote"
+    />
+  );      benefits={benefits}
+      testimonials={testimonials}
+      ctaText="Get IT Support"
+      ctaLink="/request-quote"
     />
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

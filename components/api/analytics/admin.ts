@@ -4,11 +4,8 @@ import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {  try {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const supabase = createServerClient();
 
     // Replace with your actual tables/queries
@@ -20,8 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       supabase.from('projects').select('id, status'),
       supabase.from('referrals').select('id, converted, source'),
     ]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
 
     const users =
@@ -76,13 +71,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { id: 41, converted: true, source: 'linkedin' },
       { id: 42, converted: false, source: 'twitter' },
       { id: 43, converted: true, source: 'partner' },
-    ]);
-=======
-      { id: 41, converted: true, source: 'linkedin' };
+    ]);      { id: 41, converted: true, source: 'linkedin' };
       { id: 42, converted: false, source: 'twitter' };
       { id: 43, converted: true, source: 'partner' }]);
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
@@ -94,7 +86,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const quotesAccepted = quotesData.filter(
       q => q.status === 'accepted'
     ).length;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const activeProjects = projectsData.filter(
       p => p.status === 'active'
@@ -107,20 +98,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const referralConversions = referralsData.filter(r => r.converted).length;
 
     const geoCounts: Record<string, number> = {};
-=======
+    const activeProjects = projectsData.filter(p => p.status === 'active').length;
+
+    const categoryCounts: Record<string, number> = {};
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
 
     const referralConversions = referralsData.filter(r => r.converted).length;
 
     const geoCounts: Record<string, number> = {};
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     usersData.forEach(u => {
       geoCounts[u.country || 'Unknown'] =
         (geoCounts[u.country || 'Unknown'] || 0) + 1;
     });
-<<<<<<< HEAD
-
     res.status(200).json({
       totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects };
       topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
@@ -178,8 +167,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'GB', value: 1 },
       ],
     });
-  }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  }}

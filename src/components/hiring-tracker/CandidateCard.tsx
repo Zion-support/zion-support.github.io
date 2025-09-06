@@ -1,5 +1,4 @@
 import { useState } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from '@/lib/dnd-stub';
@@ -18,7 +17,17 @@ import {
   Calendar,
   AlertTriangle,
   BriefcaseIcon,;
-} from 'lucide-react';
+} from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
+// available in this environment.
+import { Draggable } from "@/lib/dnd-stub";
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,7 +38,6 @@ import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';
 import { toast } from '@/hooks/use-toast';
 import { HireConfirmationModal } from './HireConfirmationModal';
 import Image from 'next/image'; // Import next/image
-
 interface CandidateCardProps {
   application: JobApplication;
   index: number;
@@ -72,8 +80,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
         {provided => (
           <Card
             className='mb-2 p-0 shadow-sm border'
-            ref={provided.innerRef}
-            {...provided.draggableProps}
+            ref={provided.innerRef}            {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
@@ -91,8 +98,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                         width={32} // Match h-8 w-8
                         height={32} // Match h-8 w-8
                         className='rounded-full object-cover' // Ensure rounded and object-cover
-                        onError={() => setAvatarError(true)}
-                        priority={false} // Avatars are usually not LCP
+                        onError={() => setAvatarError(true)}                        priority={false} // Avatars are usually not LCP
                       />
                     ) : (
                       <User className='h-4 w-4' />
@@ -178,8 +184,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     placeholder='Add private notes about this candidate...'
                     className='text-xs min-h-[60px]'
                     value={notes}
-                    onChange={e => setNotes(e.target.value)}
-                  />
+                    onChange={e => setNotes(e.target.value)}                  />
                   <div className='flex justify-end mt-2'>
                     <Button size='sm' onClick={handleSaveNotes}>
                       Save Notes
@@ -216,8 +221,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   variant='default'
                   size='sm'
                   className='flex-1'
-                  onClick={() => setShowHireModal(true)}
-                >
+                  onClick={() => setShowHireModal(true)}                >
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire
                 </Button>
               </div>
@@ -228,10 +232,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
-        isOpen={showHireModal}
-        onClose={() => setShowHireModal(false)}
-        application={application}
-        onConfirm={handleHireConfirmed}
+        isOpen = {showHireModal,}
+        onClose = {() => setShowHireModal(false),}
+        application = {application,}
+        onConfirm = {handleHireConfirmed,}
       />
     </>
   );
@@ -312,8 +316,4 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 }onConfirm= {;
   handleHireConfirmed ;
 }/> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

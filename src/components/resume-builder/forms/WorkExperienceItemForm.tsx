@@ -26,7 +26,6 @@ import { format } from 'date-fns';
 import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton';
 import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog';
-
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -46,7 +45,6 @@ interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void;
-
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
@@ -77,7 +75,7 @@ export function WorkExperienceItemForm({
   const watchRoleTitle = form.watch('role_title');
   const watchCompanyName = form.watch('company_name');
 
-  const handleFormSubmit = async (values: FormValues) => {
+  const handleFormSubmit = async (values: FormValues,) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
       id: initialData?.id,
@@ -97,7 +95,6 @@ export function WorkExperienceItemForm({
     form.setValue('description', content, { shouldDirty: true });
     setIsEnhancementDialogOpen(false);
   };
-
   return (
     <>
       <Form {...form}>
@@ -109,8 +106,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name='company_name'
-              render={({ field }: { field: any }) => (
-                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder='e.g. Acme Corporation' {...field} />
@@ -123,8 +119,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name='role_title'
-              render={({ field }: { field: any }) => (
-                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder='e.g. Senior Developer' {...field} />
@@ -139,8 +134,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
               name='location'
-              render={({ field }: { field: any }) => (
-                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input
@@ -157,15 +151,13 @@ export function WorkExperienceItemForm({
               control={form.control}
               name='is_current'
               render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-col'>
-                  <FormLabel>Current Position</FormLabel>
+                <FormItem className='flex flex-col'>                  <FormLabel>Current Position</FormLabel>
                   <div className='flex items-center gap-2 h-10'>
                     <Switch
                       aria-label='Current position'
                       checked={field.value}
                       onCheckedChange={field.onChange}
-                      id='current-position'
-                    />
+                      id='current-position'                    />
                     <label
                       htmlFor='current-position'
                       className='text-sm text-muted-foreground'
@@ -184,8 +176,7 @@ export function WorkExperienceItemForm({
               control={form.control}
               name='start_date'
               render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-col'>
-                  <FormLabel>Start Date</FormLabel>
+                <FormItem className='flex flex-col'>                  <FormLabel>Start Date</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
@@ -194,8 +185,7 @@ export function WorkExperienceItemForm({
                           className={cn(
                             'w-full pl-3 text-left font-normal',
                             !field.value && 'text-muted-foreground'
-                          )}
-                        >
+                          )}                        >
                           {field.value ? (
                             format(field.value, 'MMM yyyy')
                           ) : (
@@ -216,8 +206,7 @@ export function WorkExperienceItemForm({
                         initialFocus
                         captionLayout='dropdown-buttons'
                         fromYear={1990}
-                        toYear={new Date().getFullYear()}
-                      />
+                        toYear={new Date().getFullYear()}                      />
                     </PopoverContent>
                   </Popover>
                   <FormMessage />
@@ -230,8 +219,7 @@ export function WorkExperienceItemForm({
                 control={form.control}
                 name='end_date'
                 render={({ field }: { field: any }) => (
-                  <FormItem className='flex flex-col'>
-                    <FormLabel>End Date</FormLabel>
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -240,8 +228,7 @@ export function WorkExperienceItemForm({
                             className={cn(
                               'w-full pl-3 text-left font-normal',
                               !field.value && 'text-muted-foreground'
-                            )}
-                          >
+                            )}                          >
                             {field.value ? (
                               format(field.value, 'MMM yyyy')
                             ) : (
@@ -263,8 +250,7 @@ export function WorkExperienceItemForm({
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
-                          disabled={date => date > new Date()}
-                        />
+                          disabled={date => date > new Date()}                        />
                       </PopoverContent>
                     </Popover>
                     <FormMessage />
@@ -277,8 +263,7 @@ export function WorkExperienceItemForm({
           <FormField
             control={form.control}
             name='description'
-            render={({ field }: { field: any }) => (
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <div className='flex justify-between items-center'>
                   <FormLabel>Description</FormLabel>
                   <div className='flex gap-2'>
@@ -300,8 +285,7 @@ export function WorkExperienceItemForm({
                       variant='outline'
                       size='sm'
                       onClick={() => setIsEnhancementDialogOpen(true)}
-                      className='text-xs'
-                    >
+                      className='text-xs'                    >
                       AI Writer
                     </Button>
                   </div>
@@ -346,8 +330,7 @@ export function WorkExperienceItemForm({
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
-        initialContent={form.getValues('description') || ''}
-      />
+        initialContent={form.getValues('description') || ''}      />
     </>
   );
 
@@ -378,7 +361,5 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
 }"
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

@@ -3,7 +3,6 @@ import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
@@ -13,8 +12,7 @@ import {
   FormLabel,
   FormMessage,;
 } from '@/components/ui/form';
-import { Textarea } from '@/components/ui/textarea';
-import {
+import { Textarea } from '@/components/ui/textarea';import {
   Select,
   SelectContent,
   SelectItem,
@@ -26,7 +24,6 @@ import { disputeReasonLabels } from '@/types/disputes';
 import { useDisputes } from '@/hooks/useDisputes';
 import { toast } from 'sonner';
 import { FileText } from 'lucide-react';
-
 const formSchema = z.object({
   reason_code: z
     .string()
@@ -43,7 +40,6 @@ type DisputeFormProps = {
   onDisputeCreated?: (disputeId: string) => void;
   onCancel?: () => void;
 };
-
 export function DisputeForm({
   projectId,
   milestoneId,
@@ -63,7 +59,7 @@ export function DisputeForm({
     },
   });
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>,) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]);
@@ -77,7 +73,6 @@ export function DisputeForm({
     setFiles(newFiles);
     form.setValue('attachments', newFiles);
   };
-
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true);
@@ -129,8 +124,7 @@ export function DisputeForm({
                 z.infer<typeof formSchema>,
                 'reason_code'
               >;
-            }) => (
-              <FormItem>
+            }) => (              <FormItem>
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select
                   onValueChange={field.onChange}
@@ -148,8 +142,7 @@ export function DisputeForm({
                           {label}
                         </SelectItem>
                       )
-                    )}
-                  </SelectContent>
+                    )}                  </SelectContent>
                 </Select>
                 <FormMessage />
               </FormItem>
@@ -166,8 +159,7 @@ export function DisputeForm({
                 z.infer<typeof formSchema>,
                 'description'
               >;
-            }) => (
-              <FormItem>
+            }) => (              <FormItem>
                 <FormLabel>Describe the issue in detail</FormLabel>
                 <FormControl>
                   <Textarea
@@ -189,8 +181,7 @@ export function DisputeForm({
                   type='file'
                   multiple
                   onChange={handleFileChange}
-                  className='cursor-pointer'
-                />
+                  className='cursor-pointer'                />
 
                 {files.length > 0 && (
                   <div className='space-y-2'>
@@ -208,8 +199,7 @@ export function DisputeForm({
                             type='button'
                             variant='ghost'
                             size='sm'
-                            onClick={() => removeFile(index)}
-                          >
+                            onClick={() => removeFile(index)}                          >
                             Remove
                           </Button>
                         </li>
@@ -271,8 +261,4 @@ description: values.description ;
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

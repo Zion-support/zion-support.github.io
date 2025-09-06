@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeMicroSaasService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -769,8 +767,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       rating: 4.8,
       reviews: 45,
     },
-  ];
-    features: [
+  ];    features: [
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management';
       'Integration capabilitiesCustom dashboards'
     ];
@@ -798,5 +795,3 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     reviews: 45
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

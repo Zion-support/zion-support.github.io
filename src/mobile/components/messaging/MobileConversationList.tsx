@@ -5,8 +5,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface Conversation {
   id: string;
 name: string;
@@ -19,7 +17,6 @@ isTyping?: boolean ;
   conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
-
 export function MobileConversationList({
   conversations,
   activeConversation,
@@ -59,8 +56,7 @@ export function MobileConversationList({
               'px-4',
               activeConversation === conversation.id && 'bg-primary/5'
             )}
-            onClick={() => onSelectConversation(conversation.id)}
-          >
+            onClick={() => onSelectConversation(conversation.id)}          >
             <div className='flex items-center gap-3 py-3 cursor-pointer'>
               <Avatar>
                 <AvatarImage
@@ -69,23 +65,16 @@ export function MobileConversationList({
                 />                <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
-              </Avatar>
-=======
-                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+              </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
               <div className='flex-1 min-w-0'>
                 <div className='flex justify-between items-baseline'>
                   <h3 className='font-medium truncate'>{conversation.name}</h3>
                   <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                    {conversation.timestamp}
                   </span>
                 </div>
 
@@ -99,27 +88,17 @@ export function MobileConversationList({
                   </p>
 
                   {conversation.unreadCount > 0 && (
-                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}
-=======
-                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </Badge>
                   )}
                 </div>
               </div>
             </div>
-            <div className='border-t border-border ml-12'></div>          </div>
-=======
-            <div className="border-t border-border ml-12"></div>
+            <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>
           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         ))}
       </div>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

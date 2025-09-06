@@ -10,11 +10,13 @@ import {
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface GeneratedDescriptionDisplayProps {
   description: string;
-  onSave: (editedDescription: string) => void;
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
+  description: string,
+  onSave: (editedDescription: string,) => void
+}
 
 export function GeneratedDescriptionDisplay({
   description,
@@ -42,8 +44,7 @@ export function GeneratedDescriptionDisplay({
             variant='outline'
             size='sm'
             onClick={() => setIsEditing(!isEditing)}
-            className='border-zion-blue-light text-zion-slate-light hover:text-white'
-          >
+            className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
             {isEditing ? (
               <>
                 <Check className='h-4 w-4 mr-1' />
@@ -63,8 +64,7 @@ export function GeneratedDescriptionDisplay({
           <Textarea
             value={editedDescription}
             onChange={e => setEditedDescription(e.target.value)}
-            className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'
-          />
+            className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'          />
         ) : (
           <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
             {editedDescription}
@@ -75,8 +75,7 @@ export function GeneratedDescriptionDisplay({
         <CardFooter>
           <Button
             onClick={handleSave}
-            className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
-          >
+            className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'          >
             Save Changes
           </Button>
         </CardFooter>
@@ -94,8 +93,5 @@ export function GeneratedDescriptionDisplay({
   handleSave ";
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;
-}'"
-=======
+}'";
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

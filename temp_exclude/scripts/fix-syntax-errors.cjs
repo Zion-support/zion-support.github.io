@@ -22,40 +22,6 @@ const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:scripts/fix-syntax-errors.cjs
-class SyntaxErrorFixer {
-  constructor() {
-    this.fixes = 0;
-    this.errors = []}
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;);
-    }
-  async fixSyntaxErrors() {
-    this.log('🔧 Starting syntax error fixing...');
-    try {
-      // Run ESLint with auto-fix
-      this.log('Running ESLint auto-fix...');
-      execSync('npm run "lint": fix', { "stdio": 'inherit' });
-      this.fixes++;
-      // Run TypeScript compiler to check for errors
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { "stdio": 'inherit' });
-      // Format code with Prettier
-      this.log('Formatting code with Prettier...');
-      execSync('npm run format', { "stdio": 'inherit' });
-      this.fixes++;
-      this.log(`✅ Syntax fixing completed successfully. Applied ${this.fixes} fixes.`);
-      return { "success": true, "fixes": this.fixes }} catch (error) {
-      this.log(`❌ Syntax fixing "failed": ${error.message}`, 'ERROR');
-      this.errors.push(error.message);
-      return { "success": false, "error": error.message, "fixes": this.fixes }}
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/fix-syntax-errors.cjs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   }
   log(message) {
     console.log(`🔧 ${message}`);
@@ -96,6 +62,9 @@ class SyntaxErrorFixer {
     content = content.replace(/([^;}])\n/g, '$1;\n');
     // Fix merge conflict markers
     content = content.replace(/[\s\S]*?[\s\S]*?    
+=======
+    
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Fix common JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
     // Fix missing commas in objects

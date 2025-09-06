@@ -16,7 +16,6 @@ import {
   BarChart3,
   Globe,
   Award,;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 } from 'lucide-react';
 
 const AICodeReviewSecurityScanner = () => {
@@ -46,8 +45,20 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center'
-=======
+              className='text-center'} from 'lucide-react';
+
+const AICodeReviewSecurityScanner = () => {
+  return(<>
+      <SEO 
+        title="AI-Powered Code Review & Security Scanner | Zion Tech Group"
+        description="Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages."
+        keywords={["AI code review", "security scanner", "vulnerability detection", "code quality", "automated code analysis", "security testing", "DevOps security"]}
+        ogImage="https://ziontechgroup.com/og-ai-code-review.jpg"
+        canonical="https://ziontechgroup.com/ai-code-review-security-scanner"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -55,9 +66,7 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8'>
                 <Brain className='w-4 h-4 mr-2' />
@@ -94,41 +103,58 @@ const AICodeReviewSecurityScanner = () => {
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'                >
                   Schedule Demo
                 </motion.button>
+              </div>            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8">
+                <Brain className="w-4 h-4 mr-2" />
+                AI-Powered Development Security
               </div>
-=======
+              
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                AI-Powered Code Review & 
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Security Scanner</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, suggests improvements, and ensures code quality across multiple programming languages.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center"
+                >
+                  Start Free Trial
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </motion.button>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
               </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
               <div className='flex flex-wrap justify-center gap-8 text-gray-400'>
                 <div className='flex items-center'>
                   <CheckCircle className='w-5 h-5 text-green-400 mr-2' />
-<<<<<<< HEAD
                   Multi-language support
-                </div>
-                  Multi-language support
+                </div>                  Multi-language support
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   Real-time scanning
                 </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <div className='flex items-center'>
                   <CheckCircle className='w-5 h-5 text-green-400 mr-2' />
                   Real-time scanning
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-center'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mr-2' />                  SOC2 & ISO27001 compliant
-=======
-                <div className="flex items-center">
+                  <CheckCircle className='w-5 h-5 text-green-400 mr-2' />                  SOC2 & ISO27001 compliant                <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   SOC2 & ISO27001 compliant
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             </motion.div>
@@ -141,18 +167,13 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-=======
-        <section className="py-20 bg-white/5">
+              className='text-center mb-16'        <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Comprehensive Code Security & Quality
               </h2>
@@ -200,21 +221,16 @@ const AICodeReviewSecurityScanner = () => {
                   title: 'Integration & APIs',
                   description:
                     'Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access.',
-                },              ].map((feature, index) => (
-                  icon: <Globe className="w-8 h-8" />,
+                },              ].map((feature, index) => (                  icon: <Globe className="w-8 h-8" />,
                   title: "Integration & APIs",
                   description: "Seamless integration with GitHub, GitLab, Bitbucket, and CI/CD pipelines with custom API access."
                 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              ].map((feature, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6'>
                     {feature.icon}
@@ -222,12 +238,13 @@ const AICodeReviewSecurityScanner = () => {
                   <h3 className='text-xl font-semibold text-white mb-4'>
                     {feature.title}
                   </h3>
-                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>
-=======
+                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
+                    {feature.icon}
+                  </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               ))}
             </div>
           </div>
@@ -239,18 +256,13 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-=======
-        <section className="py-20">
+              className='text-center mb-16'        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Transparent Pricing Plans
               </h2>
@@ -314,8 +326,7 @@ const AICodeReviewSecurityScanner = () => {
                     'SLA guarantees',
                   ],
                   popular: false,
-                },              ].map((plan, index) => (
-                    "Unlimited developers";
+                },              ].map((plan, index) => (                    "Unlimited developers";
                     "Enterprise security scanning";
                     "On-premise deployment";
                     "24/7 dedicated support";
@@ -327,9 +338,6 @@ const AICodeReviewSecurityScanner = () => {
                   ],
                   popular: false
                 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              ].map((plan, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -345,27 +353,19 @@ const AICodeReviewSecurityScanner = () => {
                       <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>                        Most Popular
                       </span>
                     </div>
-                  )}
-=======
-                    plan.popular 
+                  )}                    plan.popular 
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
                       : 'border-white/10'
                   }`}
                 >
                   {plan.popular && (
-<<<<<<< HEAD
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                      <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-=======
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
                   <div className='text-center mb-8'>
                     <h3 className='text-2xl font-bold text-white mb-2'>
@@ -376,8 +376,6 @@ const AICodeReviewSecurityScanner = () => {
                         {plan.price}
                       </span>
                       <span className='text-gray-400 ml-1'>{plan.period}</span>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </div>
                     <p className='text-gray-300'>{plan.description}</p>
                   </div>
@@ -391,20 +389,19 @@ const AICodeReviewSecurityScanner = () => {
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
                       </li>
                     ))}
-                  </ul>
-=======
+                  </ul>                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-
-=======
                   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -428,18 +425,13 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-=======
-        <section className="py-20 bg-white/5">
+              className='text-center mb-16'        <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Why Choose Our AI Code Security Platform?
               </h2>
@@ -470,21 +462,16 @@ const AICodeReviewSecurityScanner = () => {
                     title: 'Improve Code Quality & Maintainability',
                     description:
                       'AI-powered insights help maintain consistent code standards and improve overall codebase health.',
-                  },                ].map((benefit, index) => (
-                    icon: <TrendingUp className="w-8 h-8" />,
+                  },                ].map((benefit, index) => (                    icon: <TrendingUp className="w-8 h-8" />,
                     title: "Improve Code Quality & Maintainability",
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."
                   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                ].map((benefit, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className='flex items-start'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   >
                     <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>
                       {benefit.icon}
@@ -498,19 +485,19 @@ const AICodeReviewSecurityScanner = () => {
                 ))}
               </div>
 
-              <div className='space-y-8'>
-=======
+              <div className='space-y-8'>                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
+                      {benefit.icon}
+                    </div>
+                    <div>
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
 
               <div className='space-y-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                {[
                   {
                     icon: <CheckCircle className='w-8 h-8' />,
                     title: 'Ensure Compliance with Security Standards',
@@ -528,21 +515,16 @@ const AICodeReviewSecurityScanner = () => {
                     title: 'Enable Faster Development Cycles',
                     description:
                       'Confident code deployment with automated security validation accelerates your development and release processes.',
-                  },                ].map((benefit, index) => (
-                    icon: <Star className="w-8 h-8" />,
+                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />,
                     title: "Enable Faster Development Cycles",
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."
                   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                ].map((benefit, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     className='flex items-start'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   >
                     <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>
                       {benefit.icon}
@@ -551,12 +533,14 @@ const AICodeReviewSecurityScanner = () => {
                       <h3 className='text-xl font-semibold text-white mb-2'>
                         {benefit.title}
                       </h3>
-                      <p className='text-gray-300'>{benefit.description}</p>                    </div>
-=======
+                      <p className='text-gray-300'>{benefit.description}</p>                    </div>                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
+                      {benefit.icon}
+                    </div>
+                    <div>
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                       <p className="text-gray-300">{benefit.description}</p>
                     </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </motion.div>
                 ))}
               </div>
@@ -570,18 +554,13 @@ const AICodeReviewSecurityScanner = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-=======
-        <section className="py-20">
+              className='text-center mb-16'        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='text-center mb-16'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Trusted by Development Teams Worldwide
               </h2>
@@ -601,8 +580,7 @@ const AICodeReviewSecurityScanner = () => {
                 'E-commerce Platforms',
                 'Government Software Projects',
                 'Educational Institutions',
-                'Startups & Enterprises',              ].map((useCase, index) => (
-                "Software Development Teams";
+                'Startups & Enterprises',              ].map((useCase, index) => (                "Software Development Teams";
                 "DevOps & Security Teams";
                 "Financial Technology Companies";
                 "Healthcare Software Providers";
@@ -610,25 +588,22 @@ const AICodeReviewSecurityScanner = () => {
                 "Government Software Projects";
                 "Educational Institutions",
                 "Startups & Enterprises"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              ].map((useCase, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
                     <Users className='w-6 h-6' />
                   </div>
-                  <h3 className='text-white font-semibold'>{useCase}</h3>                </motion.div>
-=======
+                  <h3 className='text-white font-semibold'>{useCase}</h3>                </motion.div>                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Users className="w-6 h-6" />
+                  </div>
                   <h3 className="text-white font-semibold">{useCase}</h3>
                 </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               ))}
             </div>
           </div>
@@ -636,18 +611,14 @@ const AICodeReviewSecurityScanner = () => {
 
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
-=======
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Ready to Secure Your Code?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
@@ -672,39 +643,48 @@ const AICodeReviewSecurityScanner = () => {
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'                >
                   Contact Sales
                 </motion.button>
-              </div>
-=======
+              </div>                Ready to Secure Your Code?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of development teams who trust our AI-powered platform to protect their applications 
+                and improve code quality. Start your free trial today.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Start Free Trial
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </motion.button>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
                 >
                   Contact Sales
                 </motion.button>
               </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
               <div className='mt-8 text-gray-400'>
                 <p>
                   14-day free trial • No credit card required • Cancel anytime
-<<<<<<< HEAD
-                </p>              </div>
-=======
-              
+                </p>              </div>              
               <div className="mt-8 text-gray-400">
                 <p>14-day free trial • No credit card required • Cancel anytime</p>
               </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </motion.div>
           </div>
         </section>
 
         {/* Contact Information */}
         <section className='py-16 bg-white/5'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
-=======
-        <section className="py-16 bg-white/5">
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section className="py-16 bg-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -713,7 +693,6 @@ const AICodeReviewSecurityScanner = () => {
                 Get in Touch
               </h3>
               <div className='grid md:grid-cols-3 gap-8 text-gray-300'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <div>
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
                     <Users className='w-6 h-6' />
@@ -737,11 +716,29 @@ const AICodeReviewSecurityScanner = () => {
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
                     <Award className='w-6 h-6' />
                   </div>
-                  <h4 className='text-white font-semibold mb-2'>Address</h4>                  <p>364 E Main St STE 1008</p>
-=======
+                  <h4 className='text-white font-semibold mb-2'>Address</h4>                  <p>364 E Main St STE 1008</p>                <div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">Contact Us</h4>
+                  <p>Mobile: +1 302 464 0950</p>
+                  <p>Email: kleber@ziontechgroup.com</p>
+                </div>
+                
+                <div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Globe className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
+                  <p>https://ziontechgroup.com</p>
+                </div>
+                
+                <div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    <Award className="w-6 h-6" />
+                  </div>
                   <h4 className="text-white font-semibold mb-2">Address</h4>
                   <p>364 E Main St STE 1008</p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <p>Middletown DE 19709</p>
                 </div>
               </div>
@@ -753,11 +750,7 @@ const AICodeReviewSecurityScanner = () => {
   );
 };
 
-export default AICodeReviewSecurityScanner;
-=======
-  )
+export default AICodeReviewSecurityScanner;  )
 };
 
 export default AICodeReviewSecurityScanner;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

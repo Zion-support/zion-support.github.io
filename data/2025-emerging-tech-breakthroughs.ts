@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface EmergingTechBreakthrough2025 {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface EmergingTechBreakthrough2025 {
   reviews: number;
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'brain-computer-interface-platform',
     name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
@@ -59,9 +54,6 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description:
       'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Non-invasive neural signal processing',
       'Real-time brain activity monitoring',
       'Thought-to-text conversion',
@@ -494,9 +486,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.7,
     reviews: 18,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -509,5 +499,3 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     reviews: 18
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

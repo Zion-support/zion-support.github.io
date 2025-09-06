@@ -1,17 +1,16 @@
           
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
-
+import { logInfo, logWarn } from '@/utils/productionLogger';
 interface EnhancedSearchInputProps {
   value: string,
-  onChange: (value: string) => void,
+  onChange: (value: string,) => void,
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-  placeholder?: string;
-  /**
+  placeholder?: string;  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -25,6 +24,18 @@ export function EnhancedSearchInput({
   placeholder = "Search...";
   searchSuggestions
 }: EnhancedSearchInputProps) {
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo;
+import { Search, X  } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
+import { SearchSuggestion } from '@/types/search';
+export function EnhancedSearchInput({;
+  value,
+  onChange,
+  onSelectSuggestion,
+  placeholder = "Search...",
+  searchSuggestions;
+}: EnhancedSearchInputProps) {;
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
@@ -39,8 +50,8 @@ export function EnhancedSearchInput({
   const debounced = useDebounce(value, 200);
 
   const debouncedFetchSuggestions = useMemo(
-    () =>
-      debounce(async (query: string) => {
+    (,) =>
+      debounce(async (query: string,) => {
         if (!query.trim()) {
           setApiSuggestions([]),
           return
@@ -74,7 +85,7 @@ export function EnhancedSearchInput({
   );
 
   // Fetch suggestions from API when input value changes
-  useEffect(() => {
+  useEffect((,) => {
     if (!debounced) {
       // Show recent suggestions provided via props when no query entered
       setFilteredSuggestions(
@@ -101,12 +112,11 @@ export function EnhancedSearchInput({
         setHighlightedIndex(-1);
       })
       .catch(() => setFilteredSuggestions([]));
-
     return () => controller.abort()
   }, [debounced, searchSuggestions]);
 
   // Handle clicks outside the component to close suggestions
-  useEffect(() => {
+  useEffect((,) => {
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false),
@@ -120,7 +130,7 @@ export function EnhancedSearchInput({
 
   const router = useRouter();
 
-  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text);
     if (onSelectSuggestion) {
@@ -144,13 +154,95 @@ export function EnhancedSearchInput({
     setHighlightedIndex(-1)
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>,) => {
     switch (e.key) {
       case 'ArrowDown':
         if (isFocused && filteredSuggestions.length > 0) {
           e.preventDefault(),
           setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
         }
+  const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo;
+    () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {;
+      if(!currentValue) {;
+        setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'));
+        return;
+}
+
+      const filtered = suggestions.filter(suggestion =>;
+        suggestion.text.toLowerCase().includes(currentValue.toLowerCase());
+      );
+      filtered.sort((a, b) => {;
+        const aStartsWith = a.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
+        const bStartsWith = b.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
+        return aStartsWith-bStartsWith;
+});
+      setFilteredSuggestions(filtered.slice(0, 8));
+}, 300),
+    [setFilteredSuggestions] // setFilteredSuggestions from useState is stable;
+  );
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+    debouncedFilterSuggestions(value, searchSuggestions);
+    setHighlightedIndex(-1);
+    return () => {;
+      debouncedFilterSuggestions.cancel();
+};
+}, [value, searchSuggestions, debouncedFilterSuggestions]);
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
+
+  return () => {;
+    // Cleanup function;
+};
+}, []); []);
+    function handleClickOutside(event: MouseEvent) {;
+      if(containerRef.current && !containerRef.current.contains(event.target as Node)) {;
+        setIsFocused(false);
+}
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
+  const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText;
+    onChange(suggestionText);
+    if(onSelectSuggestion) {;
+      onSelectSuggestion(suggestionText);
+}
+    setIsFocused(false);
+    inputRef.current?.blur();
+    setHighlightedIndex(-1);
+};
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    if(!isFocused || filteredSuggestions.length === 0) {;
+      if(e.key === 'Escape') { ;
+        e.preventDefault();
+        setIsFocused(false);
+        setHighlightedIndex(-1);
+        inputRef.current?.blur();
+}
+      return;
+}
+
+    switch(e.key) {;
+      case 'ArrowDown':;
+        e.preventDefault();
+        setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
+        break;
+      case 'ArrowUp':;
+        e.preventDefault();
+        setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
+        break;
+      case 'Enter':;
+        if(highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
+          e.preventDefault();
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
+}
         break;
       case 'ArrowUp':
         if (isFocused && filteredSuggestions.length > 0) {
@@ -192,19 +284,19 @@ export function EnhancedSearchInput({
   return (
     <div
       className="relative w-full"
-      ref={containerRef}
+      ref = {containerRef,}
       role="combobox"
-      aria-expanded={isFocused && filteredSuggestions.length > 0}
+      aria-expanded = {isFocused && filteredSuggestions.length > 0,}
       aria-haspopup="listbox"
       aria-controls="autocomplete-suggestions-list" // Added aria-controls
-      onClick={() => inputRef.current?.focus()}
+      onClick = {(,) => inputRef.current?.focus(),}
     >
       <div className="relative flex items-center w-full">
         <Search 
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />
         <Input
-          ref={inputRef}
+          ref = {inputRef,}
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -214,23 +306,21 @@ export function EnhancedSearchInput({
             setEnterHandledPostFocus(false)
           }}
           onFocus={(e) => {
-            setIsFocused(true);
-            setHighlightedIndex(-1), // Explicitly reset on focus
+            setIsFocused(true);            setHighlightedIndex(-1), // Explicitly reset on focus
             const currentVal = e.target.value;
             setValueOnFocus(currentVal);
             setEnterHandledPostFocus(false);
             e.target.setSelectionRange(currentVal.length, currentVal.length)
           }}
           onBlur={(e) => {
-            const relatedTarget = e.relatedTarget as HTMLElement;
-            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
+            const relatedTarget = e.relatedTarget as HTMLElement;            if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {
               setIsFocused(false);
               setHighlightedIndex(-1)
-            }
+            ,}
             setValueOnFocus(null)
           }}
-          onKeyDown={handleKeyDown}
-          aria-label={t('general.search')}
+          onKeyDown = {handleKeyDown,}
+          aria-label = {t('general.search'),}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -239,7 +329,7 @@ export function EnhancedSearchInput({
         {value && (
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
+            onClick = {(,) => onChange(''),}
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
@@ -248,10 +338,10 @@ export function EnhancedSearchInput({
       </div>
       
       <AutocompleteSuggestions
-        suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
+        suggestions = {filteredSuggestions,}
+        searchTerm = {value,}
+        onSelectSuggestion = {handleSelectSuggestion,}
+        visible = {isFocused,}
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
@@ -279,9 +369,54 @@ break ;
   () => onChange ('') ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
-}'"
-=======
-  )
+}'"  )
+      default:;
+        break;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  };
+  return (<div;
+      className="relative w-full";
+      ref={containerRef}
+      role="combobox";
+      aria-expanded={isFocused && filteredSuggestions.length > 0}
+      aria-haspopup="listbox";
+      aria-controls="autocomplete-suggestions-list">;
+      <div className="relative">;
+        <Search ;
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" ;
+        />;
+        <Input;
+          ref={inputRef}
+          type="text";
+          value={value}
+          onChange={(e) => {;
+            onChange(e.target.value);
+}}
+          onFocus={() => setIsFocused(true)}
+          onKeyDown={handleKeyDown} ;
+          placeholder={placeholder}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
+          aria-autocomplete="list";
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+        />;
+        {value && (;
+          <button;
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white";
+            onClick={() => onChange('')}
+
+          >;
+            <X className="h-4 w-4" />;
+          </button>;
+        )}
+      </div>;
+      <AutocompleteSuggestions;
+        suggestions={filteredSuggestions}
+        searchTerm={value}
+        onSelectSuggestion={handleSelectSuggestion}
+        visible={isFocused}
+        highlightedIndex={highlightedIndex} ;
+        listId="autocomplete-suggestions-list" ;
+      />;
+    </div>;
+  );
+}

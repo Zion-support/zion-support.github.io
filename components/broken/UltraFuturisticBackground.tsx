@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const UltraFuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -17,7 +15,6 @@ const UltraFuturisticBackground: React.FC = () => {
 
     // Quantum particle system
     const particles: Array<{
-<<<<<<< HEAD
       x: number;
       y: number;
       vx: number;
@@ -29,9 +26,7 @@ const UltraFuturisticBackground: React.FC = () => {
     }> = [];
 
     // Create initial particles
-    for (let i = 0; i < 100; i++) {
-=======
-      x: number,
+    for (let i = 0; i < 100; i++) {      x: number,
       y: number,
       vx: number,
       vy: number,
@@ -43,9 +38,6 @@ const UltraFuturisticBackground: React.FC = () => {
 
     // Create initial particles
     for (let i = 0, i < 100, i++) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 2,
@@ -54,14 +46,10 @@ const UltraFuturisticBackground: React.FC = () => {
         color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         life: Math.random() * 100,
         maxLife: 100,
-      });    }
-=======
-        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+      });    }        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
         life: Math.random() * 100,
         maxLife: 100
       })
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Animation loop
     const animate = () => {
@@ -98,28 +86,23 @@ const UltraFuturisticBackground: React.FC = () => {
             color: `hsl(${Math.random() * 360}, 70%, 60%)`,
             life: 100,
             maxLife: 100,
-          };        }
-=======
-            color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+          };        }            color: `hsl(${Math.random() * 360}, 70%, 60%)`;
             life: 100,
             maxLife: 100
           }
-        }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       });
 
       // Draw quantum entanglement lines
       particles.forEach((particle1, i) => {
         particles.slice(i + 1).forEach(particle2 => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           const distance = Math.sqrt(
             Math.pow(particle1.x - particle2.x, 2) +
               Math.pow(particle1.y - particle2.y, 2)
+          );          const distance = Math.sqrt(
+            Math.pow(particle1.x - particle2.x, 2) + 
+            Math.pow(particle1.y - particle2.y, 2)
           );
-=======
           
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           if (distance < 100) {
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
@@ -127,34 +110,30 @@ const UltraFuturisticBackground: React.FC = () => {
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           }
         });
       });
 
-      requestAnimationFrame(animate);    };
-=======
+      requestAnimationFrame(animate);    };          }
+        })
+      });
+
       requestAnimationFrame(animate)
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     animate();
 
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;    };
-=======
-      canvas.height = window.innerHeight
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, []);
 
   return (
@@ -190,8 +169,31 @@ const UltraFuturisticBackground: React.FC = () => {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',          }}
-=======
+            ease: 'linear',          }}  }, []);
+
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
+      />
+
+      {/* Quantum Grid */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+      </div>
+
+      {/* Floating Geometric Shapes */}
+      <div className="absolute inset-0">
+        {/* Hexagon */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          style={{
+            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
+          }}
+          animate={{
             rotate: [0, 360];
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]
@@ -199,19 +201,13 @@ const UltraFuturisticBackground: React.FC = () => {
           transition={{
             duration: 20,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',
-=======
-            ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            ease: 'linear',            ease: "linear"
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         />
 
         {/* Triangle */}
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           style={{
             clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
           }}
@@ -222,8 +218,10 @@ const UltraFuturisticBackground: React.FC = () => {
           transition={{
             duration: 15,
             repeat: Infinity,
-            ease: 'linear',          }}
-=======
+            ease: 'linear',          }}          style={{
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+          }}
+          animate={{
             rotate: [360, 0];
             scale: [1, 1.3, 1];
             opacity: [0.3, 0.7, 0.3]
@@ -231,13 +229,8 @@ const UltraFuturisticBackground: React.FC = () => {
           transition={{
             duration: 15,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',
-=======
-            ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            ease: 'linear',            ease: "linear"
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         />
 
         {/* Circle */}
@@ -249,23 +242,15 @@ const UltraFuturisticBackground: React.FC = () => {
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: 'easeInOut',          }}
-=======
-          className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full"
+            ease: 'easeInOut',          }}          className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full"
           animate={{
             scale: [1, 1.5, 1];
             opacity: [0.2, 0.8, 0.2]
-          }}
           transition={{
             duration: 12,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         />
 
         {/* Square */}
@@ -278,30 +263,21 @@ const UltraFuturisticBackground: React.FC = () => {
           transition={{
             duration: 18,
             repeat: Infinity,
-            ease: 'linear',          }}
-=======
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/30"
+            ease: 'linear',          }}          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/30"
           animate={{
             rotate: [0, 180, 360];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]
-          }}
           transition={{
             duration: 18,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',
-=======
-            ease: "linear"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            ease: 'linear',            ease: "linear"
           }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         />
       </div>
 
       {/* Energy Orbs */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
@@ -318,8 +294,15 @@ const UltraFuturisticBackground: React.FC = () => {
               duration: 3 + i * 0.5,
               repeat: Infinity,
               ease: 'easeInOut',
-              delay: i * 0.3,            }}
-=======
+              delay: i * 0.3,            }}        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm"
+            style={{
+              left: `${20 + (i * 10)}%`,
+              top: `${30 + (i * 5)}%`
+            }}
+            animate={{
               scale: [0.5, 2, 0.5];
               opacity: [0.3, 1, 0.3];
               y: [0, -20, 0]
@@ -327,22 +310,16 @@ const UltraFuturisticBackground: React.FC = () => {
             transition={{
               duration: 3 + i * 0.5,
               repeat: Infinity,
-<<<<<<< HEAD
               ease: 'easeInOut',
-              delay: i * 0.3,
-=======
-              ease: "easeInOut",
+              delay: i * 0.3,              ease: "easeInOut",
               delay: i * 0.3
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           />
         ))}
       </div>
 
       {/* Quantum Wave Effects */}
       <div className='absolute inset-0'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
@@ -357,23 +334,24 @@ const UltraFuturisticBackground: React.FC = () => {
               duration: 8 + i * 2,
               repeat: Infinity,
               ease: 'linear',
-              delay: i * 1.5,            }}
-=======
+              delay: i * 1.5,            }}        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent"
+            style={{
+              top: `${20 + (i * 15)}%`
+            }}
+            animate={{
               x: ['-100%100%'],
               opacity: [0, 1, 0]
             }}
             transition={{
               duration: 8 + i * 2,
               repeat: Infinity,
-<<<<<<< HEAD
               ease: 'linear',
-              delay: i * 1.5,
-=======
-              ease: "linear",
+              delay: i * 1.5,              ease: "linear",
               delay: i * 1.5
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           />
         ))}
       </div>
@@ -383,7 +361,6 @@ const UltraFuturisticBackground: React.FC = () => {
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </div>
 
       {/* Data Stream Effect */}
@@ -403,23 +380,29 @@ const UltraFuturisticBackground: React.FC = () => {
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
               ease: 'linear',
-              delay: Math.random() * 5,            }}
-=======
+              delay: Math.random() * 5,            }}      </div>
+
+      {/* Data Stream Effect */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: '-2rem'
+            }}
+            animate={{
               y: ['0vh100vh'],
               opacity: [0, 1, 0]
             }}
             transition={{
               duration: 4 + Math.random() * 3,
               repeat: Infinity,
-<<<<<<< HEAD
               ease: 'linear',
-              delay: Math.random() * 5,
-=======
-              ease: "linear",
+              delay: Math.random() * 5,              ease: "linear",
               delay: Math.random() * 5
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           />
         ))}
       </div>
@@ -437,14 +420,10 @@ const UltraFuturisticBackground: React.FC = () => {
             >
               <stop offset='0%' stopColor='rgba(0,255,255,0.3)' />
               <stop offset='50%' stopColor='rgba(255,0,255,0.3)' />
-              <stop offset='100%' stopColor='rgba(0,255,255,0.3)' />            </linearGradient>
-            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset='100%' stopColor='rgba(0,255,255,0.3)' />            </linearGradient>            <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="rgba(0,255,255,0.3)" />
               <stop offset="50%" stopColor="rgba(255,0,255,0.3)" />
               <stop offset="100%" stopColor="rgba(0,255,255,0.3)" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </linearGradient>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </defs>
           {[...Array(15)].map((_, i) => (
             <motion.line
@@ -462,25 +441,17 @@ const UltraFuturisticBackground: React.FC = () => {
               transition={{
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-                ease: 'easeInOut',              }}
-=======
-              stroke="url(#quantumGradient)"
+                ease: 'easeInOut',              }}              stroke="url(#quantumGradient)"
               strokeWidth="1"
               opacity="0.3"
               animate={{
                 opacity: [0.1, 0.5, 0.1];
                 strokeDasharray: [0, 100, 0]
-              }}
               transition={{
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: 'easeInOut',
-=======
-                ease: "easeInOut"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                ease: 'easeInOut',                ease: "easeInOut"
               }}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             />
           ))}
         </svg>
@@ -489,11 +460,7 @@ const UltraFuturisticBackground: React.FC = () => {
   );
 };
 
-export default UltraFuturisticBackground;
-=======
-  )
+export default UltraFuturisticBackground;  )
 };
 
 export default UltraFuturisticBackground;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -26,4 +26,8 @@ console.log('==')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
 // console.log('\n� "Errors")
+<<<<<<< HEAD
     console.log('\n� Report saved "to")    console.log('\n� Report saved "to")
+=======
+    console.log('\n� Report saved "to")
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

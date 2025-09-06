@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = | 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
 kind: "document" | 'government id back' | 'selfie' | 'business registration' | 'tax certificate' | 'proof of address' `) 
-
 export interface KycProfile {
   userId: string;
   role: KycRole;
@@ -57,9 +55,7 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   if (profile.role === 'individual' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
-  return { ok: missing.length === 0, missing };
-=======
-  
+  return { ok: missing.length === 0, missing };  
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   }
@@ -69,5 +65,3 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
     missing
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -3,8 +3,6 @@ import {ApiDocsSpec, Visibility} from '../../data/api-docs/types';
 
 interface SidebarProps {
   spec: ApiDocsSpec;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  activeEndpointId?: string;
   onSelectEndpoint: (endpointId: string) => void;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
@@ -33,15 +31,11 @@ export default function Sidebar({
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
             >
               {v}
-            </button>          ))}
-        <div className="text-lg font-semibold">Zion OS API</div>
+            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>
         <div className="text-xs text-high-contrast-muted">Version</div>
         <div className="flex gap-2 mt-2 flex-wrap">
           {spec.versions.map((v) => (
             <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          ))}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </div>
       </div>
 
@@ -58,7 +52,6 @@ export default function Sidebar({
           <option value='public'>Public</option>
           <option value='partner'>Partner-only</option>
           <option value='internal'>Internal</option>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </select>
       </div>
 
@@ -74,13 +67,19 @@ export default function Sidebar({
                     ? true
                     : e.visibility === visibilityFilter
                 )
-                .map(e => (                  <li key={e.id}>
-=======
+                .map(e => (                  <li key={e.id}>        </select>
+      </div>
+
+      <nav className="space-y-3">
+        {spec.sections.map((section) => (
+          <div key={section.id}>
+            <div className="text-sm font-medium mb-1">{section.title}</div>
+            <ul className="space-y-1">
+              {section.endpoints
                 .filter((e) => e.versions.includes(selectedVersion))
                 .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
                 .map((e) => (
                   <li key={e.id}>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <button
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e.id)}
@@ -88,12 +87,9 @@ export default function Sidebar({
                       <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>
                         {e.method}
                       </span>
-                      <span className='font-mono'>{e.path}</span>                    </button>
-=======
-                      <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
+                      <span className='font-mono'>{e.path}</span>                    </button>                      <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
                       <span className="font-mono">{e.path}</span>
                     </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </li>
                 ))}
             </ul>
@@ -103,7 +99,3 @@ export default function Sidebar({
     </aside>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

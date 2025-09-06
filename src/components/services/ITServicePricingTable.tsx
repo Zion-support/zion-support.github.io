@@ -14,8 +14,6 @@ import {
 } from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortConfig, setSortConfig] = useState<{
@@ -28,7 +26,6 @@ export function ITServicePricingTable() {
 
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
-
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item =>
@@ -37,7 +34,7 @@ export function ITServicePricingTable() {
     }
 
     // Sort data
-    filteredData.sort((a, b) => {
+    filteredData.sort((a, b,) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === 'ascending' ? -1 : 1;
       }
@@ -50,7 +47,7 @@ export function ITServicePricingTable() {
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
 
-  const handleSort = (key: keyof CountryPricing) => {
+  const handleSort = (key: keyof CountryPricing,) => {
     setSortConfig({
       key,
       direction:
@@ -69,8 +66,7 @@ export function ITServicePricingTable() {
             placeholder='Search by country...'
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'
-          />
+            className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
         </div>
       </div>
 
@@ -82,8 +78,7 @@ export function ITServicePricingTable() {
                 <Button
                   variant='ghost'
                   onClick={() => handleSort('country')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'
-                >
+                  className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
                   <span>Country</span>
                   <ArrowUpDown className='h-4 w-4' />
                 </Button>
@@ -92,8 +87,7 @@ export function ITServicePricingTable() {
                 <Button
                   variant='ghost'
                   onClick={() => handleSort('pricePerIncident')}
-                  className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'
-                >
+                  className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
                   <span>Price Per Incident</span>
                   <ArrowUpDown className='h-4 w-4' />
                 </Button>
@@ -112,8 +106,7 @@ export function ITServicePricingTable() {
                     <span className='text-white'>{item.country}</span>
                   </TableCell>
                   <TableCell className='text-right font-medium text-white'>
-                    ${item.pricePerIncident.toFixed(2)}
-                  </TableCell>
+                    ${item.pricePerIncident.toFixed(2)}                  </TableCell>
                 </TableRow>
               ))
             ) : (
@@ -131,7 +124,4 @@ export function ITServicePricingTable() {
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

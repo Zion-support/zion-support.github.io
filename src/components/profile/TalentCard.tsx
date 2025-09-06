@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { TalentProfile } from '@/types/talent';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import React and useState
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export interface TalentCardProps {
   talent: TalentProfile;
@@ -14,6 +13,14 @@ export interface TalentCardProps {
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string,) => void,
+  onRequestHire: (talent: TalentProfile,) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean,) => void,
+  isAuthenticated: boolean
+}
 
 export function TalentCard({
   talent,
@@ -27,11 +34,8 @@ export function TalentCard({
 
   const handleViewProfile = () => {
     if (onViewProfile) {
-      onViewProfile(talent.id);    }
-=======
-      onViewProfile(talent.id)
+      onViewProfile(talent.id);    }      onViewProfile(talent.id)
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
   const handleRequestHire = (e: React.MouseEvent) => {
@@ -39,10 +43,10 @@ export function TalentCard({
     e.stopPropagation(),
     if (onRequestHire) {
       onRequestHire(talent);    }
-=======
+      onRequestHire(talent)
+    if (onRequestHire) {
       onRequestHire(talent)
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
   const handleToggleSave = (e: React.MouseEvent) => {
@@ -50,7 +54,7 @@ export function TalentCard({
     e.stopPropagation(),
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    if (onToggleSave) {
     }
   };
 
@@ -69,33 +73,33 @@ export function TalentCard({
                 <Image
                   src={talent.profile_picture_url}
                   alt={talent.full_name || 'Talent Avatar'}
-                  fill={true}
-                  style={{ objectFit: 'cover' }}
+                  fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
                 />
               ) : (
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
-=======
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
+                  onError={() => setAvatarError(true)}
+                  priority={false}                />
+              ) : (
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
+                  alt={talent.full_name || 'Talent Avatar'}
+                  fill={true}
+                  style={{ objectFit: 'cover' }}
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
                   priority={false}
                 />
               ) : (
-<<<<<<< HEAD
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>
-=======
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {talentNameInitial}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               )}
             </div>
             {talent.is_verified && (
               <div className='absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full'>
                 <CheckCircle2 className='w-5 h-5 text-zion-cyan' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             )}
           </div>
@@ -109,7 +113,10 @@ export function TalentCard({
                 variant='ghost'
                 size='sm'
                 className='p-1 h-auto text-zion-slate-light hover:text-zion-cyan'
-                onClick={handleToggleSave}
+                onClick={handleToggleSave}                variant="ghost"
+                size="sm"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+                onClick = {handleToggleSave,}
               >
                 <Star
                   className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
@@ -129,50 +136,40 @@ export function TalentCard({
               )}
               {talent.availability_type && (
                 <div className='flex items-center text-zion-slate-light'>
-                  <Clock className='h-4 w-4 mr-1' />                  <span>{talent.availability_type}</span>
-=======
-                <div className="flex items-center text-zion-slate-light">
+                  <Clock className='h-4 w-4 mr-1' />                  <span>{talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
               )}
               {talent.availability_type && (
-<<<<<<< HEAD
                 <div className='flex items-center text-zion-slate-light'>
-                  <Clock className='h-4 w-4 mr-1' />
-=======
-                <div className="flex items-center text-zion-slate-light">
+                  <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">
                   <Clock className="h-4 w-4 mr-1" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <span>{talent.availability_type}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               )}
             </div>
           </div>
         </div>
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {skills.length > 0 && (
           <div className='mt-4'>
             <div className='flex flex-wrap gap-2'>
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >
-=======
+                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill, index,) => (
+                <span 
+                  key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   {skill}
                 </span>
               ))}
               {(talent.skills?.length || 0) > 5 && (
-                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length || 0) - 5} more
-=======
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
+                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
                   +{(talent.skills?.length || 0) - 5} more
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </span>
               )}
             </div>
@@ -180,7 +177,6 @@ export function TalentCard({
         )}
 
         <div className='mt-5 flex items-center justify-between'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div>
             {talent.hourly_rate ? (
               <div className='text-white font-bold'>
@@ -198,33 +194,44 @@ export function TalentCard({
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
-                className='bg-zion-purple hover:bg-zion-purple-light text-white'              >
-=======
+                className='bg-zion-purple hover:bg-zion-purple-light text-white'              >                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+          <div>
+            {talent.hourly_rate ? (
+              <div className="text-white font-bold">
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>
+              </div>
+            ) : (
+              <div className="text-zion-slate-light">Rate not specified</div>
+            )}
+          </div>
+          
+          <div className="flex items-center gap-2">
+            {isAuthenticated && (
+              <Button
+                size="sm"
+                variant="secondary"
+                onClick={handleRequestHire}
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Hire
               </Button>
             )}
             <Button
               size='sm'
               variant='ghost'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               onClick={handleViewProfile}
-              className='text-zion-cyan hover:text-white hover:bg-zion-blue-light'
-            >
+              className='text-zion-cyan hover:text-white hover:bg-zion-blue-light'            >
               View <ArrowRight className='ml-1 h-4 w-4' />            </Button>
-=======
+              View <ArrowRight className="ml-1 h-4 w-4" />
+              onClick={handleViewProfile}
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+            >
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </div>
       </div>
     </Card>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

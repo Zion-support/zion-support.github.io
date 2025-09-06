@@ -20,7 +20,6 @@ import { format } from 'date-fns';
 import type { DateRange } from 'react-day-picker';
 import type { QuoteStatus } from '@/types/quotes';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -31,7 +30,6 @@ interface QuotesFilterProps {
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
   onReset: () => void;
-
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery,
   setSearchQuery,
@@ -41,8 +39,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   setArchiveFilter,
   dateRange,
   setDateRange,
-  onReset,
-}) => {
+  onReset,}) => {
+  onReset
+},) => {
   return (
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>
       <CardContent className='p-6'>
@@ -52,8 +51,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-            />
+              onChange={e => setSearchQuery(e.target.value)}            />
           </div>
 
           <div>
@@ -63,8 +61,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               onValueChange={(value: any) => setStatusFilter(value)}
             >
               <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
-                <SelectValue placeholder='Status' />
-              </SelectTrigger>
+                <SelectValue placeholder='Status' />              </SelectTrigger>
               <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>
                 <SelectItem value='all'>All Statuses</SelectItem>
                 <SelectItem value='new'>New</SelectItem>
@@ -83,8 +80,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               onValueChange={(value: any) => setArchiveFilter(value)}
             >
               <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
-                <SelectValue placeholder='Archive Status' />
-              </SelectTrigger>
+                <SelectValue placeholder='Archive Status' />              </SelectTrigger>
               <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>
                 <SelectItem value='active'>Active Only</SelectItem>
                 <SelectItem value='archived'>Archived Only</SelectItem>
@@ -109,11 +105,8 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                         {format(dateRange.to, 'LLL dd, y')}
                       </>
                     ) : (
-                      format(dateRange.from, 'LLL dd, y')                    )
-=======
-                      format(dateRange.from, "LLL dd, y")
+                      format(dateRange.from, 'LLL dd, y')                    )                      format(dateRange.from, "LLL dd, y")
                     )
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   ) : (
                     <span>Date range</span>
                   )}
@@ -125,17 +118,17 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
               >
                 <CalendarComponent
                   initialFocus
-                  mode='range'                  defaultMonth={dateRange?.from}
-=======
-              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
+                  mode='range'                  defaultMonth={dateRange?.from}              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
                   mode="range"
-                  defaultMonth={dateRange?.from}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+                  defaultMonth = {dateRange?.from,}
+                  selected = {dateRange,}
+                  onSelect = {setDateRange,}
+                  numberOfMonths = {2,}
                 />
               </PopoverContent>
             </Popover>
@@ -145,27 +138,23 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         <div className='mt-4 flex justify-end'>
           <Button
             variant='outline'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             onClick={onReset}
-            className='border-zion-blue-light text-zion-slate-light'
-          >
+            className='border-zion-blue-light text-zion-slate-light'          >
             <RefreshCw className='mr-2 h-4 w-4' /> Reset Filters          </Button>
         </div>
       </CardContent>
     </Card>
   );
 };
-=======
+            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
+            onClick={onReset}
+            className="border-zion-blue-light text-zion-slate-light"
+          >
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
           </Button>
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   );
+};  )
 };
-=======
-  )
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

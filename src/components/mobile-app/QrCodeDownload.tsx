@@ -1,8 +1,6 @@
 };
-
 import React from "react";
-import {QrCode} from 'lucide-react'
-import {AppStoreButtons} from "./AppStoreButtons";
+import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#", // Replace with actual App Store URL
@@ -23,8 +21,8 @@ export const QrCodeDownload: React.FC = () => {
               
               <AppStoreButtons 
                 className="mb-8" 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
               />
               
               <div className="flex gap-2 items-center text-sm text-gray-400">
@@ -51,6 +49,3 @@ export const QrCodeDownload: React.FC = () => {
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

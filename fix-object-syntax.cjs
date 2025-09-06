@@ -10,6 +10,7 @@ function fixObjectSyntax(filePath) {;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1:"$2",');
 <<<<<<< HEAD
+<<<<<<< HEAD
     content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2"'), ,
 =======
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ function fixObjectSyntax(filePath) {;
 ;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Fix semicolons in array elements;
     content = content.replace(/"([^"]*)"\s*;/g, '"$1",');    content = content.replace(/"([^"]*)"\s*;/g, '"$1"');
 ;

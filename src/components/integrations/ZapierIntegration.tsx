@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -11,23 +10,31 @@ import {
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { Check, Copy, ExternalLink } from 'lucide-react';
-
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
-=======
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
+
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+  
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
     toast.success('API key copied to clipboard');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  };
 
+    navigator.clipboard.writeText(apiKey),
+    setCopied(true),
+    setTimeout((,) => setCopied(false), 2000),
+    toast.success("API key copied to clipboard")
+  },
+  
   return (
     <div className='space-y-6'>
       <div className='grid md:grid-cols-3 gap-6'>
@@ -53,8 +60,7 @@ export function ZapierIntegration() {
                   <Input
                     value={apiKey}
                     readOnly
-                    className='font-mono text-sm'
-                  />
+                    className='font-mono text-sm'                  />
                   <Button
                     size='sm'
                     variant='outline'
@@ -64,12 +70,9 @@ export function ZapierIntegration() {
                       <Check className='h-4 w-4' />
                     ) : (
                       <Copy className='h-4 w-4' />
-                    )}                  </Button>
-=======
-                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
+                    )}                  </Button>                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             </div>
@@ -80,8 +83,6 @@ export function ZapierIntegration() {
             </Button>
           </CardFooter>
         </Card>
-
-=======
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -89,9 +90,7 @@ export function ZapierIntegration() {
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         <Card>
           <CardHeader>
             <h3 className='text-lg font-semibold'>Popular Zaps</h3>
@@ -99,8 +98,7 @@ export function ZapierIntegration() {
           <CardContent>
             <ul className='space-y-2 text-sm'>
               <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />
-                <span>Add new Zion contacts to Mailchimp</span>
+                <Check className='h-4 w-4 text-green-500' />                <span>Add new Zion contacts to Mailchimp</span>
               </li>
               <li className='flex items-center gap-2'>
                 <Check className='h-4 w-4 text-green-500' />
@@ -111,29 +109,22 @@ export function ZapierIntegration() {
                 <span>Sync completed projects to accounting</span>
               </li>
               <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />                <span>Create calendar events for interviews</span>
-=======
-              <li className="flex items-center gap-2">
+                <Check className='h-4 w-4 text-green-500' />                <span>Create calendar events for interviews</span>              <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
                 <span>Create calendar events for interviews</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </li>
             </ul>
           </CardContent>
           <CardFooter>
             <Button variant='outline' className='w-full gap-1'>
-              <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>
-=======
-            <Button variant="outline" className="w-full gap-1">
+              <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">
               <ExternalLink className="h-4 w-4" />
               <span>Explore Zion Zaps</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </Button>
           </CardFooter>
         </Card>
       </div>
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <Card>
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>
@@ -152,8 +143,7 @@ export function ZapierIntegration() {
               </p>
               <Button size='sm' variant='outline'>
                 Set Up Trigger
-              </Button>
-            </div>
+              </Button>            </div>
 
             <div className='border rounded-md p-4'>
               <h4 className='font-medium mb-2'>New Application</h4>
@@ -172,18 +162,11 @@ export function ZapierIntegration() {
               </p>
               <Button size='sm' variant='outline'>
                 Set Up Trigger
-              </Button>            </div>
-=======
-              <Button size="sm" variant="outline">Set Up Trigger</Button>
+              </Button>            </div>              <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </CardContent>
       </Card>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

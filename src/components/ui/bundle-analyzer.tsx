@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface BundleInfo {
   totalSize: number;
   gzippedSize: number;
@@ -35,7 +34,7 @@ export function BundleAnalyzer() {
   const [isCollecting, setIsCollecting] = useState(false);
   const [shouldShow, setShouldShow] = useState(false);
 
-  useEffect(() => {
+  useEffect((,) => {
     // Only show in development or when explicitly enabled
     const show =
       process.env.NODE_ENV === 'development' ||
@@ -69,17 +68,13 @@ export function BundleAnalyzer() {
       let totalSize = 0;
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [];
-=======
       const chunkData: ChunkInfo[] = [],
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        totalSize += size;
         totalLoadTime += loadTime;
 
         chunkData.push({
@@ -103,8 +98,7 @@ export function BundleAnalyzer() {
         cacheHitRate: cacheHitRate * 100,
       });
 
-      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks
-    } catch (error) {
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error });
     } finally {
       setIsCollecting(false);
@@ -124,7 +118,6 @@ export function BundleAnalyzer() {
     if (size < 500000) return 'bg-yellow-500'; // < 500KB
     return 'bg-red-500'; // > 500KB
   };
-
   const toggleAnalyzer = () => {
     const current = localStorage.getItem('bundle-analyzer') === 'true';
     localStorage.setItem('bundle-analyzer', (!current).toString());
@@ -145,8 +138,7 @@ export function BundleAnalyzer() {
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
-          className='bg-background/80 backdrop-blur-sm'
-        >
+          className='bg-background/80 backdrop-blur-sm'        >
           <Package className='w-4 h-4 mr-2' />
           Bundle Analyzer
         </Button>
@@ -169,16 +161,14 @@ export function BundleAnalyzer() {
                 size='sm'
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
-                className='h-6 w-6 p-0'
-              >
+                className='h-6 w-6 p-0'              >
                 <Zap className='w-3 h-3' />
               </Button>
               <Button
                 variant='ghost'
                 size='sm'
                 onClick={toggleAnalyzer}
-                className='h-6 w-6 p-0'
-              >
+                className='h-6 w-6 p-0'              >
                 ✕
               </Button>
             </div>
@@ -232,8 +222,7 @@ export function BundleAnalyzer() {
                         <span className='w-4 text-muted-foreground'>
                           {index + 1}.
                         </span>
-                        <span className='truncate' title={chunk.name}>
-                          {chunk.name}
+                        <span className='truncate' title={chunk.name}>                          {chunk.name}
                         </span>
                         {chunk.cached && (
                           <Badge
@@ -273,7 +262,4 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

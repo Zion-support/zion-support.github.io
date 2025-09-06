@@ -16,7 +16,6 @@ export default async function handler(
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
   try {
     const certifications = (await fs.pathExists(CERTS_FILE))
@@ -25,10 +24,11 @@ export default async function handler(
     return res.status(200).json({ certifications });
   } catch (e) {
     return res.status(500).json({ error: 'Failed to load certifications' });
-  }
-=======
+  }  }
+  try {
+    const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : [];
+    return res.status(200).json({ certifications })
+  } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

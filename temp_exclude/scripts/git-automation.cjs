@@ -218,7 +218,6 @@ if (require.main === module) {
   }
 }
 module.exports = GitAutomation;
-=======
 #!/usr/bin/env node;
 /**
  * Git Automation Script;

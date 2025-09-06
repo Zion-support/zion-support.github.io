@@ -1,5 +1,4 @@
 import { Loader2 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function LoadingState() {
   return (
@@ -7,7 +6,4 @@ export function LoadingState() {
       <Loader2 className='h-8 w-8 animate-spin text-primary' />
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

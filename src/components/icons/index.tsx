@@ -597,7 +597,6 @@ export const ZapOff = LucideZapOff;
 export const Zap = LucideZap;
 export const ZoomIn = LucideZoomIn;
 export const ZoomOut = LucideZoomOut;
-
 // Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
   name: keyof typeof iconMap;
@@ -909,7 +908,6 @@ export const Icon: React.FC<IconProps> = ({
   ...props
 }) => {
   const LucideIconComponent = iconMap[name];
-
   if (!LucideIconComponent) {
     logWarn(`Icon "${name}" not found.`);
     return null;
@@ -921,8 +919,7 @@ export const Icon: React.FC<IconProps> = ({
 
 export default Icon; // Default export the Icon component
 export const Icons = iconMap; // Export the map if you need to refer to available icons
-=======
 export default Icon, // Default export the Icon component
 export const Icons = iconMap, // Export the map if you need to refer to available icons
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export default Icon, // Default export the Icon component
+export const Icons = iconMap, // Export the map if you need to refer to available icons

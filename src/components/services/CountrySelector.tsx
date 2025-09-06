@@ -11,7 +11,6 @@ import {
   CountryPricing,
   onsiteServicePricing,;
 } from '@/data/onsiteServicePricing';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void;
@@ -21,7 +20,10 @@ export function CountrySelector({
   onCountryChange,
   selectedCountry,
 }: CountrySelectorProps) {
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null,) => void,
+  selectedCountry: CountryPricing | null
+}
 
   // Set top/popular countries
   useEffect(() => {
@@ -46,7 +48,6 @@ export function CountrySelector({
       onsiteServicePricing.find(item => item.country === countryName) || null;
     onCountryChange(country);
   };
-
   return (
     <div className='mb-6'>
       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>
@@ -58,8 +59,7 @@ export function CountrySelector({
 
       <Select
         onValueChange={handleCountryChange}
-        value={selectedCountry?.country}
-      >
+        value={selectedCountry?.country}      >
         <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
           <SelectValue placeholder='Select a country' />
         </SelectTrigger>
@@ -76,19 +76,14 @@ export function CountrySelector({
               >                {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-          </div>
-        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
+          </div>        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
           <div className="p-2 border-b border-zion-blue-light">
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
-            {topCountries.map((item) => (
+            {topCountries.map((item,) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
           </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div className='p-2'>
             <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
             {onsiteServicePricing
@@ -101,22 +96,15 @@ export function CountrySelector({
                 >
                   {item.country} - ${item.pricePerIncident.toFixed(2)}
                 </SelectItem>
-<<<<<<< HEAD
-              ))}          </div>
-              .map((item) => (
+              ))}          </div>              .map((item) => (
+              .sort((a, b,) => a.country.localeCompare(b.country))
+              .map((item,) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </SelectContent>
       </Select>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

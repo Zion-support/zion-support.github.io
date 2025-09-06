@@ -20,14 +20,11 @@ import {
   DialogTitle,;
 } from '@/components/ui/dialog';
 import { useCurrency } from '@/hooks/useCurrency';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter();
-  const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
@@ -62,9 +59,7 @@ export default function ListingDetail() {
     if (user) {
       setIsChatOpen(true);
     } else {
-      setIsContactDialogOpen(true);    }
-=======
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
+      setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="text-center py-20">
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
@@ -76,21 +71,15 @@ export default function ListingDetail() {
           </div>
         </div>
       )
-  }
 
   const handleContact = () => {
     if (user) {
-<<<<<<< HEAD
       setIsChatOpen(true);
     } else {
-      setIsContactDialogOpen(true);
-=======
-      setIsChatOpen(true)
+      setIsContactDialogOpen(true);      setIsChatOpen(true)
     } else {
       setIsContactDialogOpen(true)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
   return (
@@ -98,8 +87,6 @@ export default function ListingDetail() {
       <div className='min-h-screen bg-zion-blue py-12 px-4'>
         <div className='container mx-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            {/* Left Column - Images */}
             <div className='lg:col-span-2'>
               <div className='bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light'>
                 <div className='aspect-[16/9] w-full relative'>
@@ -112,8 +99,7 @@ export default function ListingDetail() {
                       }
                       alt={listing.title}
                       className='object-cover'
-                      fallbackSrc='/placeholder.svg'
-                    />
+                      fallbackSrc='/placeholder.svg'                    />
                   ) : (
                     <div className='w-full h-full flex items-center justify-center bg-zion-blue-light/20'>
                       <span className='text-zion-slate-light'>
@@ -133,23 +119,26 @@ export default function ListingDetail() {
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
                           index === selectedImageIndex
                             ? 'border-zion-purple'
-                            : 'border-transparent'                        )}
-=======
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
+                            : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+                  <div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, index,) => (
+                      <div 
+                        key = {index,}
+                        onClick = {(,) => setSelectedImageIndex(index),}
+                        className = {cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        ),}
                       >
                         <ImageWithRetry
-                          src={image}
+                          src = {image,}
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object-cover'
-                          fallbackSrc='/placeholder.svg'                        />
-=======
-                          className="object-cover"
+                          fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
                           fallbackSrc="/placeholder.svg"
                         />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       </div>
                     ))}
                   </div>
@@ -165,7 +154,6 @@ export default function ListingDetail() {
                   {listing.description}
                 </p>
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {/* Features */}
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -197,17 +185,31 @@ export default function ListingDetail() {
                     </div>
                   </div>
                 </div>
-
-=======
+                {/* Features */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-full bg-zion-purple/20">
+                        <Brain className="h-5 w-5 text-zion-purple" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-white">Advanced AI</h4>
+                        <p className="text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-full bg-zion-cyan/20">
+                        <Shield className="h-5 w-5 text-zion-cyan" />
+                      </div>
+                      <div>
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {/* Tags */}
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
@@ -217,11 +219,14 @@ export default function ListingDetail() {
                         key={i}
                         variant='outline'
                         className='border-zion-slate-dark text-zion-slate-light py-1 px-3'
-                      >                        {tag}
-=======
+                      >                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+                {/* Tags */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {listing.tags.map((tag, i) => (
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                         {tag}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       </Badge>
                     ))}
                   </div>
@@ -229,7 +234,6 @@ export default function ListingDetail() {
               </div>
             </div>
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {/* Right Column - Details */}
             <div className='lg:col-span-1'>
               <div className='bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6'>
@@ -244,23 +248,24 @@ export default function ListingDetail() {
                     <Badge className='ml-2 bg-zion-cyan/20 text-zion-cyan'>                      Featured
                     </Badge>
                   )}
-                </div>
-=======
+                </div>            {/* Right Column - Details */}
+            <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
+                <div className="mb-2">
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+                    {listing.category}
+                  </Badge>
+                  {listing.featured && (
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
                     </Badge>
                   )}
                 </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
                 <h1 className='text-2xl font-bold text-white mb-4'>
                   {listing.title}
                 </h1>
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                {listing.rating && (
                   <div className='flex items-center gap-2 mb-6'>
                     <div className='flex items-center'>
                       {[...Array(5)].map((_, i) => (
@@ -276,19 +281,24 @@ export default function ListingDetail() {
                     </div>
                     <span className='text-sm text-zion-slate-light'>
                       {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
-                      reviews)
-=======
-                            "h-5 w-5";
+                      reviews)                            "h-5 w-5";
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
+                  <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i,) => (
+                        <Star
+                          key = {i,}
+                          className = {cn(
+                            "h-5 w-5",
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          ),}
                         />
                       ))}
                     </div>
-<<<<<<< HEAD
                     <span className='text-sm text-zion-slate-light'>
                       {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
                       reviews)
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </span>
                   </div>
                 )}
@@ -306,32 +316,40 @@ export default function ListingDetail() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>                  {listing.price !== null ? (
-=======
+                <div className='space-y-3 mb-8'>                  {listing.price !== null ? (                    </span>
+                  </div>
+                )}
+                
+                {/* Price */}
+                <div className="mb-6">
+                  {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
                     <div className="text-2xl font-bold text-white">
                       Custom Pricing
                     </div>
                   )}
                 </div>
-<<<<<<< HEAD
 
                 {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>
-=======
-                
+                <div className='space-y-3 mb-8'>                
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {listing.price !== null ? (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <PaymentButton
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                      onPaymentInitiated={() => {
+                      amount = {listing.price,}
+                      serviceId = {listing.id,}
+                      providerId = {listing.author.id,}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={(,) => {
                         toast({
                           title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...',
@@ -342,8 +360,7 @@ export default function ListingDetail() {
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
-                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
-                    >
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'                    >
                       {isLoading ? 'Processing...' : 'Request Quote'}
                     </Button>
                   )}
@@ -352,8 +369,7 @@ export default function ListingDetail() {
                     variant='outline'
                     onClick={handleContact}
                     disabled={isLoading}
-                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
-                  >
+                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'                  >
                     <MessageSquare className='h-4 w-4 mr-2' />
                     Contact Publisher
                   </Button>
@@ -378,21 +394,16 @@ export default function ListingDetail() {
                               encodeURIComponent(listing.author.name);                          }}
                         />
                       </div>
-                    ) : (
-=======
+                    ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
                       </div>
                     ) : (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>
                         <span className='text-lg font-medium text-zion-purple'>
                           {listing.author.name.charAt(0)}
                         </span>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       </div>
                     )}
                     <div>
@@ -416,13 +427,25 @@ export default function ListingDetail() {
                   </div>
                   <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>ID</span>
-                    <span className='text-white'>{listing.id}</span>                  </div>
-=======
+                    <span className='text-white'>{listing.id}</span>                  </div>                      </div>
+                    )}
+                    <div>
+                      <p className="font-medium text-white">{listing.author.name}</p>
+                      <p className="text-xs text-zion-slate-light">Member since 2022</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Additional Info */}
+                <div className="border-t border-zion-blue-light mt-6 pt-6">
+                  <div className="flex justify-between mb-2">
+                    <span className="text-zion-slate-light">Listed on</span>
+                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>
+                  </div>
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">ID</span>
                     <span className="text-white">{listing.id}</span>
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             </div>
@@ -431,16 +454,15 @@ export default function ListingDetail() {
       </div>
 
       <ChatWidget
-        roomId={listing.id}
-        recipientId={listing.author.id}
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
+        roomId = {listing.id,}
+        recipientId = {listing.author.id,}
+        isOpen = {isChatOpen,}
+        onClose = {() => setIsChatOpen(false),}
       />
 
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <DialogHeader>
             <DialogTitle className='text-xl font-bold text-white'>
               Contact Publisher
@@ -449,11 +471,15 @@ export default function ListingDetail() {
           <ProfileContact
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
-            profileType='service'          />
-=======
+            profileType='service'          />            profileType="service"
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          </DialogHeader>
+          <ProfileContact 
+            email={listing.author.email} // TypeScript now knows this might be undefined
+            profileName={listing.author.name}
             profileType="service"
           />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </DialogContent>
       </Dialog>
     </>
@@ -475,8 +501,4 @@ export default function ListingDetail() {
 }onClose= {;
   () => setIsChatOpen (false) ";
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -9,9 +10,11 @@
 =======
   "generatedAt": "2025-08-12T01:33:59.547Z",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-2dcc
-  "functions": [
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  "functions": [
   "generatedAt": "2025-08-13T16:07:24.311Z",  "functions": [
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -19,6 +22,9 @@
   "generatedAt": "2025-08-13T16:07:24.311Z",  "functions": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  "generatedAt": "2025-08-13T16:07:24.311Z",  "functions": [
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "a11y-alt-text-runner",
     "accelerated-sync-orchestrator",
     "adaptive-orchestrator",
@@ -27,6 +33,7 @@
     "automation-matrix",
     "autonomous-cloud-brain",
     "autonomous-invention-orchestrator",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37,9 +44,11 @@
 =======
     "autonomous-master-orchestrator",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-2dcc
-    "broken-image-scanner",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "broken-image-scanner",
     "autonomous-meta-orchestrator",    "broken-image-scanner",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -47,6 +56,9 @@
     "autonomous-meta-orchestrator",    "broken-image-scanner",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "autonomous-meta-orchestrator",    "broken-image-scanner",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "broken-image-scanner-runner",
     "canonical-auditor",
     "cloud-swarm-committer",

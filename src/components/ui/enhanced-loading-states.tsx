@@ -8,12 +8,10 @@ import {
   WifiOff,
   Clock,
   Zap,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
+} from 'lucide-react';import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
-
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -28,8 +26,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className,
   showText = false,
   text = 'Loading...',
-}) => {
-  const sizeClasses = {
+}) => {  const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-6 w-6',
     lg: 'h-8 w-8',
@@ -78,14 +75,13 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
 }) => {
   const [activeStep, setActiveStep] = useState(0);
   const progress = ((activeStep + 1) / steps.length) * 100;
-
-  useEffect(() => {
+  useEffect((,) => {
     if (currentStep !== undefined) {
       setActiveStep(currentStep);
     }
   }, [currentStep]);
 
-  useEffect(() => {
+  useEffect((,) => {
     if (activeStep === steps.length - 1 && onComplete) {
       setTimeout(onComplete, 500);
     }
@@ -105,13 +101,12 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
       )}
 
       <div className='space-y-2'>
-        {steps.map((step, index) => (
-          <motion.div
-            key={step.id}
-            className={cn(
+        {steps.map((step, index) => (          <motion.div
+            key = {step.id,}
+            className = {cn(
               'flex items-center gap-3 p-2 rounded-md',
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
-            )}
+            ),}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
             transition={{ delay: index * 0.1 }}
@@ -147,7 +142,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   lines = 1,
 }) => {
   const baseClasses = 'bg-muted rounded';
-
   const variantClasses = {
     text: 'h-4 w-full',
     circular: 'h-12 w-12 rounded-full',
@@ -164,24 +158,22 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   if (variant === 'text' && lines > 1) {
     return (
       <div className='space-y-2'>
-        {Array.from({ length: lines }).map((_, i) => (
-          <div
-            key={i}
-            className={cn(
+        {Array.from({ length: lines }).map((_, i) => (          <div
+            key = {i,}
+            className = {cn(
               baseClasses,
               variantClasses.text,
               animationClasses[animation],
               i === lines - 1 ? 'w-3/4' : 'w-full',
               className
-            )}
+            ),}
           />
         ))}
       </div>
     );
   }
 
-  
-    />
+      />
   );
 };
 //Enhanced error state component ;
@@ -210,7 +202,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
   useEffect(() => {
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
-
     if (typeof window !== 'undefined') {
       setIsOnline(navigator.onLine);
       window.addEventListener('online', handleOnline);
@@ -340,8 +331,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   columns = 4,
   variant = 'card',
   className,
-}) => {
-  const gridClasses = {
+}) => {  const gridClasses = {
     card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
     list: 'space-y-4',
     table: 'space-y-2',
@@ -356,8 +346,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
   return (
     <div className={cn(gridClasses[variant], className)}>
       {Array.from({ length: count }).map((_, i) => (
-        <Card key={i} className='animate-pulse'>
-          <CardContent className={itemClasses[variant]}>
+        <Card key={i} className='animate-pulse'>          <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
               <>
                 <Skeleton variant='rectangular' className='h-32' />
@@ -415,7 +404,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     if (time < 300) return 'text-yellow-500';
     return 'text-red-500';
   };
-
   if (isLoading) {
     return (
       <Badge variant='outline' className={cn('text-xs', className)}>
@@ -437,7 +425,5 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     </div>
   );
 };
-=======
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+};

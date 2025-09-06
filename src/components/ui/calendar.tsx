@@ -5,8 +5,7 @@ import { DayPicker } from 'react-day-picker';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+export type CalendarProps = React.ComponentProps<typeof DayPicker>;export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
 function Calendar({
   className,
@@ -17,8 +16,7 @@ function Calendar({
   
         IconLeft: ({ ..._props }) => <ChevronLeft className='h-4 w-4' />,
         IconRight: ({ ..._props }) => <ChevronRight className='h-4 w-4' />,
-      }}
-      {...props}
+      }}      {...props}
     />
   );
 
@@ -30,6 +28,3 @@ export { Calendar };
   
 }/>) ;
 }"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

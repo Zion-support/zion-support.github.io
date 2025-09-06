@@ -29,13 +29,10 @@ export default function TenantOnboarding() {
     custom_domain: "",
     is_co_branded: true
   });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
   
-      
-=======
+      }
+  );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

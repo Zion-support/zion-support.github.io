@@ -9,6 +9,7 @@ class EnhancedAutomationSuite {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -47,6 +48,8 @@ class EnhancedAutomationSuite {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -65,6 +68,7 @@ class EnhancedAutomationSuite {
     this.log(`Running: ${description}`);
     try {
       const result = execSync(command, {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -88,6 +92,8 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       };
     }
   }
@@ -99,6 +105,7 @@ class EnhancedAutomationSuite {
     try {
       // Remove unused imports
       const unusedImportsResult = await this.runCommand(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -137,12 +144,15 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 
   async performSecurityAudit() {
     const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -176,10 +186,13 @@ class EnhancedAutomationSuite {
         'Vulnerability Check';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       );
 
       // Scan for common security issues
       const securityScan = await this.runCommand(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -209,6 +222,8 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       };
     }
   }
@@ -220,19 +235,13 @@ class EnhancedAutomationSuite {
     try {
       // Analyze bundle size
       const bundleAnalysis = await this.runCommand(
-        'npm runbuild:analyze',
+        'npm run build:analyze',
         'Bundle Analysis'
-
-      );
-;
-      // Check for performance issues;
-      const performanceCheck = await this.runCommand(;
-        'npx lighthouse:http://localhos:t:3000 --output=json',;
-        'Performance Check';
       );
 
       // Check for performance issues
       const performanceCheck = await this.runCommand(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -242,7 +251,7 @@ class EnhancedAutomationSuite {
       );
 
       this.results.performanceOptimization = {
-        success: bundleAnalysis.success,
+        success: bundleAnalysis.success || performanceCheck.success,
         duration: Date.now() - startTime,
         errors: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
         warnings: [],
@@ -259,6 +268,8 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       };
     }
   }
@@ -271,6 +282,7 @@ class EnhancedAutomationSuite {
       // Generate sitemap
       const sitemapResult = await this.runCommand(
 <<<<<<< HEAD
+<<<<<<< HEAD
         'npm run sitemap:generate',
 =======
 <<<<<<< HEAD
@@ -279,11 +291,14 @@ class EnhancedAutomationSuite {
         'npm runsitemap:generate',
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         'Generate Sitemap'
       );
 
       // Generate search index
       const searchIndexResult = await this.runCommand(
+<<<<<<< HEAD
 <<<<<<< HEAD
         'npm run search:index',
 =======
@@ -293,11 +308,14 @@ class EnhancedAutomationSuite {
         'npm runsearch:index',
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         'Generate Search Index'
       );
 
       // Check for SEO issues
       const seoCheck = await this.runCommand(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -327,6 +345,8 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       };
     }
   }
@@ -338,6 +358,7 @@ class EnhancedAutomationSuite {
     try {
       // Run accessibility checks
       const accessibilityCheck = await this.runCommand(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -375,6 +396,8 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 
@@ -389,6 +412,7 @@ class EnhancedAutomationSuite {
       // Production build
       const productionBuild = await this.runCommand(
 <<<<<<< HEAD
+<<<<<<< HEAD
         'npm run build:production',
 =======
 <<<<<<< HEAD
@@ -397,11 +421,14 @@ class EnhancedAutomationSuite {
         'npm runbuild:production',
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         'Production Build'
       );
 
       // Build analysis
       const buildAnalysis = await this.runCommand(
+<<<<<<< HEAD
 <<<<<<< HEAD
         'npm run build:analyze',
 =======
@@ -411,10 +438,13 @@ class EnhancedAutomationSuite {
         'npm runbuild:analyze',
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         'Build Analysis'
       );
 
       this.results.buildOptimization = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -439,6 +469,8 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       };
     }
   }
@@ -453,6 +485,7 @@ class EnhancedAutomationSuite {
 
       // Commit changes
 <<<<<<< HEAD
+<<<<<<< HEAD
       const commitMessage = `Enhanced automation improvements: ${new Date().toISOString()}`;
 =======
 <<<<<<< HEAD
@@ -461,12 +494,15 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       await this.runCommand(`git commit -m "${commitMessage}"`, 'Git Commit');
 
       // Push changes
       await this.runCommand('git push origin HEAD', 'Git Push');
 
       this.results.deployment = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -481,6 +517,8 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       };
     } catch (error) {
       this.results.deployment = {
@@ -488,24 +526,22 @@ class EnhancedAutomationSuite {
         duration: Date.now() - startTime,
         errors: [error.message],
         warnings: [],
-
       };
-
     }
   }
 ;
-  generateDetailedReport() {;
+  generateDetailedReport() {
     const totalDuration = Date.now() - this.startTime;
-    const successfulTasks = Object.values(this.results).filter(;
-      r => r.success;
+    const successfulTasks = Object.values(this.results).filter(
+      r => r.success
     ).length;
     const totalTasks = Object.keys(this.results).length;
-;
+
     this.log('\n📊 ENHANCED AUTOMATION REPORT');
     this.log('='.repeat(60));
 
-    this.log(`Total: Duration: ${totalDuration}ms`);
-    this.log(`Successful: Tasks: ${successfulTasks}/${totalTasks}`);
+    this.log(`Total Duration: ${totalDuration}ms`);
+    this.log(`Successful Tasks: ${successfulTasks}/${totalTasks}`);
 
     this.log('');
 
@@ -516,23 +552,29 @@ class EnhancedAutomationSuite {
 
       if (result.errors.length > 0) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         result.errors.forEach(error => this.log(`   Error: ${error}`));
       }
       if (result.warnings.length > 0) {
         result.warnings.forEach(warning => this.log(`   Warning: ${warning}`));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
     });
 
@@ -542,55 +584,48 @@ class EnhancedAutomationSuite {
       totalDuration,
       successfulTasks,
       totalTasks,
-
-      result: this.results,
-      recommendation: this.generateRecommendations(),
-
+      results: this.results,
+      recommendations: this.generateRecommendations(),
     };
 
-;
-    fs.writeFileSync(;
-      'enhanced-automation-report.json',;
-      JSON.stringify(report, null, 2);    );
+    fs.writeFileSync(
+      'enhanced-automation-report.json',
+      JSON.stringify(report, null, 2)
+    );
     this.log('\n📄 Detailed report saved to enhanced-automation-report.json');
-
   }
-;
-  generateRecommendations() {;
+  generateRecommendations() {
     const recommendations = [];
 
-;
-    if (!this.results.codeQuality.success) {;
+    if (!this.results.codeQuality.success) {
       recommendations.push('Review and fix code quality issues');
     }
-    if (!this.results.securityAudit.success) {;
+    if (!this.results.securityAudit.success) {
       recommendations.push('Address security vulnerabilities');
     }
-    if (!this.results.performanceOptimization.success) {;
+    if (!this.results.performanceOptimization.success) {
       recommendations.push('Optimize application performance');
     }
-    if (!this.results.seoOptimization.success) {;
+    if (!this.results.seoOptimization.success) {
       recommendations.push('Improve SEO optimization');
     }
-    if (!this.results.accessibilityImprovements.success) {;
+    if (!this.results.accessibilityImprovements.success) {
       recommendations.push('Enhance accessibility features');
     }
-;
     return recommendations;
-
   }
-;
-  async run() {;
+  async run() {
     this.log('🚀 Starting Enhanced Automation Suite');
     this.log('='.repeat(60));
-;
-    try {;
+
+    try {
       await this.improveCodeQuality();
       await this.performSecurityAudit();
       await this.optimizePerformance();
       await this.optimizeSEO();
       await this.improveAccessibility();
       await this.optimizeBuild();
+<<<<<<< HEAD
 <<<<<<< HEAD
       await this.deployChanges();
     } catch (error) {
@@ -606,11 +641,14 @@ class EnhancedAutomationSuite {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     } finally {
       this.generateDetailedReport();
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -618,9 +656,9 @@ class EnhancedAutomationSuite {
 
 // Run the enhanced automation suite
 if (require.main === module) {
-    const suite = new EnhancedAutomationSuite(),
-    suite.run().catch(console.error)
-  }
+  const suite = new EnhancedAutomationSuite();
+  suite.run().catch(console.error);
+}
 
 <<<<<<< HEAD
 =======
@@ -634,4 +672,6 @@ if (require.main === module) {;
 ;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 module.exports = EnhancedAutomationSuite;

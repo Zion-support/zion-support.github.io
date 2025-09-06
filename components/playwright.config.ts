@@ -23,8 +23,7 @@ reporter: [ ['list'], ['json', {
   ...devices['Desktop Safari'] 
 }, // 
 };
-// ] });
-    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
+// ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
   // Configure the web server to be started by Playwright
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI
@@ -39,6 +38,3 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
   // ]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-});
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 import { useWishlist } from '@/hooks/useWishlist';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useCart } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
 import {
@@ -16,7 +15,9 @@ import {
   ShoppingCart,
   User,;
 } from 'lucide-react';
-
+import { useCart } from '@/context/CartContext';
+import { logWarn } from '@/utils/productionLogger';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 interface MobileBottomNavProps {
   unreadCount?: number;
 
@@ -30,8 +31,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const cartContextValue = useCart(); // Call hook at top level
   let cartCount = 0;
   if (cartContextValue && cartContextValue.items) {
-    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0);
-  } else {
+    cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0);  } else {
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.");
   }
 
@@ -40,8 +40,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: 'Home',
       href: '/',
       icon: Home,
-      matches: (path: string) => path === '/',
-    },
+      matches: (path: string) => path === '/',    },
     {
       name: 'Browse',
       href: '/talent',
@@ -49,21 +48,18 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) =>
         path.startsWith('/talent') ||
         path.startsWith('/categories') ||
-        path.startsWith('/marketplace'),
-    },
+        path.startsWith('/marketplace'),    },
     {
       name: 'Community',
       href: '/community',
       icon: MessageCircle,
       matches: (path: string) =>
-        path.startsWith('/community') || path.startsWith('/forum'),
-    },
+        path.startsWith('/community') || path.startsWith('/forum'),    },
     {
       name: 'Wishlist',
       href: '/wishlist',
       icon: Heart,
-      matches: (path: string) => path.startsWith('/wishlist'),
-      badge: favoritesCount,
+      matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount,
       authRequired: true,
     },
     {
@@ -71,8 +67,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: '/messages',
       icon: MessageSquare,
       matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith('/inbox'),
-      badge: unreadCount,
+        path.startsWith('/messages') || path.startsWith('/inbox'),      badge: unreadCount,
       authRequired: true,
     },
     {
@@ -80,8 +75,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: '/cart',
       icon: ShoppingCart,
       matches: (path: string) => path.startsWith('/cart'),
-      badge: cartCount,
-    },
+      badge: cartCount,    },
     {
       name: 'Dashboard',
       href: '/dashboard',
@@ -90,7 +84,6 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       authRequired: true,
     },
   ];
-
   // Filter items based on auth status
   const visibleItems = navItems.filter(
     item => !item.authRequired || (item.authRequired && isAuthenticated)
@@ -109,8 +102,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
               item.matches(router.pathname)
                 ? 'text-primary'
                 : 'text-foreground/70 hover:text-foreground'
-            )}
-          >
+            )}          >
             <div className='relative'>
               <item.icon className='h-5 w-5 mb-1' aria-hidden='true' />
               {item.badge && item.badge > 0 && (
@@ -127,7 +119,4 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       </div>
     </nav>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

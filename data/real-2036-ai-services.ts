@@ -7,8 +7,6 @@ export const real2036AIServices = [
       'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
     price: '$3,999',
     period: 'month',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Emotion recognition',
       'Sentiment analysis',
       'Emotional response generation',
@@ -330,11 +328,7 @@ export const real2036AIServices = [
       'Safety systems',
     ],
   },
-];
-=======
-      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
+];      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
     ]
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

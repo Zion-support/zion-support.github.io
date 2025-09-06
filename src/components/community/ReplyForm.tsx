@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Form,
   FormControl,
@@ -15,13 +14,11 @@ import { Card, CardContent } from '@/components/ui/card';
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
-
 interface ReplyFormValues {
   content: string;
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm<ReplyFormValues>({
     defaultValues: {
       content: '',
@@ -29,8 +26,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   });
 
   const handleSubmit = async (values: ReplyFormValues) => {
-    setIsSubmitting(true);
-    try {
+    setIsSubmitting(true);    try {
       await onSubmit(values.content);
       form.reset();
     } finally {
@@ -50,8 +46,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
                 field,
               }: {
                 field: ControllerRenderProps<ReplyFormValues, 'content'>;
-              }) => (
-                <FormItem>
+              }) => (                <FormItem>
                   <FormControl>
                     <Textarea className='min-h-[100px] resize-y' {...field} />
                   </FormControl>

@@ -192,6 +192,7 @@ h3 {
   top: 0;
   left: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -204,6 +205,8 @@ h3 {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 
 /* Custom scrollbar */
@@ -309,6 +312,7 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -334,27 +338,11 @@ h3 {
 
 /* Futuristic Grid Pattern */
 body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
-  pointer-events: none;
-  z-index: -1;
-  animation: gridMove 20s linear infinite;
-}
-
-/* Quantum Particle Effects */
-body::after {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
-  content: '';
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  content: '';
 .particle-bg::before {  content: '';
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -362,6 +350,9 @@ body::after {
 .particle-bg::before {  content: '';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+.particle-bg::before {  content: '';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: absolute;
   top: 0;
   left: 0;
@@ -380,6 +371,7 @@ body::after {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -392,12 +384,15 @@ body::after {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Futuristic Card Effects */
 .futuristic-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -541,9 +536,11 @@ h3 {
 /* Enhanced Button Styles */
 .btn-futuristic {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-98d9
-  position: relative;
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  position: relative;
   transition: all 0.3s ease;  position: relative;
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -551,6 +548,9 @@ h3 {
   transition: all 0.3s ease;  position: relative;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  transition: all 0.3s ease;  position: relative;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   overflow: hidden;
 }
 
@@ -631,6 +631,7 @@ h3 {
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   border: none;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -644,6 +645,8 @@ h3 {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
 
 /* Futuristic Utility Classes */
@@ -692,6 +695,7 @@ h3 {
   color: white;
   padding: 12px 24px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -704,6 +708,8 @@ h3 {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   border-radius: 12px;
   padding: 12px 24px;
   color: white;

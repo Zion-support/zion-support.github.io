@@ -20,11 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     'Cache-Control',
     'no-store, no-cache, must-revalidate, proxy-revalidate'
   );
-  res.status(200).send(pixel);
-=======
-  res.setHeader('Content-Typeimage/gif');
+  res.status(200).send(pixel);  res.setHeader('Content-Typeimage/gif');
   res.setHeader('Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate');
   res.status(200).send(pixel)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -2,9 +2,11 @@ import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { StarIcon } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
+import { Badge } from '@/components/ui/badge';
+import { Star } from 'lucide-react';
 
 interface ListingScoreCardProps {
   title: string;
@@ -47,8 +49,7 @@ export function ListingScoreCard({
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             onError={() => setMainImageError(true)}
             priority={false}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes
-          />
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes          />
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -96,8 +97,7 @@ export function ListingScoreCard({
                     star <= Math.round(rating)
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
-                  )}
-                />
+                  )}                />
               ))}
             </div>
             <span className='text-sm text-zion-slate-light ml-1'>
@@ -113,8 +113,7 @@ export function ListingScoreCard({
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
-              >
-                {tag}
+              >                {tag}
               </Badge>
             ))}
           </div>
@@ -135,8 +134,7 @@ export function ListingScoreCard({
                   alt={author}
                   className='object-cover rounded-full'
                   onError={() => setAuthorImageError(true)}
-                  priority={false}
-                />
+                  priority={false}                />
               </div>
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple'>
@@ -149,7 +147,4 @@ export function ListingScoreCard({
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

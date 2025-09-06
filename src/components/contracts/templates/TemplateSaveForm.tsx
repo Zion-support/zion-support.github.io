@@ -17,8 +17,6 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required'),
   isDefault: z.boolean(),
@@ -49,8 +47,7 @@ export function TemplateSaveForm({
     },
   });
 
-  const onSubmit = async (values: FormValues) => {
-    if (!currentValues && !editTemplate) {
+  const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {
       return;
     }
 
@@ -88,8 +85,7 @@ export function TemplateSaveForm({
             field,
           }: {
             field: ControllerRenderProps<FormValues, 'title'>;
-          }) => (
-            <FormItem>
+          }) => (            <FormItem>
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
@@ -115,8 +111,7 @@ export function TemplateSaveForm({
                 <Switch
                   aria-label='Default template'
                   checked={field.value}
-                  onCheckedChange={field.onChange}
-                />
+                  onCheckedChange={field.onChange}                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -154,8 +149,4 @@ try {;
   editTemplate ? "Update" : "Save" ;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

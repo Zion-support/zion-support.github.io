@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface AdvancedCybersecurityService {
   id: string;
   name: string;
@@ -356,8 +355,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       rating: 4.7,
       reviews: 21,
     },
-  ];
-    features: [
+  ];    features: [
       'IoT device authentication and managementNetwork traffic monitoring and analysisThreat detection and responseDevice vulnerability assessmentSecure firmware updatesData encryption and protectionCompliance monitoring and reportingReal-time security alerts';
       'Integration with IoT platformsMobile security management'
     ];
@@ -389,5 +387,35 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     reviews: 21
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    icon: '📱';
+    color: 'from-purple-600 to-violet-600';
+    textColor: 'text-purple-400';
+    link: 'https://ziontechgroup.com/iot-security-platform';
+    marketPosition: 'Competes with Armis ($25/month), Claroty ($50/month), Nozomi Networks ($50/month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.';
+    targetAudience: 'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies';
+    trialDays: 14;
+    setupTime: '1-2 weeks';
+    category: 'IoT Security & Protection';
+    realService: true;
+    technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z-Wave'];
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms'];
+    useCases: ['Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance'];
+    roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.';
+    competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
+    marketSize: '$14.2B IoT security market';
+    growthRate: '30% annual growth';
+    variant: 'iot-security-enterprise';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
+    };
+    realImplementation: true;
+    implementationDetails: 'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.';
+    launchDate: '2024-09-25';
+    customers: 43;
+    rating: 4.7;
+    reviews: 21
+  }
+];

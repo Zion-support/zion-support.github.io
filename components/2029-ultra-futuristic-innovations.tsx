@@ -13,40 +13,28 @@ import {
   TrendingUp,
   Eye,
   Timer,;
-} from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-=======
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+} from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
 import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function UltraFuturistic2029InnovationsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
   };
 
   const all2029Services = [
     ...cuttingEdgeInnovations2029,
     ...spaceColonization2029Services,
-  ];
-=======
-    website: 'https://ziontechgroup.com'
+  ];    website: 'https://ziontechgroup.com'
   };
 
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
   return (
     <>
       <Head>
@@ -78,25 +66,17 @@ export default function UltraFuturistic2029InnovationsPage() {
         />      </Head>
 
       {/* Background */}
-      <UltraFuturisticBackground2029 />
-        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
+      <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />
         <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />
         <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />
         <meta property="og:url" content="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/2029-ultra-futuristic-innovations" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      </Head>
 
       {/* Background */}
       <UltraFuturisticBackground2029 />
-<<<<<<< HEAD
-
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       {/* Navigation */}
       <UltraFuturisticNavigation2029 />
 
@@ -148,8 +128,6 @@ export default function UltraFuturistic2029InnovationsPage() {
             <a
               href='#services'
               className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            >
               Explore Innovations
             </a>
             <a
@@ -603,9 +581,5 @@ export default function UltraFuturistic2029InnovationsPage() {
 }` 
 }className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
   /* Footer */ 
-}<UltraFuturisticFooter2029 /> </>) 
-=======
-  )
+}<UltraFuturisticFooter2029 /> </>)   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

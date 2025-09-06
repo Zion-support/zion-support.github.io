@@ -39,8 +39,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
-  ];
-    features: [
+  ];    features: [
       "Emerging tech breakthroughs";
       "Innovation platform";
       "Future capabilities";
@@ -50,10 +49,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     link: "/services/2029-emerging-tech-breakthrough", category: "Emerging Tech Breakthroughs 2029",
     realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -5,10 +5,6 @@ import { NextSeoProps } from 'next-seo';
 export type SeoProps = NextSeoProps;
 
 export default function Seo(props: SeoProps) {
-  return <NextSeo {...props} />;
-=======
-export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {
+  return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {
   return <NextSeo {...props} />;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 const testimonials = [
   {
     name: 'Alex Johnson',
@@ -11,6 +9,8 @@ const testimonials = [
     rating: 5,
     avatar: '/placeholder.svg',
   },
+
+const testimonials = [
   {
     name: 'Sarah Williams',
     role: 'Tech Recruiter',
@@ -27,16 +27,12 @@ const testimonials = [
   },];
 
 export const AppTestimonials: React.FC = () => {
-  return (
-=======
-    avatar: "/placeholder.svg"
+  return (    avatar: "/placeholder.svg"
   }
 ];
 
 export const AppTestimonials: React.FC = () => {
   return (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <section className='py-16 bg-zion-blue'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
@@ -46,8 +42,6 @@ export const AppTestimonials: React.FC = () => {
           <p className='text-lg text-gray-300 max-w-2xl mx-auto'>
             Join thousands of satisfied users who have transformed their tech
             careers with the Zion mobile app.
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </p>
         </div>
 
@@ -62,8 +56,7 @@ export const AppTestimonials: React.FC = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}
-                    />
+                      className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}                    />
                   ))}
                 </div>
                 <p className='text-gray-200 mb-6'>"{testimonial.text}"</p>
@@ -83,11 +76,34 @@ export const AppTestimonials: React.FC = () => {
                       {testimonial.name}
                     </p>
                     <p className='text-sm text-gray-400'>{testimonial.role}</p>                  </div>
-=======
+                    <p className="font-semibold text-white">{testimonial.name}</p>
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
+              <CardContent className="pt-6">
+                <div className="flex mb-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star 
+                      key={i}
+                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
+              </CardContent>
+              <CardFooter className="border-t border-zion-purple/20 pt-4">
+                <div className="flex items-center">
+                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
+                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                  <div>
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                   </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </CardFooter>
             </Card>
@@ -115,9 +131,7 @@ export const AppTestimonials: React.FC = () => {";
   return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" > ;
 }</div> </div> </section>) ;
 };
-'"
-=======
+'"},
+;
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

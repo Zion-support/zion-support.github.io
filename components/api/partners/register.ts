@@ -8,8 +8,6 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  }
   const { name, entityType, pointOfContact, useCaseType, brand } =
     req.body || {};
   if (
@@ -43,10 +41,6 @@ export default async function handler(
     });
   } catch (e) {
     return res.status(500).json({ error: 'Failed to create partner' });
-  }
-=======
-    return res.status(500).json({ error: "Failed to create partner" })
+  }    return res.status(500).json({ error: "Failed to create partner" })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

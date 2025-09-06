@@ -1,7 +1,5 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -501,9 +499,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6,
   },
-];
-=======
-	{
+];	{
 		id: 'affiliate-analytics-starter';
 		name: 'Affiliate Analytics Starter',
 		tagline: 'Attribution, fraud detection and automated payouts for SMBs';
@@ -924,5 +920,3 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 	}
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

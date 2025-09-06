@@ -1,9 +1,11 @@
           
 
-};
-import { useState } from 'react';
+};import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react'
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2, Sparkles } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 import { useResume } from '@/hooks/useResume';
 import { BulkAddSkillsProps } from './types';
@@ -14,7 +16,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const [error, setError] = useState<string | null>(null);
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
   const { addSkill } = useResume();
-
   const handleCategorizeSkills = async () => {
     if (!bulkSkills || bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize');
@@ -68,14 +69,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           <Textarea 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
-            value={bulkSkills}
-            onChange={(e) => setBulkSkills(e.target.value)}
+            value = {bulkSkills,}
+            onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
 
         <Button 
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills.trim()}
+          onClick = {handleCategorizeSkills,}
+          disabled = {isEnhancing || !bulkSkills.trim(),}
           className="gap-2"
         >
           {isEnhancing ? (
@@ -96,6 +97,3 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   )
 };
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

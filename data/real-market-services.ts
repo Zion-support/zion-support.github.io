@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface RealMarketService {
   id: string;
   name: string;
@@ -48,9 +47,7 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const realMarketServices: RealMarketService[] = [
-  {
-=======
-  mobile: '+1 302 464 0950';
+  {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -58,8 +55,6 @@ export const realMarketServices: RealMarketService[] = [
 
 export const realMarketServices: RealMarketService[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'llm-gateway-cost-control',
     name: 'LLM Gateway & Cost Control',
     tagline:
@@ -68,8 +63,6 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description:
       'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     features: [
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
@@ -2615,9 +2608,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6,
     reviews: 36,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -2630,5 +2621,3 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 36
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

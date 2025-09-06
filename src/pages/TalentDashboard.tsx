@@ -31,8 +31,6 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { MyApplications } from '@/components/jobs/MyApplications';
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('job-matches');
@@ -228,7 +226,4 @@ export default function TalentDashboard() {
       <TalentDashboardContent />
     </ProtectedRoute>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

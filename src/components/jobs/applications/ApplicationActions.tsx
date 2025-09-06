@@ -8,7 +8,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from '@/types/jobs';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ApplicationActionsProps {
   application: JobApplication;
@@ -18,7 +17,6 @@ interface ApplicationActionsProps {
     applicationId: string,
     newStatus: ApplicationStatus
   ) => Promise<void>;
-
 export function ApplicationActions({
   application,
   processingId,
@@ -31,7 +29,12 @@ export function ApplicationActions({
         variant='outline'
         size='sm'
         onClick={() => onViewApplication(application.id)}
-        disabled={!!application.viewed_at}
+        disabled={!!application.viewed_at}    <div className="flex items-center justify-end gap-2">
+      <Button 
+        variant="outline" 
+        size="sm" 
+        onClick = {(,) => onViewApplication(application.id),}
+        disabled = {!!application.viewed_at,}
       >
         <Eye className='h-4 w-4' />
       </Button>
@@ -41,8 +44,7 @@ export function ApplicationActions({
           <Button
             variant='outline'
             size='sm'
-            disabled={processingId === application.id}
-          >
+            disabled={processingId === application.id}          >
             {processingId === application.id ? (
               <Loader2 className='h-4 w-4 animate-spin' />
             ) : (
@@ -64,41 +66,43 @@ export function ApplicationActions({
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, 'hired')}
+            onClick={() => onStatusChange(application.id, 'hired')}          >
+            Shortlist
+          </DropdownMenuItem>
+          <DropdownMenuItem 
+            onClick = {() => onStatusChange(application.id, "interview"),}          >
+            Schedule Interview
+          </DropdownMenuItem>
+          <DropdownMenuItem 
+            onClick = {() => onStatusChange(application.id, "hired"),}
           >
             Hire
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() => onStatusChange(application.id, 'rejected')}
-            className='text-red-600'          >
-=======
+            className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
+          >
+            Hire
+          </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
-      
+      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>      
       <Button 
         variant="default" 
         size="sm"
         asChild
       >
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        <Link href={`/messages?talentId=${application.talent_id}`}>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           Contact
         </Link>
       </Button>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+;

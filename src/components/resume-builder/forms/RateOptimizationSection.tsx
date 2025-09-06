@@ -1,5 +1,4 @@
-};
-import {
+};import {
   FormField;
   FormItem;
   FormLabel;
@@ -10,7 +9,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
-
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
@@ -27,17 +25,17 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   yearsExperience;
   location,
   rateType
-}) => {
-  const handleSuggestionApplied = (rate: number) => {
+},) => {
+  const handleSuggestionApplied = (rate: number,) => {
     setValue("hourlyRate", rate)
   };
 
   return (
     <div className="space-y-4">
       <FormField
-        control={control}
+        control = {control,}
         name="hourlyRate"
-        render={({ field }: { field: any }) => (
+        render={({ field }: { field: any },) => (
           <FormItem>
             <FormLabel>Your {rateType === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>
             <FormControl>
@@ -59,18 +57,17 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>
         <CardContent className="pt-4">
           <TalentRateRecommender
-            skills={skills}
-            yearsExperience={yearsExperience}
-            location={location}
-            onSuggestionApplied={handleSuggestionApplied}
-            rateType={rateType}
+            skills = {skills,}
+            yearsExperience = {yearsExperience,}
+            location = {location,}
+            onSuggestionApplied = {handleSuggestionApplied,}
+            rateType = {rateType,}
           />
         </CardContent>
       </Card>
     </div>
   )
 };
-"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+"},
+;
+};

@@ -4,8 +4,6 @@ export const cuttingEdgeITServices2025 = [
     name: 'Quantum Cloud Infrastructure Platform',
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum-enhanced security protocols',
       'Distributed quantum computing nodes',
       'Real-time infrastructure optimization',
@@ -421,13 +419,9 @@ export const cuttingEdgeITServices2025 = [
       'Quality Assurance Protocols',
     ],
   },
-];
-=======
-      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

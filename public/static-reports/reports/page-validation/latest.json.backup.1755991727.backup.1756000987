@@ -10,6 +10,7 @@
   "results": [],
   "buildBreakingFiles": [],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -22,6 +23,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "totalFiles": 1,
     "filesWithIssues": 1,
     "totalIssues": 3,
@@ -70,6 +73,7 @@
     "pages/enhanced-services.tsx"
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -80,9 +84,11 @@
 =======
   "generatedAt": "2025-08-21T00:50:13.709Z"
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
-}
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+}
   "generatedAt": "2025-08-21T00:41:50.318Z"}
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -90,3 +96,6 @@
   "generatedAt": "2025-08-21T00:41:50.318Z"}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  "generatedAt": "2025-08-21T00:41:50.318Z"}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

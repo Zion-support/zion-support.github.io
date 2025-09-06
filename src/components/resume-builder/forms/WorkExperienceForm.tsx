@@ -14,14 +14,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,;
-} from '@/components/ui/form';
-import { WorkExperience } from '@/types/resume';
+} from '@/components/ui/form';import { WorkExperience } from '@/types/resume';
 import { Loader2, Edit, Trash2 } from 'lucide-react';
 import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -75,7 +73,7 @@ export function WorkExperienceForm({
     },
   });
 
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
+  const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
     try {
       setError(null);
       let success;
@@ -112,10 +110,12 @@ export function WorkExperienceForm({
     }
   };
   const handleEdit = (work: WorkExperience) => {
+    setEditingId(work.id!);    form.reset({
+      ...work,
+
+  const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
-      ...work,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       start_date: formatDateValue(work.start_date),
       end_date:
         work.end_date && !work.is_current
@@ -124,7 +124,7 @@ export function WorkExperienceForm({
     });
   };
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id);
     }
@@ -133,7 +133,6 @@ export function WorkExperienceForm({
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent);
   };
-
   return (
     <div className='space-y-6'>
       <div>
@@ -149,8 +148,7 @@ export function WorkExperienceForm({
           {workExperiences.map(work => (
             <Card key={work.id} className='bg-muted/40'>
               <CardContent className='pt-6'>
-                <div className='flex justify-between'>
-                  <div>
+                <div className='flex justify-between'>                  <div>
                     <h4 className='font-medium'>{work.role_title}</h4>
                     <p className='text-sm text-muted-foreground'>
                       {work.company_name}
@@ -179,16 +177,14 @@ export function WorkExperienceForm({
                       variant='ghost'
                       size='icon'
                       onClick={() => handleEdit(work)}
-                      aria-label='Edit experience'
-                    >
+                      aria-label='Edit experience'                    >
                       <Edit className='h-4 w-4' />
                     </Button>
                     <Button
                       variant='ghost'
                       size='icon'
                       onClick={() => handleDelete(work.id!)}
-                      aria-label='Delete experience'
-                    >
+                      aria-label='Delete experience'                    >
                       <Trash2 className='h-4 w-4' />
                     </Button>
                   </div>
@@ -218,8 +214,7 @@ export function WorkExperienceForm({
               <FormField
                 control={form.control}
                 name='company_name'
-                render={({ field }: { field: any }) => (
-                  <FormItem>
+                render={({ field }: { field: any }) => (                  <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
                       <Input placeholder='Google, Microsoft, etc.' {...field} />
@@ -232,8 +227,7 @@ export function WorkExperienceForm({
               <FormField
                 control={form.control}
                 name='role_title'
-                render={({ field }: { field: any }) => (
-                  <FormItem>
+                render={({ field }: { field: any }) => (                  <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
                       <Input
@@ -255,8 +249,7 @@ export function WorkExperienceForm({
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-                      <Input type='date' {...field} value={field.value || ''} />
-                    </FormControl>
+                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -267,11 +260,10 @@ export function WorkExperienceForm({
                   control={form.control}
                   name='is_current'
                   render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>
-                      <FormControl>
+                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
                         <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
                         />
                       </FormControl>
                       <div className='space-y-1 leading-none'>
@@ -292,8 +284,7 @@ export function WorkExperienceForm({
                           <Input
                             type='date'
                             {...field}
-                            value={field.value || ''}
-                          />
+                            value={field.value || ''}                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -311,8 +302,7 @@ export function WorkExperienceForm({
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder='San Francisco, CA (Remote)'
-                      {...field}
+                      placeholder='San Francisco, CA (Remote)'                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -400,9 +390,5 @@ export function WorkExperienceForm({
   editingId ? 'Cancel': 'Back' ;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
-}'"
-=======
-  )
+}'"  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

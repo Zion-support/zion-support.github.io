@@ -577,6 +577,7 @@
     "links:start": "node automation/site-link-orchestrator.cjs",
     "links:cron:start": "bash automation/site-link-cron.sh",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -586,9 +587,11 @@
 =======
     "links:scan": "node automation/site-link-orchestrator.cjs",
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-ed4d
-    "promo:start": "node automation/site-promo-orchestrator.cjs",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "promo:start": "node automation/site-promo-orchestrator.cjs",
     "links:scan": "node automation/site-link-crawler.cjs && node automation/external-link-check.cjs && node automation/external-link-fixer.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -596,6 +599,9 @@
     "links:scan": "node automation/site-link-crawler.cjs && node automation/external-link-check.cjs && node automation/external-link-fixer.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "links:scan": "node automation/site-link-crawler.cjs && node automation/external-link-check.cjs && node automation/external-link-fixer.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "promo:cron:start": "bash automation/site-promo-cron.sh",
     "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
     "spec-dev:start": "node automation/spec-dev-orchestrator.cjs",
@@ -728,6 +734,7 @@
       "eslint --fix"
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -740,6 +747,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",

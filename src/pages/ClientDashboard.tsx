@@ -1,5 +1,4 @@
     onboardingStatus.responseReceived;
-
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -13,7 +12,7 @@ function ClientDashboardContent() {
     onboardingStatus.responseReceived;
 
   // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
+  useEffect((,) => {
     if (jobs.length > 0 && !selectedJobId) {
       const firstJob = jobs[0];
       if (firstJob) {
@@ -24,8 +23,7 @@ function ClientDashboardContent() {
   }, [jobs, selectedJobId]);
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId),
-    setSelectedJobTitle(jobTitle)
+    setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle)
   };
 
   return (
@@ -66,7 +64,7 @@ function ClientDashboardContent() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
+            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
                 <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
                 <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>
@@ -166,8 +164,4 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }/>) : (<div className="bg-muted/30 border rounded-lg p-6 text-center"> <p className="text-muted-foreground"> Select a job to see AI-matched talent suggestions </p> </div>) ;
 }</div> </div> </div> </div> </main> </>) ;
 }export default function ClientDashboard () {;
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}

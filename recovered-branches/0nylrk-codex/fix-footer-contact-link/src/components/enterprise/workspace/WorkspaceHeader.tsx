@@ -1,3 +1,4 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
 import React from "react";
 import {Button} from "@/components/ui/button";

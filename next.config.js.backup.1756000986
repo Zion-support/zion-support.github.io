@@ -1,5 +1,6 @@
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -13,22 +14,29 @@ const nextConfig = {
 
 const nextConfig = {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-  poweredByHeader: false,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  poweredByHeader: false,
 const os = require('os');
 
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const os = require('os');
 
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',  poweredByHeader: false,
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,
@@ -82,6 +90,7 @@ const nextConfig = {
     largePageDataBytes: 128 * 1000, // Reduced to 128KB for better performance
     workerThreads: false, // Disable worker threads to reduce memory usage
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -91,9 +100,11 @@ const nextConfig = {
 =======
     cpus: Math.min(2, 2), // Adaptive CPU limit
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
-    // Bundle analysis optimizations moved to root level
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    // Bundle analysis optimizations moved to root level
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit    // Bundle analysis optimizations moved to root level
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -101,6 +112,9 @@ const nextConfig = {
     cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit    // Bundle analysis optimizations moved to root level
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    cpus: Math.min(2, require('os').cpus().length), // Adaptive CPU limit    // Bundle analysis optimizations moved to root level
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Disable profiling for faster builds
     swcTraceProfiling: false,
   },

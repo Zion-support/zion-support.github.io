@@ -4,8 +4,6 @@ export const innovativeMicroSaasSolutions2025 = [
     name: 'AI-Powered Customer Feedback Analyzer',
     description:
       'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Multi-channel feedback collection (email, social media, surveys, reviews)',
       'AI-powered sentiment analysis with 95.8% accuracy',
       'Real-time feedback processing and alerts',
@@ -424,13 +422,9 @@ export const innovativeMicroSaasSolutions2025 = [
     ],
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },
-];
-=======
-      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
+];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

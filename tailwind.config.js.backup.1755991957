@@ -28,6 +28,7 @@ module.exports = {
         'plasma-flow': 'plasmaFlow 5s ease-in-out infinite',
         'cyber-grid': 'cyberGrid 15s linear infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -40,6 +41,8 @@ module.exports = {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -190,6 +193,7 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
         'bounce-slow': 'bounce 2s infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -202,6 +206,8 @@ module.exports = {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
         'float': 'float 3s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
@@ -222,6 +228,7 @@ module.exports = {
         'neon-rotate': 'neonRotate 10s linear infinite',
         'hologram-rotate': 'hologramRotate 25s linear infinite',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -235,9 +242,11 @@ module.exports = {
         'bounce-x': 'bounceX 2s ease-in-out infinite',
         'count-up': 'countUp 2s ease-out forwards',
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
-      },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      },
         'cyberpunk-rotate': 'cyberpunkRotate 12s linear infinite',      },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -245,6 +254,9 @@ module.exports = {
         'cyberpunk-rotate': 'cyberpunkRotate 12s linear infinite',      },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+        'cyberpunk-rotate': 'cyberpunkRotate 12s linear infinite',      },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -339,6 +351,7 @@ module.exports = {
           '50%': { transform: 'translateY(-20px)' },
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -351,6 +364,8 @@ module.exports = {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         glow: {
           '0%': { boxShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor' },
           '100%': { boxShadow: '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor' },
@@ -553,6 +568,7 @@ module.exports = {
             transform: 'rotate(360deg) skew(0deg)',
             filter: 'hue-rotate(360deg)'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -562,31 +578,11 @@ module.exports = {
         gridFlow: {
           '0%': { transform: 'translateX(0) translateY(0)' },
           '100%': { transform: 'translateX(60px) translateY(60px)' },
-        },
-        particle: {
-          '0%': { transform: 'translateY(0) scale(1)', opacity: '1' },
-          '50%': { transform: 'translateY(-100px) scale(1.5)', opacity: '0.7' },
-          '100%': { transform: 'translateY(-200px) scale(0.5)', opacity: '0' },
-        },
-        scanLine: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
-        },
-        gradientX: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-        bounceX: {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(25%)' },
-        },
-        countUp: {
-          '0%': { transform: 'scale(0.8)', opacity: '0' },
-          '100%': { transform: 'scale(1)', opacity: '1' },
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-d629
-        },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+        },
           },        },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -594,6 +590,9 @@ module.exports = {
           },        },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          },        },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       },
       backdropBlur: {
         xs: '2px',
@@ -866,6 +865,7 @@ module.exports = {
   plugins: [],
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -878,4 +878,6 @@ module.exports = {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 

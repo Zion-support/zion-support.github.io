@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface Innovative2026Service {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface Innovative2026Service {
   reviews: number;
 export const innovative2026Services: Innovative2026Service[] = [
   // AI Consciousness & Neural Interface Services
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const innovative2026Services: Innovative2026Service[] = [
   // AI Consciousness & Neural Interface Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-consciousness-simulation-pro',
     name: 'AI Consciousness Simulation Pro',
     tagline: 'Simulate human consciousness with quantum precision',
@@ -59,9 +54,6 @@ export const innovative2026Services: Innovative2026Service[] = [
     period: '/month',
     description:
       'Advanced AI platform that simulates human consciousness patterns, enabling researchers, psychologists, and AI developers to understand and replicate human cognitive processes.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Multi-dimensional consciousness mapping',
       'Emotional state simulation',
       'Memory pattern replication',
@@ -452,9 +444,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     rating: 4.8,
     reviews: 234,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -467,5 +457,3 @@ export const innovative2026Services: Innovative2026Service[] = [
     reviews: 234
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -29,7 +29,6 @@ import {
   SelectTrigger,
   SelectValue,;
 } from '@/components/ui/select';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function PartnerReferralLinks() {
   const {
@@ -49,8 +48,7 @@ export function PartnerReferralLinks() {
   const baseLink = getReferralLink();
 
   const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText(link),
-    toast({
+    navigator.clipboard.writeText(link);    toast({
       title: 'Link copied!',
       description: 'The referral link has been copied to your clipboard',
       variant: 'default',
@@ -111,8 +109,7 @@ export function PartnerReferralLinks() {
               variant='outline'
               size='sm'
               onClick={handleDownloadLinks}
-              className='flex items-center gap-2'
-            >
+              className='flex items-center gap-2'            >
               <Download className='h-4 w-4' />
               Export Links
             </Button>
@@ -126,8 +123,7 @@ export function PartnerReferralLinks() {
             <Input value={baseLink} readOnly className='font-mono text-sm' />
             <Button variant='outline' onClick={() => handleCopyLink(baseLink)}>
               <Copy className='h-4 w-4' />
-              <span className='sr-only'>Copy</span>
-            </Button>
+              <span className='sr-only'>Copy</span>            </Button>
           </div>
         </CardContent>
       </Card>
@@ -159,8 +155,7 @@ export function PartnerReferralLinks() {
                 <Label htmlFor='campaign'>Campaign Type</Label>
                 <Select
                   value={selectedCampaign}
-                  onValueChange={setSelectedCampaign}
-                >
+                  onValueChange={setSelectedCampaign}                >
                   <SelectTrigger id='campaign'>
                     <SelectValue placeholder='Select campaign type' />
                   </SelectTrigger>
@@ -180,8 +175,7 @@ export function PartnerReferralLinks() {
                   id='custom'
                   placeholder='spring_campaign, video_123, etc.'
                   value={customParam}
-                  onChange={e => setCustomParam(e.target.value)}
-                />
+                  onChange={e => setCustomParam(e.target.value)}                />
               </div>
             </div>
             <DialogFooter>
@@ -195,8 +189,7 @@ export function PartnerReferralLinks() {
               <Button
                 type='button'
                 onClick={handleGenerateLink}
-                className='bg-zion-purple hover:bg-zion-purple-dark'
-              >
+                className='bg-zion-purple hover:bg-zion-purple-dark'              >
                 Generate Link
               </Button>
             </DialogFooter>
@@ -215,22 +208,20 @@ export function PartnerReferralLinks() {
                 <CardTitle className='text-base flex items-center justify-between'>
                   <div className='flex items-center gap-2'>
                     <Link className='h-4 w-4 text-zion-purple' />
-                    <span>{item.name || 'Campaign Link'}</span>
-                  </div>
+                    <span>{item.name || 'Campaign Link'}</span>                  </div>
                 </CardTitle>
               </CardHeader>
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
                   <Input
-                    value={item.link}
+                    value = {item.link,}
                     readOnly
                     className='font-mono text-xs'
                   />
                   <Button
                     variant='outline'
                     size='sm'
-                    onClick={() => handleCopyLink(item.link)}
-                  >
+                    onClick={() => handleCopyLink(item.link)}                  >
                     <Copy className='h-4 w-4' />
                     <span className='sr-only'>Copy</span>
                   </Button>
@@ -248,8 +239,7 @@ export function PartnerReferralLinks() {
               <Button
                 variant='outline'
                 onClick={() => setIsDialogOpen(true)}
-                className='flex items-center gap-2'
-              >
+                className='flex items-center gap-2'              >
                 <Plus className='h-4 w-4' />
                 Create First Link
               </Button>
@@ -291,8 +281,4 @@ document.body.removeChild (link);
   item.link ";
 }readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) ;
 }</div> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

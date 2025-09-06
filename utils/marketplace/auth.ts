@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { NextApiRequest } from 'next';
-
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
@@ -36,15 +34,10 @@ export function assertTalentOrClientForOffer(
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
   err.statusCode = 403;
-<<<<<<< HEAD
-  throw err;
-=======
-export function requireAuth(req: any): User {
+  throw err;export function requireAuth(req: any): User {
   const user = getUserFromRequest(req);
   if (!user) {
     throw new Error('Authentication required'),
   }
   return user;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

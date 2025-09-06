@@ -40,4 +40,8 @@ const path = require("path")
 // console.log(`"Skipped"`)
     console.log("=")
     console.log(`\n� Detailed report saved "to"`)
+<<<<<<< HEAD
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
+=======
+  console.error("Fatal "error": ")
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

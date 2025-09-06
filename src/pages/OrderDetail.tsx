@@ -9,7 +9,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { OrderTimeline } from '@/components/orders/OrderTimeline';
-
 export default function OrderDetailPage() {
   const router = useRouter();
   const { orderId } = router.query as { orderId?: string };
@@ -54,8 +53,7 @@ export default function OrderDetailPage() {
       'Items:',
       ...order.items.map(
         i => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`
-      ),
-      '',
+      ),      '',
       `Total: $${order.total.toFixed(2)}`,
       '',
       'Shipping Address:',
@@ -87,8 +85,7 @@ export default function OrderDetailPage() {
             <li key={idx} className='flex justify-between'>
               <span>
                 {item.name} x {item.quantity}
-              </span>
-              <span>${item.price.toFixed(2)}</span>
+              </span>              <span>${item.price.toFixed(2)}</span>
             </li>
           ))}
         </ul>
@@ -155,7 +152,5 @@ toast.success ('Order summary copied to clipboard') ;
 </li>) ) ;
 }</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
 }'"
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

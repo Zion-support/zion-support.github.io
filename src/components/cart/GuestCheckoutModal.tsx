@@ -18,7 +18,6 @@ interface GuestCheckoutModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   onSubmit: (details: { email: string; address: string }) => void;
-
 export default function GuestCheckoutModal({
   open,
   onOpenChange,
@@ -30,7 +29,6 @@ export default function GuestCheckoutModal({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!email || !address) {
       alert('Please fill in all required fields');
       return;
@@ -78,8 +76,7 @@ export default function GuestCheckoutModal({
               type='email'
               value={email || ''}
               onChange={e => setEmail(e.target.value || '')}
-              placeholder='your.email@example.com'
-              required
+              placeholder='your.email@example.com'              required
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
             />
           </div>
@@ -96,8 +93,7 @@ export default function GuestCheckoutModal({
               id='guest-address'
               value={address || ''}
               onChange={e => setAddress(e.target.value || '')}
-              placeholder='Enter your full shipping address...'
-              required
+              placeholder='Enter your full shipping address...'              required
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
             />
           </div>
@@ -114,15 +110,13 @@ export default function GuestCheckoutModal({
               type='button'
               variant='outline'
               onClick={() => onOpenChange(false)}
-              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'
-            >
+              className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >
               Cancel
             </Button>
             <Button
               type='submit'
               disabled={isSubmitting || !email || !address}
-              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'
-            >
+              className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -137,7 +131,5 @@ export default function GuestCheckoutModal({
       </DialogContent>
     </Dialog>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

@@ -70,7 +70,6 @@ export const useApi = <T = any>(
   apiFunction: (...args: any[]) => Promise<T>,
   options: UseApiOptions = {}
 ) => {
-  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
   const execute = useCallback(async (...args: any[]) => {
@@ -80,11 +79,14 @@ export const useApi = <T = any>(
       const result = await apiFunction(...args);
       setData(result);
       options.onSuccess?.(result);
-      return result} catch (err) {
-      setError(err);
-      options.onError?.(err);
-      throw err} finally {
-      setLoading(false)}
+      return result;
+    } catch (err) {
+      const error = err instanceof Error ? err : new Error(String(err));
+      setError(error);
+      options.onError?.(error);
+      throw error;
+      setLoading(false);
+    }
   }, [apiFunction, options]);
   useEffect(() => {
     if (options.immediate) {
@@ -104,5 +106,39 @@ export default function UseApi({ }: UseApiProps) {
 }
 =======
 }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
+export function useApi<T>(
+  apiCall: () => Promise<T>,
+  options: UseApiOptions = {}
+): ApiState<T> & { refetch: () => void } {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+    const result = await apiCall(),
+    setData(result)
+  } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
+  }, [apiCall]);
+
+  useEffect(() => {
+    if (options.immediate !== false) {
+      fetchData();
+    }
+  }, [fetchData, options.immediate]);
+
+
+    fetchData();
+  }, [url, options]);
+
+  return state;
+
+}

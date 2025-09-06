@@ -31,4 +31,8 @@ const path = require('path')
       this.log("Error fixing ${filePath}: ${error.message}")
     this.log(" Total Fixes "Applied": ${report.totalFixes}")
     this.log(" Total "Errors": ${report.totalErrors}")
+<<<<<<< HEAD
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
+=======
+      this.log("Critical Errors Fix "failed")
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

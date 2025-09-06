@@ -30,8 +30,6 @@ if (!performanceData) {
 }</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div width: `$ {
   (metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100 
 }%` 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 }/> </div> </div> </div>) 
 }</span> </div> </div> </div>) 
 }rec.priority === 'high'? 'bg-red-500/20 text-red-400': rec.priority === 'medium'? 'bg-yellow-500/20 text-yellow-400': 'bg-green-500/20 text-green-400' 
@@ -47,8 +45,4 @@ if (!performanceData) {
 }</AnimatePresence> </>) 
 };
 export default EnhancedPerformanceMonitor;
-=======
-
 export default EnhancedPerformanceMonitor;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

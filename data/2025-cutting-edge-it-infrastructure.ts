@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface CuttingEdgeITInfrastructureService {
   id: string;
   name: string;
   tagline: string;
@@ -358,8 +356,7 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4.9,
       reviews: 4,
     },
-  ];
-    features: [
+  ];    features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'
     ];
@@ -391,5 +388,3 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     reviews: 4
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

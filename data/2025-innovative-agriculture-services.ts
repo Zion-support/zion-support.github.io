@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface InnovativeAgricultureService {
   id: string;
   name: string;
@@ -48,9 +47,7 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-  {
-=======
-  mobile: '+1 302 464 0950';
+  {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -58,8 +55,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-powered-precision-agriculture',
     name: 'AI-Powered Precision Agriculture',
     tagline:
@@ -68,8 +63,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     period: '/month',
     description:
       'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     features: [
       'AI-powered crop monitoring',
       'Irrigation optimization',
@@ -340,9 +333,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4.6,
     reviews: 89,
   },
-];
-=======
-      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
+];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
       'Compliance management'
     ];
     popular: true;
@@ -373,5 +364,3 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     reviews: 89
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

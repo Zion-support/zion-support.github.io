@@ -7,8 +7,6 @@ export const real2026Q2Additions = [
       'Policy, risk, and model governance with automated evidence and audit trails.',
     description:
       'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI Act',
       'Automated risk and impact assessments with mitigations',
       'Dataset lineage, consent tracking, and PII classification',
@@ -317,9 +315,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
   },;
-];
-=======
-      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     ];
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
@@ -333,5 +329,3 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

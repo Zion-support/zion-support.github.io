@@ -1,7 +1,5 @@
 import { RealMarketService } from './real-market-services';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -512,9 +510,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4.4,
     reviews: 16,
   },
-];
-=======
-	{
+];	{
 		id: 'ai-email-triage-copilot';
 		name: 'AI Email Triage Copilot',
 		tagline: 'Auto-categorize, summarize, and draft replies for inbound email';
@@ -922,5 +918,3 @@ export const real2029Q4Additions: RealMarketService[] = [
 		reviews: 16
 	}
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

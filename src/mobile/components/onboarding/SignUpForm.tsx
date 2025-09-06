@@ -1,10 +1,13 @@
   
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import {useAuth} from "@/context/auth/AuthProvider";
-import {AlertCircle} from 'lucide-react'
-import {Alert, AlertDescription} from "@/components/ui/alert";
-import {PasswordStrengthMeter} from "@/components/PasswordStrengthMeter";
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useAuth } from "@/context/auth/AuthProvider";
+import { AlertCircle } from 'lucide-react';
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
@@ -24,8 +27,7 @@ export function SignUpForm() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    setError("");
-    setFieldErrors(prev => ({ ...prev, [name]: "" }))
+    setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }))
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,7 +35,6 @@ export function SignUpForm() {
     setError(""),
     setFieldErrors({});
     setIsLoading(true);
-
     const errors: { email?: string, password?: string, name?: string } = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
@@ -110,7 +111,7 @@ export function SignUpForm() {
         <Button 
           variant="outline" 
           className="w-full py-6 relative"
-          onClick={handleGoogleLogin}
+          onClick = {handleGoogleLogin,}
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -163,10 +164,10 @@ export function SignUpForm() {
             <Input
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleInputChange}
+              value = {formData.name,}
+              onChange = {handleInputChange,}
               required
-              aria-invalid={!!fieldErrors.name}
+              aria-invalid = {!!fieldErrors.name,}
               placeholder="Enter your full name"
             />
             {fieldErrors.name && (
@@ -181,10 +182,10 @@ export function SignUpForm() {
             id="email"
             name="email"
             type="email"
-            value={formData.email}
-            onChange={handleInputChange}
+            value = {formData.email,}
+            onChange = {handleInputChange,}
             required
-            aria-invalid={!!fieldErrors.email}
+            aria-invalid = {!!fieldErrors.email,}
             placeholder="Enter your email"
           />
           {fieldErrors.email && (
@@ -198,10 +199,10 @@ export function SignUpForm() {
             id="password"
             name="password"
             type="password"
-            value={formData.password}
-            onChange={handleInputChange}
+            value = {formData.password,}
+            onChange = {handleInputChange,}
             required
-            aria-invalid={!!fieldErrors.password}
+            aria-invalid = {!!fieldErrors.password,}
             placeholder="Create a password"
           />
           <PasswordStrengthMeter password={formData.password} />
@@ -213,7 +214,7 @@ export function SignUpForm() {
         <Button
           type="submit"
           className="w-full py-6"
-          disabled={isLoading}
+          disabled = {isLoading,}
         >
           {isLoading ? (
             <>
@@ -272,8 +273,4 @@ if (error) {;
 }</div> <Button > {";
   isLoading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Please wait... </>) : (signupMode ? "Create Account" : "Sign In") ";
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

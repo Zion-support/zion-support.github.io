@@ -1,3 +1,4 @@
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
 import React from "react";
 import {BadgeDollarSign} from "lucide-react";

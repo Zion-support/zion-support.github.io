@@ -16,7 +16,6 @@ import {
   Shield,
   Search,;
 } from 'lucide-react';
-
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
@@ -96,7 +95,7 @@ const PerformanceDashboard: React.FC = () => {
     },
   ];
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string,) => {
     switch (status) {
       case 'completed':
         return <CheckCircle className='h-4 w-4 text-green-500' />;
@@ -109,7 +108,7 @@ const PerformanceDashboard: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (impact: string,) => {
     switch (impact) {
       case 'high':
         return 'bg-red-100 text-red-800';
@@ -122,7 +121,7 @@ const PerformanceDashboard: React.FC = () => {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string,) => {
     switch (category) {
       case 'performance':
         return <Zap className='h-4 w-4' />;
@@ -226,8 +225,7 @@ const PerformanceDashboard: React.FC = () => {
                 key={improvement.id}
                 className='flex items-start space-x-3 p-3 border rounded-lg'
               >
-                <div className='flex-shrink-0 mt-1'>
-                  {getCategoryIcon(improvement.category)}
+                <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement.category)}
                 </div>
                 <div className='flex-1 min-w-0'>
                   <div className='flex items-center justify-between'>
@@ -275,7 +273,5 @@ const PerformanceDashboard: React.FC = () => {
 };
 
 export default PerformanceDashboard;
-=======
 export default PerformanceDashboard, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export default PerformanceDashboard, 

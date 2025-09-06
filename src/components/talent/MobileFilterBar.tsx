@@ -2,13 +2,10 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search, Sliders } from 'lucide-react';
 import { Input } from '@/components/ui/input';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
   setIsMobileFilterOpen: (isOpen: boolean) => void;
-
 export function MobileFilterBar({
   searchTerm,
   setSearchTerm,
@@ -19,8 +16,7 @@ export function MobileFilterBar({
       <Button
         onClick={() => setIsMobileFilterOpen(true)}
         variant='outline'
-        className='w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light'
-      >
+        className='w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light'      >
         <Sliders className='h-4 w-4' />
         Filter Talents
       </Button>
@@ -36,15 +32,11 @@ export function MobileFilterBar({
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
           aria-describedby='mobile-talent-search-help'
-          className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'
-        />
+          className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />
         <p id='mobile-talent-search-help' className='sr-only'>
           Search by name or skill
         </p>
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

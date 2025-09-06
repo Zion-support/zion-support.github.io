@@ -4,21 +4,15 @@ import { agendaItems } from '../../../../data/expo/agenda';
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {  try {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const top = agendaItems.slice(0, 3);
     const baseSummary = `Highlights:\n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
 
     const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
-      return res.status(200).json({ summary: baseSummary, provider: 'local' });    }
-=======
-      return res.status(200).json({ summary: baseSummary, provider: 'local' })
+      return res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
@@ -28,17 +22,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
     });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const content = chat.choices?.[0]?.message?.content || baseSummary;
     return res.status(200).json({ summary: content, provider: 'openai' });
   } catch (e: any) {
     return res
       .status(500)
       .json({ error: e.message || 'Failed to generate highlights' });
-  }
-=======
+  }    const content = chat.choices?.[0]?.message?.content || baseSummary;
+    return res.status(200).json({ summary: content, provider: 'openai' })
+  } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Failed to generate highlights' })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

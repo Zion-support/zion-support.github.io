@@ -16,8 +16,7 @@ export interface Q4Service {
   trialDays?: number;
   setupTime?: string;
   category: string;
-  realService: boolean;  technology?: string[];
-  integrations?: string[];
+  realService: boolean;  technology?: string[];  integrations?: string[];
   useCases?: string[];
   roi?: string;
   competitors?: string[];
@@ -732,9 +731,7 @@ export const real2025Q4Additions = [
     rating: 4.6,
     reviews: 9,
   },
-];
-=======
-      'Automated backups and PITRFailover drills and runbooksIndex and bloat maintenancePerformance dashboards'
+];      'Automated backups and PITRFailover drills and runbooksIndex and bloat maintenancePerformance dashboards'
     ];
     icon: '🗄️';
     color: 'from-emerald-600 to-teal-700';
@@ -763,5 +760,3 @@ export const real2025Q4Additions = [
     reviews: 9
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

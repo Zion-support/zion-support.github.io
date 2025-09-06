@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface Q3Service {
   id: string;
   name: string;
   tagline: string;
@@ -18,8 +16,7 @@ export interface Q3Service {
   trialDays?: number;
   setupTime?: string;
   category: string;
-  realService: boolean;  technology?: string[];
-  integrations?: string[];
+  realService: boolean;  technology?: string[];  integrations?: string[];
   useCases?: string[];
   roi?: string;
   competitors?: string[];
@@ -37,9 +34,7 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const realServicesQ32025: Q3Service[] = [
-  {
-=======
-  reviews?: number
+  {  reviews?: number
 }
 
 const contact = {
@@ -51,8 +46,6 @@ const contact = {
 
 export const realServicesQ32025: Q3Service[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'subscription-analytics-revenue-optimization',
     name: 'Subscription Analytics & Revenue Optimization',
     tagline:
@@ -61,7 +54,6 @@ export const realServicesQ32025: Q3Service[] = [
     period: '/month',
     description:
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
-<<<<<<< HEAD
     features: [
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
@@ -76,8 +68,7 @@ export const realServicesQ32025: Q3Service[] = [
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition:
-      'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-    features: [
+      'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     ];
     popular: true;
@@ -335,9 +326,6 @@ export const realServicesQ32025: Q3Service[] = [
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact,
-  },];
-=======
-    contactInfo: contact
+  },];    contactInfo: contact
   }
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

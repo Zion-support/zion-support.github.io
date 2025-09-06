@@ -13,8 +13,6 @@ import {
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/router';
 import { toast } from 'sonner';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface Message {
   id: string;
   content: string;
@@ -43,7 +41,6 @@ export function MobileChatView({
 }: MobileChatViewProps) {
   const [newMessage, setNewMessage] = useState('');
   const router = useRouter();
-
   const handleSend = () => {
     if (newMessage.trim() !== '') {
       onSendMessage(newMessage);
@@ -51,8 +48,7 @@ export function MobileChatView({
     }
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {    if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSend();
     }
@@ -86,8 +82,7 @@ export function MobileChatView({
             variant='ghost'
             size='icon'
             onClick={onBack}
-            aria-label='Go back'
-          >
+            aria-label='Go back'          >
             <ChevronLeft className='h-5 w-5' />
           </Button>
 
@@ -111,8 +106,7 @@ export function MobileChatView({
               variant='ghost'
               size='icon'
               onClick={startAudioCall}
-              aria-label='Start audio call'
-            >
+              aria-label='Start audio call'            >
               <Phone className='h-5 w-5' />
             </Button>
 
@@ -120,8 +114,7 @@ export function MobileChatView({
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
-              aria-label='Start video call'
-            >
+              aria-label='Start video call'            >
               <Video className='h-5 w-5' />
             </Button>
 
@@ -147,8 +140,7 @@ export function MobileChatView({
                 message.isMe
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
-              )}
-            >
+              )}            >
               <p>{message.content}</p>
               <div
                 className={cn(
@@ -181,23 +173,18 @@ export function MobileChatView({
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
-            className='flex-1'
-          />
+            className='flex-1'          />
 
           <Button
             size='icon'
             onClick={handleSend}
             disabled={!newMessage.trim()}
             className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'
-          >
+            aria-label='Send message'          >
             <Send className='h-5 w-5' />
           </Button>
         </div>
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

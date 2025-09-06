@@ -11,7 +11,6 @@ import {
   TrendingUp,
   Activity,;
 } from 'lucide-react';
-
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
@@ -74,7 +73,6 @@ const HealthDashboard: React.FC = () => {
 
   useEffect(() => {
     fetchHealthData();
-
     if (autoRefresh) {
       const interval = setInterval(fetchHealthData, 30000); // Refresh every 30 seconds
       return () => clearInterval(interval);
@@ -83,7 +81,7 @@ const HealthDashboard: React.FC = () => {
     return undefined;
   }, [autoRefresh]);
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string,) => {
     switch (status) {
       case 'healthy':
         return <CheckCircle className='w-5 h-5 text-green-500' />;
@@ -102,8 +100,7 @@ const HealthDashboard: React.FC = () => {
         ? 'default'
         : status === 'warning'
           ? 'secondary'
-          : 'destructive';
-    return (
+          : 'destructive';    return (
       <Badge variant={variant} className='ml-2'>
         {status.toUpperCase()}
       </Badge>
@@ -119,7 +116,6 @@ const HealthDashboard: React.FC = () => {
   const formatBytes = (bytes: number) => {
     return `${bytes.toFixed(1)} MB`;
   };
-
   if (loading) {
     return (
       <div className='flex items-center justify-center p-8'>
@@ -158,8 +154,7 @@ const HealthDashboard: React.FC = () => {
           <Button
             variant='outline'
             size='sm'
-            onClick={() => setAutoRefresh(!autoRefresh)}
-          >
+            onClick={() => setAutoRefresh(!autoRefresh)}          >
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size='sm'>
@@ -289,8 +284,7 @@ const HealthDashboard: React.FC = () => {
                         key={index}
                         className='text-sm text-red-600 flex items-start'
                       >
-                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>
-                        {issue}
+                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0'></span>                        {issue}
                       </li>
                     ))}
                   </ul>
@@ -359,8 +353,7 @@ const HealthDashboard: React.FC = () => {
                             {error.occurrences} occurrences • {error.severity}
                           </p>
                         </div>
-                      ))}
-                  </div>
+                      ))}                  </div>
                 ) : (
                   <p className='text-gray-600 text-sm'>No recurring errors</p>
                 )}
@@ -432,8 +425,7 @@ const HealthDashboard: React.FC = () => {
                   {healthData.health.recommendations.map((rec, index) => (
                     <li key={index} className='flex items-start'>
                       <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0' />
-                      <span className='text-sm'>{rec}</span>
-                    </li>
+                      <span className='text-sm'>{rec}</span>                    </li>
                   ))}
                 </ul>
               ) : (
@@ -450,7 +442,5 @@ const HealthDashboard: React.FC = () => {
 };
 
 export default HealthDashboard;
-=======
 export default HealthDashboard, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export default HealthDashboard, 

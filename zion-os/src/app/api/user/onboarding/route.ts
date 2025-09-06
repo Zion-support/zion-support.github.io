@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession();
@@ -37,7 +35,4 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

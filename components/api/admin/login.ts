@@ -4,14 +4,10 @@ import { setSessionCookie } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
-    return;  }
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const { username, password } = req.body || {};
   const envUser = process.env.ADMIN_USERNAME || 'kleber@ziontechgroup.com';
@@ -25,8 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   } else {
     res.status(401).json({ error: 'Invalid credentials' })
+  }  } else {
+    res.status(401).json({ error: 'Invalid credentials' })
   }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

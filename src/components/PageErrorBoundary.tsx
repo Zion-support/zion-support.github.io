@@ -7,7 +7,6 @@ import {
   logInfo,
   logErrorToProduction as prodLogError,;
 } from '@/utils/productionLogger';
-
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string;
 
@@ -82,8 +81,7 @@ function PageErrorFallback({
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             <button
               onClick={handleRefresh}
-              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
-            >
+              className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'            >
               <RefreshCw className='w-4 h-4 mr-2' />
               Try Again
             </button>
@@ -176,15 +174,12 @@ export default function PageErrorBoundary({
     ));
 
   
-      onReset={() => {
-        // Reset any application state if needed
+      onReset={() => {        // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
       }}
     >
       {children}
     </ErrorBoundary>
   );
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+} 

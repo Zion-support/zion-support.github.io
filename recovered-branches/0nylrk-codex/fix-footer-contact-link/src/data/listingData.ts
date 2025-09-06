@@ -1,7 +1,5 @@
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -152,10 +150,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: 'Global',
     availability: 'Immediate',
     aiScore: 94,
-  },];
-=======
-      name: "VisionTech AI";
-      id: "visiontech",
+  },];      name: "VisionTech AI";
+      id: "visiontech";
       avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"};
     images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"];
     createdAt: "2023-12-10T16:45:00.000Z";
@@ -167,7 +163,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     aiScore: 94
   }
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
@@ -182,19 +177,18 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Code assistant',
     'Virtual assistant',
     'Enterprise AI solutions',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ];
 
   return suggestions.map(text => ({
     text,
     type: 'product', // Use a valid type from the SearchSuggestion interface
-  }));};
-=======
+  }));};  ];
+  
+  return suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
@@ -213,8 +207,6 @@ export const generateFilterOptions = () => {
     ),
   ].sort();
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  return {
     productTypes: productTypes.map(type => ({
       label: type,
       value: type,
@@ -288,9 +280,5 @@ availabilityOptions: availability.map (item => ({
 }) );
 ratingOptions: [1, 2, 3, 4, 5] 
 
-};
-=======
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

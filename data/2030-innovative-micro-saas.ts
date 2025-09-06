@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface InnovativeMicroSaas2030 {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface InnovativeMicroSaas2030 {
   reviews: number;
 export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
   // AI Business Intelligence 2030
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
   // AI Business Intelligence 2030
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-business-intelligence-2030',
     name: 'AI Business Intelligence 2030',
     tagline: 'Next-generation AI-powered business insights',
@@ -59,9 +54,6 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     period: '/month',
     description:
       'Revolutionary 2030 platform for AI-powered business intelligence, providing real-time insights, predictive analytics, and autonomous decision-making.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'AI-powered analytics',
       'Real-time insights',
       'Predictive analytics',
@@ -360,9 +352,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     rating: 4.7,
     reviews: 52,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -375,5 +365,3 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
     reviews: 52
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

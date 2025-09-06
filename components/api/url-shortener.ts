@@ -16,12 +16,9 @@ interface UrlShortenerRequest {
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
-  error?: string;
-=======
-  error?: string
+  error?: string;  error?: string
 }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // In-memory storage (in production, use a database)
 const urlStorage = new Map<string, ShortUrl>();
 
@@ -29,30 +26,29 @@ const urlStorage = new Map<string, ShortUrl>();
 function generateShortCode(length: number = 6): string {
   const chars =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   let result = '';
   for (let i = 0; i < length; i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
   }
-  return result;
-=======
+  return result;  let result = '';
+  for (let i = 0, i < length, i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
   return result
 }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Validate URL format
 function isValidUrl(url: string): boolean {
   try {
     new URL(url);
     return true;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   } catch {
     return false;
+  }  } catch {
+    return false
   }
-=======
 }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<UrlShortenerResponse>
@@ -69,28 +65,19 @@ export default async function handler(
         });      }
 
       if (!isValidUrl(originalUrl)) {
-        return res.status(400).json({
-=======
-          success: false;
+        return res.status(400).json({          success: false;
           error: 'Original URL is required'
         })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
 
       if (!isValidUrl(originalUrl)) {
         return res.status(400).json({
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           success: false,
           error: 'Invalid URL format',
-<<<<<<< HEAD
-        });      }
-=======
-          success: false;
+        });      }          success: false;
           error: 'Invalid URL format'
         })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Check if URL already exists
       const existingUrl = Array.from(urlStorage.values()).find(
@@ -105,20 +92,14 @@ export default async function handler(
 
       // Generate short code
       let shortCode = customCode || generateShortCode();
-
-=======
           success: true;
           data: existingUrl
         })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
 
       // Generate short code
       let shortCode = customCode || generateShortCode();
-<<<<<<< HEAD
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      // Ensure unique short code
       while (urlStorage.has(shortCode)) {
         shortCode = generateShortCode();
       }
@@ -130,9 +111,7 @@ export default async function handler(
         shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`,
         createdAt: new Date().toISOString(),
         clicks: 0,
-        isActive: true,      };
-=======
-        id: Date.now().toString();
+        isActive: true,      };        id: Date.now().toString();
         originalUrl;
         shortCode,
         shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`;
@@ -140,7 +119,6 @@ export default async function handler(
         clicks: 0,
         isActive: true
       };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       urlStorage.set(shortCode, shortUrl);
 
@@ -152,9 +130,7 @@ export default async function handler(
       res.status(500).json({
         success: false,
         error: 'Internal server error',
-      });    }
-=======
-        success: true;
+      });    }        success: true;
         data: shortUrl
       })
     } catch (error) {
@@ -164,7 +140,6 @@ export default async function handler(
         error: 'Internal server error'
       })
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   } else if (req.method === 'GET') {
     // Get all URLs (for demo purposes)
     const urls = Array.from(urlStorage.values());
@@ -172,8 +147,6 @@ export default async function handler(
       success: true,
       data: urls as any,
     });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  } else {
     res.status(405).json({
       success: false,
       error: 'Method not allowed',
@@ -185,20 +158,14 @@ export async function getServerSideProps({
   params,
 }: {
   params: { shortCode: string };
-}) {  const shortCode = params.shortCode;
-=======
-export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params.shortCode;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const shortUrl = urlStorage.get(shortCode);
 
   if (!shortUrl || !shortUrl.isActive) {
     return {
-      notFound: true,    };
-=======
-      notFound: true
+      notFound: true,    };      notFound: true
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   // Increment click count
@@ -211,12 +178,8 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
       destination: shortUrl.originalUrl,
       permanent: false,
     },
-  };
-=======
-      destination: shortUrl.originalUrl;
+  };      destination: shortUrl.originalUrl;
       permanent: false
     }
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

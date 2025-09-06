@@ -4,8 +4,6 @@ export const advancedEmergingTechServices2025 = [
     name: 'SpaceMining Operations',
     description:
       'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Asteroid mining operations',
       'Lunar resource extraction',
       'Space resource mapping',
@@ -635,9 +633,7 @@ export const advancedEmergingTechServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },
-];
-=======
-      phone: '+1 302 464 0950';
+];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     };
     marketSize: '$6.8B',
@@ -645,5 +641,3 @@ export const advancedEmergingTechServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

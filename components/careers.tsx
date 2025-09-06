@@ -24,9 +24,7 @@
 }</motion.div> {
   /* General Application */ 
 }<motion.div > <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto" > <h2 className="text-2xl font-bold text-white mb-4" >Don't See the Right Fit?</h2> <p className="text-gray-300 mb-6" > We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission. </p> <a href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Send Your Resume <ArrowRight className="w-5 h-5 ml-2" /> </a> <a href="/about" className="inline-flex items-center px-6 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300" > Learn More About Us </a> </div> </div> </motion.div> </div> </Layout>) 
-};export default CareersPage;
-=======
-import React, { useState } from 'react';
+};export default CareersPage;import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
@@ -332,4 +330,3 @@ export default function Careers() {
 };
 
 export default CareersPage;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

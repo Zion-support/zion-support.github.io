@@ -1,10 +1,9 @@
 
 import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {ThumbsUp, ThumbsDown} from 'lucide-react'
-import {toast} from "@/components/ui/use-toast";
-import {HELP_CATEGORIES} from "./help-content";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast } from "@/components/ui/use-toast";
+import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -28,14 +27,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    
   
-=======
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric", });
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

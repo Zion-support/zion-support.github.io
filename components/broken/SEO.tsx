@@ -81,13 +81,11 @@ const SEO: React.FC<SEOProps> = ({
     : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http')
     ? image
-    : `https://ziontechgroup.com${image}`;
-  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
+    : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
   image = '/images/zion-tech-group-og-image.jpg';
-  url = 'https: //ziontechgroup.com', type = 'website',
-  publishedTime;
+  url = 'https: //ziontechgroup.com', type = 'website',  publishedTime;
   modifiedTime;
   author = 'Zion Tech Group';
   section;
@@ -98,9 +96,6 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -114,8 +109,6 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name='robots' content='nofollow' />}
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      {/* Robots Meta */}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
@@ -279,22 +272,15 @@ const SEO: React.FC<SEOProps> = ({
   );
 };
 
-export default SEO;
-=======
-            __html: JSON.stringify(structuredData)
+export default SEO;            __html: JSON.stringify(structuredData)
           }}
         />
       )}
     </Head>
-<<<<<<< HEAD
   );
 };
 
-export default SEO;
-=======
-  )
+export default SEO;  )
 };
 
 export default SEO;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

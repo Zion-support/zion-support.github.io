@@ -4,7 +4,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface Param {
   name: string;
 type: string;
@@ -28,7 +27,6 @@ export function ApiPlayground({
   const handleParamChange = (name: string, value: string) => {
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
-
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
     const baseUrl =
@@ -43,8 +41,7 @@ export function ApiPlayground({
         if (val) searchParams.append(p.name, val);
       });
       const query = searchParams.toString();
-      if (query) url += `?${query}`;
-    }
+      if (query) url += `?${query}`;    }
 
     const options: RequestInit = {
       method,
@@ -117,15 +114,13 @@ export function ApiPlayground({
         <Input
           key={p.name}
           value={paramValues[p.name] || ''}
-          onChange={e => handleParamChange(p.name, e.target.value)}
-        />
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
       {method !== 'GET' && method !== 'DELETE' && (
         <Textarea
           value={body}
           onChange={e => setBody(e.target.value)}
-          className='font-mono'
-        />
+          className='font-mono'        />
       )}
       <Button onClick={sendRequest} disabled={loading}>
         {loading ? 'Sending...' : 'Send Request'}
@@ -162,6 +157,3 @@ if (contentType?.includes ('application/json') ) {;
 }</div>) ;
 }export default ApiPlayground;
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

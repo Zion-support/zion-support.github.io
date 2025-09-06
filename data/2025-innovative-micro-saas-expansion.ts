@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeMicroSaasExpansionService {
   id: string;
   name: string;
   tagline: string;
@@ -359,8 +357,7 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       rating: 4.9,
       reviews: 267,
     },
-  ];
-    features: [
+  ];    features: [
       'AI-powered project risk predictionIntelligent resource allocation optimizationAutomated task dependency managementReal-time progress tracking and alertsAdvanced project analytics and reportingTeam collaboration and communication toolsIntegration with development toolsMobile app for field teams';
       'Automated milestone trackingCustom workflow automation'
     ];
@@ -392,5 +389,3 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     reviews: 267
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

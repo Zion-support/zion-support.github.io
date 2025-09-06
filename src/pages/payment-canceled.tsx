@@ -1,10 +1,15 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import React from 'react';
-import {Button} from '@/components/ui/button';
-import {useRouter} from 'next/router', // Changed from useNavigate
-import {XCircle} from 'lucide-react'
+import { Button } from '@/components/ui/button';
 
+import { useRouter } from 'next/router'; // Changed from useNavigate
+
+import { XCircle } from 'lucide-react'
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router', // Changed from useNavigate
+import { XCircle } from 'lucide-react';
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
   
@@ -23,7 +28,7 @@ export default function PaymentCanceled() {
         
         <div className="flex flex-col space-y-3">
           <Button
-            onClick={() => router.push('/payments')} // Changed to router.push
+            onClick={(,) => router.push('/payments')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Try Again
@@ -70,17 +75,13 @@ export default function PaymentCanceled() {
         </div>
       </div>
     </div>
-  );
-=======
-            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+  );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
             Return to Dashboard
           </Button>
         </div>
-<<<<<<< HEAD
+      </div>
+  );;
       </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

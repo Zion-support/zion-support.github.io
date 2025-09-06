@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeITService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -42,16 +40,12 @@ export interface InnovativeITService2025 {
   reviews: number;
 export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
   // Quantum Cloud Infrastructure Platform
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
   // Quantum Cloud Infrastructure Platform
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation cloud computing powered by quantum technology',
@@ -59,9 +53,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     period: '/month',
     description:
       'Revolutionary quantum-enhanced cloud infrastructure that provides unprecedented computing power, security, and scalability. Combines quantum computing with traditional cloud services for breakthrough performance.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum-enhanced computing power',
       'Unbreakable quantum encryption',
       'Automatic scaling and optimization',
@@ -1504,9 +1495,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 52,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -1519,5 +1508,3 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     reviews: 52
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

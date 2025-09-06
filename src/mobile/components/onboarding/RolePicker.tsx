@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Briefcase, Users, Check } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 type UserRole = 'talent' | 'client' | null;
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void;
-
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 
@@ -16,7 +13,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
     setSelectedRole(role);
     onSelect(role);
   };
-
   return (
     <div className='space-y-4 px-4'>
       <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
@@ -31,7 +27,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('talent')}
+          onClick = {(,) => handleSelect('talent'),}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>
@@ -57,7 +53,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('client')}
+          onClick = {() => handleSelect('client'),}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>
@@ -79,7 +75,4 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

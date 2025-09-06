@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -9,9 +10,11 @@
 =======
   "generatedAt": "2025-08-12T01:33:39.367Z",
 >>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-8b8f
-  "functions": [
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  "functions": [
   "generatedAt": "2025-08-12T01:34:18.216Z",  "functions": [
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -19,6 +22,9 @@
   "generatedAt": "2025-08-12T01:34:18.216Z",  "functions": [
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  "generatedAt": "2025-08-12T01:34:18.216Z",  "functions": [
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "a11y-alt-text-runner",
     "ai-changelog-runner",
     "ai-trends-radar-runner",
@@ -32,18 +38,20 @@
     "broken-image-scanner",
     "broken-image-scanner-runner",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-    "canonical-auditor",
-    "cloud-brain-orchestrator",
->>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-8b8f
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "canonical-auditor",
     "cloud-brain-orchestrator",
+    "canonical-auditor",
+    "cloud-brain-orchestrator",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -52,6 +60,8 @@
     "cloud-brain-orchestrator",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "cloud_orchestrator",
     "code-smell-audit-runner",
     "component-props-docs-runner",

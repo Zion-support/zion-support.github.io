@@ -61,6 +61,7 @@ class ComprehensiveSyntaxFixer {
   fixSyntaxErrors(content) {
     let fixed = content;
     // Fix merge conflicts by keeping the HEAD version
+<<<<<<< HEAD
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
@@ -272,15 +273,8 @@ if (require.main === module) {
 }
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD:scripts/comprehensive-syntax-fixer.cjs
 =======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-syntax-fixer.cjs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

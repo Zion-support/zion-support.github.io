@@ -14,7 +14,6 @@ import {
   Package,
   Monitor,;
 } from 'lucide-react';
-
 interface QuickAction {
   id: string;
   label: string;
@@ -37,8 +36,7 @@ export function QuickActions() {
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
 
   const executeAction = async (actionId: string, action: () => void) => {
-    setIsProcessing(actionId);
-    try {
+    setIsProcessing(actionId);    try {
       await action();
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
@@ -207,8 +205,7 @@ export function QuickActions() {
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
-          className='bg-background/80 backdrop-blur-sm'
-        >
+          className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
           Quick Actions
         </Button>
@@ -229,8 +226,7 @@ export function QuickActions() {
               variant='ghost'
               size='sm'
               onClick={() => setIsVisible(false)}
-              className='h-6 w-6 p-0'
-            >
+              className='h-6 w-6 p-0'            >
               ✕
             </Button>
           </div>
@@ -273,8 +269,7 @@ export function QuickActions() {
                             </div>
                             <div className='text-xs opacity-70 mt-1'>
                               {action.description}
-                            </div>
-                          </div>
+                            </div>                          </div>
                         </div>
                       </Button>
                     </div>
@@ -287,7 +282,5 @@ export function QuickActions() {
       </Card>
     </div>
   );
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+} 

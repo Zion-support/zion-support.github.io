@@ -41,14 +41,11 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-=======
-  mobile: '+1 302 464 0950';
+  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
@@ -61,8 +58,6 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     period: '/month',
     description:
       'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Infrastructure as Code (IaC) automation',
       'Multi-cloud management and orchestration',
       'Automated resource scaling and optimization',
@@ -630,10 +625,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     const price = parseInt(solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
-};
-=======
-    return price >= minPrice && price <= maxPrice
+};    return price >= minPrice && price <= maxPrice
   })
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

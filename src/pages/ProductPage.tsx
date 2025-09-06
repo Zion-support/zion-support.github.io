@@ -1,5 +1,4 @@
 
-
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import {Button} from '@/components/ui/button';
@@ -18,16 +17,14 @@ export default function ProductPage() {
   );
   const { items, dispatch } = useCart();
   const [adding, setAdding] = useState(false);
-
-  useEffect(() => {
+  useEffect((,) => {
     // Update product if id changes and is available from router.query
     if (id) {
-      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
-      setProduct(foundProduct || null)
+      const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);      setProduct(foundProduct || null)
     }
   }, [id]);
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchProduct = async () => {
       if (!id) return;
       try {
@@ -68,21 +65,20 @@ export default function ProductPage() {
     toast.success(`1× ${product.title} added`);
     setTimeout(() => setAdding(false), 500)
   };
-
   return (
     <>
       <SEO
-        title={product.title}
-        description={product.description}
-        ogImage={product.images?.[0]}
+        title = {product.title,}
+        description = {product.description,}
+        ogImage = {product.images?.[0],}
       />
       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
-              src={product.images[0] || '/placeholder.svg'}
-              alt={product.title}
+              src = {product.images[0] || '/placeholder.svg',}
+              alt = {product.title,}
               className="object-cover rounded-md"
             />
           </div>
@@ -118,8 +114,5 @@ product.title ;
 }ogImage= {;
   product.images?.[0] ;
 }/> </Button> </div> </>) ;
-}'
-=======
+}';
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import { bundleMonitor } from '@/utils/bundleMonitor';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-
 interface PerformanceMetrics {
   bundleSize: number;
   loadTime: number;
@@ -109,8 +108,7 @@ export function PerformanceDashboard() {
     if ('PerformanceObserver' in window) {
       return new Promise(resolve => {
         const observer = new PerformanceObserver(list => {
-          list.getEntries().forEach(entry => {
-            if (entry.entryType === 'paint') {
+          list.getEntries().forEach(entry => {            if (entry.entryType === 'paint') {
               if (entry.name === 'first-contentful-paint') {
                 vitals.fcp = entry.startTime;
               }
@@ -141,8 +139,7 @@ export function PerformanceDashboard() {
           observer.disconnect();
           resolve(vitals);
         }, 2000);
-      });
-    }
+      });    }
 
     return vitals;
   };
@@ -168,7 +165,6 @@ export function PerformanceDashboard() {
       }))
       .sort((a, b) => b.size - a.size);
   };
-
   const categorizeChunk = (filename: string): string => {
     if (filename.includes('framework')) return 'framework';
     if (filename.includes('vendor')) return 'vendor';
@@ -201,7 +197,6 @@ export function PerformanceDashboard() {
   useEffect(() => {
     collectMetrics();
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
-
     return () => clearInterval(interval);
   }, []);
 
@@ -361,8 +356,7 @@ export function PerformanceDashboard() {
                   className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
                 >
                   <div className='flex items-center gap-3'>
-                    <span className='text-sm font-mono text-muted-foreground'>
-                      {index + 1}
+                    <span className='text-sm font-mono text-muted-foreground'>                      {index + 1}
                     </span>
                     <div>
                       <p className='font-medium text-sm'>{chunk.name}</p>
@@ -456,7 +450,5 @@ export function PerformanceDashboard() {
       </Card>
     </div>
   );
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+} 

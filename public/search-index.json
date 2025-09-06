@@ -14,8 +14,6 @@
         "solutions",
         "automation"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 1
     },
     {
       "title": "About",
@@ -27,8 +25,6 @@
         "team",
         "mission"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 2
     },
     {
       "title": "Services",
@@ -40,8 +36,6 @@
         "automation",
         "development"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 3
     },
     {
       "title": "Contact",
@@ -52,8 +46,6 @@
         "support",
         "help"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 4
     },
     {
       "title": "Portfolio",
@@ -65,8 +57,6 @@
         "work",
         "examples"
       ],
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      "id": 5
     },
     {
       "title": "Blog",
@@ -80,6 +70,4 @@
       ],
       "id": 6
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  ]
 }

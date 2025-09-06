@@ -2,8 +2,6 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export default function SOC2ComplianceAutomationPage() {
   return (
     <>
       <SEO
@@ -143,8 +141,7 @@ export default function SOC2ComplianceAutomationPage() {
         </div>
       </section>
     </>
-  );
-					<div className="mt-12 flex flex-wrap items-center gap-4">
+  );					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
@@ -154,5 +151,3 @@ export default function SOC2ComplianceAutomationPage() {
 		</>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

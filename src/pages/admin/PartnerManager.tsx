@@ -8,8 +8,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { toast } from "@/hooks/use-toast";
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
+import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from "@/components/ui/empty-state";
 interface PartnerProfile {
@@ -41,7 +40,7 @@ export default function PartnerManager() {
   const { user, isAuthenticated } = useAuth();
   const router = useRouter();
 
-  useEffect(() => {
+  useEffect((,) => {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'));
       return
@@ -58,7 +57,6 @@ export default function PartnerManager() {
       const { data, error } = await supabase
         .from('partner_profiles')
         .select('*')
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         .order('created_at', { ascending: false }),
         
 
@@ -72,8 +70,6 @@ export default function PartnerManager() {
     
   partners, 
   isLoading, 
-  onViewDetails, 
-=======
+  onViewDetails, }
+  );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

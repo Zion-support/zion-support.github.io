@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -17,6 +18,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "dev": "vite",
     "build": "NODE_ENV=production tsc && NODE_ENV=production vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -27,6 +30,7 @@
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "test:e2e": "playwright test",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -44,9 +48,11 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "es:index": "node scripts/index-elasticsearch.js"  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -54,6 +60,9 @@
     "es:index": "node scripts/index-elasticsearch.js"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "es:index": "node scripts/index-elasticsearch.js"  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -63,6 +72,7 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -75,6 +85,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@playwright/test": "^1.55.0",
     "@sentry/nextjs": "^7.120.4",
     "@sentry/node": "^7.120.4",
@@ -96,6 +108,7 @@
     "events": "^3.3.0",
     "firebase-admin": "^13.4.0",
     "formidable": "^3.5.4",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -119,9 +132,11 @@
     "events": "^3.3.0",
     "framer-motion": "^6.5.1",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-    "fs": "^0.0.1-security",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "fs": "^0.0.1-security",
     "framer-motion": "^12.23.12",    "fs": "^0.0.1-security",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -129,11 +144,15 @@
     "framer-motion": "^12.23.12",    "fs": "^0.0.1-security",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "framer-motion": "^12.23.12",    "fs": "^0.0.1-security",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -146,6 +165,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "js-yaml": "^4.1.0",
     "jsdom": "^26.1.0",
     "lightningcss": "1.27.0",
@@ -165,6 +186,7 @@
     "resend": "^6.0.1",
     "socket.io": "^4.8.1",
     "stripe": "^18.4.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -190,9 +212,11 @@
     "recharts": "^3.1.2",
     "resend": "^4.0.0",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-    "uuid": "^11.1.0"
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "uuid": "^11.1.0"
     "tailwind-merge": "^3.3.1",    "uuid": "^11.1.0"
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -200,6 +224,9 @@
     "tailwind-merge": "^3.3.1",    "uuid": "^11.1.0"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "tailwind-merge": "^3.3.1",    "uuid": "^11.1.0"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   "devDependencies": {
     "@babel/core": "^7.28.3",
@@ -211,6 +238,7 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -219,6 +247,8 @@
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^14.3.1",
     "@types/node": "24.2.1",
@@ -232,14 +262,9 @@
     "eslint-config-next": "^15.0.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-<<<<<<< HEAD
-    "hardhat": "^3.0.1",
-    "hardhat-etherscan": "^1.0.1",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
     "husky": "^9.1.7",
-=======
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",    "husky": "^9.1.7",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -247,6 +272,9 @@
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",    "husky": "^9.1.7",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",    "husky": "^9.1.7",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "lint-staged": "^16.1.4",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
@@ -254,6 +282,7 @@
     "typescript": "^5.9.2"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -266,6 +295,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -274,6 +305,7 @@
     "rimraf": "^5.0.5"
   },
   "resolutions": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -285,11 +317,11 @@
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-  }
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  }
     "rimraf": "^5.0.5"  }
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -297,4 +329,7 @@
     "rimraf": "^5.0.5"  }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "rimraf": "^5.0.5"  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }

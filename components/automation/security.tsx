@@ -1,9 +1,6 @@
  
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 };
 </pre> </div>) 
-
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -21,5 +18,3 @@ export default function SecurityAudit({ report }: Props) {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

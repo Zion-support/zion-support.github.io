@@ -5,20 +5,17 @@ import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
+import { logErrorToProduction } from '@/utils/productionLogger';import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,;
-} from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
+} from '@/components/ui/form';import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
-
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required'),
@@ -70,7 +67,6 @@ export function ProjectForm({
     if (!user) return;
 
     setIsLoading(true);
-
     try {
       const projectData: PortfolioProject = {
         title: data.title,
@@ -116,8 +112,7 @@ export function ProjectForm({
               <FormControl>
                 <Input
                   placeholder='E.g., AI Chatbot, E-commerce Website'
-                  {...field}
-                />
+                  {...field}                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -127,8 +122,7 @@ export function ProjectForm({
         <FormField
           control={form.control}
           name='description'
-          render={({ field }: { field: any }) => (
-            <FormItem>
+          render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
                 <Textarea
@@ -163,8 +157,7 @@ export function ProjectForm({
           <FormField
             control={form.control}
             name='github_url'
-            render={({ field }: { field: any }) => (
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Github className='h-4 w-4' />
                   GitHub URL
@@ -183,8 +176,7 @@ export function ProjectForm({
           <FormField
             control={form.control}
             name='demo_url'
-            render={({ field }: { field: any }) => (
-              <FormItem>
+            render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Link className='h-4 w-4' />
                   Demo URL
@@ -204,8 +196,7 @@ export function ProjectForm({
         <FormField
           control={form.control}
           name='image_url'
-          render={({ field }: { field: any }) => (
-            <FormItem>
+          render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel className='flex items-center gap-2'>
                 <FileImage className='h-4 w-4' />
                 Screenshot URL
@@ -235,7 +226,5 @@ export function ProjectForm({
       </form>
     </Form>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

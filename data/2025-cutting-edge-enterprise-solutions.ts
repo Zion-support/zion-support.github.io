@@ -4,15 +4,12 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-=======
-const contact = {
+  website: 'https://ziontechgroup.com',};const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
   // ENTERPRISE SOLUTIONS
@@ -20,8 +17,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     id: 'ai-powered-enterprise-risk-management',
     name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    price: {
       monthly: 899,
       yearly: 8990,
       currency: 'USD',
@@ -280,9 +275,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6,
     reviews: 41,
     contactInfo: contact,
-  },];
-=======
-      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
+  },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
       'Integration capabilitiesMobile access'
     ];
     popular: true;
@@ -307,4 +300,3 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     contactInfo: contact
   }
 ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

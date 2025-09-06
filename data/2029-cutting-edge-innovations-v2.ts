@@ -1,7 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface CuttingEdgeInnovation2029V2 {
+import { ServiceVariant  } from "../types/service-variants";
+export interface CuttingEdge2029Service {
   id: string;
   name: string;
   tagline: string;
@@ -42,16 +42,12 @@ export interface CuttingEdgeInnovation2029V2 {
   reviews: number;
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
   // AI Consciousness & Evolution Services
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
   // AI Consciousness & Evolution Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-consciousness-evolution-platform-2029',
     name: 'AI Consciousness Evolution Platform 2029',
     tagline: 'Develop genuine AI consciousness and self-awareness',
@@ -59,9 +55,6 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     period: '/month',
     description:
       "Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. This is not just advanced AI - it's the foundation for true artificial consciousness.",
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Consciousness mapping and development',
       'Self-awareness training modules',
       'Emotional intelligence cultivation',
@@ -423,9 +416,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4.9,
     reviews: 6,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -438,5 +429,3 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     reviews: 6
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

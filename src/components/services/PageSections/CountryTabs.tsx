@@ -21,7 +21,6 @@ interface CountryTabsProps {
   onQuote?: (country: CountryPricing) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
-
 export function CountryTabs({
   popularCountries,
   filteredCountries,
@@ -36,7 +35,6 @@ export function CountryTabs({
   useEffect(() => {
     setCurrentPage(1);
   }, [searchQuery]);
-
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
@@ -69,13 +67,12 @@ export function CountryTabs({
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
-            .map(country => (
-              <CountryServiceCard
-                key={country.country}
-                country={country}
-                onSelect={handleCountrySelect}
-                onQuote={onQuote}
-                isPopular={true}
+            .map(country => (              <CountryServiceCard
+                key = {country.country,}
+                country = {country,}
+                onSelect = {handleCountrySelect,}
+                onQuote = {onQuote,}
+                isPopular = {true,}
               />
             ))}
         </div>
@@ -90,19 +87,17 @@ export function CountryTabs({
               placeholder='Search by country...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-            />
+              onChange={e => setSearchQuery(e.target.value)}            />
           </div>
         </div>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>
-          {paginatedCountries.map(country => (
-            <CountryServiceCard
-              key={country.country}
-              country={country}
-              onSelect={handleCountrySelect}
-              onQuote={onQuote}
-              isPopular={popularCountries.includes(country.country)}
+          {paginatedCountries.map(country => (            <CountryServiceCard
+              key = {country.country,}
+              country = {country,}
+              onSelect = {handleCountrySelect,}
+              onQuote = {onQuote,}
+              isPopular = {popularCountries.includes(country.country),}
             />
           ))}
         </div>
@@ -128,8 +123,7 @@ export function CountryTabs({
                         isActive={page === currentPage}
                         onClick={e => {
                           e.preventDefault();
-                          setCurrentPage(page);
-                        }}
+                          setCurrentPage(page);                        }}
                       />
                     </PaginationItem>
                   )
@@ -139,8 +133,7 @@ export function CountryTabs({
                     href={`?page=${currentPage + 1}`}
                     onClick={e => {
                       e.preventDefault();
-                      setCurrentPage(Math.min(totalPages, currentPage + 1));
-                    }}
+                      setCurrentPage(Math.min(totalPages, currentPage + 1));                    }}
                   />
                 </PaginationItem>
               </PaginationContent>
@@ -150,8 +143,7 @@ export function CountryTabs({
       </TabsContent>
     </Tabs>
   );
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  )
+}

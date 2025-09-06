@@ -2,11 +2,12 @@ import React, { useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 import { useTheme } from '@/hooks/useTheme';
-
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
@@ -22,8 +23,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
   // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
   const sanitizedHtml = useMemo<{ __html: string }>(
-    () => ({ __html: formatMessageWithLinks(message) }),
-    [message]
+    () => ({ __html: formatMessageWithLinks(message) }),    [message]
   );
 
   return (
@@ -109,9 +109,5 @@ function formatMessageWithLinks(message: string): string {
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   );
 
-  return formattedMessage;
-=======
-  return formattedMessage
+  return formattedMessage;  return formattedMessage
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

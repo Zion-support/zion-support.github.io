@@ -1,6 +1,7 @@
 const path = require('path');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,25 +12,16 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const nextConfig = {
   // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
   poweredByHeader: false,
   trailingSlash: false,
   reactStrictMode: true,
-<<<<<<< HEAD
-
-  // Disable ESLint during build to avoid parsing errors
-=======
-  swcMinify: true,
-  
-  // Disable TypeScript and ESLint during build to avoid parsing errors
-  typescript: {
-    ignoreBuildErrors: true,
-  },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb1b
-=======
 // Define assetPrefix based on environment
 const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -38,6 +30,10 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+// Define assetPrefix based on environment
+const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -93,6 +89,7 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -106,6 +103,8 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   // Experimental features for better performance
   experimental: {
     optimizeCss: true,
@@ -132,6 +131,7 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 
   // Webpack configuration
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -144,6 +144,8 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   webpack: (config, { dev, isServer }) => {
     // Simple webpack configuration
     if (!isServer) {
@@ -156,6 +158,7 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
       };
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -240,6 +243,8 @@ const assetPrefix = process.env.NODE_ENV === 'production' ? '' : '';
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     return config;
   },
 };

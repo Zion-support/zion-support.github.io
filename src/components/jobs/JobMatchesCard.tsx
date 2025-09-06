@@ -12,8 +12,6 @@ import { Button } from '@/components/ui/button';
 import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface JobMatchCardProps {
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
@@ -29,7 +27,6 @@ export function JobMatchesCard({
   const job = match.job;
 
   if (!job) return null;
-
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>
       <CardHeader className='p-4 pb-2'>
@@ -62,8 +59,7 @@ export function JobMatchesCard({
             </p>
             <div className='flex flex-wrap gap-1'>
               {match.matched_skills.slice(0, 5).map((skill, i) => (
-                <Badge key={i} variant='secondary' className='text-xs'>
-                  {skill}
+                <Badge key={i} variant='secondary' className='text-xs'>                  {skill}
                 </Badge>
               ))}
               {match.matched_skills.length > 5 && (
@@ -108,8 +104,7 @@ export function JobMatchesCard({
             <Button
               variant='outline'
               className='flex-1'
-              onClick={() => onDecline(match.id)}
-            >
+              onClick={() => onDecline(match.id)}            >
               Decline
             </Button>
           </div>
@@ -117,7 +112,5 @@ export function JobMatchesCard({
       </CardFooter>
     </Card>
   );
-=======
+;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

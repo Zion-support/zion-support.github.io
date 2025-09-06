@@ -1,7 +1,5 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -135,9 +133,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 9,
   },
-];
-=======
-	{
+];	{
 		id: 'ai-redteam-evaluator';
 		name: 'AI Red‑Team Evaluator';
 		tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -243,5 +239,3 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 9
 	}
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

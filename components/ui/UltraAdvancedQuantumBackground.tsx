@@ -39,14 +39,10 @@ this.color = `hsl ($ {
 
 const UltraAdvancedQuantumBackground: React.FC<
   UltraAdvancedQuantumBackgroundProps
-> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);
-const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
-  children,
+> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
+  children;
   className = '' 
 }) => {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  const canvasRef = useRef<HTMLCanvasElement>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -71,8 +67,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       size: number;
       color: string;
       life: number;
-      maxLife: number;
-      x: number,
+      maxLife: number;      x: number,
       y: number,
       vx: number,
       vy: number,
@@ -80,9 +75,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       color: string,
       life: number,
       maxLife: number,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
@@ -90,11 +82,8 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         this.size = Math.random() * 3 + 1;
         this.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
         this.life = Math.random() * 100;
-        this.maxLife = 100;      }
-=======
-        this.maxLife = 100
+        this.maxLife = 100;      }        this.maxLife = 100
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       update() {
         this.x += this.vx;
@@ -107,11 +96,8 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;        }
-=======
-          this.y = Math.random() * canvas.height
+          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
 
       draw() {
@@ -125,31 +111,23 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.restore();      }
     }
 
-    class QuantumField {
-=======
-        ctx.restore()
+    class QuantumField {        ctx.restore()
       }
     }
 
     class QuantumField {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       x: number;
       y: number;
       radius: number;
       intensity: number;
       phase: number;
       color: string;
-<<<<<<< HEAD
       x: number,
       y: number,
       radius: number,
       intensity: number,
       phase: number,
       color: string,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 100 + 50;
@@ -159,15 +137,11 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       }
 
       update() {
-        this.phase += 0.02;      }
-=======
-        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
+        this.phase += 0.02;      }        this.color = `hsl(${200 + Math.random() * 60}, 80%, 60%)`
       }
 
       update() {
         this.phase += 0.02
-      }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       draw() {
         if (!ctx) return;
@@ -184,18 +158,14 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     class NeuralNetwork {
       nodes: { x: number; y: number; connections: number[] }[];
       connections: { from: number; to: number; weight: number }[];
-
-=======
         ctx.restore()
       }
     }
 
     class NeuralNetwork {
-<<<<<<< HEAD
       nodes: { x: number; y: number; connections: number[] }[];
       connections: { from: number; to: number; weight: number }[];
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       constructor() {
         this.nodes = [];
         this.connections = [];
@@ -224,31 +194,50 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             }
             nodeIndex++;
           }
-        });      }
-=======
+        });      }      constructor() {
+        this.nodes = [];
+        this.connections = [];
+        
+        // Create neural network structure
+        const layers = [5, 8, 6, 4];
+        let nodeIndex = 0;
+        
+        layers.forEach((layerSize, layerIndex) => {
+          for (let i = 0, i < layerSize, i++) {
+            const x = (layerIndex / (layers.length - 1)) * canvas.width;
+            const y = (i / (layerSize - 1)) * canvas.height;
+            
+            this.nodes.push({ x, y, connections: [] }),
+            
+            // Connect to previous layer
+            if (layerIndex > 0) {
+              const prevLayerStart = nodeIndex - layers[layerIndex - 1];
+              for (let j = 0, j < layers[layerIndex - 1], j++) {
+                this.connections.push({
+                  from: prevLayerStart + j,
+                  to: nodeIndex,
+                  weight: Math.random()
+                })
+              }
+            }
+            nodeIndex++
+          }
         })
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       update() {
         // Animate neural network
         this.nodes.forEach((node, index) => {
           node.x += (Math.random() - 0.5) * 0.5;
           node.y += (Math.random() - 0.5) * 0.5;
-        });      }
-=======
-          node.y += (Math.random() - 0.5) * 0.5
+        });      }          node.y += (Math.random() - 0.5) * 0.5
         })
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       draw() {
         if (!ctx) return;
         ctx.save();
-=======
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         // Draw connections
         ctx.strokeStyle = 'rgba(100, 200, 255, 0.3)';
         ctx.lineWidth = 1;
@@ -258,11 +247,8 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           ctx.beginPath();
           ctx.moveTo(from.x, from.y);
           ctx.lineTo(to.x, to.y);
-          ctx.stroke();        });
-=======
-          ctx.stroke()
+          ctx.stroke();        });          ctx.stroke()
         });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         // Draw nodes
         ctx.fillStyle = 'rgba(100, 200, 255, 0.8)';
@@ -275,9 +261,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         ctx.restore();      }
     }
 
-    // Initialize
-=======
-          ctx.fill()
+    // Initialize          ctx.fill()
         });
 
         ctx.restore()
@@ -285,24 +269,17 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     }
 
     // Initialize
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     for (let i = 0; i < 100; i++) {
       particles.push(new Particle());
     }
 
     for (let i = 0; i < 8; i++) {
-<<<<<<< HEAD
-      quantumFields.push(new QuantumField());    }
-=======
-    for (let i = 0, i < 100, i++) {
+      quantumFields.push(new QuantumField());    }    for (let i = 0, i < 100, i++) {
       particles.push(new Particle())
     }
 
     for (let i = 0, i < 8, i++) {
       quantumFields.push(new QuantumField())
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     neuralNetworks.push(new NeuralNetwork());
 
@@ -313,39 +290,27 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       // Update and draw quantum fields
       quantumFields.forEach(field => {
         field.update();
-        field.draw();      });
-=======
-        field.draw()
+        field.draw();      });        field.draw()
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Update and draw neural networks
       neuralNetworks.forEach(network => {
         network.update();
-        network.draw();      });
-=======
-        network.draw()
+        network.draw();      });        network.draw()
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
-        particle.draw();      });
-=======
-        particle.draw()
+        particle.draw();      });        particle.draw()
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Draw quantum entanglement effects
       ctx.save();
       ctx.strokeStyle = 'rgba(255, 100, 255, 0.3)';
       ctx.lineWidth = 1;
-      for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {
-=======
-      for (let i = 0, i < particles.length, i += 2) {
+      for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
         if (i + 1 < particles.length) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           const p1 = particles[i];
           const p2 = particles[i + 1];
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
@@ -353,42 +318,30 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.stroke();          }
-=======
-            ctx.stroke()
+            ctx.stroke();          }            ctx.stroke()
           }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         }
       }
       ctx.restore();
 
-      animationFrameId = requestAnimationFrame(animate);    };
-=======
-      animationFrameId = requestAnimationFrame(animate)
+      animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate)
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     animate();
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;    };
-=======
-      canvas.height = window.innerHeight
+      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
-    };  }, []);
-=======
-      cancelAnimationFrame(animationFrameId)
+    };  }, []);      cancelAnimationFrame(animationFrameId)
     }
   }, []);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
@@ -406,25 +359,14 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
 
       {/* Floating Quantum Elements */}
       <motion.div
-        className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'
-=======
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
-      </div>
-
-      {/* Animated Quantum Grid */}
+        className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'      {/* Animated Quantum Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
         <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_98%,rgba(120,119,198,0.3)_100%)] bg-[length:50px_50px]" />
-      </div>
 
       {/* Floating Quantum Elements */}
       <motion.div
-<<<<<<< HEAD
         className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-xl'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.2, 0.4, 0.2],
@@ -432,12 +374,26 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         transition={{
           duration: 4,
           repeat: Infinity,
-          ease: 'easeInOut',
-=======
+          ease: 'easeInOut',        animate={{
+          scale: [1, 1.2, 1];
+          opacity: [0.2, 0.4, 0.2]}}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      
+      <motion.div
+        className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
+        animate={{
+          scale: [1, 1.3, 1];
+          opacity: [0.2, 0.5, 0.2]}}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
           ease: "easeInOut",
           delay: 1
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         }}
       />
 
@@ -445,20 +401,15 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl'
         animate={{
           scale: [1, 1.3, 1],
-          opacity: [0.2, 0.5, 0.2],
-        animate={{
+          opacity: [0.2, 0.5, 0.2],        animate={{
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
           duration: 6,
           repeat: Infinity,
           ease: 'easeInOut',
-          delay: 2,
-=======
-          ease: "easeInOut",
+          delay: 2,          ease: "easeInOut",
           delay: 2
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         }}
         transition={{
           duration: 5,
@@ -487,16 +438,12 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       />
 
       {/* Content Layer */}
-      <div className='relative z-10'>{children}</div>
-=======
-        className="absolute inset-0 w-full h-full opacity-60"
+      <div className='relative z-10'>{children}</div>        className="absolute inset-0 w-full h-full opacity-60"
         style={{ zIndex: 1 }}
       />
 
       {/* Content Layer */}
-<<<<<<< HEAD
       <div className='relative z-10'>{children}</div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       {/* Quantum Energy Waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
@@ -508,8 +455,7 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'linear',
-          }}
+            ease: 'linear',          }}
         />
         <motion.div
           className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent'
@@ -527,23 +473,16 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
   );
 };
 
-export default UltraAdvancedQuantumBackground;
-=======
-            ease: "linear",
+export default UltraAdvancedQuantumBackground;            ease: "linear",
             delay: 2
           }}
         />
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
 
-export default UltraAdvancedQuantumBackground;
-=======
-  )
+export default UltraAdvancedQuantumBackground;  )
 };
 
 export default UltraAdvancedQuantumBackground;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

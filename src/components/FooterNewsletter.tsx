@@ -11,6 +11,10 @@ export function FooterNewsletter(): React.ReactElement {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailError, setEmailError] = useState('');
   const { toast } = useToast();
+      // // // // // // // console.error('Newsletter subscription failed:', error) ;
+} finally {;
+      setIsSubmitting(false) ;
+      // console.error('Newsletter subscription failed:', error)} finally {;
 
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -22,7 +26,6 @@ export function FooterNewsletter(): React.ReactElement {
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
-
     const trimmedEmail = email.trim();
     if (!EMAIL_REGEX.test(trimmedEmail)) {
       setEmailError('Please enter a valid email address.');
@@ -42,7 +45,6 @@ export function FooterNewsletter(): React.ReactElement {
       });
 
       const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
-
       if (res.ok) {
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!", {
@@ -73,8 +75,7 @@ export function FooterNewsletter(): React.ReactElement {
     }
   };
 
-  
-    >
+      >
       <label htmlFor='newsletter-email' className='sr-only'>
         Email address for newsletter subscription
       </label>
@@ -86,8 +87,7 @@ export function FooterNewsletter(): React.ReactElement {
         className='flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center'
         value={email}
         onChange={e => setEmail(e.target.value)}
-        autoComplete='email'
-        required
+        autoComplete='email'        required
       />
       {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
       {/* Honeypot field */}
@@ -103,8 +103,7 @@ export function FooterNewsletter(): React.ReactElement {
         type='submit'
         aria-label='Subscribe to newsletter'
         disabled={isSubmitting}
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'
-      >
+        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'      >
         {isSubmitting ? (
           <>
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />
@@ -116,7 +115,5 @@ export function FooterNewsletter(): React.ReactElement {
       </Button>
     </form>
   );
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+} 

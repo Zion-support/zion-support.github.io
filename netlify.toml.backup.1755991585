@@ -12,6 +12,7 @@
   node_bundler = "esbuild"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -24,6 +25,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[plugins]]
   package = "netlify-plugin-cloudinary"
 
@@ -54,6 +57,7 @@
   schedule = "*/5 * * * *" # every 5 minutes
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -66,6 +70,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[scheduled.functions]]
   name = "frontpage-enhancer"
   schedule = "*/20 * * * *" # every 20 minutes
@@ -81,6 +87,7 @@
 [[scheduled.functions]]
   name = "sitemap_runner"
   schedule = "0 */12 * * *" # twice per day
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -121,6 +128,10 @@
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 [[redirects]]
+=======
+
+[[redirects]]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   from = "/autonomous-vehicle-ai"
   to = "/autonomous-vehicle-ai-platform"
   status = 301

@@ -35,6 +35,7 @@ exports.handler = async () => {
   // Commit and push
   logStep('git:sync', () => runNode('automation/git-sync.cjs'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -49,6 +50,9 @@ exports.handler = async () => {
 =
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+=
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
 

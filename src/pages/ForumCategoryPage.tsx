@@ -1,6 +1,7 @@
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
-
+import { logInfo } from '@/utils/productionLogger';
+import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
@@ -65,7 +66,7 @@ function CategoryContent({
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId);
     ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self) => 
+  ].filter((post, index, self,) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
   );
@@ -94,7 +95,6 @@ function CategoryContent({
       follow(categoryId)
     }
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   logInfo('CategoryContent - categoryId:', { data: categoryId }),
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
@@ -102,7 +102,6 @@ function CategoryContent({
   const category = categoryId ? categoriesInfo[categoryId] : null;
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
 
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

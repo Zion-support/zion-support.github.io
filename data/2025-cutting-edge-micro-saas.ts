@@ -4,8 +4,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
     name: 'Customer Success AI Pro',
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'AI-powered churn prediction with 92% accuracy',
       'Personalized engagement recommendations',
       'Customer health scoring and monitoring',
@@ -432,13 +430,9 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards',
     ],
   },
-];
-=======
-      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
+];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import {
-  Dialog,
+import {  Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription,;
 } from '@/components/ui/dialog';
 import { DisputeForm } from './DisputeForm';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react';
 
+  DialogDescription} from "@/components/ui/dialog",
+import { DisputeForm } from "./DisputeForm";
+import { useRouter } from 'next/router';
+import { ShieldAlert } from 'lucide-react';
 interface RaiseDisputeButtonProps {
   projectId: string;
   milestoneId?: string;
@@ -46,8 +47,7 @@ export function RaiseDisputeButton({
         variant={variant}
         size={size}
         className={className}
-        onClick={() => setIsDialogOpen(true)}
-      >
+        onClick={() => setIsDialogOpen(true)}      >
         <ShieldAlert className='h-4 w-4 mr-2' />
         Raise Dispute
       </Button>
@@ -66,13 +66,9 @@ export function RaiseDisputeButton({
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
-            onCancel={() => setIsDialogOpen(false)}
-          />
+            onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
       </Dialog>
     </>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

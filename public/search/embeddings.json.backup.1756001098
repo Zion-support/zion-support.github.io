@@ -21405,6 +21405,7 @@
     "route": "/",
     "vector": [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -21417,6 +21418,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       0,
@@ -21431,32 +21434,16 @@
       0,
       2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-      1,
 =======
-      3,
-      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
-      1,
-      1,
-      4,
-      5,
-      1,
-      0,
-      16,
-      0,
-      0,
-      1,
-      1,
-      5,
-      0,
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      1,
-=======
       1,      1,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -21464,10 +21451,14 @@
       1,      1,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21478,60 +21469,16 @@
       0,
 =======
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      2,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
 =======
-      1,
-      1,
-      3,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
-      1,
-      0,
-      0,
-      1,
-      0,
-      5,
-      3,
-      6,
-      0,
-      3,
       0,
       0,
       0,
-      5,
       0,
-      3,
-      0,
-      0,
-      1,
-      1,
-      0,
-      2,
-      3,
-      0,
-      5,
-      0,
-      1,
-      0,
-      4,
-      0,
-      0,
-      2,
-      2,
-      1,
-      0,
-      1,
-      0,
-      1,
-      0,
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      0,
-=======
       0,
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -21540,10 +21487,15 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       3,
       2,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21557,6 +21509,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       1,
@@ -21568,6 +21522,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21576,83 +21531,15 @@
       0,
 =======
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      1,
-      0,
-      3,
-      0,
-<<<<<<< HEAD
-      0,
-      2,
-      2,
-      3,
-      0,
-      0,
-      1,
-      4,
-      0,
-      1,
-      0,
-      4,
-      0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      4,
-      0,
-      4,
-      1,
-      4,
-      2,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      1,
-      2,
-      1,
-      2,
-      0,
-      0,
-      1,
-      1,
-      0,
-      1,
-      1,
-      4,
-      1,
-      0,
-      1,
-      3,
-      7,
-      0,
-      4,
-      1,
-      0,
-      0,
-      0,
 =======
-      2,
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      1,
       0,
-=======
+      3,
+      0,
+      0,
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -21660,11 +21547,15 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       8,
       0,
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -21677,6 +21568,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       7,
       1,
       7,
@@ -21689,6 +21582,7 @@
       0,
       1,
       2,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       0,
@@ -21702,6 +21596,8 @@
       0,      4,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -21720,6 +21616,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21736,10 +21633,13 @@
       0,
       3,
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       0,      4,
@@ -21756,6 +21656,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       3,
       4,
       1,
@@ -21765,6 +21667,7 @@
       1,
       3,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21799,11 +21702,15 @@
       1,      5,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      5,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21824,12 +21731,15 @@
       0,
       4,
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       5,
       2,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -21838,6 +21748,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       2,
       1,
@@ -21925,6 +21837,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -21933,26 +21846,11 @@
 =======
       1,
       3,
-      0,
-      3,
-      3,
-      0,
-      0,
-      0,
-      1,
-      0,
-      4,
-      17,
-      0,
-      0,
-      0,
-      9,
-      1,
-      0,
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       1,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -21960,10 +21858,14 @@
       1,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       4,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -21977,6 +21879,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       3,
       0,
@@ -21984,6 +21888,7 @@
       1,
       0,
       3,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22069,9 +21974,11 @@
       0,
       8,
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      0
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0
       2,      0
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -22079,6 +21986,9 @@
       2,      0
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      2,      0
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     ]
   },
   {
@@ -47146,6 +47056,7 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -47158,6 +47069,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -47185,6 +47098,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -47192,6 +47106,8 @@
       0,
 =======
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -47199,15 +47115,9 @@
       1,
       0,
       0,
-<<<<<<< HEAD
-      2,
       0,
-      0,
-=======
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      0,
-=======
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -47215,6 +47125,9 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -47245,6 +47158,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47254,22 +47168,16 @@
       1,
 =======
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-      1,
-      0,
-      0,
-      0,
-      0,
 =======
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
-=======
+      0,
+      0,
+      0,
+      0,
+      0,
       1,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -47277,6 +47185,9 @@
       1,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -47297,6 +47208,7 @@
       1,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47305,35 +47217,11 @@
 <<<<<<< HEAD
       3,
 =======
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       3,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -47341,6 +47229,9 @@
       3,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      3,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -47364,6 +47255,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -47377,6 +47269,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -47389,6 +47283,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47402,6 +47297,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -47419,19 +47316,18 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
-      0,
 =======
-      1,
->>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
-=======
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -47439,6 +47335,9 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -47482,6 +47381,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47495,6 +47395,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -47504,6 +47406,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -47512,6 +47415,8 @@
 =======
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,      0,
       0,
       0,
@@ -47519,10 +47424,13 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,      0,
       0,
       0,
@@ -47530,8 +47438,11 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -47541,6 +47452,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47560,12 +47472,15 @@
       0,
       0,
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
@@ -47573,6 +47488,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       0,
@@ -47588,6 +47505,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47602,10 +47520,13 @@
       0,
       0,
 >>>>>>> origin/cursor/enhance-zion-s-branding-and-messaging-84ae
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       0,
@@ -47620,6 +47541,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       1,
       0,

@@ -8,7 +8,6 @@ import { Trash2, Download, Share2 } from 'lucide-react';
 import { Send } from 'lucide-react'; // Added Send icon
 import { toast } from 'sonner';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface WhitepaperSection {
   id: string;
 title: string;
@@ -208,7 +207,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
     legalDisclaimers,
     sections,
   ]);
-
   const parseWhitepaperDraft = useCallback(
     (draft: string): WhitepaperSection[] => {
       if (!draft) return [];
@@ -251,7 +249,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
       prev.map(item => (item.id === id ? { ...item, [field]: value } : item))
     );
   };
-
   const addDistributionItem = () => {
     setDistributionData(prev => [
       ...prev,
@@ -262,8 +259,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
   const removeDistributionItem = (id: string) => {
     setDistributionData(prev => prev.filter(item => item.id !== id));
   };
-
-  const distributionChartData: DistributionChartItem[] = React.useMemo(() => {
+  const distributionChartData: DistributionChartItem[] = React.useMemo((,) => {
     return distributionData
       .map(item => ({
         name: item.name || 'Unnamed',
@@ -284,8 +280,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
     const totalPercentage = processedDistData.reduce(
       (sum, item) => sum + item.percentage,
       0
-    );
-    if (totalPercentage > 100) {
+    );    if (totalPercentage > 100) {
       setError('Total distribution percentage cannot exceed 100%.');
       setIsLoading(false);
       return;
@@ -354,13 +349,14 @@ const WhitepaperGeneratorPage: React.FC = () => {
     }
   };
 
-  const handleSectionContentChange = (id: string, newContent: string) => {
+  const handleSectionContentChange = (id: string, newContent: string,) => {
     setSections(prevSections =>
       prevSections.map(section =>
         section.id === id ? { ...section, content: newContent } : section
       )
     );
   };
+
   const assembleMarkdownContent = (): string => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`;
     mdContent += `**Total Supply:** ${tokenSupply}\n\n`;
@@ -439,7 +435,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
           // This is advanced usage of html2canvas.
         },
       });
-
       const imgData = canvas.toDataURL('image/png');
       const pdf = new jsPDF('p', 'mm', 'a4');
       const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -828,8 +823,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                   aria-label='Remove'
                 >
                   <Trash2 className='h-4 w-4' />
-                </Button>
-              </div>
+                </Button>              </div>
             ))}
             <Button
               type='button'
@@ -852,8 +846,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                 onChange={e => setDistributionBreakdown(e.target.value)}
                 className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
                 rows={2}
-              />
-            </div>
+              />            </div>
           </div>
 
           <div>
@@ -886,8 +879,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
               required
               className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
               rows={3}
-            />
-          </div>
+            />          </div>
           {/* END OF INPUT FIELDS */}
 
           <Button
@@ -897,8 +889,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
               isLoading || isDownloading || isSharing || isSubmittingToCounsel
             }
             size='lg'
-            className='w-full'
-          >
+            className='w-full'          >
             {isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
           </Button>
 
@@ -932,8 +923,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                     currentSharedWhitepaperIsPublic
                       ? 'bg-red-100 hover:bg-red-200'
                       : 'bg-green-100 hover:bg-green-200'
-                  }
-                >
+                  }                >
                   {currentSharedWhitepaperIsPublic
                     ? 'Make Private'
                     : 'Make Public'}
@@ -955,8 +945,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                   }}
                 >
                   Copy
-                </Button>
-              </div>
+                </Button>              </div>
               {currentSharedWhitepaperIsPublic !== null && (
                 <p className='text-xs mt-1 text-gray-600'>
                   Currently:{' '}
@@ -983,8 +972,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
               }
               variant='default'
               size='lg'
-              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'
-            >
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
               <Send className='mr-2 h-4 w-4' />
               {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
             </Button>
@@ -1009,8 +997,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                 content={section.content}
                 onContentChange={newContent =>
                   handleSectionContentChange(section.id, newContent)
-                }
-              />
+                }              />
             ))}
           </div>
         )}
@@ -1022,8 +1009,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
               size='sm'
               className='w-full'
             >
-              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
-            </Button>
+              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>
             {showRawDraft && (
               <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>
                 {rawDraft}
@@ -1043,14 +1029,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
           sections={sections}
           distributionChartData={distributionChartData}
           tokenName={tokenName}
-          tokenSupply={tokenSupply}
-        />
+          tokenSupply={tokenSupply}        />
       </div>
     </div>
   );
 };
 export default WhitepaperGeneratorPage;
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

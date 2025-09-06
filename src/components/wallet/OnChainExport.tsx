@@ -1,11 +1,14 @@
 
 import React, { useState } from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Wallet, Info, Check, ChevronRight, ArrowUpRight} from 'lucide-react'
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-import {useToast} from "@/hooks/use-toast";
-import {useAuth} from "@/hooks/useAuth";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from "@/components/ui/tooltip";import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
@@ -27,13 +30,11 @@ export function OnChainExport() {
       }
       
       // Request accounts
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       
   
   
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

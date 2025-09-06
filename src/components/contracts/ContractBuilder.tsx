@@ -1,10 +1,9 @@
-
 interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
   talent: TalentProfile,
   clientName: string,
-  onContractGenerated?: (contractContent: string) => void
+  onContractGenerated?: (contractContent: string,) => void
 }
 
 export function ContractBuilder({
@@ -22,14 +21,13 @@ export function ContractBuilder({
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
+  const handleLoadTemplate = (templateData: ContractFormValues,) => {
     setFormValues(templateData)
   };
 
   const handleContractGenerated = (contract: string) => {
     setGeneratedContract(contract);
-    setActiveTab("preview"),
-    if (onContractGenerated) {
+    setActiveTab("preview");    if (onContractGenerated) {
       onContractGenerated(contract)
     }
   };
@@ -39,12 +37,11 @@ export function ContractBuilder({
       <SmartContractBuilder
         isOpen={isOpen}
         onClose={() => {
-          setShowSmartContractBuilder(false);
-          onClose()
+          setShowSmartContractBuilder(false);          onClose()
         }}
-        talent={talent}
-        clientName={clientName}
-        onContractGenerated={onContractGenerated}
+        talent = {talent,}
+        clientName = {clientName,}
+        onContractGenerated = {onContractGenerated,}
       />
     )
   }
@@ -66,7 +63,7 @@ export function ContractBuilder({
               <Button 
                 variant="outline" 
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -76,7 +73,7 @@ export function ContractBuilder({
               <Button
                 variant="secondary"
                 size="sm"
-                onClick={() => setShowSmartContractBuilder(true)}
+                onClick = {() => setShowSmartContractBuilder(true),}
               >
                 Smart Contract Builder
               </Button>
@@ -85,20 +82,20 @@ export function ContractBuilder({
           
           <TabsContent value="form" className="pt-4">
             <ContractForm 
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleContractGenerated}
+              talent = {talent,}
+              clientName = {clientName,}
+              initialValues = {formValues,}
+              onFormValuesChange = {setFormValues,}
+              onContractGenerated = {handleContractGenerated,}
             />
           </TabsContent>
           
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
               <ContractPreview 
-                contractContent={generatedContract}
-                talent={talent}
-                onClose={onClose}
+                contractContent = {generatedContract,}
+                talent = {talent,}
+                onClose = {onClose,}
                 status="ready"
               />
             )}
@@ -106,10 +103,10 @@ export function ContractBuilder({
         </Tabs>
         
         <TemplateManager
-          isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
         />
       </DialogContent>
     </Dialog>
@@ -138,8 +135,4 @@ export function ContractBuilder({
 }currentValues= {;
   formValues ;
 }/> </DialogContent> </Dialog>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

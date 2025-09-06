@@ -8,7 +8,6 @@ interface Msg {
   id: string;
   role: 'user' | 'assistant';
   message: string;
-
 // Fallback responses when API is unavailable
 const FALLBACK_RESPONSES = [
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
@@ -38,7 +37,6 @@ export function SupportChatbot() {
     setMessages(prev => [...prev, userMsg]);
     setLoading(true);
     setTyping(true);
-
     try {
       // Try the Supabase AI chat function first with streaming
       let res = await fetch(
@@ -93,8 +91,7 @@ export function SupportChatbot() {
             role: 'assistant',
             message: finalMsg,
           },
-        ]);
-      } else if (res.body) {
+        ]);      } else if (res.body) {
         const botId = Date.now().toString() + '-a';
         setMessages(prev => [
           ...prev,
@@ -177,8 +174,7 @@ export function SupportChatbot() {
         size='icon'
         variant='outline'
         className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
-        aria-label='Open help chat'
-      >
+        aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
       </Button>
     );
@@ -193,8 +189,7 @@ export function SupportChatbot() {
           size='icon'
           className='text-white'
           onClick={() => setOpen(false)}
-          aria-label='Close help bot'
-        >
+          aria-label='Close help bot'        >
           <X className='h-5 w-5' />
         </Button>
       </div>
@@ -258,7 +253,5 @@ setTyping (false) ;
   endRef ;
 }/> </div> </div> </div>) ;
 }'"
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

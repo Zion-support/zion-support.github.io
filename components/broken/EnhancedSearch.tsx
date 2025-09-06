@@ -17,8 +17,6 @@ setIsSearching (false)
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
   
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 }, []);
 //Handle filter toggle const toggleFilter = (filterId: string) => {
   setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId) 
@@ -175,7 +173,6 @@ setIsSearching (false)
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number 
 }export default EnhancedSearch;
-
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
   func: T,
@@ -189,5 +186,3 @@ function debounce<T extends (...args: any[]) => any>(
 }
 
 export default EnhancedSearch;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -33,7 +33,6 @@ import {
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-
 interface SearchResult {
   id: string;
   title: string;
@@ -69,8 +68,7 @@ const HighlightText: React.FC<{
   text: string;
   searchTerm: string;
   className?: string;
-}> = ({ text, searchTerm, className = '' }) => {
-  if (!searchTerm.trim()) {
+}> = ({ text, searchTerm, className = '' }) => {  if (!searchTerm.trim()) {
     return <span className={className}>{text}</span>;
   }
 
@@ -80,8 +78,7 @@ const HighlightText: React.FC<{
 
   return (
     <span className={className}>
-      {parts.map((part, index) =>
-        part.toLowerCase() === searchTerm.toLowerCase() ? (
+      {parts.map((part, index) =>        part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className='bg-yellow-200 text-black px-1 rounded'>
             {part}
           </mark>
@@ -100,7 +97,6 @@ const SearchResultCard: React.FC<{
   viewMode: 'grid' | 'list';
 }> = ({ result, searchTerm, viewMode }) => {
   const router = useRouter();
-
   const handleClick = () => {
     if (result.url) {
       router.push(result.url);
@@ -123,8 +119,7 @@ const SearchResultCard: React.FC<{
               viewMode === 'grid'
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
-            }
-          />
+            }          />
         </div>
       )}
 
@@ -163,8 +158,7 @@ const SearchResultCard: React.FC<{
               </Badge>
             )}
             {result.tags?.slice(0, 3).map((tag, index) => (
-              <Badge key={index} variant='outline' className='text-xs'>
-                <HighlightText text={tag} searchTerm={searchTerm} />
+              <Badge key={index} variant='outline' className='text-xs'>                <HighlightText text={tag} searchTerm={searchTerm} />
               </Badge>
             ))}
           </div>
@@ -186,8 +180,7 @@ const FilterSidebar: React.FC<{
   filters: SearchFilters;
   onFiltersChange: (filters: SearchFilters) => void;
   availableCategories: string[];
-}> = ({ filters, onFiltersChange, availableCategories }) => {
-  const typeOptions = [
+}> = ({ filters, onFiltersChange, availableCategories }) => {  const typeOptions = [
     { id: 'product', label: 'Products' },
     { id: 'talent', label: 'Talent' },
     { id: 'service', label: 'Services' },
@@ -195,8 +188,7 @@ const FilterSidebar: React.FC<{
   ];
 
   const handleTypeChange = (typeId: string, checked: boolean) => {
-    const newTypes = checked
-      ? [...filters.types, typeId]
+    const newTypes = checked      ? [...filters.types, typeId]
       : filters.types.filter(t => t !== typeId);
 
     onFiltersChange({ ...filters, types: newTypes });
@@ -209,7 +201,6 @@ const FilterSidebar: React.FC<{
       maxPrice: values[1] ?? 10000,
     });
   };
-
   return (
     <div className='space-y-6'>
       <div>
@@ -222,8 +213,7 @@ const FilterSidebar: React.FC<{
                 checked={filters.types.includes(option.id)}
                 onCheckedChange={checked =>
                   handleTypeChange(option.id, !!checked)
-                }
-              />
+                }              />
               <label htmlFor={option.id} className='text-sm'>
                 {option.label}
               </label>
@@ -244,8 +234,7 @@ const FilterSidebar: React.FC<{
               category: value === 'all' ? '' : value,
             })
           }
-        >
-          <SelectTrigger>
+        >          <SelectTrigger>
             <SelectValue placeholder='All Categories' />
           </SelectTrigger>
           <SelectContent>
@@ -270,8 +259,7 @@ const FilterSidebar: React.FC<{
             min={0}
             max={10000}
             step={50}
-            className='mb-2'
-          />
+            className='mb-2'          />
           <div className='flex justify-between text-sm text-muted-foreground'>
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
@@ -288,8 +276,7 @@ const FilterSidebar: React.FC<{
           onValueChange={value =>
             onFiltersChange({ ...filters, minRating: parseFloat(value) })
           }
-        >
-          <SelectTrigger>
+        >          <SelectTrigger>
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -310,8 +297,7 @@ const FilterSidebar: React.FC<{
 const NoResultsState: React.FC<{
   searchTerm: string;
   onNewSearch: (term: string) => void;
-}> = ({ searchTerm, onNewSearch }) => {
-  const suggestions = [
+}> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
     'AI & Machine Learning',
     'Web Development',
     'Mobile App Development',
@@ -340,8 +326,7 @@ const NoResultsState: React.FC<{
                 key={index}
                 variant='outline'
                 size='sm'
-                onClick={() => onNewSearch(suggestion)}
-              >
+                onClick={() => onNewSearch(suggestion)}              >
                 {suggestion}
               </Button>
             ))}
@@ -387,15 +372,14 @@ export const AdvancedSearchResults: React.FC = () => {
 
   // Extract available categories from results for filter
   const availableCategories = useMemo(() => {
-    const categories = new Set<string>();
-    results.forEach(result => {
+    const categories = new Set<string>();    results.forEach(result => {
       if (result.category) categories.add(result.category);
     });
     return Array.from(categories).sort();
   }, [results]);
 
   // Sync search term with URL
-  useEffect(() => {
+  useEffect((,) => {
     if (router.isReady && router.query.q) {
       const urlTerm = router.query.q as string;
       setSearchTerm(urlTerm);
@@ -407,8 +391,7 @@ export const AdvancedSearchResults: React.FC = () => {
     term: string,
     page: number = 1,
     newFilters?: SearchFilters
-  ) => {
-    if (!term.trim()) {
+  ) => {    if (!term.trim()) {
       setResults([]);
       setTotalCount(0);
       return;
@@ -470,7 +453,7 @@ export const AdvancedSearchResults: React.FC = () => {
   };
 
   // Search when term or filters change
-  useEffect(() => {
+  useEffect((,) => {
     if (searchTerm.trim()) {
       performSearch(searchTerm, 1, filters);
       setCurrentPage(1);
@@ -489,7 +472,6 @@ export const AdvancedSearchResults: React.FC = () => {
   const handleFiltersChange = (newFilters: SearchFilters) => {
     setFilters(newFilters);
   };
-
   // Load more results
   const loadMore = () => {
     if (hasMore && !loading) {
@@ -515,8 +497,7 @@ export const AdvancedSearchResults: React.FC = () => {
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion.text)}
               searchSuggestions={suggestions}
-              placeholder='Search products, talent, services, and more...'
-            />
+              placeholder='Search products, talent, services, and more...'            />
           </div>
           <Button
             onClick={() => handleSearch(searchTerm)}
@@ -543,8 +524,7 @@ export const AdvancedSearchResults: React.FC = () => {
                 value={filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
               >
-                <SelectTrigger className='w-40'>
-                  <SelectValue />
+                <SelectTrigger className='w-40'>                  <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value='relevance'>Relevance</SelectItem>
@@ -559,15 +539,13 @@ export const AdvancedSearchResults: React.FC = () => {
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
                   size='sm'
-                  onClick={() => setViewMode('grid')}
-                >
+                  onClick={() => setViewMode('grid')}                >
                   <GridIcon className='h-4 w-4' />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
                   size='sm'
-                  onClick={() => setViewMode('list')}
-                >
+                  onClick={() => setViewMode('list')}                >
                   <List className='h-4 w-4' />
                 </Button>
               </div>
@@ -587,9 +565,9 @@ export const AdvancedSearchResults: React.FC = () => {
                   </SheetHeader>
                   <div className='mt-6'>
                     <FilterSidebar
-                      filters={filters}
-                      onFiltersChange={handleFiltersChange}
-                      availableCategories={availableCategories}
+                      filters = {filters,}
+                      onFiltersChange = {handleFiltersChange,}
+                      availableCategories = {availableCategories,}
                     />
                   </div>
                 </SheetContent>
@@ -619,16 +597,15 @@ export const AdvancedSearchResults: React.FC = () => {
                         minRating: 0,
                         sort: 'relevance',
                       })
-                    }
-                  >
+                    }                  >
                     Clear All
                   </Button>
                 )}
               </div>
               <FilterSidebar
-                filters={filters}
-                onFiltersChange={handleFiltersChange}
-                availableCategories={availableCategories}
+                filters = {filters,}
+                onFiltersChange = {handleFiltersChange,}
+                availableCategories = {availableCategories,}
               />
             </div>
           </div>
@@ -642,8 +619,7 @@ export const AdvancedSearchResults: React.FC = () => {
             ) : results.length === 0 && searchTerm ? (
               <NoResultsState
                 searchTerm={searchTerm}
-                onNewSearch={handleSearch}
-              />
+                onNewSearch={handleSearch}              />
             ) : (
               <>
                 {/* Results Grid/List */}
@@ -654,12 +630,11 @@ export const AdvancedSearchResults: React.FC = () => {
                       : 'space-y-4 mb-6'
                   }
                 >
-                  {results.map(result => (
-                    <SearchResultCard
+                  {results.map(result => (                    <SearchResultCard
                       key={`${result.type}-${result.id}`}
-                      result={result}
-                      searchTerm={searchTerm}
-                      viewMode={viewMode}
+                      result = {result,}
+                      searchTerm = {searchTerm,}
+                      viewMode = {viewMode,}
                     />
                   ))}
                 </div>
@@ -670,8 +645,7 @@ export const AdvancedSearchResults: React.FC = () => {
                     <Button
                       onClick={loadMore}
                       disabled={loading}
-                      variant='outline'
-                    >
+                      variant='outline'                    >
                       {loading ? (
                         <>
                           <Loader2 className='h-4 w-4 mr-2 animate-spin' />
@@ -751,7 +725,5 @@ setHasMore (data.hasMore);
 };
 export default AdvancedSearchResults;
 '"
-=======
 export default AdvancedSearchResults, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export default AdvancedSearchResults, 

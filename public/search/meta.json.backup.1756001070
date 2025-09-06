@@ -72,6 +72,7 @@
   {
     "route": "/_document",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -81,9 +82,11 @@
 =======
     "title": "",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-25a3
-    "h1": ""
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "h1": ""
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -91,6 +94,9 @@
     "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "title": "Zion Tech Group - Pioneering Autonomous Business Operations",    "h1": ""
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/about",
@@ -430,6 +436,7 @@
   {
     "route": "/",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -441,10 +448,12 @@
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
     "h1": "Zion Tech Group"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-25a3
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "title": "",
     "h1": ""  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -453,6 +462,10 @@
     "h1": ""  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "title": "",
+    "h1": ""  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   {
     "route": "/innovative-services-showcase-2025",
     "title": "Innovative Services Showcase 2025 | Zion Tech Group",
@@ -645,6 +658,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -658,11 +672,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/revolutionary-2025-services-showcase",
     "title": "Revolutionary 2025 Services Showcase | Zion Tech Group",
     "h1": "Revolutionary 2025 Services"
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -676,6 +693,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/revolutionary-2028-pricing",
     "title": "2028 Revolutionary Pricing - Zion Tech Group",
     "h1": ""

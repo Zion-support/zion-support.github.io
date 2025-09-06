@@ -51,8 +51,6 @@ import {
   Eye,
   FlaskConical,
   Link as LinkIcon,;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-} from 'lucide-react';
 import Button from '../ui/Button';
 
 export default function NeoFuturisticNavigation() {
@@ -892,8 +890,7 @@ export default function NeoFuturisticNavigation() {
 }/> </button>) ) 
 }</div>) 
 }</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>) 
-}</nav>) 
-								<div className="mt-6 space-y-3">
+}</nav>) 								<div className="mt-6 space-y-3">
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services
 										<ArrowRight className="w-5 h-5 ml-2" />
@@ -910,5 +907,3 @@ export default function NeoFuturisticNavigation() {
 		</nav>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

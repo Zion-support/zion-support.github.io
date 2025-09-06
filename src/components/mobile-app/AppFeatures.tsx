@@ -36,8 +36,7 @@ export const AppFeatures: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">
-              <CardHeader>
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">              <CardHeader>
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>
               </CardHeader>
@@ -80,6 +79,3 @@ export const AppFeatures: React.FC = () => {";
 }</div> </div> </section>) ;
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

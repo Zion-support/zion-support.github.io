@@ -502,9 +502,7 @@ export const emergingTech2027Services: Service[] = [
       'Research',
     ],
   },
-];
-=======
-      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
+];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
     ];
     marketSize: '$17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
@@ -514,5 +512,3 @@ export const emergingTech2027Services: Service[] = [
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

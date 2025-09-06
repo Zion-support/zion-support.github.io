@@ -366,7 +366,10 @@ class SmartDeploymentMerge {
         if (line.startsWith('<<<<<<<')) {
           inConflict = true;
           conflictType = 'ours';
+<<<<<<< HEAD
         } else if (line.startsWith('')) {
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           conflictType = 'theirs';
           inConflict = false;
           conflictType = '';

@@ -10,9 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     discount: '20%',
     leadInvestor: 'TBD',
   });
-  res.status(200).json(terms);
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   const terms = readJsonFile('deal/terms.json', {
     round: 'Series A',
@@ -22,5 +20,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     leadInvestor: 'TBD'});
   res.status(200).json(terms)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

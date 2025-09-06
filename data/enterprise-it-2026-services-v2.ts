@@ -1,7 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface EnterpriseIT2026ServiceV2 {
+export interface EnterpriseIt2026ServiceV2 {
   id: string;
   name: string;
   tagline: string;
@@ -42,16 +41,12 @@ export interface EnterpriseIT2026ServiceV2 {
   reviews: number;
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
   // Zero Trust Network Architecture
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'zero-trust-network-architecture-pro',
     name: 'Zero Trust Network Architecture Pro',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
@@ -59,9 +54,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     period: '/month',
     description:
       'Advanced zero trust network architecture platform that implements comprehensive security controls and continuous verification. Perfect for enterprises, government agencies, and organizations requiring maximum security.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Identity verification',
       'Device trust scoring',
       'Continuous monitoring',
@@ -786,9 +778,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     rating: 4.9,
     reviews: 180,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -801,5 +791,3 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     reviews: 180
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

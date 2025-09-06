@@ -1,14 +1,8 @@
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
-import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
+import ErrorBoundary from '@/components/GlobalErrorBoundary';
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-=======
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-import {Briefcase, HardDrive, Lightbulb, Users} from 'lucide-react'
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 const categories = [
@@ -17,8 +11,6 @@ const categories = [
     description: 'On-demand IT support, consulting, development, and more',
     icon: <Briefcase className='w-10 h-10' />,
     link: '/services', // Link for the card itself
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    color: undefined, // Let CategoryCard use default color
   },
   {
     title: 'Talents',
@@ -43,6 +35,7 @@ const categories = [
   },
 ];
 
+
 export default function AllCategoriesPage() {
   return (
     <div className='min-h-screen bg-zion-blue'>
@@ -62,28 +55,32 @@ export default function AllCategoriesPage() {
 
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {categories.map(category => (              <CategoryCard
-=======
-          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-            Explore our extensive range of AI services and products.
-            Find exactly what you're looking for to enhance your business or personal projects.
-          </p>
-        </div>
+            {categories.map(category => (
+              <CategoryCard
+                key={category.id}
+                title={category.title}
+                description={category.description}
+                icon={category.icon}
+                href={category.href}
+              />
+            ))}
+          </div>
 
         <ErrorBoundary>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {categories.map(category => (
-=======
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <CategoryCard
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
+            {categories.map((category,) => (
+              <CategoryCard
+                key = {category.title,}
+                title = {category.title,}
+                description = {category.description,}
+                icon = {category.icon,}
                 // The CategoryCard itself is a Link to its specific category page
                 // So we don't pass the category.link to a 'to' prop here directly
                 // The 'link' in the categories array above is used by CategoryCard's internal Link
@@ -95,7 +92,3 @@ export default function AllCategoriesPage() {
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

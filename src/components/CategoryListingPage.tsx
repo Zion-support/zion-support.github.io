@@ -13,7 +13,6 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Example listing type
 interface Listing {
   id: string;
@@ -84,8 +83,7 @@ export function CategoryListingPage({
     setIsLoading(true);
     const timeout = setTimeout(() => {
       if (mounted) setIsLoading(false);
-    }, 300);
-    return () => {
+    }, 300);    return () => {
       mounted = false;
       clearTimeout(timeout);
     };
@@ -112,7 +110,7 @@ export function CategoryListingPage({
 
       return matchesSearch;
     })
-    .sort((a, b) => {
+    .sort((a, b,) => {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
@@ -159,8 +157,7 @@ export function CategoryListingPage({
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setSearchQuery(e.target.value)
                   }
-                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'
-                />
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
               </div>
 
               <Select value={selectedSort} onValueChange={setSelectedSort}>
@@ -183,8 +180,7 @@ export function CategoryListingPage({
                       key={option.value}
                       value={option.value}
                       className='text-white'
-                    >
-                      {option.label}
+                    >                      {option.label}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -207,8 +203,7 @@ export function CategoryListingPage({
                       key={option.value}
                       value={option.value}
                       className='text-white'
-                    >
-                      {option.label}
+                    >                      {option.label}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -230,19 +225,18 @@ export function CategoryListingPage({
               <ListingGridSkeleton />
             ) : processedListings.length > 0 ? (
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                {processedListings.map(listing => (
-                  <ListingScoreCard
-                    key={listing.id}
-                    title={listing.title}
-                    description={listing.description}
-                    category={listing.subcategory || listing.category}
-                    image={listing.image}
-                    tags={listing.tags}
-                    author={listing.author}
-                    authorImage={listing.authorImage}
-                    aiScore={listing.aiScore}
-                    rating={listing.rating}
-                    reviewCount={listing.reviewCount}
+                {processedListings.map(listing => (                  <ListingScoreCard
+                    key = {listing.id,}
+                    title = {listing.title,}
+                    description = {listing.description,}
+                    category = {listing.subcategory || listing.category,}
+                    image = {listing.image,}
+                    tags = {listing.tags,}
+                    author = {listing.author,}
+                    authorImage = {listing.authorImage,}
+                    aiScore = {listing.aiScore,}
+                    rating = {listing.rating,}
+                    reviewCount = {listing.reviewCount,}
                   />
                 ))}
               </div>
@@ -258,8 +252,7 @@ export function CategoryListingPage({
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('');
-                    setSelectedFilter(filterOptions[0]?.value || 'all');
-                  }}
+                    setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                 >
                   Clear all filters
@@ -353,8 +346,4 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }";
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

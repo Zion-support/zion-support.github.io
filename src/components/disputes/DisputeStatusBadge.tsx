@@ -5,7 +5,6 @@ import {
   TooltipContent,
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed';
@@ -45,7 +44,4 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>
     </Tooltip>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

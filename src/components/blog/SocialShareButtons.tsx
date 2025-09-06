@@ -2,7 +2,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
-
 interface SocialShareButtonsProps {
   title: string;
 
@@ -41,7 +40,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'));
   };
-
   const buttons = [
     {
       icon: <Twitter className='h-4 w-4' />,
@@ -74,14 +72,11 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
           size='sm'
           onClick={btn.onClick}
           aria-label={btn.label}
-        >
-          {btn.icon}
+        >          {btn.icon}
           <span>{btn.label}</span>
         </Button>
       ))}
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

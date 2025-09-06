@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCw, WifiOff } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface ApiErrorBoundaryProps {
   children: ReactNode;
   queryClient?: QueryClient;
@@ -45,8 +44,7 @@ export class ApiErrorBoundary extends Component<
       errorInfo: null,
       isRetrying: false,
       isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
-    };
-  }
+    };  }
 
   static getDerivedStateFromError(
     error: Error
@@ -65,7 +63,6 @@ export class ApiErrorBoundary extends Component<
       scope.setLevel('error');
       Sentry.captureException(error);
     });
-
     this.setState({
       error,
       errorInfo,
@@ -115,7 +112,7 @@ export class ApiErrorBoundary extends Component<
       }
 
       // Reset error state after a brief delay
-      this.retryTimeoutId = setTimeout(() => {
+      this.retryTimeoutId = setTimeout((,) => {
         this.setState({
           hasError: false,
           error: null,
@@ -173,8 +170,7 @@ export class ApiErrorBoundary extends Component<
               <Button
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
-                className='w-full'
-              >
+                className='w-full'              >
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className='mr-2 h-4 w-4 animate-spin' />
@@ -191,8 +187,7 @@ export class ApiErrorBoundary extends Component<
               <Button
                 variant='outline'
                 onClick={() => window.location.reload()}
-                className='w-full'
-              >
+                className='w-full'              >
                 Reload Page
               </Button>
             </div>
@@ -232,11 +227,9 @@ export const useApiErrorHandler = () => {
       Sentry.captureException(error);
     });
   };
-
   return { handleApiError };
 };
-=======
   return { handleApiError }
 }, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  return { handleApiError }
+}, 

@@ -1,7 +1,5 @@
 "use client";
 import { useState } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export default function OSDeployPage() {
   const [loading, setLoading] = useState(false);
 
@@ -17,8 +15,7 @@ export default function OSDeployPage() {
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-    // Handle form submission
+      <div className="max-w-4xl mx-auto">    // Handle form submission
   };
 
   const loading = false;
@@ -28,31 +25,24 @@ export default function OSDeployPage() {
   // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
   
-  const labelFor = (key: string) => { const labels: { [key: string]: string  } = {
-      ai: 'AI Integration',
+  const labelFor = (key: string) => { const labels: { [key: string]: string  } = {      ai: 'AI Integration',
       blockchain: 'Blockchain Technology',
-      governance: 'Governance System',
+      governance: 'Governance System';
       treasury: 'Treasury Management'
     };
     return labels[key] || key;
   };
 
-  const getFeatureDescription = (key: string) => { const descriptions: { [key: string]: string  } = {
-      ai: 'Advanced AI capabilities',
+  const getFeatureDescription = (key: string) => { const descriptions: { [key: string]: string  } = {      ai: 'Advanced AI capabilities',
       blockchain: 'Blockchain infrastructure',
-      governance: 'Decentralized governance',
+      governance: 'Decentralized governance';
       treasury: 'Community treasury management'
     };
     return descriptions[key] || 'Feature description';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  };
 
   return (
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
       <div className="max-w-4xl mx-auto">
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">🚀 Deploy Zion OS Instance</h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             Create a new digital economy with AI-powered automation and blockchain integration
@@ -106,7 +96,6 @@ export default function OSDeployPage() {
                 </div>              </div>
             </div>
           </div>
-
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>
                 <input
@@ -130,22 +119,16 @@ export default function OSDeployPage() {
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
                 />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              </div>
             </div>
           </div>
 
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          <div className="text-center">
             <button 
               type="submit"
               disabled={loading}
               className="btn-primary text-lg px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? "Deploying..." : "🚀 Deploy Instance"}
-            </button>          </div>
-            {message && (
+            </button>          </div>            {message && (
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
@@ -156,15 +139,8 @@ export default function OSDeployPage() {
                 {message}
               </div>
             )}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </form>
       </div>
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

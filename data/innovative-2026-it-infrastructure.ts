@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface Innovative2026ITInfrastructureService {
   id: string;
   name: string;
   tagline: string;
@@ -489,8 +487,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4.8,
       reviews: 550,
     },
-  ];
-    features: [
+  ];    features: [
       'Quantum-resistant encryptionMulti-layer securityAutomated backup and recoveryGlobal data distributionCompliance certificationsReal-time monitoringDisaster recoveryData deduplication';
       'API accessMobile applications'
     ];
@@ -519,5 +516,3 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     reviews: 550
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

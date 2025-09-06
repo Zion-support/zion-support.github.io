@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
 import { Badge } from '@/components/ui/badge';
@@ -18,7 +17,16 @@ import {
 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
-import { getStripe } from '@/utils/getStripe';
+import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
+import { NextSeo } from '@/components/NextSeo';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { getStripe } from "@/utils/getStripe";
 import { useCart } from '@/context/CartContext';
 import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
 import { equipmentListings } from '@/data/equipmentData';
@@ -26,7 +34,6 @@ import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface EquipmentSpecification {
   name: string;
 value: string ;
@@ -78,8 +85,7 @@ function convertProductListingToEquipmentDetails(
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map(spec => ({
       name: spec,
-      value: '',
-    })),
+      value: '',    })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy',
@@ -94,7 +100,6 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
     },
     {} as { [key: string]: EquipmentDetails }
   );
-
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -109,7 +114,7 @@ export default function EquipmentDetail() {
 
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
 
-  useEffect(() => {
+  useEffect((,) => {
     async function loadEquipment() {
       if (!id) {
         setLoading(false);
@@ -261,15 +266,13 @@ export default function EquipmentDetail() {
                 <Button
                   onClick={() => router.back()}
                   variant='outline'
-                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'
-                >
+                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'                >
                   <ArrowLeft className='h-4 w-4 mr-2' />
                   Go Back
                 </Button>
                 <Button
                   onClick={() => router.push('/equipment')}
-                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'
-                >
+                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
                   Browse Equipment
                 </Button>
               </div>
@@ -284,7 +287,7 @@ export default function EquipmentDetail() {
     <>
       <NextSeo
         title={`${equipment.name} - Zion Marketplace`}
-        description={equipment.description}
+        description = {equipment.description,}
         openGraph={{
           title: `${equipment.name} - Zion Marketplace`,
           description: equipment.description,
@@ -304,8 +307,7 @@ export default function EquipmentDetail() {
           >
             <button
               onClick={() => router.push('/equipment')}
-              className='text-zion-cyan hover:text-white transition-colors'
-            >
+              className='text-zion-cyan hover:text-white transition-colors'            >
               Equipment
             </button>
             <span className='mx-2 text-zion-slate-light'>/</span>
@@ -331,16 +333,14 @@ export default function EquipmentDetail() {
                     'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
                   }
                   alt={equipment.name}
-                  className='object-cover'
-                />
+                  className='object-cover'                />
               </AspectRatio>
 
               {equipment.images.length > 1 && (
                 <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setSelectedImageIndex(index)}
+                  {equipment.images.map((image, index) => (                    <button
+                      key = {index,}
+                      onClick = {(,) => setSelectedImageIndex(index),}
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
                         selectedImageIndex === index
                           ? 'border-zion-cyan'
@@ -348,7 +348,7 @@ export default function EquipmentDetail() {
                       }`}
                     >
                       <ImageWithRetry
-                        src={image}
+                        src = {image,}
                         alt={`${equipment.name} view ${index + 1}`}
                         className='object-cover'
                       />
@@ -389,9 +389,8 @@ export default function EquipmentDetail() {
                 {equipment.rating && (
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
+                      {[...Array(5)].map((_, i) => (                        <Star
+                          key = {i,}
                           className={`h-4 w-4 ${
                             i < Math.floor(equipment.rating!)
                               ? 'text-yellow-400 fill-current'
@@ -452,8 +451,7 @@ export default function EquipmentDetail() {
                         </span>
                         <span className='text-white'>
                           {spec.value || 'Enterprise Grade'}
-                        </span>
-                      </div>
+                        </span>                      </div>
                     ))}
                   </div>
                 </div>
@@ -468,8 +466,7 @@ export default function EquipmentDetail() {
                       variant='outline'
                       size='sm'
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className='h-8 w-8 p-0'
-                    >
+                      className='h-8 w-8 p-0'                    >
                       -
                     </Button>
                     <span className='text-white w-8 text-center'>
@@ -479,8 +476,7 @@ export default function EquipmentDetail() {
                       variant='outline'
                       size='sm'
                       onClick={() => setQuantity(quantity + 1)}
-                      className='h-8 w-8 p-0'
-                    >
+                      className='h-8 w-8 p-0'                    >
                       +
                     </Button>
                   </div>
@@ -492,8 +488,7 @@ export default function EquipmentDetail() {
                   size='lg'
                   variant='outline'
                   className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
-                  data-testid='add-to-cart-button'
-                >
+                  data-testid='add-to-cart-button'                >
                   <ShoppingCart className='h-4 w-4 mr-2' />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
@@ -593,7 +588,5 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   equipment.returnPolicy ;
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
-}'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}
+

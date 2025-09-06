@@ -4,8 +4,6 @@ export const innovativeITInfrastructureServices2025 = [
     name: 'Quantum Edge Computing Orchestrator',
     description:
       'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum-enhanced edge processing with 1000x speed improvement',
       'Intelligent workload distribution and optimization',
       'Real-time data processing and analytics',
@@ -433,14 +431,10 @@ export const innovativeITInfrastructureServices2025 = [
       'Energy Star',
       'Industry-specific regulations',
     ],
-  },
-];
-=======
+  },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

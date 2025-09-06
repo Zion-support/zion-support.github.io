@@ -3,7 +3,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function TalentOnboardingSteps() {
   const { user } = useAuth();
@@ -41,7 +40,4 @@ export function TalentOnboardingSteps() {
   ];
 
   return <OnboardingTracker steps={steps} />;
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

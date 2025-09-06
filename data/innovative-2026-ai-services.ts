@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface Innovative2026AIService {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface Innovative2026AIService {
   reviews: number;
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-business-intelligence-suite',
     name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI',
@@ -59,9 +54,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     period: '/month',
     description:
       'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'AI-powered data analysis and visualization',
       'Predictive analytics and forecasting',
       'Natural language query interface',
@@ -479,9 +471,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 950,
-  },
-];
-=======
+  },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -495,5 +485,3 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

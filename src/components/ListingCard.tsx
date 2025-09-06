@@ -2,9 +2,18 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/image';interface ListingCardProps {
+  id?: string,
+  title: string,
+  description: string,
+  images?: string[],
+  category: string,
+  tags?: string[],
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string,
+  profileType?: 'service' | 'talent'
+}
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface ListingCardProps {
   id?: string;
   title: string;
@@ -32,16 +41,14 @@ export function ListingCard({
   const profileId =
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
-  
-    >
+      >
       {images && images.length > 0 && images[0] && (
         <div className='h-48 w-full overflow-hidden relative'>
           <Image
             src={images[0]}
             alt={title}
             className='object-cover transition-transform duration-300 group-hover:scale-105'
-            loading='lazy'
-          />
+            loading='lazy'          />
         </div>
       )}
       <div className='flex flex-col p-4 flex-grow'>
@@ -65,17 +72,16 @@ export function ListingCard({
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
-              >                {tag}
-=======
+              >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </Badge>
             ))}
           </div>
         )}
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {author && (
           <div className='flex items-center mt-auto pt-4 border-t border-zion-blue-light'>
             {author.avatarUrl ? (
@@ -90,17 +96,18 @@ export function ListingCard({
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />
             )}
-            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>
-=======
+            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
+          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
+            {author.avatarUrl ? (
+              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
+            ) : (
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
+            )}
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         )}
       </div>
     </Link>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+;"});})";

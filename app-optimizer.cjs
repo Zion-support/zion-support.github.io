@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 =======
@@ -57,6 +58,8 @@ class AppOptimizer {
 =======
 #!/usr/bin/env node;
 ;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -97,11 +100,6 @@ class AppOptimizer {;
 }
 ;
 // Run optimization;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-;
-// Run optimization;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const optimizer = new AppOptimizer();
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 optimizer.optimize().catch(console.error);

@@ -10,8 +10,6 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
 
@@ -38,12 +36,9 @@ export function TokenDisplay() {
               convert to credits.
             </p>
             <div className='mt-2'>
-              <Button variant='outline' size='sm'>                View Wallet
-=======
-            <div className="mt-2">
+              <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
               <Button variant="outline" size="sm">
                 View Wallet
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </Button>
             </div>
           </div>
@@ -52,7 +47,3 @@ export function TokenDisplay() {
     </Card>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

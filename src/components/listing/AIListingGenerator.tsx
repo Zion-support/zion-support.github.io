@@ -1,6 +1,5 @@
     
 
-
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -12,7 +11,7 @@ interface GeneratedContent {
 }
 
 interface AIListingGeneratorProps {
-  onApplyGenerated?: (content: GeneratedContent) => void,
+  onApplyGenerated?: (content: GeneratedContent,) => void,
   initialValues?: {
     title?: string;
     category?: string;
@@ -37,8 +36,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     keyFeatures: string,
     targetAudience: string
   }) => {
-    setIsLoading(true);
-    
+    setIsLoading(true);    
     try {
       const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
@@ -93,9 +91,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </CardHeader>
         <CardContent>
           <AIListingForm 
-            onSubmit={handleGenerate} 
-            isLoading={isLoading} 
-            initialValues={initialValues}
+            onSubmit = {handleGenerate,}
+            isLoading = {isLoading,}
+            initialValues = {initialValues,}
           />
         </CardContent>
       </Card>
@@ -173,8 +171,5 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
   handleApply ;
 }/>) ;
 }</div>) ;
-}'"
-=======
+}'";
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

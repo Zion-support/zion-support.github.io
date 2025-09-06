@@ -7,7 +7,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 
@@ -24,13 +23,11 @@ function MarketplaceErrorFallback({
       Sentry.captureException(retryError);    }
   };
 
-  return (
-=======
-function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
+  return (function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
   const handleRetry = async () => {
     try {
       // Re-call SWR mutate('*') to refresh all cached data
-      await mutate(() => true, undefined, { revalidate: true }),
+      await mutate((,) => true, undefined, { revalidate: true }),
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError }),
@@ -39,15 +36,10 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   };
 
   return (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <div className='flex items-center justify-center min-h-[400px] p-6'>
       <div className='max-w-md w-full space-y-4'>
         <Alert variant='destructive'>
           <AlertCircle className='h-4 w-4' />
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          <AlertTitle>Something went wrong in the marketplace</AlertTitle>
           <AlertDescription className='mt-2'>
             {error?.message ||
               'An unexpected error occurred while loading marketplace content.'}
@@ -66,40 +58,32 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
             className='w-full'          >
             Reload Page
           </Button>
-        </div>
-=======
+        </div>            variant="outline"
+            className="w-full"
+            onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
           >
             Reload Page
           </Button>
         </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
             href='mailto:support@example.com'
-<<<<<<< HEAD
-            className='text-primary hover:underline'          >
-=======
-        
+            className='text-primary hover:underline'          >        
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
-          >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             contact support
           </a>
         </div>
       </div>
     </div>
   );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode;
 
@@ -111,7 +95,6 @@ export function MarketplaceErrorBoundary({
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
       componentStack: errorInfo.componentStack,
     });
-
     Sentry.withScope(scope => {
       scope.setTag('errorBoundary', 'marketplace');
       scope.setContext('errorInfo', {
@@ -126,18 +109,12 @@ export function MarketplaceErrorBoundary({
       {children}
     </ErrorBoundary>
   );
-} 
-  return (
+}   return (
     <ErrorBoundary 
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     >
       {children}
     </ErrorBoundary>
   );
-<<<<<<< HEAD
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

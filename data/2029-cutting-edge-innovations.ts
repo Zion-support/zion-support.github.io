@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface CuttingEdge2029Service {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface CuttingEdge2029Service {
   reviews: number;
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Neural Interface Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-consciousness-simulation-platform',
     name: 'AI Consciousness Simulation Platform',
     tagline:
@@ -60,9 +55,6 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description:
       'Revolutionary platform that simulates human consciousness patterns in AI systems using quantum neural networks and advanced cognitive modeling. Perfect for research institutions, AI development companies, and consciousness studies.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum neural network architecture',
       'Consciousness pattern simulation',
       'Emotional intelligence modeling',
@@ -460,9 +452,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     rating: 4.8,
     reviews: 23,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -475,5 +465,3 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     reviews: 23
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -442,9 +442,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
   },
-];
-=======
-      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
@@ -461,5 +459,3 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     growthRate: '75% annually'
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -10,27 +10,19 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType>({
   role: 'talent',
   setRole: () => {},
-});
-=======
-  role: UserRole,
+});  role: UserRole,
   setRole: (role: UserRole) => void
 };
 
 const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [role, setRoleState] = useState<UserRole>('talent');
 
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem('userRole') as UserRole | null;
       if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored);      }
-=======
-        setRoleState(stored)
+        setRoleState(stored);      }        setRoleState(stored)
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } catch {}
   }, []);
 
@@ -41,32 +33,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
   };
 
-  return (
-=======
-    try { 
+  return (    try { 
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
     } catch {}
   };
 
   return (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <AuthContext.Provider value={{ role, setRole }}>
       {children}
     </AuthContext.Provider>
   );
 
 export function useAuth() {
-<<<<<<< HEAD
-  return useContext(AuthContext);
-=======
-    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
+  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
   )
 }
 
 export function useAuth() {
   return useContext(AuthContext);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

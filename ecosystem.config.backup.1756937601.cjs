@@ -1,5 +1,6 @@
 module.exports = {;
 <<<<<<< HEAD
+<<<<<<< HEAD
   app: s:[
     , {,
 =======
@@ -11,6 +12,8 @@ module.exports = {;
     {;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       nam:e:'ziontechgroup-web',;
       scrip:t:'npm',;
       arg:s:'start',;
@@ -19,6 +22,7 @@ module.exports = {;
       autorestar:t:true,;
       watc:h:false,;
       max_memory_restar:t:'1G',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38,6 +42,8 @@ module.exports = {;
       env_developmen:t:{;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         NODE_EN:V:'development',;
         POR:T:3000,;
       },;
@@ -55,6 +61,7 @@ module.exports = {;
       autorestar:t:true,;
       watc:h:false,;
 <<<<<<< HEAD
+<<<<<<< HEAD
       cron_restar:t:'*/5 * * * *', // Restart every 5 minutes: env:{,
 =======
 <<<<<<< HEAD
@@ -63,6 +70,8 @@ module.exports = {;
       cron_restar:t:'*/5 * * * *', // Restart every 5 minutes:env:{;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/health-check.log',;
@@ -78,6 +87,7 @@ module.exports = {;
       autorestar:t:true,;
       watc:h:false,;
 <<<<<<< HEAD
+<<<<<<< HEAD
       cron_restar:t:'0 */6 * * *', // Restart every 6 hours: env:{,
 =======
 <<<<<<< HEAD
@@ -86,6 +96,8 @@ module.exports = {;
       cron_restar:t:'0 */6 * * *', // Restart every 6 hours:env:{;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/security-scanner.log',;
@@ -101,6 +113,7 @@ module.exports = {;
       autorestar:t:true,;
       watc:h:false,;
 <<<<<<< HEAD
+<<<<<<< HEAD
       cron_restar:t:'0 */2 * * *', // Restart every 2 hours: env:{,
 =======
 <<<<<<< HEAD
@@ -109,10 +122,13 @@ module.exports = {;
       cron_restar:t:'0 */2 * * *', // Restart every 2 hours:env:{;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/performance-monitor.log',;
       out_fil:e:'./logs/performance-monitor-out.log',;
+<<<<<<< HEAD
 <<<<<<< HEAD
       error_fil:e:'./logs/performance-monitor-error.log',,
     },
@@ -125,4 +141,6 @@ module.exports = {;
     },;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ],;};

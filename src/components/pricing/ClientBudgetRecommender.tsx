@@ -10,7 +10,6 @@ import {
 import { PricingSuggestionBox } from './PricingSuggestionBox';
 import { useAuth } from '@/hooks/useAuth';
 import { Sparkles } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ClientBudgetRecommenderProps {
   jobTitle: string;
@@ -18,7 +17,14 @@ interface ClientBudgetRecommenderProps {
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
+  jobTitle: string,
+  category: string,
+  timeline?: string,
+  scope?: string,
+  experienceLevel?: string,
+  onSuggestionApplied: (minValue: number, maxValue: number,) => void
+}
 
 export const ClientBudgetRecommender: React.FC<
   ClientBudgetRecommenderProps
@@ -33,7 +39,6 @@ export const ClientBudgetRecommender: React.FC<
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
-
   const generateSuggestion = async () => {
     if (!jobTitle || !category) {
       return;
@@ -44,12 +49,9 @@ export const ClientBudgetRecommender: React.FC<
       const params: ClientBudgetParams = {
         jobTitle,
         category,
-      };
-=======
-        jobTitle;
+      };        jobTitle;
         category};
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       if (timeline) params.timeline = timeline;
       if (scope) params.scope = scope;
       if (experienceLevel) params.experienceLevel = experienceLevel;
@@ -91,8 +93,7 @@ export const ClientBudgetRecommender: React.FC<
             variant='outline'
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className='w-full'
-          >
+            className='w-full'          >
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
           </Button>
         ) : (
@@ -100,8 +101,7 @@ export const ClientBudgetRecommender: React.FC<
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType='hourly'
-          />
+            rateType='hourly'          />
         )}
       </div>
     </div>
@@ -120,7 +120,6 @@ return (<div className="space-y-4" > <div> {";
 }> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
 }</div> </div>) ;
 };
-'"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+'"  )
+},
+;

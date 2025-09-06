@@ -41,25 +41,18 @@ interface TextAnalysisResult {
     topWords: Array<{ word: string; count: number; frequency: number }>;
     bigrams: Array<{ phrase: string; count: number }>;
     trigrams: Array<{ phrase: string; count: number }>;
-  };
-    topWords: Array<{ word: string, count: number, frequency: number }>;
+  };    topWords: Array<{ word: string, count: number, frequency: number }>;
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }
-=======
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   try {
     const { text } = req.body;
@@ -71,15 +64,11 @@ export default async function handler(
     if (text.length > 10000) {
       return res
         .status(400)
-        .json({ error: 'Text too long (max 10,000 characters)' });    }
-=======
-      return res.status(400).json({ error: 'Text is required' })
+        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res.status(400).json({ error: 'Text is required' })
     }
 
     if (text.length > 10000) {
       return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Basic statistics
     const characters = text.length;
@@ -93,14 +82,10 @@ export default async function handler(
       .filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
-      .filter(para => para.trim().length > 0).length;
-=======
-    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+      .filter(para => para.trim().length > 0).length;    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -112,15 +97,11 @@ export default async function handler(
     };
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word);    }, 0);
-=======
-      return matches ? matches.length : 1
+      return total + syllableCount(word);    }, 0);      return matches ? matches.length : 1
     };
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
-    }, 0);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
     const readingTime = Math.ceil(words / 200);
@@ -164,8 +145,6 @@ export default async function handler(
       0,
       4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43
     );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
     const averageGrade = Math.round(
       (fleschKincaidGrade +
         gunningFog +
@@ -211,8 +190,7 @@ export default async function handler(
 
     const sentimentScore = positiveCount - negativeCount;
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
-    if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';
-    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
+    if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral';
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
     else sentimentLabel = 'very-positive';
 
@@ -226,30 +204,22 @@ export default async function handler(
         if (cleanWord.length > 2) {
           wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1);
         }
-      });
-    text.toLowerCase().split(/\s+/).forEach(word => {
+      });    text.toLowerCase().split(/\s+/).forEach(word => {
       const cleanWord = word.replace(/[^\w]/g, '');
       if (cleanWord.length > 2) {
         wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)
       }
     });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([word, count]) => ({
         word,
         count,
-        frequency: Math.round((count / words) * 1000) / 10,      }));
-=======
-        word;
+        frequency: Math.round((count / words) * 1000) / 10,      }));        word;
         count;
         frequency: Math.round((count / words) * 1000) / 10
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }));
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Bigrams and trigrams
     const wordsArray = text.toLowerCase().split(/\s+/);
@@ -257,18 +227,20 @@ export default async function handler(
     const trigramCounts = new Map<string, number>();
 
     for (let i = 0; i < wordsArray.length - 1; i++) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1);
     }
 
     for (let i = 0; i < wordsArray.length - 2; i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
-      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);    }
-=======
+      trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);    }      const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
+      bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
+    }
+
+    for (let i = 0, i < wordsArray.length - 2, i++) {
+      const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -285,17 +257,12 @@ export default async function handler(
     const confidence = isEnglish ? 0.95 : 0.5;
 
     const result: TextAnalysisResult = {
-      text,
-=======
-    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
+      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
     const result: TextAnalysisResult = {
-<<<<<<< HEAD
       text,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      statistics: {
         characters,
         charactersNoSpaces,
         words,
@@ -336,8 +303,22 @@ export default async function handler(
   } catch (error) {
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
+  }        score: sentimentScore;
+        label: sentimentLabel;
+        positiveWords: textWords.filter(word => positiveWords.includes(word));
+        negativeWords: textWords.filter(word => negativeWords.includes(word))};
+      language: {
+        detectedLanguage;
+        confidence;
+        isEnglish};
+      keywords: {
+        topWords;
+        bigrams;
+        trigrams}};
+
+    res.status(200).json(result)
+  } catch (error) {
+    console.error('Text analysis error:', error);
+    res.status(500).json({ error: 'Internal server error' })
   }
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

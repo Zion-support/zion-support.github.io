@@ -9,8 +9,6 @@ import {
   Zap,;
 } from 'lucide-react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export function ApiDocsHub() {
   const sections = [
     {
@@ -67,8 +65,7 @@ export function ApiDocsHub() {
             <Link
               key={section.path}
               href={section.path}
-              className='block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all'
-            >
+              className='block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all'            >
               <div
                 className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}
               >

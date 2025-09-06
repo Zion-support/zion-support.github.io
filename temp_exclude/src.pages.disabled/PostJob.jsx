@@ -22,14 +22,4 @@ export default function PostJob({ }: PostJobProps) {
 }
 }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src.pages.disabled/PostJob.jsx
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.pages.disabled/PostJob.jsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

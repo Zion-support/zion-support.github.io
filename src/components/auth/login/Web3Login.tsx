@@ -1,10 +1,9 @@
 
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-import {useWallet, as, useAppWallet} from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
-import {Wallet} from 'lucide-react'
-import {toast} from "sonner";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+import { Wallet } from 'lucide-react'import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {
 
@@ -40,14 +39,12 @@ export function Web3Login() {
       setIsLoading(false)
     }
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable;
   const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
     : "";
 
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

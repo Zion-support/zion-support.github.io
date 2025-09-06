@@ -14,8 +14,6 @@ import { Progress } from '@/components/ui/progress';
 import { SeverityIndicator } from '../common/SeverityIndicator';
 import { useRouter } from 'next/router';
 import { toast } from 'sonner';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface Milestone {
   id: string;
   title: string;
@@ -122,15 +120,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 size='sm'
                 variant='outline'
                 className='gap-1 flex-1'
-                onClick={messageClient}
-              >
+                onClick={messageClient}              >
                 <MessageSquare className='h-4 w-4' /> Message
               </Button>
               <Button
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
-                onClick={startProjectCall}
-              >
+                onClick={startProjectCall}              >
                 <Video className='h-4 w-4' /> Call
               </Button>
             </div>
@@ -141,8 +137,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       <section>
         <h2 className='text-lg font-medium mb-4'>Milestones</h2>
         <div className='space-y-3'>
-          {milestones.map(milestone => (
-            <Card key={milestone.id}>
+          {milestones.map(milestone => (            <Card key={milestone.id}>
               <CardContent className='p-4'>
                 <div className='flex justify-between items-start mb-2'>
                   <div className='flex items-center gap-2'>
@@ -160,8 +155,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                         : milestone.paymentStatus === 'overdue'
                           ? 'destructive'
                           : 'outline'
-                    }
-                  >
+                    }                  >
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
@@ -196,7 +190,4 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       </section>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

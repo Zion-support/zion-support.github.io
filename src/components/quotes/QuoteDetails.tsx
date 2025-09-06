@@ -1,12 +1,16 @@
 };
-
 import React from "react";
-import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Calendar, User, Mail, Clock, DollarSign} from 'lucide-react'
-import {Card, CardContent} from "@/components/ui/card";
-import {Separator} from "@/components/ui/separator";
-import {QuoteStatusBadge} from "./QuoteStatusBadge";
+import { 
+  Dialog;
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import {format} from "date-fns";
 interface QuoteDetailsProps {
@@ -19,8 +23,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   if (!quote) return null;
 
   const formatDate = (dateString?: string) => {
-    if (!dateString) return 'Not specified';
-    try {
+    if (!dateString) return 'Not specified';    try {
       return format(new Date(dateString), 'PPP')
     } catch (e) {
       return dateString
@@ -28,7 +31,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+    <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl flex items-center justify-between">
@@ -129,6 +132,3 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
 };
 '"
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

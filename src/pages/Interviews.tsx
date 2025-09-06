@@ -8,13 +8,16 @@ import { InterviewCard } from '@/components/interviews/InterviewCard';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, Video } from 'lucide-react';
 import { format, isAfter, parseISO, startOfDay } from 'date-fns';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState('upcoming');
 
-  useEffect(() => {
+  useEffect(() => {function InterviewsContent() {
+  const { interviews, isLoading, fetchInterviews } = useInterviews(),
+  const [activeTab, setActiveTab] = useState("upcoming"),
+  
+  useEffect((,) => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
       await fetchInterviews();
@@ -44,7 +47,6 @@ function InterviewsContent() {
   const pendingInterviews = interviews.filter(
     interview => interview.status === 'requested'
   );
-
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
     return (
@@ -92,8 +94,7 @@ function InterviewsContent() {
                 key={interview.id}
                 interview={interview}
                 onRefresh={async () => {
-                  await fetchInterviews();
-                }}
+                  await fetchInterviews();                }}
               />
             ))}
           </div>
@@ -212,7 +213,5 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}

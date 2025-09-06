@@ -7,7 +7,7 @@ interface EmptyFraudStateProps {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters,
   onResetFilters 
-}) => {
+},) => {
   return (
     <div className="text-center py-12">
       <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
@@ -53,6 +53,3 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>
   )
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

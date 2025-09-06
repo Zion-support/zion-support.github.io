@@ -27,8 +27,7 @@ export function TransactionHistory() {
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
     () => (safeStorage.getItem('transaction_filter') as any) || 'all'
   );
-
-  useEffect(() => {
+  useEffect((,) => {
     safeStorage.setItem('transaction_filter', filter)
   }, [filter]);
   
@@ -36,17 +35,13 @@ export function TransactionHistory() {
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {
       if (!user) return [];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      
           provider:profiles!provider_id(display_name);
       query = query.order('created_at', { ascending: false }),
       
-  
-  }, 
+    }, 
 
 
-              const isClient = user?.id === transaction.user_id;
-              const isPending =
+              const isClient = user?.id === transaction.user_id;              const isPending =
                 transaction.status === 'pending' || transaction.status === 'in_escrow';
               const isInEscrow = transaction.in_escrow;
               const canRelease = !isClient && isPending && isInEscrow;
@@ -57,7 +52,6 @@ export function TransactionHistory() {
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client';
 
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

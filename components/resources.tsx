@@ -3,8 +3,6 @@ import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export default function ResourcesPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
       <SEO
@@ -63,8 +61,7 @@ export default function ResourcesPage() {
               <div className='text-sm text-gray-400'>Resource</div>
               <h3 className='text-xl font-semibold text-white'>{it.name}</h3>
               <p className='mt-1 text-gray-300'>{it.blurb}</p>
-              <div className='mt-3 text-cyan-300'>Open →</div>            </Link>
-            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' };
+              <div className='mt-3 text-cyan-300'>Open →</div>            </Link>            { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' };
             { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
             { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
@@ -76,18 +73,11 @@ export default function ResourcesPage() {
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
-=======
-  )
+  );  )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default ResourcesPage;

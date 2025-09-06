@@ -74,7 +74,6 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   return results;
 }
 function main() {
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
@@ -129,7 +128,6 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
 }
 if (require.main === module) {
   main().catch(console.error)}

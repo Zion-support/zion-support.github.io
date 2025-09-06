@@ -1,9 +1,7 @@
   title = "Complete Your Profile", 
-
 import React from "react";
-import {CheckCircle, Circle, ArrowRight} from 'lucide-react'
-import {cn} from "@/lib/utils";
-import {Button} from "@/components/ui/button";
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export interface OnboardingStep {
   id: string,
@@ -44,7 +42,7 @@ export function OnboardingTracker({
       
       {/* Steps list */}
       <div className="space-y-3">
-        {steps.map((step) => (
+        {steps.map((step,) => (
           <div key={step.id} className="flex items-center">
             <div className="mr-3">
               {step.completed ? (
@@ -87,8 +85,4 @@ export function OnboardingTracker({
 }> </Link> </Button>) ;
 }</div>) ) ;
 }</div> </div>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

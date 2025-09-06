@@ -1,18 +1,17 @@
 
 import {useState} from "react";
 import Link from "next/link";
-import {useRouter} from "next/router";
-import {SEO} from "@/components/SEO";
-import {Button} from "@/components/ui/button";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Card, CardContent} from "@/components/ui/card";
-import {Separator} from "@/components/ui/separator";
-import {Alert, AlertDescription} from "@/components/ui/alert";
-import {ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle} from 'lucide-react'
-import {formatDistanceToNow, format} from "date-fns";
-import {ForumPost, ForumReply} from "@/types/community";
-import {useAuth} from "@/hooks/useAuth";
+import { useRouter } from "next/router";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'import { formatDistanceToNow, format } from "date-fns";
+import { ForumPost, ForumReply } from "@/types/community";
+import { useAuth } from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
@@ -100,7 +99,6 @@ export default function ForumPostPage() {
   const [replies, setReplies] = useState(mockReplies);
   
   // Check if this is the user's own post
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const isAuthor = user?.id === post?.authorId;
   
   // Check if user is admin/mod
@@ -128,7 +126,6 @@ export default function ForumPostPage() {
   
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

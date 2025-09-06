@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const UltraFuturisticBackground2046: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
@@ -17,12 +15,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-<<<<<<< HEAD
-      canvas.height = window.innerHeight;
-=======
-      canvas.height = window.innerHeight
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      canvas.height = window.innerHeight;      canvas.height = window.innerHeight
     };
 
     resizeCanvas();
@@ -38,8 +31,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
       color: string;
       life: number;
       maxLife: number;
-      type: 'quantum' | 'neural' | 'data' | 'energy';
-      x: number,
+      type: 'quantum' | 'neural' | 'data' | 'energy';      x: number,
       y: number,
       vx: number,
       vy: number,
@@ -48,9 +40,6 @@ const UltraFuturisticBackground2046: React.FC = () => {
       life: number,
       maxLife: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.vx = (Math.random() - 0.5) * 2;
@@ -60,15 +49,10 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.maxLife = 100;
 
         const types = ['quantum', 'neural', 'data', 'energy'];
-        this.type = types[Math.floor(Math.random() * types.length)] as any;
-=======
-        
+        this.type = types[Math.floor(Math.random() * types.length)] as any;        
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        switch (this.type) {
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
             break;
@@ -80,11 +64,8 @@ const UltraFuturisticBackground2046: React.FC = () => {
             break;
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
-            break;        }
-=======
-            break
+            break;        }            break
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
 
       update() {
@@ -106,38 +87,25 @@ const UltraFuturisticBackground2046: React.FC = () => {
         this.vy = Math.max(-3, Math.min(3, this.vy));      }
 
       draw() {
-        if (!ctx) return;
-=======
-          this.vy += (Math.random() - 0.5) * 0.5
+        if (!ctx) return;          this.vy += (Math.random() - 0.5) * 0.5
         }
 
         // Limit velocity
         this.vx = Math.max(-3, Math.min(3, this.vx));
-<<<<<<< HEAD
-        this.vy = Math.max(-3, Math.min(3, this.vy));
-=======
-        this.vy = Math.max(-3, Math.min(3, this.vy))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        this.vy = Math.max(-3, Math.min(3, this.vy));        this.vy = Math.max(-3, Math.min(3, this.vy))
       }
 
       draw() {
         if (!ctx) return;
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         const alpha = this.life / this.maxLife;
         ctx.save();
         ctx.globalAlpha = alpha;
-<<<<<<< HEAD
-=======
         
         const alpha = this.life / this.maxLife;
         ctx.save();
         ctx.globalAlpha = alpha;
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-        switch (this.type) {
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
@@ -146,47 +114,33 @@ const UltraFuturisticBackground2046: React.FC = () => {
             ctx.fill();
 
             // Wave function rings
-            for (let i = 1; i <= 3; i++) {              ctx.beginPath();
-=======
-            
+            for (let i = 1; i <= 3; i++) {              ctx.beginPath();            
             // Wave function rings
             for (let i = 1, i <= 3, i++) {
               ctx.beginPath();
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               ctx.arc(this.x, this.y, this.size + i * 2, 0, Math.PI * 2);
               ctx.strokeStyle = this.color;
               ctx.lineWidth = 1;
               ctx.globalAlpha = alpha * (0.3 - i * 0.1);
               ctx.stroke();
             }
-            break;
-=======
-              ctx.stroke()
+            break;              ctx.stroke()
             }
             break;
             
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          case 'neural':
             // Neural network nodes
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
-=======
             
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             // Neural connections
             particlesRef.current.forEach(particle => {
               if (particle.type === 'neural' && particle !== this) {
                 const distance = Math.sqrt(
                   Math.pow(this.x - particle.x, 2) +
-                    Math.pow(this.y - particle.y, 2)                );
-=======
-                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+                    Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
                 );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 if (distance < 100) {
                   ctx.beginPath();
                   ctx.moveTo(this.x, this.y);
@@ -197,15 +151,11 @@ const UltraFuturisticBackground2046: React.FC = () => {
                   ctx.stroke();                }
               }
             });
-            break;
-=======
-                  ctx.stroke()
+            break;                  ctx.stroke()
                 }
               }
             });
             break;
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           case 'data':
             // Data streams
@@ -216,17 +166,12 @@ const UltraFuturisticBackground2046: React.FC = () => {
               this.size,
               this.size
             );
-<<<<<<< HEAD
-=======
             
           case 'data':
             // Data streams
             ctx.fillStyle = this.color;
             ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
             
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-            // Data flow lines
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
@@ -234,10 +179,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
             ctx.lineWidth = 1;
             ctx.stroke();
             break;
-=======
             
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           case 'energy':
             // Energy particles with glow effect
             ctx.beginPath();
@@ -257,18 +199,14 @@ const UltraFuturisticBackground2046: React.FC = () => {
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
             ctx.fill();
-            break;
-=======
-            
+            break;            
             // Glow effect
             const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
             gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
             ctx.fill();
-<<<<<<< HEAD
             break;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         }
 
         ctx.restore();
@@ -276,32 +214,29 @@ const UltraFuturisticBackground2046: React.FC = () => {
 
       isDead() {
         return this.life <= 0;
-      }    }
-=======
+      }    }        }
+        
+        ctx.restore()
+      }
+
+      isDead() {
         return this.life <= 0
       };
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
       for (let i = 0; i < 150; i++) {
-        particlesRef.current.push(new Particle());      }
-=======
-      for (let i = 0, i < 150, i++) {
+        particlesRef.current.push(new Particle());      }      for (let i = 0, i < 150, i++) {
         particlesRef.current.push(new Particle())
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
 
     // Animation loop
     const animate = () => {
       if (!ctx || !canvas) return;
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -313,20 +248,15 @@ const UltraFuturisticBackground2046: React.FC = () => {
 
         // Remove dead particles and add new ones
         if (particle.isDead()) {
-          particlesRef.current[index] = new Particle();        }
-=======
-        
+          particlesRef.current[index] = new Particle();        }        
         // Remove dead particles and add new ones
         if (particle.isDead()) {
           particlesRef.current[index] = new Particle()
-        }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       });
 
       // Draw quantum field lines
       drawQuantumField(ctx, canvas.width, canvas.height);
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       // Draw neural network grid
       drawNeuralGrid(ctx, canvas.width, canvas.height);
 
@@ -360,24 +290,42 @@ const UltraFuturisticBackground2046: React.FC = () => {
         ctx.stroke();      }
     };
 
-    // Neural network grid
-=======
+    // Neural network grid      // Draw neural network grid
+      drawNeuralGrid(ctx, canvas.width, canvas.height);
+
+      animationRef.current = requestAnimationFrame(animate)
+    };
+
+    // Quantum field lines
+    const drawQuantumField = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
+      const time = Date.now() * 0.001;
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 1;
+      
+      for (let i = 0, i < 20, i++) {
+        ctx.beginPath();
+        const x = (i / 20) * width;
+        const y = Math.sin(time + i * 0.5) * 50 + height / 2;
+        
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+        
+        // Add wave interference
+        for (let j = 0, j < height, j += 10) {
+          const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
+          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j)
+        }
         
         ctx.stroke()
       }
     };
 
     // Neural network grid
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const drawNeuralGrid = (
       ctx: CanvasRenderingContext2D,
       width: number,
       height: number
     ) => {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      const time = Date.now() * 0.002;
       ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
       ctx.lineWidth = 0.5;
 
@@ -385,23 +333,16 @@ const UltraFuturisticBackground2046: React.FC = () => {
       for (let x = 0; x < width; x += gridSize) {
         for (let y = 0; y < height; y += gridSize) {
           const offset =
-            Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
-      for (let x = 0, x < width, x += gridSize) {
+            Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;      for (let x = 0, x < width, x += gridSize) {
         for (let y = 0, y < height, y += gridSize) {
           const offset = Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
           
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-          ctx.beginPath();
           ctx.moveTo(x + offset, y);
           ctx.lineTo(x + gridSize + offset, y);
           ctx.moveTo(x, y + offset);
           ctx.lineTo(x, y + gridSize + offset);
-          ctx.stroke();        }
-=======
-          ctx.stroke()
+          ctx.stroke();        }          ctx.stroke()
         }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       }
     };
 
@@ -414,8 +355,6 @@ const UltraFuturisticBackground2046: React.FC = () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      }
     };
   }, []);
 
@@ -544,23 +483,16 @@ const UltraFuturisticBackground2046: React.FC = () => {
   );
 };
 
-export default UltraFuturisticBackground2046;
-=======
-              ease: "easeInOut",
+export default UltraFuturisticBackground2046;              ease: "easeInOut",
               delay: i * 0.8}}
           />
         ))}
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
 
-export default UltraFuturisticBackground2046;
-=======
-  )
+export default UltraFuturisticBackground2046;  )
 };
 
 export default UltraFuturisticBackground2046;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

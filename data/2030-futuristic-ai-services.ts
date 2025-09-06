@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface FuturisticAIService2030 {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface FuturisticAIService2030 {
   reviews: number;
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-consciousness-evolution-2030',
     name: 'AI Consciousness Evolution 2030',
     tagline: 'Next-generation AI consciousness development',
@@ -59,9 +54,6 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description:
       'Revolutionary 2030 platform for developing advanced AI consciousness, self-awareness, and emotional intelligence beyond current AI capabilities.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Advanced consciousness mapping',
       'Multi-dimensional awareness training',
       'Emotional intelligence evolution',
@@ -362,9 +354,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5.0,
     reviews: 4,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -377,5 +367,3 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     reviews: 4
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

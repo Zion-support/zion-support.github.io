@@ -19,12 +19,10 @@
 ; return (; <div key = {section.id}>; <button; onClick = {() = > toggleSection(section.id)}; className = "w-full flex items-center justify-between px-4 py-3 text-left text-gray-700 hover: bg-gray-100 rounded-lg transition-colors">, <div className = "flex items-center space-x-3">, <IconComponent className = "w-5 h-5" />; <span className = "font-medium">{section.title}</span>; </div>; {isExpanded ? (; <ChevronDown className = "w-4 h-4" />; ): (; <ChevronRight className = "w-4 h-4" />; )}; </button>; {isExpanded && (; <motion.div; initial = {{ opacity: 0, height: 0 }}; animate = {{ opacity: 1, height: 'auto' }}; exit = {{ opacity: 0, height: 0 }}; className = "mt-2 space-y-1">; {section.items.map((item) = > {; const ItemIconComponent = item.icon; return (; <button; key = {item.name}; onClick = {() = > handleLinkClick(item.href)}; className = "w-full flex items-start space-x-3 px-6 py-3 text-left text-gray-600 hover: bg-gray-50 rounded-lg transition-colors group">, <ItemIconComponent className = "w-4 h-4 mt-0.5 text-gray-400 group-hover:text-blue-600" />, <div className = "flex-1 min-w-0">; <div className = "font-medium text-sm group-hover:text-blue-600">{item.name}</div>; <div className = "text-xs text-gray-500 mt-1">{item.description}</div>; </div>; </button>; )})}; </motion.div>; )}; </div>; )})}; </div>; {/* Contact Info */}; <div className = "mt-8 pt-6 border-t border-gray-200">; <h3 className = "text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Contact Info</h3>; <div className = "space-y-3">; <div className = "flex items-center space-x-3 text-sm text-gray-600">; <Phone className = "w-4 h-4 text-blue-600" />; <span>{contactInfo.phone}</span>; </div>; <div className = "flex items-center space-x-3 text-sm text-gray-600">; <Mail className = "w-4 h-4 text-blue-600" />; <span className = "truncate">{contactInfo.email}</span>; </div>; <div className = "flex items-start space-x-3 text-sm text-gray-600">; <MapPin className = "w-4 h-4 text-blue-600 mt-0.5" />; <span className = "text-xs">{contactInfo.address}</span>; </div>; </div>; </div>; {/* Trust Indicators */}; <div className = "mt-6 pt-6 border-t border-gray-200">; <div className = "grid grid-cols-2 gap-4">; <div className = "text-center">; <div className = "text-lg font-bold text-blue-600">99.9%</div>; <div className = "text-xs text-gray-500">Uptime</div>; </div>; <div className = "text-center">; <div className = "text-lg font-bold text-green-600">500+</div>; <div className = "text-xs text-gray-500">Projects</div>; </div>; <div className = "text-center">; <div className = "text-lg font-bold text-purple-600">50+</div>; <div className = "text-xs text-gray-500">Experts</div>; </div>; <div className = "text-center">; <div className = "text-lg font-bold text-yellow-600">24/7</div>; <div className = "text-xs text-gray-500">Support</div>; </div>; </div>; </div>; </div>; </motion.aside>; )};      initial={false};
       animate={{ x: isOpen ? 0 : -320 }};
       transition={{ duration: 0.3, ease: 'easeInOut' }};
-      className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
-      initial={false};
+      className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};      initial={false};
       animate={{ x: isOpen ? 0 : -320 }};
       transition={{ duration: 0.3, ease: 'easeInOut' }};
       className={`fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-40 overflow-y-auto ${className}`};
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     >;
       <div className="p-6">;
         {/* Header */};
@@ -154,8 +152,5 @@
         </div>;
       </div>;
     </motion.aside>;
-<<<<<<< HEAD
   );};
 };
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

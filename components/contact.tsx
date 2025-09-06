@@ -7,8 +7,6 @@ const [submitSuccess, setSubmitSuccess] = useState (false);
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  /* Stats Grid */ 
 }<motion.div > {
   stats.map ( (stat, index) => (<motion.div key= {
   stat.label 
@@ -22,7 +20,6 @@ setSubmitSuccess (true);
 }</motion.div> </div> </section> <motion.div initial= {
   {
   opacity: 0, x: -30 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }whileInView= {
   {
@@ -139,8 +136,7 @@ setSubmitSuccess (true);
   {
   once: true 
 
-}> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
-            {/* Contact Form */}
+}> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -435,5 +431,3 @@ setSubmitSuccess (true);
     </UltraFuturisticBackground2029>
   ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

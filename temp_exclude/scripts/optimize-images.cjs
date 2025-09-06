@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const sharp = require('sharp');
 const fs = require('fs');
@@ -34,3 +35,5 @@ async function optimizeImages() {}
 };
 optimizeImages().catch(console.error);
       
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

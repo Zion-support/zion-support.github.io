@@ -1,7 +1,6 @@
 }};
 ; async generateReadme() {; try {; this.log('📝 Generating README.md...');
-; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;
-;
+; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const readmeContent = `# ${packageJson.name};;;
 ${packageJson.description || 'A modern web application built with Next.js'};
 ;
 ## 🚀 Getting Started;
@@ -17,8 +16,7 @@ npm install;
 \`\`\`bash;
 npm run dev;
 \`\`\`;
-Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,
-### Build;
+Open [http: //localhost: 3000](http: //localhost: 3000) with your browser to see the result.,### Build;
 \`\`\`bash;
 npm run build;
 npm start;
@@ -41,16 +39,14 @@ ${Object.entries(packageJson.scripts || {}).map(([key, value]) = > `- **${key}**
 ${Object.keys(packageJson.dependencies || {}).map(dep = > `- ${dep}`).join('\n')};
 ;
 ### Development Dependencies;
-${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')};
-;
+${Object.keys(packageJson.devDependencies || {}).map(dep = > `- ${dep}`).join('\n')};;
 ## 🔧 Configuration;
 This project uses Next.js with the following configuration:  , - TypeScript support,
 - ESLint for code quality;
 - Prettier for code formatting;
 - PM2 for process management;
 ## 📊 Monitoring;
-The project includes automated monitoring with PM2:  ,
-- Code quality monitoring;
+The project includes automated monitoring with PM2:  ,- Code quality monitoring;
 - Performance monitoring;
 - Security scanning;
 - Health checks;
@@ -77,21 +73,18 @@ Generated on ${new Date().toISOString()};
     generatedAt: new Date().toISOString()};
 ; // Scan for API routes; const pagesDir = path.join(this.projectRoot, 'pages/api'); if (fs.existsSync(pagesDir)) {; const apiFiles = this.getApiFiles(pagesDir);
 ; apiFiles.forEach(file = > {; const content = fs.readFileSync(file, 'utf8'); const endpoint = this.extractApiEndpoint(file, content); if (endpoint) {; apiDocs.endpoints.push(endpoint)}})};
-; const docsContent = `# API Documentation;
-## Overview;
+; const docsContent = `# API Documentation;## Overview;
 - **Base URL**: ${apiDocs.baseUrl};
 - **Version**: ${apiDocs.version};
 - **Generated**: ${apiDocs.generatedAt};
 ;
 ## Endpoints;
-${apiDocs.endpoints.map(endpoint = > `;
-### ${endpoint.method} ${endpoint.path};
+${apiDocs.endpoints.map(endpoint = > `;### ${endpoint.method} ${endpoint.path};
 ;
 ${endpoint.description};
 ;
 **Parameters: **,
-${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};
-;
+${endpoint.parameters.map(param = > `- \`${param.name}\` (${param.type}): ${param.description}`).join('\n')};;
 **Response: **, \`\`\`json,
 ${JSON.stringify(endpoint.response, null, 2)};
 \`\`\`;
@@ -1207,6 +1200,3 @@ module.exports = DocsGenerator;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 docsGenerator.run().catch(error = > {; process.exit(1)});
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

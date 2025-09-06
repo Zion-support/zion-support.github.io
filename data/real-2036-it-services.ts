@@ -7,8 +7,6 @@ export const real2036ITServices = [
       'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
     price: '$6,999',
     period: 'month',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum computing resources',
       'Quantum-classical hybrid computing',
       'Quantum resource management',
@@ -330,11 +328,7 @@ export const real2036ITServices = [
       'Business continuity',
     ],
   },
-];
-=======
-      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
+];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

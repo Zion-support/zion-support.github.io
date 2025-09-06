@@ -1,17 +1,25 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
 class GitWorkflowAutomator {
   constructor() {
+<<<<<<< HEAD
     this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
+=======
+    this.ensureLogDirectory();
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
+<<<<<<< HEAD
       fs.mkdirSync(logDir, { recursive: true });
     }
   }
@@ -79,12 +87,15 @@ class GitWorkflowAutomator {
     } catch (error) {
       this.log('ERROR', `Failed to pull changes: ${error.message}`);
       return false;    }
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   async getCurrentBranch() {
     try {
+<<<<<<< HEAD
       const branch = execSync('git branch --show-current', { encoding: 'utf8' });
       return branch.trim();
     } catch (error) {
@@ -340,3 +351,9 @@ Examples:
 }
 
 module.exports = GitWorkflowAutomator;
+=======
+if (require.main === module) {
+  const automator = new GitWorkflowAutomator();
+  const command = process.argv[2];
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

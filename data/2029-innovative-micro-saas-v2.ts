@@ -315,8 +315,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
         'Workforce planning',
       ],
     },
-  ];
-    price: "$2,499/month";
+  ];    price: "$2,499/month";
     description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
     features: [
       "AI-powered churn prediction";
@@ -340,8 +339,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     
     },
-    category: "Customer Success",
-    technology: ["AI/ML", "Predictive Analytics", "Automation", "Real-time Processing"];
+    category: "Customer Success",    technology: ["AI/ML", "Predictive Analytics", "Automation", "Real-time Processing"];
     benefits: [
       "Reduce customer churn by 40%";
       "Increase customer lifetime value by 60%";
@@ -357,8 +355,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
   };
   {
     id: "intelligent-workflow-automation-platform", name: "Intelligent Workflow Automation Platform",
-    tagline: "Transform business processes with AI-driven automation",
-    price: "$1,899/month";
+    tagline: "Transform business processes with AI-driven automation",    price: "$1,899/month";
     description: "Next-generation workflow automation platform that uses AI to analyze, optimize, and automate complex business processes across departments.";
     features: [
       "AI process discovery and mapping";
@@ -382,8 +379,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     
     },
-    category: "Business Process Automation",
-    technology: ["AI/ML", "RPA", "Process Mining", "Workflow Engine"];
+    category: "Business Process Automation",    technology: ["AI/ML", "RPA", "Process Mining", "Workflow Engine"];
     benefits: [
       "Reduce process execution time by 70%";
       "Eliminate 90% of manual errors";
@@ -399,8 +395,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
   };
   {
     id: "ai-powered-sales-intelligence-platform", name: "AI-Powered Sales Intelligence Platform",
-    tagline: "Supercharge your sales team with AI-driven insights and automation",
-    price: "$2,999/month";
+    tagline: "Supercharge your sales team with AI-driven insights and automation",    price: "$2,999/month";
     description: "Comprehensive sales intelligence platform that combines AI, machine learning, and predictive analytics to optimize every aspect of the sales process.";
     features: [
       "AI-powered lead scoring and prioritization";
@@ -424,8 +419,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     
     },
-    category: "Sales Intelligence",
-    technology: ["AI/ML", "Predictive Analytics", "Natural Language Processing", "Real-time Analytics"];
+    category: "Sales Intelligence",    technology: ["AI/ML", "Predictive Analytics", "Natural Language Processing", "Real-time Analytics"];
     benefits: [
       "Increase sales conversion rates by 45%";
       "Reduce sales cycle time by 35%";
@@ -440,8 +434,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     ]
   };
   {
-    id: "intelligent-data-governance-platform", name: "Intelligent Data Governance Platform",
-    tagline: "Secure, compliant, and intelligent data management for the modern enterprise";
+    id: "intelligent-data-governance-platform", name: "Intelligent Data Governance Platform",    tagline: "Secure, compliant, and intelligent data management for the modern enterprise";
     price: "$3,499/month";
     description: "AI-powered data governance platform that ensures data quality, security, and compliance while providing intelligent insights for better decision making.";
     features: [
@@ -466,8 +459,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     
     },
-    category: "Data Governance",
-    technology: ["AI/ML", "Data Quality", "Security", "Compliance"];
+    category: "Data Governance",    technology: ["AI/ML", "Data Quality", "Security", "Compliance"];
     benefits: [
       "Reduce data breaches by 80%";
       "Improve data quality by 60%";
@@ -483,8 +475,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
   };
   {
     id: "ai-powered-supply-chain-optimization", name: "AI-Powered Supply Chain Optimization Platform",
-    tagline: "Optimize your supply chain with AI-driven insights and predictive analytics",
-    price: "$4,999/month";
+    tagline: "Optimize your supply chain with AI-driven insights and predictive analytics",    price: "$4,999/month";
     description: "Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, and streamline logistics operations.";
     features: [
       "AI-powered demand forecasting";
@@ -508,8 +499,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     
     },
-    category: "Supply Chain Management",
-    technology: ["AI/ML", "Predictive Analytics", "IoT", "Blockchain"];
+    category: "Supply Chain Management",    technology: ["AI/ML", "Predictive Analytics", "IoT", "Blockchain"];
     benefits: [
       "Reduce inventory costs by 30%";
       "Improve forecast accuracy by 50%";
@@ -525,8 +515,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
   };
   {
     id: "intelligent-hr-analytics-platform", name: "Intelligent HR Analytics Platform",
-    tagline: "Transform HR with AI-driven insights and predictive analytics",
-    price: "$1,599/month";
+    tagline: "Transform HR with AI-driven insights and predictive analytics",    price: "$1,599/month";
     description: "AI-powered HR analytics platform that provides deep insights into workforce performance, predicts turnover, and optimizes talent management strategies.";
     features: [
       "AI-powered employee performance analysis";
@@ -550,8 +539,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     
     },
-    category: "HR Analytics",
-    technology: ["AI/ML", "Predictive Analytics", "People Analytics", "Machine Learning"];
+    category: "HR Analytics",    technology: ["AI/ML", "Predictive Analytics", "People Analytics", "Machine Learning"];
     benefits: [
       "Reduce employee turnover by 35%";
       "Improve hiring success rate by 45%";
@@ -566,5 +554,3 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     ]
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

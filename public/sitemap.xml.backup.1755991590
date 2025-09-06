@@ -14,6 +14,7 @@
   </url>
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -24,27 +25,17 @@
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/500</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-<<<<<<< HEAD
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>2025-08-19T03:44:42.325Z</lastmod>
-=======
-    <loc>https://zion.app/contact</loc>
-    <lastmod>2025-08-11T11:14:25.268Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     <loc>https://zion.app/front</loc>
-=======
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <loc>https://zion.app/front</loc>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -52,6 +43,9 @@
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <loc>https://zion.app/front</loc>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    <lastmod>2025-08-14T09:38:12.068Z</lastmod>    <loc>https://zion.app/front</loc>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -124,6 +118,7 @@
   </url>
   <url>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -136,6 +131,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -1687,6 +1684,7 @@
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1697,6 +1695,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
@@ -1704,6 +1704,7 @@
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
     <loc>https://ziontechgroup.com/contact</loc>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1721,6 +1722,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -1753,6 +1756,7 @@
     <loc>https://ziontechgroup.com/explore</loc>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -1761,6 +1765,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/explore</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 =======
@@ -1770,6 +1776,7 @@
     <loc>https://ziontechgroup.com/explore</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1789,6 +1796,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -43796,6 +43805,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-27</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -43808,6 +43818,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T15-19</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44207,6 +44219,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-31</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44219,6 +44232,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T16-44</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44276,6 +44291,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T00-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44288,6 +44304,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T16-57</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44387,6 +44405,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-00</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44399,6 +44418,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-24</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44420,6 +44441,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-19</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44432,6 +44454,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-30</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44453,6 +44477,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T04-41</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44465,6 +44490,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-38</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44498,6 +44525,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T05-40</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44510,6 +44538,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-52</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44531,6 +44561,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T06-10</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44543,6 +44574,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T17-55</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44576,6 +44609,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T07-10</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44588,6 +44622,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-18</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44645,6 +44681,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T08-50</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44657,6 +44694,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-27</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44726,6 +44765,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-17</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44738,6 +44778,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-38</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44765,6 +44807,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-22</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44777,6 +44820,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-42</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -44798,6 +44843,7 @@
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-14T09-25</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -44810,6 +44856,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/reports/updates/update-2025-08-18T18-45</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -47292,6 +47340,7 @@
     <loc>https://ziontechgroup.com/site-health</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -47304,6 +47353,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -48734,6 +48785,7 @@
     <loc>https://ziontechgroup.com/services/landing-page-generator</loc>
     <lastmod>2025-08-14T09:38:12.068Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -48746,6 +48798,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://ziontechgroup.com/tutorials/rapid-1755542893114-w4yicd</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -48959,6 +49013,7 @@
     <loc>https://ziontechgroup.com/tutorials/rapid-1755575073402-zt8joq</loc>
     <lastmod>2025-08-19T03:44:42.325Z</lastmod>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -48971,6 +49026,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <loc>https://zion.app/services/price-intelligence-service</loc>
     <lastmod>2025-08-11T11:14:25.268Z</lastmod>
     <changefreq>weekly</changefreq>

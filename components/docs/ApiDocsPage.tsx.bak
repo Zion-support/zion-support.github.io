@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
 import v1 from '../../data/api-docs/v1';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -48,6 +49,8 @@ export default function ApiDocsPage() {
     >
 =======
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
@@ -61,6 +64,7 @@ export default function ApiDocsPage() {
 
   return (
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -69,11 +73,14 @@ export default function ApiDocsPage() {
     <div className="min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <Sidebar
         spec={spec}
         activeEndpointId={activeEndpoint?.id}
         onSelectEndpoint={setActiveEndpointId}
         selectedVersion={selectedVersion}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -89,6 +96,8 @@ export default function ApiDocsPage() {
         onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         visibilityFilter={visibility}
         onChangeVisibility={setVisibility}
       />
@@ -100,6 +109,7 @@ export default function ApiDocsPage() {
               Developer-friendly API docs with live testing
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -145,10 +155,13 @@ export default function ApiDocsPage() {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           <div className="flex gap-2">
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/openapi" target="_blank" rel="noreferrer">OpenAPI</a>
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="_blank" rel="noreferrer">Postman</a>
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
@@ -157,12 +170,15 @@ export default function ApiDocsPage() {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           </div>
         </header>
 
         {activeEndpoint ? (
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -176,11 +192,14 @@ export default function ApiDocsPage() {
         <section className='mt-8'>
           <div className='text-lg font-semibold mb-2'>Changelog</div>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
         )}
 
         <section className="mt-8">
           <div className="text-lg font-semibold mb-2">Changelog</div>
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -192,12 +211,15 @@ export default function ApiDocsPage() {
           <div className="text-lg font-semibold mb-2">Changelog</div>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           <ChangelogWidget />
         </section>
       </main>
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -211,6 +233,9 @@ export default function ApiDocsPage() {
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 function ChangelogWidget() {
   const [content, setContent] = useState('');
@@ -220,6 +245,7 @@ function ChangelogWidget() {
     setMessage('');
     const res = await fetch('/api/docs/changelog');
     const data = await res.json();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -235,10 +261,14 @@ function ChangelogWidget() {
     setContent(data.content || '')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    setContent(data.content || '')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   async function save() {
     setMessage('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -257,6 +287,8 @@ function ChangelogWidget() {
     setMessage('Saved')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   return (
@@ -287,6 +319,7 @@ function ChangelogWidget() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -313,3 +346,6 @@ function ChangelogWidget() {
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

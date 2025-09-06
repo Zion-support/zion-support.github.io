@@ -5,7 +5,6 @@ import { ImageIcon, AlertTriangle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { imageOptimization } from '@/utils/performance';
 import { logWarn } from '@/utils/productionLogger';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -74,8 +73,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     observerRef.current = new IntersectionObserver(
       entries => {
-        const [entry] = entries;
-        if (entry && entry.isIntersecting) {
+        const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true);
           observerRef.current?.disconnect();
         }
@@ -99,14 +97,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   useEffect(() => {
     loadStartTime.current = performance.now();
   }, [src]);
-
   // Monitor image performance
-  useEffect(() => {
+  useEffect((,) => {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       const observer = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach(entry => {
-          if (entry.name === src && entry.entryType === 'resource') {
+        entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
             const fileSize =
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;
@@ -177,8 +173,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           setCurrentSrc(src + `?retry=${retries + 1}`);
         },
         1000 * (retries + 1)
-      );
-    } else if (fallbackSrc && currentSrc !== fallbackSrc) {
+      );    } else if (fallbackSrc && currentSrc !== fallbackSrc) {
       setCurrentSrc(fallbackSrc);
       setRetries(0);
     } else {
@@ -191,8 +186,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Simulate loading progress for demo purposes
   useEffect(() => {
     if (!isLoading || !showLoadingProgress) return;
-
-    const interval = setInterval(() => {
+    const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
           clearInterval(interval);
@@ -218,8 +212,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
 
     if (placeholder === 'color') {
-      
-        />
+              />
       );
     }
 
@@ -238,8 +231,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     height: height ? `${height}px` : undefined,
   };
 
-  
-    >
+      >
       <AnimatePresence>
         {/* Placeholder */}
         {(isLoading || !isInView) && !hasError && (
@@ -283,12 +275,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         {/* Actual image */}
         {isInView && !hasError && (
           <motion.img
-            src={optimizedSrc}
-            srcSet={srcSet}
-            alt={alt}
-            loading={priority ? 'eager' : 'lazy'}
-            onLoad={handleLoad}
-            onError={handleError}
+            src = {optimizedSrc,}
+            srcSet = {srcSet,}
+            alt = {alt,}
+            loading = {priority ? 'eager' : 'lazy',}
+            onLoad = {handleLoad,}
+            onError = {handleError,}
             className={cn(
               'w-full h-full transition-opacity duration-300',
               `object-${objectFit}`,
@@ -339,7 +331,6 @@ isLoading ? 'opacity-0' : 'opacity-100') ;
 }initial= {;
   {;
   opacity: 0 ;
-
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
@@ -348,7 +339,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   onImageClick,
 }) => {
   const [loadedCount, setLoadedCount] = useState(0);
-
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1);
   };
@@ -365,26 +355,23 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       <div
         className={`grid gap-4`}
         style={{
-          gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        }}
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}
       >
-        {images.map((image, index) => (
+        {images.map((image, index,) => (
           <motion.div
-            key={index}
+            key = {index,}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className='group cursor-pointer'
-            onClick={() => onImageClick?.(index)}
-          >
+            onClick={() => onImageClick?.(index)}          >
             <div className='relative'>
               <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
                 className='rounded-lg group-hover:scale-105 transition-transform duration-300'
-                onLoad={handleImageLoad}
-                priority={index < 3} // Prioritize first 3 images
+                onLoad={handleImageLoad}                priority={index < 3} // Prioritize first 3 images
               />
 
               {image.caption && (
@@ -413,8 +400,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
   size = 'md',
   fallback,
   className,
-}) => {
-  const sizeClasses = {
+}) => {  const sizeClasses = {
     sm: 'h-8 w-8',
     md: 'h-10 w-10',
     lg: 'h-12 w-12',
@@ -442,8 +428,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
           placeholder='color'
           placeholderColor='#f3f4f6'
           priority={true}
-          className='rounded-full'
-        />
+          className='rounded-full'        />
       ) : (
         <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>
           {initials}
@@ -452,7 +437,5 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     </div>
   );
 };
-=======
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+},

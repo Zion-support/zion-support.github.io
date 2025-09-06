@@ -1,6 +1,4 @@
 
-type ProfileFormValues = z.infer<typeof profileSchema>;
-
 import {
   Form;
   FormControl;
@@ -17,7 +15,7 @@ const profileSchema = z.object({
 type ProfileFormValues = z.infer<typeof profileSchema>;
 
 interface ProfileSetupProps {
-  onComplete: (data: ProfileFormValues) => void,
+  onComplete: (data: ProfileFormValues,) => void,
   userType: string
 }
 
@@ -52,9 +50,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="displayName"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                 <FormControl>
@@ -73,9 +71,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           />
           
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="headline"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
@@ -98,9 +96,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
           />
           
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="bio"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -145,8 +143,4 @@ getTypeLabel () ";
   ...field ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

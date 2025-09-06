@@ -5,12 +5,8 @@ import type { TalentProfile } from '@/utils/types/talent';
 
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-=======
-const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function applyTranslations(item: TalentProfile, lang?: string) {
   if (!lang || !item.translations) return { item, translated: false };
   const t = item.translations;
@@ -23,7 +19,6 @@ function applyTranslations(item: TalentProfile, lang?: string) {
     item: { ...item, ...translated },
     translated: Object.keys(translated).length > 0,
   };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default async function handler(
   req: NextApiRequest,
@@ -56,9 +51,25 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
-=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.setHeader('AllowGET').status(405).end('Method Not Allowed');
+  }
+  const { slug, lang } = req.query as { slug: string, lang?: string };
+
+  try {
+    if (hasSupabase) {
+      const { data, error } = await supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single();
+      if (error) throw error;
+      const { item, translated } = applyTranslations(data as unknown as TalentProfile, lang);
+      return res.status(200).json({ item, translated })
+    }
+
+    const base = LOCAL.find((t) => t.slug === slug) || null;
+    if (!base) return res.status(404).json({ error: 'Not found' });
+    const { item, translated } = applyTranslations(base, lang);
+    return res.status(200).json({ item, translated })
+  } catch (e: any) {
     return res.status(500).json({ error: e.message })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

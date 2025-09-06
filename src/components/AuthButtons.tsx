@@ -4,7 +4,6 @@ import { Facebook } from 'lucide-react';
 import { signIn } from 'next-auth/react';
 
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
-
 interface AuthButtonsProps {
   providers?: Provider[];
 
@@ -17,7 +16,6 @@ export function AuthButtons({
     setLoadingProvider(provider);
     await signIn(provider);
   };
-
   const gridCols = `grid-cols-${providers.length}`;
 
   return (
@@ -28,8 +26,7 @@ export function AuthButtons({
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('google')}
-          disabled={loadingProvider !== null}
-        >
+          disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with Google</span>
           {loadingProvider === 'google' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
@@ -66,8 +63,7 @@ export function AuthButtons({
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('github')}
-          disabled={loadingProvider !== null}
-        >
+          disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
@@ -88,8 +84,7 @@ export function AuthButtons({
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('facebook')}
-          disabled={loadingProvider !== null}
-        >
+          disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with Facebook</span>
           {loadingProvider === 'facebook' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
@@ -104,8 +99,7 @@ export function AuthButtons({
           variant='outline'
           className='col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}
-        >
+          disabled={loadingProvider !== null}        >
           {loadingProvider === 'credentials' ? (
             <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />
           ) : (
@@ -115,7 +109,4 @@ export function AuthButtons({
       )}
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

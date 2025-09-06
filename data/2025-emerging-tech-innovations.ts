@@ -1,7 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface EmergingTechInnovation {
+export interface EmergingTechInnovationService {
   id: string;
   name: string;
   tagline: string;
@@ -48,14 +47,11 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-=======
-  mobile: '+1 302 464 0950';
+  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
@@ -68,8 +64,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     period: '/month',
     description:
       'Revolutionary quantum internet protocol stack that enables quantum-secure communication, quantum key distribution, and quantum networking across global infrastructure.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum key distribution (QKD) protocols',
       'Quantum internet routing and switching',
       'Quantum memory and storage systems',
@@ -731,11 +725,8 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     marketAdvantage:
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },
-];
-      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
-    ],
+];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
+    ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

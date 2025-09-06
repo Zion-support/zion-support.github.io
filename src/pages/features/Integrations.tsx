@@ -3,10 +3,10 @@ import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from '@/hooks/useAdvancedOnboardingStatus';
-
+import Link from 'next/link';
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
   const schema = {
     '@context': 'https://schema.org',
@@ -22,7 +22,6 @@ export default function IntegrationsFeature() {
   useEffect(() => {
     markSlackConnected();
   }, [markSlackConnected]);
-
   return (
     <>
       <SEO
@@ -82,20 +81,13 @@ export default function IntegrationsFeature() {
           </div>
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/developers'>Learn More</Link>            </Button>
-=======
-          <div className="text-center">
+              <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
             </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </div>
       </main>
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

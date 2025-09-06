@@ -3,8 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Header } from '@/components/Header';
 import { ShieldAlert } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export default function Unauthorized() {
   const { t } = useTranslation();
   return (
@@ -31,23 +29,16 @@ export default function Unauthorized() {
             </Link>
             <Link
               href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'            >
-=======
-              href="/"
+              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'            >              href="/"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.return_home')}
             </Link>
             <Link
-<<<<<<< HEAD
               href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'
-=======
-              href="/auth/login"
+              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               {t('errors.login_different_account')}
             </Link>
           </div>
@@ -56,7 +47,3 @@ export default function Unauthorized() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

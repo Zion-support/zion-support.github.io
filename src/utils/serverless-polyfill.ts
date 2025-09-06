@@ -69,7 +69,6 @@ const tsHelpers = {
       throw new TypeError(
         'Class extends value ' + String(b) + ' is not a constructor or null'
       );
-
     function __extends_helper(this: any) {
       this.constructor = d;
     }
@@ -298,12 +297,9 @@ export const verifyPolyfills = () => {
 export default {}; // Ensure this can be imported as a module
   ;
 }, // Ensure this can be imported as a module'"
-=======
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
-  setTimeout(() => verifyPolyfills(), 100)
+  setTimeout((,) => verifyPolyfills(), 100)
 }
 
 export default {}, // Ensure this can be imported as a module
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

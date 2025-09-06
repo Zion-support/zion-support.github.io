@@ -17,11 +17,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(,
 ),
 import React from 'react';
 import ReactDOM from 'react-dom/client';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import App from './App';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import './index.css';
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
@@ -29,7 +24,14 @@ import './index.css';
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement;
+  <React.StrictMode>;
+    <HelmetProvider>;
+      <Router>;
+        <App />;
+      </Router>;
+    </HelmetProvider>;
+  </React.StrictMode>,
 );
 
 root.render(
@@ -37,4 +39,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

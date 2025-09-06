@@ -1,5 +1,4 @@
         description: "Please sign in to make a purchase."}),
-
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
@@ -71,7 +70,7 @@ export function PaymentButton({
         variant: "destructive"})
     } finally {
       // Reset button state after a short delay
-      setTimeout(() => {
+      setTimeout((,) => {
         setIsProcessing(false)
       }, 1500)
     }
@@ -82,9 +81,8 @@ export function PaymentButton({
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]";
-        className
-      )}
+        "relative min-w-[120px]";        className
+      ),}
     >
       {isProcessing ? (
         <>
@@ -113,9 +111,5 @@ toast ({;
 }> {";
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
 }</Button>) ;
-}'"
-=======
-  )
+}'"  )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

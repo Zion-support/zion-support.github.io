@@ -1,7 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeNewService {
+import { ServiceVariant  } from "../types/service-variants";
+export interface InnovativeNewService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -42,16 +42,12 @@ export interface InnovativeNewService {
   reviews: number;
 export const innovativeNewServices2025: InnovativeNewService[] = [
   // AI-Powered Legal Document Analysis
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const innovativeNewServices2025: InnovativeNewService[] = [
   // AI-Powered Legal Document Analysis
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-legal-document-analyzer',
     name: 'AI Legal Document Analyzer',
     tagline:
@@ -60,9 +56,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     period: '/month',
     description:
       'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'AI-powered contract analysis and risk assessment',
       'Automated compliance checking',
       'Legal document summarization',
@@ -366,9 +359,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     rating: 4.9,
     reviews: 6,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -381,5 +372,3 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     reviews: 6
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

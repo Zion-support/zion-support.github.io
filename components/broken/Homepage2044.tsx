@@ -4,8 +4,6 @@
 ...revolutionary2044AIServices ], []);
 const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
 ], []);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {
   
 }window.location.href = '/revolutionary-2044-pricing-showcase' 
 }, []);
@@ -19,8 +17,6 @@ const handleServiceClick = useCallback ( (service: unknown) => {
   
 }window.location.href = service.slug 
 }, []);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 }, []);
 
 };
@@ -109,8 +105,4 @@ top: `$ {
 
 }> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
 };
-export default Homepage2044;
-=======
-export default Homepage2044;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export default Homepage2044;export default Homepage2044;

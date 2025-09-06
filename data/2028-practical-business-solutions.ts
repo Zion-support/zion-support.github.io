@@ -38,13 +38,9 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
-];
-=======
-      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com",
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

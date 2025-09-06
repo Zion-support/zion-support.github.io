@@ -10,8 +10,6 @@ import {
   MapPin,
   ExternalLink,;
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
@@ -164,8 +162,7 @@ export default function AIEvalsPage() {
         </div>
       </section>
     </QuantumHolographicMatrixBackground>
-  );
-					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
+  );					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
 							<div className="flex items-center justify-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /> <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`}>{contactInfo.mobile}</a></div>
@@ -181,5 +178,3 @@ export default function AIEvalsPage() {
 		</QuantumHolographicMatrixBackground>
 	);
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

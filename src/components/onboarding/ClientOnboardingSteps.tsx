@@ -2,7 +2,6 @@ import React from 'react';
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus();
@@ -31,11 +30,7 @@ export function ClientOnboardingSteps() {
     },
   ];
 
-  return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;
-=======
-      link: "/client-dashboard",
+  return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client-dashboard",
       action: "Check Dashboard"}],
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

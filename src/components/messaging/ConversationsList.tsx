@@ -1,4 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -10,7 +9,6 @@ interface ConversationsListProps {
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
   markAsRead: (conversationId: string) => Promise<void>;
-
 export function ConversationsList({
   conversations,
   activeConversation,
@@ -25,7 +23,6 @@ export function ConversationsList({
 
   const Row = ({ index, style }: ListChildComponentProps) => {
     const conversation = conversations[index];
-
     if (!conversation) {
       return <div style={style} />;
     }
@@ -37,8 +34,7 @@ export function ConversationsList({
           isActive={activeConversation?.id === conversation.id}
           onClick={() => {
             setActiveConversation(conversation);
-            markAsRead(conversation.id);
-          }}
+            markAsRead(conversation.id);          }}
         />
       </div>
     );
@@ -63,14 +59,10 @@ export function ConversationsList({
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
-          width='100%'
-        >
+          width='100%'        >
           {Row}
         </List>
       )}
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

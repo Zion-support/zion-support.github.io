@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface SpaceColonization2029Service {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface SpaceColonization2029Service {
   reviews: number;
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   // Space Colonization & Mining Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'mars-colonization-automation-platform',
     name: 'Mars Colonization Automation Platform',
     tagline: 'Automate Mars colonization process with AI and robotics',
@@ -59,9 +54,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     period: '/month',
     description:
       'Comprehensive platform that automates the entire Mars colonization process using advanced AI, robotics, and autonomous systems. Manages habitat construction, resource extraction, life support systems, and colony expansion.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Autonomous habitat construction',
       'AI-powered resource management',
       'Life support system automation',
@@ -454,9 +446,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.8,
     reviews: 52,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -469,5 +459,3 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     reviews: 52
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

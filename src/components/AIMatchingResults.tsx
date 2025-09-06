@@ -8,13 +8,18 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
 import Skeleton from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface AIMatchingResultsProps {
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
-  serviceType?: string;
+  serviceType?: string;interface AIMatchingResultsProps {
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem,) => void,
+  isLoading?: boolean,
+  projectDescription?: string,
+  serviceType?: string
+}
 
 export function AIMatchingResults({
   matches,
@@ -46,7 +51,6 @@ export function AIMatchingResults({
     if (lowerCategory.includes('equipment')) return Monitor;
     return BriefcaseIcon;
   };
-
   if (isLoading) {
     return (
       <div className='space-y-4'>
@@ -122,8 +126,7 @@ export function AIMatchingResults({
               items.map(match => {
                 const CategoryIcon = getCategoryIcon(match.category);
                 
-                    onClick={() => onSelectMatch && onSelectMatch(match)}
-                  >
+                    onClick={() => onSelectMatch && onSelectMatch(match)}                  >
                     <div className='flex'>
                       <div
                         className={cn(
@@ -185,8 +188,7 @@ export function AIMatchingResults({
                                     <Badge key={i} variant='outline'>
                                       {skill}
                                     </Badge>
-                                  ))}
-                            </div>
+                                  ))}                            </div>
                           </div>
                         </div>
                       </div>
@@ -204,7 +206,4 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

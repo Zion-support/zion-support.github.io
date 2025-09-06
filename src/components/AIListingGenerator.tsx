@@ -16,7 +16,6 @@ import { supabase } from '@/integrations/supabase/client';
 import { Badge } from '@/components/ui/badge';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface GeneratedContent {
   description: string;
 tags: string[];
@@ -55,8 +54,7 @@ export function AIListingGenerator({
     e: { target: { value: string } },
     field: string
   ) => {
-    switch (field) {
-      case 'title':
+    switch (field) {      case 'title':
         setTitle(e.target.value);
         break;
       case 'category':
@@ -156,8 +154,7 @@ export function AIListingGenerator({
               onChange={e => handleInputChange(e, 'title')}
               placeholder='Enter your product or service title'
               className='bg-zion-blue border border-zion-blue-light text-white'
-              disabled={isLoading}
-            />
+              disabled={isLoading}            />
           </div>
           <div className='space-y-2'>
             <label
@@ -172,8 +169,7 @@ export function AIListingGenerator({
               onChange={e => handleInputChange(e, 'category')}
               placeholder='e.g. AI Tool, Digital Product, Service'
               className='bg-zion-blue border border-zion-blue-light text-white'
-              disabled={isLoading}
-            />
+              disabled={isLoading}            />
           </div>
           <div className='space-y-2'>
             <label
@@ -188,8 +184,7 @@ export function AIListingGenerator({
               onChange={e => handleInputChange(e, 'keyFeatures')}
               placeholder='Briefly describe the main features or benefits'
               className='bg-zion-blue border border-zion-blue-light text-white min-h-20'
-              disabled={isLoading}
-            />
+              disabled={isLoading}            />
           </div>
           <div className='space-y-2'>
             <label
@@ -210,8 +205,7 @@ export function AIListingGenerator({
           <Button
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
-            className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'
-          >
+            className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'          >
             {isLoading ? (
               <>Generating Optimized Content...</>
             ) : (
@@ -242,8 +236,7 @@ export function AIListingGenerator({
                 <Skeleton
                   key={i}
                   className='h-6 w-full bg-zion-blue-light/20'
-                />
-              ))}
+                />              ))}
             </div>
           </CardContent>
         </Card>
@@ -267,8 +260,7 @@ export function AIListingGenerator({
                 Tags
               </h3>
               <div className='flex flex-wrap gap-2'>
-                {generatedContent.tags.map((tag, index) => (
-                  <Badge key={index}>{tag}</Badge>
+                {generatedContent.tags.map((tag, index) => (                  <Badge key={index}>{tag}</Badge>
                 ))}
               </div>
             </div>
@@ -288,8 +280,7 @@ export function AIListingGenerator({
                 Key Selling Points
               </h3>
               <ul className='list-disc pl-5 text-white space-y-1'>
-                {generatedContent.keyPoints.map((point, index) => (
-                  <li key={index}>{point}</li>
+                {generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>
                 ))}
               </ul>
             </div>
@@ -297,8 +288,7 @@ export function AIListingGenerator({
           <CardFooter>
             <Button
               onClick={handleApply}
-              className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
-            >
+              className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'            >
               Apply to My Listing
               <ArrowRight className='ml-2 h-4 w-4' />
             </Button>
@@ -351,8 +341,7 @@ toast ({;
 }</div> </div> <div>) ) ";
 }</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml-2 h-4 w-4" /> </Button> </CardFooter> </Card>) ;
 }</div>) ;
-}'"
-=======
+}'"  )
+};
+  );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,5 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
@@ -41,7 +39,3 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') }
 },
-=======
-},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

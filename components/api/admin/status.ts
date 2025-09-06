@@ -4,12 +4,8 @@ import path from 'path';
 import {
   getSessionFromReq,
   isInternalAgentRequest,;
-} from '../../../utils/adminAuth';
-=======
-import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req),
@@ -18,14 +14,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-  const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');
-=======
-    return
+  const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');    return
   }
 
   const dataDir = path.join(process.cwd(), 'dataadmin');
-  const statusPath = path.join(dataDir, 'agents-status.json');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const insightsPath = path.join(dataDir, 'insights.json');
 
   const status = fs.existsSync(statusPath)
@@ -35,9 +27,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
     : { items: [], updatedAt: null };
 
-  res.status(200).json({ status, insights });
-=======
-  res.status(200).json({ status, insights })
+  res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

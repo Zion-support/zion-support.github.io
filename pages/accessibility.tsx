@@ -356,13 +356,85 @@ export default function AccessibilityPage() {
               <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
                 Ready to make your digital products accessible to everyone? Contact us for a free accessibility audit.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                  Get Free Audit
-                </Link>
-                <Link href="/services" className="px-8 py-4 border-2 border-purple-600 text-purple-600 rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300 font-semibold">
-                  View Services
-                </Link>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {accessibilityGuidelines.map((category, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">
+                    {category.category}
+                  </h3>
+                  <ul className="space-y-2">
+                    {category.guidelines.map((guideline, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {guideline}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                className="bg-white p-8 rounded-xl shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  Our Commitment
+                </h2>
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-gray-600 mb-6">
+                    At Zion Tech Group, we believe that technology should be accessible to everyone. Our commitment to accessibility goes beyond compliance – it's about creating inclusive digital experiences that empower all users.
+                  </p>
+                  <p className="text-gray-600 mb-6">
+                    We continuously work to improve our products and services, incorporating feedback from users with disabilities and staying up-to-date with the latest accessibility standards and best practices.
+                  </p>
+                  <p className="text-gray-600 mb-6">
+                    If you encounter any accessibility barriers or have suggestions for improvement, we want to hear from you. Your feedback helps us create better experiences for everyone.
+                  </p>
+                </div>
+>:pages-disabled/accessibility.tsx.disabled
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Have Questions About Accessibility?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <a href="mailto:accessibility@ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                  Contact Accessibility Team
+                </a>
+                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
+                  General Contact
+                </a>
               </div>
             </motion.div>
           </div>

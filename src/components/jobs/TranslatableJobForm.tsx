@@ -1,20 +1,18 @@
 
 import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent} from "@/components/ui/card";
-import {Loader2, Globe} from 'lucide-react'
-import {useTranslation} from "react-i18next";
-import {useTranslationService} from "@/hooks/useTranslationService";
-import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
-import {toast} from "@/components/ui/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Loader2, Globe } from 'lucide-react'import { useTranslation } from "react-i18next";
+import { useTranslationService } from "@/hooks/useTranslationService";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
   onSubmit: (formData: any) => void;
-  isSubmitting?: boolean,
-}
+  isSubmitting?: boolean;}
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
   const { t } = useTranslation();
@@ -29,7 +27,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     es: "",
     fr: "",
     pt: "",
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     ar: ""
   });
     ar: ""
@@ -41,8 +38,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     
         content = title[lang];
         sourceLanguage = lang;
-        break,
-      } else if (field === 'description' && description[lang]) {
+        break;      } else if (field === 'description' && description[lang]) {
         content = description[lang];
         sourceLanguage = lang;
         break;
@@ -75,7 +71,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   const ensureAllTranslations = async () => {
     const promises = [];
     
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

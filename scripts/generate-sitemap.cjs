@@ -26,6 +26,7 @@ const path = require('path');
 class SitemapGenerator {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.baseUrl = 'https: //zion.app', this.pages = [],
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
     this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
@@ -39,12 +40,15 @@ class SitemapGenerator {
     this.sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   async generateSitemap() {
     console.log('🗺️ Generating sitemap...');
 
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -147,9 +151,12 @@ class SitemapGenerator {
       sitemap += '  </url>\n';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     });
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -203,11 +210,14 @@ class SitemapGenerator {
     }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 }
 
 // Run if called directly
 if (require.main === module) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -322,4 +332,5 @@ module.exports = SitemapGenerator;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

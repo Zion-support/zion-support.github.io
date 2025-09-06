@@ -1,34 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-const fs = require('fs');
-const http = require('http');
-const distOk = fs.existsSync('out/index.html');
-function pingPreview() {
-	return new Promise((resolve) => {
-		const req = http.request({ host: '127.0.0.1', port: 3000, path: '/', timeout: 2000 }, (res) => {
-			resolve(res.statusCode && res.statusCode < 500);
-		});
-		req.on('error', () => resolve(false));
-		req.end();
-	});
-}
-(async () => {
-	const ok = distOk && (await pingPreview());
-	if (!ok) {
-		console.error('Healthcheck failed');
-		process.exit(1);
-	}
-	console.log('Healthy');
-})();
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const http = require("http");"const distOk = fs.existsSync("dist/index.html");function pingPreview() {return new Promise((resolve) => {"const req = http.request({ host: "127.0.0.1", port: 4173, path: "/", timeout: 2000 }, (res) => {resolve(res.statusCode && res.statusCode < 500)});"req.on("error", () => resolve(false));req.end()})}(async () => {const ok = distOk && (await pingPreview());if (!ok) {"console.error("Healthcheck failed");process.exit(1)}"console.log("Healthy")})();''"
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -236,6 +206,8 @@ class HealthChecker {
     const issues = [];
     
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Check disk space
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (diskUsage.percentage) {

@@ -5,7 +5,6 @@ import { format } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { Review, ReviewStatus } from '@/types/reviews';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 import {
   Table,
@@ -15,8 +14,7 @@ import {
   TableHeader,
   TableRow,;
 } from '@/components/ui/table';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import {
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';import {
   Dialog,
   DialogContent,
   DialogDescription,
@@ -32,7 +30,6 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-
 interface ReviewsModerationTableProps {
   reviews: Review[];
 isLoading: boolean;
@@ -77,8 +74,7 @@ export function ReviewsModerationTable({
     }: {
       reviewId: string;
       status: ReviewStatus;
-    }) => {
-      const { error } = await supabase
+    }) => {      const { error } = await supabase
         .from('reviews')
         .update({ status })
         .eq('id', reviewId);
@@ -86,15 +82,14 @@ export function ReviewsModerationTable({
       if (error) throw error;
       return { reviewId, status };
     },
-    onSuccess: data => {
-      toast({
+    onSuccess: data => {      toast({
         title: 'Review updated',
         description: `Review has been ${data.status}.`,
       });
       onRefresh();
       setViewDetailsOpen(false);
     },
-    onError: (error: Error) => {
+    onError: (error: Error,) => {
       toast({
         title: 'Error',
         description: `Failed to update review: ${error.message}`,
@@ -103,14 +98,13 @@ export function ReviewsModerationTable({
     },
   });
 
-  const getInitials = (name: string) => {
+  const getInitials = (name: string,) => {
     return name
       .split(' ')
       .map(n => n[0])
       .join('')
       .toUpperCase();
   };
-
   if (isLoading) {
     return (
       <div className='space-y-4'>
@@ -145,15 +139,13 @@ export function ReviewsModerationTable({
     setSelectedReview(review);
     setViewDetailsOpen(true);
   };
-
-  const renderStars = (rating: number) => {
+  const renderStars = (rating: number,) => {
     return (
       <div className='flex'>
         {[1, 2, 3, 4, 5].map(star => (
           <Star
             key={star}
-            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
-          />
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}          />
         ))}
       </div>
     );
@@ -173,16 +165,14 @@ export function ReviewsModerationTable({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {reviews.map(review => (
-            <TableRow key={review.id}>
+          {reviews.map(review => (            <TableRow key={review.id}>
               <TableCell>
                 <div className='flex items-center gap-2'>
                   <Avatar className='h-8 w-8'>
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name || ''}
-                      />
+                        alt={review.reviewer_profile.display_name || ''}                      />
                     ) : (
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name ? (
@@ -230,8 +220,7 @@ export function ReviewsModerationTable({
                         variant='outline'
                         className='h-8 w-8 p-0'
                         onClick={() => handleApprove(review.id)}
-                        disabled={isPending}
-                      >
+                        disabled={isPending}                      >
                         <Check className='h-4 w-4 text-green-500' />
                       </Button>
                       <Button
@@ -239,8 +228,7 @@ export function ReviewsModerationTable({
                         variant='outline'
                         className='h-8 w-8 p-0'
                         onClick={() => handleReject(review.id)}
-                        disabled={isPending}
-                      >
+                        disabled={isPending}                      >
                         <X className='h-4 w-4 text-red-500' />
                       </Button>
                     </>
@@ -277,8 +265,7 @@ export function ReviewsModerationTable({
                               status: 'approved',
                             })
                           }
-                        >
-                          Mark as approved
+                        >                          Mark as approved
                         </DropdownMenuItem>
                       )}
                     </DropdownMenuContent>
@@ -308,8 +295,7 @@ export function ReviewsModerationTable({
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
-                        alt={selectedReview.reviewer_profile.display_name || ''}
-                      />
+                        alt={selectedReview.reviewer_profile.display_name || ''}                      />
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -365,8 +351,7 @@ export function ReviewsModerationTable({
                         selectedReview.would_work_again
                           ? 'default'
                           : 'secondary'
-                      }
-                    >
+                      }                    >
                       {selectedReview.would_work_again
                         ? 'Would work again'
                         : 'Would not work again'}
@@ -394,13 +379,12 @@ export function ReviewsModerationTable({
                   <Button
                     variant='destructive'
                     onClick={() => handleReject(selectedReview.id)}
-                    disabled={isPending}
-                  >
+                    disabled={isPending}                  >
                     Reject
                   </Button>
                   <Button
-                    onClick={() => handleApprove(selectedReview.id)}
-                    disabled={isPending}
+                    onClick = {() => handleApprove(selectedReview.id),}
+                    disabled = {isPending,}
                   >
                     Approve
                   </Button>
@@ -415,8 +399,7 @@ export function ReviewsModerationTable({
                       status: 'rejected',
                     })
                   }
-                  disabled={isPending}
-                >
+                  disabled={isPending}                >
                   Mark as Rejected
                 </Button>
               )}
@@ -428,8 +411,7 @@ export function ReviewsModerationTable({
                       status: 'approved',
                     })
                   }
-                  disabled={isPending}
-                >
+                  disabled={isPending}                >
                   Mark as Approved
                 </Button>
               )}
@@ -514,8 +496,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }> Mark as Approved </Button>) ;
 }</DialogFooter> </DialogContent> </Dialog>) ;
 }</>) ;
-}"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}"}

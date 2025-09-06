@@ -1,11 +1,4 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-;const fs = require('fs');
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const fs = require('fs')
 const path = require('path')
         console.log(' Checking system health...')
@@ -362,4 +355,5 @@ const path = require('path')
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

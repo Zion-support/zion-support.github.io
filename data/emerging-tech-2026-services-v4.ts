@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface EmergingTech2026ServiceV4 {
   id: string;
   name: string;
@@ -42,16 +41,12 @@ export interface EmergingTech2026ServiceV4 {
   reviews: number;
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
   // Neuromorphic Computing Platform
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
   // Neuromorphic Computing Platform
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'neuromorphic-computing-platform',
     name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for next-generation AI applications',
@@ -59,9 +54,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description:
       "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing solutions.",
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Brain-inspired neural architecture',
       'Ultra-low power consumption',
       'Real-time learning capabilities',
@@ -667,9 +659,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.8,
     reviews: 25,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -682,5 +672,3 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     reviews: 25
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

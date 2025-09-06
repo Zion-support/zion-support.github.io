@@ -7,18 +7,14 @@ export type Real2036SpecializedService = {
   price: string;
   period?: string;
   features: string[];
-  link: string;  launchDate?: string;
-  rating?: number;
+  link: string;  launchDate?: string;  rating?: number;
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
-  technology?: string[];};
-=======
-  technology?: string[]
+  technology?: string[];};  technology?: string[]
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
@@ -477,9 +473,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
       'Customer management',
     ],
   },
-];
-=======
-    id: 'neuromorphic-computing-platform';
+];    id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
     tagline: 'Brain-inspired computing for next-generation AI applications',
     description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.';
@@ -707,5 +701,3 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

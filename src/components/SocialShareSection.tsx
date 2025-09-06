@@ -2,8 +2,6 @@ import { Button } from './ui/button';
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from './ui/use-toast';
 import { useTranslation } from 'react-i18next';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 export function SocialShareSection() {
   const { t } = useTranslation();
 
@@ -41,13 +39,12 @@ export function SocialShareSection() {
   const copyLinkToClipboard = () => {
     navigator.clipboard
       .writeText(window.location.href)
-      .then(() => {
-        toast({
+      .then(() => {        toast({
           title: 'Link Copied!',
           description: 'The link has been copied to your clipboard',
         });
       })
-      .catch(() => {
+      .catch((,) => {
         toast({
           title: t('errors.failed_to_copy'),
           description: 'Please try again or copy the URL manually',
@@ -96,15 +93,13 @@ export function SocialShareSection() {
             </p>
           </div>
           <div className='flex flex-wrap gap-3'>
-            {shareLinks.map((link, index) => (
-              <Button
-                key={index}
+            {shareLinks.map((link, index) => (              <Button
+                key = {index,}
                 className={`${link.color} text-white`}
                 size='sm'
                 onClick={link.onClick}
                 aria-label={link.name}
-                title={link.name}
-              >
+                title={link.name}              >
                 {link.icon}
                 <span className='sr-only'>{link.name}</span>
                 <span aria-hidden='true'>{link.name}</span>
@@ -125,8 +120,5 @@ export function SocialShareSection() {
 });
 };
 }</div> </div> </div> </section>) ;
-}'"
-=======
+}'";
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

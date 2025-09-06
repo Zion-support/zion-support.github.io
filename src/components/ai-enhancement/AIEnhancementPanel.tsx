@@ -1,4 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import {
   Card,
@@ -6,7 +5,8 @@ import {
   CardHeader,
   CardTitle,
   CardFooter,;
-} from '@/components/ui/card';
+} from '@/components/ui/card';import React, { useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,7 +23,6 @@ interface AIEnhancementPanelProps {
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
-
 export function AIEnhancementPanel({
   title,
   defaultOptions,
@@ -50,7 +49,7 @@ export function AIEnhancementPanel({
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions
-  ) => {
+  ,) => {
     setOptions({
       ...options,
       [field]: e.target.value,
@@ -67,7 +66,6 @@ export function AIEnhancementPanel({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
   return (
     <Card className='w-full max-w-2xl mx-auto'>
       <CardHeader>
@@ -84,8 +82,7 @@ export function AIEnhancementPanel({
             placeholder='Enter your content to enhance...'
             className='min-h-[100px]'
             value={options.content}
-            onChange={e => handleInputChange(e, 'content')}
-          />
+            onChange={e => handleInputChange(e, 'content')}          />
         </div>
 
         {/* Context input */}
@@ -95,8 +92,7 @@ export function AIEnhancementPanel({
             placeholder='Add any relevant context to guide the AI...'
             className='min-h-[60px]'
             value={options.context}
-            onChange={e => handleInputChange(e, 'context')}
-          />
+            onChange={e => handleInputChange(e, 'context')}          />
         </div>
 
         {/* Instructions input (optional) */}
@@ -108,8 +104,7 @@ export function AIEnhancementPanel({
             <Input
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
-              onChange={e => handleInputChange(e, 'instructions')}
-            />
+              onChange={e => handleInputChange(e, 'instructions')}            />
           </div>
         )}
 
@@ -117,8 +112,7 @@ export function AIEnhancementPanel({
         <Button
           onClick={handleGenerate}
           className='w-full'
-          disabled={isEnhancing || (!options.content && !options.context)}
-        >
+          disabled={isEnhancing || (!options.content && !options.context)}        >
           {isEnhancing ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -141,8 +135,7 @@ export function AIEnhancementPanel({
                 variant='ghost'
                 size='sm'
                 onClick={handleCopy}
-                className='h-8'
-              >
+                className='h-8'              >
                 {copied ? (
                   <>
                     <Check className='h-4 w-4 mr-1' /> Copied
@@ -158,8 +151,7 @@ export function AIEnhancementPanel({
               <Textarea
                 value={generatedContent}
                 onChange={e => setGeneratedContent(e.target.value)}
-                className='min-h-[200px]'
-              />
+                className='min-h-[200px]'              />
             </div>
           </div>
         )}
@@ -177,7 +169,4 @@ export function AIEnhancementPanel({
       )}
     </Card>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

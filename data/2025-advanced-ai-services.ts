@@ -4,8 +4,6 @@ export const advancedAIServices2025 = [
     name: 'BusinessIntelligence AI Pro',
     description:
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Natural language query processing',
       'AI-powered data visualization',
       'Predictive analytics and forecasting',
@@ -592,9 +590,7 @@ export const advancedAIServices2025 = [
     competitiveAdvantage:
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
   },
-];
-=======
-      phone: '+1 302 464 0950';
+];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     };
     marketSize: '$173.5B',
@@ -602,5 +598,3 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

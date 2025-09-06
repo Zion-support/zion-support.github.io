@@ -1,6 +1,5 @@
 import { Trophy } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ReputationDisplayProps {
   reputation: number;
@@ -9,12 +8,10 @@ interface ReputationDisplayProps {
 export const ReputationDisplay = ({
   reputation,
   size = 'md',}: ReputationDisplayProps) => {
-=======
 export const ReputationDisplay = ({ 
   reputation;
   size = 'md' 
-}: ReputationDisplayProps) => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}: ReputationDisplayProps,) => {
   // Calculate next milestone
   const currentLevel = Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100;
@@ -25,8 +22,7 @@ export const ReputationDisplay = ({
     sm: {
       container: 'text-xs',
       icon: 'w-3 h-3',
-      progress: 'h-1',
-  // Styling based on size
+      progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
       container: "text-xs",
@@ -92,6 +88,3 @@ export default ReputationDisplay;
 };
 export default ReputationDisplay;
 '
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

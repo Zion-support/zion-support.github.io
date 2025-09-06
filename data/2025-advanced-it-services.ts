@@ -4,8 +4,6 @@ export const advancedITServices2025 = [
     name: 'QuantumCloud Infrastructure',
     description:
       'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum-enhanced computing resources',
       'Advanced security with quantum encryption',
       'Auto-scaling infrastructure',
@@ -616,9 +614,7 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
   },
-];
-=======
-      phone: '+1 302 464 0950';
+];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     };
     marketSize: '$15.7B',
@@ -626,5 +622,3 @@ export const advancedITServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

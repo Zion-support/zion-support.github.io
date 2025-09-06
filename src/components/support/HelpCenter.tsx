@@ -7,7 +7,6 @@ import { HelpArticleList } from './HelpArticleList';
 import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
 import { Search } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -22,7 +21,20 @@ export default function HelpCenter() {
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId);
   };
-
+export default function HelpCenter() {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(""),
+  
+  const handleCategorySelect = (categoryId: string,) => {
+    setSelectedCategory(categoryId),
+    setSelectedArticle(null)
+  },
+  
+  const handleArticleSelect = (articleId: string,) => {
+    setSelectedArticle(articleId)
+  },
+  
   const handleBackToCategories = () => {
     setSelectedCategory(null);
     setSelectedArticle(null);
@@ -49,8 +61,7 @@ export default function HelpCenter() {
               placeholder='Search for help articles...'
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className='pl-10'
-            />
+              className='pl-10'            />
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />
           </div>
 
@@ -66,8 +77,7 @@ export default function HelpCenter() {
                 <HelpCategoryList
                   categories={HELP_CATEGORIES}
                   onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
+                  searchQuery={searchQuery}                />
               )}
 
               {selectedCategory && !selectedArticle && (
@@ -82,8 +92,7 @@ export default function HelpCenter() {
                   <HelpArticleList
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
-                    searchQuery={searchQuery}
-                  />
+                    searchQuery={searchQuery}                  />
                 </>
               )}
 
@@ -92,8 +101,7 @@ export default function HelpCenter() {
                   <Button
                     variant='ghost'
                     onClick={handleBackToArticles}
-                    className='mb-4'
-                  >
+                    className='mb-4'                  >
                     ← Back to Articles
                   </Button>
                   <HelpArticleView articleId={selectedArticle} />
@@ -249,7 +257,4 @@ export default function HelpCenter() {
       </div>
     </>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

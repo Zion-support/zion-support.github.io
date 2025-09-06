@@ -724,9 +724,7 @@ export const spaceTechServices: SpaceTechService[] = [
     rating: 4.9,
     reviews: 250,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -739,5 +737,3 @@ export const spaceTechServices: SpaceTechService[] = [
     reviews: 250
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

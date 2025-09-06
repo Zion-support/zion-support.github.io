@@ -1,6 +1,4 @@
 import { ProfileData } from '@/types/profile';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
@@ -499,6 +497,3 @@ availableHours: [ {
 hourlyRate: 125;
 contactEmail: "david.martinez@example.com" 
 }];
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

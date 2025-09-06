@@ -96,20 +96,3 @@ export default function Document() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
 import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages._archive_corrupted/_document.tsx
-<<<<<<< HEAD
-import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
-=======
-<<<<<<< HEAD
-=======
-import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/_document.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

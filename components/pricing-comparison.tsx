@@ -34,40 +34,28 @@ export default function PricingComparisonPage() {
         },        {
           name: 'Writesonic',
           pricing: '$19/month',
-          rating: '4.4/5',
-          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
           cons: ['Higher pricingLimited customizationNo unlimited plan'],
           savings: 'Save $20/month with Zion'
         };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        {
           name: 'Copy.ai',
           pricing: '$36/month',
           rating: '4.6/5',
-<<<<<<< HEAD
           pros: ['Unlimited words', 'Good value', 'Simple interface'],
           cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
           savings: 'Save $17/month with Zion',
-        },
-          pros: ['Unlimited wordsGood valueSimple interface'],
+        },          pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
           savings: 'Save $17/month with Zion'
         };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        {
           name: 'Writesonic',
           pricing: '$19/month',
           rating: '4.4/5',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           pros: ['Affordable', 'Good for beginners', 'Basic features'],
           cons: ['Limited features', 'Basic AI models', 'No team features'],
           savings: 'Same price, better features',
         },
       ],
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      features: [
         'AI-powered content generation',
         'Multiple content formats',
         'SEO optimization',
@@ -99,18 +87,13 @@ export default function PricingComparisonPage() {
         },        {
           name: 'New Relic',
           pricing: '$99/user/month',
-          rating: '4.5/5',
-          pros: ['Comprehensive featuresGreat integrationsAdvanced analytics'],
+          rating: '4.5/5',          pros: ['Comprehensive featuresGreat integrationsAdvanced analytics'],
           cons: ['Very expensiveComplex pricingSteep learning curve'],
           savings: 'Save $121/month for 10 servers'
         };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        {
           name: 'New Relic',
           pricing: '$99/user/month',
           rating: '4.5/5',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           pros: ['Good APM', 'User-based pricing', 'Reliable'],
           cons: [
             'Expensive for teams',
@@ -118,22 +101,16 @@ export default function PricingComparisonPage() {
             'Complex setup',
           ],
           savings: 'Save $396/month for 5 users',
-<<<<<<< HEAD
         },        {
           name: 'Prometheus + Grafana',
           pricing: 'Free',
-          rating: '4.3/5',
-          pros: ['Good APMUser-based pricingReliable'],
+          rating: '4.3/5',          pros: ['Good APMUser-based pricingReliable'],
           cons: ['Expensive for teamsLimited server monitoringComplex setup'],
           savings: 'Save $396/month for 5 users'
         };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        {
           name: 'Prometheus + Grafana',
           pricing: 'Free',
           rating: '4.3/5',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           pros: ['Completely free', 'Highly customizable', 'Open source'],
           cons: [
             'Requires DevOps expertise',
@@ -143,9 +120,6 @@ export default function PricingComparisonPage() {
           savings: 'Professional service for $29/month',
         },
       ],
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      features: [
         'Real-time monitoring',
         'Multi-cloud support',
         'AI-powered alerting',
@@ -173,18 +147,13 @@ export default function PricingComparisonPage() {
         },        {
           name: 'GitLab CI/CD',
           pricing: '$19/user/month',
-          rating: '4.4/5',
-          pros: ['GitHub nativeGood free tierWide adoption'],
+          rating: '4.4/5',          pros: ['GitHub nativeGood free tierWide adoption'],
           cons: ['Expensive for teamsLimited featuresComplex pricing'],
           savings: 'Save $200+/month for active teams'
         };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        {
           name: 'GitLab CI/CD',
           pricing: '$19/user/month',
           rating: '4.4/5',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           pros: ['Integrated platform', 'Good CI/CD', 'Unlimited repos'],
           cons: [
             'User-based pricing',
@@ -192,30 +161,21 @@ export default function PricingComparisonPage() {
             'Higher cost for teams',
           ],
           savings: 'Save $56/month for 5 users',
-<<<<<<< HEAD
         },        {
           name: 'Jenkins',
           pricing: 'Free',
-          rating: '4.2/5',
-          pros: ['Integrated platformGood CI/CDUnlimited repos'],
+          rating: '4.2/5',          pros: ['Integrated platformGood CI/CDUnlimited repos'],
           cons: ['User-based pricingLimited integrationsHigher cost for teams'],
           savings: 'Save $56/month for 5 users'
         };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        {
           name: 'Jenkins',
           pricing: 'Free',
           rating: '4.2/5',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           pros: ['Completely free', 'Highly customizable', 'Open source'],
           cons: ['Requires maintenance', 'No managed service', 'Complex setup'],
           savings: 'Professional service for $39/month',
         },
       ],
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      features: [
         'CI/CD pipelines',
         'Infrastructure as Code',
         'Security automation',
@@ -225,12 +185,9 @@ export default function PricingComparisonPage() {
       ],
       color: 'from-blue-500 to-cyan-600',
       icon: '🚀',
-    },  ];
-=======
-      icon: '🚀'
+    },  ];      icon: '🚀'
     }
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const marketInsights = [
     {
@@ -238,7 +195,6 @@ export default function PricingComparisonPage() {
       icon: <DollarSign className='w-6 h-6' />,
       color: 'text-green-400',
     },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       insight: 'All plans include free trials and no hidden fees',
       icon: <Check className='w-6 h-6' />,
@@ -253,13 +209,22 @@ export default function PricingComparisonPage() {
       insight: 'Enterprise-grade reliability without enterprise pricing',
       icon: <Star className='w-6 h-6' />,
       color: 'text-yellow-400',
-    },  ];
-=======
+    },  ];    {
+      insight: 'All plans include free trials and no hidden fees',
+      icon: <Check className="w-6 h-6" />,
+      color: 'text-blue-400'
+    };
+    {
+      insight: 'Professional features at startup-friendly prices',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'text-purple-400'
+    };
+    {
+      insight: 'Enterprise-grade reliability without enterprise pricing',
       icon: <Star className="w-6 h-6" />,
       color: 'text-yellow-400'
     }
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -281,8 +246,6 @@ export default function PricingComparisonPage() {
           content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features."
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </Head>
 
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
@@ -314,28 +277,20 @@ export default function PricingComparisonPage() {
                 href='/pricing'
                 variant='outline'
                 size='lg'
-                className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'              >
-                href="#comparison"
+                className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'              >                href="#comparison"
                 variant="primary"
                 size="lg"
                 className="bg-indigo-600 hover:bg-indigo-700 text-white"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
                 View Comparison
               </Button>
               <Button
-<<<<<<< HEAD
                 href='/pricing'
                 variant='outline'
                 size='lg'
-                className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'
-                href="/pricing"
+                className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'                href="/pricing"
                 variant="outline"
                 size="lg"
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 View Our Pricing
               </Button>
             </div>
@@ -347,7 +302,6 @@ export default function PricingComparisonPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Why Choose Zion?
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -362,11 +316,20 @@ export default function PricingComparisonPage() {
                 >
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}
-                  >                    {insight.icon}
-=======
+                  >                    {insight.icon}                Why Choose Zion?
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Key insights that make Zion the smart choice for your business.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {marketInsights.map((insight, index) => (
+                <Card
+                  key={index}
+                  className="text-center group hover:scale-105 transition-transform duration-300"
+                >
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}>
                     {insight.icon}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
                     {insight.insight}
@@ -389,9 +352,7 @@ export default function PricingComparisonPage() {
                 value.              </p>
             </div>
 
-            {serviceComparisons.map((service, serviceIndex) => (
-=======
-        <section id="comparison" className="py-24 bg-gray-800">
+            {serviceComparisons.map((service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -399,19 +360,14 @@ export default function PricingComparisonPage() {
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See exactly how each service compares in features, pricing, and value.
-              </p>
             </div>
 
             {serviceComparisons.map((service, serviceIndex) => (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <div key={serviceIndex} className='mb-24'>
                 <div className='text-center mb-16'>
                   <div
                     className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mx-auto mb-6`}
                   >
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     {service.icon}
                   </div>
                   <h3 className='text-3xl font-bold text-white mb-4'>
@@ -467,13 +423,37 @@ export default function PricingComparisonPage() {
                           </p>
                           <p className='text-2xl font-bold text-white'>
                             {service.zionPricing.starter}
-                          </p>                        </div>
-=======
+                          </p>                        </div>                    {service.icon}
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-4">{service.service}</h3>
+                  <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300">
+                    <span>Starter: <span className="text-green-400 font-semibold">{service.zionPricing.starter}</span></span>
+                    <span>Professional: <span className="text-blue-400 font-semibold">{service.zionPricing.professional}</span></span>
+                    <span>Enterprise: <span className="text-purple-400 font-semibold">{service.zionPricing.enterprise}</span></span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                  {/* Zion Service */}
+                  <div className="lg:col-span-1">
+                    <Card className="h-full border-2 border-green-500 bg-green-500/5">
+                      <div className="text-center p-6">
+                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-medium mb-4">
+                          Zion {service.service}
+                        </div>
+                        <h4 className="text-xl font-bold text-white mb-4">Best Value</h4>
+                        <div className="space-y-3 mb-6">
+                          {service.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-gray-300">
+                              <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                              <span className="text-sm">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
                         <div className="text-center">
                           <p className="text-green-400 font-semibold mb-2">Starting at</p>
                           <p className="text-2xl font-bold text-white">{service.zionPricing.starter}</p>
                         </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       </div>
                     </Card>
                   </div>
@@ -486,17 +466,13 @@ export default function PricingComparisonPage() {
                           <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
                             {competitor.name}
                           </div>
-                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (
-=======
-                    <div key={compIndex} className="lg:col-span-1">
+                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (                    <div key={compIndex} className="lg:col-span-1">
                       <Card className="h-full border border-gray-700">
                         <div className="text-center p-6">
                           <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4">
                             {competitor.name}
                           </div>
                           <div className="flex items-center justify-center mb-4">
-                            {[...Array(5)].map((_, i) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -509,7 +485,6 @@ export default function PricingComparisonPage() {
                             <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -527,12 +502,18 @@ export default function PricingComparisonPage() {
                                     key={proIndex}
                                     className='flex items-center'
                                   >
-                                    <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}
-=======
+                                    <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}                          </div>
+                          <div className="mb-4">
+                            <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
+                          </div>
+                          <div className="space-y-2 mb-4 text-xs">
+                            <div>
+                              <p className="text-green-400 font-medium mb-1">Pros:</p>
+                              <ul className="text-gray-300 space-y-1">
+                                {competitor.pros.map((pro, proIndex) => (
                                   <li key={proIndex} className="flex items-center">
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                     {pro}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                                   </li>
                                 ))}
                               </ul>
@@ -547,15 +528,11 @@ export default function PricingComparisonPage() {
                                     key={conIndex}
                                     className='flex items-center'
                                   >
-                                    <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />                                    {con}
-=======
-                              <p className="text-red-400 font-medium mb-1">Cons:</p>
+                                    <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />                                    {con}                              <p className="text-red-400 font-medium mb-1">Cons:</p>
                               <ul className="text-gray-300 space-y-1">
                                 {competitor.cons.map((con, conIndex) => (
                                   <li key={conIndex} className="flex items-center">
                                     <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0" />
-                                    {con}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                                   </li>
                                 ))}
                               </ul>
@@ -564,12 +541,9 @@ export default function PricingComparisonPage() {
                           <div className='text-center'>
                             <p className='text-green-400 font-semibold text-sm'>
                               {competitor.savings}
-                            </p>                          </div>
-=======
-                          <div className="text-center">
+                            </p>                          </div>                          <div className="text-center">
                             <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
                           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </div>
                       </Card>
                     </div>
@@ -584,8 +558,6 @@ export default function PricingComparisonPage() {
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-              Ready to Save Money and Get Better Features?
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -610,42 +582,30 @@ export default function PricingComparisonPage() {
                 href='/devops-automation'
                 variant='secondary'
                 size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'              >
-                href="/ai-content-generator"
+                className='bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
                 Try AI Content Generator
               </Button>
               <Button
-<<<<<<< HEAD
                 href='/cloud-monitoring'
                 variant='secondary'
                 size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'
-                href="/cloud-monitoring"
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/cloud-monitoring"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
                 Try Cloud Monitoring
               </Button>
               <Button
-<<<<<<< HEAD
                 href='/devops-automation'
                 variant='secondary'
                 size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'
-                href="/devops-automation"
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Try DevOps Automation
               </Button>
             </div>
@@ -655,7 +615,3 @@ export default function PricingComparisonPage() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

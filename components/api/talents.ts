@@ -19,9 +19,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  const started = Date.now();
-  const auth = await authenticateRequest(req),
+  const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
@@ -58,9 +56,5 @@ export default async function handler(
   records.push(record);
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id });
-=======
-  return res.status(201).json({ id: record.id })
+  return res.status(201).json({ id: record.id });  return res.status(201).json({ id: record.id })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

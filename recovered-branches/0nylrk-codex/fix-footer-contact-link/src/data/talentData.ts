@@ -1,6 +1,4 @@
 import { TalentProfile } from '@/types/talent';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -461,6 +459,3 @@ export const TALENT_PROFILES: TalentProfile[] = [
   },
 ];
 }];
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

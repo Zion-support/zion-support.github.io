@@ -13,7 +13,6 @@ export default function CoachWidget() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input }),
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       });
       const data = await resp.json();
       setReply(data.text || '');
@@ -21,15 +20,15 @@ export default function CoachWidget() {
       setLoading(false);    }
   }
 
-  return (
-=======
+  return (      });
+      const data = await resp.json();
+      setReply(data.text || '')
+    } finally {
       setLoading(false)
     }
   }
 
   return (
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <div className='border rounded p-3'>
       <div className='font-medium mb-2'>ZionGPT Coach</div>
       <div className='flex gap-2'>
@@ -46,9 +45,6 @@ export default function CoachWidget() {
         >
           {loading ? '...' : 'Ask'}
         </button>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </div>
       {reply && (
         <div className='mt-2 text-sm text-gray-800 dark:text-gray-200'>
           {reply}
@@ -56,7 +52,4 @@ export default function CoachWidget() {
       )}
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

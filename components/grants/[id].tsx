@@ -5,13 +5,10 @@ import type { GrantApplication } from '../../types/grants';
 
 export default function GrantDetailPage() {
   const router = useRouter();
-  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);
-=======
-export default function GrantDetailPage() {
+  const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id: string },
   const [item, setItem] = useState<GrantApplication | null>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
 
@@ -24,23 +21,16 @@ export default function GrantDetailPage() {
       .finally(() => setLoading(false));  }, [id]);
 
   const addUpdate = async () => {
-    if (!id || !updateContent.trim()) return;
-=======
-    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
   }, [id]);
 
   const addUpdate = async () => {
     if (!id || !updateContent.trim()) return;
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const resp = await fetch(`/api/grants/${id}/updates`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ content: updateContent }),
     });
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    if (resp.ok) {
       const u = await resp.json();
       setItem(prev =>
         prev ? { ...prev, updates: [...(prev.updates || []), u.update] } : prev
@@ -117,14 +107,10 @@ export default function GrantDetailPage() {
                         {l}
                       </a>
                     </li>
-                  ))}                </ul>
-              <div className="mt-2">
+                  ))}                </ul>              <div className="mt-2">
                 <div className="text-sm font-medium">Supporting Links</div>
                 <ul className="list-disc list-inside text-sm">
                   {item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </ul>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             )}
           </section>
@@ -159,8 +145,7 @@ export default function GrantDetailPage() {
                   className='mt-2 px-3 py-2 bg-gray-900 text-white rounded'
                 >
                   Add Update
-                </button>              </div>
-          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
+                </button>              </div>          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h2 className="font-medium mb-2">Updates</h2>
             <div className="space-y-3">
               {(item.updates || []).slice().reverse().map((u) => (
@@ -173,9 +158,6 @@ export default function GrantDetailPage() {
               <div className="pt-2">
                 <textarea className="w-full border rounded p-2" rows={3} placeholder="Post an update or progress note" value={updateContent} onChange={(e) => setUpdateContent(e.target.value)} />
                 <button onClick={addUpdate} className="mt-2 px-3 py-2 bg-gray-900 text-white rounded">Add Update</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
           </section>
         </div>
@@ -189,7 +171,6 @@ export default function GrantDetailPage() {
                   <span
                     className={`mt-1 inline-block h-3 w-3 rounded-full ${m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
                   />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <div>
                     <div className='font-medium'>{m.title}</div>
                     {m.description && (
@@ -221,19 +202,25 @@ export default function GrantDetailPage() {
 
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
             <h3 className='font-medium mb-2'>Team</h3>
-            <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>          </section>
-=======
+            <div className='text-sm whitespace-pre-wrap'>{item.teamInfo}</div>          </section>                  <div>
+                    <div className="font-medium">{m.title}</div>
+                    {m.description && <div className="text-gray-600">{m.description}</div>}
+                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
+                    {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
+                  </div>
+                </li>
+              ))}
+              {(!item.milestones || item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
+            </ul>
+            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased || 0}</div>
+          </section>
+
           <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
             <h3 className="font-medium mb-2">Team</h3>
             <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
           </section>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </aside>
       </div>
     </EnhancedLayout>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

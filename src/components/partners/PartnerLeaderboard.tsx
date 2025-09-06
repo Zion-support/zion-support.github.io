@@ -63,9 +63,8 @@ export function PartnerLeaderboard() {
   ];
   
   // Function to render rank badge
-  const renderRankBadge = (rank: number) => {
+  const renderRankBadge = (rank: number,) => {
     switch(rank) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       case 1:
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:
@@ -74,7 +73,6 @@ export function PartnerLeaderboard() {
         return <Medal className="h-5 w-5 text-amber-700" />,
       default:
         return <span className="text-sm font-semibold">{rank}</span>
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

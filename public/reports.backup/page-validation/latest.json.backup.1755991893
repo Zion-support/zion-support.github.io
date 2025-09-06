@@ -49,6 +49,7 @@
   ],
   "generatedAt": "2025-08-21T00:33:41.084Z"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -61,6 +62,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T22:05:47.698Z"

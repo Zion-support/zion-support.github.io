@@ -13,8 +13,7 @@ export const Outlet = () => null;
 export const useNavigate = () => (url: string) => {};
 export const useLocation = () => ({ pathname: '/' });
 export const useParams = () => ({});
-export const useSearchParams = () => [new URLSearchParams(), () => {}] as any;
-export default {
+export const useSearchParams = () => [new URLSearchParams(), () => {}] as any;export default {
   BrowserRouter,
   Routes,
   Route,
@@ -28,7 +27,6 @@ export default {
   useParams,
   useSearchParams,
 };
-=======
   BrowserRouter;
   Routes;
   Route;
@@ -41,5 +39,3 @@ export default {
   useLocation;
   useParams;
   useSearchParams};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

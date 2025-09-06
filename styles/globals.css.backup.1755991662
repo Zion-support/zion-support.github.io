@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -15,6 +16,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 html { color-scheme: dark; }
 body { @apply bg-gray-950 text-gray-100; }
 
@@ -22,6 +25,7 @@ code { @apply font-mono; }
 
 /* Import Modern Design System */
 @import './modern-design-system.css';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -75,6 +79,9 @@ code { @apply font-mono; }
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Base styles */
 @layer base {
   html {
@@ -190,6 +197,7 @@ code { @apply font-mono; }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -202,6 +210,8 @@ code { @apply font-mono; }
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -503,6 +513,7 @@ code { @apply font-mono; }
 /* Neon Glow Effects */
 .neon-glow {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -545,9 +556,11 @@ h3 {
 .neon-glow {
   text-shadow: 
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
-    0 0 5px currentColor,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    0 0 5px currentColor,
   box-shadow:     0 0 5px currentColor,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -555,12 +568,16 @@ h3 {
   box-shadow:     0 0 5px currentColor,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  box-shadow:     0 0 5px currentColor,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     0 0 10px currentColor,
     0 0 15px currentColor,
     0 0 20px currentColor;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -573,6 +590,8 @@ h3 {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .neon-glow-cyan {
   color: var(--neon-cyan);
   text-shadow: 0 0 5px var(--neon-cyan);
@@ -670,6 +689,7 @@ h3 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -750,9 +770,11 @@ a:hover {
 
 .futuristic-link::before {
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-19ef
-  content: '';
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  content: '';
 .futuristic-button::before {  content: '';
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -760,11 +782,15 @@ a:hover {
 .futuristic-button::before {  content: '';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+.futuristic-button::before {  content: '';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   position: absolute;
   bottom: 0;
   left: -100%;
   width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -777,6 +803,8 @@ a:hover {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left var(--animation-slow) ease;
@@ -1059,6 +1087,7 @@ a:hover {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1082,6 +1111,8 @@ a:hover {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -1107,6 +1138,7 @@ a:hover {
 
 /* Focus styles */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1119,6 +1151,8 @@ a:hover {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 .focus-cyber:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
@@ -1133,16 +1167,16 @@ a:hover {
   outline: none;
   box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.5);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-}
 =======
-:focus {
-  outline: 2px solid var(--neon-blue);
-  outline-offset: 2px;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
+}
+<<<<<<< HEAD
 
 /* Futuristic animations */
 @keyframes float {
@@ -1530,3 +1564,5 @@ a:hover {
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

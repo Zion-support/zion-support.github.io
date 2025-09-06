@@ -14,7 +14,7 @@ const mockSentry = {
   captureEvent: noop,
   addBreadcrumb: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
+  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
   setUser: noop,
   setTag: noop,
   setTags: noop,
@@ -26,13 +26,11 @@ const mockSentry = {
 
   // Transaction and performance monitoring
   startTransaction: () => mockTransaction,
-  finishTransaction: noop,
-  // Error boundary and React integration
-  ErrorBoundary: ({ children }: any) => children,
-  withErrorBoundary: (component: any) => component,
+  finishTransaction: noop,  // Error boundary and React integration
+  ErrorBoundary: ({ children }: any,) => children,
+  withErrorBoundary: (component: any,) => component,
   showReportDialog: noop,
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Browser-specific methods
   onLoad: noop,
   wrap: (fn: (...args: any[]) => any) => fn,
@@ -49,9 +47,15 @@ const mockSentry = {
       () => (_req: any, _res: any, next: (...args: any[]) => any) =>
         next(),
   },
-
+  
+  // Server-specific methods (Node.js)
+  Handlers: {
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
+    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
+  
   // Next.js specific
-  withSentryConfig: (config: any) => config,
+  withSentryConfig: (config: any,) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -143,7 +147,6 @@ const mockHub = {
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   startTransaction: () => mockTransaction,
 };
-
 // Export default mock that covers all Sentry packages
 export default mockSentry;
 
@@ -185,7 +188,3 @@ export const Severity = mockSentry.Severity;
 export { mockSentry as Sentry };
 
 // All exports are already defined above
-=======
-// All exports are already defined above
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

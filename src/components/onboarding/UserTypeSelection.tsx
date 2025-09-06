@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface UserTypeOption {
   id: 'serviceProvider' | 'talent' | 'client';
   name: string;
@@ -12,7 +10,6 @@ interface UserTypeOption {
 interface UserTypeSelectionProps {
   onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
   selectedType: string | null;
-
 export function UserTypeSelection({
   onSelect,
   selectedType,
@@ -54,8 +51,7 @@ export function UserTypeSelection({
 
           
               onClick={() => onSelect(type.id)}
-              variant='outline'
-              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
+              variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
                   ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'
                   : 'border-zion-blue-light hover:border-zion-cyan/50 text-white'
@@ -80,7 +76,4 @@ export function UserTypeSelection({
       </div>
     </div>
   );
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

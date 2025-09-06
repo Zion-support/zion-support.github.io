@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface AdvancedITInfrastructureService {
   id: string;
   name: string;
@@ -1074,8 +1073,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4.7,
       reviews: 24,
     },
-  ];
-    features: [
+  ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'
     ];
@@ -1101,7 +1099,37 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     launchDate: '2025-05-01', customers: 32,
     rating: 4.7,
     reviews: 24
+  }];
+    popular: true;
+    icon: '☁️';
+    color: 'from-blue-500 to-indigo-600';
+    textColor: 'text-blue-400';
+    link: 'https://ziontechgroup.com/hybrid-cloud-orchestration-platform';
+    marketPosition: 'Advanced hybrid cloud orchestration platform with seamless multi-cloud management and comprehensive optimization capabilities.';
+    targetAudience: ['Cloud architectsDevOps teamsIT operationsTechnology companiesMulti-cloud organizations'];
+    trialDays: 30;
+    setupTime: '6-8 weeks';
+    category: 'Hybrid Cloud Management';
+    realService: true;
+    technology: ['Cloud ComputingMulti-Cloud ManagementContainer OrchestrationKubernetesPythonTerraformReact'];
+    integrations: ['AWSAzureGoogle CloudIBM CloudOracle CloudOn-premises systems'];
+    useCases: ['Multi-cloud managementHybrid cloud integrationWorkload optimizationCloud migrationResource optimization'];
+    roi: 'Multi-cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.';
+    competitors: ['TerraformKubernetesCloud FoundryOpenShift'];
+    marketSize: '$15.2B hybrid cloud market';
+    growthRate: '28% annual growth';
+    variant: 'hybrid-cloud';
+    contactInfo: {
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
+    };
+    realImplementation: true;
+    implementationDetails: 'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.';
+    launchDate: '2025-05-01';
+    customers: 32;
+    rating: 4.7;
+    reviews: 24
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

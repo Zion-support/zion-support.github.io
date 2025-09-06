@@ -129,6 +129,10 @@ function fixAllFiles() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   return totalFixed;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 // Main execution
 try {
   console.log('🔍 Scanning for syntax errors...');
@@ -160,25 +164,7 @@ try {
   console.error('❌ Error:', error.message);
   process.exit(1);
 <<<<<<< HEAD
-<<<<<<< HEAD:scripts/fix-remaining-syntax-errors.cjs
 }}
 =======
-} catch (error) {
-  console.error('❌ Error:', error.message);
-  process.exit(1);
 }
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
-}
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/fix-remaining-syntax-errors.cjs
-=======
-}}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -2,8 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 function rand(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = [];
   let last = base;
@@ -13,18 +11,15 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
     series.push(last);
   }
   return series;
-=======
+
 }
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
     return `${d.getMonth() + 1}/${d.getDate()}`;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  });
 
   const marketplace = [
     {
@@ -147,14 +142,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: token.map(m => m.trend || generateSeries(14, m.value)),
       multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),
     },
-  };
-      marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
+  };      marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
       dao: dao.map((m) => m.trend || generateSeries(14, m.value));
       token: token.map((m) => m.trend || generateSeries(14, m.value));
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
@@ -173,9 +164,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     };
   }
 
-  res.status(200).json(response);
-=======
-        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
+  res.status(200).json(response);        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
@@ -183,5 +172,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json(response)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

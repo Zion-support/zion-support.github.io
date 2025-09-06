@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { format } from 'date-fns';
@@ -9,7 +8,16 @@ import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Project, ProjectStatus } from '@/types/projects';
 import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from '@/utils/productionLogger';import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Card,
   CardContent,
@@ -48,7 +56,6 @@ import {
   User,
   XCircle,;
 } from 'lucide-react';
-
 function ProjectDetailsContent() {
   const router = useRouter();
   // Get projectId from Next.js router query params
@@ -64,7 +71,7 @@ function ProjectDetailsContent() {
   const [activeTab, setActiveTab] = useState('details');
 
   // Load project data
-  useEffect(() => {
+  useEffect((,) => {
     async function loadProject() {
       if (!projectId) return;
 
@@ -91,8 +98,7 @@ function ProjectDetailsContent() {
     loadProject();
   }, [projectId]);
 
-  const fetchProjectNotes = async (projectId: string) => {
-    try {
+  const fetchProjectNotes = async (projectId: string) => {    try {
       const { data, error } = await supabase
         .from('project_notes')
         .select(
@@ -159,7 +165,6 @@ function ProjectDetailsContent() {
     if (!project) return;
 
     const success = await updateProjectStatus(project.id, newStatus);
-
     if (success) {
       setProject({
         ...project,
@@ -176,8 +181,7 @@ function ProjectDetailsContent() {
     }
   };
 
-  const getStatusBadge = (status: ProjectStatus) => {
-    switch (status) {
+  const getStatusBadge = (status: ProjectStatus) => {    switch (status) {
       case 'offer_sent':
         return <Badge variant='outline'>Offer Sent</Badge>;
       case 'offer_accepted':
@@ -221,8 +225,7 @@ function ProjectDetailsContent() {
               The project you're looking for doesn't exist or you don't have
               access to it.
             </p>
-            <Button onClick={() => router.push('/dashboard')}>
-              Return to Dashboard
+            <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
             </Button>
           </CardContent>
         </Card>
@@ -295,8 +298,7 @@ function ProjectDetailsContent() {
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                         <AlertDialogAction
                           onClick={() => handleStatusChange('offer_accepted')}
-                        >
-                          Accept Offer
+                        >                          Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
@@ -334,8 +336,7 @@ function ProjectDetailsContent() {
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
                       <AlertDialogAction
                         onClick={() => handleStatusChange('completed')}
-                      >
-                        Mark as Completed
+                      >                        Mark as Completed
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -372,8 +373,7 @@ function ProjectDetailsContent() {
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Message
                   </Button>
-                )}
-            </div>
+                )}            </div>
           </div>
         </div>
 
@@ -529,8 +529,7 @@ function ProjectDetailsContent() {
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
-                                      loading='lazy'
-                                    />
+                                      loading='lazy'                                    />
                                   ) : (
                                     <User className='h-4 w-4' />
                                   )}
@@ -564,11 +563,10 @@ function ProjectDetailsContent() {
                             placeholder='Add a note or update to the project...'
                             value={newNote}
                             onChange={e => setNewNote(e.target.value)}
-                            className='min-h-[100px] mb-2'
-                          />
+                            className='min-h-[100px] mb-2'                          />
                           <Button
-                            onClick={handleSubmitNote}
-                            disabled={!newNote.trim() || isSubmittingNote}
+                            onClick = {handleSubmitNote,}
+                            disabled = {!newNote.trim() || isSubmittingNote,}
                           >
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
                           </Button>
@@ -598,8 +596,7 @@ function ProjectDetailsContent() {
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                          loading='lazy'
-                        />
+                          loading='lazy'                        />
                       ) : (
                         <User className='h-6 w-6' />
                       )}
@@ -621,8 +618,7 @@ function ProjectDetailsContent() {
                             router.push(
                               `/messages?talentId=${project.talent_id}`
                             )
-                          }
-                        >
+                          }                        >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
                         </Button>
                       )}
@@ -635,8 +631,7 @@ function ProjectDetailsContent() {
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                          loading='lazy'
-                        />
+                          loading='lazy'                        />
                       ) : (
                         <User className='h-6 w-6' />
                       )}
@@ -657,8 +652,7 @@ function ProjectDetailsContent() {
                             router.push(
                               `/messages?clientId=${project.client_id}`
                             )
-                          }
-                        >
+                          }                        >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
                         </Button>
                       )}
@@ -708,8 +702,7 @@ function ProjectDetailsContent() {
                     onClick={() =>
                       router.push(`/messages?talentId=${project.talent_id}`)
                     }
-                    className='w-full'
-                  >
+                    className='w-full'                  >
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes
                   </Button>
                 </CardFooter>
@@ -837,14 +830,57 @@ default: return <Badge variant="outline"> {;
 }</p> </CardFooter>) ;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;
-  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
-=======
-export default function ProjectDetails() {
+  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"export default function ProjectDetails() {
   return (
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+const ProjectDetails = () => {;
+  return (;
+    <>;
+      <Head>;
+        <title>Project Details - Zion Tech Group</title>;
+        <meta name="description" content="Professional Project Details services"  />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
+          <div className="text-center">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+              Project Details;
+            </h1>;
+            <p className="text-xl text-gray-600 mb-12">;
+              Professional Project Details services and solutions;
+            </p>;
+            <div className="grid md:grid-cols-2 gap-8 mb-12">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
+                <ul className="text-gray-600 space-y-2">;
+                  <li>• Professional Solutions</li>;
+                  <li>• Expert Implementation</li>;
+                  <li>• 24/7 Support</li>;
+                  <li>• Custom Development</li>;
+                </ul>;
+              </div>;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
+                <ul className="text-gray-600 space-y-2">;
+                  <li>• Industry Expertise</li>;
+                  <li>• Proven Results</li>;
+                  <li>• Scalable Solutions</li>;
+                  <li>• Competitive Pricing</li>;
+                </ul>;
+              </div>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+                View Pricing;
+              </Link>;
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+                Contact Us;
+              </Link>;
+            </div>;
+    </>;
   );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

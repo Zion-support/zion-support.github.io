@@ -94,9 +94,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
     realService: true,
   },
-];
-=======
-	id: string;
+];	id: string;
 	name: string;
 	description: string;
 	tagline?: string;
@@ -173,5 +171,3 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 	}
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

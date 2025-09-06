@@ -6,8 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ProductListing } from '@/types/listings';
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
-import { FavoriteButton } from '@/components/FavoriteButton';
-import { useDispatch } from 'react-redux';
+import { FavoriteButton } from '@/components/FavoriteButton';import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { toast } from '@/hooks/use-toast';
@@ -19,7 +18,6 @@ interface ProductListingCardProps {
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
   detailBasePath?: string;
-
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
@@ -28,8 +26,7 @@ const ProductListingCardComponent = ({
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid';
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
-  const [imageSrc, setImageSrc] = useState(
+  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0 && listing.images[0]
       ? listing.images[0]
       : '/placeholder.svg'
@@ -135,12 +132,11 @@ const ProductListingCardComponent = ({
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           handleViewListing();
-        }
-      }}
+        }      }}
     >
       {/* Image */}
       <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -148,18 +144,38 @@ const ProductListingCardComponent = ({
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             handleViewListing();
-          }
+          }  return ();
+    <div;
+      data-testid= "equipment-link";'`;
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
+      onClick={handleViewListing};
+      tabIndex={0};";
+      onKeyDown={(e) => {;
+        if(e.key === 'Enter' || e.key === ' ') {;
+          e.preventDefault () ;
+          handleViewListing () }
+      }}
+
+      {/* Image */}
+      <div';
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
+        onClick={handleViewListing} // Keep existing onClick for navigation;";
+        tabIndex={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={(e) => {;
+          if(e.key === 'Enter' || e.key === ' ') {;
+            e.preventDefault () ;
+            handleViewListing () }
         }}
       >
         <div className={`relative ${imageContainerClasses}`}>
           {' '}
           {/* Ensure this container has dimensions */}
           <Image
-            src={imageSrc}
-            alt={listing.title}
-            fill={true}
+            src = {imageSrc,}
+            alt = {listing.title,}
+            fill = {true,}
             style={{ objectFit: 'cover' }}
-            onError={handleImageError}
+            onError = {handleImageError,}
             priority={false} // Assuming these are not LCP images
             sizes={
               isGrid
@@ -175,8 +191,7 @@ const ProductListingCardComponent = ({
           {stockStatus && (
             <Badge
               variant={stockVariant as any}
-              className='absolute top-2 left-2'
-            >
+              className='absolute top-2 left-2'            >
               {stockStatus}
             </Badge>
           )}
@@ -223,8 +238,7 @@ const ProductListingCardComponent = ({
               {listing.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'
-                >
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
                   {tag}
                 </span>
               ))}
@@ -251,9 +265,8 @@ const ProductListingCardComponent = ({
               className='bg-primary hover:bg-primary/80 text-primary-foreground'
               onClick={e => {
                 e.stopPropagation(); // Prevent card click event
-                addToCart();
-              }}
-              disabled={loading}
+                addToCart();              }}
+              disabled = {loading,}
             >
               {loading ? (
                 <>
@@ -289,8 +302,7 @@ const ProductListingCardComponent = ({
               variant='default'
               className='bg-green-600 hover:bg-green-700 text-white'
               onClick={e => {
-                e.stopPropagation(); // Prevent card click event
-                // Add to cart first, then redirect to checkout
+                e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({
                     id: listing.id,
@@ -300,7 +312,7 @@ const ProductListingCardComponent = ({
                 );
                 router.push('/checkout');
               }}
-              disabled={loading}
+              disabled = {loading,}
             >
               Buy Now
             </Button>
@@ -310,8 +322,7 @@ const ProductListingCardComponent = ({
                 size='sm'
                 variant='outline'
                 onClick={handleRequestQuote}
-                className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground'
-              >
+                className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground'              >
                 Request Quote
               </Button>
             )}
@@ -393,8 +404,22 @@ router.push ('/checkout') ;
 }</div> </div> </div> </div>) ;
 };
 '"
-=======
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+                Request Quote;
+              </Button>) };
+          </div>;
+        </div>;
+      </div>;
+    </div>;) }
+export default React.memo(ProductListingCard);
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;
+'"`;
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';

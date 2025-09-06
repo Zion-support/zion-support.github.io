@@ -33,10 +33,19 @@ class AppEnhancementSuite {
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
-        "xssProtection": true
-      }
+        "xssProtection": true}};
+<<<<<<< HEAD
+=======
+          "default-src 'self'; script-src 'self' 'unsafe-inline'";
+      };
+      validation: {
+        inputSanitization: true;
+        sqlInjectionProtection: true;
+        xssProtection: true;
+      };
     };
 
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json'),
       JSON.stringify(securityConfig, null, 2)

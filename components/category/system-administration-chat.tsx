@@ -1,16 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const SystemAdministrationChat: NextPage = () => {
   return (
     <div>
       <Head>
         <title>SystemAdministrationChat - Zion Tech Solutions</title>
-<<<<<<< HEAD
-        <meta name='description' content='SystemAdministrationChat blog post' />
-      </Head>
+        <meta name='description' content='SystemAdministrationChat blog post' />      </Head>
       
       <main>
         <h1>SystemAdministrationChat</h1>
@@ -22,7 +18,3 @@ const SystemAdministrationChat: NextPage = () => {
 };
 
 export default SystemAdministrationChat;
-=======
-export default SystemAdministrationChat;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

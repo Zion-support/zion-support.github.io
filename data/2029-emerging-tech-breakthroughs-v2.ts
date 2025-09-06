@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface EmergingTechBreakthroughServiceV2 {
   id: string;
   name: string;
   tagline: string;
@@ -431,8 +429,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       rating: 5.0,
       reviews: 2,
     },
-  ];
-    features: [
+  ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
     ];
@@ -463,5 +460,3 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     reviews: 2
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

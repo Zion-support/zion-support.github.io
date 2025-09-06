@@ -1,17 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function AutomationInsightsPage() {
   const automationTrends = [
     {
       id: 'ai-automation-2025',
       title: 'AI Automation Trends 2025',
-<<<<<<< HEAD
       description:
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',
-      category: 'Trends',
+        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true
     };
@@ -30,12 +26,8 @@ export default function AutomationInsightsPage() {
       category: 'Business',
       readTime: '10 min read',
       featured: false,
-    },
-=======
-      featured: false
+    },      featured: false
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ];
 
   const automationTools = [
@@ -45,8 +37,7 @@ export default function AutomationInsightsPage() {
       description:
         'Our proprietary framework for building scalable automation solutions.',
       type: 'Framework',
-      complexity: 'Advanced',
-      type: 'Framework',
+      complexity: 'Advanced',      type: 'Framework',
       complexity: 'Advanced'
     };
     {
@@ -55,7 +46,6 @@ export default function AutomationInsightsPage() {
       description: 'Comprehensive tools for monitoring and optimizing automation performance.',
       type: 'Tool',
       complexity: 'Intermediate',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       id: 'performance-monitor',
@@ -63,25 +53,18 @@ export default function AutomationInsightsPage() {
       description:
         'Comprehensive tools for monitoring and optimizing automation performance.',
       type: 'Tool',
-<<<<<<< HEAD
       complexity: 'Intermediate',
-    },    {
-=======
-      complexity: 'Intermediate'
+    },    {      complexity: 'Intermediate'
     };
     {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       id: 'deployment-automation',
       title: 'Deployment Automation',
       description: 'Streamlined deployment processes for automation systems.',
       type: 'Process',
       complexity: 'Beginner',
-    },  ];
-=======
-      complexity: 'Beginner'
+    },  ];      complexity: 'Beginner'
     }
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const successMetrics = [
     {
@@ -92,8 +75,7 @@ export default function AutomationInsightsPage() {
     {
       metric: '99.9%',
       label: 'Uptime',
-      description: 'Reliable automation performance',
-    {
+      description: 'Reliable automation performance',    {
       metric: '99.9%',
       label: 'Uptime',
       description: 'Reliable automation performance'
@@ -107,7 +89,6 @@ export default function AutomationInsightsPage() {
       metric: '2,960+';
       label: 'Pages Generated',
       description: 'Content created autonomously',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
     {
       metric: '40%',
@@ -116,15 +97,11 @@ export default function AutomationInsightsPage() {
     },
     {
       metric: '2,960+',
-<<<<<<< HEAD
       label: 'Pages Generated',
       description: 'Content created autonomously',
-    },  ];
-=======
-      description: 'Content created autonomously'
+    },  ];      description: 'Content created autonomously'
     }
   ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -145,8 +122,6 @@ export default function AutomationInsightsPage() {
           content='Expert insights on AI automation, autonomous systems, and industry trends.'
         />
         <meta name='twitter:card' content='summary_large_image' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
@@ -177,14 +152,10 @@ export default function AutomationInsightsPage() {
                     </div>
                     <div className='text-sm text-white/70'>
                       {item.description}
-                    </div>                  </div>
-                  <div key={index} className="text-center">
+                    </div>                  </div>                  <div key={index} className="text-center">
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 ))}
               </div>
             </div>
@@ -195,7 +166,6 @@ export default function AutomationInsightsPage() {
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {automationTrends.map((trend, index) => (
                   <div
                     key={index}
@@ -217,11 +187,20 @@ export default function AutomationInsightsPage() {
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
-                      Read More <span className='ml-1'>→</span>                    </Link>
-=======
+                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
+                      <span className="text-white/60 text-sm">{trend.readTime}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
+                    <p className="text-white/70 mb-4">{trend.description}</p>
+                    <Link 
+                      href={`/blog/${trend.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
                       Read More <span className="ml-1">→</span>
                     </Link>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                 ))}
               </div>
@@ -249,17 +228,13 @@ export default function AutomationInsightsPage() {
                       </span>
                       <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full'>
                         {tool.complexity}
-                      </span>                    </div>
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
+                      </span>                    </div>                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
                     <div className="text-4xl mb-4">🔧</div>
                     <h3 className="text-xl font-bold mb-3 text-white">{tool.title}</h3>
                     <p className="text-white/70 mb-4">{tool.description}</p>
                     <div className="flex justify-center gap-2">
                       <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
                       <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                    </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                 ))}
               </div>
@@ -273,7 +248,6 @@ export default function AutomationInsightsPage() {
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
@@ -284,13 +258,18 @@ export default function AutomationInsightsPage() {
                 </Link>
                 <Link
                   href='/case-studies'
-                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >
-=======
+                  className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link 
+                  href="/contact"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
+                >
+                  Get Started
+                </Link>
                 <Link 
                   href="/case-studies"
                   className="px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200"
                 >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   View Case Studies
                 </Link>
               </div>
@@ -301,7 +280,3 @@ export default function AutomationInsightsPage() {
     </>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

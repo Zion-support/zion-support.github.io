@@ -5,13 +5,16 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { TalentProfile } from '@/types/talent';
 import { toast } from '@/components/ui/use-toast';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from '@/components/ui/empty-state';
 import { Heart } from 'lucide-react';
 import { logInfo, logWarn } from '@/utils/productionLogger';
-
+import { useRouter } from 'next/router';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { EmptyState } from "@/components/ui/empty-state";
+import { Heart } from 'lucide-react';
+import { logInfo, logWarn } from '@/utils/productionLogger';
 export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
@@ -19,13 +22,13 @@ export default function SavedTalentsPage() {
   const router = useRouter();
   // Using router.asPath instead of useLocation
 
-  useEffect(() => {
+  useEffect((,) => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`);
     }
   }, [user, router]);
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchSavedTalents = async () => {
       setIsLoading(true);
       try {
@@ -66,8 +69,7 @@ export default function SavedTalentsPage() {
           const talentProfiles = data.map(
             (item: any) => item.talent_profile as unknown as TalentProfile
           );
-          setSavedTalents(talentProfiles);
-        }
+          setSavedTalents(talentProfiles);        }
       } catch (error) {
         logErrorToProduction(
           error instanceof Error ? error.message : String(error),
@@ -92,8 +94,7 @@ export default function SavedTalentsPage() {
   };
 
   const handleRequestHire = (talent: TalentProfile) => {
-    logInfo('Request to hire:', { data: talent });
-    toast({
+    logInfo('Request to hire:', { data: talent });    toast({
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
     });
@@ -102,8 +103,7 @@ export default function SavedTalentsPage() {
   const handleToggleSave = async (
     talentId: string,
     isCurrentlySaved: boolean
-  ) => {
-    try {
+  ) => {    try {
       if (!user) {
         logWarn('User not authenticated.');
         return;
@@ -205,21 +205,19 @@ export default function SavedTalentsPage() {
           <div className='py-8'>
             <EmptyState
               icon={<Heart className='h-8 w-8' />}
-              title='No Saved Talents'
-              description="You haven't saved any talents yet."
+              title='No Saved Talents'              description="You haven't saved any talents yet."
               action={{ text: 'Browse Talent', href: '/talent' }}
               className='border-none bg-transparent text-center'
             />
           </div>
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
-            {savedTalents.map(talent => (
-              <TalentCard
-                key={talent.id}
-                talent={talent}
-                onViewProfile={handleViewProfile}
-                onRequestHire={handleRequestHire}
-                isAuthenticated={!!user}
+            {savedTalents.map(talent => (              <TalentCard
+                key = {talent.id,}
+                talent = {talent,}
+                onViewProfile = {handleViewProfile,}
+                onRequestHire = {handleRequestHire,}
+                isAuthenticated = {!!user,}
               />
             ))}
           </div>
@@ -288,8 +286,4 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }/>) ) ;
 }</div>) ;
 }</div> </>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

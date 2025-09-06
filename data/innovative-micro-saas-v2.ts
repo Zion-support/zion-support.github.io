@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface InnovativeMicroSaasV2 {
   id: string;
   name: string;
   tagline: string;
@@ -42,16 +40,12 @@ export interface InnovativeMicroSaasV2 {
   reviews: number;
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-powered-inventory-optimizer',
     name: 'AI-Powered Inventory Optimizer',
     tagline: 'Intelligent inventory management with predictive analytics',
@@ -59,8 +53,6 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     period: '/month',
     description:
       'Revolutionary inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs by up to 40%. Perfect for e-commerce, retail, and manufacturing businesses.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     features: [
       'AI-powered demand forecasting',
       'Real-time inventory optimization',
@@ -482,9 +474,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4.8,
     reviews: 912,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -497,5 +487,3 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     reviews: 912
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

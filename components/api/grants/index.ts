@@ -9,7 +9,6 @@ import type {
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -26,8 +25,18 @@ function readAllGrants(): GrantApplication[] {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
-    const list = readAllGrants().filter(g => {      return (
-=======
+    const list = readAllGrants().filter(g => {      return (function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  }
+}
+
+function readAllGrants(): GrantApplication[] {
+  ensureDir();
+  const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'));
+  return files.map((file) => {
+    const full = path.join(GRANTS_DIR, file);
+    const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication
   })
 }
@@ -35,13 +44,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
-<<<<<<< HEAD
-    const list = readAllGrants().filter(g => {
-=======
-    const list = readAllGrants().filter((g) => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    const list = readAllGrants().filter(g => {    const list = readAllGrants().filter((g) => {
       return (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
         (region ? g.region === region : true) &&
@@ -49,14 +53,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       );
     });
     res.status(200).json({ items: list });
-    return;  }
-=======
-      )
+    return;  }      )
     });
     res.status(200).json({ items: list });
     return
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (req.method === 'POST') {
     try {
@@ -69,13 +69,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         !payload.timeline
       ) {
         res.status(400).json({ error: 'Missing required fields' });
-        return;      }
-=======
-      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+        return;      }      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
         res.status(400).json({ error: 'Missing required fields' });
         return
       }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ensureDir();
       const id = uuidv4();
       const now = new Date().toISOString();
@@ -106,7 +103,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         'utf8'
       );
       res.status(201).json({ id, record });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' });
     }
@@ -114,10 +110,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
-=======
+  res.status(405).end('Method Not Allowed');    } catch (e: any) {
+      res.status(500).json({ error: e?.message || 'Failed to create grant' })
+    }
+    return
+  }
+
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

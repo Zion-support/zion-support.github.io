@@ -29,18 +29,3 @@ export default function 2025advancedinnovativeservicesexpansionv3({ }: 2025advan
   );
 }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:data_backup/2025-advanced-innovative-services-expansion-v3.js
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-advanced-innovative-services-expansion-v3.js
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

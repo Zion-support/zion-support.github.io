@@ -118,9 +118,14 @@ function main() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove all merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
+=======
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md: text-2xl'), content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout',[\s\S]*?const blogPosts/g, 'const blogPosts');
     content = content.replace(/,\s*"title":/g, ',');

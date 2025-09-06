@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
-import {Menu, X, ChevronDown, Search, User, Settings, LogOut, Bell, Globe, Zap} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Search, User, 
+  Settings, LogOut, Bell, Globe, Zap,
+  Brain, Rocket, Dna, DollarSign, Lock, Wifi, Truck, Gamepad2, Bot, Factory, Car
+} from 'lucide-react';
 import Link from 'next/link';
 interface EnhancedNavigationProps {
   className?: string
@@ -84,8 +88,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         : 'bg-transparent'
     } ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-20">          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -164,7 +167,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
               </motion.div>
             ))}
           </div>
-
           {/* Right side actions */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
@@ -296,5 +298,4 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
     </nav>
   )
 };
-
 export default EnhancedNavigation;

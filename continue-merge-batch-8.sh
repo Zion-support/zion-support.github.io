@@ -34,46 +34,18 @@ resolve_conflicts() {
     log_message "🔧 Resolving conflicts in $file for branch $branch..."
     
     # Check if file has merge conflicts
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-    if grep -q "<<<<<<< HEAD" "$file"; then
-=======
-    if grep -q "" "$file"; then
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    if grep -q "" "$file"; then
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+    if grep -q "" "$file"; then    if grep -q "" "$file"; then
         log_message "⚠️  Found conflicts in $file, resolving..."
         
         # Create a backup of the conflicted file
         cp "$file" "${file}.backup.$(date +%s)"
         
         # Remove conflict markers
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
-=======
+        sed -i '//,/        
         sed -i '//,//d' "$file"
         sed -i '/        
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         sed -i '//,//d' "$file"
         sed -i '/        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         log_message "✅ Resolved conflicts in $file"
         CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
     fi

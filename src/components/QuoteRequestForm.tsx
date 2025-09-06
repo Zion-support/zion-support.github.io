@@ -17,7 +17,6 @@ import {QuoteFormData} from "@/types/quotes";
 import {Sparkles, Loader2} from 'lucide-react'
 import {z} from "zod";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
-
 const serviceStepSchema = z.object({
   serviceType: z.string().min(1),
   specificItem: z.object({ id: z.string() })}),
@@ -49,13 +48,11 @@ export function QuoteRequestForm() {
       company: ""
     }
   });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   
-  const updateFormData = (data: Partial<QuoteFormData>) => {
+  const updateFormData = (data: Partial<QuoteFormData>,) => {
     setFormData(prev => ({
       ...prev;
   
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+  );
+}

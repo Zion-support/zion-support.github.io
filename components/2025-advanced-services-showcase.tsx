@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import {
   Search,
   Grid,
   List,
@@ -63,14 +61,10 @@ const cuttingEdgeITInfrastructureServices = [
     color: "from-orange-500 to-red-500",
     icon: "☁️",
   },
-];
-// Import our new service data
+];// Import our new service data
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-it-infrastructure';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -80,17 +74,13 @@ const contactInfo = {
 const allServices = [
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices,];
-=======
-  website: 'https://ziontechgroup.com'
+  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
 };
 
 const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices
-];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const categories = [
   {
@@ -98,8 +88,7 @@ const categories = [
     name: 'All Services',
     icon: <Grid className='w-6 h-6' />,
     color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of advanced services',
-    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of advanced services',    color: 'from-gray-500 to-slate-500',
     description: 'Complete portfolio of advanced services'
   };
   {
@@ -136,7 +125,6 @@ const categories = [
     icon: <Atom className="w-6 h-6" />,
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   },
   {
     id: 'enterprise',
@@ -171,52 +159,36 @@ const categories = [
     name: 'Quantum Computing',
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
-<<<<<<< HEAD
     description: 'Quantum computing solutions',
   },];
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
-  return 'Other';};
-=======
-    description: 'Quantum computing solutions'
+  return 'Other';};    description: 'Quantum computing solutions'
   }
 ];
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
-<<<<<<< HEAD
-  return 'Other';
-=======
-  return 'Other'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  return 'Other';  return 'Other'
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  return 'Contact for pricing';};
-=======
-  return 'Contact for pricing'
+  return 'Contact for pricing';};  return 'Contact for pricing'
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return [];
-};
-=======
-  return []
+};  return []
 };
 
 
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export default function AdvancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -263,7 +235,6 @@ export default function AdvancedServicesShowcase() {
           );
         return false;
       });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
 
     if (searchTerm) {
@@ -280,11 +251,20 @@ export default function AdvancedServicesShowcase() {
       );
     }
 
-    setFilteredServices(filtered);  }, [selectedCategory, searchTerm]);
-=======
+    setFilteredServices(filtered);  }, [selectedCategory, searchTerm]);    }
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(service =>
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }
+
     setFilteredServices(filtered)
   }, [selectedCategory, searchTerm]);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -298,7 +278,6 @@ export default function AdvancedServicesShowcase() {
       {service.popular && (
         <div className='absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>
           <Star className='w-4 h-4' />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           Popular
         </div>
       )}
@@ -348,8 +327,47 @@ export default function AdvancedServicesShowcase() {
             <span className='text-sm text-gray-600 dark:text-gray-400'>              {service.rating}/5 ({service.reviews} reviews)
             </span>
           </div>
+        </div>          Popular
         </div>
-=======
+      )}
+      
+      <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
+        <span className="text-4xl">{service.icon}</span>
+      </div>
+      
+      <div className="p-6">
+        <div className="flex items-start justify-between mb-3">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            {service.name}
+          </h3>
+        </div>
+        
+        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
+          {service.tagline}
+        </p>
+        
+        <div className="flex items-center justify-between mb-4">
+          <span className="text-2xl font-bold text-gray-900 dark:text-white">
+            {getServicePricing(service)}
+          </span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">
+            {service.trialDays} day trial
+          </span>
+        </div>
+        
+        <div className="space-y-3 mb-6">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-500" />
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+              {service.setupTime} setup
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Users className="w-4 h-4 text-blue-500" />
+            <span className="text-sm text-gray-600 dark:text-gray-400">
+              {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
+            </span>
+          </div>
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
             <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -357,8 +375,6 @@ export default function AdvancedServicesShowcase() {
             </span>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
         <div className='mb-6'>
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
@@ -376,10 +392,7 @@ export default function AdvancedServicesShowcase() {
                 </div>
               ))}
             {getServiceFeatures(service).length > 3 && (
-<<<<<<< HEAD
-              <span className='text-sm text-gray-500 dark:text-gray-400'>                +{getServiceFeatures(service).length - 3} more features
-=======
-        
+              <span className='text-sm text-gray-500 dark:text-gray-400'>                +{getServiceFeatures(service).length - 3} more features        
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <div className="space-y-1">
@@ -391,8 +404,6 @@ export default function AdvancedServicesShowcase() {
             ))}
             {getServiceFeatures(service).length > 3 && (
               <span className="text-sm text-gray-500 dark:text-gray-400">
-                +{getServiceFeatures(service).length - 3} more features
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </span>
             )}
           </div>
@@ -403,7 +414,6 @@ export default function AdvancedServicesShowcase() {
             ROI & Benefits:
           </h4>
           <p className='text-sm text-gray-600 dark:text-gray-400'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {service.roi}
           </p>
         </div>
@@ -428,11 +438,30 @@ export default function AdvancedServicesShowcase() {
 
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'          >
-=======
+            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'          >            {service.roi}
+          </p>
+        </div>
+        
+        <div className="mb-6">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            {service.marketPosition}
+          </p>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <a
+            href={service.link}
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            Learn More
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          
+          <a
+            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
           >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             Contact
           </a>
         </div>
@@ -455,7 +484,6 @@ export default function AdvancedServicesShowcase() {
             className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}
           >
             <span className='text-3xl'>{service.icon}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
 
           <div className='flex-1'>
@@ -468,16 +496,20 @@ export default function AdvancedServicesShowcase() {
                     </span>
                   )}
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 mb-3'>
-=======
+                <p className='text-gray-600 dark:text-gray-300 mb-3'>          </div>
+          
+          <div className="flex-1">
+            <div className="flex items-start justify-between mb-3">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  {service.name}
+                  {service.popular && (
                     <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Popular
                     </span>
                   )}
                 </h3>
-<<<<<<< HEAD
                 <p className='text-gray-600 dark:text-gray-300 mb-3'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   {service.tagline}
                 </p>
               </div>
@@ -489,22 +521,24 @@ export default function AdvancedServicesShowcase() {
                 <div className='text-sm text-gray-500 dark:text-gray-400'>                  {service.trialDays} day trial
                 </div>
               </div>
-            </div>
-=======
+            </div>                  {service.tagline}
+                </p>
+              </div>
+              
+              <div className="text-right">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                  {getServicePricing(service)}
+                </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
                   {service.trialDays} day trial
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
               <div className='flex items-center gap-2'>
                 <CheckCircle className='w-4 h-4 text-green-500' />
                 <span className='text-sm text-gray-600 dark:text-gray-400'>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   {service.setupTime} setup
                 </span>
               </div>
@@ -524,8 +558,15 @@ export default function AdvancedServicesShowcase() {
               </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
-=======
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>                  {service.setupTime} setup
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-blue-500" />
+                <span className="text-sm text-gray-600 dark:text-gray-400">
+                  {service.customers ? service.customers.toLocaleString() : '1000'}+ customers
+                </span>
+              </div>
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -533,10 +574,8 @@ export default function AdvancedServicesShowcase() {
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <div>
                 <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
                   Key Features:
@@ -571,8 +610,23 @@ export default function AdvancedServicesShowcase() {
               </div>
             </div>
 
-            <div className='flex items-center gap-4'>
-=======
+            <div className='flex items-center gap-4'>              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
+                <div className="space-y-1">
+                  {getServiceFeatures(service).slice(0, 4).map((feature: string, index: number) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <Check className="w-3 h-3 text-green-500" />
+                      <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  {service.roi}
+                </p>
                 
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -580,10 +634,8 @@ export default function AdvancedServicesShowcase() {
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
 
             <div className='flex items-center gap-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <a
                 href={service.link}
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
@@ -594,11 +646,18 @@ export default function AdvancedServicesShowcase() {
 
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >
-=======
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >              <a
+                href={service.link}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              
+              <a
+                href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Contact Sales
               </a>
             </div>
@@ -621,7 +680,6 @@ export default function AdvancedServicesShowcase() {
           'enterprise solutions',
           'Zion Tech Group',
         ]}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       />
 
       {/* Hero Section */}
@@ -654,20 +712,16 @@ export default function AdvancedServicesShowcase() {
               className='flex flex-col sm:flex-row gap-4 justify-center items-center'
             >
               <div className='flex items-center gap-2 text-white'>
-                <CheckCircle className='w-5 h-5 text-green-300' />
-                <span>30+ New Services</span>
+                <CheckCircle className='w-5 h-5 text-green-300' />                <span>30+ New Services</span>
               </div>
               <div className='flex items-center gap-2 text-white'>
                 <CheckCircle className='w-5 h-5 text-green-300' />
                 <span>Real Implementations</span>
               </div>
               <div className='flex items-center gap-2 text-white'>
-                <CheckCircle className='w-5 h-5 text-green-300' />                <span>Market Validated</span>
-=======
-              <div className="flex items-center gap-2 text-white">
+                <CheckCircle className='w-5 h-5 text-green-300' />                <span>Market Validated</span>              <div className="flex items-center gap-2 text-white">
                 <CheckCircle className="w-5 h-5 text-green-300" />
                 <span>Market Validated</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             </motion.div>
           </div>
@@ -684,7 +738,6 @@ export default function AdvancedServicesShowcase() {
                 <span className='text-gray-700 dark:text-gray-300'>
                   {contactInfo.mobile}
                 </span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
               <div className='flex items-center gap-2'>
                 <Mail className='w-5 h-5 text-blue-600' />
@@ -711,13 +764,30 @@ export default function AdvancedServicesShowcase() {
                 href={contactInfo.website}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >
-=======
+                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'              >              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-5 h-5 text-blue-600" />
+                <span className="text-gray-700 dark:text-gray-300">{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-blue-600" />
+                <span className="text-gray-700 dark:text-gray-300">{contactInfo.address}</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <a
+                href={`mailto:${contactInfo.email}?subject=Services Inquiry`}
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300"
+              >
+                Get Quote
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href={contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
               >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Visit Website
               </a>
             </div>
@@ -727,7 +797,6 @@ export default function AdvancedServicesShowcase() {
 
       {/* Main Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {/* Filters and Search */}
         <div className='mb-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between'>
@@ -754,55 +823,45 @@ export default function AdvancedServicesShowcase() {
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
-                  <Grid className='w-5 h-5' />                </button>
-                <button
+                  <Grid className='w-5 h-5' />                </button>                <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-=======
+                    viewMode === 'grid' 
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
+                >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     viewMode === 'list'
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
-<<<<<<< HEAD
                   <List className='w-5 h-5' />                </button>
               </div>
             </div>
-          </div>
-=======
-                    viewMode === 'list' 
+          </div>                    viewMode === 'list' 
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
                   <List className="w-5 h-5" />
-                </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           {/* Category Filters */}
           <div className='mt-6'>
             <div className='flex flex-wrap gap-3'>
-<<<<<<< HEAD
-              {categories.map(category => (                <button
-=======
-          
+              {categories.map(category => (                <button          
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-                <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -823,7 +882,6 @@ export default function AdvancedServicesShowcase() {
         <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
             <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <div>
                 <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>
                   {filteredServices.length} Services Found
@@ -841,12 +899,24 @@ export default function AdvancedServicesShowcase() {
                   <span>Market Growth: 150%+ YoY</span>
                 </div>
                 <div className='flex items-center gap-2'>
-                  <Award className='w-4 h-4 text-blue-500' />                  <span>4.8+ Average Rating</span>
-=======
+                  <Award className='w-4 h-4 text-blue-500' />                  <span>4.8+ Average Rating</span>              <div>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  {filteredServices.length} Services Found
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
+                </p>
+              </div>
+              
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-green-500" />
+                  <span>Market Growth: 150%+ YoY</span>
+                </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-blue-500" />
                   <span>4.8+ Average Rating</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             </div>
@@ -855,7 +925,6 @@ export default function AdvancedServicesShowcase() {
 
         {/* Services Grid/List */}
         <div className='space-y-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {filteredServices.length === 0 ? (
             <div className='text-center py-12'>
               <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>
@@ -864,11 +933,14 @@ export default function AdvancedServicesShowcase() {
               <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
                 No services found
               </h3>
-              <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.
-=======
+              <p className='text-gray-600 dark:text-gray-400'>                Try adjusting your search terms or category filters.          {filteredServices.length === 0 ? (
+            <div className="text-center py-12">
+              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                No services found
+              </h3>
               <p className="text-gray-600 dark:text-gray-400">
                 Try adjusting your search terms or category filters.
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </p>
             </div>
           ) : (
@@ -881,9 +953,7 @@ export default function AdvancedServicesShowcase() {
                 </div>
               ) : (
                 <div className='space-y-6'>
-                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
-=======
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
@@ -891,8 +961,6 @@ export default function AdvancedServicesShowcase() {
               ) : (
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
-                    <ServiceList key={service.id} service={service} />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   ))}
                 </div>
               )}
@@ -904,7 +972,6 @@ export default function AdvancedServicesShowcase() {
         <div className='mt-16 text-center'>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
@@ -927,15 +994,29 @@ export default function AdvancedServicesShowcase() {
                 <Phone className='w-5 h-5' />                Call Now
               </a>
             </div>
-          </div>
-=======
+          </div>              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Our team of experts is ready to help you implement these cutting-edge solutions. 
+              Get in touch today to discuss your specific needs and discover how we can drive your success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
+                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Transformation
+                <ArrowRight className="w-5 h-5" />
+              </a>
+              <a
+                href={`tel:${contactInfo.mobile}`}
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
+              >
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
@@ -943,13 +1024,8 @@ export default function AdvancedServicesShowcase() {
         </motion.div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-=======
-        </div>
+  );        </div>
       </div>
     </div>
   );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

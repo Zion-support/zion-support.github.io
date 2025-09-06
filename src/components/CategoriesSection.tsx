@@ -1,13 +1,11 @@
         color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
         ...cat;
-
-import {GradientHeading} from "./GradientHeading";
+import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
-import {Briefcase, HardDrive, Lightbulb, Users} from 'lucide-react'
-import {HelpCircle} from 'lucide-react', // Added HelpCircle for default icon
-import {cn} from "@/lib/utils";
-import {useTranslation} from "react-i18next";
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
@@ -18,10 +16,56 @@ interface CategoryType {
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string
+ * CategoriesSection function;
+ * @param {*} params - Function parameters;
+ * @returns {*} Function return value;
+ */;
+function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
+
+const categories = [{;
+    title: "AI Services",
+    description: "Cutting - edge AI solutions, chatbots, and machine learning",
+    icon: "🤖",
+    link: "/ai - services",
+    color: "from - purple - 500 to - indigo - 600",,
+},
+  {;
+    title: "Micro SAAS",
+    description: "Cloud - based software solutions for modern businesses",
+    icon: "☁️",
+    link: "/micro - saas",
+    color: "from - cyan - 500 to - blue - 600",,
+},
+  {;
+    title: "IT Services",
+    description: "Infrastructure, security, and technical consulting",
+    icon: "⚡",
+    link: "/all - services",
+    color: "from - amber - 500 to - orange - 600",,
+},
+  {;
+    title: "Digital Transformation",
+    description: "Business modernization and digital strategy",
+    icon: "📈",
+    link: "/all - services",
+    color: "from - emerald - 500 to - green - 600",,
+},
+];
+const specialServices = [{;
+    title: "IT Onsite Services",
+    link: "/it - onsite - services";
+},
+  {;
+    title: "Comprehensive Services",
+    link: "/comprehensive - services";
+},
+  {;
+    title: "Services Comparison",
+    link: "/services - comparison";
 }
 
 // Default static categories with translation keys
-const getDefaultCategories = (t: any) => [
+const getDefaultCategories = (t: any,) => [
   {
     id: "services",
     name: t('categories.services'),
@@ -52,7 +96,7 @@ const getDefaultCategories = (t: any) => [
     link: "/innovation",
     color: "from-emerald-500 to-green-600"}],
 // Helper to get icon component from name
-const getIcon = (iconName?: string) => {
+const getIcon = (iconName?: string,) => {
   switch (iconName) {
     case "Briefcase": return <Briefcase className="w-10 h-10" />;
     case "Users": return <Users className="w-10 h-10" />;
@@ -62,7 +106,7 @@ const getIcon = (iconName?: string) => {
   }
 };
 
-const getSpecialServices = (t: any) => [
+const getSpecialServices = (t: any,) => [
   {
     title: t('categories.it_onsite_services'),
     link: "/it-onsite-services"
@@ -75,7 +119,6 @@ interface CategoriesSectionProps {
   style?: React.CSSProperties;
   categories?: CategoryType[], // Accept categories as a prop
 }
-
 export function CategoriesSection({
   showTitle = true;
   className;
@@ -129,10 +172,10 @@ export function CategoriesSection({
         )}
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayCategories.map((category) => (
+          {displayCategories.map((category,) => (
             <Link
-              key={category.id}
-              href={category.link || '#'}
+              key = {category.id,}
+              href = {category.link || '#',}
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
@@ -152,15 +195,14 @@ export function CategoriesSection({
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {getSpecialServices(t).map((service) => (
+            {getSpecialServices(t).map((service,) => (
               <Link 
-                key={service.title}
-                href={service.link}
+                key = {service.title,}
+                href = {service.link,}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
               >
                 {service.title}
-              </Link>
-            ))}
+              </Link>            ))}
           </div>
         </div>
         
@@ -226,8 +268,4 @@ icon: getIcon (cat.iconName) ;
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
   t ('home.view all categories') ;
 }</Link> </div> </div> </section>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

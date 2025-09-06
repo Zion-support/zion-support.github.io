@@ -12,6 +12,7 @@ permissions:
 
 concurrency:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -21,9 +22,11 @@ concurrency:
 =======
   group: pages
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
-  cancel-in-progress: true
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  cancel-in-progress: true
   group: "pages"  cancel-in-progress: true
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -31,6 +34,9 @@ concurrency:
   group: "pages"  cancel-in-progress: true
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  group: "pages"  cancel-in-progress: true
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 jobs:
   build:
@@ -39,6 +45,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -51,6 +58,8 @@ jobs:
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -65,6 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -100,9 +110,11 @@ jobs:
       name: github-pages
     runs-on: ubuntu-latest
 >>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
-    steps:
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    steps:
       url: ${{ steps.deployment.outputs.page_url }}    steps:
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -110,6 +122,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}    steps:
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      url: ${{ steps.deployment.outputs.page_url }}    steps:
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

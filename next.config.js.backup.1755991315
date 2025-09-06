@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -11,6 +12,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
@@ -29,6 +32,7 @@ const baseConfig = {
   async rewrites() { return [{ source: '/webhooks/receive', destination: '/api/webhooks/receive' }]; },
   exportPathMap: async function (defaultPathMap) { delete defaultPathMap['/developers']; delete defaultPathMap['/dashboard/api-access']; return defaultPathMap; },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -42,9 +46,11 @@ const nextConfig = {
 	output: 'export',
 	trailingSlash: true
 >>>>>>> origin/cursor/build-nextjs-app-and-handle-errors-5869
-};
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+};
   webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },};
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -52,5 +58,8 @@ const nextConfig = {
   webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },};
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },};
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 module.exports = withSentryConfig(baseConfig);

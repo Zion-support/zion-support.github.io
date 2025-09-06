@@ -1,11 +1,16 @@
   const currentPath = router.pathname;
 export default ApiDocsLayout;
 import Link from 'next/link';
-import {useRouter} from 'next/router';
-import {Search} from 'lucide-react'
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {cn} from "@/lib/utils";
-import {getDocsSearchPath, docsSearchSuggestions} from "@/data/docsSearchData";
+import { useRouter } from 'next/router';
+import { Search } from 'lucide-react'import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Search } from 'lucide-react';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
+import {
+ getDocsSearchPath;
+ docsSearchSuggestions
+} from "@/data/docsSearchData";
 
 interface ApiDocsLayoutProps {
   children: React.ReactNode
@@ -23,18 +28,16 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Sample Code", path: "/docs/sample-code" },
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
-    const path = getDocsSearchPath(suggestion.text);
-    if (path) {
-      router.push(path),
+    const path = getDocsSearchPath(suggestion.text);    if (path) {
+      router.push(path);
       setSearchValue("")
     }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const path = getDocsSearchPath(searchValue);
-    if (path) {
-      router.push(path),
+    const path = getDocsSearchPath(searchValue);    if (path) {
+      router.push(path);
       setSearchValue("")
     }
   };
@@ -54,17 +57,17 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
         <EnhancedSearchInput
-         value={searchValue}
-         onChange={setSearchValue}
-         onSelectSuggestion={handleSelectSuggestion}
-         searchSuggestions={docsSearchSuggestions}
+         value = {searchValue,}
+         onChange = {setSearchValue,}
+         onSelectSuggestion = {handleSelectSuggestion,}
+         searchSuggestions = {docsSearchSuggestions,}
          placeholder="Search documentation"
         />
        </form>
       </div>
 
       <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">
-       {navigationItems.map((item) => (
+       {navigationItems.map((item,) => (
         <Link
          key={item.path}
          href={item.path}
@@ -73,8 +76,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
           currentPath === item.path
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover: text-white hover:bg-zinc-900"
-         )}
-        >
+         )}        >
          {item.title}
         </Link>
        ))}
@@ -101,8 +103,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   children ;
 }</div> </div>) ;
 }export default ApiDocsLayout;
-"
-=======
-export default ApiDocsLayout;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+"export default ApiDocsLayout;

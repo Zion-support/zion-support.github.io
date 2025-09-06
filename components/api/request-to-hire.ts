@@ -10,21 +10,14 @@ export default async function handler(
   }
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-<<<<<<< HEAD
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body || {};
-=======
-  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
@@ -37,7 +30,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       requesterEmail,
       projectInfo,
     });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'data', 'requests');
@@ -53,11 +45,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       dir,
       `request-${timestamp.replace(/[:.]/g, '-')}.json`
     );    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');
-=======
+    // Persist to data/requests as a simple CMS-like log
+    const dir = path.join(process.cwd(), 'datarequests');
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo };
     const file = path.join(dir, `request-${timestamp.replace(/[:.]/g, '-')}.json`);
     fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
 
@@ -65,10 +58,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (err) {
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
-  }
-=======
-    return res.status(500).json({ error: 'Internal error' })
+  }    return res.status(500).json({ error: 'Internal error' })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

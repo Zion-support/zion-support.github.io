@@ -8,7 +8,6 @@ import {
   TooltipProvider,
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
-
 interface Instance {
   id: number;
   name: string;
@@ -63,8 +62,8 @@ interface FeedItem {
 export default function GlobalMapPage() {
   const [feed, setFeed] = useState<FeedItem[]>([]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
+  useEffect((,) => {
+    const interval = setInterval((,) => {
       const messages = [
         'ZionGPT upgraded to v1.7 in Egypt',
         'Proposal #121 passed in Zion DevOps',
@@ -78,7 +77,6 @@ export default function GlobalMapPage() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const width = 800;
   const height = 400;
   function project(lat: number, lng: number) {
@@ -88,7 +86,6 @@ export default function GlobalMapPage() {
   }
 
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5);
-
   return (
     <div className='min-h-screen bg-background'>
       <NextSeo
@@ -108,8 +105,7 @@ export default function GlobalMapPage() {
                   ? 'bg-red-500'
                   : i.governance === 'hybrid'
                     ? 'bg-yellow-500'
-                    : 'bg-green-500';
-              return (
+                    : 'bg-green-500';              return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
@@ -141,8 +137,7 @@ export default function GlobalMapPage() {
               </h2>
               <ul className='space-y-1'>
                 {topRegions.map(r => (
-                  <li key={r.id} className='flex justify-between border-b pb-1'>
-                    <span>{r.region}</span>
+                  <li key={r.id} className='flex justify-between border-b pb-1'>                    <span>{r.region}</span>
                     <span>{r.talent}</span>
                   </li>
                 ))}
@@ -154,8 +149,7 @@ export default function GlobalMapPage() {
                 {feed.map(f => (
                   <li key={f.id} className='text-sm'>
                     {f.text}
-                  </li>
-                ))}
+                  </li>                ))}
               </ul>
             </section>
           </div>
@@ -163,8 +157,7 @@ export default function GlobalMapPage() {
       </main>
     </div>
   );
-=======
 }
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}
+

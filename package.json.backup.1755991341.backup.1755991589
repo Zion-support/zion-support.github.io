@@ -23,6 +23,7 @@
     "health:monitor": "node -e \"setInterval(() => fetch('http://localhost:3000/api/health').then(r => r.json()).then(console.log).catch(console.error), 10000)\"",
     "build:netlify": "node scripts/optimized-build.cjs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -35,12 +36,15 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "build:netlify:prepare": "node scripts/install-build-deps.cjs && node scripts/optimized-build.cjs",
     "build:fast": "NEXT_DISABLE_CSS_INLINE=true SKIP_TYPE_CHECK=true NODE_OPTIONS='--no-deprecation --max-old-space-size=6144' npx next build --no-lint",
     "build:react19": "REACT_19_MODE=true npm run build",
     "build:production": "NODE_ENV=production npm run typecheck && npm run build",
     "build:analyze": "ANALYZE=true npm run build && node scripts/analyze-build.cjs",
     "bundle:analyze": "node scripts/bundle-analyzer.cjs",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -57,9 +61,11 @@
     "bundle:optimize": "node scripts/bundle-optimizer.cjs",
     "bundle:report": "node scripts/bundle-analysis.cjs",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "bundle:chunks": "node scripts/large-chunk-analyzer.cjs",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "bundle:chunks": "node scripts/large-chunk-analyzer.cjs",
     "bundle:optimize": "node scripts/bundle-optimizer.cjs",    "bundle:chunks": "node scripts/large-chunk-analyzer.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -67,6 +73,9 @@
     "bundle:optimize": "node scripts/bundle-optimizer.cjs",    "bundle:chunks": "node scripts/large-chunk-analyzer.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "bundle:optimize": "node scripts/bundle-optimizer.cjs",    "bundle:chunks": "node scripts/large-chunk-analyzer.cjs",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "bundle:monitor": "node scripts/bundle-monitor.cjs",
     "perf:audit": "node scripts/performance-audit.cjs",
     "perf:optimize": "node -e \"require('./src/utils/performanceOptimizer.ts').default.applyOptimizations()\"",
@@ -91,6 +100,7 @@
     "lint:nextjs": "next lint",
     "preview": "NODE_ENV=production vite preview",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -106,22 +116,29 @@
     "test:coverage": "vitest run --coverage",
     "test:jest": "echo 'Jest deprecated. Use vitest.' && exit 1",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "test:vitest": "vitest run",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "test:vitest": "vitest run",
     "test": "jest",
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",    "test:vitest": "vitest run",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "test": "jest",
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",    "test:vitest": "vitest run",
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "test:vitest:watch": "vitest",
     "test:vitest:coverage": "vitest run --coverage",
     "test:e2e": "cypress run",
@@ -193,16 +210,18 @@
     "logs:monitor:realtime": "node scripts/realtime-log-monitor.cjs",
     "logs:monitor:dashboard": "node scripts/realtime-log-monitor.cjs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-    "env:check-placeholders": "node scripts/check-env-placeholders.cjs",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "env:check-placeholders": "node scripts/check-env-placeholders.cjs",
+    "env:check-placeholders": "node scripts/check-env-placeholders.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -210,6 +229,8 @@
     "env:check-placeholders": "node scripts/check-env-placeholders.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "logs:enhanced": "node -e \"require('./src/utils/enhanced-logger.ts').logger.info('Enhanced logging test', 'system')\"",
     "monitor:resources": "echo 'CPU:' && ps -A -o %cpu | awk '{sum+=$1} END {print sum\"%\"}' && echo 'Memory:' && free -h || vm_stat",
     "logs:realtime": "node scripts/enhanced-log-monitoring.cjs",
@@ -220,6 +241,7 @@
     "monitor:enhanced": "npm run logs:realtime",
     "monitor:all": "concurrently \"npm run logs:realtime\" \"npm run logs:performance\" \"npm run logs:security\"",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -232,10 +254,13 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "analyze:bundle": "node scripts/analyze-bundle.js",
     "analyze:react19": "node scripts/react19-bundle-analysis.cjs",
     "monitor:health": "curl -s https://ziontechgroup.netlify.app/api/health && echo ' - API Health: OK'",
     "monitor:build": "npm run bundle:analyze && npm run monitor:health",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -247,9 +272,11 @@
     "monitor:health": "curl -s https://ziontechgroup.netlify.app/api/health && echo ' - API Health: OK'",
     "monitor:build": "npm run bundle:analyze && npm run monitor:health",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "perf:monitor": "node -e \"console.log('Enable with: localStorage.setItem(\\\"performance-monitoring\\\", \\\"true\\\"); window.location.reload();')\"",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "perf:monitor": "node -e \"console.log('Enable with: localStorage.setItem(\\\"performance-monitoring\\\", \\\"true\\\"); window.location.reload();')\"",
     "bundle:report": "node scripts/bundle-analysis.cjs",    "perf:monitor": "node -e \"console.log('Enable with: localStorage.setItem(\\\"performance-monitoring\\\", \\\"true\\\"); window.location.reload();')\"",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -257,6 +284,9 @@
     "bundle:report": "node scripts/bundle-analysis.cjs",    "perf:monitor": "node -e \"console.log('Enable with: localStorage.setItem(\\\"performance-monitoring\\\", \\\"true\\\"); window.location.reload();')\"",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "bundle:report": "node scripts/bundle-analysis.cjs",    "perf:monitor": "node -e \"console.log('Enable with: localStorage.setItem(\\\"performance-monitoring\\\", \\\"true\\\"); window.location.reload();')\"",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "performance:check": "node scripts/performance-monitor.cjs",
     "optimize:images": "find public -name '*.jpg' -o -name '*.png' | head -5",
     "optimize:minify": "node scripts/minify-public-assets.cjs",
@@ -276,16 +306,18 @@
     "i18n:audit": "node scripts/i18n-audit.cjs",
     "i18n:hardcoded": "node scripts/find-hardcoded-strings.cjs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-    "i18n:missing": "node scripts/check-missing-i18n-keys.cjs",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "i18n:missing": "node scripts/check-missing-i18n-keys.cjs",
+    "i18n:missing": "node scripts/check-missing-i18n-keys.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -293,6 +325,8 @@
     "i18n:missing": "node scripts/check-missing-i18n-keys.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "i18n:check": "npm run i18n:audit && npm run i18n:hardcoded",
     "i18n:report": "npm run i18n:check && echo 'i18n reports generated: i18n-audit-report.md and hardcoded-strings-report.md",
     "build:cache": "node scripts/cached-build.cjs",
@@ -312,6 +346,7 @@
     "automation:test-slack": "node automation/tests/test-slack-connection.js",
     "automation:test-cursor": "node automation/tests/test-cursor-connection.js",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -322,9 +357,11 @@
     "automation:test-monitoring": "node automation/tests/test-performance-monitoring.js",
     "optimize:bundle": "node scripts/optimize-bundle.cjs"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "automation:test-monitoring": "node automation/tests/test-performance-monitoring.js"  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -332,12 +369,16 @@
     "automation:test-monitoring": "node automation/tests/test-performance-monitoring.js"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "automation:test-monitoring": "node automation/tests/test-performance-monitoring.js"  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@chainsafe/libp2p-gossipsub": "^14.1.1",
     "@chainsafe/libp2p-noise": "^16.1.3",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -348,9 +389,11 @@
 =======
     "@chakra-ui/react": "3.21.1",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "@datadog/browser-logs": "^6.12.3",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "@datadog/browser-logs": "^6.12.3",
     "@chakra-ui/react": "2.10.9",    "@datadog/browser-logs": "^6.12.3",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -358,6 +401,9 @@
     "@chakra-ui/react": "2.10.9",    "@datadog/browser-logs": "^6.12.3",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@chakra-ui/react": "2.10.9",    "@datadog/browser-logs": "^6.12.3",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
     "@google/model-viewer": "^4.1.0",
@@ -366,18 +412,20 @@
     "@libp2p/identify": "^3.0.37",
     "@libp2p/tcp": "^10.1.17",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-    "@opentelemetry/api": "^1.8.0",
-    "@opentelemetry/core": "^1.8.0",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@opentelemetry/api": "^1.8.0",
     "@opentelemetry/core": "^1.8.0",
+    "@opentelemetry/api": "^1.8.0",
+    "@opentelemetry/core": "^1.8.0",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -386,6 +434,8 @@
     "@opentelemetry/core": "^1.8.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@orbitdb/core": "^3.0.2",
     "@prisma/client": "^6.10.1",
     "@radix-ui/react-accordion": "^1.2.11",
@@ -422,6 +472,7 @@
     "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^7.4.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -434,10 +485,13 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.50.2",
     "@tanstack/react-query": "^5.81.5",
     "@types/lodash.debounce": "^4.0.9",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -450,9 +504,11 @@
     "@tanstack/react-query": "^5.81.5",
     "@types/lodash.debounce": "^4.0.9",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "@types/react-redux": "^7.1.34",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "@types/react-redux": "^7.1.34",
     "@types/next": "^9.0.0",    "@types/react-redux": "^7.1.34",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -460,6 +516,9 @@
     "@types/next": "^9.0.0",    "@types/react-redux": "^7.1.34",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@types/next": "^9.0.0",    "@types/react-redux": "^7.1.34",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "autoprefixer": "^10.4.21",
     "axios": "^1.10.0",
     "axios-retry": "^4.5.0",
@@ -470,6 +529,7 @@
     "cors": "^2.8.5",
     "critters": "^0.0.23",
     "datastore-core": "^10.0.4",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -484,11 +544,13 @@
     "dd-trace": "^3.58.0",
     "dotenv": "^16.6.1",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "embla-carousel-react": "^8.6.0",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "embla-carousel-react": "^8.6.0",
     "date-fns": "^3.6.0",
     "dd-trace": "^3.58.0",
     "dotenv": "^16.5.0",    "embla-carousel-react": "^8.6.0",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -498,6 +560,11 @@
     "dotenv": "^16.5.0",    "embla-carousel-react": "^8.6.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "date-fns": "^3.6.0",
+    "dd-trace": "^3.58.0",
+    "dotenv": "^16.5.0",    "embla-carousel-react": "^8.6.0",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "ethers": "^6.14.4",
     "file-saver": "^2.0.5",
     "firebase": "^11.9.1",
@@ -513,6 +580,7 @@
     "jspdf-autotable": "^5.0.2",
     "jszip": "^3.10.1",
     "libp2p": "^2.8.12",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -530,22 +598,29 @@
     "logrocket": "^4.0.0",
     "lucide-react": "^0.525.0",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "micro": "^10.0.1",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "micro": "^10.0.1",
     "lodash-es": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "logrocket": "^4.0.0",
     "lucide-react": "^0.523.0",    "micro": "^10.0.1",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "lodash-es": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "logrocket": "^4.0.0",
     "lucide-react": "^0.523.0",    "micro": "^10.0.1",
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "mongoose": "^8.16.0",
     "morgan": "^1.10.0",
     "next": "^15.3.4",
@@ -561,6 +636,7 @@
     "react-error-boundary": "^3.1.4",
     "react-focus-lock": "^2.13.6",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -570,9 +646,11 @@
 =======
     "react-hook-form": "7.59.0",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "react-hot-toast": "^2.5.2",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "react-hot-toast": "^2.5.2",
     "react-hook-form": "7.58.1",    "react-hot-toast": "^2.5.2",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -580,6 +658,9 @@
     "react-hook-form": "7.58.1",    "react-hot-toast": "^2.5.2",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "react-hook-form": "7.58.1",    "react-hot-toast": "^2.5.2",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "react-i18next": "^15.5.3",
     "react-loading-skeleton": "^3.5.0",
     "react-markdown": "^10.1.0",
@@ -595,6 +676,7 @@
     "swr": "^2.3.3",
     "tailwind-merge": "^3.3.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -604,9 +686,11 @@
 =======
     "tailwindcss": "^4.1.11",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "tailwindcss-animate": "^1.0.7",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "tailwindcss-animate": "^1.0.7",
     "tailwindcss": "^3.4.17",    "tailwindcss-animate": "^1.0.7",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -614,6 +698,9 @@
     "tailwindcss": "^3.4.17",    "tailwindcss-animate": "^1.0.7",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "tailwindcss": "^3.4.17",    "tailwindcss-animate": "^1.0.7",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "three": "^0.172.0",
     "tslib": "^2.8.1",
     "undici": "^7.10.0",
@@ -623,6 +710,7 @@
     "web-push": "^3.6.7",
     "web-vitals": "^5.0.3",
     "yup": "^1.6.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -634,9 +722,11 @@
     "zod": "^3.25.67",
     "prisma": "^6.10.1"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "zod": "^3.25.67"  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -644,11 +734,15 @@
     "zod": "^3.25.67"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "zod": "^3.25.67"  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -659,9 +753,11 @@
 =======
     "@eslint/js": "^8.57.1",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "@modelcontextprotocol/sdk": "^1.13.2",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "@modelcontextprotocol/sdk": "^1.13.2",
     "@eslint/js": "^8.57.0",    "@modelcontextprotocol/sdk": "^1.13.2",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -669,6 +765,9 @@
     "@eslint/js": "^8.57.0",    "@modelcontextprotocol/sdk": "^1.13.2",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@eslint/js": "^8.57.0",    "@modelcontextprotocol/sdk": "^1.13.2",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@next/bundle-analyzer": "^15.3.4",
     "@pact-foundation/pact": "^15.0.1",
     "@playwright/test": "^1.53.1",
@@ -699,16 +798,18 @@
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-    "ajv": "^8.12.0",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "ajv": "^8.12.0",
+    "ajv": "^8.12.0",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -716,6 +817,8 @@
     "ajv": "^8.12.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "babel-jest": "^29.7.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
@@ -751,6 +854,7 @@
     "npm-check-updates": "^18.0.1",
     "prettier": "^3.6.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -759,18 +863,15 @@
     "prisma": "^6.10.1",
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "puppeteer": "^24.10.2",
     "redux-mock-store": "^1.5.5",
     "rollup-plugin-visualizer": "^5.14.0",
     "sass": "^1.89.2",
-<<<<<<< HEAD
-=======
-    "source-map-explorer": "^2.5.3",
-    "string-replace-loader": "^3.2.0",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "supertest": "^6.3.4",
-=======
     "prisma": "^6.10.1",    "supertest": "^6.3.4",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -778,12 +879,16 @@
     "prisma": "^6.10.1",    "supertest": "^6.3.4",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "prisma": "^6.10.1",    "supertest": "^6.3.4",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.35.0",
     "vite": "^6.3.5",
     "vitest": "^3.2.4",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -795,9 +900,11 @@
     "whatwg-fetch": "^3.6.20",
     "babel-plugin-react-compiler": "19.1.0-rc.2"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     "whatwg-fetch": "^3.6.20"  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -805,6 +912,9 @@
     "whatwg-fetch": "^3.6.20"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "whatwg-fetch": "^3.6.20"  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "overrides": {
     "typescript-eslint": "^8.35.0",
     "@typescript-eslint/eslint-plugin": "^8.18.2",
@@ -815,6 +925,7 @@
     "glob": "^11.0.2",
     "rimraf": "^6.0.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -827,11 +938,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "formik": {
       "lodash": "npm:lodash-es@^4.17.21"
     },
     "react-day-picker": {
       "date-fns": "^3.6.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -841,9 +955,11 @@
 =======
     "date-fns": "2.30.0"
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-  },
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  },
     }  },
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -851,6 +967,9 @@
     }  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    }  },
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "engines": {
     "node": ">=18.17.0"
   },
@@ -874,6 +993,7 @@
   },
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -886,6 +1006,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "test:jest": "jest --runInBand --passWithNoTests",
     "test:mocha": "mocha",
     "codex:capture": "node scripts/codex-capture-log.mjs",
@@ -929,6 +1051,7 @@
     "netlify:cron:start": "bash automation/netlify-monitor-cron.sh start",
     "netlify:cron:stop": "bash automation/netlify-monitor-cron.sh stop",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -947,9 +1070,11 @@
     "type-check": "tsc --noEmit",
     "prepare": "husky install",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "netlify:cron:status": "bash automation/netlify-monitor-cron.sh status"    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -957,6 +1082,9 @@
     "netlify:cron:status": "bash automation/netlify-monitor-cron.sh status"    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "netlify:cron:status": "bash automation/netlify-monitor-cron.sh status"    "autonomous": "node automation/launch-enhanced-autonomous-system.js",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
     "autonomous:status": "node automation/launch-autonomous-systems-clean.js status",
     "linkedin:run": "ts-node scripts/linkedin-automation.ts run",
@@ -1001,6 +1129,7 @@
     "automation:enhance": "node automation/enhance-all-automation.js",
     "automation:beautify": "node automation/beautify-ui.cjs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1012,10 +1141,12 @@
     "autonomous:start": "node automation/launch-autonomous-systems-clean.js start",
     "autonomous:stop": "node automation/launch-autonomous-systems-clean.js stop",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
     "autonomous:start": "node automation/autonomous-system-manager.cjs start",
     "autonomous:stop": "node automation/autonomous-system-manager.cjs stop",    "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1024,6 +1155,10 @@
     "autonomous:stop": "node automation/autonomous-system-manager.cjs stop",    "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "autonomous:start": "node automation/autonomous-system-manager.cjs start",
+    "autonomous:stop": "node automation/autonomous-system-manager.cjs stop",    "autonomous:restart": "node automation/launch-autonomous-systems-clean.js restart",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "autonomous:factory": "node automation/autonomous-error-monitoring-factory.js",
     "autonomous:orchestrator": "node automation/autonomous-automation-orchestrator.js",
     "autonomous:cron": "bash automation/autonomous-error-cron-system.sh run",
@@ -1104,6 +1239,7 @@
     "links:start": "node automation/site-link-orchestrator.cjs",
     "links:cron:start": "bash automation/site-link-cron.sh",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1117,9 +1253,11 @@
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs && node automation/external-link-check.cjs",
 >>>>>>> origin/cursor/crawl-and-fix-site-links-and-pages-f374
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "promo:start": "node automation/site-promo-orchestrator.cjs",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "promo:start": "node automation/site-promo-orchestrator.cjs",
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1127,6 +1265,9 @@
     "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "links:scan": "node automation/site-link-crawler.cjs && node automation/site-link-fixer.cjs",    "promo:start": "node automation/site-promo-orchestrator.cjs",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "promo:cron:start": "bash automation/site-promo-cron.sh",
     "promo:scan": "node automation/site-promo-analyzer.cjs && node automation/homepage-promo-applier.cjs",
     "spec-dev:start": "node automation/spec-dev-orchestrator.cjs",
@@ -1142,6 +1283,7 @@
     "alignment:cron:start": "bash automation/alignment-cron.sh",
     "alignment:scan": "node automation/chat-fetcher.cjs && (node automation/google-doc-fetcher.cjs || true) && node automation/alignment-crawler.cjs && node automation/alignment-analyzer.cjs && node automation/alignment-factory.cjs && node automation/alignment-dev-factory.cjs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1154,6 +1296,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "automation:pm2": "npm run pm2:start && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:restart": "npm run pm2:restart && npm run pm2:bootstrap:logrotate && pm2 save",
     "automation:pm2:status": "npm run pm2:status",
@@ -1162,6 +1306,7 @@
     "automation:pm2:autostart": "node scripts/pm2-autostart.cjs",
     "automation:pm2:resurrect": "node scripts/pm2-resurrect-hook.cjs",
     "automation:pm2:fastads": "npm run pm2:fastads:start && npm run pm2:bootstrap:logrotate && pm2 save",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1178,9 +1323,11 @@
     "health:dev": "nodemon automation/auto-health-monitor/index.mjs",
     "automation:all:plus": "npm run automation:all & npm run health:start",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "postautomation": "npm run automation:git-sync",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "postautomation": "npm run automation:git-sync",
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",    "postautomation": "npm run automation:git-sync",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1188,6 +1335,9 @@
     "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",    "postautomation": "npm run automation:git-sync",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "automation:pm2:cron": "npm run pm2:cron:start && npm run pm2:bootstrap:logrotate && pm2 save",    "postautomation": "npm run automation:git-sync",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "lint:staged": "lint-staged",
     "ui-evolution:start": "node automation/ui-evolution-launcher.js start",
     "ui-evolution:once": "node automation/ui-evolution-launcher.js once",
@@ -1209,16 +1359,18 @@
     "frontend-sync:autonomous:once": "node automation/frontend-sync-autonomous-orchestrator.cjs once 0",
     "frontend-sync:autonomous:cron": "bash automation/frontend-sync-autonomous-cron.sh",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-    "git:sync": "node automation/advanced-git-sync.cjs",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "git:sync": "node automation/advanced-git-sync.cjs",
+    "git:sync": "node automation/advanced-git-sync.cjs",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1226,6 +1378,8 @@
     "git:sync": "node automation/advanced-git-sync.cjs",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "git:pull": "node automation/git-pull-rebase.cjs",
     "git:cron:start": "bash automation/git-sync-cron.sh start",
     "git:cron:stop": "bash automation/git-sync-cron.sh stop",
@@ -1244,6 +1398,7 @@
     "conflicts:cron:start": "bash automation/merge-conflict-cron.sh start",
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1256,10 +1411,13 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
     "auto:intel": "node automation/auto-market-intel.cjs",
     "auto:talent": "node automation/auto-talent-highlights.cjs",
     "auto:all": "npm run auto:intel && npm run auto:talent"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1282,9 +1440,11 @@
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status"
   },
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-  "dependencies": {
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  "dependencies": {
   },  "dependencies": {
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1292,6 +1452,9 @@
   },  "dependencies": {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  },  "dependencies": {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -1299,6 +1462,7 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1309,6 +1473,8 @@
     "@sentry/node": "^7.120.4",
 =======
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
@@ -1319,17 +1485,10 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
-<<<<<<< HEAD
-    "dotenv": "^16.4.5",
-    "events": "^3.3.0",
-=======
-    "events": "^3.3.0",
-    "formidable": "^3.5.4",
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
     "framer-motion": "^6.5.1",
-=======
     "@sentry/nextjs": "^7.120.4",
     "@sentry/node": "^7.120.4",    "framer-motion": "^6.5.1",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1338,12 +1497,17 @@
     "@sentry/node": "^7.120.4",    "framer-motion": "^6.5.1",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "@sentry/nextjs": "^7.120.4",
+    "@sentry/node": "^7.120.4",    "framer-motion": "^6.5.1",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1356,6 +1520,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "js-yaml": "^4.1.0",
     "jsdom": "^24.1.0",
     "lucide-react": "^0.536.0",
@@ -1369,6 +1535,7 @@
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1379,9 +1546,11 @@
     "react-share": "^5.2.2",
 >>>>>>> origin/cursor/build-zion-ai-blog-and-content-system-cb83
 =======
-    "lucide-react": "^0.536.0",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "lucide-react": "^0.536.0",
     "resend": "^4.0.0",    "lucide-react": "^0.536.0",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1389,6 +1558,9 @@
     "resend": "^4.0.0",    "lucide-react": "^0.536.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "resend": "^4.0.0",    "lucide-react": "^0.536.0",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "mime-types": "^3.0.1",
     "next": "^11.1.4",
     "node-cron": "^4.2.1",
@@ -1399,6 +1571,7 @@
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1412,12 +1585,15 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.32.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1431,6 +1607,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^12.1.5",
     "@types/chai": "^5.2.2",
@@ -1459,6 +1637,7 @@
     "supertest": "^7.1.4",
     "tailwindcss": "^3.4.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -1484,9 +1663,11 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-    "ts-node": "^10.9.2",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "ts-node": "^10.9.2",
     "ts-jest": "^29.4.1",    "ts-node": "^10.9.2",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -1494,12 +1675,16 @@
     "ts-jest": "^29.4.1",    "ts-node": "^10.9.2",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    "ts-jest": "^29.4.1",    "ts-node": "^10.9.2",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "typescript": "^5.9.2"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix"
     ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1534,5 +1719,7 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 }

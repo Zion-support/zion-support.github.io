@@ -27,7 +27,6 @@ import {
   BarChart3,
   Smartphone,;
 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -80,8 +79,7 @@ export default function LandingPage() {
         title={t('home.seo_title')}
         description={t('home.seo_description')}
         keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'
-      />
+        canonical='https://app.ziontechgroup.com/'      />
       <Header />
       <HeroSection />
 
@@ -104,8 +102,7 @@ export default function LandingPage() {
               <Link
                 key={index}
                 href={feature.link}
-                className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'
-              >
+                className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
                   {feature.icon}
                 </div>
@@ -121,15 +118,11 @@ export default function LandingPage() {
                   <span>{t('general.explore')}</span>
                   <ArrowRight
                     className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
-                  />                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                  />                </div>                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </Link>
             ))}
           </div>
@@ -143,15 +136,15 @@ export default function LandingPage() {
       
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-<<<<<<< HEAD
-=======
+      <CategoriesSection />
+      <BenefitsSection />
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />
+      
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
@@ -159,20 +152,11 @@ export default function LandingPage() {
       <BlogSection />
 
       {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-=======
-      
+      <SocialShareSection />      
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      <WaitlistSection />
       <FloatingCTA />
     </div>
   );
 }
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

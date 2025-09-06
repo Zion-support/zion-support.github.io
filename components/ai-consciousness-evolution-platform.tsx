@@ -3,8 +3,6 @@
   return (<Layout> <SEO <motion.div initial= {
   {
   opacity: 0, y: 20 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 }animate= {
   {
   opacity: 1, y: 0 
@@ -81,8 +79,4 @@ visible: {
 
 };
 
-};export default AIConsciousnessEvolutionPlatform;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-export default AIConsciousnessEvolutionPlatform;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;

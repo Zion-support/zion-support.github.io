@@ -3,15 +3,12 @@ import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface TalentCardSaveButtonProps {
   profileId: string;
   profileName: string;
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
-
 export function TalentCardSaveButton({
   profileId,
   profileName,
@@ -26,8 +23,7 @@ export function TalentCardSaveButton({
 
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
-    e.stopPropagation(),
-
+    e.stopPropagation();
     if (!isAuthenticated) {
       toast({
         title: 'Authentication required',
@@ -59,8 +55,7 @@ export function TalentCardSaveButton({
         className={cn(
           'h-4 w-4 transition-colors',
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
-        )}
-      />
+        )}      />
     </button>
   );
 
@@ -68,8 +63,5 @@ export function TalentCardSaveButton({
 }) ;
 };
 }/> </button>) ;
-}"
-=======
+}";
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

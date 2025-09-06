@@ -1,5 +1,3 @@
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { Form } from '@/components/ui/form';
@@ -13,7 +11,6 @@ import { format } from 'date-fns';
 import { CertificationsList } from './CertificationsList';
 import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
-
 interface CertificationsFormProps {
   resumeId: string;
   certifications: Certification[];
@@ -54,7 +51,7 @@ export function CertificationsForm({
     },
   });
 
-  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+  const handleAddOrUpdate = async (data: CertificationFormValues,) => {
     try {
       setError(null);
       let success,
@@ -90,16 +87,20 @@ export function CertificationsForm({
     }
   };
   const handleEdit = (cert: Certification) => {
+    setEditingId(cert.id!);    form.reset({
+      ...cert,
+  };
+
+
+  const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
-      ...cert,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date),
     });
   };
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id);
     }
@@ -121,8 +122,7 @@ export function CertificationsForm({
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
-          onDelete={handleDelete}
-        />
+          onDelete={handleDelete}        />
       )}
 
       <div className='bg-muted/40 p-6 rounded-lg'>
@@ -188,8 +188,4 @@ export function CertificationsForm({
 }> {;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-}'"
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+}'"}

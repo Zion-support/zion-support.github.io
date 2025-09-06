@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check, X } from 'lucide-react';
-import {  Table,
+import {  Table,  Table,
   TableBody,
   TableCell,
   TableHead,
@@ -9,8 +9,8 @@ import {  Table,
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -84,27 +84,25 @@ export function EnterprisePricingTable() {
         </div>
 
         <div className='overflow-x-auto'>
-          <Table className='border rounded-lg'>
-    <section id="pricing" className="py-20 px-4 md:px-6">
+          <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            Choose the perfect plan for your team size and requirements
           </p>
         </div>
 
-<<<<<<< HEAD
         <div className='overflow-x-auto'>
           <Table className='border rounded-lg'>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             <TableHeader>
               <TableRow>
                 <TableHead className='w-[200px]'>Plan Features</TableHead>
                 {plans.map(plan => (
                   <TableHead key={plan.name} className='text-center'>
-                    <div className='flex flex-col items-center'>
+                    <div className='flex flex-col items-center'>                <TableHead className="w-[200px]">Plan Features</TableHead>
+                {plans.map((plan,) => (
+                  <TableHead key={plan.name} className="text-center">
+                    <div className="flex flex-col items-center">
                       {plan.popular && (
                         <Badge className='mb-2 bg-zion-purple'>
                           Most Popular
@@ -126,29 +124,22 @@ export function EnterprisePricingTable() {
                       >
                         {plan.name === 'Enterprise'
                           ? 'Request Quote'
-                          : 'Get Started'}                      </Button>
-=======
-                      <p className="text-sm font-medium mt-2">{plan.users}</p>
+                          : 'Get Started'}                      </Button>                      <p className="text-sm font-medium mt-2">{plan.users}</p>
                       <Button
                         className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
-                        variant={plan.popular ? 'default' : 'outline'}
+                        variant = {plan.popular ? 'default' : 'outline',}
                       >
-<<<<<<< HEAD
                         {plan.name === 'Enterprise'
                           ? 'Request Quote'
-                          : 'Get Started'}
-=======
-                        {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                          : 'Get Started'}                        {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
                       </Button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </div>
                   </TableHead>
                 ))}
               </TableRow>
             </TableHeader>
             <TableBody>
-              {(plans[0]?.features || []).map((feature, index) => (
+              {(plans[0]?.features || []).map((feature, index,) => (
                 <TableRow key={feature.name}>
                   <TableCell className='font-medium'>{feature.name}</TableCell>
                   {plans.map(plan => (
@@ -156,15 +147,15 @@ export function EnterprisePricingTable() {
                       key={`${plan.name}-${feature.name}`}
                       className='text-center'
                     >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-                      {plan.features[index]?.included ? (
                         <Check className='h-5 w-5 text-green-500 mx-auto' />
                       ) : (
                         <X className='h-5 w-5 text-muted-foreground mx-auto' />                      )}
-=======
+                        <X className="h-5 w-5 text-muted-foreground mx-auto" />
+                      {plan.features[index]?.included ? (
+                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                      ) : (
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />
                       )}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     </TableCell>
                   ))}
                 </TableRow>
@@ -179,16 +170,10 @@ export function EnterprisePricingTable() {
       </div>
     </section>
   );
-}
-=======
-        <div className="mt-8 text-center text-sm text-muted-foreground">
+}        <div className="mt-8 text-center text-sm text-muted-foreground">
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

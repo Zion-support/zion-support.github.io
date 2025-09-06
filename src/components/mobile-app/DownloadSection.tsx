@@ -1,9 +1,7 @@
 };
-
 import React from "react";
-import {QrCodeIcon} from 'lucide-react'
-import {AppStoreButtons} from "./AppStoreButtons";
-import {logInfo} from '@/utils/productionLogger';
+import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
+import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC = () => {
 
   // These would typically come from environment variables or a config
@@ -23,10 +21,10 @@ export const DownloadSection: React.FC = () => {
               
               <AppStoreButtons 
                 className="mb-8" 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => logInfo("App Store button clicked")}
-                onGooglePlayClick={() => logInfo("Google Play button clicked")}
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
+                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
+                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
               />
               
               <div className="text-sm text-gray-400">
@@ -49,6 +47,3 @@ export const DownloadSection: React.FC = () => {
   )
 };
 "
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

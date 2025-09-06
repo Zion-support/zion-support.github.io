@@ -1,7 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface AdvancedAIAutomationService {
   id: string;
   name: string;
   tagline: string;
@@ -48,9 +46,7 @@ const contact = {
   website: 'https://ziontechgroup.com',};
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
-  {
-=======
-  mobile: '+1 302 464 0950';
+  {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -58,8 +54,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-autonomous-business-processor',
     name: 'AI Autonomous Business Processor',
     tagline:
@@ -68,8 +62,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     period: '/month',
     description:
       'An advanced AI system that autonomously analyzes, optimizes, and executes business processes across all departments. Continuously learns and improves without human oversight.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     features: [
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
@@ -382,9 +374,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     rating: 4.9,
     reviews: 267,
   },
-];
-=======
-      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
+];      'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection';
       'ROI trackingCRM integration'
     ];
     popular: true;
@@ -415,5 +405,3 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

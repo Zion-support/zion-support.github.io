@@ -61,16 +61,13 @@ export interface EmergingTechService {
   reviews: number;
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
-  {
-=======
+  {export interface EmergingTechService {
   reviews: number
 }
 
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'quantum-internet-security-platform',
     name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum-secured internet infrastructure',
@@ -78,9 +75,6 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description:
       'Revolutionary quantum internet platform providing unhackable communication channels, quantum key distribution, and post-quantum cryptography. Enables secure government, military, and enterprise communications.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography algorithms',
       'Quantum entanglement-based security',
@@ -997,9 +991,7 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8,
     reviews: 28,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -1012,5 +1004,3 @@ export const emergingTechServices: EmergingTechService[] = [
     reviews: 28
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

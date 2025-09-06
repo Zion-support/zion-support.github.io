@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type WatchlistMatch = {
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
@@ -13,7 +12,6 @@ export type AmlCheckResult = {
   checkedAt: string; // ISO
   provider: 'mock' | 'remote';
 };
-
 export interface AmlProvider {
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
@@ -40,9 +38,5 @@ class MockAmlProvider implements AmlProvider {
 }
 
 export function getAmlProvider(): AmlProvider {
-  return provider;
-=======
-  return new MockAmlProvider();
+  return provider;  return new MockAmlProvider();
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

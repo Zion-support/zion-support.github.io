@@ -1,7 +1,5 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -284,9 +282,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     rating: 4.8,
     reviews: 38,
   },
-];
-=======
-	{
+];	{
 		id: 'enterprise-data-governance-automation';
 		name: 'Enterprise Data Governance Automation',
 		tagline: 'Automated data governance, compliance, and quality management for enterprise data';
@@ -472,5 +468,3 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		reviews: 38
 	}
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

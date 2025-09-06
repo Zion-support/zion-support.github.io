@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-import { useState } from 'react';
+import { useState } from 'react';import { useState } from 'react';
+interface YoutubeEmbedProps {
+  videoId: string,
+  title: string,
+  poster: string
+}
 
 interface YoutubeEmbedProps {
   videoId: string;
@@ -27,13 +31,10 @@ export default function YoutubeEmbed({
             className='object-cover rounded'
           />
           <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
-            <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>
-=======
-          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
+            <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </>
       )}
       <iframe
@@ -46,8 +47,9 @@ export default function YoutubeEmbed({
       />
     </div>
   );
-}
-=======
+}        loading="lazy"
+        onLoad = {() => setLoaded(true),}
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
         loading="lazy"
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
@@ -55,8 +57,5 @@ export default function YoutubeEmbed({
       />
     </div>
   );
-<<<<<<< HEAD
-=======
+;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

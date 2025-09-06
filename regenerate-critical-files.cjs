@@ -6,6 +6,7 @@ const path = require('path');
 class CriticalFileRegenerator {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.projectRoot = process.cwd(),
     this.regeneratedFiles = []
 =======
@@ -17,6 +18,8 @@ class CriticalFileRegenerator {
     this.regeneratedFiles = [];
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 
   log(message, type = 'INFO') {
@@ -101,6 +104,7 @@ export default LandingPage;`;
 
 interface ButtonProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   children: React.ReactNode, onClick?: () => void,
 =======
 <<<<<<< HEAD
@@ -110,6 +114,8 @@ interface ButtonProps {
   onClick?: () => void;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 }

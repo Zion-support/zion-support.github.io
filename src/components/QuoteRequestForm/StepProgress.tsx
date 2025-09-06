@@ -1,8 +1,6 @@
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-
 interface StepProgressProps {
   currentStep: QuoteRequestSteps;
 
@@ -12,16 +10,12 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: 'details', label: 'Details' },
     { id: 'timeline', label: 'Timeline' },
     { id: 'budget', label: 'Budget' },
-    { id: 'summary', label: 'Summary' },  ];
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
+    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
     const stepOrder = steps.findIndex(s => s.id === stepId);
@@ -30,8 +24,14 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     if (stepOrder < currentStepOrder) return 'complete';
     if (stepOrder === currentStepOrder) return 'current';
     return 'upcoming';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-  };
+  const getStepStatus = (stepId: QuoteRequestSteps,) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId),
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
+    
+    if (stepOrder < currentStepOrder) return "complete",
+    if (stepOrder === currentStepOrder) return "current",
+    return "upcoming"
+  },
 
   return (
     <div className='relative'>
@@ -57,8 +57,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
-                )}
-              >
+                )}              >
                 {status === 'complete' ? (
                   <CheckIcon className='h-4 w-4' />
                 ) : (
@@ -74,14 +73,18 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     ? 'text-zion-cyan'
                     : status === 'current'
                       ? 'text-white'
-                      : 'text-zion-slate-light'                )}
-=======
-                  "text-xs mt-2 font-medium";
+                      : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium";
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
                 )}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+              <span 
+                className = {cn(
+                  "text-xs mt-2 font-medium",
+                  status === "complete" ? "text-zion-cyan" : 
+                  status === "current" ? "text-white" : 
+                  "text-zion-slate-light"
+                ),}
               >
                 {step.label}
               </span>
@@ -104,13 +107,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 }</span> </div>) ;
 }) ;
 }</div> </div>) ;
-}"
-=======
-          )
+}"          )
         })}
       </div>
     </div>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -2619,6 +2619,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -2631,6 +2632,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2656,25 +2659,27 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-      0,
 =======
-      1,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
+      0,      0,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       0,      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
       0,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2688,6 +2693,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2695,10 +2701,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-      1,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
+      1,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -2706,12 +2713,15 @@
       1,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2730,10 +2740,13 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2748,6 +2761,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       3,
       0,
@@ -2774,6 +2789,7 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -2786,6 +2802,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -2798,6 +2816,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2826,6 +2845,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2834,16 +2855,18 @@
       1,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-      2,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
+      2,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -2851,6 +2874,8 @@
       2,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2858,28 +2883,20 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
-      0,
-      0,
-      0,
 =======
-      1,
-      1,
-      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
-      1,
-      2,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
-=======
       0,
       0,
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -2889,6 +2906,11 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,
+      0,
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2899,6 +2921,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2912,6 +2935,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2923,103 +2948,107 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-      0,
 =======
-      5,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
+      0,      0,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+      0,      0,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      1,
+      0,
+      1,
+      0,
+      3,
+      1,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      0,
+      3,
+      0,
+      0,
+      1,
       4,
       0,
       0,
       0,
-      3,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
-=======
-      0,      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      1,
-      0,
-      1,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
       0,
       0,
       3,
       0,
-      0,
-      3,
-      0,
-      0,
-      1,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       1,
@@ -3060,6 +3089,8 @@
       0,
       0,
       0,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -3069,29 +3100,6 @@
       0,
       0,
       0,
-      5,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      3,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
       0,
       0,
       0,
@@ -3107,38 +3115,13 @@
       0,
       0,
       1,
+      0,
+      1,
+      0,
+      0,
+      0,
       0,
 <<<<<<< HEAD
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      1,
-      0,
-      0,
-      0,
-      0,
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -3147,6 +3130,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -3182,6 +3167,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3241,9 +3227,11 @@
       0,
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0
-=======
       0,      0
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -3251,6 +3239,9 @@
       0,      0
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     ]
   },
   {
@@ -4301,6 +4292,7 @@
     "route": "/about",
     "vector": [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -4313,6 +4305,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -4340,6 +4334,7 @@
       0,
       1,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4376,16 +4371,17 @@
       0,
       3,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       7,
       0,
       0,
       0,
-<<<<<<< HEAD
-=======
       2,      7,
       0,
       0,
       0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -4396,6 +4392,8 @@
       0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       1,
@@ -4559,6 +4557,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -4590,11 +4589,15 @@
       2,      2,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      2,      2,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4635,10 +4638,13 @@
       0,
       1,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
       0,
       0,
@@ -4649,6 +4655,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
@@ -4680,6 +4688,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -4698,11 +4707,15 @@
       0,      4,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      4,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4717,12 +4730,15 @@
       3,
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       4,
       1,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -4732,6 +4748,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       6,
       0,
       0,
@@ -4850,6 +4868,7 @@
       1,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -4862,6 +4881,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       1,
@@ -4872,6 +4893,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -4880,12 +4902,12 @@
       1,
       1,
 =======
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       1,
       1,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -4894,10 +4916,15 @@
       1,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,
+      1,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       1,
       0,
       1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -4919,10 +4946,12 @@
       0,
       1
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-    ]
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    ]
       1,
       3    ]
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -4931,6 +4960,10 @@
       3    ]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,
+      3    ]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/agency-dashboard",
@@ -13551,6 +13584,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -13558,51 +13592,11 @@
 <<<<<<< HEAD
       1,
 =======
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       1,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -13610,6 +13604,9 @@
       1,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -13617,6 +13614,7 @@
       0,
       1,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13630,11 +13628,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       2,
       1,
       1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13642,31 +13643,11 @@
 <<<<<<< HEAD
       4,
 =======
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       4,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -13674,11 +13655,15 @@
       4,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      4,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -13692,6 +13677,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -13700,6 +13687,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13713,12 +13701,15 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -13731,6 +13722,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       3,
       6,
       0,
@@ -13771,45 +13764,18 @@
       1,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       4,
 =======
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       4,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -13817,11 +13783,15 @@
       4,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      4,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -13834,6 +13804,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       1,
       0,
@@ -13893,65 +13865,18 @@
       1,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       2,
 =======
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       2,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -13959,6 +13884,9 @@
       2,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      2,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -13966,6 +13894,7 @@
       0,
       1,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13979,6 +13908,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       3,
       4,
@@ -13992,45 +13923,18 @@
       4,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       2,
 =======
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       2,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -14038,11 +13942,15 @@
       2,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      2,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       3,
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -14055,6 +13963,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       3,
       10,
@@ -14080,22 +13990,16 @@
       1,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
-=======
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -14103,11 +14007,15 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14121,6 +14029,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       1,
       1,
@@ -14139,6 +14049,7 @@
       0,
       3,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14155,18 +14066,16 @@
 <<<<<<< HEAD
       5,
 =======
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       1,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -14174,6 +14083,9 @@
       1,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -14182,6 +14094,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14195,6 +14108,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       2,
       1,
@@ -14211,6 +14126,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -14219,28 +14135,17 @@
       1,
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
       2,
-<<<<<<< HEAD
-      3,
-      0,
-      1,
-      0,
-      0,
-      0,
-      4,
-      1,
-      0,
-      1,
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
       0
-=======
       1,      0
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -14248,6 +14153,9 @@
       1,      0
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      0
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     ]
   },
   {
@@ -16346,6 +16254,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -16359,6 +16268,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       3,
@@ -16383,6 +16294,7 @@
       1,
       0,
       2,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16396,11 +16308,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16414,6 +16329,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       3,
       3,
       0,
@@ -16425,6 +16342,7 @@
       0,
       1,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16437,16 +16355,17 @@
       4,
       8,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       1,
-<<<<<<< HEAD
-=======
       1,      2,
       0,
       0,
       1,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -16457,6 +16376,8 @@
       1,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       3,
@@ -16475,6 +16396,7 @@
       0,
       1,
       1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16499,10 +16421,14 @@
       0,      2,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      2,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       1,
       1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16523,10 +16449,13 @@
       0,
       1,
       0,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       1,
+<<<<<<< HEAD
       4,
       1,
       2,
@@ -16588,6 +16517,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       1,
@@ -16604,6 +16535,7 @@
       1,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -16615,31 +16547,11 @@
       0,
       1,
       0,
-      3,
-      0,
-      5,
-      1,
-      0,
-      1,
-      0,
-      0,
-      2,
-      1,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      3,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      3,
       1,      3,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -16647,10 +16559,14 @@
       1,      3,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,      3,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16664,6 +16580,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -16928,6 +16846,7 @@
       0,
       10,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -16956,16 +16875,17 @@
       0,
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       4,
       4,
       2,
       0,
-<<<<<<< HEAD
-=======
       3,      4,
       4,
       2,
       0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -16976,6 +16896,8 @@
       0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       11,
       1,
       0,
@@ -16992,6 +16914,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -16999,11 +16922,11 @@
       3,
 =======
       1,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       3,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -17011,10 +16934,14 @@
       3,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      3,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       1,
       1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -17028,6 +16955,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       4,
       0,
@@ -17160,6 +17089,7 @@
       2,
       3,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -17167,104 +17097,15 @@
       0,
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
-      0,
-      2,
-      0,
-<<<<<<< HEAD
-      0,
-      1,
-      0,
-      0,
-      1,
-      2,
-      0,
-      0,
-      3,
-      1,
-      8,
-      0,
-      4,
-      7,
-      2,
-      0,
-      5,
-      9,
-      0,
-      0,
-      1,
-      6
 =======
-      7,
-      2,
-      0,
-      1,
-      4,
-      4,
-      0,
-      0,
-      0,
-      9,
-      0,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      2,
-      1,
-      14,
-      1,
-      3,
-      0,
-      2,
-      4,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      3,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       2,
-      1,
-      1,
-      2,
       0,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
     ]
-=======
       0,    ]
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -17272,6 +17113,9 @@
       0,    ]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,    ]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/cutting-edge-pricing-2025",
@@ -20929,6 +20773,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -20942,6 +20787,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/explore",
     "vector": [
       0,
@@ -21204,6 +21051,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -21216,6 +21064,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/expo",
     "vector": [
       0,
@@ -30874,6 +30724,7 @@
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -30886,6 +30737,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/privacy",
     "vector": [
       2,
@@ -31147,6 +31000,7 @@
     ]
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -31154,6 +31008,8 @@
   {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/products",
     "vector": [
       0,
@@ -35069,273 +34925,9 @@
     ]
   },
   {
-<<<<<<< HEAD
-=======
-    "route": "/search",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      4,
-      0,
-      0,
-      2,
-      0,
-      3,
-      0,
-      1,
-      0,
-      0,
-      3,
-      0,
-      0,
-      18,
-      0,
-      1,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      3,
-      0,
-      0,
-      1,
-      1,
-      0,
-      3,
-      1,
-      1,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      3,
-      0,
-      7,
-      0,
-      3,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      8,
-      0,
-      1,
-      0,
-      2,
-      2,
-      0,
-      1,
-      5,
-      0,
-      0,
-      0,
-      0,
-      0,
-      16,
-      0,
-      0,
-      0,
-      0,
-      1,
-      2,
-      0,
-      1,
-      1,
-      3,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      1,
-      6,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      6,
-      0,
-      8,
-      0,
-      4,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      6,
-      2,
-      0,
-      0,
-      0,
-      2,
-      2,
-      0,
-      0,
-      5,
-      2,
-      1,
-      0,
-      0,
-      0,
-      13,
-      0,
-      0,
-      1,
-      0,
-      2,
-      6,
-      7,
-      0,
-      0,
-      0,
-      4,
-      1,
-      0,
-      0,
-      12,
-      2,
-      1,
-      6,
-      0,
-      2,
-      2,
-      5,
-      0,
-      1,
-      1,
-      7,
-      0,
-      0,
-      0,
-      0,
-      3,
-      1,
-      0,
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      0,
-      2,
-      3,
-      0,
-      2,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      7,
-      1,
-      1,
-      17,
-      0,
-      0,
-      3,
-      1,
-      1,
-      0,
-      6,
-      0,
-      1,
-      1,
-      1,
-      4,
-      0,
-      6,
-      0,
-      0,
-      2,
-      2,
-      0,
-      9,
-      0,
-      1,
-      0,
-      1,
-      2,
-      0,
-      3,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      16,
-      2,
-      1,
-      0
-    ]
-  },
-  {
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
     "route": "/secrets-rotation-automation",
-=======
   {    "route": "/secrets-rotation-automation",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -35343,6 +34935,9 @@
   {    "route": "/secrets-rotation-automation",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  {    "route": "/secrets-rotation-automation",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "vector": [
       0,
       0,
@@ -36650,6 +36245,7 @@
     "route": "/services",
     "vector": [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -36657,41 +36253,11 @@
 <<<<<<< HEAD
       5,
 =======
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      1,
-      1,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      3,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       5,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -36699,10 +36265,14 @@
       5,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      5,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       1,
       2,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -36716,6 +36286,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       3,
       1,
       0,
@@ -36805,6 +36377,7 @@
       2,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -36866,10 +36439,14 @@
       0,      1,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -36889,12 +36466,15 @@
       0,
       0,
       0,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       2,
       0,
       0,
       0,
       3,
+<<<<<<< HEAD
       0,
       2,
       1,
@@ -36983,6 +36563,8 @@
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       3,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -36991,6 +36573,7 @@
       1,
       4,
       2,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -36998,47 +36581,11 @@
 <<<<<<< HEAD
       2,
 =======
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      0,
-      0,
-      0,
-      2,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      0,
-      2,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      9,
-      0,
-      0,
-      1,
-      0,
-      1,
-      0,
-      1,
-      0,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
       2,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -37046,10 +36593,14 @@
       2,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      2,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       2,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37063,11 +36614,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       5,
       0,
       45,
       3,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37078,16 +36632,17 @@
       0,
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       2,
-<<<<<<< HEAD
-=======
       3,      0,
       0,
       0,
       2,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -37098,6 +36653,8 @@
       2,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       1,
       0,
@@ -37158,6 +36715,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37180,16 +36738,17 @@
       0,
       0,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       2,
       1,
-<<<<<<< HEAD
-=======
       1,      0,
       1,
       2,
       1,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -37200,6 +36759,8 @@
       1,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       3,
@@ -37268,6 +36829,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37279,9 +36841,11 @@
       0,
       0
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-    ]
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    ]
       2    ]
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -37289,6 +36853,9 @@
       2    ]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      2    ]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/site-health",
@@ -37561,6 +37128,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37573,6 +37141,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -37610,23 +37180,17 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-      0,
 =======
-      2,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
-      1,
-      0,
-      0,
-      3,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
-=======
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -37634,6 +37198,9 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -37650,6 +37217,7 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37663,6 +37231,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       1,
@@ -37675,6 +37245,7 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37687,45 +37258,25 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
-      0,
 =======
-      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
-      1,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      1,
-      0,
-      5,
-      0,
-      1,
-      1,
-      0,
-      1,
-      0,
-      0,
-      1,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
-=======
       0,      0,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -37733,6 +37284,9 @@
       0,      0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      0,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -37744,6 +37298,38 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      1,
+      5,
+      1,
+      5,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+      1,
+      5,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37751,47 +37337,23 @@
 <<<<<<< HEAD
 =======
       1,
-      5,
+      0,
+      1,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
 =======
-      1,
-      5,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      1,
-      5,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      1,
-      0,
-      1,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-=======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37806,6 +37368,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       5,
       0,
       0,
@@ -37842,6 +37406,7 @@
       0,
       1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -37854,6 +37419,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -37861,6 +37428,7 @@
       0,
       2,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37907,6 +37475,8 @@
       0,
       1,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -37914,6 +37484,7 @@
       0,
       0,
       2,
+<<<<<<< HEAD
 <<<<<<< HEAD
       0,
       0,
@@ -37927,6 +37498,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -37939,6 +37512,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37949,6 +37523,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,      0,
       0,
       0,
@@ -37961,6 +37537,7 @@
       0,
       2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 <<<<<<< HEAD
@@ -37968,6 +37545,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -37977,6 +37556,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -37996,10 +37576,14 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38012,6 +37596,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -38026,6 +37612,7 @@
       0,
       0,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 <<<<<<< HEAD
@@ -38033,6 +37620,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       1,
@@ -38062,36 +37651,33 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
-      0,
 =======
-      3,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
-      1,
-      0,
-      2,
-      0,
-      4,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
+      0,      0,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       0,      0,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
       0,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       1,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38105,6 +37691,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -38114,6 +37702,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38123,11 +37712,11 @@
 =======
       1,
       0,
-      1,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      1,
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+      1,
       0,      1,
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -38135,11 +37724,15 @@
       0,      1,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -38153,6 +37746,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -38182,6 +37777,7 @@
       1,
       3,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -38194,6 +37790,8 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -38201,6 +37799,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -38211,21 +37810,12 @@
       1,
       4,
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-      0,
-      0,
-      0,
-      0,
-<<<<<<< HEAD
 =======
-      1,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
-      6,
-      0,
-      1,
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
       0,
       0,
       0,
@@ -38236,47 +37826,6 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
       0
     ]
   },
@@ -44368,6 +43917,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
@@ -44416,11 +43966,14 @@
       0,
       0,
       7,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       1,
+<<<<<<< HEAD
       1,
       0,
       0,
@@ -44694,6 +44247,8 @@
       1,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -44706,6 +44261,7 @@
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -44723,12 +44279,15 @@
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       0,
       0,
       0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -44740,18 +44299,15 @@
       1,
       0,
       1,
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
-      0,
-      3,
-      0,
-      2,
       1,
-      3,
-      12,
-      1,
+      0,
+      0,
       0,
       0,
       0,
@@ -44764,61 +44320,6 @@
       0,
       0,
       1,
-      4,
-      0,
-      0,
-      0,
-      2,
-      1,
-      0,
-      0,
-      1,
-      0,
-      0,
-      1,
-      5,
-      0,
-      0,
-      1,
-      4,
-      1,
-      0,
-      1,
-      0,
-      0,
-      0,
-      3,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      28,
-      0,
-      0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      0,
-      4,
-      1,
-      4,
-      0,
-      0,
-      1,
-      0,
-      0,
-      3,
-      0,
-      6,
-      1,
       0,
       0,
       0,
@@ -44826,46 +44327,25 @@
       0,
       0,
       0,
-      1,
-      0,
-      0,
-      2,
-      0,
-      0,
-      4,
       0,
       0,
       0,
-      3,
       0,
       0,
       0,
-      5
-    ]
-  },
-  {
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
 <<<<<<< HEAD
-    "route": "/services/ai-autonomous-business-manager",
-    "vector": [
-      0,
-      0,
-      0,
-      0,
-      1,
-      1,
-      7,
-      1,
-      2,
-      14,
-      0,
-      2,
-      1,
-      1,
-      4,
-      0,
-      1,
-      0,
-      0,
       2,
       0,
       0,
@@ -45199,9 +44679,11 @@
   {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7c0f
-    "route": "/services/ai-model-development-chat",
 =======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "route": "/services/ai-model-development-chat",
       0,    "route": "/services/ai-model-development-chat",
+<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 <<<<<<< HEAD
 =======
@@ -45209,6 +44691,9 @@
       0,    "route": "/services/ai-model-development-chat",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      0,    "route": "/services/ai-model-development-chat",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "vector": [
       0,
       0,

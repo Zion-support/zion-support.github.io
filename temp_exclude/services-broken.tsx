@@ -367,7 +367,3 @@ export default function Services() {
 <<<<<<< HEAD
 	);
 }
-=======
-	),
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

@@ -4,7 +4,6 @@
  */
 import React from 'react';
 import dynamic from 'next/dynamic';
-
 const LoadingSpinner = () =>
   React.createElement(
     'div',
@@ -27,24 +26,21 @@ const LoadingSkeleton = () =>
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart'),
-//   {
-//     loading: LoadingSkeleton,
+//   {//     loading: LoadingSkeleton,
 //     ssr: false
 //   }
 // );
 
 export const DynamicPieChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.PieChart })),
-  {
-    loading: LoadingSkeleton,
+  {    loading: LoadingSkeleton,
     ssr: false,
   }
 );
 
 export const DynamicBarChart = dynamic(
   () => import('recharts').then(mod => ({ default: mod.BarChart })),
-  {
-    loading: LoadingSkeleton,
+  {    loading: LoadingSkeleton,
     ssr: false,
   }
 );
@@ -52,32 +48,28 @@ export const DynamicBarChart = dynamic(
 // TODO: Uncomment when these components are available
 // export const DynamicPDFGenerator = dynamic(
 //   () => import('../components/pdf/PDFGenerator'),
-//   {
-//     loading: LoadingSpinner,
+//   {//     loading: LoadingSpinner,
 //     ssr: false
 //   }
 // );
 
 // export const DynamicVideoPlayer = dynamic(
 //   () => import('../components/video/VideoPlayer'),
-//   {
-//     loading: LoadingSkeleton,
+//   {//     loading: LoadingSkeleton,
 //     ssr: false
 //   }
 // );
 
 // export const DynamicModelViewer = dynamic(
 //   () => import('../components/ar/ModelViewer'),
-//   {
-//     loading: LoadingSpinner,
+//   {//     loading: LoadingSpinner,
 //     ssr: false
 //   }
 // );
 
 // export const DynamicRichEditor = dynamic(
 //   () => import('../components/editor/RichTextEditor'),
-//   {
-//     loading: LoadingSpinner,
+//   {//     loading: LoadingSpinner,
 //     ssr: false
 //   }
 // );
@@ -85,8 +77,7 @@ export const DynamicBarChart = dynamic(
 // Virtual list for large datasets
 export const DynamicVirtualList = dynamic(
   () => import('react-window').then(mod => ({ default: mod.FixedSizeList })),
-  {
-    loading: LoadingSkeleton,
+  {    loading: LoadingSkeleton,
     ssr: false,
   }
 );
@@ -94,8 +85,5 @@ export const DynamicVirtualList = dynamic(
 // Usage examples:
 // Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
-=======
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

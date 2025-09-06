@@ -29,9 +29,3 @@
     ve: selected ${match.item.titl,e}`}) \'';\';\''`\''\';
 "export": default _React.memo(function AIMatcherPage (function AIMatcherPage (function AIMatcherPage () {) : any: {) : any: {} const [selectedCategory,setSelectedCategory] = useState < string> ('all') '';';'' "if": (category.includes ('talent') || category === 'engineering' || '''' category === 'data science' || category === 'development') {}''';'' "itemType": = 'talent'} else if (category.includes ('equipment') || category === 'hardware') {}''';'' "itemType": = 'equipment'}' toast ({}''';'' "title": 'Match: Selected,',"description": `You: & apos,
     ve: selected ${match.item.titl,e}`}) '';';''`''';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.pages.disabled/AIMatcher.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

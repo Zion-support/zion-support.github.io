@@ -1,7 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-export interface EmergingTechService2025 {
+export interface EmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -42,16 +41,12 @@ export interface EmergingTechService2025 {
   reviews: number;
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   // Space Mining Platform
-  {
-=======
-  reviews: number
+  {  reviews: number
 }
 
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   // Space Mining Platform
   {
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'space-mining-platform',
     name: 'Space Mining Platform',
     tagline: 'Revolutionary asteroid mining and space resource extraction',
@@ -59,9 +54,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     period: '/month',
     description:
       'Advanced space mining platform that enables automated asteroid mining, resource extraction, and space resource management. Provides access to rare minerals and materials from space.',
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-    features: [
       'Automated asteroid detection',
       'Resource extraction algorithms',
       'Space logistics management',
@@ -1009,9 +1001,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 11,
   },
-];
-=======
-      mobile: '+1 302 464 0950';
+];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -1024,5 +1014,3 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     reviews: 11
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
