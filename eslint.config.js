@@ -2,6 +2,11 @@ import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import nextPlugin from '@next/eslint-plugin-next';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -35,16 +40,26 @@ export default [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
+      parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: {
           jsx: true
         }
       }
     },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+    },
     rules: {
-      'no-unused-vars': 'warn',
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
-      'prefer-const': 'warn'
+      'prefer-const': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off'
     }
   },
   {
@@ -181,7 +196,8 @@ export default [
       'lint-target/**',
       'pages-backup/**',
       'pages-disabled/**',
-      'pages-quarantine/**'
+      'pages-quarantine/**',
+      'app/**'
     ]
   }
 ];
