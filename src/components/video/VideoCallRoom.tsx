@@ -6,7 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-import './video-call.css';interface Participant {
+
+interface Participant {
   id: string,
   name: string,
   avatar?: string
@@ -35,7 +36,8 @@ import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volum
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-import './video-call.css';interface Participant {
+
+interface Participant {
   id: string,
   name: string,
   avatar?: string
@@ -69,7 +71,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
   onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
-import './video-call.css',
 interface Participant {
   id: string,
   name: string,
@@ -84,7 +85,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
-import './video-call.css',;
+;
 interface Participant {;
   id: string,;
   name: string,;
