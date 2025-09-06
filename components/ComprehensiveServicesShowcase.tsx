@@ -1,56 +1,36 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import {
-  Star
-  Clock
-  Users
-  TrendingUp
-  CheckCircle
-  ExternalLink
-  ChevronRight
-  Shield
-  Zap
-  Globe
-  Rocket
-  Brain
-  Atom
-  Search
-  Filter
-  Grid
-  List
-  ArrowRight
-  Award
-  Target;
-} from 'lucide-react';
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
-  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink
 
-  Star,
-  Clock,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  ExternalLink,
-  ChevronRight,
-  Shield,
-  Zap,
-  Globe,
-  Rocket,
-  Brain,
-  Atom,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
+import {;
+  Star,;
+  Clock,;
+  Users,;
+  TrendingUp,;
+  CheckCircle,;
+  ExternalLink,;
+  ChevronRight,;
+  Shield,;
+  Zap,;
+  Globe,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Search,;
+  Filter,;
+  Grid,;
+  List,;
+  ArrowRight,;
   Award,;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
+
+import { 
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
+
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
@@ -117,6 +97,165 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
+      }
+    });
+
+
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
+    {;
+      id: 'AI & Machine Learning',;
+      name: 'AI & ML',;
+      icon: '🧠',;
+      count: allServices && allServices.filter(s => s && s.category === 'AI & Machine Learning');
+        .length,;
+    },;
+    {;
+      id: 'Healthcare AI',;
+      name: 'Healthcare',;
+      icon: '🏥',;
+      count: allServices && allServices.filter(s => s && s.category === 'Healthcare AI').length,;
+    },;
+    {;
+      id: 'Fintech AI',;
+      name: 'Fintech',;
+      icon: '💰',;
+      count: allServices && allServices.filter(s => s && s.category === 'Fintech AI').length,;
+    },;
+    {;
+      id: 'Cybersecurity',;
+      name: 'Security',;
+      icon: '🛡️',;
+      count: allServices && allServices.filter(s => s && s.category === 'Cybersecurity').length,;
+    },;
+    {;
+      id: 'IoT & Smart Cities',;
+      name: 'Smart Cities',;
+      icon: '🏙️',;
+      count: allServices && allServices.filter(s => s && s.category === 'IoT & Smart Cities');
+        .length,;
+    },;
+    {;
+      id: 'Blockchain & DeFi',;
+      name: 'Blockchain',;
+      icon: '🔗',;
+      count: allServices && allServices.filter(s => s && s.category === 'Blockchain & DeFi').length,;
+    },;
+    {;
+      id: 'Quantum Computing',;
+      name: 'Quantum',;
+      icon: '⚛️',;
+      count: allServices && allServices.filter(s => s && s.category === 'Quantum Computing').length,;
+    },;
+    {;
+      id: 'Space Technology',;
+      name: 'Space Tech',;
+      icon: '🚀',;
+      count: allServices && allServices.filter(s => s && s.category === 'Space Technology').length,;
+    },;
+    {;
+      id: 'Autonomous Systems',;
+      name: 'Autonomous',;
+      icon: '🤖',;
+      count: allServices && allServices.filter(s => s && s.category === 'Autonomous Systems');
+        .length,;
+    },;
+    {;
+      id: 'AR/VR & Metaverse',;
+      name: 'AR/VR',;
+      icon: '🥽',;
+      count: allServices && allServices.filter(s => s && s.category === 'AR/VR & Metaverse').length,;
+    },;
+    {;
+      id: '5G/6G Networks',;
+      name: '5G/6G',;
+      icon: '📡',;
+      count: allServices && allServices.filter(s => s && s.category === '5G/6G Networks').length,;
+    },;
+    {;
+      id: 'Biotechnology AI',;
+      name: 'Biotech',;
+      icon: '🧬',;
+      count: allServices && allServices.filter(s => s && s.category === 'Biotechnology AI').length,;
+    },;
+    {;
+      id: 'Renewable Energy',;
+      name: 'Energy',;
+      icon: '⚡',;
+      count: allServices && allServices.filter(s => s && s.category === 'Renewable Energy').length,;
+    },;
+    {;
+      id: 'Edge Computing',;
+      name: 'Edge',;
+      icon: '🌐',;
+      count: allServices && allServices.filter(s => s && s.category === 'Edge Computing').length,;
+    },;
+    {;
+      id: 'Quantum Internet',;
+      name: 'Q-Internet',;
+      icon: '🌍',;
+      count: allServices && allServices.filter(s => s && s.category === 'Quantum Internet').length,;
+    },;
+    {;
+      id: 'Neuromorphic Computing',;
+      name: 'Neuro',;
+      icon: '🧠',;
+      count: allServices && allServices.filter(s => s && s.category === 'Neuromorphic Computing');
+        .length,;
+    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices && allServices.filter(s => s && s.category === 'AI & Machine Learning').length },;
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices && allServices.filter(s => s && s.category === 'Healthcare AI').length },;
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices && allServices.filter(s => s && s.category === 'Fintech AI').length },;
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices && allServices.filter(s => s && s.category === 'Cybersecurity').length },;
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices && allServices.filter(s => s && s.category === 'IoT & Smart Cities').length },;
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices && allServices.filter(s => s && s.category === 'Blockchain & DeFi').length },;
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices && allServices.filter(s => s && s.category === 'Quantum Computing').length },;
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices && allServices.filter(s => s && s.category === 'Space Technology').length },;
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices && allServices.filter(s => s && s.category === 'Autonomous Systems').length },;
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices && allServices.filter(s => s && s.category === 'AR/VR & Metaverse').length },;
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices && allServices.filter(s => s && s.category === '5G/6G Networks').length },;
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices && allServices.filter(s => s && s.category === 'Biotechnology AI').length },;
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices && allServices.filter(s => s && s.category === 'Renewable Energy').length },;
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices && allServices.filter(s => s && s.category === 'Edge Computing').length },;
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices && allServices.filter(s => s && s.category === 'Quantum Internet').length },;
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices && allServices.filter(s => s && s.category === 'Neuromorphic Computing').length }
+
+  // Filter and sort services;
+  const filteredServices = allServices;
+    .filter(service => {;
+      const matchesCategory =;
+        selectedCategory === 'all' || service && service.category === selectedCategory;
+      const matchesSearch =;
+        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+        service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      return matchesCategory && matchesSearch;    })      const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
+      const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                           service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                           service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+      return matchesCategory && matchesSearch;
+    .sort((a, b) => {;
+      switch (sortBy) {;
+        case 'popularity':;
+          return b && b.popular ? 1 : -1;
+        case 'price':;
+          return (
+            parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
+            parseFloat(b && b.price.replace('$', '').replace(',', ''));
+          );
+        case 'rating':;
+          return b && b.rating - a && a.rating;
+        case 'newest':;
+          return (
+            new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime();
+          );
+        default:;
+          return 0;      }          return parseFloat(a && a.price.replace('$', '').replace(, '')) - parseFloat(b && b.price.replace('$', '').replace(, ''));
+        case 'rating':;
+          return b && b.rating - a && a.rating;
+        case 'newest':;
+          return new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime();
+        default: return 0;
+    });
 
 
 
@@ -150,6 +289,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
           className='text-center mb-16'
+
 
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
@@ -192,6 +332,8 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               <div>
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>
                 <div className='text-white/60'>Average ROI</div>              </div>        >
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Revolutionary Micro SAAS Services 2025
           </h2>
@@ -234,6 +376,93 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           </div>
         </motion.div>
 
+
+          className='text-center mb-16'>;
+          <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+            Revolutionary Micro SAAS Services 2025;
+          </h2>;
+          <p className='text-xl text-white/70 max-w-3xl mx-auto mb-8'>;
+            Discover our cutting-edge micro SAAS solutions that are transforming;
+            industries and driving the future of technology;
+          </p>;
+          <div className='flex items-center justify-center gap-6 text-white/60 mb-8'>;
+            <div className='flex items-center gap-2'>;
+              <Shield className='w-5 h-5' />;
+              <span>Enterprise-grade security</span>;
+            </div>;
+            <div className='flex items-center gap-2'>;
+              <Zap className='w-5 h-5' />;
+              <span>AI-powered optimization</span>;
+            </div>;
+            <div className='flex items-center gap-2'>;
+              <Globe className='w-5 h-5' />;
+              <span>Global deployment</span>;
+            </div>;
+          </div>;
+          <div className='bg-white/5 rounded-2xl p-6 border border-white/10'>;
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-6 text-center'>;
+              <div>;
+                <div className='text-3xl font-bold text-blue-400'>;
+                  {allServices && allServices.length}+;
+                </div>;
+                <div className='text-white/60'>Services Available</div>;
+              </div>;
+              <div>;
+                <div className='text-3xl font-bold text-green-400'>99 && 99.9%</div>;
+                <div className='text-white/60'>Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className='text-3xl font-bold text-purple-400'>24/7</div>;
+                <div className='text-white/60'>Support Available</div>;
+              </div>;
+              <div>;
+                <div className='text-3xl font-bold text-orange-400'>500%+</div>;
+                <div className='text-white/60'>Average ROI</div>              </div>        >;
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
+            Revolutionary Micro SAAS Services 2025;
+          </h2>;
+          <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">;
+            Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology;
+          </p>;
+          <div className="flex items-center justify-center gap-6 text-white/60 mb-8">;
+            <div className="flex items-center gap-2">;
+              <Shield className="w-5 h-5" />;
+              <span>Enterprise-grade security</span>;
+            </div>;
+            <div className="flex items-center gap-2">;
+              <Zap className="w-5 h-5" />;
+              <span>AI-powered optimization</span>;
+            </div>;
+            <div className="flex items-center gap-2">;
+              <Globe className="w-5 h-5" />;
+              <span>Global deployment</span>;
+            </div>;
+          </div>;
+          <div className="bg-white/5 rounded-2xl p-6 border border-white/10">;
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">;
+              <div>;
+                <div className="text-3xl font-bold text-blue-400">{allServices && allServices.length}+</div>;
+                <div className="text-white/60">Services Available</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-green-400">99 && 99.9%</div>;
+                <div className="text-white/60">Uptime Guarantee</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-purple-400">24/7</div>;
+                <div className="text-white/60">Support Available</div>;
+              </div>;
+              <div>;
+                <div className="text-3xl font-bold text-orange-400">500%+</div>;
+                <div className="text-white/60">Average ROI</div>;
+              </div>;
+            </div>;
+          </div>;
+        </motion && motion.div>;
+
+
+
+
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -241,6 +470,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
           className='mb-12'
+
 
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
@@ -657,8 +887,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             <div className='flex items-center gap-4'>
 
 
-            {/* Sort and View Controls */}
-
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
@@ -675,10 +903,22 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                 </button>
 
+
               </div>
             </div>
           </div>
         </motion.div>
+
+
+                >;
+                  <List className="w-5 h-5" />;
+              </div>;
+            </div>;
+          </div>;
+        </motion && motion.div>;
+
+
+
 
         {/* Category Filter */}
         <motion&& motion.div
@@ -719,6 +959,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           </div>
         </motion.div>
 
+
         {/* Services Display */}
         {viewMode === 'grid' ? (;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -726,22 +967,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-                <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
-                  {category.count}
-                </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
-              </button>
-
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Services Display */}
-        {viewMode === 'grid' ? (
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
@@ -777,21 +1002,30 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
                   {service.popular && (
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
-                      <Star className='w-3 h-3' />                      Popular                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  {/* Popular Badge */}
-                  {service.popular && (
-                    <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
-                      <Star className="w-3 h-3" />
-                    </div>
-                  )}
+
+
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
 
+
+
+
                     </div>
                   )}
 
+                  className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
+                >;
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className='absolute top - 4 right - 4 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1'>;
+                      <Star className='w - 3 h - 3' />                      Popular                  className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
+                >;
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className="absolute top - 4 right - 4 bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full flex items - center gap - 1">;
+                      <Star className="w - 3 h - 3" />;
+                    </div>)}
                   {/* Service Content */}
                   <div className='p-6'>
                     <div className='flex items-start justify-between mb-4'>
@@ -804,6 +1038,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           {service.period}
                         </div>
 
+
+
+
+
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -811,11 +1049,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       </div>;
                     </div>;
                     <h3 className='text - xl font - bold text - white mb - 2'>;
-                        </div>
-
-                      </div>
-                    </div>
-                    <h3 className='text-xl font-bold text-white mb-2'>
                       {service.name}
                     </h3>;
                     <p className='text - white / 70 text - sm mb - 4'>;
@@ -833,6 +1066,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>;
                       </div>;
                     </div>;
+
                     <h3 className='text-xl font-bold text-white mb-2'>;
                       {service && service.name}
                     </h3>;
@@ -869,19 +1103,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
+
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
 
                     </div>
 
-                    {/* Stats */}
-                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-
-                      <div>
-                        <div className='text-lg font-bold text-blue-400'>
-                          {service.rating}
-                    </div>
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div>
@@ -935,6 +1163,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
+
+
                     {/* CTA */}
                     <a
                       href={service.link}
@@ -966,6 +1196,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
+                      )}
+
                 >
                   <div className='flex flex-col lg:flex-row gap-6'>
                     {/* Left Side - Icon and Basic Info */}
@@ -993,47 +1225,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         </div>
                       )}
                     </div>
-                    {/* Center - Service Details */}
-                    <div className='flex-1'>
-                      <div className='flex items-start justify-between mb-4'>
-                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
-
-                          Popular
-
-                        </div>
-                      )}
-                    </div>
 
                     {/* Center - Service Details */}
 
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
 
-                        <div>
-                          <h3 className='text-2xl font-bold text-white mb-2'>
-                            {service.name}
-                          </h3>
-                          <p className='text-white/70 text-lg mb-3'>
-                            {service.tagline}
-                          </p>
-                          <p className='text-white/60 text-sm'>
-                            {service.description}
-                          </p>
-                        </div>
-                        <div className='text-right'>
-                          <div className='text-3xl font-bold text-white'>
-                            {service.price}
-                          </div>
-                          <div className='text-white/60'>{service.period}</div>                        </div>
-                      </div>
-                      {/* Features Grid */}                        <div>
-                      )}
-                    </div>
 
-                    {/* Center - Service Details */}
-
-                    <div className='flex-1'>
-                      <div className='flex items-start justify-between mb-4'>
 
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
@@ -1078,6 +1276,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <div className="text-white/60">{service && service.period}</div>;
                         </div>;
                       </div>;
+
                       {/* Features Grid */}
                       <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
@@ -1106,11 +1305,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                             {service.rating} ({service.reviews} reviews)
                           </span>
                         </div>                        </div>
-                        ))}
-                      </div>
-
-                          </div>
-
                         ))}
                       </div>
 
@@ -1220,20 +1414,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
-            </p>          </motion.div>            className="text-center py-20"
-          >
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-white/60">Try adjusting your search or filter criteria</p>
-        )}
+
+
             </p>          </motion.div>
 
           </motion.div>
 
-        )}
-            </p>          </motion.div>
 
-          </motion.div>
 
         )}
 
@@ -1244,6 +1431,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
           className='mt-20 text-center'
+
 
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
@@ -1312,36 +1500,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 }
+  );
+}
         </motion.div>;
       </div>;
     </section>);
-              <a
-                href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
-              >
-                Contact Sales Team
-                <ArrowRight className=&quot;w-5 h-5&quot; />
-              </a>
-              <a
-                href=&quot;tel:+13024640950&quot;
-                className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Contact Sales Team
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
 }
 }

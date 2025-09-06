@@ -69,6 +69,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const by_module: Record < string, number> = {}
   const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
   }
+  const by_module: Record < string, number> = {}
+  const by_type: Record < string, number> = {}
+;
+  return res.status (200).json ({
+    entries: entries.slice (-200),
+    by_module,
+    by_type,
+    total: entries.length,
 
   const byModule: Record<string, number> = {};
 
@@ -84,3 +92,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     by_module[e.module] = (by_module[e.module] || 0) + 1;
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
   }
+return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
+}
+
+
+  const byModule: Record<string, number> = {};
+  const byType: Record<string, number> = {};
+
+}
+  const byType: Record<string, number> = {};
+}
+
+
+  const byModule: Record<string, number> = {};
+

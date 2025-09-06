@@ -25,23 +25,17 @@ export default function UltraFuturisticBackground2036({variant = 'default';
     const particles: Array<{
       coordinate_x: number,
       coordinate_y: number,
-
-    // Particle system
-    const particles: Array<{
-      x: number,
-      y: number,
-
       vx: number,
       vy: number,
       size: number,
       color: string,
-type: 'quantum' | 'neon' | 'energy' | 'data';
+      type: 'quantum' | 'neon' | 'energy' | 'data';
     }> = [],
     const colors = {
       quantum: ['#00ffff#0080ff#8000ff#ff0080'],
       neon: ['#00ff00#ff00ff#ffff00#00ffff'],
       energy: ['#ff6600#ff0066#6600ff#00ff66'],
-data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
+      data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
     },
     const intensity_multiplier = {
       low: 0.5,
@@ -76,7 +70,7 @@ data: ['#00ccff#cc00ff#ffcc00#00ffcc'];
         0,
         canvas.width / 2,
         canvas.height / 2,
-Math.max (canvas.width, canvas.height) / 2),
+        Math.max (canvas.width, canvas.height) / 2),
       gradient.addColorStop (0, 'rgba (0, 0, 0, 0.8)'),
       gradient.addColorStop (0.3, 'rgba (20, 20, 40, 0.6)'),
       gradient.addColorStop (0.7, 'rgba (40, 20, 60, 0.4)'),

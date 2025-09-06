@@ -1,5 +1,28 @@
 
 
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+  CardFooter,;
+
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
+
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
+interface JobMatchCardProps {;
+  match: JobMatch;
+  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean
+}
+
+
 export function JobMatchesCard(): any ({;
   match,;
   onApply,;
@@ -11,13 +34,7 @@ export function JobMatchesCard(): any ({;
 
   if (!job) return null;
 
-import { useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
-import { format } from "date-fns",
-import { JobMatch } from "@/types/jobs",
+
 interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
@@ -40,6 +57,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   
   if (!job) return null,
   
+
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
@@ -65,6 +83,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           {job.description}
         </p>
         
+
+
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
@@ -115,12 +135,18 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
           {job && job.description}
         </p>;
-        {match.matched_skills?.length > 0 && (;
+
+        {match && match.matched_skills?.length > 0 && (;
           <div className="mb-3">;
-            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>;
+            <p className="text-xs text-muted-foreground mb-1">;
+              Matched skills:;
+            </p>;
             <div className="flex flex-wrap gap-1">;
-              {match.matched_skills.slice(0, 5).map((skill, i) => (;
+              {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
                 <Badge key={i} variant="secondary" className="text-xs">;
+
+
+
                   {skill}
                 </Badge>;
               ))}
@@ -132,11 +158,23 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </div>;
           </div>;
         )}
+
+
+
+
+
+        <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
+          <div className="flex items-center text-sm">
+            <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
+            {job.budget.min} - ${job.budget.max}
         
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
+
+
+
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -203,6 +241,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               variant="outline"
             <Button 
               variant="outline" 
+
               className="flex-1"
               onClick={() => onDecline(match && match.id)}
             >;
@@ -214,6 +253,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
     </Card>
       </CardFooter>;
     </Card>;
+
+
   );
 import { useState  } from './react';
 import {

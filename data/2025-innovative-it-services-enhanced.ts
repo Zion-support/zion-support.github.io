@@ -142,19 +142,8 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     growthRate: '35% annual growth',
     variant: 'quantum-cloud-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Quantum-enhanced cloud infrastructure with advanced algorithms, quantum encryption, and comprehensive cloud management tools.',
-    launchDate: '2024-12-01',
-    customers: 23,
-    rating: 4 && 4.9,
-    reviews: 15,
-  },
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
   // Zero Trust Security Platform
   {
@@ -2379,8 +2368,19 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-  }
-];
+    
+    
+    },
+    realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
+    launchDate: '2024-09-01', customers: 123,
+    rating: 4.8,
+    reviews: 52;
+
+    realImplementation: true;
+    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
+    launchDate: '2024-09-01';
+    customers: 123;
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -3435,5 +3435,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     customers: 123,;
     rating: 4.8;
     reviews: 52;
+
+
   }
 ];

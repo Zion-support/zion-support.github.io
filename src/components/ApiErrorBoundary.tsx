@@ -116,6 +116,17 @@ if ( {) {
                 onClick={() => window.location.reload()}
                 className="w-full"
               >
+
+
+                Reload Page
+              </Button>
+            </div>
+            {!this.state.isOnline && (
+              <div className='flex items-center justify-center gap-2 text-sm text-muted-foreground'>
+                <WifiOff className='h-4 w-4' />
+                <span>Offline</span>
+              </div>
+            )}
               <AlertDescription className='mt - 2'>;
                 {isNetworkError;
                   ? !this.state.is_online;
@@ -208,27 +219,6 @@ export const useApiErrorHandler = () =>: any {
                 </pre>
               </details>
             )}
-          </div>
-        </div>
-      )
-    }
-    return this.props.children
-  }
-// Hook for accessing query client in function components
-export const useApiErrorHandler = () => {
-  const handleApiError = (error: Error) => {
-    Sentry.withScope(scope => {
-      scope.setTag('source', 'useApiErrorHandler')
-      scope.setLevel('error')
-      Sentry.captureException(error)
-    })
-  }
-  return { handleApiError }
-}
-  return { handleApiError }
-}
-  return { handleApiError }
-}
 
 }, ;
   return { handleApiError };
@@ -251,4 +241,13 @@ export const useApiErrorHandler = () => {;
     });
   };
   return { handleApiError }
+
+
+
+
+},
+  return { handleApiError }
+},
+
+
 };

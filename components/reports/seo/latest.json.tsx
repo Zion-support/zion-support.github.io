@@ -25,6 +25,7 @@ export default function Placeholder() {
 
 export default function Placeholder() {
   return (
+
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
@@ -35,19 +36,5 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/latest.json</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
-    </main>
-  );
-}
-    </main>;
-  );
-}
 
-}
-    </main>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
+

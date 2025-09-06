@@ -1,39 +1,9 @@
 
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {TalentProfile} from "@/types/talent";
-import {toast} from "@/hooks/use-toast";
-import {useAuthStatus} from "@/hooks/talent";
-export function useSavedTalents() {;
-  const { isAuthenticated, userDetails } = useAuthStatus();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
-  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/hooks/use-toast";
-import { useAuthStatus } from "@/hooks/talent";
-export function useSavedTalents() {
-  const { isAuthenticated, userDetails } = useAuthStatus();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-import { toast } from "@/hooks/use-toast",
-import { useAuthStatus } from "@/hooks/talent",
-export function useSavedTalents() {
-  const { isAuthenticated, userDetails } = useAuthStatus(),
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
+
+
 
   // Fetch saved talents
   useEffect(() => {
-    const fetchSavedTalents = async () => {
-      if (!isAuthenticated || !userDetails.id) {
-        setIsLoading(false),
-        return
-      }
 
     const fetchSavedTalents = async () => {
       if (!isAuthenticated |!userDetails.id) {
@@ -65,21 +35,20 @@ export function useSavedTalents() {
               .in('id', talentIds);
             if (talentError) throw talentError;
             setSavedTalents(talentData |[])
-          } else {
-            setSavedTalents([])
-      if (!isAuthenticated || !userDetails.id) {
-        setIsLoading(false),
-        return
-import { useState, useEffect } from "react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { TalentProfile } from "@/types/talent",;
-import { toast } from "@/hooks/use-toast",;
-import { useAuthStatus } from "@/hooks/talent",;
-export function useSavedTalents() {;
-  const { isAuthenticated, userDetails } = useAuthStatus(),;
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
-  const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { TalentProfile } from '@/types / talent';
+import { toast } from '@/hooks / use - toast';
+import { useAuthStatus } from '@/hooks / talent';
+export /**
+ * useSavedTalents - Function description
+ */
+function useSavedTalents() {
+  const { is_authenticated, user_details } = useAuthStatus ();
+  const [saved_talents, setSavedTalents] = useState < TalentProfile[]>([]);
+  const [savedTalentIds, setSavedTalentIds] = useState < string[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+;
   // Fetch saved talents;
   useEffect (() => {
     const fetchSavedTalents = async () => {
@@ -115,14 +84,38 @@ if ( {) {
   $2
 }
             // Fetch full talent profiles for saved talents;
-            const { data: talentData, error: talentError } = await supabase;
-              .from('talent_profiles');
-              .select('*');
-              .in('id', talentIds),;
-            if (talentError) throw talentError,;
-            setSavedTalents(talentData || []);
-          } else {;
-            setSavedTalents([]);
+            const { data: talent_data, error: talent_error } = await supabase;
+              .from ('talent_profiles');
+              .select ('*');
+              .in ('id', talent_ids);
+;
+            // Check condition
+if (throw talent_error) {
+  $2
+}
+            setSavedTalents (talent_data || []);
+          } else {
+            setSavedTalents ([]);
+          }
+        }
+      } catch (error) {
+
+        console.error ('Error fetching saved talents:', error);
+        toast ({
+          title: "Error loading favorites";
+          description: "There was a problem loading your saved talents.",
+          variant: "destructive";
+        });
+
+      } finally {
+        setIsLoading (false);
+      }
+    }
+
+      if (!isAuthenticated || !userDetails.id) {
+        setIsLoading(false),
+        return
+
           }
         }
       } catch (error) {
@@ -224,16 +217,11 @@ if ( {) {
     } catch (error) {
       console && console.error('Error toggling saved talent:', error);
       toast({
-        title: "Error";
-        description: "There was a problem updating your favorites. Please try again."
-        variant: "destructive"
-      })
-    }
-  }
-  // Check if talent is saved
-  const isTalentSaved = (talentId: string) => {
-    return savedTalentIds.includes(talentId)
-  }
+
+    return savedTalentIds && savedTalentIds.includes(talentId)
+  };
+
+
   return {
     savedTalents;
     savedTalentIds;
@@ -241,33 +229,8 @@ if ( {) {
     toggleSaveTalent;
 
     isTalentSaved
-        title: "Error",
-        description: "There was a problem updating your favorites. Please try again.",
-        variant: "destructive"
-      })
-      } catch (error) {;
-        console.error('Error fetching saved talents:', error),;
-        toast({;
-          title: "Error loading favorites",;
-          description: "There was a problem loading your saved talents.",;
-          variant: "destructive";
-        });
-      } finally {;
-        setIsLoading(false);
-      }
-    },;
-    fetchSavedTalents();
-  }, [isAuthenticated, userDetails.id]),;
-  // Toggle save talent;
-  const toggleSaveTalent = async (talent: TalentProfile) => {;
-    if (!isAuthenticated || !userDetails.id || !talent.id) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please log in to save talents to your favorites",;
-        variant: "destructive";
-      }),;
-      return;
-    }
+  }
+    const is_saved = savedTalentIds.includes (talent.id);
 ;
     try {
       // Check condition
@@ -331,5 +294,7 @@ if (throw error) {
     is_loading;
     toggleSaveTalent;
     isTalentSaved;
+
+
   }
 }

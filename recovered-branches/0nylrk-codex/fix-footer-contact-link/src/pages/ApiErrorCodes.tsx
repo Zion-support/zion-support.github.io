@@ -1,16 +1,7 @@
 
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-export function ApiErrorCodes() {
-  const errorExample = `{;
-  "error": "validation_error";
-  "message": "The request was invalid";
-import React from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock",
+
+
+
 export function ApiErrorCodes() {
 
   const errorExample = `{
@@ -552,5 +543,4 @@ export default ApiErrorCodes;
       </div>;
     </ApiDocsLayout>);
 }
-;
 export default ApiErrorCodes;

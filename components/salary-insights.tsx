@@ -23,13 +23,15 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
-import {
-  LineChart
-  BarChart
-  DonutChart;
-  LineChart,
+
+type InsightResponse = {
+import {;
+  LineChart,;
   BarChart,;
   DonutChart,;
+
+
+
 } from '../components/salary/InsightCharts';
 
 type InsightResponse = {;
@@ -39,6 +41,44 @@ type InsightResponse = {;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
+  trend_monthly: { label: string; value: number }[];
+  regional_comparison: { region: string; medianHourlyUsd: number }[];
+  tags: string[];
+
+import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
+
+type InsightResponse = {
+  recommendedHourlyUsd: number,
+  gpt_recommendation?: string;}  recommendedHourlyUsd: number,
+
+  recommendedMonthlyUsd: number,
+  medianHourlyUsd: number,
+  minHourlyUsd: number,
+  maxHourlyUsd: number,
+  confidence: number,
+  trend_monthly: { label: string, value: number }[],
+  regional_comparison: { region: string, medianHourlyUsd: number }[],
+  tags: string[],
+
+  gptRecommendation?: string;};  recommendedHourlyUsd: number,;
+  recommendedMonthlyUsd: number,;
+  medianHourlyUsd: number,;
+  minHourlyUsd: number,;
+  maxHourlyUsd: number,;
+  confidence: number,;
+  trendMonthly: { label: string, value: number }[],;
+  regionalComparison: { region: string, medianHourlyUsd: number }[],;
+  tags: string[],;
+  gptRecommendation?: string;
+export default function SalaryInsightsPage() {;
+
+
+
+export default function SalaryInsightsPage() {;
+
+  const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
+  const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
+  const [region, setRegion] = useState('Remote, Global');
 
   const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
 
@@ -132,6 +172,23 @@ function SalaryInsightsPage() {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
+      const json = (await res && res.json()) as InsightResponse;
+      setData(json);
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);
+
+    }
+  }
+
+  useEffect(() => {;
+
       setLoading(false);    }
 
     }
@@ -139,7 +196,7 @@ function SalaryInsightsPage() {
 
   useEffect(() => {
     fetchInsights();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps;
   }, []);
 
 
@@ -284,9 +341,8 @@ if ( {) {
 
 
         alert('Insight saved locally');
-      } catch {}
-    })();
-  }
+
+
 
 
 
@@ -317,6 +373,7 @@ if ( {) {
     if (!data) return [] as { label: string; value: number }[];    const min = data && data.minHourlyUsd;      } catch {}
     })();
   }
+
   const donutData = useMemo(() => {;
     if (!data) return [] as { label: string, value: number }[],;
     const min = data && data.minHourlyUsd;
@@ -412,6 +469,7 @@ if (return [] as { label: string, value: number }[], ) {
 
     <div>      { label: 'Above Median', value: upper || 1 }];
   }, [data]);
+
   return (
     <div>;
       <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>;
@@ -423,6 +481,7 @@ if (return [] as { label: string, value: number }[], ) {
         </div>;
         <div className='absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl' />;
       </div>;
+
       <div className='mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6'>;
         <div className='lg:col-span-1 space-y-4'>;
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
@@ -434,6 +493,7 @@ if (return [] as { label: string, value: number }[], ) {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm';
               placeholder='e && e.g., Senior AI Engineer';
             />;
+
             <label className='block text-sm mt-3 mb-2'>Skills</label>;
             <input
               value={skills}
@@ -441,6 +501,7 @@ if (return [] as { label: string, value: number }[], ) {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm';
               placeholder='Comma-separated';
             />;
+
             <label className='block text-sm mt-3 mb-2'>Region</label>;
             <input
               value={region}
@@ -448,6 +509,7 @@ if (return [] as { label: string, value: number }[], ) {
               className='w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm';
               placeholder='City, Country';
             />;
+
             <div className='grid grid-cols-2 gap-3 mt-3'>;
               <div>;
                 <label className='block text-sm mb-2'>Experience</label>;
@@ -458,16 +520,20 @@ if (return [] as { label: string, value: number }[], ) {
                 >                  <option>Junior</option>        </div>;
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />;
       </div>;
+
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-1 space-y-4">;
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
             <h2 className="font-medium mb-3">Filters</h2>;
             <label className="block text-sm mb-2" htmlFor="input-Role title">Role title</label>;
             <input value={roleTitle} onChange={(e) => setRoleTitle(e && e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="e && e.g., Senior AI Engineer" />;
+
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Skills">Skills</label>;
             <input value={skills} onChange={(e) => setSkills(e && e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="Comma-separated" />;
+
             <label className="block text-sm mt-3 mb-2" htmlFor="input-Region">Region</label>;
             <input value={region} onChange={(e) => setRegion(e && e.target.value)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm" placeholder="City, Country" />;
+
             <div className="grid grid-cols-2 gap-3 mt-3">;
               <div>;
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>;
@@ -539,6 +605,7 @@ if (return [] as { label: string, value: number }[], ) {
 
             </button>;
           </div>;
+
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
             <h3 className='font-medium mb-2'>Actions</h3>;
             <div className='flex flex-col gap-2'>;
@@ -747,6 +814,7 @@ if (return [] as { label: string, value: number }[], ) {
             </div>
           </div>
         </div>
+
         <div className="lg:col-span-2 space-y-6">
           {error && (
             <div className="rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm">{error}</div>
@@ -812,7 +880,7 @@ if (return [] as { label: string, value: number }[], ) {
                   </thead>
                   <tbody>
                     {data.regionalComparison.map((r) => (
-<tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
+                      <tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
                         <td className="py-1">{r.region}</td>
                         <td className="py-1">${r.medianHourlyUsd}</td>
                       </tr>
@@ -879,6 +947,7 @@ if (return [] as { label: string, value: number }[], ) {
                     slices={
 
             </div>;
+
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-3'>Distribution</h3>;
               {data ? (;
@@ -929,17 +998,18 @@ if (return [] as { label: string, value: number }[], ) {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
 
+              )}
+
+
+
+
+
             </div>
           </div>
           {data?.gptRecommendation && (
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
-              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
-              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
-                {data.gptRecommendation}
-              </p>            </div>
-          )}
 
-          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -948,6 +1018,7 @@ if (return [] as { label: string, value: number }[], ) {
 
             </div>;
           </div>;
+
           {data?.gptRecommendation && (;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-2'>GPT Recommendation</h3>;
@@ -955,11 +1026,13 @@ if (return [] as { label: string, value: number }[], ) {
                 {data && data.gptRecommendation}
               </p>            </div>;
           )}
+
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
               <h3 className="font-medium mb-2">GPT Recommendation</h3>;
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data && data.gptRecommendation}</p>;
             </div>;
           )}
+
           {data && (;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-3'>Signals</h3>;
@@ -1042,4 +1115,6 @@ if (return [] as { label: string, value: number }[], ) {
             </div>
           )}
 
-          {data && (
+
+
+

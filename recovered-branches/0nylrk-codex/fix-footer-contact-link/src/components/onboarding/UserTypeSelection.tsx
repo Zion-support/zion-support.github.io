@@ -1,13 +1,8 @@
 import React from 'react';
 
-import {useState} from "react";
-import {Briefcase, Star, User} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import { useState } from "react",
-import { Briefcase, Star, User } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Briefcase, Star, User } from "lucide-react",
-import { Button } from "@/components/ui/button",
+
+
+
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -25,6 +20,21 @@ interface UserTypeSelectionProps {
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
+
+
+      id: "serviceProvider",
+      name: "Service Provider",
+      description: "I want to offer services on the platform",
+
+
+    {
+
+      id: "talent"
+      name: "Talent"
+      description: "I want to showcase my skills and find opportunities"
+
+      icon: Star
+    }
     },
     {
 
@@ -102,16 +112,8 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
-                  {type.description}
-                </p>
-              </div>
-            </Button>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
+
+
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -190,5 +192,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>;
     </div>;
   );
+
 }
 ;

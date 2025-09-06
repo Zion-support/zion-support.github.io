@@ -1,23 +1,24 @@
 
-import { Button  } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link  } from 'lucide-react';
-import { PdfExportButton  } from '../PdfExportButton';
-import { Resume  } from '@/types/resume';
-import { useState  } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
+
+
+
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
 import {Resume} from '@/types/resume';
 import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
+
+
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
-export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+
+
   const [isPrinting, setIsPrinting] = useState(false);
 
   const isMobile = useIsMobile();
@@ -52,10 +53,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
-        }
-        .print-section, .print-section * {
-          visibility: visible
-        }
+
         .print-section {
           position: absolute
           left: 0
@@ -108,20 +106,14 @@ function PreviewHeader() {
           display: none !important;
         }
       }
-    `;
-    document.head.appendChild(style);
-    // Trigger print dialog
-    window.print();
-    // Remove the temporary style element after printing
-    setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  }
+
+
     `,
     document.head.appendChild(style),
     `,
     document.head.appendChild(style),
+
+
     
     // Trigger print dialog
     window.print(),
@@ -141,19 +133,15 @@ function PreviewHeader() {
         <ArrowLeft className="h-4 w-4" />
         Back
       </Button>
-      <div
-        className={`flex ${isMobile ? "flex-col" : "flex-row"} space-${isMobile ? "y-2" : "x-2"} no-print`}
-      >
-        <PdfExportButton resume={resume} />
 
-        <Button
-          variant="outline"
-          onClick={handleBrowserPrint}
+
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
         <Button 
           variant="outline" 
           onClick={handleBrowserPrint} 
+
+
           disabled={isPrinting}
           className="gap-2"
         >

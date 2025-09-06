@@ -1,16 +1,5 @@
-// Common skills for filtering
-export const COMMON_SKILLS = [
-  'Machine Learning',
-  'Python',
-  'JavaScript',
-  'React',
-  'Data Science',
-  'AWS',
-  'Docker',
-  'Kubernetes',
-  'DevOps',
-  'Cloud Architecture',;
-  'TensorFlow',];
+
+
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -88,3 +77,4 @@ export const COMMON_SKILLS = [
   "DevOps",
   "Cloud Architecture",
   "TensorFlow"
+

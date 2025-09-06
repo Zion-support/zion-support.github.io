@@ -6,19 +6,17 @@ export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
-      id: 'machine-learning'
-      title: 'Machine Learning Solutions'
-      description:
-        'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
-      features: [
-        'Predictive Analytics'
-        'Pattern Recognition'
-        'Anomaly Detection'
-        'Recommendation Systems'
-      ],      icon: '🧠'
-      category: 'Core AI'
+
+      id: 'machine-learning',
+      title: 'Machine Learning Solutions',
+      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
+    features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
+      icon: '🧠',
+      category: 'Core AI',
+
       complexity: 'Advanced'
     }
+
         'Predictive Analytics',
         'Pattern Recognition',
         'Anomaly Detection',
@@ -27,6 +25,7 @@ export default function AISolutionsPage() {
       category: 'Core AI',
       complexity: 'Advanced';
     };
+
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -203,16 +202,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -290,6 +293,7 @@ export default function AISolutionsPage() {;
       category: 'Automation',;
       complexity: 'Intermediate';
     }
+
   const useCases = [;
     {;
       industry: 'Manufacturing',;
@@ -324,6 +328,7 @@ export default function AISolutionsPage() {;
       icon: '🛍️',;
     },;
   ];
+
   const technologies = [;
     'TensorFlow',;
     'PyTorch',;
@@ -348,6 +353,7 @@ export default function AISolutionsPage() {;
       icon: '🛍️';
     }
   ];
+
   const technologies = [;
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas';
 
@@ -425,6 +431,7 @@ export default function AISolutionsPage() {;
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
+
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <section className='text-center mb-16'>;
@@ -471,6 +478,7 @@ export default function AISolutionsPage() {;
                       ))}
 
   ];
+
   return (
     <>
       <Head>
@@ -541,6 +549,7 @@ export default function AISolutionsPage() {;
 
                     </ul>;
                     <Link      </Head>;
+
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
@@ -554,27 +563,22 @@ export default function AISolutionsPage() {;
           <section className="mx-auto max-w-7xl">;
 
             {/* AI Solutions Grid */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {aiSolutions.map((solution, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="text-4xl mb-4">{solution.icon}</div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution.category}</span>
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution.complexity}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{solution.title}</h3>
-                    <p className="text-white/70 mb-4">{solution.description}</p>
-                    <ul className="space-y-1 mb-4">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">
-                          <span className="text-cyan-400 mr-2">•</span>
-                    <Link
-
-                          {feature}
-                        </li>
-                      ))}
+            <div className="mb-16">;
+              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+                {aiSolutions && aiSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
+                    <div className="text-4xl mb-4">{solution && solution.icon}</div>;
+                    <div className="flex items-center gap-2 mb-3">;
+                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{solution && solution.category}</span>;
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{solution && solution.complexity}</span>;
+                    </div>;
+                    <h3 className="text-xl font-bold mb-3 text-white">{solution && solution.title}</h3>;
+                    <p className="text-white/70 mb-4">{solution && solution.description}</p>;
+                    <ul className="space-y-1 mb-4">;
+                      {solution && solution.features.map((feature, featureIndex) => (;
+                        <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
+                          <span className="text-cyan-400 mr-2">•</span>;
                     </ul>
 
                     <Link
@@ -587,10 +591,124 @@ export default function AISolutionsPage() {;
                       Learn More <span className="ml-1">→</span>
                     </Link>
 
+
+                          {feature}
+                        </li>;
+                      ))}
+                    </ul>;
+                    <Link
+                      href={`/services#${solution && solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution && solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors";
+                    >;
+                      Learn More <span className="ml-1">→</span>;
+                    </Link>;
+                  </div>;
+
+        <meta;
+          name='description';
+          content="Explore Zion Tech Group's comprehensive AI solutions including machine learning, NLP, computer vision, and autonomous systems.";
+        />;
+        <meta property='og:title' content='AI Solutions | Zion Tech Group' />;
+        <meta;
+          property='og:description';
+          content='Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems.';
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
+        <main className='container mx - auto px - 6 py - 12'>;
+          <section className='text - center mb - 16'>;
+            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
+              AI Solutions;
+            </h1>;
+            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
+              Cutting - edge artificial intelligence solutions that transform;
+              businesses and drive innovation;
+            </p>;
+          </section>;
+          <section className='mx - auto max - w-7xl'>;
+            {/* AI Solutions Grid */}
+            <div className='mb - 16'>;
+              <h2 className='text - 3xl font - bold mb - 8 text - center text - cyan - 400'>;
+                Our AI Solutions;
+              </h2>;
+              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
+                {ai_solutions.map ((solution, index) => (
+                  <div;
+                    key={index}
+                    className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300';
+                  >;
+                    <div className='text - 4xl mb - 4'>{solution.icon}</div>;
+                    <div className='flex items - center gap - 2 mb - 3'>;
+                      <span className='px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full'>;
+                        {solution.category}
+                      </span>;
+                      <span className='px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text - sm rounded - full'>;
+                        {solution.complexity}
+                      </span>;
+                    </div>;
+                    <h3 className='text - xl font - bold mb - 3 text - white'>;
+                      {solution.title}
+                    </h3>;
+                    <p className='text - white / 70 mb - 4'>{solution.description}</p>;
+                    <ul className='space - y-1 mb - 4'>;
+                      {solution.features.map ((feature, feature_index) => (
+                        <li;
+                          key={feature_index}
+                          className='text - sm text - white / 60 flex items - center';
+                        >;
+                          <span className='text - cyan - 400 mr - 2'>•</span>                          {feature}
+                        </li>))}
+                    </ul>;
+                    <Link      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
+        <main className="container mx - auto px - 6 py - 12">;
+          <section className="text - center mb - 16">;
+            <h1 className="text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent">;
+              AI Solutions;
+            </h1>;
+            <p className="text - xl text - white / 80 max - w-3xl mx - auto">;
+              Cutting - edge artificial intelligence solutions that transform businesses and drive innovation;
+            </p>;
+          </section>;
+          <section className="mx - auto max - w-7xl">;
+
+            {/* AI Solutions Grid */}
+            <div className="mb - 16">;
+              <h2 className="text - 3xl font - bold mb - 8 text - center text - cyan - 400">Our AI Solutions</h2>;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+                {ai_solutions.map ((solution, index) => (
+                  <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 hover:bg - white / 15 transition - all duration - 300">;
+                    <div className="text - 4xl mb - 4">{solution.icon}</div>;
+                    <div className="flex items - center gap - 2 mb - 3">;
+                      <span className="px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - sm rounded - full">{solution.category}</span>;
+                      <span className="px - 3 py - 1 bg - blue - 400 / 20 text - blue - 400 text - sm rounded - full">{solution.complexity}</span>;
+                    </div>;
+                    <h3 className="text - xl font - bold mb - 3 text - white">{solution.title}</h3>;
+                    <p className="text - white / 70 mb - 4">{solution.description}</p>;
+                    <ul className="space - y-1 mb - 4">;
+                      {solution.features.map ((feature, feature_index) => (
+                        <li key={feature_index} className="text - sm text - white / 60 flex items - center">;
+                          <span className="text - cyan - 400 mr - 2">•</span>;
+                          {feature}
+
+
+
+
+
                   </div>
                 ))}
               </div>
             </div>
+
+              </div>;
+            </div>;
+
+
+            {/* Industry Use Cases */}
+
 
             {/* Industry Use Cases */}
             <div className='mb-16'>
@@ -598,6 +716,8 @@ export default function AISolutionsPage() {;
                 Industry Applications
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+
+
 
                 {useCases.map((useCase, index) => (
                   <div
@@ -639,6 +759,16 @@ export default function AISolutionsPage() {;
               </div>
             </div>
 
+              </div>;
+            </div>;
+
+
+            {/* Technologies */}
+
+
+
+
+
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -662,12 +792,21 @@ export default function AISolutionsPage() {;
 
                     >
 
+
                       {tech}
                     </span>;
                   ))}
                 </div>
               </div>
             </div>
+
+                </div>;
+              </div>;
+            </div>;
+
+
+
+
 
             {/* Success Stories */}
 
@@ -837,12 +976,24 @@ export default function AISolutionsPage() {;
         </main>
       </div>
     </>
+
+                  Explore Insights;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
   );
-}
 
 }
-    </>);
   );
+}
+}
+  );
+}
+    </>);
 }
   );
 }

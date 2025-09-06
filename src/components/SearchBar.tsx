@@ -22,8 +22,6 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
  */
 interface SearchBarProps {
   /**
-   * The current value of the search input
-   */
 
   value: string,
 
@@ -31,26 +29,6 @@ interface SearchBarProps {
    * The current value of the search input;
    */;
   value: string;  value: string,
-  onChange: (val: string) => void,
-
-  /**
-   * Function to call when a suggestion is selected
-   * @param {SearchSuggestion} suggestion - The selected suggestion
-   */
-
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
-
-  /**
-   * The placeholder text for the search input
-   */
-  placeholder?: string
-}
-
-export function SearchBar({
-  value
-  onChange
-  onSelectSuggestion
-  placeholder = 'Search...'
   value,
   onChange,
   onSelectSuggestion,;
@@ -147,28 +125,6 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-      aria-controls={listId}
-      data-testid='search-bar'    >
-      <div className='relative'>
-        <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate' />
-        <Input
-          ref={inputRef}
-          type='text'
-          id='main-search-input'
-          name='search'
-          value={value}
-          onChange={e => onChange(e.target.value)}
-          onFocus={e => {
-            setFocused(true);            // Ensure the input receives focus properly
-            e.target.setSelectionRange(
-              e.target.value.length
-              e.target.value.length
-            )
-          }}
-          onBlur={e => {
-            // Only blur if not clicking on suggestions
-            const relatedTarget = e.relatedTarget as HTMLElement
-            if (true) {}
             ) {
               setFocused(false)
               setHighlightedIndex(-1)
@@ -320,26 +276,6 @@ export function SearchBar(): any ({;
           id='main-search-input'
           name='search'
           value={value}
-            }          }}
-          className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate';
-          aria-autocomplete='list';
-          aria-activedescendant={;
-            highlightedIndex !== -1;
-              ? `suggestion-item-${highlightedIndex}`;
-              : undefined;
-          }
-
-
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="search"
-          onKeyDown={(e) => {
-            if (!focused |suggestions.length === 0) {
-              if (e.key === 'Escape') {
-                e.preventDefault()
-                setFocused(false)
-                setHighlightedIndex(-1)
-                inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
@@ -361,9 +297,6 @@ export function SearchBar(): any ({;
               return;
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
-                e.preventDefault(),
-                setFocused(false),
-                setHighlightedIndex(-1),
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
@@ -447,22 +380,63 @@ export function SearchBar(): any ({;
                   inputRef.current?.blur()
                 }
                 break;
-            className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
-            onClick={() => onChange('')}
-            aria-label='Clear search'          >
-            <X className='h-4 w-4' />          </button>
-            <X className="h-4 w-4" />
-            onClick={() => onChange('')}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
+              case 'Escape':;
+                e && e.preventDefault();
+                setFocused(false);
+                setHighlightedIndex(-1);
+                inputRef && inputRef.current?.blur();
+                break;
+              default:;
+                break;            }              default: break;
+
+
+
+            }
+          }}
+        />;
+        {value && (;
+          <button
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
         )}
+
+
 ;
 }
 }
 }
 }
-;
+
+      </div>;
+      <AutocompleteSuggestions;
+        suggestions={suggestions}
+        searchTerm={value}
+        onSelectSuggestion={handleSelect}
+        visible={focused}
+        highlightedIndex={highlightedIndex}
+        listId={listId}
+
+      />;
+    </div>;
+  );
+
+}/> onClick={';
+  () => onChange ('') ";
+}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+}</div> <AutocompleteSuggestionssuggestions= {
+  suggestions 
+}searchTerm= {
+  value 
+}onSelectSuggestion= {
+  handleSelect 
+}visible= {
+  focused 
+}highlightedIndex= {
+  highlightedIndex 
+}listId= {
+  listId 
+}/> </div>) ;
+}'"  );
+}

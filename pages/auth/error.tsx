@@ -2,17 +2,12 @@ import { use_router } from 'next / router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
-const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
-  default: 'There was an issue with your authentication request.';
-}
-export default function AuthErrorPage() {
-  const { query } = useRouter()
-  const message = errorMessages[query.error as string] |errorMessages.default
+
+
 const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
+
 const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
@@ -20,6 +15,9 @@ const errorMessages: Record<string, string> = {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()

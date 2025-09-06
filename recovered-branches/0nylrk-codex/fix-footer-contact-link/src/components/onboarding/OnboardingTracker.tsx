@@ -1,58 +1,13 @@
 
+
+
+
+
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-import React from "react",
-import { CheckCircle, Circle, ArrowRight } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-export interface OnboardingStep {
-
-  id: string
-  label: string
-  completed: boolean
-  link: string
-
-  action?: string
-}
-interface OnboardingTrackerProps {
-
-  steps: OnboardingStep[]
-
-  title?: string;
-  className?: string
-}
-export function OnboardingTracker({
-  steps;
-
-  title = "Complete Your Profile"
-  className
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-export interface OnboardingStep {
-  id: string,
-  label: string,
-  completed: boolean,
-  link: string,
-  action?: string
-}
-
-interface OnboardingTrackerProps {
-  steps: OnboardingStep[],;
-  title?: string;
-  className?: string
-}
-
-export function OnboardingTracker({ ;
-  steps;
-import React from "react",;
-import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { Button } from "@/components/ui/button",;
-import { Link } from "react-router-dom",;
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -84,15 +39,12 @@ export function OnboardingTracker({
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-        <div
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-        <div 
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-;
-export function OnboardingTracker({;
-  steps,;
-  title = "Complete Your Profile",;
-  className;
+
+
+export function OnboardingTracker(): any ({ ;
+  steps;
+  title = "Complete Your Profile", ;
+  className ;
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
@@ -106,8 +58,16 @@ export function OnboardingTracker({;
 
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
-        <div;
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
+        <div
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${progress}%` }}></div>;
+      </div>;
+
+
+
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+
           style={{ width: `${progress}%` }}
         ></div>
       </div>

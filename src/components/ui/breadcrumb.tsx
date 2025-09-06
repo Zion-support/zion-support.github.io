@@ -13,10 +13,9 @@ const Breadcrumb = React.forward_ref<;
 >(({ class_name, separator, ...props }, ref, ) => (
   <nav;
     ref={ref}
-    aria-label='breadcrumb'
-    className={cn(
-      'inline-flex items-center gap-1 text-sm text-zion-slate-light',      className
-    )}
+    aria - label='breadcrumb';
+    className={cn (
+      'inline - flex items - center gap - 1 text - sm text - zion - slate - light',      class_name)}
     {...props}
 
 
@@ -40,7 +39,7 @@ const Breadcrumb = React.forwardRef<
     className={cn(
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
-    )}
+    ),}
     {...props}
   />
 ))
@@ -96,12 +95,23 @@ const BreadcrumbLink = React.forward_ref<;
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
-BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
+
+
+const BreadcrumbSeparator = ({
+
+
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+    {...props}
+
+
+  >
+    {children |<ChevronRight className='h-4 w-4' />}
+  </li>
+)
     {...props}
   />;
 ));
@@ -164,6 +174,27 @@ const BreadcrumbEllipsis = ({;
 
 
 export {
+  Breadcrumb
+  BreadcrumbList
+  BreadcrumbItem
+  BreadcrumbLink
+
+
+    {...props}>;
+    &#8230,;
+  </span>;
+);
+BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+
+export {;
+  Breadcrumb,;
+  BreadcrumbList,;
+  BreadcrumbItem,;
+  BreadcrumbLink,;
+  BreadcrumbSeparator,;
+  BreadcrumbEllipsis,;
+};);
+BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,;
@@ -178,6 +209,9 @@ export {
   BreadcrumbList
   BreadcrumbItem
   BreadcrumbLink
+
+export {;
+
   BreadcrumbSeparator;
   BreadcrumbEllipsis};
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
@@ -203,12 +237,23 @@ const BreadcrumbEllipsis = ({
     aria - hidden="true";
     className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
-  >
+  >;
+    {children || <ChevronRight className="h - 4 w - 4" />}
+  </li>);
+BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
+const BreadcrumbEllipsis = ({
+  class_name;
+  ...props;
+}: React.ComponentProps<"span">) =>: any (
+  <span;
+    role="presentation";
+    aria - hidden="true";
+    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
+    {...props}
+  >;
     &#8230,
-  </span>
-)
-BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
- 
+  </span>);
+BreadcrumbEllipsis.display_name = 'BreadcrumbElipssis';
 export {
   Breadcrumb,
   BreadcrumbList,

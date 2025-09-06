@@ -1,15 +1,26 @@
 
-import { TalentCard } from "@/components/talent/TalentCard";
-import { TalentProfile } from "@/types/talent";
-export interface TalentGridProps {
+import {TalentCard} from "@/components/talent/TalentCard";
+import {TalentProfile} from "@/types/talent";
+export interface TalentGridProps {;
+  talents: TalentProfile[],;
+  isLoading: boolean,;
+  onTalentClick: (id: string) => void,;
+  savedTalentIds: string[],;
+  onToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean,;
+  viewProfile?: (id: string) => void,;
 
   clearFilters?: () => void;
+  handleRequestHire?: (talent: TalentProfile) => void;
+
+
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentProfile} from "@/types/talent";
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
+
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -21,6 +32,7 @@ export interface TalentGridProps {
   clearFilters?: () => void;
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
+
   handleRequestHire?: (talent: TalentProfile) => void
 }
 export function TalentGrid({
@@ -38,14 +50,8 @@ export function TalentGrid({
   isLoading, 
   onTalentClick, 
   savedTalentIds, 
-  onToggleSave, ;
-  isAuthenticated;
-  viewProfile;
-  clearFilters;
-  onToggleSave, 
-  isAuthenticated,
-  viewProfile,
-  clearFilters,
+
+
   handleRequestHire
 }: TalentGridProps) {
 
@@ -53,19 +59,23 @@ export function TalentGrid({
     if (handleRequestHire) {
       handleRequestHire(talent)
     } else {
-      // Default implementation
-      console.log("Request to hire:", talent.id)
-    }
-  }
-  const handleViewProfile = (id: string) => {
-    if (viewProfile) {
-      viewProfile(id)
+
+;
+  const handleViewProfile = (id: string) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      view_profile (id);
+
     } else {
       onTalentClick (id);
     }
-  }
+
+      // Default implementation
 
   };
+
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -107,6 +117,9 @@ export function TalentGrid({;
       onTalentClick(id);
     }
   },
+
+
+
   
   if (isLoading) {
     return <div className="py-8 text-center">
@@ -171,9 +184,15 @@ export function TalentGrid(): any ({ ;
         >
           Clear Filters
         </button>
+
+
       )}
-    </div>
+    </div>;
   }
+
+
+
+
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;

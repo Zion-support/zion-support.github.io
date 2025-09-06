@@ -1,6 +1,6 @@
 return (<a;
           href={href}
-    return(<button
+    return (<button;
         ref={ref}
 
 SidebarMenuItem.display_name = "SidebarMenuItem";
@@ -16,8 +16,6 @@ export { SidebarMenuItem, SidebarMenuGroup };
 export { SidebarMenuItem, SidebarMenuGroup };
 };
 export { SidebarMenuItem, SidebarMenuGroup };
-}
-export { SidebarMenuItem, SidebarMenuGroup }
 
 
 import { cn } from "@/lib/utils",

@@ -1,4 +1,26 @@
 
+
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+  FormMessage,;
+
+
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+
 import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
 
@@ -17,8 +39,15 @@ export function DescriptionFields(): any ({;
   return (
     <>;
       <FormField
-        control;
-                  field.onChange(e.target.value)
+
+        control={control}
+        name="description"
+        render={({ field }) => (;
+          <FormItem>;
+            <FormLabel>Job Description</FormLabel>;
+            <FormControl>;
+              <Textarea
+
 
 
 import React from 'react',
@@ -45,14 +74,17 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
+
+
+
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
-              <Textarea
-              <Textarea 
+
+
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
@@ -250,6 +282,8 @@ function DescriptionFields() {
     </>
       />;
     </>;
+
+
   );
           </FormItem>)}
       />;

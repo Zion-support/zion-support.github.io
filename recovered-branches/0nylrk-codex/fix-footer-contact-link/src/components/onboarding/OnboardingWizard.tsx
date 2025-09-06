@@ -1,14 +1,12 @@
 
-import { useState, useEffect  } from 'react';
-import { useNavigate  } from 'react-router-dom';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+
+
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 
 import {useState, useEffect} from 'react';
@@ -21,6 +19,35 @@ import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
 
 interface WizardStep {
+
+import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
+import {cn} from '@/lib/utils';
+interface WizardStep {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+  action: {;
+    text: string,;
+    url: string;
+  };
+  skipText?: string;
+}
+
+interface OnboardingWizardProps {;
+  type: 'client' | 'talent',;
+  onComplete: () => void,;
+  onSkip: () => void,;
+  className?: string;
+}
+
+export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
+
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const navigate = useNavigate();
+  const { user } = useAuth();
+
+
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -44,6 +71,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
   const navigate = useNavigate();
   const { user } = useAuth();
+
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -68,20 +96,8 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
-}
 
 
-    url: string
-  }
-  skipText?: string
-}
-interface OnboardingWizardProps {
-
-  type: 'client' | 'talent'
-  onComplete: () => void
-  onSkip: () => void
-
-  className?: string
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -184,59 +200,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-        text: "Enable Matchmaking"
-        url: "/talent-dashboard"
-      }
-    }
-  ];
-  const steps = type === 'client' ? clientSteps : talentSteps;
-  // Navigate to the specified URL
-  const handleAction = () => {
-    if (currentStep < steps.length - 1) {
-      navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      navigate(steps[currentStep].action.url);
-      onComplete()
-    }
-  }
-  // Skip the current step
-  const handleSkip = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      onSkip()
-    }
-  }
-        text: "Enable Matchmaking",
-        url: "/talent-dashboard"
-      }
-    }
-  };
-  ],;
-  const steps = type === 'client' ? clientSteps : talentSteps,;
-  // Navigate to the specified URL;
-  const handleAction = () => {;
-    if (currentStep < steps.length - 1) {;
-      navigate(steps[currentStep].action.url),;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      navigate(steps[currentStep].action.url),;
-      onComplete();
-    }
-  },;
-  // Skip the current step;
-  const handleSkip = () => {;
-    if (currentStep < steps.length - 1) {;
-      setCurrentStep(currentStep + 1);
-    } else {;
-      // Last step;
-      onSkip();
-    }
-  },
+
+
+
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>

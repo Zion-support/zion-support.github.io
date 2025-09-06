@@ -22,159 +22,20 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-import Head from 'next/head';
-import {
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  Eye,
-  Trophy,
-  FlaskConical as FlaskIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,;
-  ShieldCheck as ShieldCheckIcon,;
+
+
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import {
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories
-  getRevolutionaryServicesByCategory
-  getPopularRevolutionaryServices
-  getRevolutionaryServicesByPriceRange;
-  revolutionaryMicroSaasServices,
-  revolutionaryServiceCategories,
-  getRevolutionaryServicesByCategory,
+
+import {;
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+  getRevolutionaryServicesByCategory,;
   getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
+
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
@@ -294,6 +155,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
       service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     );
+
   // Sort services;
   filteredServices && filteredServices.sort((a, b) => {;
     switch (sortBy) {;
@@ -501,6 +363,7 @@ if ( {) {
 
   ];
 
+
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -625,9 +488,7 @@ if ( {) {
 
   };
 
-  };
 
-  };
 
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
@@ -644,7 +505,9 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
   };
+
   const popularServices = getPopularRevolutionaryServices();
+
   // Enhanced service categories with better descriptions;
   const enhancedCategories = [;
     {;
@@ -748,6 +611,7 @@ if ( {) {
       count: revolutionaryMicroSaasServices && revolutionaryMicroSaasServices.filter(s => s && s.category === 'Smart Energy & Renewable Energy').length,;
       color: 'from-yellow-500 to-orange-600';
     }
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -841,6 +705,8 @@ if ( {) {
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 
+
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -858,6 +724,7 @@ if ( {) {
               {/* Service Count Stats */}
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -897,30 +764,7 @@ if ( {) {
                   </div>;
                   <div className='text-gray-400'>Average ROI</div>                </div>;
               </motion && motion.div>;
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                    {revolutionaryMicroSaasServices.length}+
-                  </div>
-                  <div className='text-gray-400'>Revolutionary Services</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-purple-400 mb-2'>
-                    99.99%
-                  </div>
-                  <div className='text-gray-400'>Accuracy Rate</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-green-400 mb-2'>
-                    21
-                  </div>
-                  <div className='text-gray-400'>Day Free Trial</div>
-                </div>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-pink-400 mb-2'>
-                    2000%+
-                  </div>
-                  <div className='text-gray-400'>Average ROI</div>                </div>
-              </motion.div>
+
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -1066,6 +910,7 @@ if ( {) {
               {enhancedCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
+
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -1105,6 +950,10 @@ if ( {) {
           </div>
         </section>
 
+
+
+
+
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -1115,6 +964,11 @@ if ( {) {
 
               initial={{ opacity: 0, y: 20 }}
 
+
+
+              initial={{ opacity: 0, y: 20 }}
+
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1123,6 +977,7 @@ if ( {) {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Popular Services Showcase */}
         <section className='py-16'>;
           <div className='container mx-auto px-4'>;
@@ -1152,16 +1007,11 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
-                </span>
-                <br />
-                <span className="text-white">Revolutionary Services</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
-              </p>
-            </motion.div>
-            <motion.div
+
+
+
             <motion.div 
+
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -1179,6 +1029,7 @@ if ( {) {
                     size='large'
                     className='h-full cursor-pointer'
 
+
                     onClick={() => setSelectedService(service)}
 
                   variants={item_variants}
@@ -1186,6 +1037,22 @@ if ( {) {
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
+                    size='large';
+                    className='h - full cursor - pointer';
+                    on_click={() => setSelectedService (service)}
+                  >;
+                    <div className='text - center mb - 6'>;
+                      <div className='text - 4xl mb - 4'>{service.icon}</div>;
+                      <h3 className='text - 2xl font - bold text - white mb - 2'>;
+
+                        {service.name}
+                      </h3>;
+                      <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
+                      <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
+                        {service.price}
+                      </div>;
+                      <div className='text - sm text - gray - 400'>;
+                        {service.period}
 
                   >;
                     <div className='text-center mb-6'>;
@@ -1201,6 +1068,7 @@ if ( {) {
                         {service && service.period}
                       </div>;
                     </div>;
+
                     <div className='space-y-3 mb-6'>;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
                         <div key={idx} className='flex items-center gap-2'>;
@@ -1226,6 +1094,7 @@ if ( {) {
                       <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
                       <div className="text-sm text-gray-400">{service && service.period}</div>;
                     </div>;
+
                     <div className="space-y-3 mb-6">;
                       {service && service.features.slice(0, 4).map((feature, idx) => (;
                         <div key={idx} className="flex items-center gap-2">;
@@ -1233,8 +1102,9 @@ if ( {) {
                           <span className="text-sm text-gray-300">{feature}</span>;
                         </div>;
                       ))}
-                    </div>
-                    <div className='text-center'>
+                    </div>;
+
+                    <div className='text-center'>;
                       <Button
                         variant='primary'
                         size='md'
@@ -1245,6 +1115,7 @@ if ( {) {
                         <ExternalLink className='ml-2 w-4 h-4' />
                       </Button>                    </div>                    <div className="text-center">
                                                  <Button
+
                     <div className="text-center">
                                                  <Button 
 
@@ -1271,12 +1142,7 @@ if ( {) {
         {/* Services Grid */}
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
-                  </UltraFuturisticCard>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
@@ -1346,6 +1212,7 @@ if ( {) {
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
                   </div>;
+
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -1362,26 +1229,19 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            {/* Services Display */}
-            <motion.div
-              className={
-                viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
-              }
-              variants={containerVariants}
-              initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
+
+
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+
+
+              className={viewMode === 'grid' 
+
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1437,11 +1297,9 @@ if ( {) {
               ))}
 
             </motion && motion.div>;
+
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
-            </motion.div>
-            {filteredServices.length === 0 && (
-              <motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
@@ -1503,6 +1361,9 @@ if ( {) {
             <motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
+
+
+
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1524,6 +1385,7 @@ if ( {) {
 
                           </div>;
                         </div>;
+
                         <div>;
                           <h4 className='text-sm font-semibold text-green-400 mb-2'>;
                             Benefits;
@@ -1559,6 +1421,7 @@ if ( {) {
 
                           </div>;
                         </div>;
+
                         <div>;
                           <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
                             Capabilities;
@@ -1880,6 +1743,7 @@ if ( {) {
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
 
+
               </div>
             </motion.div>
           </div>
@@ -1892,6 +1756,7 @@ if ( {) {
                   <Calendar className='ml-2 w-5 h-5' />;
                 </Button>;
               </div>;
+
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
                 <div>;
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
@@ -1917,6 +1782,7 @@ if ( {) {
               <p className="text-xl text-gray-300 mb-8">;
                 Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
               </p>;
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                                  <Button
                    variant="primary" 
@@ -1935,6 +1801,7 @@ if ( {) {
                    <Calendar className="ml-2 w-5 h-5" />;
                  </Button>;
               </div>;
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
                 <div>;
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
@@ -2119,3 +1986,4 @@ if ( {) {
 }
 
   );
+

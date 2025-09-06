@@ -1,15 +1,23 @@
 
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-
-import { Award } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Award  } from './lucide-react';
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -49,24 +57,9 @@ function ReferralLeaderboard() {
           {leaderboard_data.map ((entry) => (
             <div;
               key={entry.rank}
-              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
-                    entry.rank === 1
-                      ? "bg-yellow-200 text-yellow-800"
-                      : entry.rank === 2
-                        ? "bg-slate-200 text-slate-800"
-                        : entry.rank === 3
-                          ? "bg-amber-200 text-amber-800"
-                          : "bg-muted text-muted-foreground"
-                      ? "bg-slate-200 text-slate-800"
-                      : entry.rank === 3
-                      ? "bg-amber-200 text-amber-800"
-                      : "bg-muted text-muted-foreground"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Award } from "lucide-react",;
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
 interface LeaderboardEntry {;
   rank: number,;
   name: string,;
@@ -113,10 +106,22 @@ export function ReferralLeaderboard() {;
                     entry.rank === 1;
                       ? "bg - yellow - 200 text - yellow - 800";
                       : entry.rank === 2;
-                      ? "bg-slate-200 text-slate-800";
-                      : entry.rank === 3;
-                      ? "bg-amber-200 text-amber-800";
-                      : "bg-muted text-muted-foreground";
+                        ? "bg - slate - 200 text - slate - 800";
+                        : entry.rank === 3;
+                          ? "bg - amber - 200 text - amber - 800";
+                          : "bg - muted text - muted - foreground";
+
+                <div
+                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
+                    entry.rank === 1
+                      ? "bg-yellow-200 text-yellow-800"
+                      : entry.rank === 2
+
+                      ? "bg-slate-200 text-slate-800"
+                      : entry.rank === 3
+                      ? "bg-amber-200 text-amber-800"
+                      : "bg-muted text-muted-foreground"
+
                   }`}
                 >;
                   {entry.rank}
@@ -141,11 +146,20 @@ export function ReferralLeaderboard() {;
               </span>;
             </div>;
           ))}
-        </div>
-      </CardContent>
-    </Card>
+        </div>;
+      </CardContent>;
+    </Card>;
   );
 }
+
+              </span>;
+            </div>))}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+
   )
 }
 ;
+

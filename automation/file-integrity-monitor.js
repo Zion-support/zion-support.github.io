@@ -908,7 +908,6 @@ class FileIntegrityMonitor {
     try {
       issues.push({
 
-      issues.push({
       const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles();
       for: (const file of sourceFiles) {

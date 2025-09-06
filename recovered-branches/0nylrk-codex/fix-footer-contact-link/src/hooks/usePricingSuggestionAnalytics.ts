@@ -1,5 +1,6 @@
-import { useState, useEffect  } from 'react';
-import { supabase } from "@/integrations/supabase/client";
+
+import {useState, useEffect} from 'react';
+import { supabase } from '@/integrations / supabase / client';
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -14,16 +15,15 @@ interface PricingSuggestionAnalytics {
     actual_value?: number;
     accepted: boolean;
 
-    createdAt: string
-    type: 'client' | 'talent'
-  }[];
-  isLoading: boolean
+
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import {useState, useEffect} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
+
+
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -154,8 +154,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
     fetchAnalytics()
   }, [days]);
 
-  return analytics
 };
+
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -258,5 +258,8 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
+
+
 }
-}
+
+

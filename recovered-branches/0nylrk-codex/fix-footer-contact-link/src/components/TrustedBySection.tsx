@@ -1,12 +1,14 @@
 
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
+
+
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -168,16 +170,9 @@ export function TrustedBySection() {
                   {company.name}
                 </div>
               ) : (
-                <img
-                  src={company.logo}
-                  alt={company.alt}
-                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
-                <img 
-                  src={company.logo} 
-                  alt={company.alt} 
-                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
-import { GradientHeading } from "./GradientHeading",;
-import { useState } from "react",;
+
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
@@ -312,10 +307,19 @@ export function TrustedBySection() {;
                   {company && company.name}
                 </div>;
               ) : (;
-                <img;
-                  src={company.logo} ;
-                  alt={company.alt} ;
-                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert";
+                <img
+                  src={company && company.logo} 
+                  alt={company && company.alt} 
+
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+                  onError={() => handleImageError(company && company.name)}
+                />;
+
+                <img 
+                  src={company.logo} 
+                  alt={company.alt} 
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+
                   onError={() => handleImageError(company.name)}
                 />
               )}

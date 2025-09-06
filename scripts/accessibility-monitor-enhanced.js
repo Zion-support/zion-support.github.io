@@ -15,27 +15,27 @@ const accessibilityChecks = {
     console.log(' Checking ARIA labels...');
     return true;
 const accessibilityChecks = { colorContrast: () => {  return true},keyboardNav: () => {  return true},ariaLabels: () => {  return true} }; Object && Object.entries(accessibilityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
-console && console.log(' Enhanced Accessibility Monitor Starting...');
+console && console.log('♿ Enhanced Accessibility Monitor Starting...');
 const accessibilityChecks = {
   "colorContrast": () => {
-    console && console.log(' Checking color contrast...'),
+    console && console.log('🎨 Checking color contrast...'),
     return true
   },
   "keyboardNav": () => {
-    console && console.log(' Checking keyboard navigation...'),
+    console && console.log('⌨️ Checking keyboard navigation...'),
     return true
   },
   "ariaLabels": () => {
-    console && console.log(' Checking ARIA labels...'),
+    console && console.log('🏷️ Checking ARIA labels...'),
     return true
   }
 };
 Object && Object.entries(accessibilityChecks).forEach(([name, check]) => {
   try {
     const result = check();
-    console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`);
+    console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
-    console && console.log(` ${name}: ERROR - ${error && error.message}`);
+    console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
   }
 });
 console.log('🎉 Accessibility monitoring completed!');

@@ -2,18 +2,19 @@ import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
-dotenv.config()
-const apiBase = process.env.API_ORIGIN |'http: //localhost:4000';
-const app = new App({
-  token: process.env.SLACK_BOT_TOKEN
-  signingSecret: process.env.SLACK_SIGNING_SECRET
-  appToken: process.env.SLACK_APP_LEVEL_TOKEN
-  socketMode: true
-})
-function helpText(): string {
-  return [
-    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
-  ].join('\n')
+import fetch from 'node - fetch';
+dotenv.config (),
+const api_base = process.env.API_ORIGIN || 'http: //localhost:4000';
+const app = new App ({
+  token: process.env.SLACK_BOT_TOKEN,
+  signing_secret: process.env.SLACK_SIGNING_SECRET,
+  app_token: process.env.SLACK_APP_LEVEL_TOKEN,
+  socket_mode: true;
+}),
+function help_text (): string {
+  return [;
+    '*Zion Assistant Commands*`/zion post - job [role]` – generate a job post`/zion suggest - talent [query]` – AI match talent`/zion track - project [name]` – milestone status`/zion help` – command list';
+  ].join ('\n');
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
   await ack (),
@@ -76,7 +77,18 @@ if ( {) {
     }
     await respond ({ response_type: 'ephemeral', text: help_text () });
   } catch (err: any) {
-    await respond({ response_type: 'ephemeral', text: `Error: ${err.message |'unknown'}` })
+    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
+  }
+}),
+(async () => {
+  const port = Number (process.env.SLACK_PORT || 3001),
+  await app.start (port),
+  // eslint - disable - next - line no - console;
+  console.log (`⚡️ Zion Slack bot running on port ${port}`);
+})(),
+
+
+
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -92,6 +104,8 @@ function helpText(): string {;
   return [;
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list';
   ].join('\n');
+
+
 }
 ;
 app.command('/zion', async ({ command, ack, respond }) => {;
@@ -154,14 +168,4 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   const port = Number(process.env.SLACK_PORT || 3001),
   await app.start(port),
   // eslint-disable-next-line no-console
-  console.log(`⚡️ Zion Slack bot running on port ${port}`)
-})(),;
-  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
-})(),
-}),;
-(async () => {;
-  const port = Number(process.env.SLACK_PORT || 3001),;
-  await app.start(port),;
-  // eslint-disable-next-line no-console;
-  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
-})();
+

@@ -78,6 +78,35 @@ function QuickAccess() {
               key={index}
               href={link.link}
 
+              </p>;
+              <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
+                <span>{t ('general.explore')}</span>;
+                <ArrowRight className='ml - 1 h - 3 w - 3 transition - transform group - hover:translate - x-1' />;
+              </div>;
+            </Link>;
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+export default /**
+ * Page - Function description
+ */
+function Page() {";
+    { name: "Consulting", count: 6, color: "from - yellow - 500 to - orange - 500" }, ";
+    { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
+    { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
+
+
+import { motion  } from 'framer-motion';
+export default function Page() {";
+    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
+    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
+
+      transition: {
+        duration: 0.5, ";
+        ease: "ease_out"}}}
+  const hover_variants = {
+  hover: {
+
       coordinate_y: -8,      scale: 1.02,
 
       transition: {
@@ -465,4 +494,52 @@ export default function Page() {;";
                 whileTap={{ scale: 0.95 }}"
                 className="mt-auto">
                 <Link
+                  to={link && link.path}`
+                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
+                  Explore {link && link.title}";
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
+              </motion && motion.div>;
+            </motion && motion.div>;
+
+
+export default QuickAccess;
+;
+
+
+
+  { opacity: 0,
+  scale: 0.8;
+}}
+                      whileInView = {
+  { opacity: 1,
+  scale: 1;
+}}
+                      transition = {
+  { duration: 0.4,
+  delay: 0.2 + idx * 0.1;
+}}
+                      viewport={{ once: true }}";
+                      className="text - center">";
+                      <div className="text - lg font - bold text - zion - cyan">{value}</div>";
+                      <div className="text - xs text - gray - 500 capitalize">{key}</div>;
+                    </motion.div>))}
+                </div>;
+              </div>;
+              {/* CTA */}
+              <motion.div;
+                while_hover={{ scale: 1.05 }}
+                while_tap={{ scale: 0.95 }}";
+                className="mt - auto">;
+                <Link;
+                  to={link.path}`;
+                  className={`inline - flex items - center justify - center w - full px - 4 py - 3 bg - gradient - to - r ${link.color} text - white font - semibold rounded - lg transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 25`}
+                >;
+                  Explore {link.title}";
+                  <ChevronRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform"  />                </Link>;
+              </motion.div>;
+            </motion.div>))}
+        </div>;
+      </div>;
+    </section>);
+export default QuickAccess }
 export default QuickAccess;

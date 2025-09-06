@@ -1,13 +1,51 @@
 
 import React from "react";
 import { Quote } from "lucide-react";
-import {
+
+import {;
+  Carousel,;
+  CarouselContent,;
+  CarouselItem,;
+  CarouselNext,;
+  CarouselPrevious,;
+} from "@/components/ui/carousel";
+
+const testimonials = [;
+  {;
+    quote:;
+      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",;
+    author: "Sarah Johnson",;
+    title: "VP of Talent Acquisition",;
+    company: "TechGlobal Inc.",;
+    image: "/placeholder && placeholder.svg",;
+  },;
+  {;
+    quote:;
+      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",;
+    author: "Michael Chen",;
+    title: "Director of HR",;
+    company: "InnovateCorp",;
+    image: "/placeholder && placeholder.svg",;
+  },;
+  {;
+    quote:;
+      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;
+    author: "Elena Rodriguez",;
+    title: "CTO",;
+    company: "FutureTech Systems",;
+    image: "/placeholder && placeholder.svg",;
+  },;
+
+];
+
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
+
+
 
   Carousel
   CarouselContent
@@ -83,23 +121,8 @@ export function EnterpriseTestimonials() {;
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
-                        {testimonial.title}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
-        </Carousel>
-      </div>
-    </section>;
-  );
-}
+
+
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -153,5 +176,8 @@ export function EnterpriseTestimonials() {;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
+
+
+
 }
 ;

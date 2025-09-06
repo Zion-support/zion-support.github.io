@@ -1,14 +1,21 @@
 
 
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
+
+
+function list(dir: string, baseDir: string) {
+
+
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
-}
-export async function getStaticProps() {
-  const base = path.join(process.cwd(), 'docs/gitbook')
+
+
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -16,6 +23,8 @@ export async function getStaticProps() {
     : []
 
   return { props: { sections }, revalidate: 600 }
+
+
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -29,6 +38,8 @@ function list(dir: string, baseDir: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 }
   });
   } catch (error) {
@@ -55,6 +66,37 @@ export async function getStaticProps() {;
   }
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
+import fs from 'fs',
+import path from 'path',
+import Link from 'next / link',
+/**
+ * list - Function description
+ */
+function list() {
+  const items = fs.readdir_sync (dir),
+  return items.map ((name) => {
+    const full = path.join (dir, name),
+    const rel = path.relative (base_dir, full),
+    const stat = fs.stat_sync (full),
+    return { name, rel, is_dir: stat.is_directory () }
+  });
+}
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+  const base = path.join (process.cwd (), 'docs / gitbook'),
+  const sections = fs.exists_sync (base);
+    ? list (base, base).map ((entry) => ({
+        title: entry.name,
+        items: entry.is_dir ? list (path.join (base, entry.name), base) : []}));
+    : [],
+  return { props: { sections }, revalidate: 600 }
+}
+export default /**
+ * DocsIndex - Function description
+ */
+function DocsIndex() {
   return (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Zion Docs (GitBook)</h1>
@@ -68,7 +110,9 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
                     {it.rel}
-                  </a>
+
+
+
                 </li>
               ))}
             </ul>
@@ -88,6 +132,7 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 }
   );
 };
+
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -114,5 +159,6 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-}
+

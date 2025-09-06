@@ -1,11 +1,11 @@
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-import { useAuth  } from '@/hooks/useAuth';
+
+
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+
+
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -61,6 +61,9 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
+
+
+
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -131,8 +134,11 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-    }
+
+
     };
+
+
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -163,14 +169,10 @@ export const useTalentQuotes = () => {;
     error;
     statusFilter;
     setStatusFilter;
-    archiveFilter;
-    setArchiveFilter
-    markAsViewed: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'in_review' });
-    markAsResponded: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'responded' });
-    toggleArchive: (id: string, isArchived: boolean) =>
+
+
     toggleArchive: (id: string, isArchived: boolean) => 
+
     },
     onError: (error: Error) => {
       toast({
@@ -242,6 +244,9 @@ export const useTalentQuotes = () => {;
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
+
+
+
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

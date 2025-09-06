@@ -1,10 +1,14 @@
 
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
-// Get openAI API key from environment variables
+import {JobData, TalentProfile, MatchResult} from "./types ;
+
+
+
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
+
+
 
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
@@ -119,6 +123,8 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     console.error("Error in normalizeSkillsWithAI:", error),;
     // If AI normalization fails, return the original skills;
     return skills;
+
+
   }
 }
 /**
@@ -224,17 +230,8 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
       Description: ${jobDetails.description}
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
-    `;
-    // Create talent profiles text for AI evaluation
-    const talentProfilesText = talents.map((talent, index) => {
-      return `
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
-    `,;
-    // Create talent profiles text for AI evaluation;
-    const talentProfilesText = talents.map((talent, index) => {;
-      return `;
+
+
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -336,6 +333,48 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     console.error("Error in findBestMatches:", error);
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
+  }
+}
+/**
+ * Fallback method that uses basic string matching to find talent matches
+ * @param jobDetails The job to match
+ * @param talents Array of talent profiles
+ * @returns Array of matches with scores
+ */
+export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
+
+  const requiredSkills = jobDetails && jobDetails.skills.map((skill: string) => skill && skill.toLowerCase());
+  
+  return talents && talents.map(talent => {
+    const talentSkills = Array && Array.isArray(talent && talent.skills) 
+      ? talent && talent.skills.map((skill: string) => skill && skill.toLowerCase())
+
+      : [];
+    // Find matching skills
+
+    const matchedSkills = requiredSkills && requiredSkills.filter((skill: string) => 
+      talentSkills && talentSkills.some((talentSkill: string) => talentSkill && talentSkill.includes(skill) || skill && skill.includes(talentSkill))
+
+    );
+    // Calculate a basic match score
+
+    const matchScore = Math && Math.round((matchedSkills && matchedSkills.length / requiredSkills && requiredSkills.length) * 100);
+    
+
+    return {
+      talentId: talent && talent.id;
+      score: matchScore;
+
+      matchedSkills: matchedSkills,
+      reason: `Matched ${matchedSkills && matchedSkills.length} out of ${requiredSkills && requiredSkills.length} required skills.`
+
+
+
+    }
+  })
+  .filter(match => match && match.score > 30) // Only include matches with at least 30% score
+  .sort((a, b) => b && b.score - a && a.score) // Sort by score (highest first)
+  .slice(0, 5), // Get top 5 matches
 ;
     const data = await response.json ();
 ;

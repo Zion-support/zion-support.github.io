@@ -2,77 +2,176 @@ import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import {
-  Search
-  Star
-  Users
-  TrendingUp
-  DollarSign
-  Clock
-  CheckCircle
-  ArrowRight
-  Rocket
-  Monitor
-  Cpu
-  Zap
-  Database
-  Cloud
-  Lock
-  Code
-  Sparkles
-  Target
-  Award
-  Lightbulb;} from 'lucide-react';
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Monitor,
-  Cpu,
-  Zap,
-  Database,
-  Cloud,
-  Lock,
-  Code,
-  Sparkles,
-  Target,
+
+import {;
+  Search,;
+  Star,;
+  Users,;
+  TrendingUp,;
+  DollarSign,;
+  Clock,;
+  CheckCircle,;
+  ArrowRight,;
+  Rocket,;
+  Monitor,;
+  Cpu,;
+  Zap,;
+  Database,;
+  Cloud,;
+  Lock,;
+  Code,;
+  Sparkles,;
+  Target,;
   Award,;
   Lightbulb,;} from 'lucide-react';
-        {/* Hero Section */}
-        <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },;
+    {;
+      id: 'quantum',;
+      name: 'Quantum Computing',;
+      icon: '⚛️',;
+      count: quantumCount,;
+    },;
+    {;
+      id: 'blockchain',;
+      name: 'Blockchain & Web3',;
+      icon: '⛓️',;
+      count: blockchainCount,;
+    },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },;
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },;
+    {;
+      id: 'security',;
+      name: 'Cybersecurity',;
+      icon: '🔒',;
+      count: cybersecurityCount,;
+    },  ];
+
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
+    { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },;
+    { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },;
+    { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },;
+    { id: 'premium', name: '$20K+/month', range: '$20K+' },  ];
+
+  const sortOptions = [;
+    { id: 'name', name: 'Name A-Z' },;
+    { id: 'price-low', name: 'Price Low to High' },;
+    { id: 'price-high', name: 'Price High to Low' },;
+    { id: 'rating', name: 'Rating' },;
+    { id: 'customers', name: 'Customer Count' },  ];
+
+  // Filter and sort services;
+  const filteredServices = React && React.useMemo(() => {;
+    const parsePriceToNumber = (price: string | number): number => {;
+      if (typeof price === 'number') return price,;
+      if (typeof price === 'string') {;
+        const match = price && price.replace(/[^0-9.]/g, '');
+        const parsed = parseFloat(match || '0');
+
+
+    visible: {
+      opacity: 1
+      transition: {
+
+    }
+  };
+
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.5
+      }
+    }
+
+
+
+
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },;
+  };
+
+
+    >;
+      <div className='min-h-screen'>;
+
+        stagger_children: 0.1,
+      },
+    },  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
   }
-}
-        <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+;
+    >;
+      <div className='min - h-screen'>;
+
+        <Head>;
+          <title>;
+            2025 Innovative Services Showcase - Zion Tech Group | Revolutionary;
+            AI, Quantum & Emerging Tech;
+          </title>;
+
+
+          <meta
+            name='description'
+            content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting-edge emerging technologies. Contact: +1 302 464 0950"
+          />;
+          <meta
+            name='keywords'
+            content='AI services 2025, quantum computing, blockchain, IoT, edge computing, 5G, cybersecurity, metaverse, space technology, Zion Tech Group'
+          />;
+          <meta name='author' content='Zion Tech Group' />;
+          <meta
+            property='og:title'
+            content='2025 Innovative Services Showcase - Zion Tech Group'
+          />;
+          <meta
+            property='og:description'
+            content='Revolutionary AI, quantum computing, and emerging technology services for 2025. Contact: +1 302 464 0950'
+          />;
+          <meta
+            property='og:url'
+            content='https://ziontechgroup && ziontechgroup.com/enhanced-services-showcase-2025'
+          />;
+          <meta property='og:type' content='website' />;
+          <link
+            rel='canonical'
+
+
             >
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
@@ -90,21 +189,30 @@ import {
                 industries and driving the future of technology
               </p>
               {/* Service Statistics */}
-              <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
-                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
-                  <div className='text-3xl font-bold text-cyan-400'>
-                    {allServices.length}
-                  </div>
-                  <div className='text-gray-400'>Total Services</div>
-              {/* Service Statistics */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
-                  <div className="text-3xl font-bold text-cyan-400">{allServices.length}</div>
-                  <div className="text-gray-400">Total Services</div>
+              <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-cyan-400'>;
+                    {allServices && allServices.length}
+                  </div>;
+                  <div className='text-gray-400'>Total Services</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-purple-400'>;
+                    {aiCount + quantumCount}
+                  </div>;
+                  <div className='text-gray-400'>AI & Quantum</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-green-400'>;
+                    {blockchainCount + iotCount}
+                  </div>;
+                  <div className='text-gray-400'>Emerging Tech</div>;
+                </div>;
+                <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
+                  <div className='text-3xl font-bold text-pink-400'>;
+                    {spaceCount + cybersecurityCount}
+
+
                 </div>
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
@@ -123,29 +231,8 @@ import {
           </div>
         </section>
         {/* Search and Filters */}
-        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <div className='bg-gray-800/40 border border-gray-700 rounded-2xl p-6'>
-              <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
-                {/* Search */}
-                <div className='relative'>
-                  <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-        {/* Search and Filters */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                {/* Search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
+
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -153,6 +240,12 @@ import {
                     onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
+
+
+                    onChange={e => setSearchTerm(e && e.target.value)}
+                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />;
+                </div>;
+
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
@@ -327,13 +420,10 @@ import {
             </div>;
           </div>;
         </section>;
-        {/* Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+
+
+
+
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -403,12 +493,37 @@ import {
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
+
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
                         <span>{service.customers}</span>
                       </div>
                     </div>
+
+                    </div>;
+
+                    {/* Service Title and Description */}
+                    <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>;
+                      {service && service.name}
+                    </h3>;
+                    <p className='text-gray-300 text-sm mb-4 line-clamp-2'>                      {service && service.description}
+                    </p>;
+
+                    {/* Price and Customer Count */}
+                    <div className='flex items-center justify-between mb-4'>;
+                      <div className='text-2xl font-bold text-cyan-400'>;
+                        {service && service.price}
+                        <span className='text-gray-400 text-lg'>;
+                          {service && service.period}
+                        </span>;
+                      </div>;
+                      <div className='flex items-center space-x-2 text-sm text-gray-400'>;
+                        <Users className='w-4 h-4' />                        <span>{service && service.customers}</span>;
+                      </div>;
+                    </div>;
+
+
                     {/* Key Features */}
                     <div className='mb-6'>
                       <div className='text-sm text-gray-400 mb-2'>
@@ -464,6 +579,7 @@ import {
                     <div className="flex items-center justify-between mb-6 text-sm">
                       <div className="flex items-center space-x-1 text-green-400">
                         <TrendingUp className="w-4 h-4" />
+
                         <span>Average ROI</span>
                       </div>
                       <div className="flex items-center space-x-1 text-blue-400">
@@ -471,6 +587,31 @@ import {
                         <span>{service.setupTime}</span>
                       </div>
                     </div>
+
+                      </ul>;
+                    </div>;
+
+                    {/* Market Position */}
+                    <div className='mb-6 p-3 bg-gray-700/40 rounded-lg'>;
+                      <div className='text-xs text-gray-400 mb-1'>;
+                        Market Position;
+                      </div>;
+                      <div className='text-sm text-gray-300 line-clamp-2'>                        {service && service.marketPosition}
+                      </div>;
+                    </div>;
+
+                    {/* ROI and Setup Time */}
+                    <div className='flex items-center justify-between mb-6 text-sm'>;
+                      <div className='flex items-center space-x-1 text-green-400'>;
+                        <TrendingUp className='w-4 h-4' />;
+                        <span>Average ROI</span>;
+                      </div>;
+                      <div className='flex items-center space-x-1 text-blue-400'>;
+                        <Clock className='w-4 h-4' />                        <span>{service && service.setupTime}</span>;
+                      </div>;
+                    </div>;
+
+
                     {/* Action Buttons */}
                     <div className='flex gap-3'>
                     {/* Action Buttons */  } catch (error) {
@@ -479,6 +620,8 @@ import {
   }
 }
                     <div className="flex gap-3">
+
+
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -488,25 +631,9 @@ import {
                         <ArrowRight className='w-4 h-4 ml-2' />;
                       </a>;
                       <a
-                        href="/contact" className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500">
-                        Contact Us
-                      </Link>
-                    </div>
-                    {/* Contact Information */}
-                    <div className='mt-4 pt-4 border-t border-gray-700'>
-                      <div className='text-xs text-gray-400 mb-2'>
-                        Contact Information:
-                      </div>
-                      <div className='text-xs text-gray-300 space-y-1'>                        <div>📱 {service.contactInfo.mobile}</div>
-                    {/* Contact Information */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <div className="mt-4 pt-4 border-t border-gray-700">
-                      <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
-                      <div className="text-xs text-gray-300 space-y-1">
-                        <div>📱 {service.contactInfo.mobile}</div>
+                        href='/contact'
+
+
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
@@ -582,6 +709,8 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -591,20 +720,7 @@ import {
                 Join thousands of companies achieving breakthrough results with
                 our revolutionary services
               </p>
-              {/* Contact Information */}
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
-                <div className='flex items-center justify-center space-x-3'>
-                  <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>
-                    <Target className='w-6 h-6 text-cyan-400' />
-              {/* Contact Information */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
-                    <Target className="w-6 h-6 text-cyan-400" />
+
                   </div>
                   <span className='text-lg text-white'>+1 302 464 0950</span>
                 </div>
@@ -623,6 +739,42 @@ import {
                   <span className="text-lg text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
+
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className='text-xl text-gray-300 mb-8'>;
+                Join thousands of companies achieving breakthrough results with;
+                our revolutionary services;
+              </p>;
+
+              {/* Contact Information */}
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>;
+                    <Target className='w-6 h-6 text-cyan-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>+1 302 464 0950</span>;
+                </div>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center'>;
+                    <Award className='w-6 h-6 text-purple-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>;
+                    kleber@ziontechgroup && ziontechgroup.com;
+                  </span>;
+                </div>;
+                <div className='flex items-center justify-center space-x-3'>;
+                  <div className='w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center'>;
+                    <Lightbulb className='w-6 h-6 text-green-400' />;
+                  </div>;
+                  <span className='text-lg text-white'>;
+                    364 E Main St STE 1008 Middletown DE 19709;
+                  </span>                </div>;
+              </div>;
+
+
               {/* Action Buttons */}
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               {/* Action Buttons */  } catch (error) {
@@ -631,6 +783,8 @@ import {
   }
 }
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
+
+
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -787,3 +941,4 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

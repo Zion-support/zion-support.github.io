@@ -7,10 +7,13 @@ export type AdminActionType =
   | 'investigate'
   | 'dismiss'
   | 'escalate';
+;
+
 export interface AdminAction {
 
 
 export interface AdminAction {;
+
   id: string;
   case_id: string;
   type: AdminActionType;
@@ -23,6 +26,26 @@ export interface AdminAction {;
   status: 'pending' | 'executed' | 'failed',
 
 }
+export interface FraudDetectionResult {
+  is_fraud: boolean;
+}
+
+
+export interface FraudDetectionResult {;
+
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+export interface FraudDetectionConfig {
+}
+
+
+export interface FraudDetectionConfig {;
+
+  enabled: boolean;
+  rules: {
+    suspiciousActivity: {
+      enabled: boolean;
 
       threshold: number,
     }
@@ -42,8 +65,12 @@ export interface AdminAction {;
   auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidenceThreshold: number
+    confidence_threshold: number,
   }
+}
+
+
+
 
     confidenceThreshold: number,
   };

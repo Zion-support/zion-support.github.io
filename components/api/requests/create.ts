@@ -1,12 +1,35 @@
- const response = await client.chat.completions.create ({
+
+
+ const response = await client && client.chat.completions && completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
+
   role: 'system', content: 'You are a helpful assistant.' 
+
 // Create utility
 export const Create = () => {
   // Implementation here
   return null;
+
+
+
 };
+{
+  role: 'user', content: prompt 
+}];
+  role: 'system', content: 'You are a helpful assistant.'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
+async function loadRequests(): Promise<any[]> {
+  try {
+    const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
+    return JSON.parse(raw)
+  } catch {
+    return []
+  }
+}
 {
   role: 'user', content: prompt
 }];
@@ -54,32 +77,36 @@ async function summarizeWithOpenAI(description: string) {
     const content = response.choices[0]?.message?.content || '';
 
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
-    const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
-      messages: [
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: prompt }],
-      temperature: 0.3}),
-    const content = response.choices[0]?.message?.content || ''
-    const typeMatch = content.match(/type\s*:\s*(.+)$/im)
-
-  }
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  const { name, email, budget, timeline, description, talentSlug } =
-    req.body |{}
-  if (!name |!email |!description)
-    return res.status(400).json({ error: 'Missing required fields' });    const content = response.choices[0]?.message?.content |'';
-    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
 
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });
+
+  const { name, email, budget, timeline, description, talentSlug } =
+    req && req.body || {};
+  if (!name || !email || !description)
+    return res && res.status(400).json({ error: 'Missing required fields' });    const content = response && response.choices[0]?.message?.content || '';
+    const typeMatch = content && content.match(/type\s*:\s*(.+)$/im);
+    return { summary: content && content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
+  } catch (err) {
+    return { summary: description && description.slice(0, 280), type: 'unknown' }
+  };
+
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+}
+
+
+
+
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { name, email, budget, timeline, description, talentSlug } = req.body |{}
+  if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
 

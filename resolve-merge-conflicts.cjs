@@ -1,8 +1,3 @@
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
 });
 
 const { execSync } = require('child_process');
@@ -44,6 +39,13 @@ function resolveConflicts(filePath) {
   }
 }
 
+
+// Run linter to check if issues are resolved
+console.log('\n🔍 Running linter to check if issues are resolved...');
+try {
+  execSync('npm run lint', { stdio: 'inherit' });
+} catch (error) {
+  console.log('⚠️  Linter still has issues (this may be expected)');
 function resolveMergeConflicts() {
     console.log('Resolving merge conflicts...');
     

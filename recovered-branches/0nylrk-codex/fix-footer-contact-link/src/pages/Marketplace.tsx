@@ -1,4 +1,27 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -15,28 +38,6 @@ import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { Grid3X3, ListFilter } from "lucide-react",
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { FilterSidebar } from "@/components/search/FilterSidebar",
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { useNavigate } from "react-router-dom",
-import { SearchSuggestion } from "@/types/search";
-import { AppLayout } from "@/layout/AppLayout";
-export default function Marketplace() {
 
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
@@ -44,14 +45,9 @@ export default function Marketplace() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
-  const filterOptions = generateFilterOptions();
-  const navigate = useNavigate(),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+
+
+
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
@@ -94,6 +90,8 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
+
+
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -334,14 +332,25 @@ if ( {) {
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
+
           }
         }
       });
     }
-  }
+
+
   },
   };
   },
+
+
+  return (
+
+    <AppLayout>;
+      <main className="flex-grow container mx-auto px-4 py-8">;
+        <div className="max-w-4xl mx-auto mb-8">;
+          <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
+          <p className="text-zion-slate-light">;
 ;
   return (
     <AppLayout>;
@@ -446,6 +455,8 @@ if ( {) {
               </p>
             </div>
             
+
+
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (

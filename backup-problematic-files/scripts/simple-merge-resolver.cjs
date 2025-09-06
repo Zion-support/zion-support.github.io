@@ -24,11 +24,15 @@ files.forEach(file => {
       
       
       
+      
+      
       // Fix hover syntax
       if (content.includes('"hover":')) {
         content = content.replace(/"hover":\s*/g, 'hover:');
         modified = true;
       }
+      
+      
       
       
       
@@ -40,11 +44,15 @@ files.forEach(file => {
       
       
       
+      
+      
       // Fix group-hover syntax
       if (content.includes('"group-hover":')) {
         content = content.replace(/"group-hover":\s*/g, 'group-hover:');
         modified = true;
       }
+      
+      
       
       
       
@@ -56,10 +64,14 @@ files.forEach(file => {
       
       
       
+      
+      
       if (content.includes('"md":')) {
         content = content.replace(/"md":\s*/g, 'md:');
         modified = true;
       }
+      
+      
       
       
       
@@ -70,10 +82,14 @@ files.forEach(file => {
       
       
       
+      
+      
       if (content.includes('"xl":')) {
         content = content.replace(/"xl":\s*/g, 'xl:');
         modified = true;
       }
+      
+      
       
       
       
@@ -85,10 +101,14 @@ files.forEach(file => {
       
       
       
+      
+      
       if (content.includes('"opacity":')) {
         content = content.replace(/"opacity":\s*/g, 'opacity:');
         modified = true;
       }
+      
+      
       
       
       
@@ -99,6 +119,8 @@ files.forEach(file => {
       
       
       
+      
+      
       if (content.includes('"delay":')) {
         content = content.replace(/"delay":\s*/g, 'delay:');
         modified = true;
@@ -106,10 +128,14 @@ files.forEach(file => {
       
       
       
+      
+      
       if (content.includes('"once":')) {
         content = content.replace(/"once":\s*/g, 'once:');
         modified = true;
       }
+      
+      
       
       
       

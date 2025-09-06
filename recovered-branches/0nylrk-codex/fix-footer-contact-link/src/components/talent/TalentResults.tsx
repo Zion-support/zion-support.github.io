@@ -1,16 +1,7 @@
 
-import React from "react";
-import {TalentProfile} from "@/types/talent";
-import {ActiveFilters} from "@/components/talent/ActiveFilters";
-import {ResultsHeader} from "@/components/talent/ResultsHeader";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-import React from "react",
-import { TalentProfile } from "@/types/talent",
-import { ActiveFilters } from "@/components/talent/ActiveFilters",
-import { ResultsHeader } from "@/components/talent/ResultsHeader";
-import { TalentGrid } from "@/components/talent/TalentGrid";
-import { ResultsHeader } from "@/components/talent/ResultsHeader",
-import { TalentGrid } from "@/components/talent/TalentGrid",
+
+
+
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -45,22 +36,9 @@ interface TalentResultsProps {
     clearFilters: () => void
   }
 }
-export function TalentResults({;
-  filteredTalents;
-  isLoading;
-  viewProfile;
-  handleRequestHire;
-  savedTalents;
-  handleToggleSave;
-  isAuthenticated;
-export function TalentResults({
-  filteredTalents,
-  isLoading,
-  viewProfile,
-  handleRequestHire,
-  savedTalents,
-  handleToggleSave,
-  isAuthenticated,
+
+
+
   activeFiltersProps
 }: TalentResultsProps) {
   return (
@@ -109,6 +87,9 @@ export function TalentResults(): any ({;
 }: TalentResultsProps) {;
   return (
     <div className="flex-1">;
+
+
+
       {/* Active filters */}
 
       <ActiveFilters {...activeFiltersProps} />;
@@ -179,13 +160,14 @@ function TalentResults() {
         clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
-      />
-    </div>
-  )
-}
+
+
       />;
     </div>;
   );
 }
 ;
+
+
 ;
+

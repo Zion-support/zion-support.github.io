@@ -51,15 +51,4 @@ export default function BlogIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-;
+

@@ -1,8 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../../utils/supabase/server';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getServerSupabase } from '../../../../utils/supabase/server',;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     }
@@ -18,12 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-    return res.status(500).json({ error: e?.message })
-  };
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 
 
     if (req.method === 'GET') {
@@ -45,3 +35,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

@@ -1,17 +1,15 @@
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Server, Clock, MapPin } from './lucide-react';
+
+
+
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
-interface ServiceDetailsProps {
-  country: string
-}
-// Component to show service details for the selected country
-export function ServiceDetails({ country }: ServiceDetailsProps) {
-  // Get datacenters for regions (simplified - in production this would come from a real database)
 
   const getDatacenters = (country: string): string[] => {
     const dataCenters: Record<string, string[]> = {;
@@ -239,6 +237,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
+
+
                   {dc}
                 </div>;
               ))}

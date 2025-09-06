@@ -11,10 +11,34 @@ interface SlackAck {
 interface SlackRespond {
   (text: string): Promise < void>;
 }
-// Define console type to avoid TypeScript errors
+
+// Define console type to avoid TypeScript errors;
+
 interface SafeConsole {
   log: (message: string) => void;
 }
+
+
+
+
+
+// Declare available globals
+declare const globalThis: {
+  console?: SafeConsole;
+  process?: {
+    env: {
+
+      PORT?: string
+
+      [key: string]: string | undefined
+    }
+  }
+}
+// Mock App class that mimics the Slack Bolt SDK behavior
+class MockApp {
+  private commandHandlers: Record<string, Function> = {}
+  command(commandName: string, handler: Function) {
+
     this && this.commandHandlers[commandName] = handler,
 
     return this
@@ -25,8 +49,10 @@ interface SafeConsole {
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined;
 
     if (safeConsole && safeConsole.log) {
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
+
+
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -51,10 +77,20 @@ class MockApp {;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
+
+
+
     }
     return Promise.resolve()
   }
 }
+
+
+
+// Create a mock app instance
+const app = new MockApp();
+async function askZionGPT(prompt: string): Promise<string> {
+  // Safely log without direct console reference
 
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined,
 
@@ -68,9 +104,14 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
+
+
+
   }
   return `AI response to: ${prompt}`
 }
+
+
 
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
@@ -103,11 +144,6 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       await respond(answer),;
       break;
     }
-    case 'track-project': {;
-      const project = args.join(' '),;
-      await respond(`Tracking project **${project}** - feature coming soon.`),;
-      break;
-    }
   }
 });
 // Mock startup with safer environment access
@@ -130,4 +166,6 @@ export default app;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+
+
 export default app;

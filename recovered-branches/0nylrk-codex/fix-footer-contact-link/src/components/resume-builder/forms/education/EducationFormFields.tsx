@@ -1,23 +1,6 @@
 
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { format  } from 'date-fns';
-import { Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { useState  } from 'react';
-import { EducationFormFieldsProps  } from './types';
-import { Education } from '@/types/resume';
+
+
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -32,6 +15,8 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
+
+
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -44,17 +29,16 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
-export function EducationFormFields({
-  isEditing
-  onSubmit
-  onCancel
-}: EducationFormFieldsProps) {
+
+
 
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
+
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -77,8 +61,9 @@ export function EducationFormFields({
     } finally {
       setIsLoading(false)
     }
-  }
+
   };
+
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -144,6 +129,18 @@ export function EducationFormFields(): any ({ ;
     }
 
   },
+
+
+
+
+  return (
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <FormField
+            control={form && form.control}
+            name="institution"
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Institution</FormLabel>
                 <FormControl>

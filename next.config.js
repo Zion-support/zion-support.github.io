@@ -69,7 +69,7 @@ const nextConfig = {
           "**/apps/**",
         ],
         poll: 1000,
-        aggregate_timeout: 300,
+        aggregateTimeout: 300
       }
     }
 
@@ -122,4 +122,4 @@ const nextConfig = {
   }
 }
 
-export default nextConfig;
+export default nextConfig

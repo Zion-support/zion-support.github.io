@@ -1,14 +1,11 @@
 
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
+import { ProductListingCard } from '@/components / ProductListingCard';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Button } from '@/components / ui / button';
+import { Link } from './react-router-dom';
+
+
+
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -328,23 +325,13 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
             <ProductListingCard
               key={listing.id}
               listing={listing}
+
               view="grid"
               onRequestQuote={() => {}}
-            />
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Button
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
-            asChild
-          >
-            <Link to="/marketplace">View All Listings</Link>
-          </Button>
-        </div>
-      </div>
-    </section>
-  )
-}
+
+
+
+
         </div>;
 
         <div className="mt-10 text-center">;
@@ -362,7 +349,9 @@ export function FeaturedListingsSection(): any ({ showTitle = true }: FeaturedLi
           </Button>;
         </div>;
       </div>;
-    </section>;
-  );
+
+
+
+
 }
 ;

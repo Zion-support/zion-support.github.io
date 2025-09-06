@@ -9,14 +9,14 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
-      readTime: '8 min read'
-      featured: true
-    }
+
+
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;
     };
+
+
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -357,12 +357,21 @@ import React from 'react';
                     <div className="text-sm text-white/70">{item && item.description}</div>;
                 ))}
 
+              </div>;
+            </div>;
+
+
+            {/* Automation Trends */}
+
+
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+
+
 
                 {automationTrends.map((trend, index) => (
                   <div
@@ -401,6 +410,7 @@ import React from 'react';
                       Read More <span className='ml-1'>→</span>                    </Link>
 
                     </Link>
+
 
                   </div>
                 ))}
@@ -441,6 +451,21 @@ import React from 'react';
               </div>
             </div>
 
+
+
+
+            {/* Automation Tools & Frameworks */}
+
+
+                ))}
+
+              </div>;
+            </div>;
+
+
+            {/* Call to Action */}
+
+
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -449,6 +474,8 @@ import React from 'react';
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
+
+
 
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
@@ -480,10 +507,21 @@ import React from 'react';
         </main>
       </div>
     </>
+
+                  View Case Studies;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </div>;
+
+
+}
   );
 }
+}
+  );
 }
     </>);
-}
-  );
 }

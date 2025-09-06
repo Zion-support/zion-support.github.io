@@ -1,9 +1,43 @@
 
+
+
+
+
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Briefcase, Users, Check} from "lucide-react";
+
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Briefcase, Users, Check } from './lucide-react';
+;
 type UserRole = "talent" | "client" | null;
+;
+
+
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
+
+
+
+type UserRole = "talent" | "client" | null,
+
+interface RolePickerProps {
+  on_select: (role: UserRole) => void;
+}
+
+
+
+
+  const handleSelect = (role: UserRole) => {
+    setSelectedRole(role)
+    onSelect(role)
+  }
   },
 
   return (
@@ -50,11 +84,16 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'talent' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
-            </div>
-          </CardContent>
-        </Card>
+
+            </div>;
+          </CardContent>;
+        </Card>;
+
+
         <Card
+
         <Card 
+
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
@@ -156,3 +195,4 @@ interface RolePickerProps {;
     </div>);
 }
 ;
+

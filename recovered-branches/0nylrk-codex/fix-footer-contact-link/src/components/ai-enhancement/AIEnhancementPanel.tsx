@@ -17,11 +17,15 @@ interface AIEnhancementPanelProps {;
   showInstructions?: boolean;
   initialContent?: string;
 }
-export function AIEnhancementPanel({
+
+
+export function AIEnhancementPanel(): any ({;
+
 
 
 
 export function AIEnhancementPanel({;
+
   title;
   defaultOptions;
   onApply;
@@ -42,8 +46,9 @@ export function AIEnhancementPanel({;
     if (result) {
       setGeneratedContent(result)
     }
-  }
+
   };
+
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -82,6 +87,18 @@ export function AIEnhancementPanel({;
     }
 
   },
+
+
+
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    field: keyof AIEnhancementOptions
+  ) => {
+    setOptions({
+      ...options
+      [field]: e.target.value})
+  }
   },
 
   const handleApply = () => {

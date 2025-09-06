@@ -30,11 +30,15 @@ interface AddMilestoneFormProps {;
   projectEndDate?: string;
   projectType?: string;
 }
-export function AddMilestoneForm({
+
+
+export function AddMilestoneForm(): any ({;
+
 
 
 
 export function AddMilestoneForm({;
+
   onSubmit;
   isSubmitting;
   onCancel;
@@ -44,7 +48,8 @@ export function AddMilestoneForm({;
 
       });
       return
-    }
+
+
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -117,6 +122,10 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       });
       return;
+
+
+
+
     }
 
     // If there are multiple milestones, submit them one by one

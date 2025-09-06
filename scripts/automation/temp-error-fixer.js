@@ -2,10 +2,15 @@
 
 
 
+const originalLog = console && console.log;
+        const originalLog = console && console.log;
+const originalLog = console && console.log;
+        const originalLog = console && console.log;
+const originalLog = console && console.log;
         let fixCount = 0;
         console && console.log = (...args) => {
           const message = args && args.join(' ');
-          if (message && message.includes(' Fixed') || message && message.includes('fixes applied')) {
+          if (message && message.includes('✅ Fixed') || message && message.includes('fixes applied')) {
             const match = message && message.match(/(d+)/);
             if (match) {
               fixCount = parseInt(match[1]);

@@ -29,8 +29,9 @@ class TestRunner {
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('⚠️ No test files found');
+      console && console.log('⚠️ No test files found');
     } else {
-      console && console.log(` Found ${testFilesFound} test files`);
+      console && console.log(`✅ Found ${testFilesFound} test files`);
     }
     return testFilesFound;
   }
@@ -49,33 +50,33 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
         return false;
       }
-      console.log(' Test script found in package.json');
-      console && console.log(' No test files found')} else {
-      console && console.log(` Found ${testFilesFound} test files`)}
+      console.log('✅ Test script found in package.json');
+      console && console.log('⚠️ No test files found')} else {
+      console && console.log(`✅ Found ${testFilesFound} test files`)}
     return testFilesFound}
   checkPackageJsonScripts() {
     try {
       const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'));
       if (!packageJson && packageJson.scripts.test) {
-        console && console.log(' No test script found in package && package.json');
+        console && console.log('⚠️ No test script found in package && package.json');
         return false;
       }
-    console && console.log(' No test script found in package && package.json'),
+    console && console.log('⚠️ No test script found in package && package.json'),
             return false
   }
-      console && console.log(' Test script found in package && package.json');
+      console && console.log('✅ Test script found in package && package.json');
       return true;
     } catch (error) {
-      console && console.log(' Error reading package && package.json:', error && error.message);
+      console && console.log('❌ Error reading package && package.json:', error && error.message);
       return false;
     }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
         return false}
-      console && console.log(' Test script found in package && package.json');
+      console && console.log('✅ Test script found in package && package.json');
       return true} catch (error) {
-      console && console.log(' Error reading package."json": ', error && error.message);
+      console && console.log('❌ Error reading package."json": ', error && error.message);
       return false}
   }
   generateReport() {

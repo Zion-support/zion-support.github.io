@@ -6,6 +6,50 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading
   updateStatus
   toggleArchive
+
+
+
+  quotes,
+  isArchived = false,
+  isLoading,
+  updateStatus,
+  toggleArchive,
+  deleteQuote,
+  onViewDetails
+},) => {
+  return (
+    <div className="overflow-x-auto">
+      <Table>
+        <TableHeader>
+          <TableRow className="border-zion-blue-light hover:bg-zion-blue">
+            <TableHead className="text-zion-slate-light">Talent</TableHead>
+            <TableHead className="text-zion-slate-light">Requester</TableHead>
+            <TableHead className="text-zion-slate-light">Project</TableHead>
+            <TableHead className="text-zion-slate-light">Budget</TableHead>
+            <TableHead className="text-zion-slate-light">Date</TableHead>
+            <TableHead className="text-zion-slate-light">Status</TableHead>
+            <TableHead className="text-zion-slate-light">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {isLoading ? (
+            <TableRow>
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+                Loading quote requests...
+              </TableCell>
+            </TableRow>
+          ) : quotes.length === 0 ? (
+            <TableRow>
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+                {isArchived
+                  ? "No archived quote requests found."
+                  : "No quote requests found."}
+              </TableCell>
+            </TableRow>
+          ) : (
+            quotes.map(quote => (
+              <TableRow
+                key = {quote.id,}
               <TableRow 
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue"
@@ -127,6 +171,20 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                     
 
 
+                    {isArchived ? (
+                      <>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          onClick = {(,) => toggleArchive(quote.id, false),}
+                        >
+                          <Archive className="h-4 w-4" />
+                          <span className="sr-only">Unarchive</span>
+                        </Button>
+                        <Button
+                          variant="ghost"
+
+
   quotes;
   isArchived = false;
 import React from "react";
@@ -195,11 +253,6 @@ import {formatDate} from "@/utils/dateUtils";
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-                              }
-                            }}
-                              } }}
-                              }
-                            }}
                             className="text-red-500"
                           >
                             <Trash2 className="h-4 w-4 mr-2" />
@@ -382,12 +435,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
-        </TableBody>
-      </Table>
-    </div>
-  )
-}
-'"
 
   );
 };
@@ -397,4 +444,108 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>;
   );
 };
+
+'"
+
+
+                  </div>;
+                </TableCell>;
+                <TableCell className="text - white">;
+                  {quote.budget_display ||;
+                  (quote.budget_min && quote.budget_max;
+                  ? `$${quote.budget_min} - $${quote.budget_max}`;
+                  : quote.budget_min;
+                    ? `$${quote.budget_min}`;
+                    : 'Not specified')}
+                </TableCell>;
+                <TableCell className="text - white">;
+                  {format_date (quote.created_at)}
+                </TableCell>;
+                <TableCell>;
+                  <QuoteStatusBadge status={quote.status} />;
+                </TableCell>;
+                <TableCell>;
+                  <div className="flex items - center gap - 2">;
+                    <Button;
+                      variant="ghost";
+                      size="icon";
+                      on_click = {() => onViewDetails (quote), }
+                    >;
+                      <Eye className="h - 4 w - 4" />;
+                      <span className="sr - only">View Details</span>;
+                    </Button>;
+                    {is_archived ? (
+                      <>;
+                        <Button;
+                          variant="ghost";
+                          size="icon";
+                          on_click = {(, ) => toggle_archive (quote.id, false), }
+                        >;
+                          <Archive className="h - 4 w - 4" />;
+                          <span className="sr - only">Unarchive</span>;
+                        </Button>;
+                        <Button;
+                          variant="ghost";
+                          size="icon";
+                          className="text - red - 500";
+                          on_click = {() => {
+                            if () {) {
+  $2
+}
+                              delete_quote (quote.id);
+                            , }
+                          }}
+                        >;
+                          <Trash2 className="h - 4 w - 4" />;
+                          <span className="sr - only">Delete</span>;
+                        </Button>;
+                      </>) : (
+                      <DropdownMenu>;
+                        <DropdownMenuTrigger as_child>;
+                          <Button variant="ghost" size="icon" aria - label="More actions">;
+                            <MoreHorizontal className="h - 4 w - 4" />;
+                            <span className="sr - only">Actions</span>;
+                          </Button>;
+                        </DropdownMenuTrigger>;
+                        <DropdownMenuContent align="end">;
+                          <DropdownMenuItem on_click={(, ) => update_status (quote.id, 'new')}>;
+                            Mark as New;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'in_review')}>;
+                            Mark as In Review;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'responded')}>;
+                            Mark as Responded;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'accepted')}>;
+                            Mark as Accepted;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => update_status (quote.id, 'closed')}>;
+                            Mark as Closed;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem on_click={() => toggle_archive (quote.id, true)}>;
+                            <Archive className="h - 4 w - 4 mr - 2" />;
+                            Archive;
+                          </DropdownMenuItem>;
+                          <DropdownMenuItem;
+                            on_click = {() => {
+                              if () {) {
+  $2
+}
+                                delete_quote (quote.id);
+                              } }}
+                            className="text - red - 500";
+                          >;
+                            <Trash2 className="h - 4 w - 4 mr - 2" />;
+                            Delete;
+                          </DropdownMenuItem>;
+                        </DropdownMenuContent>;
+                      </DropdownMenu>)}
+                  </div>;
+                </TableCell>;
+              </TableRow>)))}
+        </TableBody>;
+      </Table>;
+    </div>);
+}
 '";

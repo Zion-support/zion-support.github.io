@@ -81,35 +81,6 @@ function InstancesPage() {
   return (
     <div className="min - h-screen py - 8 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
-// import { prisma } from "@/lib/prisma",;
-interface InstanceWithCounts {;
-  id: string,;
-  name: string,;
-  slug: string,;
-  domain: string | null,;
-  subdomain: string | null,;
-  vertical: string,;
-  defaultLanguage: string,;
-  tokenSystem: string,;
-  governanceType: string,;
-  isPublic: boolean,;
-  region: string | null,;
-  country: string | null,;
-  createdAt: Date,;
-  updatedAt: Date,;
-  daoConfig: any | null,;
-  _count: {;
-    deployments: number,;
-    features: number;
-  }
-}
-;
-export default function InstancesPage() {;
-  const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null,;
-  return (;
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <div className="text - center mb - 12">;
           <h1 className="text - 4xl font - bold mb - 4"> Manage Your Instances</h1>;
@@ -198,12 +169,6 @@ export default function InstancesPage() {;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
                     <span className="w - 4 h - 4">🔧</span>;
                     <span > Token: {getTokenSystemLabel (inst.token_system)}</span>;
-                    </div>;
-                  )}
-;
-                  <div className="flex items-center gap-2 text-sm text-white/70">;
-                    <span className="w-4 h-4"></span>;
-                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
                   </div>;
                 </div>;
                 <div className="flex items - center justify - between text - xs text - white / 60">;
@@ -223,8 +188,6 @@ export default function InstancesPage() {;
                       className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
                       href={`/admin / instances/${inst.id}`}
                       className="flex - 1 text - center py - 2 px - 3 text - sm bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg transition - colors";
-                      href={`/admin/instances/${inst.id}`} ;
-                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
                     >;
                       Manage;
                     </a>;
@@ -234,8 +197,6 @@ export default function InstancesPage() {;
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                       href={`/admin / instances/${inst.id}/deployments`}
                       className="flex - 1 text - center py - 2 px - 3 text - sm border border - white / 20 hover:border - white / 40 text - white rounded - lg transition - colors";
-                      href={`/admin/instances/${inst.id}/deployments`} ;
-                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                     >;
                       Deployments;
                     </a>;
@@ -323,17 +284,6 @@ export default function InstancesPage() {;
                       inst.vertical === 'EDUCATION' ? 'bg - purple - 500 / 20 text - purple - 400' :;
                       inst.vertical === 'LAW' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
                       'bg - gray - 500 / 20 text - gray - 400';
-              <div className="flex items-start justify-between mb-4">;
-                <div className="flex-1">;
-                  <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
-                  <div className="flex items-center space-x-2 mb-2">;
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
-                      inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
-                      inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
-                      inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
-                      'bg-gray-500/20 text-gray-400';
                     }`}>;
                       {inst.vertical}
                     </span>;
@@ -368,11 +318,7 @@ export default function InstancesPage() {;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   </div>)}
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                  </div>;
-                )}
-;
-                <div className="flex items-center space-x-2 text-sm text-white/70">;
-                  <span></span>;
+                  <span>💎</span>;
                   <span > Token: {inst.token_system}</span>;
                 </div>;
               </div>;
@@ -395,8 +341,6 @@ export default function InstancesPage() {;
                   className="flex-1 btn-secondary text-center text-sm py-2";
                   href={`/admin / instances/${inst.id}`}
                   className="flex - 1 btn - secondary text - center text - sm py - 2";
-                  href={`/admin/instances/${inst.id}`} ;
-                  className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Manage;
                 </a>;
@@ -406,8 +350,6 @@ export default function InstancesPage() {;
                   className="flex-1 btn-secondary text-center text-sm py-2";
                   href={`/admin / instances/${inst.id}/deployments`}
                   className="flex - 1 btn - secondary text - center text - sm py - 2";
-                  href={`/admin/instances/${inst.id}/deployments`} ;
-                  className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
                   Deployments;
                 </a>;

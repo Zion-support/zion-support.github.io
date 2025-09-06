@@ -1,4 +1,34 @@
 
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useMemo, useState } from 'react';
+import Link from 'next/link';
+
+} from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+export default function WhitepaperBuilderPage() {;
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
@@ -18,6 +48,7 @@ export default function WhitepaperBuilderPage() {
           Investor and Developer editions. Toggle, review, and download as PDF.;
         </p>;
       </div>;
+
       <div className='flex flex-wrap gap-3 items-center'>;
         <label className='font-medium'>Edition</label>;
 
@@ -58,6 +89,7 @@ export default function WhitepaperBuilderPage() {
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>;
         <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>;
       </div>;
+
       <div className="flex flex-wrap gap-3 items-center">;
         <label className="font-medium" htmlFor="input-Edition">Edition</label>;
         <select
@@ -139,5 +171,5 @@ if (return '/docs / zion - protocol.pdf') {
         ))}
       </div>
     </div>
-);
+  );
 }

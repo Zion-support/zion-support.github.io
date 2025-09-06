@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -22,16 +26,27 @@ import React from 'react';
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
-import {
-  ArrowRight
-  Star
-  Zap
-  TrendingUp
-  Users
-  Award
-  Phone
-  Mail
-  MapPin;
+
+
+} from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+
+
+  };
+
+  return (
+
+
+
   ArrowRight,
   Star,
   Zap,
@@ -42,6 +57,7 @@ import {
 
   Mail,;
   MapPin,;
+
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -52,17 +68,16 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
-  }
+
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
 
   };
+
+
 
   return (
     <UltraFuturisticBackground2030>;
@@ -210,76 +225,24 @@ export default function Revolutionary2030ServicesPage() {
         <meta name="keywords" content="2030 technology, AI consciousness, quantum computing, space mining, DNA computing, revolutionary services, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-{/* Open Graph */}
+        
+        {/* Open Graph */}
         <meta property="og: title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/2030-revolutionary-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-{/* Twitter */}
+        
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-{/* Additional Meta Tags */}
+        
+        {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com/2030-revolutionary-services" />
-  };
-
-  return (
-    <UltraFuturisticBackground2030>
-      <Head>
-        <title>
-          2030 Revolutionary Technology Services | Zion Tech Group | AI
-          Consciousness, Quantum Computing, Space Mining
-        </title>
-        <meta
-          name='description'
-          content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing, we're building tomorrow's solutions today."
-        />
-        <meta
-          name='keywords'
-          content='2030 technology, AI consciousness, quantum computing, space mining, DNA computing, revolutionary services, Zion Tech Group'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-        <meta
-          property='og:title'
-          content='2030 Revolutionary Technology Services | Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing.'
-        />
-        <meta property='og:type' content='website' />
-        <meta
-          property='og:url'
-          content='https://ziontechgroup.com/2030-revolutionary-services'
-        />
-        <meta
-          property='og:image'
-          content='https://ziontechgroup.com/og-image.jpg'
-        />
-        {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='2030 Revolutionary Technology Services | Zion Tech Group'
-        />
-        <meta
-          name='twitter:description'
-          content='Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing.'
-        />
-        <meta
-          name='twitter:image'
-          content='https://ziontechgroup.com/twitter-image.jpg'
-        />
-        {/* Additional Meta Tags */}
-        <meta name='theme-color' content='#8b5cf6' />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/2030-revolutionary-services'
-        />
+        
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -317,8 +280,9 @@ export default function Revolutionary2030ServicesPage() {
 
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />;
-        />
-      </Head>
+
+
+
 
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
@@ -339,6 +303,12 @@ export default function Revolutionary2030ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="mb-8"
+
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
+              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">
 
                 2030 Revolutionary Technology Services
 
@@ -406,6 +376,7 @@ export default function Revolutionary2030ServicesPage() {
               </span>;
             </div>;
           </motion && motion.div>;
+
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -424,6 +395,7 @@ export default function Revolutionary2030ServicesPage() {
               Technology Services;
             </span>;
           </motion && motion.h1>;
+
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -435,6 +407,7 @@ export default function Revolutionary2030ServicesPage() {
           >;
             Experience the next generation of revolutionary technology services. From AI consciousness ;
             and quantum computing to space mining and DNA computing, we're building the future today.;
+
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -444,11 +417,13 @@ export default function Revolutionary2030ServicesPage() {
               Schedule Consultation;
               <ArrowRight className='w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform' />;
             </button>;
+
             <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>              View Pricing          >;
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">;
               Schedule Consultation;
               <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />;
             </button>;
+
             <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">;
               View Pricing;
             </button>;
@@ -476,9 +451,11 @@ export default function Revolutionary2030ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
 
@@ -594,6 +571,7 @@ export default function Revolutionary2030ServicesPage() {
                     ))}
 
                   </div>;
+
                   {/* Price and CTA */}
                   <div className="flex items-center justify-between">
                     <div>
@@ -639,6 +617,8 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
+
+
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -658,6 +638,23 @@ export default function Revolutionary2030ServicesPage() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
+
+
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.8 }}>;
+            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
+              Ready to Transform Your Business with;
+              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                {' '}
+
+
+      {/* Contact Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -858,4 +855,3 @@ export default function Revolutionary2030ServicesPage() {
       <UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>));
 }
-  );

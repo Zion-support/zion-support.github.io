@@ -1,3 +1,8 @@
+
+
+
+
+
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -8,26 +13,14 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Skeleton } from "@/components/ui/skeleton",
-import { Sparkles, ArrowRight } from "@/components/icons",
-import { supabase } from "@/integrations/supabase/client";
-import { Badge } from "@/components/ui/badge";
-interface GeneratedContent {
-
-  description: string
-  tags: string[]
-  suggestedPrice: {
-    min: number
-
-    max: number
-  }
-  keyPoints: string[]
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  };
+  keyPoints: string[];
 }
 
 interface AIListingGeneratorProps {;
@@ -37,9 +30,13 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
-    targetAudience?: string
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
+    targetAudience?: string;
+  }
+}
+
+export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -48,62 +45,8 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
-}
 
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { Sparkles, ArrowRight } from "@/components/icons",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Badge } from "@/components/ui/badge",;
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  },;
-  keyPoints: string[];
-}
-;
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void,;
-  initialValues?: {;
-    title?: string,;
-    category?: string,;
-    keyFeatures?: string,;
-    targetAudience?: string;
-  }
-}
-
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title |"");
-  const [category, setCategory] = useState(initialValues.category |"");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
@@ -263,6 +206,8 @@ if ( {) {
       }),;
       if (error) {;
         throw new Error(error.message);
+
+
       }
       if (data.error) {
         throw new Error(data.error)
@@ -384,13 +329,9 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
-              disabled={isLoading}
-            />
-          </div>
-          <Button
-            onClick={handleGenerate}
-            disabled={isLoading |!title |!category}
+
           <Button 
+
 ;
       setGeneratedContent(data.generated),;
 
@@ -479,6 +420,9 @@ if ( {) {
             />;
           </div>;
           <Button;
+
+
+
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"

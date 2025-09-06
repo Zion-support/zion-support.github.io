@@ -1,6 +1,18 @@
 
-export const useJobApplications = (jobId?: string) => {
+
+
+
+
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {toast} from "sonner";
+
+
 export const useJobApplications = (jobId?: string) => {;
+
+
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -187,20 +199,13 @@ export const useJobApplications = (jobId?: string) => {;
             const jobIdArray = jobIds.map(job => job.id),;
             query = query.in("job_id", jobIdArray);
           }
+
+
         }
         return false
       }
-      // Add the new application to the local state
-      const newApplication = data as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-      toast.success("Application submitted successfully");
-      return true
-    } catch (err: any) {
-      console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message)
-      return false
-    }
-  }
+
+
 ;
   const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
     // Check condition
@@ -237,6 +242,10 @@ if ( { // Unique violation) {
         }
         return false;
       }
+
+
+
+
       
       // Add the new application to the local state
       const newApplication = data as JobApplication;
@@ -387,10 +396,10 @@ if ( {) {
     error;
     refetch: fetch_applications;
     applyToJob;
-    updateApplicationStatus
-    markApplicationAsViewed
-  }
-}
+
+    updateApplicationStatus,
+    markApplicationAsViewed;
+
 
 ;
       // Add the new application to the local state;
@@ -460,5 +469,8 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
+
+
+
   }
 };

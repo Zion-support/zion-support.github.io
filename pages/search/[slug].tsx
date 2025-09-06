@@ -1,28 +1,12 @@
-import { GetServerSideProps  } from 'next';
-import { useRouter  } from 'next/router';
-import { useState, useEffect  } from 'react';
-import { useAuth  } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react'
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
+
+
+
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import ProductCard from '@/components/ProductCard';
-import { TalentCard  } from '@/components/talent/TalentCard';
-import { CategoryCard  } from '@/components/CategoryCard';
-import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
-import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
-import { TALENT_PROFILES  } from '@/data/talentData';
-import { BLOG_POSTS  } from '@/data/blog-posts';
-import { useDebounce  } from '@/hooks/useDebounce';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-interface BaseSearchResult {
+
+
   id: string;
   title: string;
   description?: string;
@@ -74,21 +58,33 @@ type SearchResult =;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
-// Type guard functions
-const hasPrice = (result: SearchResult): result is ProductSearchResult =>
-  result.type === 'product' |result.type === 'equipment';
-const hasRating = (
-  result: SearchResult
-): result is ProductSearchResult | TalentSearchResult =>
-  result.type === 'product' |
-  result.type === 'equipment' |
-  result.type === 'talent';
-interface SearchResultsPageProps {
+
+
+// Type guard functions;
+const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
+  result && result.type === 'product' || result && result.type === 'equipment';
+
+const hasRating = (;
+  result: SearchResult;
+): result is ProductSearchResult | TalentSearchResult =>;
+  result && result.type === 'product' ||;
+  result && result.type === 'equipment' ||;
+  result && result.type === 'talent';
+
+interface SearchResultsPageProps {;
+
+
+  initialResults: SearchResult[];
+  query: string;
+  slug: string;
+  totalCount: number;
+
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react';
+import { Search, Filter, Grid, List } from 'lucide-react'
+import { Search, Filter, Grid, List } from 'lucide-react'
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -145,11 +141,14 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>
 
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
-interface SearchResultsPageProps {;
-  initialResults: SearchResult[];
-  query: string;
-  slug: string;
-  totalCount: number;
+
+interface SearchResultsPageProps {
+  initialResults: SearchResult[],
+  query: string,
+  slug: string,
+  totalCount: number
+}
+
 interface OfflineFilters {
 
   sortBy?: string;
@@ -166,13 +165,11 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
-      case 'rating':
-        all.sort((a, b) => {
-          const aRating =
-            a.type === 'product' |a.type === 'talent' ? (a.rating ?? 0) : 0;
-          const bRating =
-            b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
+
+
+
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -336,6 +333,8 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+
+
           return bRating - aRating;
         });
         break;
@@ -343,21 +342,7 @@ function offlineSearch(;
         break;
     }
   } else {;
-    all.sort((a, b) => a.title.localeCompare(b.title));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const start = (page - 1) * limit;
-  const paginated = all.slice(start, start + limit);
-  return { results: paginated, totalCount: all.length }
-export default function SearchResultsPage({
-  initialResults
-  query
-  slug
-  totalCount
-  return { results: paginated, totalCount: all.length };
+    all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
 
           return aPrice - bPrice
         });
@@ -400,6 +385,15 @@ export default function SearchResultsPage(): any ({;
   query,;
   slug,;
   totalCount,;
+
+
+}: SearchResultsPageProps) {  const router = useRouter();
+  initialResults;
+  query;
+  slug;
+  totalCount}: SearchResultsPageProps) {
+  const router = useRouter();
+
 }: SearchResultsPageProps) {  const router = useRouter();
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
@@ -415,6 +409,8 @@ export default function SearchResultsPage(): any ({;
 export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
+
+
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -454,8 +450,27 @@ export default function SearchResultsPage(req, res) {
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
-      if (!response.ok) {
-        throw new Error(`Search API error: ${response.status}`);
+
+
+  // Fetch search results;
+  const fetchResults = async (searchTerm: string, page = 1) => {;
+    try {;
+      setLoading(true);
+      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
+      const params = new URLSearchParams({;
+        query: searchTerm,;
+        page: String(page),;
+        limit: '12',;
+        sort: sortBy,;
+      });      if (categoryFilter !== 'all') params && params.append('category', categoryFilter);
+      if (minPrice) params && params.append('minPrice', minPrice);
+      if (maxPrice) params && params.append('maxPrice', maxPrice);
+      if (minRating) params && params.append('minRating', minRating);
+
+      const response = await fetch(`/api/search?${params && params.toString()}`);
+
+      if (!response && response.ok) {;
+        throw new Error(`Search API error: ${response && response.status}`);
       }
 
       const data = await response && response.json();
@@ -554,19 +569,9 @@ export default function SearchResultsPage(req, res) {
       setCurrentPage(1);    }
   };
 
-  useEffect(() => {;
-    if (debouncedQuery.trim()) {;
-      fetchResults(debouncedQuery, 1);
-    } else {;
-      setResults([]);
-      setTotalResults(0);    }
-  }, [debouncedQuery]);
-  // Load more results
-  const loadMore = () => {
-    const nextPage = currentPage + 1;
-    setCurrentPage(nextPage);
-    fetchResults(searchQuery, nextPage);
-  }
+    fetchResults(searchQuery, nextPage)
+  };
+
   const categories = Array.from(
     new Set(results.map(r => r.category).filter(Boolean))
   );
@@ -632,8 +637,119 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    if (minPrice && r.type === 'product') {;
-      if ((r.price ?? 0) < Number(minPrice)) {;
+      if (params.append ('min_price', min_price)) {
+  $2
+}
+      if (params.append ('max_price', max_price)) {
+  $2
+}
+      if (params.append ('min_rating', min_rating)) {
+  $2
+}
+      const response = await fetch (`/api / search?${params.to_string ()}`);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (`Search API error: ${response.status}`);
+      }
+      const data = await response.json ();
+      log_info ('Search results received:', { data: data });
+      setTotalResults (data.total_count || data.results?.length || 0);
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        set_results (data.results || []);
+      } else {
+        set_results (prev => [...prev, ...(data.results || [])]);
+      }
+    } catch (error) {
+      logErrorToProduction ('Error fetching search results:', { data: error });
+      const offline = offline_search (search_term, page, 12, {
+        sort_by,
+        category: category_filter !== 'all' ? category_filter : undefined,
+        min_price: min_price ? Number (min_price) : undefined,
+        max_price: max_price ? Number (max_price) : undefined,
+        min_rating: min_rating ? Number (min_rating) : undefined,
+      });
+      setTotalResults (offline.total_count);
+      // Check condition
+if ( {) {
+  $2
+}
+        set_results (offline.results);
+      } else {
+        set_results (prev => [...prev, ...offline.results]);
+      }
+    } finally {
+      set_loading (false);    }
+  }
+;
+  // Handle search input change;
+  const handle_search = (new_query: string) =>: any {
+    setSearchQuery (new_query),
+    if () {) {
+  $2
+}
+      router.push (`/search?q=${encodeURIComponent (new_query)}`, undefined, {
+        shallow: true,
+      });
+      setCurrentPage (1);    }
+  }
+;
+  useEffect (() => {
+    if () {) {
+  $2
+}
+      fetch_results (debounced_query, 1);
+    } else {
+      set_results ([]);
+      setTotalResults (0);    }
+  }, [debounced_query]);
+;
+  // Load more results;
+  const load_more = () =>: any {
+    const next_page = current_page + 1;
+    setCurrentPage (next_page);
+    fetch_results (search_query, next_page);
+  }
+;
+  const categories = Array.from (
+    new Set (results.map (r => r.category).filter (Boolean)));
+;
+  const filtered_results = results.filter (r => {    // Check condition
+if ( {) {
+  $2
+}
+      return false;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      if (< Number (min_price)) {) {
+  $2
+}
+        return false;      }
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      if (> Number (max_price)) {) {
+  $2
+}
+        return false;      }
+    }
+    if () {) {
+  $2
+}
+      if (< Number (min_rating)) {) {
+  $2
+}
         return false;
       } catch (error) {
     console.error("Error:", error);
@@ -643,6 +759,16 @@ export default function SearchResultsPage(req, res) {
     if (minPrice && r.type === 'product') {;
       if ((r.price ?? 0) < Number(minPrice)) {;
         return false;
+      }
+    }
+    return true;  });
+
+
+  // Group results by type for better display
+  const groupedResults = filteredResults.reduce(
+    (acc, result) => {
+      if (!acc[result.type]) acc[result.type] = [];
+      acc[result.type]!.push(result);
 
       return acc
     },
@@ -675,21 +801,39 @@ export default function SearchResultsPage(req, res) {
             <ProductCard
 
               product={{
-                id: result.id
-                name: result.title
-                title: result.title
-                description: result.description |''
-                price: result.price |0
-                images: result.image ? [result.image] : []
-                rating: result.rating |0
-                reviewCount: 0
-                tags: result.tags |[]
-                category: result.category |''
-                currency: '$'
-                created_at: new Date().toISOString()
-                updated_at: new Date().toISOString()
-                stock: (result as any).stock
-                in_stock: ((result as any).stock |0) > 0,              }}
+
+                id: result && result.id,
+                name: result && result.title,
+                title: result && result.title,
+                description: result && result.description || '',
+                price: result && result.price || 0,
+                images: result && result.image ? [result && result.image] : [],
+                rating: result && result.rating || 0,
+                reviewCount: 0,
+                tags: result && result.tags || [],
+                category: result && result.category || '',
+;
+  // Group results by type for better display;
+  const grouped_results = filtered_results.reduce (
+    (acc, result) => {
+      // Check condition
+if (acc[result.type] = []) {
+  $2
+}
+      acc[result.type]!.push (result);
+      return acc;
+    },
+    {} as Record < string, SearchResult[]>  );
+;
+  const renderResultCard = (result: SearchResult) =>: any {
+    switch (result.type) {
+      case 'product':;
+      case 'equipment':;
+        return (
+          <div key={result.id} data - testid='result - card'>            <ProductCard;
+              product={{
+
+
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -766,78 +910,8 @@ export default function SearchResultsPage(req, res) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
-                availability_type: 'available',
-              }}
-              onViewProfile={(id: string) => {
-                router.push(`/talent/${id}`);
-              }}
-              onRequestHire={talent => {
-                router.push(`/talent/${talent.id}?action=hire`);              }}
-              isAuthenticated={isAuthenticated}
-                availability_type: 'available'}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              onViewProfile={(id: string) => {;
-                router.push(`/talent/${id}`);
-              }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              onRequestHire={(talent) => {;
-                router.push(`/talent/${talent.id}?action=hire`);
-              }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              isAuthenticated={isAuthenticated  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            />
-          </div>
-        ),
-      case 'category':
-        return (
-          <div key={result.id} data-testid='result-card'>            <CategoryCard
-              title={result.title}
-              description={result.description |''}
-              icon={result.image |'📁'}
-            />
-          </div>
-        );
-      default:
-          >
-            <h3 className='font-semibold'>{result.title}</h3>
-            <p className='text-gray-600 dark:text-gray-200'>
-              {result.description}
-            </p>
-          </div>
-        );    }
-  }
-  };
 
-          <div key={result.id} data-testid="result-card">
-            <CategoryCard
-              title={result.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              description={result.description || ''  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              icon={result.image || '📁'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
             />;
           </div>;
         );
@@ -877,32 +951,42 @@ export default function SearchResultsPage(req, res) {
 
 }
   },
+
+
+
   return (
     <>;
       <SEO
-        title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        keywords={`${query}, search, marketplace, products, talent, services`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        canonical={`https://app.ziontechgroup.com/search/${slug}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      />
-      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
+        title={`Search Results for "${query}" - Zion Marketplace`}
+        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
+        keywords={`${query}, search, marketplace, products, talent, services`}
+
+        canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
+      />;
+      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
+
+        <div
+          className='container mx-auto px-4 py-8'
+          data-testid='search-results'>;
+          {/* Search Header */}
+          <div className='mb-8'>;
+            <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>;
+              <div className='flex-1'>;
+                <h1 className='text-3xl font-bold text-gray-900 dark:text-white mb-2'>;
+                  Search Results;
+                </h1>;
+                <p
+                  className='text-gray-600 dark:text-gray-200'
+                  data-testid='results-count'>;
+                  {filteredResults && filteredResults.length > 0;
+                    ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
+
+
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -920,23 +1004,17 @@ export default function SearchResultsPage(req, res) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
-                    : `No results found for "${query}"`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </p>
-              </div>
+
+
+                    : `No results found for "${query}"`}
+
+                </p>;
+              </div>;
+
+
               {/* Search Input */}
-              <div className='relative w-full lg:w-96'>
-                <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
-              {/* Search Input */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div className="relative w-full lg:w-96">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+
+
                 <Input
                   type="text"
                   value={searchQuery}
@@ -947,15 +1025,8 @@ export default function SearchResultsPage(req, res) {
               </div>
             </div>
             {/* Controls */}
-            <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
-              <div className='flex items-center gap-2 flex-wrap'>
-            {/* Controls */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-              <div className="flex items-center gap-2 flex-wrap">
+
+
                 <Button
                   variant='outline'
                   size='sm'
@@ -966,30 +1037,12 @@ export default function SearchResultsPage(req, res) {
                   Filters
                 </Button>
                 <select
-                  value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                  data-testid="sort-select"
-                >
-                  <option value='relevance'>Relevance</option>
-                  <option value='newest'>Newest</option>
-                  <option value='price_asc'>Price: Low to High</option>
-                  <option value='price_desc'>Price: High to Low</option>
-                  <option value='rating'>Highest Rated</option>                </select>
-                  <option value="relevance">Relevance</option>
-                  <option value="newest">Newest</option>
-                  <option value="price_asc">Price: Low to High</option>
-                  <option value="price_desc">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
-                </select>
+
+
+                  data-testid='filter-button'>;
+                  <Filter className='h-4 w-4' />                  Filters;
+                </Button>;
+
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -1107,23 +1160,11 @@ export default function SearchResultsPage(req, res) {
                     </option>
                   ))}
                 </select>
-                <div className='flex items-center gap-1'>
-                  <option value="all">All Categories</option>
-                  {categories.map((c) => (
-                    <option key={c} value={c}>
-                      {c  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </option>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </select>
+
+
                 <div className="flex items-center gap-1">
+
+
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1157,6 +1198,7 @@ export default function SearchResultsPage(req, res) {
               </div>
               <div className='flex items-center gap-2'>
               <div className="flex items-center gap-2">
+
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -1223,20 +1265,7 @@ export default function SearchResultsPage(req, res) {
   }
 }
           {loading && results.length === 0 && (
-            <div className="flex justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-            </div>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Empty State */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
@@ -1290,11 +1319,78 @@ export default function SearchResultsPage(req, res) {
 
     let results = [];
     let totalCount = 0;
-    if (response.ok) {
-      const data = await response.json();
-      results = data.results |[];
-      totalCount = data.totalCount |results.length;
-      logInfo(`Server-side fetch successful: ${results.length} results`);
+
+            <div className='flex justify - center py - 12'>;
+              <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600'></div>            </div>)}
+          {/* Empty State */}
+          {!loading && filtered_results.length === 0 && (
+            <div data - testid='search - empty - state'>              <SearchEmptyState on_retry={() => fetch_results (search_query)} />;
+            </div>)}
+          {/* Results */}
+          {filtered_results.length > 0 && (
+            <div className='space - y-8'>;
+              {Object.entries (grouped_results).map (([type, type_results]) => (
+                <div key={type}>;
+                  <h2 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 4 capitalize'>                    {type}s ({type_results.length});
+                  </h2>;
+                  <div;
+                    className={
+                      view_mode === 'grid';
+                        ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6';
+                        : 'space - y-4';
+                    }
+                  >;
+                    {type_results.map (renderResultCard)}
+                  </div>;
+                </div>))}
+              {/* Load More Button */}
+              {results.length < total_results && (
+                <div className='flex justify - center py - 8'>;
+                  <Button;
+                    on_click={load_more}
+                    disabled={loading}
+                    className='flex items - center gap - 2';
+                  >;
+                    {loading ? (
+                      <>;
+                        <div className='animate - spin rounded - full h - 4 w - 4 border - b-2 border - white'></div>                        Loading...;
+                      </>) : (
+                      'Load More Results')}
+                  </Button>;
+                </div>)}
+            </div>)}
+        </div>;
+      </div>;
+    </>);
+export const getServerSideProps: GetServerSideProps<;
+  SearchResultsPageProps;
+> = async (context: any) => {
+  const params = context.params;
+  const slug = params?.slug as string,
+  // Convert slug back to query term;
+  const query = slug ? slug.replace (/-/g, ' ') : '';
+;
+  try {
+    // In production, replace with your actual API base URL;
+    const apiBaseUrl =;
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
+    log_info (`Fetching search results for slug: ${slug}, query: ${query}`);
+;
+    const response = await fetch (
+      `${apiBaseUrl}/api / search?query=${encodeURIComponent (query)}&limit = 12`    );
+;
+    let results = [];
+    let total_count = 0;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const data = await response.json ();
+      results = data.results || [];
+      total_count = data.total_count || results.length;
+      log_info (`Server - side fetch successful: ${results.length} results`);
+
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
@@ -1338,6 +1434,59 @@ export default function SearchResultsPage(req, res) {
     };  }
 
 }
+
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`)
+    } else {
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+      results = offline.results;
+      totalCount = offline.totalCount
+    }
+
+    return {
+      props: {
+        initialResults: results,
+        query;
+        slug;
+        totalCount}}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error }),
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+    return {
+      props: {
+        initialResults: offline.results,
+        query;
+        slug;
+        totalCount: offline.totalCount}}
+  }
+
+};
+      total_count = offline.total_count;    }
+    return {
+      props: {
+        initial_results: results,
+        query,
+        slug,
+        total_count,
+      },
+    }
+  } catch (error) {
+    logErrorToProduction ('Error fetching search results:', { data: error });
+    const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
+;
+    return {
+      props: {
+        initial_results: offline.results,
+        query,
+        slug,
+total_count: offline.total_count,
+      },
+    }  }
+}
+;
+
 
           )  } catch (error) {
     console.error("Error:", error);
@@ -1453,76 +1602,11 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
+
+
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
-    } else {
-      logErrorToProduction(
-        `Search API error: ${response.status} ${response.statusText}`
-      );
-      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-      results = offline.results;
-      totalCount = offline.totalCount;    }
 
 
-    return {
-      props: {
-        initialResults: offline.results,
-        query,
-        slug,
-totalCount: offline.totalCount,
-      },
-    };  }
-};
-
-}
-}
-}
-}
-}
-}
-}
-}
-}
-    } else {;
-      logErrorToProduction(;
-        `Search API error: ${response.status} ${response.statusText}`);
-      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-      results = offline.results;
-      totalCount = offline.totalCount;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    return {;
-      props: {;
-        initialResults: results;
-        query,;
-        slug,;
-        totalCount}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    logErrorToProduction('Error fetching search results:', { data: error });
-    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-    return {;
-      props: {;
-        initialResults: offline.results,;
-        query,;
-        slug;
-        totalCount: offline.totalCount}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};

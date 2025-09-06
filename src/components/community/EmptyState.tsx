@@ -138,17 +138,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             )}
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-        </Tooltip>
-      </TooltipProvider>
-    </div>
-  )
-};
-export default EmptyState;
-}
-export default EmptyState
-
-
-
 
         </Tooltip>;
       </TooltipProvider>;

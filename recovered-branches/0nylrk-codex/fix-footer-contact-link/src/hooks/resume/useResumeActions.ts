@@ -1,16 +1,13 @@
 
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Resume, ResumeBasicInfo  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useResumeActions() {
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
+
+
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,9 +16,9 @@ export function useResumeActions() {;
     if (!user) {
       setError('You must be logged in to create a resume')
       return null
-    }
-    setIsLoading(true);
-    setError(null);
+
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -35,6 +32,9 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to create a resume'),;
       return null;
+
+
+
     }
     
     setIsLoading(true),
@@ -70,15 +70,8 @@ export function useResumeActions() {;
       return handleResumeError (e, 'Could not create resume') ? null : null;
     } finally {
       setIsLoading(false)
-    }
-  }
-  const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update a resume')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -106,6 +99,9 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to update a resume'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -138,15 +134,8 @@ export function useResumeActions() {;
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
-    }
-  }
-  const setActiveResume = async (resumeId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to set active resume')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -172,6 +161,9 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to set active resume'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -264,6 +256,7 @@ if (throw error) {
   return {;
     isLoading,;
     error,;
+
     createResume;
     updateBasicInfo;
 

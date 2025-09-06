@@ -17,6 +17,24 @@ export interface UserContextType {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+
+      if (user) {
+        localStorage.setItem('zion.user', JSON.stringify(user));
+      } else {
+        localStorage.removeItem('zion.user');
+      }
+    } catch {
+      // Ignore localStorage errors
+    }
+  }, [user]);
+
+
+  const value = useMemo<UserContextValue>(
+    () => ({
+      user
+      setUser
+      logout: () => setUser(null)
+      completeOnboarding: () =>
   updateUser: (userData: Partial<User>) => Promise<void>;
 }
 

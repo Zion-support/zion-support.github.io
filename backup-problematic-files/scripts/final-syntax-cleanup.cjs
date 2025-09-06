@@ -87,41 +87,6 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
-// Try to build
-console.log('\n🔨 Testing build...');
-try {
-  execSync('npm run build', { cwd: '/workspace', stdio: 'pipe' }
-});
-  console.log('✅ Build successful!');
-} catch (error) {
-  console.log('⚠️  Build still has issues, but syntax was fixed');
-  console.log('Error:', error.message);
-}
-// Commit the fixes
-console.log('\n📝 Committing syntax fixes...');
-try {
-  execSync('git add .', { cwd: '/workspace' }
-});
-  execSync('git commit -m "fix: Ultimate syntax fix for all remaining errors"', { cwd: '/workspace' }
-});
-  console.log('✅ Syntax fixes committed');
-} catch (error) {
-  console.log('⚠️  Failed to commit syntax fixes:', error.message);
-}
-// Push changes
-console.log('\n🚀 Pushing syntax fixes to main branch...');
-try {
-  execSync('git push origin main', { cwd: '/workspace' }
-});
-  console.log('✅ Syntax fixes pushed to main branch');
-} catch (error) {
-  console.log('⚠️  Failed to push syntax fixes:', error.message);
-}
-
-console.log('\n🎉 Ultimate syntax fix completed!');
-console.log('🎉 Final syntax cleanup completed!');
-}
-console.log(`\n✅ Fixed ${totalFixed} files`);
 console.log('🎉 Final syntax cleanup completed!');
 class FinalSyntaxCleanup {
   constructor() {

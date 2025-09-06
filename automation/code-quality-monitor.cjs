@@ -357,13 +357,10 @@ runCodeQualityMonitor();
 };
   };
 };
-  };
-};
 runCodeQualityMonitor();
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
   if (metrics) {
     console.log("Metrics:", metrics);
   }
-});
 });

@@ -1,18 +1,7 @@
 
-import {useState} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-import {cleanupAuthState} from "@/utils/authUtils";
-import { useState } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
 
-import {cleanupAuthState} from "@/utils/authUtils";
-import { toast } from "@/hooks/use-toast",
-import type { UserProfile } from "@/types/auth",
-import { cleanupAuthState } from "@/utils/authUtils",
+
+
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
@@ -67,9 +56,7 @@ if ( {) {
         toast({
           title: "Login failed",
           description: error.message,
-          variant: "destructive"}),
-          variant: "destructive"});
-          variant: "destructive"}),
+
         return { error }
       }
       return { data }
@@ -124,21 +111,7 @@ if ( {) {
         toast({
           title: "Signup failed",
           description: error.message,
-          variant: "destructive"}),
-        return { error }
-      }
-;
-      toast({;
-        title: "Signup successful",;
-        description: "Check your email for verification instructions."}),;
-      return { data }
-    } catch (error: any) {;
-      console.error("Signup error:", error),;
-      toast({;
-        title: "Signup failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
-      return { error }
+
           variant: "destructive"});
         return { error };
       }
@@ -163,9 +136,7 @@ if ( {) {
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
-      return { error };
-      return { error }
-      return { error };
+
     } finally {
       setIsLoading(false)
     }
@@ -186,21 +157,7 @@ if ( {) {
         toast({
           title: "Password reset failed",
           description: error.message,
-          variant: "destructive"}),
-        return { error }
-      }
-;
-      toast({;
-        title: "Password reset email sent",;
-        description: "Check your email for password reset instructions."}),;
-      return {}
-    } catch (error: any) {;
-      console.error("Password reset error:", error),;
-      toast({;
-        title: "Password reset failed",;
-        description: error.message || "An unexpected error occurred",;
-        variant: "destructive"}),;
-      return { error }
+
           variant: "destructive"});
         return { error };
       }
@@ -231,10 +188,12 @@ if ( {) {
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"});
-      return { error };
-      return { error }
-      return { error };
+
     } finally {
       setIsLoading(false)
     }
   };
+
+
+  return { login, signup, resetPassword }
+};

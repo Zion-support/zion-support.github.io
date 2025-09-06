@@ -1,10 +1,14 @@
 
-import React from "react";
+
+
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+
 import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
-import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+
+
+
 const features = [
   {
     title: "Private Hiring Portal"
@@ -57,13 +61,9 @@ export function EnterpriseFeatures() {;
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+
 };
+
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
@@ -124,5 +124,6 @@ export function EnterpriseFeatures() {;
       </div>;
     </section>);
 }
-;
+
+
 ;

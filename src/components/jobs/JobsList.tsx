@@ -37,10 +37,13 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
-          .order("created_at", { ascending: false })
-          .order("created_at", { ascending: false }),
-        if (filter) {
-          query = query.eq("status", filter)
+
+
+      try {
+        let query = supabase
+          .from("jobs")
+          .select("*")
+          .eq("client_id", user.id)
         }
         const { data, error } = await query;
         // Check condition
@@ -55,26 +58,6 @@ if (throw error) {
         setIsLoading (false);
       }
     }
-    fetchJobs()
-  }, [user, filter])
-          .order("created_at", { ascending: false }),
-
-        if (filter) {
-          query = query.eq("status", filter)
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Job, JobStatus } from "@/types/jobs",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, Edit, X, Eye } from 'lucide-react';
-import { format } from "date-fns",;
-import Link from "next/link",;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface JobsListProps {;
-  filter?: JobStatus,;
-  onSelectJob?: (jobId: string, jobTitle: string) => void;
 }
     return (
       <div className="flex justify - center items - center p - 8">;
@@ -127,21 +110,6 @@ if ( {) {
       </div>
     )
   }
-  const getStatusColor = (status: JobStatus,) => {
-    switch (status) {
-      case "new": return "bg-blue-100 text-blue-800"
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800"
-      case "filled":
-        return "bg-green-100 text-green-800"
-
-  const getStatusColor = (status: JobStatus) => {
-    switch (status) {
-      case "new": return "bg-blue-100 text-blue-800",
-      case "in_progress":
-        return "bg-yellow-100 text-yellow-800",
-      case "filled":
-        return "bg-green-100 text-green-800",
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
@@ -182,7 +150,6 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
     };
 
     }
-  }
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -308,6 +275,17 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
+
+
+
+                  {skill}
+                </Badge>;
+              ))}
+              {job && job.skills.length > 3 && (;
+                <Badge variant="outline" className="text-xs">;
+                  +{job && job.skills.length - 3} more;
+                </Badge>;
+              )}
 
     </div>;
   );

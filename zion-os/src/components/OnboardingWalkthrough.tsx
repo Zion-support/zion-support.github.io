@@ -268,11 +268,5 @@ export /**
 function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
-export function useWalkthroughTarget(id: string) {return {;
-;
-// Hook to add data attributes for walkthrough targeting;
-export function useWalkthroughTarget(id: string) {;
-  return {;
-    "data-walkthrough-target": id;
     id}
 }

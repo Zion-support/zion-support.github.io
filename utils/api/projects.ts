@@ -1,22 +1,12 @@
-import fs from 'fs';
-import path from 'path';
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-  Project,
-  Milestone,
-  MilestoneStatus,
-  Project
-  Milestone
-  MilestoneStatus
-  isMilestoneStatus
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-export interface Milestone {
-  isMilestoneStatus,;
+
+
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
-export interface Milestone {;
+// Project management utilities
+import { v4 as uuidv4 } from 'uuid';
+
+export interface Project {
   id: string;
   title: string;
   summary: string;
@@ -46,25 +36,22 @@ export interface Milestone {;
   createdAt: string;
   updatedAt: string;
 }
+
+
   isMilestoneStatus;
 } from '../types / milestones';
 import { CurrentUser } from './auth';
 ;
 export interface Milestone {
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-
-export interface Milestone {;
-
   id: string;
   title: string;
   description?: string;
-  dueDate: string;
-  amountUsd: number;
+  due_date: string;
+  amount_usd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: any[];
-  createdAt: string;
-  updatedAt: string;
+  created_at: string;
+  updated_at: string;
 }
 
 // Mock storage
@@ -79,13 +66,15 @@ export function getProjectById(id: string): Project | null {;
 }
 
 export function getAllProjects(): Project[] {;
+
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-    ...project
-    id: `project_${Date.now()}`
-    createdAt: new Date().toISOString()
+
+    ...project,
+    id: `project_${Date && Date.now()}`,
+    createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -93,6 +82,8 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
+
+
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -103,6 +94,8 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
+
+
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
@@ -116,17 +109,17 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
+
+
+
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
 
     updatedAt: new Date().toISOString();
+
+
   };
   }
   project.milestones.push(newMilestone);
@@ -140,9 +133,12 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   
   return newMilestone;
 }
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
+
+
 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
+
+
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
 
@@ -157,9 +153,12 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
   
   return milestone;
 }
-export function deleteMilestone(project: Project, milestoneId: string): boolean {
+
+
 
 export function deleteMilestone(project: Project, milestoneId: string): boolean {;
+
+
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
   
@@ -237,4 +236,6 @@ if (return false) {
 ;
   return true;
 }
+
+
 

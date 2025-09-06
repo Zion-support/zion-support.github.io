@@ -24,6 +24,6 @@ export default function Pm2RedundancyRedirect(req, res) {
       </main>;
     </>);
 }
-;
 
-;
+
+

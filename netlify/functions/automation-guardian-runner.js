@@ -6,8 +6,10 @@ function runNode(relPath, args = []) {
   return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
 
 }
+
 exports && exports.config = {
   schedule: '*/10 * * * *'},
+
 exports && exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -38,6 +40,7 @@ exports && exports.handler = async () => {
 }
 
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 

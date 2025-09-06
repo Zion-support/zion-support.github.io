@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -64,12 +68,6 @@ import { useRole } from '../context/RoleContext';
 
 
   );
-}        <div className="p-4 border-t border-gray-200 dark:border-gray-800 flex justify-end">
-          <button onClick={completeOnboarding} className="px-3 py-1.5 rounded-md border">Done</button>
-        </div>
-      </div>
-    </div>
-);
 }
 import Link from 'next / link';
 import { use_role } from '../context / RoleContext';
@@ -231,3 +229,4 @@ if (return null) {
 }
 
   );
+

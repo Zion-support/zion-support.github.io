@@ -22,11 +22,12 @@ interface ButtonProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string, onClick?: () => void, disabled?: boolean, type?: 'button' | 'submit' | 'reset';
 }
+
 const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
   size = 'md',
-className = '',
+  className = '',
   onClick,
   disabled = false,
   type = 'button'

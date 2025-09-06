@@ -23,19 +23,15 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
-import {
-  Room
-  RoomEvent
-  RemoteParticipant
-  LocalParticipant
-  createLocalTracks
-  VideoPresets;
+
+
   Room,
   RoomEvent,
   RemoteParticipant,
   LocalParticipant,
   createLocalTracks,;
   VideoPresets,;
+
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -52,8 +48,20 @@ type Props = {;
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
-}
-export default function CallRoom({
+
+};
+
+export default function CallRoom(): any ({;
+  projectId,;
+  userId,;
+  displayName,;
+  roomName,;
+  serverUrl,;
+  token,;
+  startMode,;
+  onLeave,;
+}: Props) {;
+
 
   projectId,
   userId,
@@ -64,6 +72,7 @@ export default function CallRoom({
   startMode,
   onLeave,
 }: Props) {;
+
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
@@ -74,20 +83,13 @@ import ParticipantTile from './ParticipantTile';
 
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
-type Props = {
-  projectId: string
-  userId: string
-  displayName: string
-  roomName: string
-  serverUrl: string
-  token: string
-  startMode: StartMode
-  onLeave?: (durationSec: number) => void
-}
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+
+
 };
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+
+
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -113,29 +115,21 @@ type Props = {;
   startMode: StartMode,;
   onLeave?: (durationSec: number) => void;
 };
-export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-type Props = {
-  projectId: string
-  userId: string
-  displayName: string
-  roomName: string
-  serverUrl: string
-  token: string
-  startMode: StartMode
-  onLeave?: (durationSec: number) => void
-};
 
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
+
   const connect = useCallback(async () => {;
     const r = new Room();
+
     r && r.on(RoomEvent && RoomEvent.ParticipantConnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ParticipantDisconnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.LocalTrackPublished, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.TrackSubscribed, () => rebuild());
+
     // create local tracks per start mode;
     let localTracks: any[] = [];
     if (startMode === 'video') {;
@@ -220,7 +214,6 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
 
-  };
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
@@ -253,7 +246,4 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     </div>);
 }
 
-        ))}
-      </div>
-    </div>
-  );
+

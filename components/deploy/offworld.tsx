@@ -1,14 +1,7 @@
-import { useState  } from 'react';
-import Head from 'next/head',
-import {useState} from 'react';
+
+import { useState } from 'react';
 import Head from 'next/head';
 
-export default function OffworldDeploy() {
-  const [cid, setCid] = useState<string | null>(null),
-  const [status, setStatus] = useState<string>(''),
-export default function OffworldDeploy() {;
-  const [cid, setCid] = useState<string | null>(null);
-  const [status, setStatus] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [provider, setProvider] = useState<string>('');
   async function handleDeploy() {
@@ -25,12 +18,15 @@ import {useState} from 'react';
     } catch (e: any) {;
       setError(e && e.message);
       setStatus('');    }
+
   }
   return (
-    <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
-    } catch (e: any) {
-      setError(e.message)
-      setStatus('')
+
+    <div className='min-h-screen p-8'>      setStatus('Deployed successfully');
+    } catch (e: any) {;
+      setError(e && e.message),;
+      setStatus('');
+
   }
   return (
     <div className='min-h-screen p-8'>
@@ -107,13 +103,13 @@ function handle_deploy() {
       if (throw new Error (data?.error || 'Deploy failed')) {
   $2
 }
-    <div className='min-h-screen p-8'>
-
-    }
+      set_cid (data.cid);
+      set_provider (data.provider || '');
+      set_status ('Deployed successfully');
+    } catch (e: any) {
+      set_error (e.message);
+      set_status ('');    }
   }
   return (
 
-        </div>
-      )}
-    </div>
-  );
+

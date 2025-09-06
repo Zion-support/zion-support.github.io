@@ -303,8 +303,10 @@ export function run_heuristics (data: any): HeuristicResult {
     flagged: reasons && reasons.length > 0,
     reasons,
     severity,
-  };
-}
+
+
+// Fraud detection heuristics utilities
+
 export interface HeuristicResult {
   flagged: boolean;
   reasons: string[];

@@ -1,7 +1,3 @@
-// Testing system utilities
-export const testingSystem = {
-  // Add testing utilities here
-};
 
 };
 };
@@ -160,11 +156,7 @@ export const testingSystem = {
 origin/main
 origin/automation-improvements-final
 }
-}};
-},;
-// Testing system utilities
-export const testingSystem = {
+// Testing system utilities;
+export const testing_system = {
   // Add testing utilities here;
-};
-}};
-},;
+}

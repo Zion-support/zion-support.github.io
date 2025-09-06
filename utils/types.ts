@@ -1,14 +1,3 @@
-export interface Application {
-export interface Application {;
-  id: string;
-  name: string;
-  email: string;
-  position: string;
-  experience: number;
-  skills: string[];
-  createdAt: string;
-  updatedAt?: string;
-}
 
 
 export interface Application {;
@@ -20,3 +9,7 @@ export interface Application {;
   createdAtIso: string;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
+
+
+
+

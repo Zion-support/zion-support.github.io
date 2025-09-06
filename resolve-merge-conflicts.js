@@ -12,19 +12,23 @@ function resolveConflicts() {
     
     console && console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `),
     conflictedFiles && conflictedFiles.forEach(file => console && console.log(`  - ${file}`));
+    
     // For each conflicted file, accept the incoming changes (from the PR)
-    conflictedFiles.forEach(file => {
-      if (fs.existsSync(file)) {
-        console.log(`Resolving conflicts in ${file}...`);
-        // Read the file content
-        let content = fs.readFileSync(file, 'utf8');
-([\s\S]*?)
+    conflictedFiles && conflictedFiles.forEach(file => {
+      if (fs && fs.existsSync(file)) {
+        console && console.log(`Resolving conflicts in ${file}...`);
         
-
+        // Read the file content
+        let content = fs && fs.readFileSync(file, 'utf8');
+        
+        // Remove conflict markers and keep the incoming changes (after )
+        content = content && content.replace(/[\s\S]*?([\s\S]*?)        
         // Write the resolved content back
-        fs.writeFileSync(file, content);
+        fs && fs.writeFileSync(file, content);
+        
         // Add the file to staging
         execSync(`git add "${file}"`, { stdio: 'inherit' });
+        
         console && console.log(`✅ Resolved conflicts in ${file}`);
 
       }
@@ -38,6 +42,7 @@ function resolveConflicts() {
       // Remove from index to accept the deletion
       execSync(`git rm "${file}"`, { stdio: 'inherit' });
     });
+    
     console && console.log('✅ All conflicts resolved!');
 
     return true;
@@ -74,7 +79,7 @@ function mergePR(prBranch) {
         return false;
       }
     } else {
-      console && console.error(` Failed to resolve conflicts for ${prBranch}`);
+      console && console.error(`❌ Failed to resolve conflicts for ${prBranch}`);
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 import fs from 'fs';
@@ -160,7 +165,7 @@ function mergePR() {
         return false;
       }
     } else {
-      console.error (` Failed to resolve conflicts for ${pr_branch}`);
+      console.error (`❌ Failed to resolve conflicts for ${pr_branch}`);
       return false;
     }
   }
@@ -219,6 +224,7 @@ function main() {
 
   
   console && console.log('\n🎉 PR merge process completed!');
+  
   // Show final status
   try {
     console && console.log('\n📊 Final git status: '),

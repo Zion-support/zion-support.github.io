@@ -20,4 +20,3 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
-    content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}

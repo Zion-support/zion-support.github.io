@@ -103,5 +103,3 @@ const glob = require('glob')
       const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
       const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
-      const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"
-      const fixedQuoted = quoted.replace(/"([a-z]+)"      const fixedQuoted = quoted.replace(/"([a-z]+)"

@@ -68,7 +68,7 @@ class HealthChecker {
   }
 
   async runAllChecks() {
-    console && console.log(' Running Health Checks...');
+    console && console.log('🏥 Running Health Checks...');
     
     await this && this.checkBuildFiles();
     await this && this.checkDependencies();
@@ -86,7 +86,7 @@ class HealthChecker {
 
     });
     
-    console && console.log(`\n Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
+    console && console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
     
     return {
       passed,

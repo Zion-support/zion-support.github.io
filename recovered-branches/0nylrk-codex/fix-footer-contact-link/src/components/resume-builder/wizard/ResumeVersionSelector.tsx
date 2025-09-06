@@ -1,24 +1,6 @@
 
-import { useState } from "react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Dialog
-  DialogContent
-  DialogFooter
-  DialogHeader
-  DialogTitle
-} from "@/components/ui/dialog";
-import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
-import { Resume } from "@/types/resume";
-import { useResume } from "@/hooks/useResume";
+
+
 
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
@@ -28,17 +10,17 @@ import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
+
+
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 }
 
-export function ResumeVersionSelector({
-  currentResume,
-  onResumeChange,
-}: ResumeVersionSelectorProps) {
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+
+
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
@@ -54,12 +36,15 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-        setNewResumeTitle("");
+        setNewResumeTitle('');
+
       }
       setIsLoading(false);
     }
   }
+
         setNewResumeTitle('')
+
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -94,12 +79,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId),;
         setSaveDialogOpen(false);
         setNewResumeTitle('');
+
+
       }
       setIsLoading(false);
     }
-  },
-  };
-  },
+
+
 
   return (
     <div className="flex items-center gap-2">
@@ -173,5 +159,4 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 }
   )
 }
-;
-;
+

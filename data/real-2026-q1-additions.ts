@@ -50,6 +50,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'api - security - posture - monitor',
@@ -95,9 +96,11 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Flexible cron/rate',
+=======
     id: 'edge - cron - orchestrator',
     name: 'Edge Cron Orchestrator',
     tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -141,6 +144,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'email - parsing - routing - api',
@@ -188,9 +192,11 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 5,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Brand/tone controls',
+=======
     id: 'ai - marketing - content - studio',
     name: 'AI Marketing Content Studio',
     tagline: 'Campaign - ready blogs, emails and ads with brand guardrails',
@@ -234,9 +240,11 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 9,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'CSP/HSTS checks',
+=======
     id: 'security - headers - scanner',
     name: 'Security Headers Scanner',
     tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs',
@@ -282,6 +290,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 10,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'ml - feature - store - starter',
@@ -327,6 +336,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'slo - burn - rate - coach',
@@ -374,6 +384,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'browser - performance - optimizer',
@@ -421,6 +432,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 3,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'cloud - cost - governance - suite',
@@ -466,6 +478,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 4,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'api - changelog - sdk - publisher',
@@ -513,6 +526,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
 
 

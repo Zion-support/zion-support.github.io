@@ -5,4 +5,3 @@ class_name, class_names,  showOutsideDays = true, ...props;
 
 }/>) ;
 }";
-export type CalendarProps = React.ComponentProps<typeof DayPicker>,

@@ -1,96 +1,41 @@
-export interface ContentGenerationRequest {
-export interface ContentGenerationRequest {;
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
-  topic: string;
-  tone: 'professional' | 'casual' | 'friendly' | 'formal';
-  length: 'short' | 'medium' | 'long';
 
   keywords?: string[],
   target_audience?: string;
 
 }
+export interface ContentGenerationResponse {
+  content: string;
+  word_count: number;
+  seo_score: number;
+  readability_score: number;
+  suggestions: string[];
+  metadata: {
+    title: string;
+
     description: string,
     tags: string[];
 
   }
 }
+export interface ContentTemplate {
+  id: string;
+  name: string;
+  description: string;
+  type: string;
+
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-  price: number
-}
-export class AIContentGeneratorService {
-
-export class AIContentGeneratorService {;
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
-      const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify(request)});
-      if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`)
+
+
 export interface ContentGenerationRequest {;
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
-  topic: string,;
-  tone: 'professional' | 'casual' | 'friendly' | 'formal',;
-  length: 'short' | 'medium' | 'long',;
-  keywords?: string[],;
-  targetAudience?: string;
-}
-;
-export interface ContentGenerationResponse {;
-  content: string,;
-  wordCount: number,;
-  seoScore: number,;
-  readabilityScore: number,;
-  suggestions: string[],;
-  metadata: {;
-    title: string,;
-    description: string,;
-    tags: string[];
-  }
-}
-;
-export interface ContentTemplate {;
-  id: string,;
-  name: string,;
-  description: string,;
-  type: string,;
-  preview: string,;
-  price: number;
-}
-;
-export class AIContentGeneratorService {;
-  private apiKey: string,;
-  private baseUrl: string,;
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
-    this.apiKey = apiKey,;
-    this.baseUrl = baseUrl;
-  }
-;
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {;
-    try {;
-      // In a real implementation, this would call OpenAI, Claude, or similar API;
-      const response = await fetch(`${this.baseUrl}/content/generate`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${this.apiKey}`,;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify(request)}),;
-      if (!response.ok) {;
-        throw new Error(`Content generation failed: ${response.statusText}`);
+
+
       }
       return await response.json()
       const response = await fetch(`${this && this.baseUrl}/content/generate`, {
@@ -110,6 +55,13 @@ export class AIContentGeneratorService {;
       return this && this.generateMockContent(request)
     }
   }
+
+
+
+
+
+  async getTemplates(): Promise<ContentTemplate[]> {
+    return [
   preview: string,
   price: number;
 }
@@ -223,6 +175,14 @@ if ( {) {
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
+
+      }
+    ];
+  }
+
+
+
+
 
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
@@ -354,10 +314,18 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
+
+
       }
     }
   }
 }
+
+
+
+
+
+// Pricing tiers for the AI Content Generator
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {
   starter: {
@@ -383,12 +351,9 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
-    period: '/month'
-    features: [
-      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
-    ]
-  }
-}
+
+    period: '/month',
+
 
 ;
 // Pricing tiers for the AI Content Generator;
@@ -418,5 +383,8 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
+
+
+
   }
 };

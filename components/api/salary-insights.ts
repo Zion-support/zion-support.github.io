@@ -5,9 +5,6 @@
 }const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.';
-}const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 type InsightResponse = {
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -29,6 +26,7 @@ type RequestBody = {
   remote: boolean,
   employmentType: 'contract' | 'freelance' | 'full-time'
 };
+
 type InsightResponse = {
   recommendedHourlyUsd: number, recommendedMonthlyUsd: number,
   medianHourlyUsd: number, minHourlyUsd: number,
@@ -40,6 +38,7 @@ type InsightResponse = {
   gptRecommendation?: string
 
 };
+
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
 
@@ -219,6 +218,7 @@ function prng (seed: string): () => number {
 
     const skillsStr = input && input.skills.join(', ');    const skillsStr = input && input.skills.join();
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input && input.roleTitle} with ${skillsStr} in ${input && input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
+
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
@@ -240,31 +240,6 @@ function prng (seed: string): () => number {
         { role: 'user', content: prompt }];
       temperature: 0.2,
       max_tokens: 300});
-function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
-  const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'],
-  const now = new Date()
-  const seed = prng(seedKey)
-  const series: { label: string, value: number }[] = [],
-  let current = baseMonthly * 0.92, // start slightly below base
-  for (let i = 11, i >= 0, i--) {
-    const date = new Date(now.getFullYear(), now.getMonth() - i, 1),
-    const drift = (seed() - 0.5) * 0.03, // +/-3%
-    current = Math.max(baseMonthly * 0.7, current * (1 + drift)),
-    series.push({ label: months[date.getMonth()], value: Math.round(current) })
-  }
-  return series
-}
-
-async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
-  const apiKey = process.env.OPENAI_API_KEY
-  if (!apiKey) return undefined,
-
-    const _completion = await client.chat.completions.create({_model: 'gpt-4o-mini', _messages: [
-        { role: 'system', _content: 'You are a compensation analyst. Be specific and concise. Use USD.'},
-        {_role: 'user', _content: prompt}],
-      temperature: 0.2,
-      max_tokens: 300}),
-
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
 
@@ -301,7 +276,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
-
   // Tags
 
   const undersupplied = (skills || []).some(s =>
@@ -330,13 +304,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     tags,
     gptRecommendation,
   };
+
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
 
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
   if (undersupplied) tags.push('Undersupplied Skill');
+
   const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });
+
   const response: InsightResponse = {
     recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
     medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),
@@ -344,6 +321,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     trendMonthly: trend, regionalComparison,
     tags;
     gptRecommendation};
+
   return res.status(200).json(response)
 }
 export default async /**
@@ -356,9 +334,13 @@ if ( {  } catch {) {
     return undefined;
   }
 }
-
-
-  // Tags
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -491,5 +473,11 @@ if ( {  } catch {) {
   }
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
-  return res.status(200).json(response)
-
+}
+}
+}
+}
+}
+}
+  // Tags
+}

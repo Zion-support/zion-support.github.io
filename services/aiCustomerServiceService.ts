@@ -1,34 +1,48 @@
-export interface CustomerTicket {
-export interface CustomerTicket {;
-  id: string;
-  customerId: string;
-  subject: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
-  category: string;
-  assignedTo?: string;
-  createdAt: Date;
-  updatedAt: Date;
-  resolvedAt?: Date;
-  customerSatisfaction?: number;
-  tags: string[];
 
   attachments: string[],
   conversation_history: CustomerMessage[];
 
 }
+export interface CustomerMessage {
+  id: string;
+  ticket_id: string;
+  sender_id: string;
+  sender_type: 'customer' | 'agent' | 'ai';
+  message: string;
+  timestamp: Date;
+  attachments?: string[];
+  sentiment: 'positive' | 'neutral' | 'negative';
+
   intent: string,
   confidence: number;
 
 }
+export interface CustomerProfile {
+  id: string;
+  email: string;
+  name: string;
+  phone?: string;
+  company?: string;
+  plan: string;
+  total_tickets: number;
+  resolved_tickets: number;
+  averageResolutionTime: number;
+  customer_satisfaction: number;
+  last_contact: Date;
+  preferences: {
 
     communication_channel: 'email' | 'chat' | 'phone';
     language: string,
     timezone: string;
   }
-  tags: string[]
+  tags: string[];
+
 }
+export interface AIResponse {
+  id: string;
+  ticket_id: string;
+  response: string;
+  confidence: number;
 
   suggested_actions: string[];
   next_steps: string[];
@@ -36,6 +50,11 @@ export interface CustomerTicket {;
   generated_at: Date;
 
 }
+export interface CustomerServiceMetrics {
+  total_tickets: number;
+  open_tickets: number;
+  resolved_tickets: number;
+  averageResolutionTime: number;
 
     ticketsResolved: number
     averageResolutionTime: number,
@@ -44,9 +63,7 @@ export interface CustomerTicket {;
   }>
 }
 export interface CustomerServiceRequest {
-
-export interface CustomerServiceRequest {;
-  customerId: string;
+  customer_id: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
@@ -56,21 +73,16 @@ export interface CustomerServiceRequest {;
   preferred_channel?: 'email' | 'chat' | 'phone';
 
 }
+export interface CustomerServiceResponse {
+  ticket_id: string;
+  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+  ai_response?: AIResponse;
+  estimatedResolutionTime: string;
+
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-  assignedAgent?: string
-}
-export class AICustomerServiceService {
-
-export class AICustomerServiceService {;
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -301,23 +313,11 @@ export class AICustomerServiceService {;
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-export interface CustomerTicket {;
-export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-  id: string,;
-  customerId: string,;
-  subject: string,;
-  description: string,;
-  priority: 'low' | 'medium' | 'high' | 'urgent',;
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
-  category: string,;
-  assignedTo?: string,;
-  createdAt: Date,;
-  updatedAt: Date,;
-  resolvedAt?: Date,;
-  customerSatisfaction?: number,;
-  tags: string[],;
-  attachments: string[],;
-  conversationHistory: CustomerMessage[];
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+  next_steps: string[],
+  assigned_agent?: string;
 }
 export class AICustomerServiceService {
   private api_key: string;
@@ -555,4 +555,6 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
-export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+export interface CustomerTicket {;
+

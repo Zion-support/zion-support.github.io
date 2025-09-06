@@ -1,14 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import type { KycProfile } from '../../../utils/kyc',;
-import fs from 'fs',;
-import path from 'path',;
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),
-const FILE = path.join(DATA_DIR, 'profiles.json'),
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { KycProfile } from '../../../utils/kyc';
-import fs from 'fs';
-import path from 'path';
 
   } catch {
     return {}
@@ -29,8 +19,10 @@ import path from 'path';
   if (profile.amlStatus === 'match' || (profile.flags || []).includes('aml_alert')) return res.status(200).json({ allowed: false, reason: 'AML alert' });
 
   return res.status(200).json({ allowed: true, reason: 'KYC approved and AML clear' })
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
+}
+
+
+
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -41,4 +33,5 @@ function load(): Record<string, KycProfile> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-}
+
+

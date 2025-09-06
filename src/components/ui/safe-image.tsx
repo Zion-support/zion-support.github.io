@@ -1,7 +1,4 @@
 interface SafeImageProps {
-'use client'
-import Image from 'next/image'
-import { useState } from 'react'
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
   src: string;
@@ -58,9 +55,6 @@ export function SafeImage(): any ({;
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-    />
-;
-    />;
   );        aria-label={alt}
 'use client',;
 import Image from 'next/image',;
@@ -145,6 +139,32 @@ export function SafeImage({
         role="img"
         aria-label={alt}
 
+      >
+        <ImageIcon className="w-6 h-6" />
+      </div>
+    )
+  }
+
+    />
+  ); return (
+        aria-label = {alt,}>;
+        <ImageIcon className='w-6 h-6' />      </div>;
+    );
+  }
+
+
+    />;
+  );        aria-label={alt}
+      >;
+        <ImageIcon className="w-6 h-6" />;
+      </div>;
+    );
+  }
+
+
+    />;
+  );  return (
+
 
     <Image
       src = {currentSrc,}
@@ -156,12 +176,6 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
-    />
-  )
-} 
-
-}
 }
     />;
   );
-} ;

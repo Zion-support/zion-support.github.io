@@ -1,8 +1,22 @@
 
-    adminOnly: false
 
-    icon: "Briefcase"
-  }
+
+
+
+import {useState} from "react";
+import {useParams, Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {SEO} from "@/components/SEO";
+import {AppLayout} from "@/layout/AppLayout";
+import PostCard from "@/components/community/PostCard";
+import {ForumPost, ForumCategoryInfo} from "@/types/community";
+import {Badge} from "@/components/ui/badge";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
+
+
+
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -28,6 +42,9 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
+
+
+
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -859,6 +876,8 @@ export default function ForumCategoryPage() {;
             <Input;
               placeholder="Search posts in this category...";
               className="pl-10";
+
+
               value={searchQuery}
 
               onChange={(e) => setSearchQuery(e && e.target.value)}

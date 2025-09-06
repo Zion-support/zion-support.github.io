@@ -1,4 +1,16 @@
 
+
+SEO automation, chatbots, business intelligence, email marketing, social media management;
+customer feedback, billing, project management, API infrastructure, e - commerce analytics, legal document generation;
+HR management, AI customer support, data backup, AI code assistance, cybersecurity monitoring, supply chain analytics;
+market research, financial planning, CRM systems, learning management, IoT management, analytics dashboards;
+meeting transcription, invoice automation, churn prediction, lead scoring, real - time analytics, content optimization;
+predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization;
+email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
+product recommendations, fraud detection, inventory forecasting, customer onboarding, social media automation, cybersecurity threat hunting;
+metaverse development, Web3 DeFi analytics, IoT edge computing, autonomous vehicle platforms, climate prediction, biotechnology;
+financial trading, education personalization, enterprise network automation, data center management, API governance, DevOps automation;
+
 identity management, and enterprise analytics. Focused, affordable solutions that deliver specific value without the complexity of enterprise platforms. Start with a free trial and scale as you grow. </p> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Unified dashboard</span> </div> <div className="flex items-center text-green-400" > <Check className="w-4 h-4 mr-2" /> <span>Integrated billing</span> </div> </div> </div> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="#services" variant="secondary" size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/pricing" variant="outline" size="lg" className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white" > View All 85+ Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </section> Professional Micro SaaS Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Each service is designed to solve specific business problems with enterprise-grade quality and competitive pricing. </p> </div> Popular </span>) ;
 }</div> </li>) ) ;
 }</ul> </div> </div> </div> <div className="flex flex-col gap-3" > <a </div> </div>) ) ;
@@ -30,10 +42,12 @@ import React from 'react';
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target  } from 'lucide-react';
 import Button from '../components/ui/Button';
-import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
-export default function MicroSaasPage() {
+
+
 import {Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap, as, Lightning} from 'lucide-react';
 export default function MicroSaasPage() {;
+
+
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const microSaasServices = [
@@ -1238,12 +1252,9 @@ export default function MicroSaasPage() {;
     }
   ];
   const categories = [...new Set(microSaasServices.map(service => service.category))];
-  const competitiveAdvantages = [
-    {
-      title: "Specialized Focus"
-      description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.";
-      icon: "🎯"
-    }
+
+
+
 import React from 'react',;
 import Head from 'next/head',;
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react',;
@@ -2459,6 +2470,46 @@ export default function MicroSaasPage() {;
   ],
 
   const categories = [...new Set(microSaasServices.map(service => service.category))],
+
+
+
+
+  const competitiveAdvantages = [
+    {
+      title: "Specialized Focus",
+      description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",
+      icon: "🎯"
+    },
+    {
+      icon: '💰'
+      title: 'Transparent Pricing'
+      description: 'No hidden fees, no enterprise sales calls. Simple monthly pricing that scales with your business needs and growth.'
+    }
+    },
+    {
+      icon: '🔒'
+      title: 'Enterprise Security'
+      description: 'Bank-level security, SOC 2 compliance, and 99.9% uptime guarantee for all services. Built for production use.'
+    }
+    },
+    {
+      icon: '🎯'
+      title: 'Focused Solutions'
+      description: 'Each service solves a specific business problem without the complexity of enterprise platforms. Do one thing exceptionally well.'
+    }
+    },
+    {
+      icon: '📱'
+      title: 'Mobile First'
+      description: 'All services are optimized for mobile devices, ensuring your team can work efficiently from anywhere, anytime.'
+    }
+    },
+    {
+      icon: '🔄'
+      title: 'Seamless Integration'
+      description: 'Connect with your existing tools and workflows. Our services integrate with popular platforms and provide comprehensive APIs.'
+    }
+  ];
   ],
 
   return (
@@ -3243,24 +3294,26 @@ export default function MicroSaasPage() {;
                       href="/pricing"
                       variant="outline"
                       size="lg"
-                      className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white"
-                    >
-                      View Pricing
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-    </>
-  )
-}
+
+                      className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white">;
+                      View Pricing;
+                    </Button>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+
 
 
       {/* CTA Section */}
     </>;
   );
+
+
+
+
 }

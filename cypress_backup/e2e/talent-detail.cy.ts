@@ -180,3 +180,4 @@ describe('talent detail page',() => { it('loads profile from API',() => { cy.int
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 });
+;

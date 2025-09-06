@@ -1,11 +1,12 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
+
+
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -44,6 +45,7 @@ interface RaiseDisputeButtonProps {;
   const navigate = useNavigate();
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
+
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -90,37 +92,14 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-          <DisputeForm
-          
-          <DisputeForm 
-          <DisputeForm 
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle,;
-  DialogDescription,;
-  DialogOverlay;
-} from "@/components/ui/dialog",;
-import { DisputeForm } from "./DisputeForm",;
-import { useNavigate } from "react-router-dom",;
-import { ShieldAlert } from "lucide-react",;
-interface RaiseDisputeButtonProps {;
-  projectId: string,;
-  milestoneId?: string,;
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",;
-  size?: "default" | "sm" | "lg" | "icon",;
-  className?: string;
-}
-;
-export function RaiseDisputeButton({;
-  projectId,;
-  milestoneId,;
-  variant = "outline",;
-  size,;
-  className;
+
+
+export function RaiseDisputeButton(): any ({ ;
+  projectId;
+  milestoneId, ;
+  variant = "outline", ;
+  size;
+  className ;
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -191,7 +170,13 @@ function RaiseDisputeButton() {
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
-          <DisputeForm;
+
+
+          
+          <DisputeForm 
+          <DisputeForm 
+
+
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

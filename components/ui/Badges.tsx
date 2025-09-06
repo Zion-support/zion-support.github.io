@@ -1,30 +1,6 @@
 import React from 'react';
 
-export function TrustBadge({
-  type
-}: {
-  type,
-}: {;
-  type: 'Verified' | 'Pro' | 'Top Rated';
-}) {
-  const colorMap = {
-    Verified:
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200'
-    'Top Rated':
-      'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'
-  } as const;
-    >
-      <span className='leading-none'>{type}</span>
-    </span>
-  );
-export function MicroTestimonial({
-  quote
-  author
-}: {
-  quote,
-  author,
-}: {;
+
   quote: string;
   author: string;
 }) {;
@@ -48,6 +24,8 @@ export function MicroTestimonial({
       <span className="leading - none">{type}</span>;
     </span>);
 }
+
+      </figcaption>;
     </figure>;
   );  const colorMap = {;
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
@@ -68,9 +46,8 @@ function MicroTestimonial() {
       <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
       <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
     </figure>);
-    </span>
-  )
 }
     </figure>
   );
 }
+

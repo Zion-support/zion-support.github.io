@@ -6,33 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Phone
-  Zap
-  DollarSign
-  Shield
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Sparkles
-  Globe
-  Atom
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+
 
   CheckCircle,
   ArrowRight,
@@ -88,6 +62,8 @@ import {
   Music,;
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+
+
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -199,8 +175,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 <div className="text-3xl font-bold text-cyan-400">24/7</div>
                 <div className="text-cyan-300">Support Available</div>
 
-
-            {/* Stats */}
 
               </div>
             </div>
@@ -329,6 +303,9 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                       ))}
                     </div>
 
+
+
+
                     <Link
 
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
@@ -345,6 +322,14 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
           </div>
         </div>
       </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+
+
 
       {/* Featured Services */}
 
@@ -416,6 +401,14 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
         </div>
       </section>
 
+          </div>;
+        </div>;
+      </section>;
+
+
+
+
+
       {/* Market Analysis */}
       <section className='py-20 bg-black/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -438,6 +431,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
+
+              transition={{ duration: 0.6 }}
+
+
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -514,11 +512,15 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -545,37 +547,9 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
               </Link>;
               <Link
                 href='/case-studies'
-                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
-              >
-                <span>View Case Studies</span>
-                <TrendingUp className='w-5 h-5' />
-              </Link>
-            </div>
-            <div className='flex items-center justify-center space-x-8 text-purple-300'>
-              <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>30-Day Free Trial</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span>24/7 Expert Support</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>Money-Back Guarantee</span>              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Money-Back Guarantee</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      <UltraFuturisticFooter2028 />
-    </>
-);
-  );
-    </>;
-);
-}
 
+
+  );
 }
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
@@ -722,5 +696,8 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
-      <UltraFuturisticFooter2028 />
+}
+    </>
   );
+
+}

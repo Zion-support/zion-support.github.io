@@ -1,3 +1,5 @@
+
+import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {useState} from "react";
@@ -6,11 +8,13 @@ export function NewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Input } from "@/components/ui/input",
-import { useState } from "react",
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true);
+
+
+
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -174,6 +178,8 @@ function NewsletterForm() {
           </Button>;
 
         </form>;
+
+
       )}
     </div>
   );

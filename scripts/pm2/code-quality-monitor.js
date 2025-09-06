@@ -79,36 +79,37 @@ monitor.run().catch(error = > {process.exit(1)});
 
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
-monitor.run().catch(error = > {; process.exit(1)});
-};
-};
-;
-  async analyzeFile(filePath) {;
-    try {;
-      const content = fs.readFileSync(filePath, 'utf8');
-      const stats = fs.statSync(filePath);
-;
-      const analysis = {;
-        file: filePath;
-        size: stats.size;
-        lines: content.split('\n').length;
-        issues: [];
-      ;
-;
-      // Check for common code quality issues;
-      const lines = content.split('\n');
-;
-      lines.forEach((line, index) => {;
-        const lineNum = index + 1;
-;
-        // Trailing spaces;
-        if (line.match(/[ \t]+$/)) {;
-          analysis.issues.push({;
-            line: lineNum;
-            type: 'trailing-spaces';
-            message: 'Trailing spaces found';
-            severity: 'low';
-          });
+
+
+    };
+  };
+,
+  async analyzeFile(filePath) {,
+    try {,
+      const content = fs.readFileSync(filePath, 'utf8'),
+      const stats = fs.statSync(filePath),
+,
+      const analysis = {,
+        file: filePath,
+        size: stats.size,
+        lines: content.split('\n').length,
+        issues: [],
+      };
+,
+      // Check for common code quality issues,
+      const lines = content.split('\n'),
+,
+      lines.forEach((line, index) => {,
+        const lineNum = index + 1,
+,
+        // Trailing spaces,
+        if (line.match(/[ \t]+$/)) {,
+          analysis.issues.push({,
+            line: lineNum,
+            type: 'trailing-spaces',
+            message: 'Trailing spaces found',
+            severity: 'low',
+          }),
         };
 ,
         // Long lines (over 120 characters),
@@ -491,15 +492,5 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
-    } catch (error) {,;
-      this.log(`❌ Error running code quality: monitor: ${error.message}`),;
-      process.exit(1);
-    }
-  }
-},;
-,;
-// Run the code quality monitor,;
-const monitor = new CodeQualityMonitor(),;
-monitor.run().catch(error => {,;
-  process.exit(1);
-});
+monitor.run().catch(error = > {; process.exit(1)});
+

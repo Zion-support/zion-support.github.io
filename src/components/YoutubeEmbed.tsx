@@ -5,36 +5,13 @@
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
-        src={src}
-        title={title}
-        loading='lazy'
+        loading="lazy";
         onLoad={() => setLoaded(true)}
-        src={src};
-        title={title};
-        loading='lazy';
-        onLoad={() => setLoaded(true)};
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
-      />
-    </div>
-  )
-}        loading="lazy"
-        onLoad = {() => setLoaded(true),}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-        src={src}
-        title={title}
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-        allowFullScreen
-      />
-    </div>
 
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
+        allowFullScreen;
+      />;
+    </div>;
+  );
 
-;
-;
+}

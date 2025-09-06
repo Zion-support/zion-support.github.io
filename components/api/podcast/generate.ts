@@ -13,11 +13,10 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { persona, invitee, topic, operatorPrompt } = req.body |{}
+
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -119,43 +118,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
     writeEpisodes(episodes);
 
-    return res && res.status(200).json({ episode });
-  } catch (error: any) {
-    console && console.error(error);
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
-  }    episodes && episodes.unshift(episode);
-    }
-
-    const episodes = readEpisodes();
-    const episode = {
-      id,
-      createdAt: new Date().toISOString(),
-      persona,
-      invitee,
-      topic,
-      title: generated && generated.title,
-      questions: generated && generated.questions || [],
-      timeMarkers: generated && generated.timeMarkers || {
-        intro: '00:00',
-        segments: [],
-        closing: '14:30',
-      },
-      transcript: generated && generated.transcript,
-      youtubeDescription: generated && generated.youtubeDescription || '',
-      spotifyDescription: generated && generated.spotifyDescription || '',
-      bestQuote: generated && generated.bestQuote || '',
-      audio: {},
-    };
-    episodes && episodes.unshift(episode);
-    writeEpisodes(episodes);
-
-    return res && res.status(200).json({ episode });
-  } catch (error: any) {
-    console && console.error(error);
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
-  }    episodes && episodes.unshift(episode);
-    writeEpisodes(episodes);
-
     return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error);
@@ -164,3 +126,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 }
     const episode = {
+
+}
+}

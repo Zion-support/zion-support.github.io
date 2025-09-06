@@ -1,15 +1,41 @@
-export function ConversionAnalysisChart({
-  data
-  timeRange
-  onTimeRangeChange
-}: ConversionAnalysisProps) {
-  const dataKeys =
-    data && data.length > 0
-      ? Object.keys(data[0]).filter((key) => key !== "date")
-      : [];
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+
+} from "@/components/ui/card";
+
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface ConversionAnalysisProps {;
+  data: Array<Record<string, any>>;
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void
+}
+
+
+export function ConversionAnalysisChart(): any ({;
+  data,;
+  timeRange,;
+  onTimeRangeChange,;
+}: ConversionAnalysisProps) {;
+  const dataKeys =;
+    data && data.length > 0;
+      ? Object && Object.keys(data[0]).filter((key) => key !== "date");
+
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
+
 interface ConversionAnalysisProps {
   data: Array < Record < string, any>>;
   time_range: string;
@@ -80,6 +106,9 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
         />;
       </CardContent>;
     </Card>;
+
+
+
   );
         <AnalyticsChart;
           title="";

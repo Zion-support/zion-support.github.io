@@ -1,9 +1,4 @@
 
-import React from 'react';
-import { Button  } from '@/components/ui/button';
-import { useNavigate  } from 'react-router-dom';
-import { XCircle } from 'lucide-react';
-export default function PaymentCanceled() {
 
 
 import {Button} from '@/components/ui/button';
@@ -11,6 +6,7 @@ import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
+
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
@@ -35,8 +31,11 @@ export default function PaymentCanceled() {
           >
             Try Again
           </Button>
-          <Button
+
+
           <Button 
+
+
             variant="outline"
             onClick={() => navigate('/dashboard')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -47,7 +46,12 @@ export default function PaymentCanceled() {
       </div>
     </div>
   )
-}
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {XCircle} from 'lucide-react';
+
+
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -117,7 +121,9 @@ function PaymentCanceled() {
           </Button>;
         </div>;
       </div>;
-    </div>;
-  );
+
+
+
+
 }
 ;

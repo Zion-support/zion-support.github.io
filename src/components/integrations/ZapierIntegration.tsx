@@ -1,16 +1,5 @@
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
-
-import React, { useState } from "react",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { toast } from "sonner",
-import { Check, Copy, ExternalLink } from 'lucide-react'
-export function ZapierIntegration() {
   const [copied, setCopied] = useState(false)
   const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
@@ -109,17 +98,6 @@ function ZapierIntegration() {
 
 
 
-            
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <label className="text-sm font-medium">Your Zion API Key</label>
-                <div className="flex gap-2">
-                  <Input 
-                    value={apiKey} 
-                    readOnly 
-                    className="font-mono text-sm" 
-                  />
-                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </Button>
                 </div>
@@ -162,6 +140,27 @@ function ZapierIntegration() {
               <li className="flex items-center gap-2">
 
 
+
+                <Check className="h-4 w-4 text-green-500" />
+                <span>Create calendar events for interviews</span>
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Button variant='outline' className='w-full gap-1'>
+              <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">
+            <Button variant="outline" className="w-full gap-1">
+
+
+
+              <ExternalLink className="h-4 w-4" />
+              <span>Explore Zion Zaps</span>
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
+
+
       
 
 
@@ -200,6 +199,22 @@ function ZapierIntegration() {
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
 
+
+
+                Triggers when a talent applies to your job.
+              </p>
+              <Button size="sm" variant="outline">Set Up Trigger</Button>
+            </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>;
+    </div>;
+  );
+};
+}
+
+
             
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
@@ -212,6 +227,12 @@ function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
+
+            <p className='text - sm text - muted - foreground mb - 4'>;
+              Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
+              to set up integrations.;
+
+
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;

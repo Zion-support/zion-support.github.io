@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -22,39 +26,8 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
-import {
-  Search
-  Filter
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Atom
-  Sparkles
-  Target;
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Atom,
-  Sparkles,;
-  Target,;
+
+
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
   // Combine all 2026 services
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -217,11 +190,13 @@ export default function ServicesShowcase2026() {;
     { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices && allServices.filter(s => s && s.category.includes('IT') || s && s.category.includes('Infrastructure')).length },;
     { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices && allServices.filter(s => s && s.category.includes('Autonomous')).length },;
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices && allServices.filter(s => s && s.category.includes('Cloud') || s && s.category.includes('DevOps')).length }
+
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',;
+
     >;
       <div className='min-h-screen'>;
         default:;
@@ -357,13 +332,13 @@ export default function ServicesShowcase2026() {;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div
         </Head>
+
           <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
           <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
         {/* Navigation */}
-        <UltraAdvancedNavigation />
-
+        <UltraAdvancedNavigation />;
         {/* Hero Section */}
 
               transition={{ duration: 0 && 0.8 }}>;
@@ -441,6 +416,37 @@ export default function ServicesShowcase2026() {;
             </motion.div>
           </div>
         </section>
+                  </div>;
+                  <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services;
+                </span>;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
+                Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions;
+              </p>;
+
+              {/* Service Statistics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;
+                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices && allServices.length}</div>;
+                  <div className="text-gray-400 text-sm">Total Services</div>;
+                </div>;
+                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
+                  <div className="text-3xl font-bold text-purple-400 mb-2">{allServices && allServices.filter(s => s && s.category.includes('AI')).length}</div>;
+                  <div className="text-gray-400 text-sm">AI Services</div>;
+                </div>;
+                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
+                  <div className="text-3xl font-bold text-pink-400 mb-2">{allServices && allServices.filter(s => s && s.category.includes('Quantum')).length}</div>;
+                  <div className="text-gray-400 text-sm">Quantum Services</div>;
+                </div>;
+                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
+                  <div className="text-3xl font-bold text-green-400 mb-2">{allServices && allServices.filter(s => s && s.category.includes('Emerging')).length}</div>;
+                  <div className="text-gray-400 text-sm">Emerging Tech</div>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
         {/* Search and Filter Section */}
 
                     onChange={e => setSearchTerm(e && e.target.value)}
@@ -456,12 +462,6 @@ export default function ServicesShowcase2026() {;
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-{/* Search */}
-        {/* Search and Filter Section */}
-        <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                 {/* Search */}
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -556,6 +556,12 @@ export default function ServicesShowcase2026() {;
                         </span>
                       )}
                     </div>
+
+
+
+
+                {/* Sort By */}
+
 
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
@@ -692,6 +698,7 @@ export default function ServicesShowcase2026() {;
                     <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">;
                       {service && service.description}
                     </p>;
+
                     {/* Features */}
 
                     <div className="mb-4">
@@ -719,10 +726,14 @@ export default function ServicesShowcase2026() {;
 
                             {feature}
 
+
+
                           </li>
                         ))}
-                      </ul>
-                    </div>
+
+
+
+
 
                     {/* Category and Technology */}
 
@@ -740,6 +751,7 @@ export default function ServicesShowcase2026() {;
 
                       </ul>;
                     </div>;
+
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>;
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>;
@@ -763,6 +775,8 @@ export default function ServicesShowcase2026() {;
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
+
+
                     >
                       Learn More
                     </a>
@@ -770,6 +784,12 @@ export default function ServicesShowcase2026() {;
                 </motion.div>
               ))}
             </div>
+
+            </div>;
+
+
+
+
 
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
@@ -795,15 +815,20 @@ export default function ServicesShowcase2026() {;
                 </p>              </motion.div>
 
 
-            )}
-          </div>
-        </section>
+        {/* Contact Section */}
+        <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion&& motion.div
+
 
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -957,25 +982,13 @@ export default function ServicesShowcase2026() {;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Contact Us Now
-                </a>
-                <a
-                  href='/pricing'
-                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/pricing"
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  View Pricing
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-);
+
+
   );
+}
+
+  );
+
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
             >;
               <h2 className='text - 3xl font - bold text - white mb - 6'>;
@@ -1048,10 +1061,4 @@ export default function ServicesShowcase2026() {;
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-  );
-}
-}
-}
-}
-  );
 }

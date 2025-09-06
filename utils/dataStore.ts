@@ -1,11 +1,5 @@
-// Data store utilities
-export const dataStore = {
-  // Add data store functionality here
-  getData: () => []
-  setData: (data: any) => null
-  updateData: (id: string, data: any) => null
-  deleteData: (id: string) => null
-}
+
+
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
@@ -16,6 +10,8 @@ export const dataStore = {
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
+
+
 interface Project {
   id: string;
   title: string;
@@ -119,3 +115,5 @@ export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) => store.getReviewsByProject(projectId);
 export const getAllReviews = () => store.getAllReviews();
 export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role);
+
+

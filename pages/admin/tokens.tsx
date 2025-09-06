@@ -1,12 +1,35 @@
-  }
-  useEffect(() => {
-    load()
-  }, [])
-  async function issue() {
+
+
+  async function load() {
+    const [txRes, cfgRes] = await Promise.all([
+      fetch("/api/admin/tokens").then((r) => r.json())
+      fetch("/api/admin/tokens/config").then((r) => r.json())])
+    setTransactions(txRes.transactions |[])
+
+import React, { useEffect, useState } from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+export default function AdminTokens() {
+  const [transactions, setTransactions] = useState<any[]>([]);
+  const [userId, setUserId] = useState("");
+  const [amount, setAmount] = useState(100);
+  const [reason, setReason] = useState("admin_action");
+  const [config, setConfig] = useState<any>(null);
+
+  async function load() {
+    const [txRes, cfgRes] = await Promise.all([
+      fetch("/api/admin/tokens").then((r) => r.json());
+      fetch("/api/admin/tokens/config").then((r) => r.json())]);
+    setTransactions(txRes.transactions || []);
+    setConfig(cfgRes)
+
+
 
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
+
   }
 }
   useEffect(() => {
@@ -47,25 +70,14 @@
 }
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify(config)})
-    const data = await res.json()
 
-    setConfig(data)
-  }
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
     setConfig(data)
-  }
 
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
   return (
     <EnhancedLayout title="Admin: ZION$">
       <div className="max-w-4xl mx-auto space-y-6">
@@ -110,29 +122,7 @@
                   <span className="text-gray-600">{t.userId}</span>
                   <span className="text-gray-500">{t.reason.replaceAll("_"," ")}</span>
                 </div>
-                <div className="font-medium">{t.type === "earn" |t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
-                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
-              </div>
-            ))}
-            {transactions.length === 0 && <div className="text-gray-500">No transactions.</div>}
-          </div>
-        </div>
-      </div>
-    </EnhancedLayout>
-  );
-};
-;
-  async function saveConfig() {;
-    const res = await fetch("/api/admin/tokens/config", {;
-      method: "POST",;
-      headers: { "Content-Type": "application/json" },;
-      body: JSON.stringify(config)});
-    const data = await res.json();
-    setConfig(data);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
 
 import React, { useEffect, useState } from './react';,
@@ -241,11 +231,11 @@ function save_config() {
           </div>;
         </div>;
       </div>;
-    </EnhancedLayout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </EnhancedLayout>);
 }
-}
+
+                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} ZION$</div>
+
+              </div>
+
+

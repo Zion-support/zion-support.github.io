@@ -1,10 +1,11 @@
-export type WatchlistMatch = {
-export type WatchlistMatch = {;
+
+
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
+
+  score: number; // 0 - 1 match confidence;
+  reference_id?: string;
+  details_url?: string;
 }
 ;
 
@@ -12,14 +13,16 @@ export type AmlCheckResult = {
 };
 
 export type AmlCheckResult = {;
+
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
-}
-export interface AmlProvider {
+
+
 };
 export interface AmlProvider {;
+
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 
@@ -51,6 +54,7 @@ class MockAmlProvider implements AmlProvider {
 
 // Singleton instance
 export const amlManager = new AmlManager();
+
 // Utility functions
 export function createAmlCheck(
   userId: string,
@@ -65,12 +69,15 @@ export function createAmlCheck(
     details: {}
   };
 }
+
 export function generateAmlCheckId(): string {
   return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
+
 export function isAmlCheckExpired(check: AmlCheck): boolean {
   return new Date(check.expiresAt) < new Date();
 }
+
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   const colors = {
     low: 'green',
@@ -101,10 +108,6 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     return { status: 'clear' }
   }
 }
-export function getAmlProvider(): AmlProvider {
-  return new MockAmlProvider();
-}
-
-export function getAmlProvider(): AmlProvider {;
-  return new MockAmlProvider();
+export function getAmlProvider (): AmlProvider {
+  return new MockAmlProvider ();
 }

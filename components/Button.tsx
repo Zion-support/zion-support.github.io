@@ -81,19 +81,15 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
-      {children}
-    </button>
-);
-}
 
-}
-
-
-}
 
     >
       {children}
     </button>
   );
+
+    </button>);
+}
+
 
 

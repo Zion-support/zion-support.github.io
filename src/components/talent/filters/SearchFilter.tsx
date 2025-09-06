@@ -18,11 +18,23 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light"
         />
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
-        <p id="talent-search-help" className="sr-only">;
-          Type a name or skill to filter results;
-        </p>;
-      </div>;
-    </div>;
-  );
-}
+
+        <Input
+          id='talent-search'
+          type='text'
+          placeholder='Search talents...'
+          value={searchTerm}
+
+
+
+          Type a name or skill to filter results
+        </p>
+      </div>
+    </div>
+
+          onChange={e => setSearchTerm(e && e.target.value)}
+          aria-describedby='talent-search-help';
+          className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light';
+
+};
 ;

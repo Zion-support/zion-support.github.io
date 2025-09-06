@@ -27,8 +27,8 @@ if (!session?.user?.email) {
       { status: 200 }
     );
   } catch (error) {
-    console.error('Onboarding completion error:', error);
-    return NextResponse.json(
+    console && console.error('Onboarding completion error:', error);
+    return NextResponse && NextResponse.json(
           id: updated_user.id,
           name: updated_user.name,
           email: updated_user.email,
@@ -43,6 +43,11 @@ if (!session?.user?.email) {
     return NextResponse.json (
 
       { error: 'Internal server error' },
+
+
+
+      { error: 'Internal server error' },
+
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -76,6 +81,8 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+
+
       { status: 500 }
     );
   }
@@ -111,10 +118,6 @@ export async function POST(request: NextRequest) { try {
     return NextResponse.json(
       { error: 'Internal server error' }
       { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}
       { status: 500 }
     );
   }

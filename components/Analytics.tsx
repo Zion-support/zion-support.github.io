@@ -34,6 +34,7 @@ interface AnalyticsProps {
 interface AnalyticsProps {;
   trackingId?: string;
 }
+
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {;
   useEffect(() => {;
     // Google Analytics 4;
@@ -43,6 +44,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       script && script.async = true;
       script && script.src = `https://www && www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document && document.head.appendChild(script);
+
       // Initialize gtag;
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
@@ -56,56 +58,66 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
         page_title: document && document.title,;
         page_location: window && window.location.href,;
       });
-      // Track page views
-      const trackPageView = () => {
-        gtag('event', 'page_view', {
-          page_title: document.title
-          page_location: window.location.href
-          page_path: window.location.pathname
+
+      // Track page views;
+      const trackPageView = () => {;
+        gtag('event', 'page_view', {;
+          page_title: document && document.title,;
+          page_location: window && window.location.href,;
+          page_path: window && window.location.pathname,;
         });
-      }
-      // Track page view on load
+      };
+
+      // Track page view on load;
       trackPageView();
-      // Track page view on route change (for SPA behavior)
-      const handleRouteChange = () => {
+
+      // Track page view on route change (for SPA behavior);
+      const handleRouteChange = () => {;
         trackPageView();
-      }
-      // Listen for popstate events (back/forward navigation)
-      window.addEventListener('popstate', handleRouteChange);
-      // Cleanup
-      return () => {
-        window.removeEventListener('popstate', handleRouteChange);
-      }
+      };
+
+      // Listen for popstate events (back/forward navigation);
+      window && window.addEventListener('popstate', handleRouteChange);
+
+      // Cleanup;
+      return () => {;
+        window && window.removeEventListener('popstate', handleRouteChange);
+      };
     }
   }, [trackingId]);
-  // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+
+  // Track custom events;
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {;
+    if (typeof window !== 'undefined' && window && window.gtag) {;
+      window && window.gtag('event', eventName, parameters);
     }
-  }
-  // Track button clicks
-  const trackButtonClick = (buttonName: string, location?: string) => {
-    trackEvent('button_click', {
-      button_name: buttonName
-      location: location |window.location.pathname
-    });
-  }
-  // Track form submissions
-  const trackFormSubmission = (formName: string) => {
-    trackEvent('form_submit', {
-      form_name: formName
-      page_location: window.location.href
-    });
-  }
-  // Track external link clicks
-  const trackExternalLink = (url: string, linkText: string) => {
-    trackEvent('external_link_click', {
-      link_url: url
-      link_text: linkText
-      page_location: window.location.href
+  };
+
+  // Track button clicks;
+  const trackButtonClick = (buttonName: string, location?: string) => {;
+    trackEvent('button_click', {;
+      button_name: buttonName,;
+      location: location || window && window.location.pathname,;
     });
   };
+
+  // Track form submissions;
+  const trackFormSubmission = (formName: string) => {;
+    trackEvent('form_submit', {;
+      form_name: formName,;
+      page_location: window && window.location.href,;
+    });
+  };
+
+  // Track external link clicks;
+  const trackExternalLink = (url: string, linkText: string) => {;
+    trackEvent('external_link_click', {;
+      link_url: url,;
+      link_text: linkText,;
+      page_location: window && window.location.href,;
+    });
+  };
+
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
 
@@ -215,22 +227,29 @@ if ( {) {
 
       <script;
         dangerouslySetInnerHTML={{
-
+          __html: `;
+            // Performance monitoring;
+            // Check condition
+if ( {) {
+  $2
+}
+              window.addEventListener ('load', function () {
+                set_timeout (function () {
+                  const perf_data = performance.getEntriesByType ('navigation')[0];
+                  // Check condition
+if ( {) {
+  $2
+}
+                    const load_time = perf_data.loadEventEnd - perf_data.loadEventStart;
+                    // Check condition
+if ( {) {
+  $2
+}
+                      window.gtag ('event', 'timing_complete', {
                         name: 'load',
-                        value: Math.round(loadTime),
-                      });
-          __html: `
-            // Performance monitoring
-            if ('performance' in window) {
-              window && window.addEventListener('load', function() {
-                setTimeout(function() {
-                  const perfData = performance && performance.getEntriesByType('navigation')[0]
-                  if (perfData) {
-                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                    if (window.gtag) {
-                      window.gtag('event', 'timing_complete', {
-                        name: 'load'
-                        value: Math.round(loadTime)
+                        value: Math.round (load_time),
+
+
                         name: 'load',
                         value: Math.round(loadTime),
                       });

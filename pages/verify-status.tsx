@@ -1,3 +1,66 @@
+
+
+
+import { useState, useEffect } from 'react',;
+import { useRouter } from 'next/router',;
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
+import { AuthLayout } from '@/layout',;
+import { supabase } from '@/integrations/supabase/client', // Import Supabase client
+import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
+;
+export default function VerifyStatus() {
+
+  const router = useRouter(),
+  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
+  const { email: emailParam } = router.query,
+  const [email, setEmail] = useState(''),
+  const [message, setMessage] = useState(''),
+  const [error, setError] = useState(''),
+  const [isResending, setIsResending] = useState(false),
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false),
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null),
+  const [countdown, setCountdown] = useState(0),
+
+  useEffect(() => {
+    if (typeof emailParam === 'string') {
+      setEmail(emailParam)
+    }
+  }, [emailParam]),
+
+  // Countdown timer for resend button
+  useEffect(() => {
+    let interval: NodeJS.Timeout,
+    if (countdown > 0) {
+      interval = setInterval(() => {
+        setCountdown(prev => prev - 1)
+      }, 1000)
+    }
+    return () => clearInterval(interval)
+  }, [countdown]),
+
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address'),
+      return
+    }
+
+    setIsResending(true),
+    setError(''),
+    setMessage(''),
+
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
+import { AuthLayout } from '@/layout';
+
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -231,6 +294,7 @@ export default function VerifyStatus(req, res) {
     setIsResending(true);
     setError('');
     setMessage('');
+
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -296,31 +360,18 @@ if ( {) {
         set_error (''), // Clear previous errors;
       } else {
         // This case means there's no active user session found by Supabase client.;
-        // This is expected if they haven't clicked the link from a different browser/device context yet.;
-        setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.');
-        setError('');
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-      logErrorToProduction('Error checking verification status:', { data: err });
-      setError('An unexpected error occurred while checking status. Please try again.');
-    } finally {;
-      setIsCheckingStatus(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },
-  const handleTryLogin = () => {
-    router.push(`/auth/login?email=${encodeURIComponent(email)}`)
-  },
-  const handleGoBack = () => {
-    router.back()
-  },
+        // This is expected if they haven't clicked the link from a different browser / device context yet.;
+        set_message ('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.'),
+        set_error ('');
+      }
+    } catch (err: any) {
+      logErrorToProduction ('Error checking verification status:', { data: err }),
+      set_error ('An unexpected error occurred while checking status. Please try again.');
+    } finally {
+      setIsCheckingStatus (false);
+    }
+
+
   return (
     <AuthLayout>
       <div className="flex min-h-screen items-center justify-center p-4">
@@ -331,6 +382,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -346,6 +399,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
@@ -382,6 +437,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -401,6 +458,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
               placeholder="Enter your email address"
               className="w-full"
             />
@@ -422,6 +480,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           {email && (
 
             <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
@@ -442,10 +501,11 @@ if ( {) {
           {/* Action Buttons */}
           <div className="space-y-3">
             {/* Check Status Button */}
-            <Button
-              onClick={handleCheckStatus}
-              disabled={!email |isCheckingStatus}
+
+
+
               disabled={!email || isCheckingStatus}
+
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -486,6 +546,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="w-full"
               variant="outline"
             >
@@ -499,13 +561,11 @@ if ( {) {
                   <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
-              )}
-            </Button>
-            {/* Resend Email Button */}
-            <Button
-              onClick={handleResendEmail}
-              disabled={!email |isResending |countdown > 0}
+
+
+
               disabled={!email || isResending || countdown > 0}
+
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -528,6 +588,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="w-full"
               variant="secondary"
             >
@@ -564,16 +626,49 @@ if ( {) {
   }
 }
             <Button;
-              onClick={handleTryLogin  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              disabled={!email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              on_click={handleCheckStatus}
+              disabled={!email || isCheckingStatus}
+              className="w - full";
+              variant="outline";
+            >;
+              {isCheckingStatus ? (
+                <>;
+                  <RefreshCw className="h - 4 w - 4 mr - 2 animate - spin" />;
+                  Checking Status...;
+                </>) : (
+                <>;
+                  <Eye className="h - 4 w - 4 mr - 2" />;
+                  Check Verification Status;
+                </>)}
+            </Button>;
+            {/* Resend Email Button */}
+            <Button;
+              on_click={handleResendEmail}
+              disabled={!email || is_resending || countdown > 0}
+              className="w - full";
+              variant="secondary";
+            >;
+              {is_resending ? (
+                <>;
+                  <RefreshCw className="h - 4 w - 4 mr - 2 animate - spin" />;
+                  Sending Email...;
+                </>) : countdown > 0 ? (
+                <>;
+                  <Clock className="h - 4 w - 4 mr - 2" />;
+                  Resend in {countdown}s;
+                </>) : (
+                <>;
+                  <Mail className="h - 4 w - 4 mr - 2" />;
+                  Resend Verification Email;
+                </>)}
+            </Button>;
+
+            {/* Try Login Button */}
+            <Button;
+              on_click={handleTryLogin}
+              disabled={!email}
+
+
               className="w-full"
             >
               Try Login
@@ -585,6 +680,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -596,6 +693,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -620,6 +719,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               variant="ghost"
               className="w-full text-sm"
             >
@@ -632,6 +733,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               variant="ghost"
               className="w-full text-sm"
             >
@@ -642,12 +745,58 @@ if ( {) {
       </div>
     </AuthLayout>
   )
+
 }
+
+              className="w - full";
+            >;
+              Try Login;
+            </Button>;
+          </div>;
+          {/* Help Text */}
+          <div className="text - center text - sm text - gray - 500 space - y-2">;
+            <p>;
+              Can't find the verification email? Check your spam folder or try a different email address.;
+            </p>;
+            <Button;
+              on_click={handleGoBack}
+              variant="ghost";
+              size="sm";
+              className="text - blue - 600 hover:text - blue - 500";
+            >;
+              <ArrowLeft className="h - 4 w - 4 mr - 1" />;
+              Go Back;
+            </Button>;
+          </div>;
+          {/* Additional Options */}
+          <div className="border - t pt - 4 space - y-2">;
+            <Button;
+              on_click={() => router.push ('/signup')}
+              variant="ghost";
+              className="w - full text - sm";
+            >;
+              Use Different Email Address;
+            </Button>;
+            <Button;
+              on_click={() => router.push ('/contact')}
+              variant="ghost";
+              className="w - full text - sm";
+            >;
+              Contact Support;
+            </Button>;
+          </div>;
+        </div>;
+      </div>;
+    </AuthLayout>);
+}
+
 };
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+
+
 ;

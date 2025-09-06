@@ -13,13 +13,13 @@ import {
   Shield,;
   ArrowRight,;
 } from 'lucide-react';
-export default function FuturisticFooter() {;
 
-export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-export default function FuturisticFooter() {
+
 
 export default function FuturisticFooter() {;
+
+
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -239,6 +239,29 @@ export default function FuturisticFooter() {;
             </ul>
           </div>
 
+
+
+
+          {/* Quick Links */}
+
+
+          {/* Services */}
+
+
+          {/* Contact Info */}
+          <div>;
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>;
+              <Shield className='w-5 h-5 text-purple-400 mr-2' />;
+              Contact Us;
+            </h3>;
+            <div className='space-y-4'>;
+              <div className='flex items-start space-x-3'>;
+                <Phone className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
+                <div>;
+                  <p className='text-white font-medium'>Phone</p>;
+                  <a
+
+
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -306,6 +329,7 @@ export default function FuturisticFooter() {;
                   </a>;
                 </div>;
               </div>;
+
               <div className='flex items-start space-x-3'>;
                 <Mail className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />;
                 <div>;
@@ -321,6 +345,7 @@ export default function FuturisticFooter() {;
                   </a>;
                 </div>;
               </div>;
+
               <div className='flex items-start space-x-3'>;
                 <MapPin className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0' />;
                 <div>;
@@ -333,6 +358,7 @@ export default function FuturisticFooter() {;
             </div>;
           </div>;
         </div>;
+
         {/* Bottom section */}
         <div className='pt-8 border-t border-gray-800'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
@@ -381,3 +407,39 @@ export default function FuturisticFooter() {;
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
+
+                className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
+            </div>;
+
+            <div className="flex space-x-6 text-sm">;
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">;
+                Privacy Policy;
+              </Link>;
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">;
+                Terms of Service;
+              </Link>;
+              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">;
+                Cookie Policy;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+      {/* Floating elements */}
+      <div className='absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse' />;
+      <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />;
+      <div className='absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500' />;
+    </footer>;
+  );      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />;
+      <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />;
+      <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />;
+    </footer>;
+  );
+}
+
+}
+}
+
+
+

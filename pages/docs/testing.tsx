@@ -24,6 +24,6 @@ export default function TestingDocRedirect(req, res) {
       </main>;
     </>);
 }
-;
 
-;
+
+

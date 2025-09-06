@@ -13,50 +13,14 @@ import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Form schema
 
-const formSchema = z.object({
-  brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
-  subdomain: z.string()
-    .min(3, { message: 'Subdomain must be at least 3 characters' })
-    .max(20, { message: 'Subdomain must be at most 20 characters' })
-    .regex(/^[a-z0-9-]+$/, { message: 'Subdomain can only contain lowercase letters, numbers, and hyphens' });
-  custom_domain: z.string().optional()
-  primary_color: z.string().regex(/^#([0-9A-F]{6})$/i, { message: 'Must be a valid hex color' })
-  theme_preset: z.enum(['lightdarkneoncorporatestartup'])
-  headline: z.string().min(5, { message: 'Headline must be at least 5 characters' })
-  subtitle: z.string().min(5, { message: 'Subtitle must be at least 5 characters' })
-  cta: z.string().min(2, { message: 'CTA text must be at least 2 characters' })})
-type FormValues = z.infer<typeof formSchema>;
-export function WhitelabelRequestForm() {
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      brand_name: ''
-      subdomain: ''
-      custom_domain: ''
-      primary_color: '#9b87f5'
-      theme_preset: 'light'
-      headline: 'AI Marketplace'
-      subtitle: 'Find the best AI talent'
-      cta: 'Get Started'}})
-  const onSubmit = async (values: FormValues) => {
-    try {
-      // Prepare the data
-      const tenantData = {
-        brand_name: values.brand_name
-        subdomain: values.subdomain
-        custom_domain: values.custom_domain |null
-        primary_color: values.primary_color
-        theme_preset: values.theme_preset
-        landing_page_copy: {
-          headline: values.headline
-          subtitle: values.subtitle
-          cta: values.cta}
-      }
+
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
       };
       
+
+
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -75,8 +39,9 @@ export function WhitelabelRequestForm() {
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
     }
-  }
+
   };
+
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -157,6 +122,84 @@ export function WhitelabelRequestForm() {;
     }
 
   },
+
+
+
+
+  return (
+    <Card className="w-full max-w-2xl">
+      <CardHeader>
+        <CardTitle>Create White-Label Instance</CardTitle>
+        <CardDescription>
+          Create a customized version of the platform for your client or partner.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="space-y-4">
+              <FormField
+                control={form.control}
+                name="brand_name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Brand Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Acme AI Solutions" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="subdomain"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Subdomain</FormLabel>
+                    <FormControl>
+                      <div className="flex items-center">
+                        <Input placeholder="acme" {...field} />
+                        <span className="ml-2 text-muted-foreground">.ziontechmarketplace.com</span>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="custom_domain"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Custom Domain (Optional)</FormLabel>
+                    <FormControl>
+                      <Input placeholder="marketplace.acme.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="primary_color"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Primary Brand Color</FormLabel>
+                    <FormControl>
+                      <div className="flex items-center gap-2">
+                        <Input type="color" {...field} className="w-12 h-9 p-1" />
+                        <Input {...field} placeholder="#9b87f5" className="flex-1" />
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="theme_preset"
+                render={({ field }) => (
                   <FormItem>
                     <FormLabel>Theme Preset</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>

@@ -1,3 +1,22 @@
+
+
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
+
+import { Switch } from "@/components/ui/switch";
+import { toast } from "sonner";
+interface Integration {;
 import React, { useState } from './react';
 import {
   Dialog,
@@ -25,6 +44,10 @@ interface IntegrationConnectionModalProps {;
 
   isOpen: boolean;
   onClose: () => void;
+  integration: Integration
+}
+
+
 export function IntegrationConnectionModal(): any ({;
   isOpen,;
   onClose,;
@@ -171,24 +194,23 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             </DialogDescription>
           </div>
         </DialogHeader>
-        {integration.status === "connected" |
+
+
         {integration.status === "connected" ||
+
         integration.status === "warning" ? (
         
         {(integration.status === "connected" || integration.status === "warning") ? (
+
+
+
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="autoCreateContacts"
-                    checked={syncSettings.autoCreateContacts}
-                    onCheckedChange={(checked) =>
-                      setSyncSettings({
-                        ...syncSettings
-                        autoCreateContacts: checked as boolean
-                      })
+
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -202,15 +224,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     Auto-create contacts in {integration.name}
                   </Label>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="pushNotes"
-                    checked={syncSettings.pushNotes}
-                    onCheckedChange={(checked) =>
-                      setSyncSettings({
-                        ...syncSettings
-                        pushNotes: checked as boolean
-                      })
+
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -222,15 +238,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="syncJobDetails"
-                    checked={syncSettings.syncJobDetails}
-                    onCheckedChange={(checked) =>
-                      setSyncSettings({
-                        ...syncSettings
-                        syncJobDetails: checked as boolean
-                      })
+
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -242,15 +252,9 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="syncApplicantData"
-                    checked={syncSettings.syncApplicantData}
-                    onCheckedChange={(checked) =>
-                      setSyncSettings({
-                        ...syncSettings
-                        syncApplicantData: checked as boolean
-                      })
+
+
+
                 
                 <div className="flex items-center space-x-2">
                   <Checkbox 
@@ -264,6 +268,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </div>
               </div>
               
+
+
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -356,6 +362,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               </div>
             </div>
             
+
+
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -380,7 +388,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 Connect your {integration.name} account to sync job contacts, applicants, and more. 
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
-              
+
+
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -392,6 +401,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               </div>
             </div>
             
+
+
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
@@ -740,3 +751,4 @@ function IntegrationConnectionModal() {
 }
 }
 ;
+

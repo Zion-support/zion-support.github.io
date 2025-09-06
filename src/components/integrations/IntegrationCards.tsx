@@ -6,6 +6,26 @@ interface IntegrationCardProps {
   href?: string
   onConnect?: () => void
 
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardFooter,;
+  CardHeader,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {;
+  ArrowRight,;
+  Check,;
+  ExternalLink,;
+  Slack,;
+  Briefcase,;
+  Users,;
+} from 'lucide-react';
+
+
 export function IntegrationCard({
   title,
   description,
@@ -81,6 +101,15 @@ interface IntegrationCardProps {;
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
+
+
+
+}
+
+export function IntegrationCard(): any ({;
+  title;
+  description;
+  icon;
 
   status = "disconnected";
   href;
@@ -209,5 +238,9 @@ export function IntegrationCards() {
     </div>
   )
 }
+
+
+      />;
+    </div>;
+  );
 }
-;

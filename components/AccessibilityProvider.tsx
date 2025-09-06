@@ -14,12 +14,12 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
-const AccessibilityContext = createContext<
-  AccessibilityContextType | undefined
->(undefined);
-export const useAccessibility = () => {
+
+
 
 export const useAccessibility = () => {;
+
+
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -32,6 +32,7 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+
 
 const AccessibilityContext = createContext<;
   AccessibilityContextType | undefined;
@@ -46,12 +47,19 @@ export const useAccessibility = () => {;
   }
   return context;
 };
+
 interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
 
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
+  children,;
+}) => {;
+
+
   children,
 }) => {;
+
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);

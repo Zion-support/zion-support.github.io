@@ -2,11 +2,96 @@ import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-        <div className='text-center text-sm text-muted-foreground'>
-          If the problem persists, please{' '}
-          <a
-            href='mailto:support@example.com'
-            className='text-primary hover:underline'          >
+import { RefreshCcw, AlertCircle } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface MarketplaceErrorFallbackProps extends FallbackProps {
+  // Additional props if needed
+
+
+import {ErrorBoundary, FallbackProps} from 'react - error - boundary';
+import * as Sentry from '@sentry / nextjs';
+import { mutate } from 'swr';
+import { Button } from '@/components / ui / button';
+import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
+import { RefreshCcw, AlertCircle } from 'lucide-react';
+import { logErrorToProduction } from '@/utils / production_logger';
+interface MarketplaceErrorFallbackProps extends FallbackProps {
+  // Additional props if needed;
+/**
+ * MarketplaceErrorFallback - Function description
+ */
+function MarketplaceErrorFallback() {  const handle_retry = async () => {
+
+    try {
+      // Re - call SWR mutate ('*') to refresh all cached data;
+      await mutate (() => true, undefined, { revalidate: true });
+      resetErrorBoundary ();
+    } catch (retry_error) {
+      logErrorToProduction ('Error during retry:', { data: retry_error });
+      Sentry.capture_exception (retry_error) }
+  }
+  return (/**
+ * MarketplaceErrorFallback - Function description
+ */
+function MarketplaceErrorFallback() {
+  const handle_retry = async () => {
+    try {
+
+function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
+  const handleRetry = async () => {
+    try {
+      // Re-call SWR mutate('*') to refresh all cached data
+      await mutate(() => true, undefined, { revalidate: true });
+
+      resetErrorBoundary()
+    } catch (retryError) {
+      logErrorToProduction('Error during retry:', { data: retryError })
+      Sentry.captureException(retryError)
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCcw, AlertCircle } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface MarketplaceErrorFallbackProps extends FallbackProps {;
+  // Additional props if needed;
+
+function MarketplaceErrorFallback(): any ({;
+  error,;
+  resetErrorBoundary,;
+}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {;
+    try {;
+      // Re-call SWR mutate('*') to refresh all cached data;
+      await mutate(() => true, undefined, { revalidate: true });
+      resetErrorBoundary();
+    } catch (retryError) {;
+      logErrorToProduction('Error during retry:', { data: retryError });
+      Sentry && Sentry.captureException(retryError);    }
+    }
+
+  };
+
+  return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
+  const handleRetry = async () => {;
+    try {;
+      // Re-call SWR mutate('*') to refresh all cached data;
+      await mutate((,) => true, undefined, { revalidate: true }),;
+      resetErrorBoundary();
+    } catch (retryError) {;
+      logErrorToProduction('Error during retry:', { data: retryError }),;
+      Sentry && Sentry.captureException(retryError);
+
+
+    }
+  }
+  return (
+            onClick={() => window.location.reload()}
+            variant="outline"
+            className="w-full"
+          >
+            Reload Page
+          </Button>
+        </div>
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
@@ -24,31 +109,13 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
-interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode
-export function MarketplaceErrorBoundary({
-  children
-}: MarketplaceErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
-    // Log boundary errors to Sentry
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
-      componentStack: errorInfo.componentStack
-    })
-    Sentry.withScope(scope => {
-      scope.setTag('errorBoundary', 'marketplace')
-      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack |undefined
-      })
-      scope.setLevel('error')
-      Sentry.captureException(error)
-    })
-  }
-      >
-      {children}
-    </ErrorBoundary>
-  )
-}   return (
-    <ErrorBoundary
+
+
+            contact support
+          </a>
+        </div>
+      </div>
+    </div>
 
       // Re - call SWR mutate ('*') to refresh all cached data;
       await mutate ((, ) => true, undefined, { revalidate: true }),
@@ -126,21 +193,38 @@ function MarketplaceErrorBoundary() {
   }
       >;
       {children}
-  return (;
+    <ErrorBoundary 
+
+  );
+}
+
+interface MarketplaceErrorBoundaryProps {
+  children: React.ReactNode,
+}
+
+export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    // Log boundary errors to Sentry
+    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack });
+    Sentry.withScope((scope) => {
+      scope.setTag('errorBoundarymarketplace');
+      scope.setContext('errorInfo', {
+        componentStack: errorInfo.componentStack || undefined});
+      scope.setLevel('error');
+      Sentry.captureException(error)
+    })
+  };
+
+
+  return (
+    <ErrorBoundary 
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}
-    >
-      {children}
-    </ErrorBoundary>;
-  );
-}   return (
-    <ErrorBoundary
-
-      FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}>;
+      on_error={handle_error}
+    >;
       {children}
 
-    </ErrorBoundary>;
-  );
-} ;
+} 
+
+    </ErrorBoundary>);
+}

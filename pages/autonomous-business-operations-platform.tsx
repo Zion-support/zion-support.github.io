@@ -1,4 +1,39 @@
 
+
+  Rocket, Target, TrendingUp, Users, CheckCircle,
+  ArrowRight, Star, Award, Clock, DollarSign,
+  Building2, Gauge, BarChart3, Settings, Workflow
+} from 'lucide-react',
+const AutonomousBusinessOperationsPlatform = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: "AI Autonomous Management",
+      description: "Fully autonomous business operations with intelligent decision-making",
+
+
+      description: "Automated production lines, quality control, and supply chain management"
+    }
+    {
+      title: "Healthcare"
+      description: "Patient care automation, medical device management, and administrative tasks"
+    }
+    {
+      title: "Finance"
+      description: "Automated trading, risk management, and compliance monitoring"
+    }
+    {
+      title: "Retail"
+      description: "Inventory management, customer service, and sales optimization"
+    }
+
+
+    },
+    {
+      icon: Brain,
+      title: "Cognitive Business Intelligence",
+      description: "Advanced AI that understands and optimizes your business processes",
+
       color: "from-purple-500 to-pink-500"
 
     },
@@ -16,12 +51,8 @@
 
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
   ],
   const capabilities = [
     "24/7 autonomous operation",
@@ -32,8 +63,11 @@
     "Resource management",
     "Performance monitoring",
     "Risk assessment",
+
+
     "Compliance automation"
   ],
+
 
   const industries = [
     {
@@ -51,12 +85,8 @@
     {
       title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
   ],
   const benefits = [
     {
@@ -82,12 +112,8 @@
       title: "Team Productivity"
       value: "250%"
       description: "Increase in team productivity"
-    }
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
   ],
   return (
     <>
@@ -107,42 +133,63 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            >
-              <div className="flex justify-center mb-6">
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
-                  <Bot className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Autonomous Business
-                <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Operations Platform
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with AI-powered autonomous operations that work 24/7
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+      description: "Boost in operational efficiency";
+    },
+    {
+      icon: DollarSign,
+      title: "Cost Reduction",
+      value: "40%",
+      description: "Reduction in operational costs";
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "80%",
+      description: "Faster decision making";
+    },
+    {
+      icon: Users,
+      title: "Team Productivity",
+      value: "250%",
+      description: "Increase in team productivity";
+    }
+  ],
+  return (
+    <>;
+      <Head>;
+        <title > Autonomous Business Operations Platform - Zion Tech Group</title>;
+        <meta name="description" content="Revolutionary AI - powered autonomous business operations platform that manages your entire business with intelligent automation and decision - making capabilities." />;
+        <meta name="keywords" content="autonomous business, AI automation, business operations, intelligent automation, process optimization" />;
+        <meta property="og:title" content="Autonomous Business Operations Platform - Zion Tech Group" />;
+        <meta property="og:description" content="Revolutionary AI - powered autonomous business operations platform." />;
+        <meta property="og:type" content="website" />;
+        <meta property="og:url" content="https://ziontechgroup.com / autonomous - business - operations - platform" />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">;
+        {/* Hero Section */}
+        <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;
+          <div className="relative max - w-7xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
+
                 Transform your business with AI-powered autonomous operations that work 24/7,
+
                 Transform your business with AI-powered autonomous operations that work 24/7, 
                 Transform your business with AI-powered autonomous operations that work 24/7,
+
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -366,6 +413,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -383,31 +432,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -464,6 +490,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -481,31 +509,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, x: -20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, x: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
@@ -559,6 +564,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -578,31 +585,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -662,6 +646,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -679,31 +665,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  key={index  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
@@ -727,6 +690,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -775,11 +740,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 }
 export default AutonomousBusinessOperationsPlatform;
 
-},
-
-export default AutonomousBusinessOperationsPlatform,;
-;
-export default AutonomousBusinessOperationsPlatform,
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Automate Your Business?;
@@ -800,7 +760,10 @@ export default AutonomousBusinessOperationsPlatform,
           </div>;
         </section>;
       </div>;
-    </>;
-  );
-},;
-export default AutonomousBusinessOperationsPlatform;
+    </>);
+},
+export default AutonomousBusinessOperationsPlatform,
+;
+
+},
+

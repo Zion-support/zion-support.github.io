@@ -2,11 +2,6 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs
   const tabs: TabDefinition[] = [
-    { id: 'documentation', label: 'Documentation', icon: BookOpen },
-    { id: 'api-keys', label: 'API Keys', icon: Key },
-    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
-    { id: 'logs', label: 'Logs', icon: List },
-  ]
 
 
     { id: "documentation", label: "Documentation", icon: BookOpen },
@@ -65,7 +60,6 @@ export function DeveloperPortal() {
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
-
   return (
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
@@ -260,10 +254,6 @@ export function DeveloperPortal() {;
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
-      </div>
-    </div>
-  )
-}
 
 
 
@@ -275,4 +265,17 @@ export default function ProtectedDeveloperPortal() {
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
+};
+};
+  );
+};
+
 ;
+
+export default function ProtectedDeveloperPortal() {;
+  return (;
+    <ProtectedRoute>;
+      <DeveloperPortal />;
+    </ProtectedRoute>;
+  );
+}

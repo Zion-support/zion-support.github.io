@@ -1,5 +1,5 @@
 
-import { UseFormReturn } from "react-hook-form";
+
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -8,6 +8,7 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
+
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField;
@@ -32,6 +33,8 @@ import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "./ContractForm";
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
+
+
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -159,6 +162,8 @@ function PaymentTermsFields() {
               </Select>
               <FormMessage />
             </FormItem>
+
+
           )}
         />
         <FormField

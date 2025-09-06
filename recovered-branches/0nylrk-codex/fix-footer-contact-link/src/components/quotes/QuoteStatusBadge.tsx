@@ -5,6 +5,7 @@ const statusConfig: Record<QuoteStatus, { label: string, className: string }> = 
 import { Badge } from "@/components/ui/badge",
 import { QuoteStatus } from "@/types/quotes",
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
+
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -20,17 +21,21 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }}
 interface QuoteStatusBadgeProps {
   status: QuoteStatus
-}
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
+
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+
+
   const config = statusConfig[status];
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
+  const config = status_config[status];
+;
   return (
-    <Badge className={config.className}>
+    <Badge className={config.class_name}>;
       {config.label}
-    </Badge>
-  )
-}
+
+const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
+
 
 import { Badge } from "@/components/ui/badge",;
 import { QuoteStatus } from "@/types/quotes",;
@@ -55,4 +60,8 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
       {config && config.label}
     </Badge>;
   );
+
+
+
+
 };

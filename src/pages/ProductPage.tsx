@@ -1,8 +1,15 @@
 if (!id) return;
       try {;
-    }
-    };
+        const res = await fetch(`/api/products/${id}`);
 
+
+
+
+        }
+      } catch (err) {
+        // Fail silently and fall back to local data
+        logErrorToProduction('Error fetching product', { data: err });
+      }
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
@@ -50,15 +57,16 @@ if (!id) return;
   if (!product && !id) { // If no id from router yet, it might still be loading;
     return <div className="p-6 text-white">Loading product details...</div>;
   }
-;
+
   if (!product) {;
     return <div className="p-6 text-white">Product not found</div>;
   }
-;
-  const inCart = items.some(i => i.id === product.id),;
+
+  const inCart = items && items.some(i => i && i.id === product && product.id);
+
   const handleAdd = () => {;
-    if (inCart) return,;
-    setAdding(true),;
+    if (inCart) return;
+    setAdding(true);
     dispatch({;
       type: 'ADD_ITEM',;
       payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
@@ -96,33 +104,6 @@ if (!id) return;
         <p className="mb-6">{product.description}</p>
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-        </Button>
-      </div>
-    </>
-  );
-}
-//Only fetch if id is available (from router) ;
-}const inCart = items.some (i => i.id === product.id);
-const handleAdd = () => {if (inCart) return;
-setAdding (true);
-dispatch ({;
-  type: 'ADD ITEM';
-payload: {;
-  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-});
-toast.success (`1× $ {product.title ;
-}added`);
-setTimeout ( () => setAdding (false), 500) ;
-}
-product.title ;
-}description= {product.description ;
-}ogImage= {product.images?.[0] ;
-}/> </Button> </div> </>) ;
-}';
-}
-        <Button onClick={handleAdd} disabled={adding || inCart}>
-          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-;
         </Button>;
       </div>;
     </>;
@@ -164,9 +145,7 @@ if ( {) {
 ;
         </Button>;
       </div>;
-    </>;
-  );
-}
+    </>);
 ;
 }
 //Only fetch if id is available (from router) ;

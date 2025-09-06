@@ -31,4 +31,3 @@ export function BottomNavigation() {;
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-;

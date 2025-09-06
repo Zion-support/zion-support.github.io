@@ -10,7 +10,7 @@ import { execSync } from 'child_process';
 
     });
   } else {
-    console && console.log(' No security vulnerabilities found in dependencies');
+    console && console.log('✅ No security vulnerabilities found in dependencies');
   }
 } catch (error) {
 
@@ -19,7 +19,7 @@ import { execSync } from 'child_process';
 
 
 // Check for sensitive data in files
-console && console.log('\n Scanning for sensitive data...');
+console && console.log('\n🔍 Scanning for sensitive data...');
 const sensitivePatterns = [
   /password\s*=\s*["'][^"']+["']/gi,
   /api[_-]?key\s*=\s*["'][^"']+["']/gi,
@@ -72,7 +72,7 @@ if (sensitiveResults && sensitiveResults.length > 0) {
 
 
 // Check for outdated dependencies
-console && console.log('\n Checking for outdated dependencies...');
+console && console.log('\n📅 Checking for outdated dependencies...');
 try {
   const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
   const outdatedData = JSON && JSON.parse(outdatedResult);
@@ -85,7 +85,7 @@ try {
 
     });
   } else {
-    console && console.log(' All dependencies are up to date');
+    console && console.log('✅ All dependencies are up to date');
   }
 } catch (error) {
 

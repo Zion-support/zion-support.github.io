@@ -1,12 +1,6 @@
 
-import React, { useState } from 'react';
-import { Button  } from '@/components/ui/button';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Loader2, Sparkles, Check  } from 'lucide-react';
-import { Badge  } from '@/components/ui/badge';
-import { format, parseISO } from 'date-fns';
-interface MilestoneSuggestionsProps {
+
+
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -21,6 +15,7 @@ export function MilestoneSuggestions({;
   startDate;
   endDate;
   projectType;
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -76,17 +71,9 @@ export function MilestoneSuggestions({
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
-      }
-    }
-  }
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-    } catch (error) {
-      return dateString
-    }
-  }
+
   };
+
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -133,6 +120,32 @@ export function MilestoneSuggestions({;
     }
 
   },
+
+
+
+
+  return (
+    <div className="space-y-4">;
+      {!showSuggestions && (;
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating |!scopeSummary |!startDate}
+          className="w-full"
+        >
+          {isGenerating ? (
+            <>
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Generating milestones...
+            </>
+          ) : (
+            <>
+              <Sparkles className="mr-2 h-4 w-4" />
+              Suggest Project Milestones with AI
+            </>
+          )}
+        </Button>
+      )}
 
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>

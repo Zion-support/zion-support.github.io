@@ -32,15 +32,6 @@ import {
   ExternalLink,
   Zap,
   Brain,
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
-  Globe,;
-  Rocket,;} from 'lucide-react';import { ;
-  Search;
-  Filter
-  TrendingUp
-  DollarSign
-  Users
 
 
 
@@ -49,14 +40,6 @@ import {
   TrendingUp,
   DollarSign,
   Users,
-  Globe,;
-  Rocket,;} from 'lucide-react';import { ;
-  Search;
-  Filter
-  TrendingUp
-  DollarSign
-  Users
-
   Star;
   Check;
   X;
@@ -66,6 +49,113 @@ import {
   Brain;
   Globe;
 
+
+
+export default function ToolComparisonPage() {
+
+export default function ToolComparisonPage() {;
+
+  const [searchTerm, setSearchTerm] = React.useState('');
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [sortBy, setSortBy] = React.useState('rating');
+
+  const allTools = [
+    // AI Tools
+  Rocket;
+export default /**
+ * ToolComparisonPage - Function description
+ */
+function ToolComparisonPage() {
+  const [search_term, setSearchTerm] = React.useState ('');
+  const [selected_category, setSelectedCategory] = React.useState ('All');
+  const [sort_by, setSortBy] = React.useState ('rating');
+;
+  const all_tools = [;
+    // AI Tools;
+    {
+      name: 'ChatGPT'
+      category: 'AI Assistant'
+      pricing: 'Free - $20/month'
+      rating: 4.8
+      users: '100M+'
+      bestFor: 'Content creators, developers, researchers'
+      pros: [
+        'Powerful capabilities'
+        'Easy to use'
+        'Regular updates'
+        'Good free tier'
+      ]
+      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns']
+      website: 'https://chat.openai.com'
+      icon: <Brain className='w-6 h-6' />
+      color: 'text-green-400'
+    },    {      bestFor: 'Content creators, developers, researchers';
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier']
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns']
+      website: 'https://chat.openai.com'
+      icon: <Brain className="w-6 h-6" />
+      color: 'text-green-400'
+    }
+    {
+      name: 'Midjourney'
+      category: 'AI Art'
+      pricing: '$10 - $30/month'
+      rating: 4.7
+      users: '1M+'
+      bestFor: 'Designers, marketers, content creators'
+      pros: [
+        'High-quality output'
+        'Creative control'
+        'Commercial rights'
+        'Active community'
+      ]
+      cons: [
+        'Discord-only interface'
+        'Limited customization'
+        'Monthly subscription'
+      ]
+      website: 'https://midjourney.com'
+      icon: <Zap className='w-6 h-6' />
+      color: 'text-purple-400'
+    },    {      bestFor: 'Designers, marketers, content creators';
+      pros: ['High-quality outputCreative controlCommercial rightsActive community']
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription']
+      website: 'https://midjourney.com'
+      icon: <Zap className="w-6 h-6" />
+      color: 'text-purple-400'
+    }
+    {
+      name: 'Jasper'
+      category: 'AI Writing'
+      pricing: '$39 - $125/month'
+      rating: 4.6
+      users: '100K+'
+      bestFor: 'Marketing teams, content creators, businesses'
+      pros: [
+        'Specialized for marketing'
+        'Brand voice training'
+        'SEO optimization'
+        'Team features'
+      ]
+      cons: ['Expensive', 'Limited free trial', 'Can be repetitive']
+      website: 'https://jasper.ai'
+      icon: <Brain className='w-6 h-6' />
+      color: 'text-blue-400'
+    },    // SaaS Tools      bestFor: 'Marketing teams, content creators, businesses';
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features']
+      cons: ['ExpensiveLimited free trialCan be repetitive']
+      website: 'https://jasper.ai'
+      icon: <Brain className="w-6 h-6" />
+      color: 'text-blue-400'
+    }
+    // SaaS Tools
+    {
+      name: 'Zapier'
+      category: 'Automation'
+      pricing: 'Free - $19.99/month'
+      rating: 4.8
+      users: '2M+'
+      bestFor: 'Businesses looking to automate workflows'
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
@@ -958,6 +1048,10 @@ export default function ToolComparisonPage() {;
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
 
+
+
+
+
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -979,6 +1073,10 @@ export default function ToolComparisonPage() {;
                 250M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools.length}+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                {allTools.length}+
               </div>
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
@@ -1003,6 +1101,65 @@ export default function ToolComparisonPage() {;
           </div>
         </div>
       </section>
+                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
+                Get Expert Advice;
+              </Button>;
+            </div>;
+          </div>;
+
+          {/* Stats */}
+          <div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0 && 0.6s' }}>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>;
+                {allTools && allTools.length}+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Tools Analyzed</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>;
+                9;
+              </div>;
+              <div className='text-gray-400 text-sm'>Categories</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>;
+                4 && 4.7+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Avg Rating</div>;
+            </div>;
+            <div className='text-center group'>;
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>;
+                250M+;
+              </div>;
+              <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {allTools && allTools.length}+;
+              </div>;
+              <div className="text-gray-400 text-sm">Tools Analyzed</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">;
+                9;
+              </div>;
+              <div className="text-gray-400 text-sm">Categories</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">;
+                4 && 4.7+;
+              </div>;
+              <div className="text-gray-400 text-sm">Avg Rating</div>;
+            </div>;
+            <div className="text-center group">;
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">;
+                250M+;
+              </div>;
+              <div className="text-gray-400 text-sm">Total Users</div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+      {/* Filters and Search */}
 
                 onChange={e => setSearchTerm(e && e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />;
@@ -1015,22 +1172,13 @@ export default function ToolComparisonPage() {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
-      {/* Filters and Search */}
-      <section className='py-16 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
-            {/* Search */}
-            <div className='relative flex-1 max-w-md'>
-              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
               <input
-                type='text'
-                placeholder='Search tools, categories, or use cases...'
+                type="text"
+                placeholder="Search tools, categories, or use cases..."
                 value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}
-                className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
-            </div>
-            {/* Category Filter */}
-            <div className='flex flex-wrap gap-2'>
 
 
             {/* Category Filter */}
@@ -1038,10 +1186,6 @@ export default function ToolComparisonPage() {;
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
 
-              {categories.map(category => (                <button
-
-              />
-            </div>
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-2">
@@ -1056,6 +1200,7 @@ export default function ToolComparisonPage() {;
             {/* Category Filter */}
 
                 <button
+
 
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -1076,6 +1221,26 @@ export default function ToolComparisonPage() {;
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
+
+            {/* Sort */}
+            <div className='flex items-center space-x-2'>
+              <Filter className='w-5 h-5 text-gray-400' />
+
+
+            {/* Sort */}
+            <div className='flex items-center space-x-2'>
+              <Filter className='w-5 h-5 text-gray-400' />
+
+
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e && e.target.value)}
+                className='bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500';
+              >;
+                <option value='rating'>Sort by Rating</option>;
+                <option value='users'>Sort by Users</option>;
+                <option value='name'>Sort by Name</option>              </select>              <select
+                value={sortBy}
 
       <section id="comparison" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1112,6 +1277,7 @@ export default function ToolComparisonPage() {;
           </div>;
         </div>;
       </section>;
+
       {/* Comparison Table */}
       <section id='comparison' className='py-24 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1123,6 +1289,7 @@ export default function ToolComparisonPage() {;
               tools for your business needs.;
             </p>;
           </div>;
+
           <div className='overflow-x-auto'>;
             <table className='w-full'>;
               <thead>;
@@ -1229,14 +1396,14 @@ export default function ToolComparisonPage() {;
               </thead>
               <tbody>
                 {sortedTools.map((tool, index) => (
-<tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
+                  <tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
                     <td className="py-4 px-6">
                       <div className="flex items-center space-x-3">
                         <div className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool.color}`}>
                           {tool.icon}
                         </div>
                         <div>
-<div className="font-semibold text-white">{tool.name}</div>
+                          <div className="font-semibold text-white">{tool.name}</div>
                         </div>
                       </div>
                     </td>
@@ -1250,7 +1417,7 @@ export default function ToolComparisonPage() {;
                         {tool.pricing}
                       </span>
                     </td>
-<td className="py-4 px-6">
+                    <td className="py-4 px-6">
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-white">{tool.rating}</span>
@@ -1300,6 +1467,9 @@ export default function ToolComparisonPage() {;
         </div>
       </section>
 
+
+
+
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1307,6 +1477,8 @@ export default function ToolComparisonPage() {;
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Detailed Analysis
+
+
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1318,6 +1490,7 @@ export default function ToolComparisonPage() {;
               </tbody>;
             </table>;
           </div>;
+
           {sortedTools && sortedTools.length === 0 && (;
             <div className='text-center py-20'>;
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
@@ -1333,6 +1506,7 @@ export default function ToolComparisonPage() {;
           )}
         </div>;
       </section>;
+
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1344,45 +1518,9 @@ export default function ToolComparisonPage() {;
               best decision for your business.;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
-              </tbody>
-            </table>
-          </div>
-          {sortedTools.length === 0 && (
-            <div className='text-center py-20'>
-              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-gray-400 mb-2'>
-                No tools found
-              </h3>
-              <p className='text-gray-500'>
-                Try adjusting your search criteria or category filter.
-              </p>            </div>            <div className="text-center py-20">
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-
-            </div>
-
-          )}
-        </div>
-      </section>
-
-      {/* Detailed Comparison Cards */}
-      <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-
-              Detailed Analysis
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Deep dive into each tool's pros, cons, and use cases to make the
-              best decision for your business.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            {sortedTools.slice(0, 6).map((tool, index) => (
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1400,6 +1538,7 @@ export default function ToolComparisonPage() {;
               Deep dive into each tool's pros, cons, and use cases to make the best decision for your business.
             </p>
           </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {sortedTools.slice(0, 6).map((tool, index) => (
               <Card
@@ -1424,6 +1563,12 @@ export default function ToolComparisonPage() {;
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span>{tool.rating}</span>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
 
                 <div className="mb-4">
@@ -1463,12 +1608,14 @@ export default function ToolComparisonPage() {;
                     </div>;
                   </div>;
                 </div>;
+
                 <div className='mb-4'>;
                   <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
                     Best For:;
                   </h4>;
                   <p className='text-sm text-gray-400'>{tool && tool.bestFor}</p>;
                 </div>;
+
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>;
                   <div>;
                     <h4 className='text-sm font-semibold text-green-400 mb-2 flex items-center'>;
@@ -1481,6 +1628,7 @@ export default function ToolComparisonPage() {;
                           key={proIndex}
                           className='text-xs text-gray-400 flex items-start'>;
                           <span className='w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {pro}                </div>;
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">;
                   <div>;
                     <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">;
@@ -1503,14 +1651,6 @@ export default function ToolComparisonPage() {;
                       <X className="w-4 h-4 mr-1" />
                       Cons
                     </h4>
-                    <ul className='space-y-1'>
-                      {tool.cons.slice(0, 3).map((con, conIndex) => (
-                        <li
-                          key={conIndex}
-                          className='text-xs text-gray-400 flex items-start'
-                        >
-                          <span className='w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {con}                      Cons
-                    </h4>
                     <ul className="space-y-1">
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
@@ -1523,6 +1663,7 @@ export default function ToolComparisonPage() {;
                     </ul>;
                   </div>;
                 </div>;
+
                 <div className='flex items-center justify-between'>;
 
                   <span
@@ -1549,6 +1690,8 @@ export default function ToolComparisonPage() {;
               </Card>;
 
 
+                <div className="flex items-center justify-between">
+                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 
 
 
@@ -1562,6 +1705,7 @@ export default function ToolComparisonPage() {;
                     href={tool.website}                <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     href={tool.website}
+
 
                     {tool.pricing}
                   </span>
@@ -1581,12 +1725,22 @@ export default function ToolComparisonPage() {;
 
                   </Button>
 
+
+
                 </div>
               </Card>
             ))}
           </div>
         </div>
       </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
 
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
@@ -1595,6 +1749,7 @@ export default function ToolComparisonPage() {;
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
             Need Help Choosing?
+
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -1613,17 +1768,15 @@ export default function ToolComparisonPage() {;
               href='/saas-marketplace'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
-              Explore All Tools
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
+
+
+              Explore All Tools;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
   );
 }
     </>);
@@ -1643,4 +1796,5 @@ export default function ToolComparisonPage() {;
 }
 
   );
+}
 }

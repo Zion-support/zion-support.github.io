@@ -46,6 +46,7 @@ async function handler(req, res) {
     const { email } = req.body || {};
     
     if (!email) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       res.statusCode = 400;
       res.json({ "error": 'Email: is required})';
       return}

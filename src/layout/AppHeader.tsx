@@ -95,6 +95,19 @@ import React from 'react';
               <Link
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
+
+
+
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+                  e.preventDefault(),
+                  // For the main login link, we might not have a specific returnTo beyond current page,
+                  // or we could default to dashboard.
+                  // For consistency with how sub-menus now set it:
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
+
+                  openLoginModal(router.asPath)
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
                   // For the main login link, we might not have a specific returnTo beyond current page,;
@@ -132,11 +145,34 @@ import React from 'react';
         <div className="md:hidden fixed inset-0 z-60 pt-16">
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick = {(,) => setMobileMenuOpen(false),}
+            aria-hidden="true";
+          />;
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
+
+            <MobileMenu
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />
+          </div>
+        </div>
+              unreadCount={unreadCount} 
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={openLoginModal}
+            />;
+          </div>;
+        </div>;
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />;
+          </div>;
+        </div>;
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -899,15 +935,15 @@ import React from 'react';
               <div className="hidden md:flex items-center space-x-3">;
                 <Link
                   to="/login"
-                  className="px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">
-                  Login
-                </Link>
+                  className="px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">;
+                  Login;
+                </Link>;
                 <Link
                   to="/signup"
-                  className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
-                  Get Started
-                </Link>
-              </div>
+                  className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">;
+                  Get Started;
+                </Link>;
+              </div>;
             )}
 
                 </div>)}
@@ -956,57 +992,56 @@ import React from 'react';
         </div>;
       </div>;
       {/* Mobile Navigation */}
-      <AnimatePresence>
+      <AnimatePresence>;
         {mobileMenuOpen && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-zion-slate-dark border-t border-zion-cyan/20">
-            <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="relative">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-              </form>
+            className="lg:hidden bg - zion - slate - dark border - t border - zion - cyan / 20">;
+            <div className="container mx - auto px - 6 py - 6">              {/* Mobile Search */}
+              <form on_submit={handle_search} className="relative">;
+                <input;
+                  type="text";
+                  placeholder="Search...";
+                  value={search_query}
+                  on_change={(e) => setSearchQuery (e.target.value)}
+                  className="w - full px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan";
+                />;
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light" />;
+              </form>;
               {/* Mobile Navigation Links */}
-              <div className="space-y-2">
-                {navigation.map((item) => (
-                  <Link
+              <div className="space - y-2">;
+                {navigation.map ((item) => (
+                  <Link;
                     key={item.name}
                     to={item.href}
-                    onClick={closeMobileMenu}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      item.current
-                        ? 'text-zion-cyan bg-zion-cyan/10'
-                        : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                    on_click={closeMobileMenu}
+                    className={`block px - 3 py - 2 rounded - md text - base font - medium transition - colors ${
+                      item.current;
+                        ? 'text - zion - cyan bg - zion - cyan / 10';
+                        : 'text - zion - slate - light hover:text - zion - cyan hover:bg - zion - cyan / 10';
 }`}
-                  >
+                  >;
                     {item.name}
-                  </Link>
-                ))}
-              </nav>
+                  </Link>))}
+              </nav>;
               {/* Mobile Quick Actions */}
-              <div className="mt-6 pt-6 border-t border-zinc-800/50">
-                <div className="grid grid-cols-1 gap-3">
-                  {quickActions.map((action) => (
-                    <Link
+              <div className="mt - 6 pt - 6 border - t border - zinc - 800 / 50">;
+                <div className="grid grid - cols - 1 gap - 3">;
+                  {quick_actions.map ((action) => (
+                    <Link;
                       key={action.name}
                       to={action.href}
-                      className="btn-futuristic text-center">
+                      className="btn - futuristic text - center">;
                       {action.name}        {/* Mobile Navigation */}
 
         {mobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
-              {navigation.map((item) => (
-                <Link
+          <div className="md:hidden">;
+            <div className="px - 2 pt - 2 pb - 3 space - y-1 sm:px - 3 bg - slate - 800 / 95 border - t border - slate - 700 / 20">;
+              {navigation.map ((item) => (
+                <Link;
                   key={item.name}
 
       {/* Mobile Navigation */}
@@ -1090,102 +1125,106 @@ import React from 'react';
               </div>;
 
               {/* Mobile Services */}
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Services
-                </div>
-                {services.map((service) => (
+              <div className="space-y-2">;
+                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
+                  Services;
+                </div>;
+                {services && services.map((service) => (;
                   <Link
-                    key={service.name}
-                    to={service.href}
+                    key={service && service.name}
+                    to={service && service.href}
                     onClick={closeMobileMenu}
-                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    {service.name}
-                  </Link>
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                    {service && service.name}
+                  </Link>;
                 ))}
-              </div>
+              </div>;
+
               {/* Mobile Solutions */}
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Solutions
-                </div>
-                {solutions.map((solution) => (
+              <div className="space-y-2">;
+                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
+                  Solutions;
+                </div>;
+                {solutions && solutions.map((solution) => (;
                   <Link
-                    key={solution.name}
-                    to={solution.href}
+                    key={solution && solution.name}
+                    to={solution && solution.href}
                     onClick={closeMobileMenu}
-                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    {solution.name}
-                  </Link>
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                    {solution && solution.name}
+                  </Link>;
                 ))}
-              </div>
+              </div>;
+
               {/* Mobile Resources */}
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Resources
-                </div>
-                {resources.map((resource) => (
+              <div className="space-y-2">;
+                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
+                  Resources;
+                </div>;
+                {resources && resources.map((resource) => (;
                   <Link
-                    key={resource.name}
-                    to={resource.href}
+                    key={resource && resource.name}
+                    to={resource && resource.href}
                     onClick={closeMobileMenu}
-                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    {resource.name}
-                  </Link>
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                    {resource && resource.name}
+                  </Link>;
                 ))}
-              </div>
+              </div>;
+
               {/* Mobile Company */}
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Company
-                </div>
-                {company.map((item) => (
+              <div className="space-y-2">;
+                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
+                  Company;
+                </div>;
+                {company && company.map((item) => (;
                   <Link
-                    key={item.name}
-                    to={item.href}
+                    key={item && item.name}
+                    to={item && item.href}
                     onClick={closeMobileMenu}
-                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    {item.name}
-                  </Link>
+                    className="block px-6 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors">;
+                    {item && item.name}
+                  </Link>;
                 ))}
-              </div>
+              </div>;
+
               {/* Mobile Auth */}
-              {!user ? (
-                <div className="pt-4 border-t border-zion-slate/20">
-                  <div className="space-y-3">
+              {!user ? (;
+                <div className="pt-4 border-t border-zion-slate/20">;
+                  <div className="space-y-3">;
                     <Link
                       to="/login"
                       onClick={closeMobileMenu}
-                      className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">
-                      Login
-                    </Link>
+                      className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">;
+                      Login;
+                    </Link>;
                     <Link
                       to="/signup"
                       onClick={closeMobileMenu}
-                      className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              ) : (
-                <div className="pt-4 border-t border-zion-slate/20">
-                  <div className="space-y-3">
+                      className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">;
+                      Get Started;
+                    </Link>;
+                  </div>;
+                </div>;
+              ) : (;
+                <div className="pt-4 border-t border-zion-slate/20">;
+                  <div className="space-y-3">;
                     <Link
                       to="/dashboard"
                       onClick={closeMobileMenu}
-                      className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
-                      Dashboard
-                    </Link>
+                      className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">;
+                      Dashboard;
+                    </Link>;
                     <button
-                      onClick={() => {
-                        logout()
-                        closeMobileMenu()
+                      onClick={() => {;
+                        logout();
+                        closeMobileMenu();
 }}
-                      className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">
-                      Logout
-                    </button>
-                  </div>
-                </div>
+                      className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">;
+                      Logout;
+                    </button>;
+                  </div>;
+                </div>;
               )}
             </div>;
           </motion && motion.div>;
@@ -1194,3 +1233,140 @@ import React from 'react';
 
       </AnimatePresence>
     </header>  )
+
+}
+
+                  to={item.href}
+                  className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
+                  on_click={() => setMobileMenuOpen (false)}
+                >;
+                  {item.name}
+                </Link>))}
+              {/* Mobile Services */}
+              <div className="px - 3 py - 2">;
+                <div className="text - slate - 400 text - sm font - medium mb - 2">Services</div>;
+                <div className="space - y-1">;
+                  {services.map ((service) => (
+                    <Link;
+                      key={service.name}
+                      to={service.href}
+                      className="block text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm transition - colors duration - 200";
+                      on_click={() => setMobileMenuOpen (false)}
+                    >;
+                      {service.name}
+                    </Link>))}
+                </div>;
+              </div>;
+              </div>;
+              {/* Mobile Services */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Services;
+                </div>;
+                {services.map ((service) => (
+                  <Link;
+                    key={service.name}
+                    to={service.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {service.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Solutions */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Solutions;
+                </div>;
+                {solutions.map ((solution) => (
+                  <Link;
+                    key={solution.name}
+                    to={solution.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {solution.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Resources */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Resources;
+                </div>;
+                {resources.map ((resource) => (
+                  <Link;
+                    key={resource.name}
+                    to={resource.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {resource.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Company */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Company;
+                </div>;
+                {company.map ((item) => (
+                  <Link;
+                    key={item.name}
+                    to={item.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {item.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Auth */}
+              {!user ? (
+                <div className="pt - 4 border - t border - zion - slate / 20">;
+                  <div className="space - y-3">;
+                    <Link;
+                      to="/login";
+                      on_click={closeMobileMenu}
+                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                      Login;
+                    </Link>;
+                    <Link;
+                      to="/signup";
+                      on_click={closeMobileMenu}
+                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                      Get Started;
+                    </Link>;
+                  </div>;
+                </div>) : (
+                <div className="pt - 4 border - t border - zion - slate / 20">;
+                  <div className="space - y-3">;
+                    <Link;
+                      to="/dashboard";
+                      on_click={closeMobileMenu}
+                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                      Dashboard;
+                    </Link>;
+                    <button;
+                      on_click={() => {
+                        logout ();
+                        closeMobileMenu ();
+}}
+                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                      Logout;
+                    </button>;
+                  </div>;
+                </div>)}
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </header>  );
+}
+
+
+
+
+      )}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+;
+
+;

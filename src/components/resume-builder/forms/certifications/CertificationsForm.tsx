@@ -16,7 +16,6 @@ return (
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
-          onDelete={handleDelete}        />
       )}
 
 
@@ -33,26 +32,70 @@ return (
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
             <CertificationFormFields form={form} />
-                    setEditingId(null)
-                    form.reset({
-                      name: ''
-                      issuing_organization: ''
-                      issue_date: ''
-                      expiration_date: ''
-                      credential_id: ''
-                      credential_url: ''
-                    })
 
-                    setEditingId(null),
-                    setEditingId(null),
+
+
+
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
+            <div className="flex justify-between pt-2">
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {
+                  if (editingId) {
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+                  } else {
+                    onBack()
+
+      <div className='bg-muted/40 p-6 rounded-lg'>;
+        <h3 className='text-md font-medium mb-4'>;
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>;
+
+        <Form {...form}>;
+          <form
+            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'>;
+            <CertificationFormFields form={form} />;
+
+            {error && (;
+              <Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}
+
+            <div className='flex justify-between pt-2'>;
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+                    form && form.reset({;
+                      name: '',;
+                      issuing_organization: '',;
+                      issue_date: '',;
+                      expiration_date: '',;
+                      credential_id: '',;
+                      credential_url: '',;
+                    });
+                  } else {;
+                    onBack();
+                  }
+                }}
+              >;
+                {editingId ? 'Cancel' : 'Back'}
 
               </Button>
               <div className='flex gap-2'>

@@ -1,4 +1,12 @@
 
+
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+
+
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
@@ -124,8 +132,19 @@ serve(async (req: Request) => {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
-  }
-});
+
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
+const supabase_url = Deno.env.get ("SUPABASE_URL")!;
+const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!;
+;
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers":;
+    "authorization, x - client - info, apikey, content - type"}
+;
+serve (async (req: Request) => {
+
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -252,5 +271,9 @@ if ( {) {
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
+
+
+
+
   }
 });

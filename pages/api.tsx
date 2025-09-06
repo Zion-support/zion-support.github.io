@@ -11,15 +11,7 @@ import { motion } from "framer-motion";
 origin/main
 origin/automation-improvements-final
 import {
-  Code
-  Check
-  Globe
-  Shield
-  Zap
-  Database
-  Cpu
-  Cloud
-  XCircle
+
   Code,
   Check,
   Globe,
@@ -29,6 +21,7 @@ import {
   Cpu,
   Cloud,
   XCircle,;
+
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -80,14 +73,86 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-  }'`
-        }
-      ]
-    }
+
+import React from './react';
+import MainLayout from "../src / components / layout / MainLayout";
+import { motion  } from './framer-motion';
+import {
+  Code,
+  Check,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cpu,
+  Cloud,
+  XCircle,
+} from './lucide-react';
+;
+export default /**
+ * APIPage - Function description
+ */
+function APIPage() {
+  const api_endpoints = [;
+    {
+      id: "auth",
+      title: "Authentication",
+      description: "Secure authentication and authorization endpoints",
+      base_url: "/api / v1 / auth",
+      methods: [;
+        {
+          method: "POST",
+          endpoint: "/login",
+          description: "Authenticate user with email and password",
+          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / login \\;
+  -H "Content - Type: application / json" \\;
+  -d '{
+    "email": "user@example.com",
+    "password": "your_password";
+  }'`,
+        },
+        {
+          method: "POST",
+          endpoint: "/register",
+          description: "Register a new user account",
+          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / register \\;
+  -H "Content - Type: application / json" \\;
+  -d '{
+    "email": "user@example.com",
+    "password": "your_password",
+    "name": "John Doe";
+  }'`,
+        },
+      ],
+    },
+    {
+      id: "ai - services",
+      title: "AI Services",
+      description: "Access our AI - powered services and models",
+      base_url: "/api / v1 / ai",
+      methods: [;
+        {
+          method: "POST",
+          endpoint: "/chat",
+          description: "Send messages to our AI chat service",
+          code: `curl -X POST https://api.ziontechgroup.com / v1 / ai / chat \\;
+  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
+  -H "Content - Type: application / json" \\;
+  -d '{
+    "message": "Hello, how can you help me?",
+    "model": "gpt - 4",
+    "temperature": 0.7;
+  }'`,
+        },
+      ],
+    },
+
   }'`,
         },
       ],
     },;
+
+
   ];
 ;
   const response_examples = {

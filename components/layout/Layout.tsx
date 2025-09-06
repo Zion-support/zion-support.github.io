@@ -1,12 +1,24 @@
-import React from 'react';
+
+
 import React from 'react';
 import React, { ReactNode } from 'react';
 
+import Header from '../Header';
+import Footer from '../Footer';
+
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 
 
 
 
-import React from 'react';
+
+
+;
+;
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -23,14 +35,15 @@ interface LayoutProps {;
 
 
 export default function Layout({
-  children,
-  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
-  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation",
-  canonical,
-  ogTitle,
-  ogDescription,
-  ogImage,
+
+  children
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
+  canonical
+  ogTitle
+  ogDescription
+  ogImage
   noIndex = false
 
 }: LayoutProps) {
@@ -49,11 +62,24 @@ function Layout() {
       <Header />;
       <main>;
         {children}
-  "./Footer"import Footer  from "react./Footer
-export default function Layout({ children }: LayoutProps) {return (;
+      </main>;
+      <Footer />;
+
+    </div>);
+}
+;
+
+export default Layout;
+import React from 'react;
+import Header from './Header;
+import Footer from './Footer;
+
+
   "./Footer"import Footer  from "react./Footer,;
 export default function Layout({ children }: LayoutProps) {;
   return (;
+
+
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
@@ -61,10 +87,40 @@ export default function Layout({ children }: LayoutProps) {;
 type LayoutProps = {children: React && React.ReactNode;
 };
   children: React && React.ReactNode}
+
 export: default function Layout() {;
+
   return: <div>{children}</div>;
 React from";
   "react""import Footer from "react";
+  "./Footer"import Footer  from "react./Footer,;
+export default function Layout(): any ({ children }: LayoutProps) {;
+  return (
+
+export: default /**
+ * Layout - Function description
+ */
+function Layout() {
+;
+  return: <div>{children}</div>;
+React from";
+  "react""import Footer from './react';
+  "./Footer"import Footer  from "react./Footer,
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
+    </div>)"; type: LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div> } " ;
+}}
+
     <div className="min-h-screen bg-gray-50">
   } catch (error) {
     console.error("Error:", error);
@@ -110,3 +166,5 @@ export default function Layout({ children }: LayoutProps) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

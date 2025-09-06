@@ -1,7 +1,9 @@
-import React from 'react';
+
 
 import React from 'react',
+
 import React from 'react',
+
 const EquipmentPage = () => {
 const EquipmentPage = () => {;
   return (
@@ -23,6 +25,4 @@ export default EquipmentPage;
 
 },
 
-export default EquipmentPage,
-export default EquipmentPage;
-export default EquipmentPage,
+

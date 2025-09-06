@@ -42,7 +42,6 @@
 // Run the enhanced performance monitor
 main();
 #!/usr/bin/env node;
-main();#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -94,5 +93,4 @@ console.log('=')
       "message"
       "action"
       log('warn', 'Performance "Alerts")
-      log('info', 'Performance "Recommendations")
       log('info', 'Performance "Recommendations")

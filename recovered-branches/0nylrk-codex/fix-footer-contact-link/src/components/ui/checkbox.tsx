@@ -1,6 +1,34 @@
 import React from 'react';
 'use client';
 
+;
+
+import * as React from 'react';
+import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
+import {Check} from 'lucide-react';
+
+
+
+
+
+
+"use client"
+"use client"
+
+
+
+import * as React from "react"
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
+import { Check } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+
+const Checkbox = React.forwardRef<
+  React.ElementRef<typeof CheckboxPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+></typeof>(({ className, ...props }, ref) => (
+  <CheckboxPrimitive.Root
+
 const Checkbox = React && React.forwardRef<;
   React && React.ElementRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>,;
   React && React.ComponentPropsWithoutRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>;
@@ -26,8 +54,4 @@ export { Checkbox }
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-export { Checkbox }
-;
-export { Checkbox };
-export { Checkbox }
-;
+

@@ -581,4 +581,3 @@ main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
 automation.runAllAutomations().catch(console.error);
-automation.runAllAutomations().catch(console.error);

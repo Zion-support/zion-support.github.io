@@ -128,8 +128,7 @@ function ComprehensiveServicesShowcase2025V2() {
     ...innovativeAIServices2025ExpansionV2;
     ...industrySpecificSolutions2025V2;
 
-export default function ComprehensiveServicesShowcase2025V2() {
-  const allNewServices = [
+    ...emergingTechBreakthroughs2025V2;
 
   const serviceCategories = [;
     {;
@@ -242,84 +241,13 @@ import {
   ArrowRight, Check, Star, TrendingUp, Users,
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react',
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Experience the future of technology with our revolutionary portfolio
-            of innovative micro SAAS, IT infrastructure, AI services, industry
-            solutions, and emerging technology breakthroughs.
-          </motion.p>
-          <motion.div
-            className='flex flex-col sm:flex-row gap-4 justify-center'            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS
-            IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
-          </motion.p>
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          <motion.p 
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            initial={_{ opacity: 0, _y: 20}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8, _delay: 0.2}}
-          >
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, _IT infrastructure, _AI services, _industry solutions, _and emerging technology breakthroughs.
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={_{ opacity: 0, _y: 20}}
-            animate={_{ opacity: 1, _y: 0}}
-            transition={_{ duration: 0.8, _delay: 0.4}}
-          >
-            <a
-              href='#services'
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'>;
-              Explore Services;
-            </a>;
-            <a
-              href='#contact'
-              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >            <a
-              href="#services"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
-            >
-              Explore Services
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              Get Started
-            </a>
-          </motion.div>
-        </div>
-      </section>
-      {/* Contact Information */}
-      <section id='contact' className='py-16 px-4 bg-black/20'>
-        <div className='max-w-4xl mx-auto text-center'>
-          <motion.h2
-            className='text-3xl md:text-4xl font-bold text-white mb-8'            initial={{ opacity: 0, y: 20 }}      <section id="contact" className="py-16 px-4 bg-black/20">
-
-      {_/* Contact Information */}
-      <section id="contact" className="py-16 px-4 bg-black/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold text-white mb-8"
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Ready to Transform Your Business?
-          </motion.h2>
-          <motion.div
-            className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion.div
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>            <a
               href="#services" 
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">;
               Explore Services;
             </a>;
             <a
-              href="#contact"
+              href="#contact" 
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               Get Started
             </a>;
@@ -515,18 +443,16 @@ import {
             className="text - 3xl md:text - 4xl font - bold text - white mb - 8";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className='text-center'>
-              <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>
-              <p className='text-cyan-400 text-lg'>{contactInfo.mobile}</p>
-            <div className='text-center'>
-              <Mail className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-white mb-2'>
-                Email Us
-              </h3>
-              <p className='text-cyan-400 text-lg'>{contactInfo.email}</p>
+            transition={{ duration: 0.6 }}
+          >;
+            Ready to Transform Your Business?;
+          </motion.h2>;
+          <motion.div;
+            className='grid md:grid - cols - 3 gap - 8'            initial={{ opacity: 0, coordinate_y: 20 }}          <motion.div;
+            className="grid md:grid - cols - 3 gap - 8";
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
 
 
       {_/* Contact Information */}
@@ -566,15 +492,118 @@ import {
               <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
               <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
-          </motion.div>
-        </div>
-      </section>
+
+            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
+            <div className='text-center'>;
+              <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-white mb-2'>Call Us</h3>;
+              <p className='text-cyan-400 text-lg'>{contactInfo && contactInfo.mobile}</p>;
+            <div className='text-center'>;
+              <Mail className='w-12 h-12 text-cyan-400 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-white mb-2'>;
+                Email Us;
+              </h3>;
+              <p className='text-cyan-400 text-lg'>{contactInfo && contactInfo.email}</p>;
+            </div>;
+            <div className='text-center'>;
+              <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-white mb-2'>;
+                Visit Us;
+              </h3>;
+              <p className='text-cyan-400 text-lg'>{contactInfo && contactInfo.address}</p>            </div>            <div className="text-center">;
+              <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>;
+              <p className="text-cyan-400 text-lg">{contactInfo && contactInfo.address}</p>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
       {/* Services by Category */}
-      <section id='services' className='py-20 px-4'>
-        <div className='max-w-7xl mx-auto'>
-          <motion.h2
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">
+      <section id='services' className='py-20 px-4'>;
+        <div className='max-w-7xl mx-auto'>;
+          <motion&& motion.h2
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">;
+        <div className="max-w-7xl mx-auto">;
+          <motion&& motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0 && 0.6 }}>;
+            Our Comprehensive Service Portfolio;
+          </motion && motion.h2>;
+          <motion&& motion.div
+
+            className='space-y-20'
+            variants={staggerContainer}
+            initial='initial'
+            whileInView='animate'
+            viewport={{ once: true }}>;
+            {serviceCategories && serviceCategories.map(category => (;
+              <motion && motion.div key={category && category.id} variants={fadeInUp}>;
+                <div className='text-center mb-12'>;
+                  <div
+
+          >;
+            <div className='text - center'>;
+              <Phone className='w - 12 h - 12 text - cyan - 400 mx - auto mb - 4' />;
+              <h3 className='text - xl font - semibold text - white mb - 2'>Call Us</h3>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.mobile}</p>;
+            <div className='text - center'>;
+              <Mail className='w - 12 h - 12 text - cyan - 400 mx - auto mb - 4' />;
+              <h3 className='text - xl font - semibold text - white mb - 2'>;
+                Email Us;
+              </h3>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.email}</p>;
+            </div>;
+            <div className='text - center'>;
+              <MapPin className='w - 12 h - 12 text - cyan - 400 mx - auto mb - 4' />;
+              <h3 className='text - xl font - semibold text - white mb - 2'>;
+                Visit Us;
+              </h3>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.address}</p>            </div>            <div className="text - center">;
+              <MapPin className="w - 12 h - 12 text - cyan - 400 mx - auto mb - 4" />;
+              <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>;
+              <p className="text - cyan - 400 text - lg">{contact_info.address}</p>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Services by Category */}
+      <section id='services' className='py - 20 px - 4'>;
+        <div className='max - w-7xl mx - auto'>;
+          <motion.h2;
+            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="services" className="py - 20 px - 4">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.h2;
+            className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >;
+            Our Comprehensive Service Portfolio;
+          </motion.h2>;
+          <motion.div;
+            className='space - y-20';
+            variants={stagger_container}
+            initial='initial';
+            whileInView='animate';
+            viewport={{ once: true }}
+          >;
+            {service_categories.map (category => (
+              <motion.div key={category.id} variants={fadeInUp}>;
+                <div className='text - center mb - 12'>;
+                  <div;
+                    className={`inline - flex p - 4 rounded - 2xl bg - gradient - to - r ${category.color} mb - 6`}
+                  >;
+
+                    {category.icon}
+                  </div>;
+                  <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 4'>;
+                    {category.name}
+                  </h3>;
+                  <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+                    {category.description}
+
+
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
@@ -962,7 +991,17 @@ import {
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >;
+            Market Impact & Growth;
+          </motion.h2>;
+          <motion.div;
+            className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'            initial={{ opacity: 0, coordinate_y: 20 }}
+          <motion.div;
+            className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
 
 
       {_/* Market Statistics */}

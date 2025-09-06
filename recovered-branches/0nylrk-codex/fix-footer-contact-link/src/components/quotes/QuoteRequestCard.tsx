@@ -1,12 +1,12 @@
 
-import React from "react";
-import { format } from "date-fns";
+
 import {format} from "date-fns";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+
 import React from "react",
 import { format } from "date-fns",
 import { 
@@ -22,6 +22,7 @@ import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide
 import type { QuoteRequest } from "@/types/quotes";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
+
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
@@ -29,22 +30,8 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
-type QuoteRequestCardProps = {
-  quote: QuoteRequest
-  onViewDetails: (quote: QuoteRequest) => void
-  onMarkAsResponded?: (id: string) => void
-  onToggleArchive: (id: string, isArchived: boolean) => void
-}
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
-  quote;
-  onViewDetails;
-export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded
-  quote,
-  onViewDetails,
-  onMarkAsResponded,
+
+
   onToggleArchive
 }) => {
   // Format date for display;
@@ -111,14 +98,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
-              )}
-            </Button>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
+
 
 import React from "react",;
 import { format } from "date-fns",;
@@ -277,6 +257,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           </div>;
         </div>;
       </CardContent>;
-    </Card>;
-  );
+
+
+
+
 };

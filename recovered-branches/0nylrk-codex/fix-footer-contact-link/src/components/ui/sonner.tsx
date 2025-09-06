@@ -50,9 +50,7 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
       {...props}
     />);
 }
-export { Toaster, toast }
+
 ;
-export { Toaster, toast };
-export { Toaster, toast }
-;
+
 ;

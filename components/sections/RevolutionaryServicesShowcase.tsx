@@ -128,20 +128,20 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
-        <motion.div
+
+        <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
-          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
+
 
   return (
-    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
         {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}
 
-        <motion.div
+
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
+
+
 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -188,6 +188,18 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         </motion.div>
         {/* Category Filter */}
 
+            </span>;
+            <br />;
+            <span className="text-white">Services</span>;
+          </h2>;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. ;
+            Transform your business with services that were once science fiction.;
+          </p>;
+        </motion && motion.div>;
+
+        {/* Category Filter */}
+
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -217,6 +229,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           ))}
         </motion.div>
 
+        </motion && motion.div>;
+
+
+
+
+
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -231,11 +249,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
+              style={{ perspective: '1000px' }}>;
+              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
+              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
 
               style={{ perspective: '1000px' }}
             >
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
+              style={{ perspective: '1000px' }}>;
+              <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>;
+              <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
                 {/* Background Effects */}
 
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
@@ -366,6 +390,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>;
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>;
                 </div>;
+
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
@@ -379,6 +404,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center space-x-3'>
                       <div className='text-4xl'>{service.icon}</div>
+
+
+
+
 
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
@@ -430,15 +459,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className='text - 4xl'>{service.icon}</div>;
                       <div>;
                         <h3 className='text - xl font - bold text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
-
-                {/* Service Header */}
-                <div className='relative z-10'>
-                  <div className='flex items-start justify-between mb-4'>
-                    <div className='flex items-center space-x-3'>
-                      <div className='text-4xl'>{service.icon}</div>
-
-                      <div>
-                        <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
                           {service.name}
                         </h3>;
                         <p className='text - gray - 400 text - sm'>;
@@ -500,6 +520,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                         {service && service.period}
                       </div>                    </div>;
                   </div>;
+
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>;
                     {service && service.description}
@@ -515,6 +536,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                       <div className="text-gray-400 text-sm">{service && service.period}</div>;
                     </div>;
                   </div>;
+
                   {/* Description */}
                   <p className='text-gray-300 mb-4 leading-relaxed'>;
                     {service && service.description}
@@ -718,17 +740,24 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           ))}
 
         </motion && motion.div>;
+
         {/* Load More Button */}
-        {visibleServices < filteredServices.length && (
-          <motion.div
-            className='text-center'            initial={{ opacity: 0 }}          <motion.div
+        {visibleServices < filteredServices && filteredServices.length && (;
+          <motion&& motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
+
+            className="text-center"
+
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+
             className="text-center"
 
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
           <motion.div
             className='text-center'            initial={{ opacity: 0 }}
+
+
 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -739,6 +768,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >
 
+
             >
               Load More Revolutionary Services
             </button>
@@ -748,15 +778,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-
-        {/* Call to Action */}
-        <motion.div
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
-
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
-          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
-
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -825,14 +846,23 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
-}
 };
+
 export default RevolutionaryServicesShowcase;  );
 
   )
 
 };
+
+export default RevolutionaryServicesShowcase;
+
+
+
 export default RevolutionaryServicesShowcase;
 
 export default RevolutionaryServicesShowcase;
-export default RevolutionaryServicesShowcase;
+;
+
+};
+
+

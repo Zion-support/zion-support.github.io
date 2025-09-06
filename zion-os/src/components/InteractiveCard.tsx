@@ -51,6 +51,7 @@ export default function InteractiveCard({;
       <div className=&quot;relative&quot;>
     >
       <div className="relative">
+
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
@@ -68,17 +69,24 @@ export default function InteractiveCard({;
         {/* Content */}
         <div className="relative z-10">
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+
+
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
-{children |(
+
+
 {children || (
+
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+
+
+
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -133,14 +141,13 @@ export function FeatureCard({;
       className={class_name}
 >;
       {stats && (
-        <div className="mt-6 pt-6 border-t border-white/10">
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
-              </div>
-            ))}
+        <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
+          <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
+            {stats.map ((stat, index) => (
+              <div key={index} className=&quot;text - center & quot;>;
+                <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
+                <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
+              </div>))}
           </div>;
         </div>)}
     </InteractiveCard>);
@@ -180,11 +187,7 @@ export function TestimonialCard({;
   return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
-      <div className="text-4xl mb-4">💬</div>
-      
-<div className=&quot;text-4xl mb-4&quot;>💬</div>
-      <div className="text-4xl mb-4">💬</div>
-      
+
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -198,6 +201,8 @@ export function TestimonialCard({;
         &quot;{quote}&quot;
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
+
+
       </blockquote>
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"

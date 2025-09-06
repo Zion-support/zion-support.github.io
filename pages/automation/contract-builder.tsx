@@ -1,7 +1,3 @@
-import React, { useEffect, useMemo, useState } from 'react',;
-import DatePicker from 'react-datepicker',;
-import { useRouter } from 'next/router',;
-type PaymentType = 'hourly' | 'fixed',
 
 
 import React, { useEffect, useMemo, useState } from 'react';
@@ -199,11 +195,11 @@ if ( {) {
     }
   }
 
-    URL.revokeObjectURL(url)
-  }
+
     setLoading(true),
     setError(null),
     setContract(''),
+
 
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -253,6 +249,9 @@ export default function ContractBuilderPage(req, res) {
     setLoading(true);
     setError(null);
     setContract('');
+
+
+
     try {
       const body = {;
         talentName;
@@ -427,23 +426,11 @@ export default function ContractBuilderPage(req, res) {
           <input type="number" className="w-full input input-bordered" value={revisionRounds} onChange={(e) => setRevisionRounds(Number(e.target.value))} />
         </div>
         <div className="md:col-span-2 flex items-center gap-3">
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit |loading}>
+
+
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-            {loading ? 'Generating…' : 'Generate contract'}
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>}
-          <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>
-            {loading ? 'Generating…' : 'Generate contract'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
         </div>
       </form>
   /**
@@ -582,14 +569,10 @@ if (return, ) {
             </div>
           </div>
           <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap bg-white dark:bg-black p-6 rounded-lg border border-gray-200 dark:border-neutral-800">
-            {contract}
-          </article>
-        </div>
-      )}
-    </div>
-  )
+
   );
 };
+
             {contract  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -608,5 +591,6 @@ if (return, ) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-}
+

@@ -1,9 +1,10 @@
 
-import React from "react";
-import { Star } from "lucide-react";
+
 
 import React from "react",
 import { Star } from "lucide-react",
+
+
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -92,6 +93,8 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
+
+
           ))}
         </div>
               </div>;
@@ -147,7 +150,23 @@ export const CommunityTrust: React.FC = () => {;
   );
 };
 
+                className="w - 6 h - 6 text - zion - cyan";
+                fill="current_color";
+              />))}
+          </div>;
+          <blockquote className="text - center text - lg text - white italic mb - 4">;
+            "The Zion app has completely changed how I find tech talent. The AI;
+            matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+          <div className="text - center">;
+            <div className="font - semibold text - zion - cyan">Sarah Johnson</div>;
+            <div className="text - sm text - zion - slate - light">CTO at TechFlow</div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}
+;
+
   )
-},
-};
-},
+

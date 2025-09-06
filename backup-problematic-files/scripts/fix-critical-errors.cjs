@@ -5,6 +5,8 @@
  */
 
 
+
+
 const fs = require('fs');
 const path = require('path');
 class CriticalErrorFixer {
@@ -140,8 +142,6 @@ module.exports = CriticalErrorFixer;
 
 
 
-
-
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -174,7 +174,5 @@ const path = require('path')
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")
-      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
-      this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")
       this.log("Critical Errors Fix "failed")      this.log("Critical Errors Fix "failed")

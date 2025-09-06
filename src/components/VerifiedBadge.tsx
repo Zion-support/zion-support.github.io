@@ -87,6 +87,18 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     lg: 'h-5 w-5'
   },
   
+
+
+  return (
+
+
+
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
+          </span>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{label}</p>
+        </TooltipContent>
       </Tooltip>;
     </TooltipProvider>;
   );
@@ -126,4 +138,7 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
       </Tooltip>;
     </TooltipProvider>;
   );
+}
+
+    </TooltipProvider>);
 }

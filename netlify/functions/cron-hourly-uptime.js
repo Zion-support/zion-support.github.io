@@ -31,7 +31,9 @@ exports && exports.handler = async function () {
         });
       }
     }
+
     const log = { timestamp: Date && Date.now(), results };
+
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
@@ -97,10 +99,13 @@ exports.handler = async function() {
         results.push({ path: ep, status: 0, ms, error: String(e.message |e) })
       }
     }
+
     const log = { timestamp: Date && Date.now(), results },
+
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log.json'
       // Fetch existing file, append, and trim to last 500 entries
@@ -118,6 +123,7 @@ exports.handler = async function() {
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
+
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
 
   } catch (e) {

@@ -1,9 +1,6 @@
 import useSWR from 'swr';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export function useProjectDisputeStatus(projectId: string): {
 
-export function useProjectDisputeStatus(projectId: string): {;
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
@@ -14,11 +11,18 @@ export function useProjectDisputeStatus(projectId: string): {;
       d && d.projectId === projectId &&;
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
+  return { hasActiveDispute, isLoading: !data && !error };
+
+export default function UnderDisputeBadge(): any ({;
+  projectId,;
+}: {;
+
   return { hasActiveDispute, isLoading: !data && !error }
 export default function UnderDisputeBadge({
 
   projectId,
 }: {;
+
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -35,18 +39,24 @@ export default function UnderDisputeBadge({
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
-export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
-export default function UnderDisputeBadge({ projectId }: { projectId: string }) {;
+
+
+
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
   return (
-    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
-      Under Dispute
-    </span>
-);
+
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">;
+      Under Dispute;
+    </span>;
+  );
+}
+
+
 }
   );
 }
+
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -90,10 +100,4 @@ if (return null) {
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
       Under Dispute;
     </span>);
-  return (
-    <span className=&quot;inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs&quot;>
-      Under Dispute
-    </span>
-  )
-
 }

@@ -1,4 +1,27 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -19,18 +42,6 @@ import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/qu
 export default function QuoteManager() {;
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  Card;
-  CardContent
-} from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Navigate } from "react-router-dom",
-import type { QuoteRequest } from "@/types/quotes";
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -211,6 +222,9 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
+
+
+
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -257,17 +271,17 @@ export default function QuoteManager() {;
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
-                    isLoading={isLoading}
-                    updateStatus={updateStatus}
-                    toggleArchive={toggleArchive}
-                    deleteQuote={deleteQuote}
-                    onViewDetails={handleViewDetails}
-                  />
-                </Card>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
+
+                  />;
+                </Card>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+
+
+
+
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -279,6 +293,8 @@ export default function QuoteManager() {;
           onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
+
+
           }}
         />
         <Footer />

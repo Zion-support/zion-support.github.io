@@ -22,14 +22,6 @@ export default /**
 function SpaceTechPage() {
   return (
     <div className="min - h-screen">;
-import Link from "next/link",;
-export const metadata = {;
-  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
-  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
-export default function SpaceTechPage() {;
-  return (;
-    <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

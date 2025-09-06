@@ -24,6 +24,6 @@ export default function ComprehensiveRedundancyRedirect(req, res) {
       </main>;
     </>);
 }
-;
 
-;
+
+

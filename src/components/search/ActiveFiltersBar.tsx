@@ -13,6 +13,78 @@ interface SearchFilters {
   minRating: number,
   sort: string
 
+import React from 'react',;
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+interface SearchFilters {;
+  types: string[],;
+  category: string,;
+  minPrice: number,;
+  maxPrice: number,;
+  minRating: number,;
+  sort: string;
+}
+;
+interface ActiveFiltersBarProps {;
+  filters: SearchFilters,;
+  onFiltersChange: (filters: SearchFilters) => void,;
+  onClearAll: () => void,;
+  className?: string;
+}
+;
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
+  filters,;
+  onFiltersChange,;
+  onClearAll,;
+  className = '';
+}) => {;
+  const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
+  // Add type filters;
+  filters.types.forEach(type => {;
+    const labels: Record<string string> = {;
+      product: 'Products',;
+      talent: 'Talent',;
+      service: 'Services',;
+      blog: 'Blog Posts',;
+      doc: 'Documentation';
+    },;
+    activeFilters.push({;
+      key: `type-${type}`,;
+      label: 'Type',;
+      value: labels[type] || type;
+    });
+  }),;
+  // Add category filter;
+  if (filters.category) {;
+    activeFilters.push({;
+      key: 'category',;
+      label: 'Category',;
+      value: filters.category;
+    });
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import { X } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
 interface SearchFilters {;
   types: string[],;
   category: string,;
@@ -116,12 +188,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   }
   return (
-    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
-      {activeFilters.map(filter => (
-        <Badge
-          key = {filter.key,}
-          variant="secondary"
         <Badge 
           key = {filter.key,}
       
@@ -162,9 +228,14 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         size="sm"
         onClick = {onClearAll,}
         onClick={onClearAll}
-}
-export default ActiveFiltersBar
-},
+
+
+        className="text-xs h-6 px-2"
+      >
+        Clear all
+      </Button>
+    </div>
+  )
 
 export default ActiveFiltersBar,
 interface Filter {
@@ -318,6 +389,50 @@ if ( {) {
 
 
 },
-
 export default ActiveFiltersBar,
+
+        className="text-xs h-6 px-2">;
+        Clear all;
+      </Button>;
+    </div>;
+  );
+},;
+
+export default ActiveFiltersBar,;
+interface Filter {;
+  key: string;
+  value: string;
+  label: string;
+}
+
+interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
+
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+
+interface Filter {
+  key: string
+  value: string
+  label: string
+}
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+  filters: Filter[]
+  onRemoveFilter: key: string void
+  onClearAll: : unknown void}
+        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
+      >
+        Clear all
+      </button>
+    </div>
+  )}
+'"
+
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
+        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>)}
 '";

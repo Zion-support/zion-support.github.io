@@ -12,6 +12,17 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 
+
+
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+
+
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -316,29 +327,9 @@ if ( {) {
                 </Link>;
               </p>;
             </div>;
-            <div className="bg-zion-blue-dark rounded-lg p-6">;
-              <Form {...form}>;
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>;
-                  <FormField;
-                    control={form.control}
-                    name="displayName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
-                        <FormControl>
-                          <div className="relative">
-                            <Input
-                              placeholder="John Doe"
-                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
-                              {...field}
-                              aria-autocomplete="none";
-                              autoComplete="off";
-                            />;
-                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                          </div>;
-                        </FormControl>;
-                        <FormMessage className="text-red-400" />;
-                      </FormItem>;
+
+
+
                     )}
 
                   />;

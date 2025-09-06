@@ -1,32 +1,35 @@
 
+
+
+
+
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
-import React from "react",
-import { cn } from "@/lib/utils";
-import { CheckIcon } from "lucide-react";
-interface StepProps {
-
-  status: "incomplete" | "current" | "complete"
-  label: string
+interface StepProps {;
+  status: "incomplete" | "current" | "complete",;
+  label: string,;
 
   description?: string;
-import { cn } from "@/lib/utils",
-import { CheckIcon } from "lucide-react",
+  className?: string;
+}
+
+
+export function Step(): any ({;
+
+  status;
+  label;
+  description;
+  className}: StepProps) {;
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
   className?: string
 }
-export function Step({;
-  status;
-  label;
-  description;
-export function Step({
-  status,
-  label,
-  description,
+
+
+
   className}: StepProps) {
   return (
     <li
@@ -96,6 +99,9 @@ export function Step({;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
+
+
+
             {/* Step number would go here */}
           </span>;
         )}
@@ -107,27 +113,33 @@ export function Step({;
             "text-white": status === "current" |status === "complete"})}
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
+
+
         >
+      </div>;
+
+      <div className="ml-4 min-w-0">;
+        <h3
+          className={cn("text-sm font-medium", {
+            "text-zion-slate-light": status === "incomplete"
+            "text-white": status === "current" || status === "complete"})}>;
           {label}
-        </h3>
-        {description && (
-          <p className="text-sm text-zion-slate-light">{description}</p>
+        </h3>;
+        {description && (;
+          <p className="text-sm text-zion-slate-light">{description}</p>;
         )}
-      </div>
-    </li>
-  )
+      </div>;
+    </li>;
+  );
 }
+
+
+
+
 
 interface StepsProps {
   currentStep: number
-  className?: string;
-  children: React.ReactNode
-}
-export function Steps({ currentStep, className, children }: StepsProps) {
 
-export function Steps({ currentStep, className, children }: StepsProps) {;
-  const childrenArray = React.Children.toArray(children);
-;
 interface StepsProps {;
   currentStep: number,;
   className?: string;
@@ -161,13 +173,14 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
+
+
+export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React && React.Children.toArray(children);
+
+  return (
+
+
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -193,6 +206,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
+
+
+
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />;
         </div>;

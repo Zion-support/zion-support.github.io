@@ -157,7 +157,7 @@ function ProjectDetailsContent() {;
       // If offer was accepted, show a special toast;
       if (newStatus === "offer_accepted") {;
         toast({;
-          title:"Offer Accepted! ",;
+          title:"Offer Accepted! 🎉",;
           description:"The project is now in progress. Congratulations!"}),;
       }
     }
@@ -193,6 +193,60 @@ function ProjectDetailsContent() {;
       </div>;
     ),;
   }
+  ;
+  if (!project) {;
+    return (;
+      <div className="container mx-auto py-8">;
+        <Card>;
+          <CardContent className="flex flex-col items-center justify-center py-10">;
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;
+            <p className="text-muted-foreground mb-4">;
+              The project you're looking for doesn't exist or you don't have access to it.;
+            </p>;
+            <Button onClick={() => navigate("/dashboard")}>;
+              Return to Dashboard;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      </div>;
+    ),;
+  }
+  ;
+  // Check if user is either the client or the talent;
+  const isClient = user?.id === project.client_id,;
+  const isTalent = user?.id === project.talent_id,;
+  ;
+  if (!isClient && !isTalent) {;
+    navigate("/unauthorized"),;
+    return null,;
+  }
+  ;
+  const isOfferPending = project.status === "offer_sent",;
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),;
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),;
+  ;
+  return (;
+    <>;
+      <SEO ;
+        title={`Project:${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
+        description="View and manage your project details and collaboration.";
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;
+            <div>;
+              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>;
+              <div className="flex items-center gap-2 mt-1">;
+                {getStatusBadge(project.status)}
+                <span className="text-muted-foreground">;
+                  Started on {format(new Date(project.start_date), "PPP")}
+                </span>;
+              </div>;
+            </div>;
+            ;
+            {/* Action Buttons Based on Role and Status */}
   ;
   if (!project) {;
     return (;

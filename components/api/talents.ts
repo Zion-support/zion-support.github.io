@@ -3,12 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
+
+
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
+
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -120,9 +120,8 @@ createdAt: now
     certificationStatus: certificationStatus || 'pending',
 
     partnerId: auth.partner.id,
-    createdAt: now,
-createdAt: now,
-    createdAt: now,
+
+
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
@@ -131,6 +130,7 @@ createdAt: now,
 
 
 }
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";

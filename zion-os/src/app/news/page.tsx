@@ -22,14 +22,6 @@ export default /**
 function NewsPage() {
   return (
     <div className="min - h-screen">;
-import Link from "next/link",;
-export const metadata = {;
-  title: "News & Insights - Zion Tech Group | Latest Technology Updates",;
-  description: "Stay updated with the latest news, insights, and thought leadership from Zion Tech Group. Discover industry trends, company updates, and technology innovations.",;
-  keywords: "news, insights, technology updates, AI news, quantum computing, cybersecurity, Zion Tech Group"};
-export default function NewsPage() {;
-  return (;
-    <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

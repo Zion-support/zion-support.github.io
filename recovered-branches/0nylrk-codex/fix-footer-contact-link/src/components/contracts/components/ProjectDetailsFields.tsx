@@ -1,25 +1,3 @@
-import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,;
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-} from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {
 
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
@@ -89,6 +67,8 @@ import {;
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+
+
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -113,6 +93,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
       <FormField
       />;
       <FormField;
+
         control={form.control}
         name="scopeSummary"
         render={({ field }) => (;
@@ -196,6 +177,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         <FormField
         />;
         <FormField;
+
           control={form.control}
           name="endDate"
           render={({ field }) => (;
@@ -219,25 +201,93 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                 <PopoverContent className="w-auto p-0" align="start">;
                   <Calendar
                     mode="single"
-                    selected={field.value |undefined}
-                    onSelect={field.onChange}
-                    disabled={(date) => date < form.getValues("startDate")}
-                    initialFocus
-                  />
-                </PopoverContent>
-              </Popover>
-              <FormDescription>
-                Leave empty if the end date is flexible
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
-    </>
+
+                    selected={field && field.value || undefined}
+                    onSelect={field && field.onChange}
+                    disabled={(date) => date < form && form.getValues("startDate")}
+                    initialFocus;
+          </FormItem>)}
+      />;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+        <FormField;
+          control={form.control}
+          name="start_date";
+          render={({ field }) => (
+            <FormItem className="flex flex - col">;
+              <FormLabel > Start Date</FormLabel>;
+              <Popover>;
+                <PopoverTrigger as_child>;
+                  <FormControl>;
+                    <Button;
+                      variant={"outline"}
+                      className={`w - full pl - 3 text - left font - normal ${!field.value && "text - muted - foreground"}`}
+                    >;
+                      {field.value ? (
+                        format (field.value, "PPP")) : (
+                        <span > Pick a date</span>)}
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w - auto p - 0" align="start">;
+                  <Calendar;
+                    mode="single";
+                    selected={field.value}
+                    on_select={field.on_change}
+                    disabled={(date) => date < new Date ()}
+                    initial_focus;
+                  />;
+                </PopoverContent>;
+              </Popover>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="end_date";
+          render={({ field }) => (
+            <FormItem className="flex flex - col">;
+              <FormLabel > End Date (Optional)</FormLabel>;
+              <Popover>;
+                <PopoverTrigger as_child>;
+                  <FormControl>;
+                    <Button;
+                      variant={"outline"}
+                      className={`w - full pl - 3 text - left font - normal ${!field.value && "text - muted - foreground"}`}
+                    >;
+                      {field.value ? (
+                        format (field.value, "PPP")) : (
+                        <span > Pick a date</span>)}
+                      <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
+                    </Button>;
+                  </FormControl>;
+                </PopoverTrigger>;
+                <PopoverContent className="w - auto p - 0" align="start">;
+                  <Calendar;
+                    mode="single";
+                    selected={field.value || undefined}
+                    on_select={field.on_change}
+                    disabled={(date) => date < form.get_values ("start_date")}
+                    initial_focus;
+
+                  />;
+                </PopoverContent>;
+              </Popover>;
+              <FormDescription>;
+                Leave empty if the end date is flexible;
+              </FormDescription>;
+              <FormMessage />;
+
+
+
+
         />;
       </div>;
     </>;
+
+
+
+
   );
             </FormItem>)}
         />;

@@ -266,41 +266,8 @@ if ( {) {
     return () => container.removeEventListener ("keydown", handleKeyDown);
   }, [enabled]),
   return container_ref;
-export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {;
-    if (!enabled |!containerRef.current) return;
-    const container = containerRef.current;
-    const focusableElements = container.querySelectorAll(;
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-;
-// Focus trap for modals and dialogs;
-export function useFocusTrap(enabled: boolean = true) {;
-  const containerRef = useRef<HTMLDivElement>(null),;
-  useEffect(() => {;
-    if (!enabled || !containerRef.current) return,;
-    const container = containerRef.current,;
-    const focusableElements = container.querySelectorAll(;
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    ),;
-    const firstElement = focusableElements[0] as HTMLElement,;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
-    const handleKeyDown = (e: KeyboardEvent) => {;
-      if (e.key === "Tab") {;
-        if (e.shiftKey) {;
-          if (document.activeElement === firstElement) {;
-            e.preventDefault(),;
-            lastElement.focus();
-          }
-        } else {;
-          if (document.activeElement === lastElement) {;
-            e.preventDefault(),;
-            firstElement.focus();
-          }
-        }
-      }
+}
+// Keyboard navigation hook;
 export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
   const [selected_index, setSelectedIndex] = useState (-1),
   const handleKeyDown = (e: KeyboardEvent) =>: any {
@@ -350,81 +317,22 @@ if ( {) {
       }, 1000),
       return () => clear_timeout (timer);
     }
-  }, [message]);
-    },;
-    container.addEventListener("keydown", handleKeyDown),;
-    return () => container.removeEventListener("keydown", handleKeyDown);
-  }, [enabled]),;
-  return containerRef;
+  }, [message]),
+  return (
+    <div aria - live={priority} aria - atomic="true" className="sr - only">;
+      {announcements.map ((announcement, index) => (
+        <div key={index}>{announcement}</div>))}
+    </div>);
 }
-;
-// Keyboard navigation hook;
-export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {;
-  const [selectedIndex, setSelectedIndex] = useState(-1),;
-  const handleKeyDown = (e: KeyboardEvent) => {;
-    switch (e.key) {;
-      case "ArrowDown": e.preventDefault();
-        setSelectedIndex(prev => (prev + 1) % items.length);
-        break;
-      case "ArrowUp":;
-        e.preventDefault();
-        setSelectedIndex(prev => (prev - 1 + items.length) % items.length);
-        break;
-      case "Enter":;
-      case " ":;
-        e.preventDefault();
-        if (selectedIndex >= 0) {;
-          onSelect(items[selectedIndex]);
-        }
-        break;
-      case "Escape": setSelectedIndex(-1);
-        break;
-    }
-  }
-  useEffect(() => {document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [items, selectedIndex, onSelect]);
-  return { selectedIndex, setSelectedIndex }
-}
-// Announcement component for screen readers;
-export function Announcement({message;
-  priority = "polite";
-}: {message: string;
-  priority?: "polite" | "assertive";
-}) {const [announcements, setAnnouncements] = useState<string[]>([]);
-  useEffect(() => {;
-    if (message) {;
-      setAnnouncements(prev => [...prev, message]);
-      // Clear announcement after a delay;
-      const timer = setTimeout(() => {;
-        setAnnouncements(prev => prev.slice(1));
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [message]),;
-  return (;
-    <div aria-live={priority} aria-atomic="true" className="sr-only">;
-      {announcements.map((announcement, index) => (;
-        <div key={index}>{announcement}</div>;
-      ))}
-    </div>;
-  );
-}
-;
 // Progress indicator component;
-export function ProgressIndicator({;
-  value,;
-  max,;
-  label;
-}: {;
-  value: number,;
-  max: number,;
-  label: string;
-}) {;
-  const percentage = Math.round((value / max) * 100),;
-  return (;
-    <div className="space-y-2">;
-      <div className="flex justify-between text-sm">;
+export /**
+ * ProgressIndicator - Function description
+ */
+function ProgressIndicator() {
+  const percentage = Math.round ((value / max) * 100),
+  return (
+    <div className="space - y-2">;
+      <div className="flex justify - between text - sm">;
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -473,29 +381,6 @@ function CollapsibleSection() {
   const content_ref = useRef < HTMLDivElement>(null),
   return (
     <div className="border border-[var (--border)] rounded - lg">;
-export function CollapsibleSection({title;
-  children;
-  defaultExpanded = false;
-}: {title: string;
-  children: React.ReactNode;
-  defaultExpanded?: boolean;
-}) {const [isExpanded, setIsExpanded] = useState(defaultExpanded);
-  const contentRef = useRef<HTMLDivElement>(null);
-;
-// Collapsible section component;
-export function CollapsibleSection({;
-  title,;
-  children,;
-  defaultExpanded = false;
-}: {;
-  title: string,;
-  children: React.ReactNode,;
-  defaultExpanded?: boolean;
-}) {;
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
-  const contentRef = useRef<HTMLDivElement>(null),;
-  return (;
-    <div className="border border-[var(--border)] rounded-lg">;
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -569,24 +454,8 @@ function Tooltip() {
     left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
     right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
   }
-;
-// Tooltip component with proper accessibility;
-export function Tooltip({;
-  children,;
-  content,;
-  position = "top";
-}: {children: React.ReactNode;
-  content: string;
-  position?: "top" | "bottom" | "left" | "right";
-}) {const [isVisible, setIsVisible] = useState(false);
-  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`);
-  const positionClasses = {top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2";
-    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2";
-    left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
-    right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
-  };
-  return (;
-    <div className="relative inline-block">;
+  return (
+    <div className="relative inline - block">;
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

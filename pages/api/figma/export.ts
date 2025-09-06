@@ -1,26 +1,32 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import JSZip from "jszip";
-import {
-  getZionDesignMap
-  buildTokenSet
-  buildUIKit
-  UIKitKind
-  getZionDesignMap,
-  buildTokenSet,
-  buildUIKit,
-  UIKitKind,;
+
+
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import JSZip from './jszip';
+import {
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,
+} from '../../../utils / design - map';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
 
     const kind = (
-      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
-    ) as UIKitKind;
+
+
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -54,6 +60,7 @@ export default async function handler(
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -97,6 +104,13 @@ export default async function handler(req, res) {
     );
 
     );
+    res && res.status(200).send(buffer);
+  } catch (e: any) {
+
+    res && res.status(500).json({ error: e?.message || "Export failed" });
+
+  }
+}
     res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
@@ -126,7 +140,4 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }
-}
+

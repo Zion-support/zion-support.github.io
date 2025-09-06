@@ -1,3 +1,11 @@
+
+
+
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+export function slugify(title: string, separator = "-"): string {
   const sep = separator,
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
 
@@ -23,10 +31,15 @@ export function unslugify(slug: string, separator = "-"): string {
     .filter(Boolean)
     .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
     .join(" ")
-}
+
+export function slugify (title: string, separator = "-"): string {
+  const sep = separator;
+  const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
+;
 
 
 ;
+
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -56,3 +69,6 @@ export function unslugify (slug: string, separator = "-"): string {
     .join(" ");
 }
 ;
+
+
+

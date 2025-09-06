@@ -1,25 +1,25 @@
 
-import React from 'react';
-import { Button  } from '@/components/ui/button';
-import { Link  } from 'react-router-dom';
-import { ShieldAlert } from "lucide-react";
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
-interface ProjectActionsProps {
+
+
+
+import {Button} from '@/components/ui/button';
+import {Link} from 'react-router-dom';
+import {ShieldAlert} from "lucide-react";
+import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
   projectId: string
   isUnderDispute: boolean
   disputeId?: string;
   isTalent: boolean
 
-import {Button} from '@/components/ui/button';
-import {Link} from 'react-router-dom';
-import {ShieldAlert} from "lucide-react";
-import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+
+
+
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
@@ -27,6 +27,11 @@ interface ProjectActionsProps {
   isTalent: boolean,
   onAddMilestone: () => void
 }
+
+
+
+  onAddMilestone
+}: ProjectActionsProps) {
   return (
 
         <RaiseDisputeButton
@@ -67,6 +72,9 @@ export function ProjectActions({;
           projectId={projectId}
           variant="outline"
         />;
+
+
+
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;

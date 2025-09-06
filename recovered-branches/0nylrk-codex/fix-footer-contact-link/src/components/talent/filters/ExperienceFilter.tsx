@@ -1,16 +1,8 @@
 
-      {expanded && (
-        <div className="mt-6">
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
-            <span>{experienceRange[0]} years</span>
-            <span>{experienceRange[1]} years</span>
-          </div>
-          <Slider
-          <Slider 
-import { ChevronDown, ChevronUp } from "lucide-react",;
-import { Slider } from "@/components/ui/slider",;
-import { ExperienceFilterProps } from "@/types/filters",;
-export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Slider} from "@/components/ui/slider";
+import {ExperienceFilterProps} from "@/types/filters";
+export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0], values[1]]);
   };
@@ -38,7 +30,11 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[0]} years</span>;
             <span>{experienceRange[1]} years</span>;
           </div>;
-          <Slider;
+
+          <Slider
+
+          <Slider 
+
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}

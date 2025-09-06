@@ -50,16 +50,10 @@ import { Zap, Star } from 'lucide-react';
   ArrowRight,
   Play,
   AlertTriangle,
-  Clock,;
-  Database,;
-} from 'lucide-react';
 
-} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
-export default function APITestingSuitePage() {;
-} from 'lucide-react';
-
 export default function APITestingSuitePage() {
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
@@ -522,59 +516,60 @@ function APITestingSuitePage() {
             threshold: 'No throttling',
           },
         ],
+        recommendations: [;
+
+          'Consider implementing response caching for better performance',
+          'Monitor response times during peak usage',
+          'Implement rate limiting headers for better API documentation',
+        ],
+
+
           { name: 'Response Time', status: 'pass', value: '245ms', threshold: '<500ms' },
           { name: 'Status Code', status: 'pass', value: '200', threshold: '200' },
           { name: 'Response Format', status: 'pass', value: 'JSON', threshold: 'Valid JSON' },
           { name: 'Authentication', status: 'pass', value: 'Valid', threshold: 'Authenticated' },
           { name: 'Rate Limiting', status: 'pass', value: 'Within limits', threshold: 'No throttling' }
         ];
-
         recommendations: [
           'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
         ]
       });
       setIsTesting(false)
     }, 3000)
-  }
+
+
   return (
-    <>
-      <Head>
-        <title>
-          API Testing Suite - Zion Tech Group | Comprehensive API Testing &
-          Monitoring Tool
-        </title>
-        <meta
-          name='description'
-          content='Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs.'
-        />
-        <meta
-          property='og:title'
-          content='API Testing Suite - Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Comprehensive API testing tool with functional, performance, and security testing capabilities.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
+    <>;
+      <Head>;
+        <title>;
+          API Testing Suite - Zion Tech Group | Comprehensive API Testing &;
+          Monitoring Tool;
+        </title>;
+
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+
       {/* Hero Section */}
-      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]' />
-        <div className='absolute inset-0 bg-grid opacity-10' />
-        <div className='relative z-10 container-cursor text-center'>
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
-            <Code className='w-4 h-4 mr-2' />
-            Professional API Testing
-          </div>
-          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>
-            API Testing Suite
-          </h1>
-          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>
-            Test, monitor, and optimize your APIs with our comprehensive testing
-            suite. Functional, performance, and security testing for REST
-            GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
-            secure.
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0 && 0.08),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0 && 0.06),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-grid opacity-10' />;
+
+        <div className='relative z-10 container-cursor text-center'>;
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>;
+            <Code className='w-4 h-4 mr-2' />;
+            Professional API Testing;
+          </div>;
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>;
+            API Testing Suite;
+          </h1>;
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>;
+            Test, monitor, and optimize your APIs with our comprehensive testing;
+            suite. Functional, performance, and security testing for REST,;
+            GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and;
+            secure.;
+          </p>;
 
         recommendations: [
           'Consider implementing response caching for better performance'
@@ -629,6 +624,7 @@ function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
+
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -699,7 +695,7 @@ function APITestingSuitePage() {
               View Pricing
             </Button>
             <Button
-href="/contact"
+              href="/contact"
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
@@ -711,6 +707,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+
       {/* Features Section */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -831,11 +828,6 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -908,11 +900,19 @@ href="/contact"
         </div>
       </section>
 
+
+
+
+
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Comprehensive Testing Coverage
             </h2>
@@ -926,6 +926,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -958,27 +959,6 @@ href="/contact"
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-
-                      {feature.description}
-
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Test Types Section */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Comprehensive Testing Coverage
 
             </h2>
@@ -1001,14 +981,8 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <h3 className="text-xl font-bold mb-4 text-white">{type.name}</h3>
-                <p className="text-gray-400 mb-6">{type.description}</p>
-                <ul className="space-y-2">
-                  {type.tests.map((test, testIndex) => (
-                    <li key={testIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />
+
+
                       {test}
                     </li>
                   ))}
@@ -1018,6 +992,10 @@ href="/contact"
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* Demo Test Results */}
       {testResults && (
@@ -1117,37 +1095,37 @@ href="/contact"
                   </div>;
                 </div>;
               </Card>;
+
               {/* Test Results */}
 
               <Card className="border-gradient-indigo">
                 <h3 className="text-2xl font-bold mb-6 text-white">Test Results</h3>
                 <div className="space-y-3">
                   {testResults.tests.map((test, index) => (
-                    <div
-                      key={index}
-                      className='flex items-center justify-between'
-                    >
-                      <span className='text-gray-300 text-sm'>{test.name}</span>
-                      <div className='flex items-center space-x-2'>
-                        <span
-                          className={`text-xs px-2 py-1 rounded ${
-                            test.status === 'pass'
-                              ? 'bg-green-500/20 text-green-400'
-                              : 'bg-red-500/20 text-red-400'
-                          }`}
-                        >
+                    <div key={index} className="flex items-center justify-between">
+                      <span className="text-gray-300 text-sm">{test.name}</span>
+                      <div className="flex items-center space-x-2">
+                        <span className={`text-xs px-2 py-1 rounded ${
+                          test.status === 'pass' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
+                        }`}>
                           {test.status}
                         </span>
-                        <span className='text-xs text-gray-400'>
-                          {test.value}
+                        <span className="text-xs text-gray-400">{test.value}</span>
+                      </div>
                         </span>                      </div>
 
                       </div>
+
+
 
                     </div>
                   ))}
                 </div>
               </Card>
+
+
+
+
 
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
@@ -1161,6 +1139,10 @@ href="/contact"
                       {testResults.responseTime}
                     </span>
 
+
+
+
+
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -1173,6 +1155,13 @@ href="/contact"
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Uptime</span>
                     <span className='text-green-400 font-bold'>24/7</span>                  </div>                  </div>
+              <Card className="border-gradient-indigo">
+                <h3 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Response Time</span>
+                    <span className="text-indigo-400 font-bold">{testResults.responseTime}</span>
+                  </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Throughput</span>
                     <span className="text-green-400 font-bold">High</span>
@@ -1191,6 +1180,7 @@ href="/contact"
 
                 </div>;
               </Card>;
+
             {/* Recommendations */}
             <Card className="border-gradient-indigo">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
@@ -1220,6 +1210,8 @@ href="/contact"
 
                   </div>
 
+
+
                 ))}
               </div>
             </Card>
@@ -1241,6 +1233,11 @@ href="/contact"
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
+      <section id="pricing" className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the API testing plan that best fits your development and testing needs.
@@ -1517,7 +1514,60 @@ href="/contact"
                   </div>
                 )}
 
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='mb-6'>;
+                    <span className='text-4xl font-bold text-white'>;
+                      {plan && plan.price}
+                    </span>;
+                    <span className='text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'>;
+                      <CheckCircle className='w-5 h-5 text-indigo-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
+                  <p className="text-gray-400">{plan && plan.description}</p>;
+                </div>;
+
+                <ul className="space-y-4 mb-8">;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />;
+
                       {feature}
+                    </li>;
+
+
+
+
+
+                    </li>
+                  ))}
+
+                </ul>;
+
+
+                <Button
+                  href='/contact'
+                  size='lg'
+
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
                 <Button
                   href="/contact"
                   size="lg"
@@ -1529,17 +1579,18 @@ href="/contact"
 
                 </Button>
 
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
 
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
@@ -1548,6 +1599,7 @@ href="/contact"
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
             Ready to Test Your APIs?
+
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
@@ -1565,17 +1617,15 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'            >              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
+
+
+              Schedule Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
   );
 }
     </>);
@@ -1595,4 +1645,5 @@ href="/contact"
 }
 
   );
+}
 }

@@ -432,6 +432,8 @@ class DocsGenerator {}
       
       
       
+      
+      
       // Check if JSDoc is available;
       try {}
         execSync('npx jsdoc --version', { "stdio": 'pipe' }
@@ -451,6 +453,8 @@ class DocsGenerator {}
       const jsdocCommand = `npx jsdoc -c jsdoc.conf.json -d ${docsDir} -r src/ lib/ scripts/`;`
       execSync(jsdocCommand, { "stdio": 'pipe' }
 });
+
+
 
 
 
@@ -485,6 +489,8 @@ class DocsGenerator {}
       
       
       
+      
+      
       const docsDir = 'docs/components';
       if (!fs.existsSync(docsDir)) {}
         fs.mkdirSync(docsDir, { "recursive": true }
@@ -492,6 +498,8 @@ class DocsGenerator {}
       };
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
+
+
 
 
 
@@ -508,12 +516,16 @@ class DocsGenerator {}
 
 
 
+
+
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+          
+          
           
           
           
@@ -527,6 +539,8 @@ class DocsGenerator {}
         // Skip directories that can't be read;
       };
     };
+
+
 
 
 
@@ -638,6 +652,8 @@ class DocsGenerator {}
       
       
       
+      
+      
       return {}
         "name": packageJson.name || 'Unknown Project',
         "version": packageJson.version || '1.0.0',
@@ -681,6 +697,8 @@ class DocsGenerator {}
     readme += `**"License": ** ${projectInfo.license}\n\n`;`
     readme += "---\n\n";
     readme += `*Last "updated": ${timestamp}*\n\n`;`
+    
+    
     
     
     

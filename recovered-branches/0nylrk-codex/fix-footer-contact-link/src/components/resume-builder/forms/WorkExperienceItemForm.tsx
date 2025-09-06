@@ -1,5 +1,6 @@
 
-import { useState  } from 'react';
+
+
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -17,6 +18,8 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+
+
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -36,6 +39,7 @@ import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementBu
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+
 // Define form schema
 
 const formSchema = z.object({
@@ -64,6 +68,13 @@ interface WorkExperienceItemFormProps {
   onSubmit: (data: WorkExperience) => Promise<void>,
   onCancel: () => void
 }
+
+
+
+  onCancel}: WorkExperienceItemFormProps) {
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
+
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -355,10 +366,7 @@ function WorkExperienceItemForm() {
                     <Input placeholder="e.g. Acme Corporation" {...field} />;
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>;
-              )}
-            />
-            <FormField
+
               control={form.control}
               name="role_title";
               render={({ field }) => (

@@ -3,16 +3,13 @@ import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
+
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -55,11 +52,15 @@ export function DisputeDashboard() {
           <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>
         </div>
         
+
+
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
       
+
+
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -88,7 +89,8 @@ export function DisputeDashboard() {
             </div>
           </CardContent>
         </Card>
-        
+
+
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -118,7 +120,8 @@ export function DisputeDashboard() {
             </div>
           </CardContent>
         </Card>
-        
+
+
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -292,3 +295,4 @@ export function DisputeDashboard() {;
 }
 }
 ;
+

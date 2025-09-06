@@ -47,10 +47,10 @@ function processFile(filePath) {
     const { "content": newContent, removedCount } = removeConsoleStatements(content);
     if (removedCount > 0) {
       fs && fs.writeFileSync(filePath, newContent, 'utf8');
-      console && console.log(` ${filePath}: Removed ${removedCount} console statements`);
+      console && console.log(`✓ ${filePath}: Removed ${removedCount} console statements`);
       return removedCount}
     return 0} catch (error) {
-    console && console.error(` Error processing ${filePath}:`, error && error.message);
+    console && console.error(`✗ Error processing ${filePath}:`, error && error.message);
     return 0}
 
 function main() {
@@ -69,7 +69,7 @@ function main() {
         totalRemoved += removed;
         filesProcessed++}
     })});
-  console && console.log("\n "Summary": ");
+  console && console.log("\n📊 "Summary": ");
   console && console.log(`   Files processed: ${filesProcessed}`);
   console && console.log(`   Console statements "removed": ${totalRemoved}`);
   if (totalRemoved > 0) {

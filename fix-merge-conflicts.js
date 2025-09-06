@@ -43,3 +43,24 @@ function fixFilesInDirectory(dirPath) {
   
   return fixedCount;
 }
+
+// Main execution
+console.log('Starting merge conflict fix...');
+const srcPath = path.join(__dirname, 'src');
+const fixedCount = fixFilesInDirectory(srcPath);
+console.log(`Fixed ${fixedCount} files with merge conflicts.`);
+
+// Also fix specific problematic files
+const problematicFiles = [
+  'src/pages/About.tsx',
+  'src/pages/Home.tsx',
+  'src/pages/Index.tsx'
+];
+
+for (const file of problematicFiles) {
+  if (fs.existsSync(file)) {
+    fixMergeConflicts(file);
+  }
+}
+
+console.log('Merge conflict fix completed.');

@@ -25,8 +25,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-
 import React, { useCallback, useEffect, useMemo, useState } from "react";
+
 export type AIAssistantProps = {;
 
 
@@ -36,15 +36,11 @@ export type AIAssistantProps = {;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-}
-export default function AIAssistant({
-  buttonLabel = "Generate with AI"
-  title = "AI Writing Assistant"
-  defaultPrompt
-  systemPrompt
-  onAccept
-  authorizationToken
-}: AIAssistantProps) {
+
+};
+
+
+
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -52,6 +48,7 @@ export default function AIAssistant({
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
+
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -108,6 +105,7 @@ export default function AIAssistant({
               </button>{" "}
 
             </div>;
+
             <div className="p-4 space-y-3">;
               <div>;
 

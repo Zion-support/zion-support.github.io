@@ -1,11 +1,3 @@
-export interface TalentCardProps {
-  talent: TalentProfile
-  onViewProfile: (id: string) => void
-  onRequestHire: (talent: TalentProfile) => void
-  isSaved: boolean
-  onToggleSave: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
-}
 
       onViewProfile(talent.id)
 
@@ -28,25 +20,6 @@ export interface TalentCardProps {
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
 
-              {talent.profile_picture_url && !avatarError ? (
-                <Image
-                  src={talent.profile_picture_url}
-                  alt={talent.full_name |'Talent Avatar'}
-                  fill={true}                  style={{ objectFit: 'cover' }}
-                  className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
-                  priority={false}
-                />
-              ) : (
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
-                  onError={() => setAvatarError(true)}
-                  priority={false}                />
-              ) : (
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
-                  alt={talent.full_name |'Talent Avatar'}
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
 import { TalentProfile } from "@/types/talent",;
@@ -107,6 +80,55 @@ export function TalentCard({;
                   fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
+                />;
+              ) : (;
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
+                  onError={() => setAvatarError(true)}
+
+                  priority={false}                />;
+              ) : (;
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent && talent.profile_picture_url} ;
+                  alt={talent && talent.full_name || 'Talent Avatar'}
+
+
+import Link from 'next/link';
+import { TalentProfile } from '@/types/talent';
+
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import React and useState
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import Link from "next/link",
+import { TalentProfile } from "@/types/talent",
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import React and useState
+
+
+
+export interface TalentCardProps {
+  talent: TalentProfile
+  onViewProfile: (id: string) => void
+  onRequestHire: (talent: TalentProfile) => void
+  isSaved: boolean
+  onToggleSave: (id: string, isSaved: boolean) => void
+  isAuthenticated: boolean
+
+  talent: TalentProfile,
+  onViewProfile: (id: string,) => void,
+  onRequestHire: (talent: TalentProfile,) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean,) => void,
+  isAuthenticated: boolean
+
+                  alt={talent.full_name || 'Talent Avatar'}
+                  fill={true}
+                  style={{ objectFit: 'cover' }}
+
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
+                  onError={() => setAvatarError(true)}
+                  priority={false}
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -129,6 +151,25 @@ export function TalentCard({;
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+
+
+
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
+                />;
+                <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
+              </Button>;
+            </div>;
+            <p className='text-zion-cyan font-medium'>;
+              {talent && talent.professional_title}
+            </p>;
+
+            <div className='mt-2 flex flex-wrap gap-3 text-sm'>;
+              {talent && talent.location && (;
+                <div className='flex items-center text-zion-slate-light'>;
+                  <MapPin className='h-4 w-4 mr-1' />                  <span>{talent && talent.location}</span>;
+                </div>;
 
 
               )}
@@ -255,9 +296,3 @@ export function TalentCard({;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
-
-
-            </Button>;
-          </div>;
-        </div>;
-      </div>;

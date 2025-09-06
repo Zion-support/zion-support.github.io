@@ -1,13 +1,7 @@
-import React, { ReactNode } from "react";
-import {cn} from "@/lib/utils";
-import {slugify} from "@/lib/slugify";
-import {Link} from "react-router-dom";
-import React, { ReactNode } from "react",
-import { cn } from "@/lib/utils",
-import { slugify } from "@/lib/slugify";
-import { Link } from "react-router-dom";
-import { slugify } from "@/lib/slugify",
-import { Link } from "react-router-dom",
+
+
+
+
 interface CategoryCardProps {
 
   title: string
@@ -32,7 +26,8 @@ export function CategoryCard({ title, description, icon, color, count, className
   // Create a URL-friendly slug from the category title;
   const slug = slugify(title);
   // Create a URL-friendly slug from the category title
-  const slug = slugify(title),
+
+
 
   const slug = slugify(title);
   return (
@@ -139,6 +134,8 @@ function CategoryCard() {
         className={cn(;
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
           !color && "text-zion-cyan";
+
+
         )}
         style={color ? { color } : undefined}
       >;

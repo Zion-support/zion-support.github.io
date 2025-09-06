@@ -1,4 +1,14 @@
 
+
+
+
+
+import React, { useState } from "react";
+import {useWallet} from "@/hooks/useWallet";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Gift, ArrowRight, ExternalLink} from "lucide-react";
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -11,6 +21,17 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
+
+
+
+
+type RewardOption = {
+  id: string
+  title: string
+  description: string
+  cost: number
+  type: 'credit' | 'feature' | 'course'
+}
 },
 
 const REWARD_OPTIONS: RewardOption[] = [
@@ -111,7 +132,8 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
-}
+
+
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -319,7 +341,9 @@ if (return, ) {
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-    </Card>;
-  );
+
+
+
+
 }
 ;

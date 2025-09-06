@@ -31,11 +31,11 @@ type Props = {
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-}
-export default function MilestoneForm({ onSubmit }: Props) {
+
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
+
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -157,15 +157,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         </div>;
         <div>;
 
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium" htmlFor="input-Due Date">Due Date</label>
-          <input
-            type="date"
-            className="mt-1 w-full rounded border px-3 py-2"
-            value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
@@ -202,6 +193,9 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
+
+      </button>;
+    </form>;
   );
 
   );
@@ -219,6 +213,4 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>;
     </form>);
-}
-  );
 }

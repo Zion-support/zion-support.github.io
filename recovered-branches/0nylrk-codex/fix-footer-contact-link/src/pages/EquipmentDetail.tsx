@@ -1,32 +1,14 @@
 
-  warranty?: string;
-  returnPolicy?: string
-}
-// Sample data - in a real app this would come from an API
-const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
-  "pro-camera-x1000": {
-
-    id: "pro-camera-x1000"
-    name: "Pro Camera X1000"
-    description: "Professional-grade cinema camera with 8K resolution, advanced color science, and exceptional low-light performance. Designed for feature films, high-end commercials, and documentary production. Includes comprehensive shooting modes, customizable settings, and industry-leading dynamic range.";
-    brand: "CineTech"
-    category: "Equipment"
-    subcategory: "Cameras"
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",
-import { toast } from "@/hooks/use-toast",
-interface EquipmentSpecification {
-  name: string,
-  value: string
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
-import { toast } from "@/hooks/use-toast",;
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
 interface EquipmentSpecification {;
   name: string,;
   value: string;
@@ -63,14 +45,10 @@ interface EquipmentDetails {
   images: string[],;
   price: number,;
   currency: string,;
-  rating?: number,;
-  reviewCount?: number,;
-  inStock: boolean,;
-  expectedShipping?: string,;
-  specifications: EquipmentSpecification[],;
-  features: string[],;
-  warranty?: string,;
-  returnPolicy?: string;
+  rating?: number;
+
+
+
 }
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
@@ -592,6 +570,9 @@ if ( {) {
                           className="w-full h-full object-cover"
                         />;
                       </div>;
+
+
+
                     ))}
                   </div>;
                 )}
@@ -657,6 +638,9 @@ if ( {) {
                 </Tabs>;
               </div>;
             </div>;
+
+
+
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -677,6 +661,7 @@ if ( {) {
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
                 
+
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -764,8 +749,11 @@ if ( {) {
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-                  <Button
+
+
                   <Button 
+
+
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"

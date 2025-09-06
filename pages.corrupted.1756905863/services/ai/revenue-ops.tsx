@@ -7,8 +7,8 @@ export default function RevenueOpsAI() {; return (; <Article; title=\"Revenue Op
 import React from 'react';
 interface RevenueopsProps {
   // Add props here as needed
-}
-}
+
+
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d

@@ -1,6 +1,6 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+
+
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -9,6 +9,7 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { 
@@ -32,21 +33,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
-interface PostFormValues {
+
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
-}
 
-  title: string
-  content: string
-  categoryId: ForumCategory
-
-  tags: string
-}
-interface PostFormProps {
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -55,6 +48,7 @@ interface PostFormProps {
 export const PostForm = ({;
   initialValues;
   onSubmit;
+
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -105,6 +99,78 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
     }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+import { useState } from './react';
+import { use_form } from './react - hook - form';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { ForumCategory } from '@/types / community';
+interface PostFormValues {
+  title: string,
+  content: string,
+  category_id: ForumCategory,
+  tags: string;
+}
+interface PostFormProps {
+  initial_values?: Partial < PostFormValues>;
+  on_submit: (values: PostFormValues) => void,
+  is_editing?: boolean;
+}
+export const PostForm = ({
+  initial_values;
+  on_submit;
+  is_editing = false;
+}: PostFormProps) =>: any {
+  const form = use_form < PostFormValues>({
+    default_values: {
+      title: initial_values?.title || "",
+      content: initial_values?.content || "",
+      category_id: initial_values?.category_id || "project - help",
+      tags: initial_values?.tags || "";
+    }
+  });
+;
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  const handle_submit = async (values: PostFormValues) => {
+    setIsSubmitting (true),
+
+    try {
+      await on_submit (values);
+    } finally {
+
+
+  const handleSubmit = async (values: PostFormValues) => {;
+    setIsSubmitting(true),;
+    try {;
+      await onSubmit(values);
+    } finally {;
+      setIsSubmitting(false);
+
+    }
+  }
+
+
+
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle>{isEditing ? "Edit Post" : "Create New Post"}</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form className="space-y-6" onSubmit={form && form.handleSubmit(handleSubmit)}>;
+            <FormField
+              control={form && form.control}
+              name="title"
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel>Title</FormLabel>;
       setIsSubmitting (false);
     }
   }
@@ -210,6 +276,4 @@ export default PostForm;
 
 },
 
-export default PostForm,
-export default PostForm;
-export default PostForm,
+

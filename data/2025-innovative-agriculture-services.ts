@@ -46,17 +46,17 @@ export interface InnovativeAgricultureService {
 
 ;
 const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
+
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
-
+  website: 'https://ziontechgroup.com', }
+;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -81,15 +81,18 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
+      
     mobile: string, email: string,
     address: string,
     website: string
+  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
+
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -383,6 +386,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     reviews: 89,
 
   },;
+
+
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
       'Compliance management'
@@ -529,68 +534,15 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4 && 4.6,
 
     reviews: 89
+  }
+];
 
 
     rating: 4.6
     reviews: 89
-import { ServiceVariant } from '../types/service-variants',;
-export interface InnovativeAgricultureService {;
-  id: string,;
-  name: string,;
-  tagline: string,;
-  price: string,;
-  period: string,;
-  description: string,;
-  features: string[],;
-  popular: boolean,;
-  icon: string,;
-  color: string,;
-  textColor: string,;
-  link: string,;
-  marketPosition: string,;
-  targetAudience: string,;
-  trialDays: number,;
-  setupTime: string,;
-  category: string,;
-  realService: boolean,;
-  technology: string[],;
-  integrations: string[],;
-  useCases: string[],;
-  roi: string,;
-  competitors: string[],;
-  marketSize: string,;
-  growthRate: string,;
-  variant: ServiceVariant,;
-  contactInfo: {;
-    mobile: string,;
-    email: string,;
-    address: string,;
-    website: string;
-  },;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number;
-}
-;
-const contact = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';
-},;
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
-  {;
-    id: 'ai-powered-precision-agriculture',;
-    name: 'AI-Powered Precision Agriculture',;
-    tagline: 'Intelligent farming with AI-powered crop monitoring and optimization',;
-    price: '$1,899',;
-    period: '/month',;
-    description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',;
-    features: [;
-      'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
+
+
+];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
     ];
     popular: true;
@@ -619,5 +571,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123;
     rating: 4.6,
     reviews: 89;
+
+
+
+
   }
 ];
+;

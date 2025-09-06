@@ -1,12 +1,13 @@
 
-import { useEffect  } from 'react';
-import { useLocation } from 'react-router-dom';
+
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
+
 import {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
+
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
@@ -14,7 +15,8 @@ import { useLocation } from 'react-router-dom',
 export function usePageViewTracking() {;
   const location = useLocation();
 export function usePageViewTracking() {
-  const location = useLocation(),
+
+
 
   const location = useLocation();
   useEffect(() => {
@@ -44,11 +46,15 @@ export function usePageViewTracking() {
 
   // Also track when location changes directly via React Router
   useEffect(() => {
-    // // // console.log('Page view:', location.pathname)
-  }, [location.pathname])
+
+    console && console.log('Page view:', location && location.pathname)
+  }, [location && location.pathname])
 }
-import { useEffect } from 'react',;
-import { useLocation } from 'react-router-dom',;
+
+
+
+import {useEffect} from 'react';
+import {use_location} from 'react-router-dom';
 /**;
 * Custom hook to track page views for analytics purposes;
 * Attaches event listeners to track route changes and logs page views;
@@ -80,5 +86,8 @@ function usePageViewTracking() {
   useEffect(() => {;
     // // // console.log('Page view:', location.pathname);
   }, [location.pathname]);
+
+
+
 }
 ;

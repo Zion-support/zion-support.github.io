@@ -1,10 +1,6 @@
 
-import React, { useState } from 'react';
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
+
+
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -29,9 +25,7 @@ export interface HireConfirmationModalProps {
   application?: JobApplication;
   onConfirm: () => void
 
-  isSubmitting?: boolean
-}
-export function HireConfirmationModal({
+
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -70,15 +64,8 @@ export function HireConfirmationModal({ ;
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
-  // Get talent information from either candidateData or application
-  const talentData = candidateData |(application?.talent_profile as TalentProfile);
-  const handleHireCandidate = async () => {
-    if (!projectName |!projectDescription) {
-      toast({
-        title: 'Required fields missing'
-        description: 'Please fill in both project name and description.'
-        variant: 'destructive'})
-      return
+
+
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -93,6 +80,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
+
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -149,6 +137,9 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
+
+
+
     }
     if (!user) {
       toast({
@@ -163,7 +154,113 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
+
+
+  // Get talent information from either candidateData or application;
+  const talentData = candidateData || (application?.talent_profile as TalentProfile);
+
+  const handleHireCandidate = async () => {;
+    if (!projectName || !projectDescription) {;
+      toast({;
+        title: 'Required fields missing',;
+        description: 'Please fill in both project name and description.',;
+        variant: 'destructive'}),;
+      return;
     }
+
+    if (!user) {;
+      toast({;
+        title: 'Not authenticated',;
+        description: 'You must be logged in to hire a candidate.',;
+        variant: 'destructive'}),;
+      return;
+    }
+
+    if (!talentData) {;
+      toast({;
+        title: 'Missing talent data',;
+        description: 'Talent information is missing.',;
+        variant: 'destructive'}),;
+      return;
+
+    }
+    }
+
+
+
+    setIsLoading(true);
+
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Label } from '@/components / ui / label';
+import { Textarea } from '@/components / ui / textarea';
+import { toast } from '@/hooks / use - toast';
+import { supabase } from '@/integrations / supabase / client';
+import { TalentProfile } from '@/types / talent';
+import { use_auth } from '@/hooks / use_auth';
+import { JobApplication } from '@/types / jobs';
+export interface HireConfirmationModalProps {
+  is_open: boolean,
+  on_close: () => void,
+  candidate_data?: TalentProfile;
+  application?: JobApplication;
+  on_confirm: () => void,
+  is_submitting?: boolean;
+}
+export /**
+ * HireConfirmationModal - Function description
+ */
+function HireConfirmationModal() {
+  const [project_name, setProjectName] = useState ('');
+  const [project_description, setProjectDescription] = useState ('');
+  const [update_availability, setUpdateAvailability] = useState (true);
+  const [is_loading, setIsLoading] = useState (false);
+  const { user } = use_auth ();
+;
+  // Get talent information from either candidate_data or application;
+  const talent_data = candidate_data || (application?.talent_profile as TalentProfile);
+;
+  const handleHireCandidate = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Required fields missing',
+        description: 'Please fill in both project name and description.',
+        variant: 'destructive'}),
+      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Not authenticated',
+        description: 'You must be logged in to hire a candidate.',
+        variant: 'destructive'}),
+      return;
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Missing talent data',
+        description: 'Talent information is missing.',
+        variant: 'destructive'}),
+      return;
+    }
+    setIsLoading (true);
+;
+    // Create a new project;
+
+    try {
+      const { data: project_data, error: project_error } = await supabase;
+        .from ('projects');
+        .insert ([;
+          {
 
 
     // Create a new project;
@@ -320,8 +417,9 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
-  }
+
   };
+
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -410,5 +508,71 @@ if ( {) {
     }
 
   },
+
+
+
+
+  return (
+
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-[425px]">;
+        <DialogHeader>;
+          <DialogTitle>Confirm Hire</DialogTitle>;
+          <DialogDescription>;
+            Confirm that you want to hire {talentData?.full_name || "this candidate"} for a new project.;
+          </DialogDescription>;
+        </DialogHeader>;
+        <div className="grid gap-4 py-4">;
+          <div className="grid grid-cols-4 items-center gap-4">;
+            <Label htmlFor="projectName" className="text-right">;
+              Project Name;
+            </Label>;
+
+            <Input
+              id="projectName"
+              value={projectName}
+              onChange={(e) => setProjectName(e && e.target.value)}
+              className="col-span-3";
+            />;
+          </div>;
+          <div className="grid grid-cols-4 items-start gap-4">;
+            <Label htmlFor="projectDescription" className="text-right mt-2">;
+              Project Description;
+            </Label>;
+            <Textarea
+              id="projectDescription"
+              value={projectDescription}
+              onChange={(e) => setProjectDescription(e && e.target.value)}
+              className="col-span-3";
+            />;
+          </div>;
+          <div className="flex items-center space-x-2">;
+            <input
+              type="checkbox"
+              id="updateAvailability"
+              className="h-4 w-4"
+              checked={updateAvailability}
+              onChange={(e) => setUpdateAvailability(e && e.target.checked)}
+            />;
+            <label
+              htmlFor="updateAvailability"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed"
+            >
+              Update talent availability to "Unavailable"
+            </label>
+          </div>
+        </div>
+        <div className="flex justify-end gap-2">
+          <Button type="button" variant="secondary" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting |isLoading}>
+            {isLoading ? "Hiring..." : "Confirm Hire"}
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+  )
+}
 }
 ;

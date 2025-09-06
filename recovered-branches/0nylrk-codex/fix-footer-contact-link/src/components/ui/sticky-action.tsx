@@ -1,14 +1,23 @@
 
-import React, { useEffect, useState } from "react",
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+
+
+
+
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
-interface StickyActionProps {
-  className?: string;
 
 interface StickyActionProps {;
+  className?: string;
+  children: React && React.ReactNode,;
+
+  showAfterScroll?: number;
+  position?: "bottom" | "top";
+}
+
+
+export function StickyAction(): any ({;
+
   className;
   children;
 
@@ -76,13 +85,7 @@ if ( {) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          transition={{ duration: 0.2 }}
-          className={cn(
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
-            positionClasses[position];
+
 
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
@@ -128,6 +131,12 @@ export function StickyAction({;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
+            positionClasses[position]
+
+
+
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

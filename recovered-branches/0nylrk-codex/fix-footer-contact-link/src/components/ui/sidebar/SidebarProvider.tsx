@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useState } from "react";
 import React, { createContext, useContext, useState } from "react",
 
+
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
@@ -23,16 +24,15 @@ interface SidebarProviderProps {
   children: React.ReactNode;
   default_open?: boolean;
 }
-export function SidebarProvider({
-  children
-  defaultOpen = true
-}: SidebarProviderProps) {
+
+
 
 
 export function SidebarProvider({ 
   children, 
   defaultOpen = true 
 }: SidebarProviderProps) {;
+
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
@@ -40,10 +40,9 @@ export function SidebarProvider({
 
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
-      <div
-        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
-      >
+
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+
 import React, { createContext, useContext, useState } from "react",;
 
 interface SidebarContextType {;
@@ -78,11 +77,15 @@ export function SidebarProvider(): any ({ ;
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
+
+
+
         {children}
       </div>
     </SidebarContext.Provider>
   );
 }
 }
-;
-;
+
+}
+

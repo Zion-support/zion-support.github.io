@@ -29,9 +29,15 @@ import Image from 'next / image';
 interface OptimizedImageProps {
   src: string
   alt: string
+=======
+
+interface OptimizedImageProps {;
+  src: string,;
+  alt: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   width?: number;
   height?: number;
-  className?: string;
+  class_name?: string;
   priority?: boolean;
   quality?: number;
 }

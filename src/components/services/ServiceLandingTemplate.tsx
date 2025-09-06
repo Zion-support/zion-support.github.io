@@ -3,7 +3,6 @@ name: string;
   text: string;
   avatar?: string
 }
-interface ServiceLandingTemplateProps {
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -63,9 +62,6 @@ export interface Benefit {
   icon?: React.ReactNode
 
 
-  stats?: Array<{ label: string; value: string }>
-  ctaText: string
-  ctaLink: string
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -99,7 +95,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
   title,
   subtitle,
-  heroImage,
   description,
   benefits,
 
@@ -120,10 +115,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </p>
   testimonials,
   ctaText,
-  ctaLink}) => {
-  ctaLink,
-}) => {
-  ctaLink}) => {
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -151,16 +142,37 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Benefits
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+
+
+
+            {description}
+
+    <div className="min - h-screen bg - white">;
+      <section className="py - 20 px - 4 bg - gradient - to - br from - blue - 50 to - indigo - 100">;
+        <div className="max - w-7xl mx - auto text - center">;
+          <h1 className="text - 4xl md:text - 6xl font - bold text - gray - 900 mb - 6">;
+            {title}
+          </h1>;
+          <p className="text - xl text - gray - 600 max - w-3xl mx - auto mb - 8">;
+            {subtitle}
+          </p>;
+          <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+
+            {description}
+          </p>;
+        </div>;
+      </section>;
+      {benefits.length > 0 && (
+        <section className="py - 16 px - 4">;
+          <div className="max - w-7xl mx - auto">;
+            <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
+              Benefits;
+            </h2>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+              {benefits.map ((benefit, index) => (
+                <div key={index} className="bg - white p - 6 rounded - lg shadow - lg">;
                   {benefit.icon && (
-                    <div className="mb-4 text-blue-600">
+                    <div className="mb - 4 text - blue - 600">;
                       {benefit.icon}
 
           </p>;
@@ -276,12 +288,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             {ctaText}
-          </a>
-        </div>
-      </section>
-    </div>
-  )
-}
 
           </a>;
         </div>;
@@ -304,7 +310,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
-                  </div>;
+                  </div>
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -345,10 +351,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
-                    </div>;
-                  </div>;
-                </CardFooter>;
-              </Card>;
+                    </div>
+                  </div>
+                </CardFooter>
+              </Card>
             ))}
           </div>
         </div>
@@ -360,7 +366,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
-          <a href={ctaLink}>{ctaText}</Link>
+          <a href={ctaLink}>{ctaText}</a>
         </Button>
       </section>
     </div>

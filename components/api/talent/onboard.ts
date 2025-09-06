@@ -18,7 +18,8 @@ import { randomUUID } from 'crypto';
     input.skills
     input.tools |''
   ].join('\n');
-  const basicTags = Array.from(
+
+  const basicTags = Array && Array.from(
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
 
@@ -56,6 +57,7 @@ import { randomUUID } from 'crypto';
         { role: 'user', content: prompt }];
       temperature: 0.4
       });
+
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse(content);
@@ -257,7 +259,7 @@ if ( {) {
       tools,
       availability,
       timezone,
-hourly_rate: hourly_rate ? Number (hourly_rate) : null,
+      hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       portfolio_links,
       assets: {
         profile_image: savedProfileImagePath,
@@ -271,14 +273,8 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       },
 
         summary;
-        tags}}
-    const perRecordPath = path.join(dataDir, `${id}.json`);
-    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
-    const aggregatePath = path.join(
-      process.cwd()
-      'data'
-      'talent-submissions.json'
-    };
+        tags}};
+
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
@@ -369,8 +365,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
-  }
-
 }
   }
   }
+}

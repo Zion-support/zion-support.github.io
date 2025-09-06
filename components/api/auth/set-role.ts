@@ -1,8 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  const { role = "guest", talent } = req.query as {
+
   const { role = "guest", talent } = req.query as {;
+
     role?: string;
     talent?: string;
   }
@@ -40,6 +39,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   headers["Set-Cookie"] = cookies && cookies.join();
   res && res.writeHead(302, { ...headers, Location: "/" });
   res && res.end();
+
+
 }
 
   export default /**
@@ -95,6 +96,5 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
-
 }
 

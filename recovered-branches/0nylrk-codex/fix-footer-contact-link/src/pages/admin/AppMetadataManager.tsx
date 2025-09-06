@@ -1,4 +1,28 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+
 
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
@@ -8,6 +32,9 @@ import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
+
+
+
 const AppMetadataManager: React.FC = () => {
   return (
 
@@ -27,15 +54,12 @@ const AppMetadataManager: React.FC = () => {
 }
 export default AppMetadataManager;
 
-},
-
-export default AppMetadataManager,
-import React from "react",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;
-const AppMetadataManager: React.FC = () => {;
-  return (;
+import React from './react';
+import { AppLayout } from '@/layout / AppLayout';
+import { SEO } from '@/components / SEO';
+import { MetadataManager } from '@/components / mobile - app / admin / MetadataManager';
+const AppMetadataManager: React.FC = () => {
+  return (
     <AppLayout>;
       <SEO;
         title="App Metadata Manager";
@@ -46,7 +70,11 @@ const AppMetadataManager: React.FC = () => {;
         <h1 className="text - 3xl font - bold text - zion - cyan mb - 8">App Metadata Manager</h1>;
         <MetadataManager />;
       </div>;
-    </AppLayout>;
-  );
-},;
+    </AppLayout>);
+}
+;
+
+},
+
+
 export default AppMetadataManager;

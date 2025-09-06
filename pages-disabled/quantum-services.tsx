@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -214,6 +218,14 @@ export default function QuantumServices() {;
           </div>
         </section>
 
+            </div>;
+          </div>;
+        </section>;
+
+
+
+
+
         {/* Quantum Services */}
         <section className="py-20 px-4">;
           <div className="max-w-6xl mx-auto">;
@@ -247,14 +259,13 @@ export default function QuantumServices() {;
                     service.popular 
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
                       : 'border-gray-700 hover:border-blue-500'
-                  }`}
-                >
-                  {service.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
+                  }`}>;
+                  {service && service.popular && (;
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">;
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">;
+                        Most Popular;
+                      </span>;
+                    </div>;
                   )}
 
       id: 'quantum - neural - networks',
@@ -502,10 +513,11 @@ function QuantumServices() {
                     ))}
 
                   </ul>
-                  <a
-                    href="/contact"
+
                   <a 
                     href="/contact" 
+
+
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -515,6 +527,23 @@ function QuantumServices() {
             </div>
           </div>
         </section>
+
+                  </ul>;
+
+                  <a
+                    href="/contact" 
+                    className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">;
+                    Get Started;
+                  </a>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+
+
+
+
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">;
@@ -555,10 +584,6 @@ function QuantumServices() {
 
 export default QuantumServicesPage;
 
-}
-  )
-}
-import React from 'react';
                       <span className="text - lg text - gray - 400">/{service.period}</span>;
                     </div>;
                   </div>;
@@ -621,3 +646,4 @@ export default QuantumServicesPage;
   )
 }
 export default QuantumServicesPage;
+

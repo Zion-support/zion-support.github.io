@@ -7,22 +7,6 @@ if ( {) {
       } else {
         success = await addWorkExperience (resume_id, experience_data);
       }
-      if (success) {
-        form.reset({
-          company_name: ''
-          role_title: ''
-          start_date: format(new Date(), 'yyyy-MM-dd')
-          is_current: false
-          description: ''
-          location: ''
-        })
-        setEditingId(null)
-      }
-    } catch (err: any) {
-      setError(err.message |'An error occurred')
-    }
-  }
-  const handleEdit = (work: WorkExperience) => {
       setError(err.message || 'An error occurred');
     };
   };
@@ -42,56 +26,18 @@ if ( {) {
 if ( {) {
   $2
 }
-;
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  const [error, setError] = useState<string | null>(null),;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const form = useForm<WorkExperienceFormValues>({;
-    resolver: zodResolver(workExperienceSchema),;
-    defaultValues: {;
-      company_name: '',;
-      role_title: '',;
-      start_date: format(new Date(), 'yyyy-MM-dd'),;
-      is_current: false,;
-      description: '',;
-      location: ''}}),;
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
-    try {;
-      setError(null),;
-      let success,;
-      const experienceData: WorkExperience = {;
-        company_name: data.company_name, // Required field;
-        role_title: data.role_title, // Required field;
-        start_date: data.start_date, // Required field;
-        end_date: data.is_current ? undefined : (data.end_date || undefined),;
-        is_current: data.is_current,;
-        description: data.description,;
-        location: data.location},;
-      if (editingId) {;
-        success = await updateWorkExperience(editingId, experienceData);
-      } else {;
-        success = await addWorkExperience(resumeId, experienceData);
+        form.reset ({
+          company_name: '',
+          role_title: '',
+          start_date: format (new Date (), 'yyyy - MM - dd'),
+          is_current: false,
+          description: '',
+          location: '',
+        });
+        setEditingId (null);
       }
-;
-      if (success) {;
-        form.reset({;
-          company_name: '',;
-          role_title: '',;
-          start_date: format(new Date(), 'yyyy-MM-dd'),;
-          is_current: false,;
-          description: '',;
-          location: ''}),;
-        setEditingId(null);
-      }
-    } catch (err: any) {;
-      setError(err.message || 'An error occurred');
+    } catch (err: any) {
+      set_error (err.message || 'An error occurred');
     }
   }
   const handle_edit = (work: WorkExperience) =>: any {
@@ -258,9 +204,6 @@ export function WorkExperienceForm(): any ({;
     }
   };
 
-  const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent)
-  },
 
       {workExperiences && workExperiences.length > 0 && (;
         <div className='space-y-4'>;
@@ -306,18 +249,15 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-                  </div>
-                  <div className="flex gap-2">
+                  </div>;
+                  <div className='flex gap-2'>;
                     <Button
-                    setEditingId(null),
-                    setEditingId(null),
                     form.reset({
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
-                      location: ''})
                   } else {
                     onBack()
             />;
@@ -361,6 +301,15 @@ export function WorkExperienceForm(): any ({;
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
+
+                  {editingId ? 'Update' : 'Add'} Experience
+                </Button>
+                {!editingId && workExperiences.length > 0 && (
+                  <Button type='button' onClick={onComplete}>
+                    Next
+                  </Button>
+                )}
+
               </Button>;
 
               <div className='flex gap-2'>;
@@ -395,4 +344,3 @@ export function WorkExperienceForm(): any ({;
 if ( {) {
   $2
 }
-;

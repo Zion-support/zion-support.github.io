@@ -153,36 +153,6 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
-  }, [
-    isGuest
-    initialMessages
-    storedGuestMessages
-    setStoredGuestMessages
-    recipient.id])
-  // Effect for logged-in user messages
-  useEffect((,) => {
-    if (!isGuest) {
-      // Update state if initialMessages prop changes (e.g. new conversation loaded)
-      setLoggedInMessages(initialMessages)
-    }
-  }, [isGuest, initialMessages, recipient.id])
-  // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages
-  const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[],) => Message[])
-  ) => {
-    if (isGuest) {
-      const newMessages = null;
-        valueOrFn instanceof Function
-          ? valueOrFn(displayGuestMessages)
-          : valueOrFn
-      setDisplayGuestMessages(newMessages)
-      setStoredGuestMessages(newMessages), // Always update localStorage for guests
-    } else {
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
-      const newMessages = null;
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
       setLoggedInMessages(newMessages)
     }
   }
@@ -463,6 +433,13 @@ export function ChatAssistant(): any ({;
             className="text-white hover:bg-zion-purple/10 rounded-full"
             onClick = {onClose,}
             onClick={onClose}
+
+
+            aria-label="Close chat"
+          >
+            <X className="h-5 w-5" />
+          </Button>
+        </div>
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
@@ -499,6 +476,19 @@ export function ChatAssistant(): any ({;
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
+
+
+                      {q}
+                    </Button>;
+                  ))}
+                </div>;
+              )}
+            </div>;
+          ) : (;
+            currentMessages && currentMessages.map((msg,) => (;
+              <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
+            ));
+          )}
 
           <div ref={messagesEndRef} />;
         </div>;
@@ -537,3 +527,23 @@ export function ChatAssistant(): any ({;
               <Button
                 onClick = {handleModalSendConfirm,}
                 onClick={handleModalSendConfirm}
+
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+              >
+                Send
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>;
+  );
+
+
+
+        </div>)}
+    </div>);
+}
+}
+
+}

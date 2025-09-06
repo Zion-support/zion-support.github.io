@@ -1,20 +1,7 @@
 
-import {useState} from "react";
-import {Search} from "lucide-react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CountryServiceCard} from "@/components/services/CountryServiceCard";
-import {CountryPricing} from "@/data/onsiteServicePricing";
-import { useState } from "react",
-import { Search } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { CountryServiceCard } from "@/components/services/CountryServiceCard";
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { CountryServiceCard } from "@/components/services/CountryServiceCard",
-import { CountryPricing } from "@/data/onsiteServicePricing",
+
+
+
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -59,19 +46,14 @@ export function CountryTabs({
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
-              <CountryServiceCard
-                key={country.country}
-                country={country}
-              <CountryServiceCard 
-                key={country.country} 
-                country={country} 
-import { useState } from "react",;
-import { Search } from "lucide-react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
-import { CountryPricing } from "@/data/onsiteServicePricing",;
+
+import {useState} from "react";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CountryServiceCard} from "@/components/services/CountryServiceCard";
+import {CountryPricing} from "@/data/onsiteServicePricing";
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -110,9 +92,15 @@ export function CountryTabs(): any ({ ;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
             .map(country => (;
-              <CountryServiceCard;
-                key={country.country} ;
-                country={country} ;
+              <CountryServiceCard
+                key={country && country.country} 
+                country={country} 
+
+
+              <CountryServiceCard 
+                key={country.country} 
+                country={country} 
+
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;

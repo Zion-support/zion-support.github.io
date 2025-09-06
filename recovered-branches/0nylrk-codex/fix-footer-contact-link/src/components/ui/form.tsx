@@ -1,18 +1,6 @@
-import * as React from 'react';
-import * as LabelPrimitive from '@radix-ui/react-label';
-import {useReactId} from '@/hooks/useReactId';
-import {Slot} from '@radix-ui/react-slot';
-import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormContext,} from 'react-hook-form';
-import {cn} from '@/lib/utils';
-import {Label} from '@/components/ui/label';
-const Form = FormProvider;
-type FormFieldContextValue = {
-  name: string
-}
-const FormFieldContext = React.createContext<FormFieldContextValue>({
-  name: ''
-});
-const FormField = ({ ...props }: any) =></FormFieldContextValue> {
+
+
+
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -77,24 +65,9 @@ const useFormField = () => {
     throw new Error('useFormField should be used within <FormItem>');
   }
   const { id } = itemContext as FormItemContextValue;
-  return {
-    id
-    name: fieldContext.name
-    formItemId: `${id}-form-item`
-    formDescriptionId: `${id}-form-item-description`
-    formMessageId: `${id}-form-item-message`
-    ...fieldState
-  }
-}
-type FormItemContextValue = {
-  id: string
-}
-const FormItemContext = React.createContext<FormItemContextValue | null>(null);
-const FormItem = React.forwardRef<
-  HTMLDivElement
-  React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const id = useReactId();
+
+
+
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -230,12 +203,7 @@ const FormLabel = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { error, formItemId } = useFormField()
 
-  return (
-    <Label
-      ref={ref}
-      className={cn(error && "text-destructive", className)}
-      htmlFor={formItemId}
-      {...props}
+
     />
   )
 })
@@ -247,17 +215,8 @@ const FormControl = React.forwardRef<
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
-  return (
-    <Slot
-      ref={ref}
-      id={formItemId}
-      aria-describedby={;
-        !error;
-          ? `${formDescriptionId}`;
-          : `${formDescriptionId} ${formMessageId}`;
-      }
-      aria-invalid={!!error}
-      {...props}
+
+
     />
   )
 })
@@ -269,12 +228,8 @@ const FormDescription = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { formDescriptionId } = useFormField()
 
-  return (
-    <p
-      ref={ref}
-      id={formDescriptionId}
-      className={cn("text-sm text-muted-foreground", className)}
-      {...props}
+
+
     />
   )
 })
@@ -288,9 +243,8 @@ const FormMessage = React.forwardRef<
   const body = error ? String(error?.message) : children
 
   if (!body) {
-    return null
-    return null;
-    return null
+
+
   }
     >
       {body}
@@ -458,9 +412,6 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
-  FormField}
-;
-  FormField,;
-};
-  FormField}
-;
+
+
+

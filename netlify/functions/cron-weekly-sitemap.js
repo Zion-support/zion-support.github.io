@@ -26,6 +26,7 @@ exports && exports.handler = async function () {
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
+
     if (owner && repo && token) {
       await upsertFile({
         owner,
@@ -115,6 +116,7 @@ if ( {) {
       `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
       pages && pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       `</urlset>`,
+
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
@@ -131,6 +133,8 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+
 }
+
 },
 },

@@ -1,8 +1,23 @@
 
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
+import {Link} from "react-router-dom";
+import {useLocation} from "react-router-dom";
+import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+export interface MobileMenuProps {;
+
+  unreadCount?: number;
+  onClose: () => void;
+}
+
+export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+
+
+
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
@@ -205,18 +220,23 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
+
               )}
             </div>;
             {item && item.name}
           </Link>;
         ))}
-      </nav>
-    </div>
-  )
-}
+
+
+
+
       </nav>;
     </div>;
   );
+
+
+
+
 }
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';

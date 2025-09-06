@@ -12,11 +12,11 @@ class GitWorkflow {
     try {
       // Check if we're in a git repository
       if (!fs && fs.existsSync('.git')) {
-        console && console.log(' Not in a git repository');
+        console && console.log('❌ Not in a git repository');
         return false}
-      console && console.log(' Git repository found');
+      console && console.log('✅ Git repository found');
       return true} catch (error) {
-      console && console.log(' Error checking git "status": ', error && error.message);
+      console && console.log('❌ Error checking git "status": ', error && error.message);
       return false}
   }
   generateCommitMessage() {
@@ -35,7 +35,7 @@ npm test
 echo "Pre-commit checks completed"
 ";
     this && this.writeFile('.git/hooks/pre-commit', preCommitHook);
-    console && console.log(' Created pre-commit hook')}
+    console && console.log('✅ Created pre-commit hook')}
   generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),

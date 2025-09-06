@@ -1,21 +1,46 @@
 
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Check} from "lucide-react";
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card",
-import { Check } from "lucide-react",
+
+
+
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
-      title: "For Talent Seekers"
-      title: "For Talent Seekers",
+
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
+export function FeatureHighlights() {;
+  const highlightsData = [;
+    {;
+      title: "For Talent Seekers",;
       features: [;
 
         "AI-powered talent matching based on your specific project requirements";
+        "Verified profiles with skills validation and credential checking";
+        "Transparent pricing and no hidden fees";
+        "Direct communication with potential candidates";
+
+        "Secure payment protection and dispute resolution",;
+        "Post jobs and receive AI-matched applicants";
+      ];
+    };
+    {;
+      title: "For Talent & Service Providers",;
+      features: [;
+
+import React from './react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Check } from './lucide-react';
+export /**
+ * FeatureHighlights - Function description
+ */
+function FeatureHighlights() {
+  const highlights_data = [;
+    {
+      title: "For Talent Seekers",
+      features: [;
+        "AI - powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
@@ -154,6 +179,9 @@ export function FeatureHighlights() {;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
+
+
+
                   ))}
                 </ul>;
               </CardContent>;

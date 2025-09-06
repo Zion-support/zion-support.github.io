@@ -41,6 +41,21 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+
+
+    }
+  }
+  // Trigger the scoring process
+  const handleScore = async () => {
+    try {
+      setIsScoring(true)
+      // Call the trigger_resume_scoring function
+      const { error } = await supabase.rpc(
+        'trigger_resume_scoring'
+        { application_id: application.id }
+      )
+      if (error) throw error
+      toast.success("Resume scoring has been initiated")
       ),
       
       if (error) throw error,
@@ -58,14 +73,95 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
+
+interface ApplicationScoreCardProps {;
+  application: JobApplication,;
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void;
+}
+
+export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
+  const [isScoring, setIsScoring] = useState(false);
+
+  // Determine if application has been scored;
+  const hasScore = typeof application && application.match_score === 'number';
+
+
+      let attempts = 0;
+      const maxAttempts = 10;
+
+  // Get suggestion color;
+  const getSuggestionColor = (suggestion: string | undefined,) => {;
+    switch (suggestion) {;
+      case "Strongly Recommended": return "bg-green-100 text-green-800",;
+      case "Recommended for Review":;
+        return "bg-blue-100 text-blue-800",;
+      case "Low Match":;
+        return "bg-orange-100 text-orange-800",;
+      default:;
+        return "bg-gray-100 text-gray-800";
+    }
+  },;
+
+  // Trigger the scoring process;
+  const handleScore = async () => {;
+    try {;
+      setIsScoring(true),;
+
+      // Call the trigger_resume_scoring function;
+      const { error } = await supabase && supabase.rpc(;
+        'trigger_resume_scoring',;
+        { application_id: application && application.id }
+      ),;
+
+      if (error) throw error,;
+
+      toast && toast.success("Resume scoring has been initiated"),;
+
+      // Poll for results every 3 seconds for up to 30 seconds;
+      let attempts = 0,;
+      const maxAttempts = 10,;
+
+      const checkScore = async () => {;
+        attempts++,;
+
+        const { data, error } = await supabase;
+          .from("job_applications");
+          .select("*");
+          .eq("id", application && application.id);
+          .single(),;
+
+        if (error) {;
+          setIsScoring(false),;
+          toast && toast.error("Failed to check scoring status"),;
+          return;
+        }
+
+        if (data && data.scored_at) {;
+          setIsScoring(false),;
+          toast && toast.success("Resume scoring completed"),;
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
+          return;
+        }
+
+        if (attempts < maxAttempts) {;
+          setTimeout(checkScore, 3000);
+        } else {;
+          setIsScoring(false),;
+          toast && toast.info("Scoring is taking longer than expected. Check back later.");
+        }
+      },;
+
+          setIsScoring(false),
+          toast.error("Failed to check scoring status"),
+          return;
+        }
+        if (data.scored_at) {
           setIsScoring(false)
           toast.success("Resume scoring completed")
           if (onScoreUpdated) onScoreUpdated(data as JobApplication)
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
-          return;
-          return
         }
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
@@ -86,51 +182,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
-        }
-      },
-      
-      setTimeout(checkScore, 3000)
-      
-    } catch (error: any) {
-      setIsScoring(false),
-      toast.error(`Failed to score resume: ${error.message}`)
-      ),;
-      if (error) throw error,;
-      toast.success("Resume scoring has been initiated"),;
-      // Poll for results every 3 seconds for up to 30 seconds;
-      let attempts = 0,;
-      const maxAttempts = 10,;
-      const checkScore = async () => {;
-        attempts++,;
-        const { data, error } = await supabase;
-          .from("job_applications");
-          .select("*");
-          .eq("id", application.id);
-          .single(),;
-        if (error) {;
-          setIsScoring(false),;
-          toast.error("Failed to check scoring status"),;
-          return;
-        }
-;
-        if (data.scored_at) {;
-          setIsScoring(false),;
-          toast.success("Resume scoring completed"),;
-          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
-          return;
-        }
-;
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000);
-        } else {;
-          setIsScoring(false),;
-          toast.info("Scoring is taking longer than expected. Check back later.");
-        }
-      },;
-      setTimeout(checkScore, 3000);
-    } catch (error: any) {;
-      setIsScoring(false);
-      toast.error(`Failed to score resume: ${error.message}`);
     }
   },
 
@@ -219,10 +270,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
-                      </div>
-                    )}
-                      </div>;
-                      </div>;
                     )}
                     {application.match_breakdown.experience_match && (
                       <div>
@@ -398,12 +445,6 @@ if ( {) {
                         {application.match_breakdown.certifications_match.matching && (
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
-                          <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
-                        )}
-                      </div>
-                    )}
-                      </div>;
-                      </div>;
                     )}
                     {application.match_breakdown.education_match && (
                       <div>
@@ -442,12 +483,6 @@ if ( {) {
                 </details>;
               </div>;
             )}
-          </div>
-        ) : (
-          <div className="text-center py-4">
-            <p className="text-muted-foreground mb-4">
-              Analyze how well this resume matches your job requirements.
-            </p>
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
@@ -463,13 +498,59 @@ if ( {) {
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
-      </CardContent>
-    </Card>;
-  );
-};
-}
+
+            <Button 
+              onClick = {handleScore,}
+              disabled = {isScoring,}
+              onClick={handleScore} 
+              disabled={isScoring}
+
+              className="w-full"
+            >
+              {isScoring ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Scoring Resume...
+                </>
+              ) : (
+                "Score Resume"
+              )}
+            </Button>;
+          </div>;
+        )}
       </CardContent>;
     </Card>;
   );
 }
+
+                          <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
+                      </div>)}
+                    {application.match_breakdown.education_match && (
+                      <div>;
+                        <p className="font - medium">Education Match: {application.match_breakdown.education_match.score}/100</p>;
+                        <p>{application.match_breakdown.education_match.analysis}</p>;
+                      </div>)}
+                  </div>;
+                </details>;
+              </div>)}
+          </div>) : (
+          <div className="text - center py - 4">;
+            <p className="text - muted - foreground mb - 4">;
+              Analyze how well this resume matches your job requirements.;
+            </p>;
+            <Button;
+              on_click = {handle_score, }
+              disabled = {is_scoring, }
+              className="w - full";
+            >;
+              {is_scoring ? (
+                <>;
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                  Scoring Resume...;
+                </>) : (
+                "Score Resume")}
+            </Button>;
+          </div>)}
+      </CardContent>;
+    </Card>);
 }

@@ -40,20 +40,14 @@ const nextConfig = {
 
   // Trailing slash
   trailingSlash: false,
-
   // Base path
-  basePath: "",
-
+  basePath: '',
   // Asset prefix
-  assetPrefix: "",
-
+  assetPrefix: '',
   // Generate ETags
   generateEtags: true,
-
   // Dist directory
   distDir: '.next',
 };
-module.exports = nextConfig;
 
-module.exports = nextConfig;
-module.exports = nextConfig;
+

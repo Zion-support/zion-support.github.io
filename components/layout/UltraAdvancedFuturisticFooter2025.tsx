@@ -24,24 +24,14 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Twitter
-  Linkedin
-  Github
-  ArrowUp
-  Crown
-  Zap
-  Brain
-  Rocket
-  Shield
-  Users
-  BookOpen
-  Briefcase
-  Atom;
+
+} from 'lucide-react';
+
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
+
+
+
   Mail,
   Phone,
   MapPin,
@@ -60,13 +50,13 @@ import {
 
   Briefcase,;
   Atom,;
-} from 'lucide-react';
 
 
 } from 'lucide-react';
 
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
+;
 interface FooterLink {
 
 interface FooterLink {;
@@ -536,18 +526,118 @@ const footer_sections: FooterSection[] = [;
       title: 'Company'
       items: [
 
-        { label: '2040 Services', href: '/innovative-2040-services-showcase' },
-      ],
-    },    {
-
+      {
+        label: 'White Papers',
+        href: '/white - papers',
+        description: 'In - depth research',
+      },
+      {
+        label: 'Webinars',
+        href: '/webinars',
+        description: 'Educational content',
+      },
+      {
+        label: 'Documentation',
+        href: '/docs',
+        description: 'Technical guides',
+      },
+      {
+        label: 'Case Studies',
+        href: '/case - studies',
+        description: 'Success stories',
+      },
+      { label: 'Support', href: '/support', description: 'Help & assistance' },
+    ],
+  },
+  {
+    title: 'Industries',
+    links: [;
+      {
+        label: 'Healthcare',
+        href: '/healthcare - solutions',
+        description: 'Medical technology',
+      },
+      {
+        label: 'Finance',
+        href: '/financial - solutions',
+        description: 'Fintech solutions',
+      },
+      {
+        label: 'Manufacturing',
+        href: '/manufacturing - ai - solutions',
+        description: 'Industry 4.0',
+      },
+      {
+        label: 'Government',
+        href: '/government - technology - solutions',
+        description: 'Public sector',
+      },
+      {
+        label: 'Education',
+        href: '/education - technology - solutions',
+        description: 'EdTech solutions',
+      },
+    ],
+  },
+];
+;
+const social_links = [;
+  {
+    icon: <Linkedin className='w - 5 h - 5' />,
+    href: 'https://linkedin.com / company / ziontechgroup',
+    label: 'LinkedIn',
+    external: true,
+  },
+  {
+    icon: <Twitter className='w - 5 h - 5' />,
+    href: 'https://twitter.com / ziontechgroup',
+    label: 'Twitter',
+    external: true,
+  },
+  {
+    icon: <Github className='w - 5 h - 5' />,
+    href: 'https://github.com / ziontechgroup',
+    label: 'GitHub',
+    external: true,
+  },
+];
+;
+const quick_links = [;
+  { name: 'About Us', href: '/about', icon: <Users className='w - 4 h - 4' /> },
+  { name: 'Contact', href: '/contact', icon: <Phone className='w - 4 h - 4' /> },
+  {
+    name: 'Support',
+    href: '/support',
+    icon: <HelpCircle className='w - 4 h - 4' />,
+  },
+  {
+    name: 'Documentation',
+    href: '/docs',
+    icon: <FileText className='w - 4 h - 4' />,
+  },
+  { name: 'API Reference', href: '/api', icon: <Code className='w - 4 h - 4' /> },
+  { name: 'Status', href: '/status', icon: <TrendingUp className='w - 4 h - 4' /> }, ];
+;
+const UltraAdvancedFuturisticFooter2025: React.FC = () => {
+  const scrollToTop = () =>: any {
+    window.scroll_to ({ top: 0, behavior: 'smooth' });  }  { name: 'About Us', href: '/about', icon: <Users className="w - 4 h - 4" /> },
+  { name: 'Contact', href: '/contact', icon: <Phone className="w - 4 h - 4" /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w - 4 h - 4" /> },
+  { name: 'Documentation', href: '/docs', icon: <FileText className="w - 4 h - 4" /> },
+  { name: 'API Reference', href: '/api', icon: <Code className="w - 4 h - 4" /> },
+  { name: 'Status', href: '/status', icon: <TrendingUp className="w - 4 h - 4" /> }
+const UltraAdvancedFuturisticFooter2025: React.FC = () => {
+  const scrollToTop = () =>: any {
+    window.scroll_to ({ top: 0, behavior: 'smooth' });    window.scroll_to ({ top: 0, behavior: 'smooth' });
+  }
+;
+  const footer_sections = [;
     {
-
-      title: 'Solutions',
-      items: [
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
-        { label: 'Micro SAAS', href: '/micro-saas' },
-        { label: 'IT Services', href: '/it-services' },
-        { label: 'Innovation Lab', href: '/innovation-lab' },
+      title: 'Services',
+      items: [;
+        { label: 'AI & Machine Learning', href: '/ai - services' },
+        { label: 'Quantum Computing', href: '/quantum - computing' },
+        { label: 'Space Technology', href: '/space - tech' },
 
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
@@ -574,14 +664,6 @@ const footer_sections: FooterSection[] = [;
     {
       title: 'Company',
       items: [;
-        { label: 'Research & Development', href: '/research-development' },
-      ],
-    },    {
-
-    {
-
-      title: 'Company',
-      items: [
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
@@ -589,6 +671,17 @@ const footer_sections: FooterSection[] = [;
 
         { label: 'Press & Media', href: '/press' },
       ],
+    },    {        { label: 'Press & Media', href: '/press' }
+      ];
+    }
+    {
+      title: 'Resources',
+      items: [;
+
+        { label: 'Blog', href: '/blog' },
+        { label: 'Case Studies', href: '/case - studies' },
+        { label: 'White Papers', href: '/white - papers' },
+        { label: 'Documentation', href: '/docs' },
 
         { label: 'Support', href: '/support' },
       ],
@@ -889,25 +982,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
     window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  return (
-    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>
-      {/* Animated Background Elements */}
-      <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (
-          <motion.div
-            key={i}  }
-            key={i}  };
+
+
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
-            key={i}
 
-      <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (
-          <motion.div
-            key={i}  };
 
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
@@ -991,6 +1072,10 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <Globe className="w-4 h-4 text-blue-400" />
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
 
+
+
+
+
                     ziontechgroup.com
                   </a>
                 </div>
@@ -1022,13 +1107,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   {section.title === 'Company' && <Users className="w-5 h-5 text-pink-400" />}
                   {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-blue-400" />}
                   <span>{section.title}</span>
-                </h4>
-                <ul className='space-y-3'>
-                  {section.items.map(item => (
-                    <li key={item.label}>
-                      <Link
-                        href={item.href}
-                        className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                      >                  <span>{section.title}</span>
                 </h4>
                 <ul className="space-y-3">
                   {section.items.map((item) => (
@@ -1166,6 +1244,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             ))}
           </motion.div>
 
+          </motion && motion.div>;
+
+
+
+
+
           {/* Social Links & Newsletter */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1173,6 +1257,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
             className='mt-16 pt-12 border-t border-gray-800/50'
+
 
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
@@ -1230,6 +1315,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
 
+
+
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -1249,6 +1336,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
+
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -1259,6 +1347,20 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             </div>
           </motion.div>
         </div>
+
+
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ scale: 0 && 0.95 }}>;
+                    Subscribe;
+                  </motion && motion.button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+
+
 
         {/* Bottom Bar */}
         <motion&& motion.div
@@ -1350,6 +1452,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           viewport={{ once: true }}
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 
+
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -1360,13 +1463,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>;
                 © 2024 Zion Tech Group. All rights reserved. |;
-          className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
-
-        >
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-            <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
-              <div className='text-gray-400 text-sm'>
-                © 2024 Zion Tech Group. All rights reserved.
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200 ml-2'>;
@@ -1404,6 +1500,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Terms of Service
                 </Link>
               </div>
+              
               <div className="flex items-center space-x-4 text-gray-400 text-sm">
                 <span>Powered by</span>
                 <div className="flex items-center space-x-2">
@@ -1516,6 +1613,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           </div>;
 
 };
+
 export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button>;
     </footer>;
   );
@@ -1527,6 +1625,8 @@ export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button
 
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
+
+
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -1537,14 +1637,7 @@ export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button
       </motion.button>
     </footer>
   );
-}
+
 };
 
-export default UltraAdvancedFuturisticFooter2025;      </motion.button>
-    </footer>
-  )
-}
-export default UltraAdvancedFuturisticFooter2025;
 
-export default UltraAdvancedFuturisticFooter2025;
-export default UltraAdvancedFuturisticFooter2025;

@@ -1,7 +1,22 @@
 
-export function useTranslationService() {
+
+
+
+
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
+type ContentType = 'job' | 'profile' | 'service' | 'general';
+interface TranslationResponse {
+  translations: Record<SupportedLanguage, string>;
+  error?: string
+}
+
+
 
 export function useTranslationService() {;
+
+
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -68,6 +83,8 @@ export function useTranslationService() {;
           ar: '';
         },;
         initialTranslations[sourceLanguage] = content,;
+
+
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
@@ -122,6 +139,8 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
     getTranslation;
+
+
   }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {

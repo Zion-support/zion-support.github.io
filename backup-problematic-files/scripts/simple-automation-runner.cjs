@@ -2,10 +2,6 @@
 const fs = require('fs')
 const path = require('path')      return size}}
 
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')      return size}}
-
 #!/usr/bin/env node
 /**
  * Simple Automation Runner
@@ -268,7 +264,6 @@ module.exports = SimpleAutomationRunner;
 module.exports = SimpleAutomationRunner;
 
 
-
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -299,8 +294,6 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
-        "status"
-        "status"
         "status"
         "status"
         "status"

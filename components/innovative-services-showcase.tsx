@@ -4,22 +4,39 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Rocket
-  Shield
-  DollarSign
-  Users
-  Clock
-  CheckCircle
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink;} from 'lucide-react';import {
-  Star, TrendingUp, Zap, Brain, Rocket, Shield
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next / head';
+import { motion } from 'framer-motion';
+
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
+import { nextGenAIServices } from '../data/next-gen-ai-services';
+
 
   Star,
   TrendingUp,
@@ -38,6 +55,7 @@ import {
   MapPin,;
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
+
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -46,6 +64,7 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
+
   const contactInfo = {
 
     mobile: '+1 302 464 0950',
@@ -54,6 +73,41 @@ export default function InnovativeServicesShowcase() {
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
 
   };
+
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
+
+  }
+;
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+        delayChildren: 0.2
+      }
+    },  };        delayChildren: 0.2
+      }
+    }
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.6
+        ease: 'easeOut'
+      }
+    },  };        ease: "easeOut"
+      }
+    }
+  }
         staggerChildren: 0.1,
         delayChildren: 0.2,
       },
@@ -91,65 +145,6 @@ export default function InnovativeServicesShowcase() {
       ]
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
       color: 'from-indigo-600 to-purple-700'
-    }
-    {
-      title: '🧬 AI-Powered Quantum Drug Discovery'
-      description:
-        'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.'
-      price: '$12,999/month'
-      marketData: '$150B AI in healthcare, 400% annual growth'
-      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)'
-      savings: '100x faster drug discovery vs. traditional methods'
-      features: [
-        'Quantum molecular simulation'
-        'AI-powered drug screening'
-        'Protein folding prediction'
-        'Drug interaction modeling'
-        'Clinical trial optimization'
-      ]
-      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery'
-      color: 'from-emerald-600 to-teal-700'
-    }
-    {
-      title: '💰 Autonomous Quantum Trading System'
-      description:
-        'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.'
-      price: '$15,999/month'
-      marketData: '$15T algorithmic trading, 200% annual growth'
-      competitors: 'Renaissance Technologies, Two Sigma, Citadel'
-      savings: 'Accessible quantum AI for smaller firms'
-      features: [
-        'Quantum AI trading algorithms'
-        'Nanosecond execution'
-        'Real-time market analysis'
-        'Risk management'
-        'Portfolio optimization'
-      ]
-      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system'
-      color: 'from-yellow-600 to-orange-700'
-    }
-    {
-      title: '🧠 Neural Interface Development Platform'
-      description:
-        'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.'
-      price: '$19,999/month'
-      marketData: '$5B neural interface market, 500% annual growth'
-      competitors: 'Basic research tools, Traditional medical devices'
-      savings: 'First comprehensive neural interface platform'
-      features: [
-        'Neural signal processing'
-        'Brain activity monitoring'
-        'AI-powered interpretation'
-        'Real-time communication'
-        'Safety protocols'
-      ]
-      link: 'https://ziontechgroup.com/neural-interface-development-platform'
-      color: 'from-purple-600 to-indigo-700'
-    },  ];
-
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
     }
   };
 
@@ -191,6 +186,7 @@ export default function InnovativeServicesShowcase() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',    website: 'https://ziontechgroup && ziontechgroup.com';
   };
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -217,6 +213,7 @@ export default function InnovativeServicesShowcase() {;
       }
     }
   };
+
   const featuredServices = [;
     {;
       title: '🔐 Quantum Internet Security Platform',;
@@ -446,9 +443,9 @@ export default function InnovativeServicesShowcase() {;
 
 
         {/* Hero Section */}
-        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>
-            <motion.div
+        <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto text-center'>;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
 
@@ -558,6 +555,7 @@ export default function InnovativeServicesShowcase() {;
 
               initial={{ opacity: 0, y: 30 }}
 
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -594,6 +592,7 @@ export default function InnovativeServicesShowcase() {;
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
+
 
                 >
                   <div className='mb-6'>
@@ -710,11 +709,10 @@ export default function InnovativeServicesShowcase() {;
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
-
-                >
-                  <div className='mb-6'>
-                    <h3 className='text-2xl font-bold text-white mb-4'>
+                  className='bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - sm border border - cyan - 500 / 20 rounded - 2xl p - 8 hover:border - cyan - 500 / 40 transition - all duration - 300';
+                >;
+                  <div className='mb - 6'>;
+                    <h3 className='text - 2xl font - bold text - white mb - 4'>;
                       {service.title}
                     </h3>;
                     <p className='text - gray - 300 mb - 6 leading - relaxed'>;
@@ -855,6 +853,22 @@ export default function InnovativeServicesShowcase() {;
           </div>
         </section>
 
+            </div>;
+          </div>;
+        </section>;
+
+
+        {/* Emerging Tech Services */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto'>;
+            <motion&& motion.div
+              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+              className="text-center mb-16"
+
+
+
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -867,21 +881,18 @@ export default function InnovativeServicesShowcase() {;
 
               initial={{ opacity: 0, y: 30 }}
 
+
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
-                  Emerging
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
+                  Emerging;
                 </span>{' '}
-                Tech Services
-              </h2>
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Discover the latest technologies that are emerging and
-                transforming industries
-              </p>
-            </motion.div>
+
+
+
+
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
@@ -896,6 +907,7 @@ export default function InnovativeServicesShowcase() {;
                 transforming industries;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {emergingTechServicesEnhanced2025;
                 .slice(0, 6);
@@ -942,28 +954,69 @@ export default function InnovativeServicesShowcase() {;
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
-            </div>
-          </div>
-        </section>
-
-        {/* Emerging Tech Services */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-            <motion.div
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
-
-              initial={{ opacity: 0, y: 30 }}
-
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                  Emerging
+
+                </span> Tech Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the latest technologies that are emerging and transforming industries
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                              {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
+                <motion.div
+                  key={service.id}
+            </div>;
+
+            <motion&& motion.div
+              className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}                  Emerging
+                </span> Tech Services;
+              </h2>;
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+                Discover the latest technologies that are emerging and transforming industries;
+              </p>;
+            </motion && motion.div>;
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+                              {emergingTechServicesEnhanced2025 && emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  viewport={{ once: true }}>;
+                  <UltraFuturisticCard variant="quantum-holographic" className="p-6">;
+                    <div className="text-4xl mb-4">{service && service.icon}</div>;
+                    <h3 className="text-xl font-bold text-white mb-3">{service && service.name}</h3>;
+                    <p className="text-gray-300 text-sm mb-4">{service && service.description}</p>;
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">;
+                      {service && service.price}
+                      <span className="text-sm text-gray-400">{service && service.period}</span>;
+                    </div>;
+                    <div className="text-sm text-gray-400 mb-4">{service && service.marketSize} • {service && service.growthRate}</div>;
+                    <a
+                      href={service && service.link}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2">;
+                      <span>Learn More</span>;
+                      <ArrowRight className="w-4 h-4" />;
+                    </a>;
+                  </UltraFuturisticCard>;
+                </motion && motion.div>;
+              ))}
 
             </div>;
+
             <motion&& motion.div
 
               className="text-center mt-16"
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -986,15 +1039,12 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
-
               initial={{ opacity: 0, y: 30 }}
-
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
                   ArrowRight-Generation
 
@@ -1064,6 +1114,75 @@ export default function InnovativeServicesShowcase() {;
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
+                      </div>;
+                    </div>;
+                    <div className='mb - 6'>;
+                      <h4 className='text - lg font - semibold text - white mb - 3'>;
+                        Key Features:;
+                      </h4>;
+                      <ul className='space - y-2'>;
+                        {service.features.map ((feature, idx) => (
+                          <li;
+                            key={idx}
+                            className='flex items - center text - gray - 300';
+                          >;
+                            <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                            {feature}                >;
+                  <div className="mb - 6">;
+                    <h3 className="text - 2xl font - bold text - white mb - 4">{service.title}</h3>;
+                    <p className="text - gray - 300 mb - 6 leading - relaxed">{service.description}</p>;
+                    <div className="bg - gradient - to - r from - cyan - 500 / 10 to - purple - 500 / 10 p - 4 rounded - lg border border - cyan - 500 / 20 mb - 6">;
+                      <div className="text - 2xl font - bold text - cyan - 400 mb - 2">{service.price}</div>;
+                      <div className="text - sm text - gray - 400">{service.market_data}</div>;
+                      <div className="text - sm text - green - 400 mt - 1">{service.savings}</div>;
+                    </div>;
+                    <div className="mb - 6">;
+                      <h4 className="text - lg font - semibold text - white mb - 3">Key Features:</h4>;
+                      <ul className="space - y-2">;
+                        {service.features.map ((feature, idx) => (
+                          <li key={idx} className="flex items - center text - gray - 300">;
+                            <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
+                            {feature}
+                          </li>))}
+                      </ul>;
+                    </div>;
+                    <div className='flex flex - col sm:flex - row gap - 3'>;
+                      <a;
+                        href={service.link}
+                        className='bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - bold py - 3 px - 6 rounded - full text - center transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 25 inline - flex items - center justify - center space - x-2';
+                      >;
+                        <span > Learn More</span>;
+                        <ExternalLink className='w - 5 h - 5' />;
+                      </a>;
+                      <a;
+                        href='/contact';
+                        className='border - 2 border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - black font - bold py - 3 px - 6 rounded - full text - center transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'                      >                      <a;
+                        href={service.link}
+                        className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - bold py - 3 px - 6 rounded - full text - center transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - cyan - 500 / 25 inline - flex items - center justify - center space - x-2";
+                      >;
+                        <span > Learn More</span>;
+                        <ExternalLink className="w - 5 h - 5" />;
+                      </a>;
+                      <a;
+                        href="/contact";
+                        className="border - 2 border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - black font - bold py - 3 px - 6 rounded - full text - center transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30";
+                      >;
+                        Get Started;
+                      </a>;
+                    </div>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* Emerging Tech Services */}
+        <section className='py - 20 px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='max - w-7xl mx - auto'>;
+            <motion.div;
+              className='text - center mb - 16'              initial={{ opacity: 0, coordinate_y: 30 }}        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              className="text - center mb - 16";
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
               initial={{ opacity: 0, y: 30 }}
@@ -1195,6 +1314,7 @@ export default function InnovativeServicesShowcase() {;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1204,6 +1324,8 @@ export default function InnovativeServicesShowcase() {;
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1244,48 +1366,8 @@ export default function InnovativeServicesShowcase() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-                >
-                  Get Started Today
-                </a>
-                <a
-                  href='/services'
-                  className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'                  href="/services"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
-                >
-                  Explore All Services
-                </a>
-              </div>
-              <div className='mt-12 text-center'>
-                <p className='text-gray-400 mb-4'>Contact us directly:</p>
-                <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
-                  <div className='flex items-center space-x-2'>
-                    <Phone className='w-5 h-5 text-cyan-400' />
-                    <span className='text-white'>{contactInfo.mobile}</span>
-                  </div>
-                  <div className='flex items-center space-x-2'>
-                    <Mail className='w-5 h-5 text-purple-400' />
-                    <span className='text-white'>{contactInfo.email}</span>
-                  </div>
-                  <div className='flex items-center space-x-2'>
-                    <MapPin className='w-5 h-5 text-pink-400' />
-                    <span className='text-white'>{contactInfo.address}</span>                  </div>                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-5 h-5 text-purple-400" />
-                    <span className="text-white">{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <MapPin className="w-5 h-5 text-pink-400" />
-                    <span className="text-white">{contactInfo.address}</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-);
+
+
   );
 }
             >;
@@ -1482,6 +1564,4 @@ export default function InnovativeServicesShowcase() {;
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
-}
-  );
 }

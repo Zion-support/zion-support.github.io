@@ -7,8 +7,8 @@ export default function SmartChurn() {; return (; <Article; title=\"Smart Churn 
 import React from 'react';
 interface SmartchurnProps {
   // Add props here as needed
-}
-}
+
+
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d

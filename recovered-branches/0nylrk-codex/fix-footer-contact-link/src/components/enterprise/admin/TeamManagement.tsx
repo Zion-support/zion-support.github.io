@@ -1,19 +1,6 @@
 
-import React, { useState } from "react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle;
+
+
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -25,6 +12,7 @@ import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
+
 import React, { useState } from "react",
 import {
   Table;
@@ -535,6 +523,8 @@ export function TeamManagement() {;
                         size="sm";
 
                         className="text-destructive hover:text-destructive";
+
+
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />

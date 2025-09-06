@@ -1,5 +1,10 @@
 
 
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+
+
 import React from 'react';
 
 import Head from 'next/head';
@@ -8,8 +13,10 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-export default function ApiObservabilityPage() {
 
+
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function ApiObservabilityPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
   if (!service) return null;
@@ -107,4 +114,10 @@ if (return null) {
       </div>;
 
 
+
+
+    </UltraAdvancedFuturisticBackground>);
+}
 ;
+
+

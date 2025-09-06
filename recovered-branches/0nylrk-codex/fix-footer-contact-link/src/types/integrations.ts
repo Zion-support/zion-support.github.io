@@ -1,5 +1,4 @@
 
-
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -15,30 +14,47 @@ export interface Integration {
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
+
+
+
+export type IntegrationStatus = "connected" | "warning" | "disconnected",
+
+export interface Integration {;
+  id: string;
+  name: string;
+  description: string;
+  logoUrl: string;
+  status: IntegrationStatus;
+export interface Integration {
+  id: string,
+  name: string,
+  description: string,
+  logoUrl: string,
+  status: IntegrationStatus,
+  lastSync?: string,
+  type: IntegrationType
   last_sync?: string,
   type: IntegrationType;
 }
-  | "job_posted";
 
-  | "job_posted",
-export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",;
-export type IntegrationStatus = "connected" | "warning" | "disconnected",;
-export interface Integration {;
-  id: string,;
-  name: string,;
-  description: string,;
-  logoUrl: string,;
-  status: IntegrationStatus,;
-  lastSync?: string,;
-  type: IntegrationType;
+
+
+
+
+  details: string
 }
-;
-export interface SyncLog {;
-  id: string,;
-  integration: string,;
-  event: string,;
-  status: "success" | "error" | "warning",;
-  timestamp: string,;
+export type CrmIntegrationEvents =
+  | "contact_synced"
+  | "deal_created"
+  | "deal_updated"
+  | "note_added";
+  | "job_synced";
+  | "note_added"
+  | "job_synced";
+export type AtsIntegrationEvents =
+  | "job_synced",
+
+  timestamp: string,
   details: string;
 }
 export type CrmIntegrationEvents =;

@@ -1,12 +1,9 @@
 
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Crown, Medal, Trophy} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge";
-import { Crown, Medal, Trophy } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Crown, Medal, Trophy } from './lucide-react';
+
 interface LeaderboardEntry {
 
   id: string
@@ -16,6 +13,7 @@ interface LeaderboardEntry {
 
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
+
 
 interface LeaderboardEntry {
   id: string,
@@ -35,16 +33,12 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
-      referrals: 178
-      earnings: 4500
+
 
       referrals: 178,
       earnings: 4500,
-      badges: ["gold", "trending"];
-    };
-      badges: ["gold", "trending"]
-    }
-    },
+
+
     {
 
       id: "2"
@@ -89,44 +83,14 @@ export function PartnerLeaderboard() {
       referrals: 87
       earnings: 2175
 
-      badges: ["newcomer"]
-    }
-  ];
-  // Function to render rank badge
 
 
-  return (
-    <div className="space-y-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Crown className="h-5 w-5 text-yellow-500" />
-            Top Partners
-          </CardTitle>
-          <CardDescription>This month's top-performing partners</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {leaderboard.length > 0 ? (
-              leaderboard.map(entry => (
-                <div
-                  key={entry.id}
-                  className={`flex items-center justify-between p-3 rounded-md ${
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-    },
-    {
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { Crown, Medal, Trophy } from "lucide-react",;
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Crown, Medal, Trophy} from "lucide-react";
+
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -280,14 +244,10 @@ function PartnerLeaderboard() {
           <CardDescription > This month's top - performing partners</CardDescription>;
         </CardHeader>;
         <CardContent>;
-          <div className="space-y-4">;
-            {leaderboard.length > 0 ? (;
-              leaderboard.map(entry => (;
-                <div;
-                  key={entry.id} ;
-                  className={`flex items-center justify-between p-3 rounded-md ${;
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
+          <div className="space - y-4">;
+            {leaderboard.length > 0 ? (
+
+
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -405,6 +365,9 @@ function PartnerLeaderboard() {
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
+
+
+
             )}
           </div>
         </CardContent>

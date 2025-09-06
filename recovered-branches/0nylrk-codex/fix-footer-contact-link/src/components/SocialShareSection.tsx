@@ -1,16 +1,6 @@
 
-import {Button} from "./ui/button";
-import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
-import {toast} from "./ui/use-toast";
-export function SocialShareSection() {
-  // Current URL and text to share;
-  const shareUrl = encodeURIComponent(window.location.href);
-  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
-import { Button } from "./ui/button",
-import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
-import { toast } from "./ui/use-toast";
-export function SocialShareSection() {
-  // Current URL and text to share
+
+
 
   const shareUrl = encodeURIComponent(window.location.href);
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
@@ -108,18 +98,8 @@ import {toast} from "./ui/use-toast";
                 key={index}
                 className={`${link.color} text-white`}
                 size="sm"
-                onClick={link.onClick}
-              >
-                {link.icon}
-                <span>{link.name}</span>
-              </Button>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+
+
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -252,5 +232,8 @@ function SocialShareSection() {
 
             {shareLinks.map((link, index) => (;
               <Button;
+
+
+
 }
 ;

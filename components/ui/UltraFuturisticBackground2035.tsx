@@ -182,8 +182,10 @@ import { motion } from 'framer-motion';
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
+
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
+
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
@@ -278,16 +280,20 @@ import { motion } from 'framer-motion';
     const animate = () => {;
       ctx && ctx.fillStyle = colors && colors.background;
       ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+
       // Update and draw particles;
       particlesRef && particlesRef.current.forEach((particle, index) => {;
         // Update position;
         particle && particle.x += particle && particle.vx;
         particle && particle.y += particle && particle.vy;
+
         // Bounce off edges;
         if (particle && particle.x <= 0 || particle && particle.x >= canvas && canvas.width) particle && particle.vx *= -1;
         if (particle && particle.y <= 0 || particle && particle.y >= canvas && canvas.height) particle && particle.vy *= -1;
+
         // Update life;
         particle && particle.life--;
+
         // Regenerate particle if it dies;
         if (particle && particle.life <= 0) {;
           particle && particle.x = Math && Math.random() * canvas && canvas.width;
@@ -295,15 +301,18 @@ import { motion } from 'framer-motion';
           particle && particle.life = particle && particle.maxLife;
           particle && particle.type = Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal';        }          particle && particle.type = Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal';
         }
+
         // Draw particle;
         const alpha = particle && particle.life / particle && particle.maxLife;
         ctx && ctx.globalAlpha = alpha;
+
         if (particle && particle.type === 'quantum' && enableQuantumEffects) {;
           // Quantum particle effect;
           ctx && ctx.beginPath();
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size * 2, 0, Math && Math.PI * 2);
           ctx && ctx.fillStyle = colors && colors.accent;
           ctx && ctx.fill();
+
           // Quantum glow;
           ctx && ctx.shadowColor = colors && colors.accent;
           ctx && ctx.shadowBlur = 20;
@@ -320,30 +329,40 @@ import { motion } from 'framer-motion';
           ctx && ctx.fill();        }          ctx && ctx.fill();
         }
       });
+
       // Draw holographic grid;
       if (enableHolographic) {;
         drawHolographicGrid(ctx, colors);      }
+
       // Draw neon effects;
       if (enableNeonEffects) {;
         drawNeonEffects(ctx, colors);      }
+
       // Draw space-time effects;
       if (enableSpaceTime) {;
         drawSpaceTimeEffects(ctx, colors);
       }
+
       animationRef && animationRef.current = requestAnimationFrame(animate);    };        drawHolographicGrid(ctx, colors);
       }
+
       // Draw neon effects;
       if (enableNeonEffects) {;
         drawNeonEffects(ctx, colors);        drawNeonEffects(ctx, colors);
       }
+
       // Draw space-time effects;
       if (enableSpaceTime) {;
         drawSpaceTimeEffects(ctx, colors);
       }
+
       animationRef && animationRef.current = requestAnimationFrame(animate);        drawSpaceTimeEffects(ctx, colors);
       }
+
       animationRef && animationRef.current = requestAnimationFrame(animate);
+
     animate();
+
     return () => {;
       window && window.removeEventListener('resize', resizeCanvas);
       if (animationRef && animationRef.current) {;
@@ -436,9 +455,11 @@ import { motion } from 'framer-motion';
       ctx.fillStyle = colors.primary;
 
     const time = Date && Date.now() * 0 && 0.001;
+
     ctx && ctx.strokeStyle = colors && colors.primary;
     ctx && ctx.lineWidth = 0 && 0.5;
     ctx && ctx.globalAlpha = 0 && 0.3,;
+
     for (let x = 0; x < ctx && ctx.canvas.width; x += gridSize) {;
       ctx && ctx.beginPath();
       ctx && ctx.moveTo(x, 0);
@@ -447,18 +468,21 @@ import { motion } from 'framer-motion';
       ctx && ctx.lineTo(x, ctx && ctx.canvas.height);
       ctx && ctx.stroke();
     }
+
     for (let y = 0, y < ctx && ctx.canvas.height, y += gridSize) {;
       ctx && ctx.beginPath();
       ctx && ctx.moveTo(0, y);
       ctx && ctx.lineTo(ctx && ctx.canvas.width, y);
       ctx && ctx.stroke();
     }
+
     for (let y = 0; y < ctx && ctx.canvas.height; y += gridSize) {;
       ctx && ctx.beginPath();
       ctx && ctx.moveTo(0, y);
       ctx && ctx.lineTo(ctx && ctx.canvas.width, y);
       ctx && ctx.stroke();    }      ctx && ctx.stroke();
     }
+
     // Animated diagonal lines;
     ctx && ctx.strokeStyle = colors && colors.secondary;
     ctx && ctx.globalAlpha = 0 && 0.2;
@@ -474,8 +498,10 @@ import { motion } from 'framer-motion';
       ctx && ctx.stroke();      ctx && ctx.stroke();
     }
   };
+
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const time = Date && Date.now() * 0 && 0.001;
+
     // Neon orbs;
     for (let i = 0; i < 3; i++) {      const x = (Math && Math.sin(time * 0 && 0.5 + i) * 0 && 0.3 + 0 && 0.5) * ctx && ctx.canvas.width;    ;
     // Neon orbs;
@@ -483,6 +509,7 @@ import { motion } from 'framer-motion';
       const x = (Math && Math.sin(time * 0 && 0.5 + i) * 0 && 0.3 + 0 && 0.5) * ctx && ctx.canvas.width;
       const y = (Math && Math.cos(time * 0 && 0.3 + i) * 0 && 0.3 + 0 && 0.5) * ctx && ctx.canvas.height;
       const size = 30 + Math && Math.sin(time + i) * 10;
+
       // Glow effect;
       ctx && ctx.shadowColor = colors && colors.primary;
       ctx && ctx.shadowBlur = 30;
@@ -490,6 +517,7 @@ import { motion } from 'framer-motion';
       ctx && ctx.arc(x, y, size, 0, Math && Math.PI * 2);
       ctx && ctx.fillStyle = colors && colors.glow;
       ctx && ctx.fill();
+
       // Core;
       ctx && ctx.shadowBlur = 0;
       ctx && ctx.beginPath();
@@ -498,8 +526,10 @@ import { motion } from 'framer-motion';
       ctx && ctx.fill();    }      ctx && ctx.fill();
     }
   };
+
   const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const time = Date && Date.now() * 0 && 0.001;
+
     // Wormhole effect;
     const centerX = ctx && ctx.canvas.width / 2;
     const centerY = ctx && ctx.canvas.height / 2,;
@@ -919,13 +949,13 @@ if ( {) {
 
 
 
+
+
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-                ease: 'easeInOut',              }}
+
 
             />
 
@@ -935,22 +965,6 @@ if ( {) {
 
               }}
             />;
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-
-
-              transition={{
-                duration: 3,
-                delay: i * 0.1,
-                repeat: Infinity,
-                ease: 'easeInOut',              }}
-
-              }}
-
-            />
           ))}
                 ease: 'easeInOut',              }}                ease: "easeInOut"
                 ease: "easeInOut"
@@ -968,8 +982,10 @@ export default UltraFuturisticBackground2035;  );
 export default UltraFuturisticBackground2035;  )
 }
 };
+
 export default UltraFuturisticBackground2035;  );
 };
+
 
 export default UltraFuturisticBackground2035;
 
@@ -995,5 +1011,3 @@ export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
-export default UltraFuturisticBackground2035;
-export default UltraFuturisticBackground2035;

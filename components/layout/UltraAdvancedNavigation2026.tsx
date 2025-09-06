@@ -4,35 +4,8 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-  BookOpen, MessageCircle
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+
+
   Menu,
   X,
   ChevronDown,
@@ -63,6 +36,8 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+
+
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -295,10 +270,42 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
 
-];
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Unbreakable encryption', price: '$3,999/month' };
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform', description: 'Quantum trading algorithms', price: '$12,999/month' };
+      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
+    ];
+  };
 
-];
+
+      { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' };
+      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' };
+      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
+    ];
+  };
+
+
+    title: 'Healthcare & Life Sciences',
+    icon: Microscope,
+    color: 'from - teal - 600 to - cyan - 600',
+    description: 'Healthcare innovation',
+
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -571,7 +578,9 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
-  ];
+
+
+
 
   const contactInfo = {
     phone: '+1 302 464 0950'
@@ -591,113 +600,39 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'AI Legal', href: '/services?category=ai-legal', description: 'Legal AI and compliance' },
         { name: 'AI Creative', href: '/services?category=ai-creative', description: 'Creative AI and content generation' }
       ]
-    }
-      name: 'Quantum Tech'
-      href: '/services?category=quantum'
-      icon: Atom
-      color: 'from-purple-500 to-indigo-500'
-      description: 'Quantum computing and space technology'
-      subItems: [
-        {
-          name: 'Quantum Space Tech'
-          href: '/services?category=quantum-space'
-          description: 'Space exploration and communication'
-        }
-        {
-          name: 'Quantum Computing'
-          href: '/services?category=quantum-computing'
-          description: 'Advanced quantum systems'
-        }
-        {
-          name: 'Quantum AI'
-          href: '/services?category=quantum-ai'
-          description: 'Quantum-powered AI'
-        }
-        {
-          name: 'Quantum Security'
-          href: '/services?category=quantum-security'
-          description: 'Quantum encryption and security'
-        }
-      ]
-    },    {        { name: 'Quantum Space Tech', href: '/services?category=quantum-space', description: 'Space exploration and communication' }
-        { name: 'Quantum Computing', href: '/services?category=quantum-computing', description: 'Advanced quantum systems' }
-        { name: 'Quantum AI', href: '/services?category=quantum-ai', description: 'Quantum-powered AI' }
-        { name: 'Quantum Security', href: '/services?category=quantum-security', description: 'Quantum encryption and security' }
-      ]
-    }
-      name: 'Metaverse'
-      href: '/services?category=metaverse'
-      icon: Globe
-      color: 'from-pink-500 to-rose-500'
-      description: 'Virtual worlds and digital reality'
-      subItems: [
-        {
-          name: 'Metaverse Platforms'
-          href: '/services?category=metaverse-platforms'
-          description: 'Virtual world platforms'
-        }
-        {
-          name: 'Digital Reality'
-          href: '/services?category=digital-reality'
-          description: 'Immersive experiences'
-        }
-        {
-          name: 'Holographic Tech'
-          href: '/services?category=holographic'
-          description: '3D holographic systems'
-        }
-        {
-          name: 'Consciousness Interface'
-          href: '/services?category=consciousness-interface'
-          description: 'Brain-computer interfaces'
-        }
-      ]
-    },    {        { name: 'Metaverse Platforms', href: '/services?category=metaverse-platforms', description: 'Virtual world platforms' }
-        { name: 'Digital Reality', href: '/services?category=digital-reality', description: 'Immersive experiences' }
-        { name: 'Holographic Tech', href: '/services?category=holographic', description: '3D holographic systems' }
-        { name: 'Consciousness Interface', href: '/services?category=consciousness-interface', description: 'Brain-computer interfaces' }
-      ]
-    }
-      name: 'Enterprise IT'
-      href: '/services?category=enterprise'
-      icon: Zap
-      color: 'from-green-500 to-emerald-500'
-      description: 'Enterprise solutions and infrastructure'
-      subItems: [
-        {
-          name: 'Cloud Solutions'
-          href: '/services?category=cloud'
-          description: 'Cloud infrastructure and services'
-        }
-        {
-          name: 'Cybersecurity'
-          href: '/services?category=security'
-          description: 'Advanced security solutions'
-        }
-        {
-          name: 'Data Analytics'
-          href: '/services?category=analytics'
-          description: 'Business intelligence and analytics'
-        }
-        {
-          name: 'DevOps',
-          href: '/services?category=devops',
-          description: 'Development and operations',
-        },
-      ],
-    },  ];        { name: 'Cloud Solutions', href: '/services?category=cloud', description: 'Cloud infrastructure and services' },
-        { name: 'Cybersecurity', href: '/services?category=security', description: 'Advanced security solutions' },
-        { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },
-        { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
-      ]
-    }
-
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
+    };
+    {
+    services: [;
+      {
+        name: 'Autonomous Supply Chain',
+        href: '/autonomous - supply - chain - optimization - ai',
+        description: 'AI supply chain optimization',
+        price: '$899 / month',
+      },
+      {
+        name: 'Autonomous Marketing AI',
+        href: '/autonomous - marketing - ai - platform',
+        description: 'Self - optimizing marketing',
+        price: '$1, 499 / month',
+      },
+      {
+        name: 'AI Cybersecurity',
+        href: '/ai - cybersecurity - platform',
+        description: 'Next - gen security',
+        price: '$2, 999 / month',
+      },
+      {
+        name: 'AI Business Intelligence',
+        href: '/autonomous - business - intelligence - network',
+        description: 'Self - evolving BI',
+        price: '$1, 299 / month',
+      },
+    ],
+  }, ];      { name: 'Autonomous Supply Chain', href: '/autonomous - supply - chain - optimization - ai', description: 'AI supply chain optimization', price: '$899 / month' },
+      { name: 'Autonomous Marketing AI', href: '/autonomous - marketing - ai - platform', description: 'Self - optimizing marketing', price: '$1, 499 / month' }
+      { name: 'AI Cybersecurity', href: '/ai - cybersecurity - platform', description: 'Next - gen security', price: '$2, 999 / month' }
+      { name: 'AI Business Intelligence', href: '/autonomous - business - intelligence - network', description: 'Self - evolving BI', price: '$1, 299 / month' }
+    ];
   }
 const company_links = [;
   { name: 'Home', href: '/', icon: Home },
@@ -914,10 +849,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
             ? 'bg - black / 90 backdrop - blur - xl border - b border - purple - 500 / 20 shadow - 2xl';
             : 'bg - transparent';
         }`}
-      >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-20'>
-
+      >;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='flex items - center justify - between h - 20'>;
             {/* Logo */}
             <Link href='/' className='flex items - center space - x-3 group'>;
               <div className='relative'>;
@@ -945,7 +879,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
           : 'bg-transparent'
       }`}>
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
 
@@ -1021,16 +955,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
                                 <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
 
 
-            {/* Desktop Navigation */}
-
                                   {subItem.description}
                                 </div>
                               </Link>
                             ))}
 
                           </div>;
-                            ))}
-                          </div>
+                          
                           <Link
                             href={item.href}
                             className="block w-full mt-4 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center font-medium rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
@@ -1052,8 +983,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >
 
-                  All Services
-                </Link>
+
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -1179,8 +1109,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
               </Link>;
             </div>;
-              </Link>
-            </div>
+
+
 
 
 
@@ -1201,6 +1131,16 @@ const UltraAdvancedNavigation2026 = () =>: any {
         </div>
       </nav>
 
+
+            </button>;
+          </div>;
+        </div>;
+      </nav>;
+
+
+
+
+
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1218,6 +1158,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
             onClick={() => setIsOpen(false)}
+
 
           >
             <motion.div
@@ -1318,6 +1259,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     Contact;
                   </Link>;
                 </div>;
+
                 {/* Contact Info - Mobile */}
                 <div className='pt-6 border-t border-gray-700/50 space-y-3'>;
                   <div className='flex items-center space-x-3 text-gray-300'>;
@@ -1514,17 +1456,34 @@ const UltraAdvancedNavigation2026 = () =>: any {
         )}
       </AnimatePresence>
 
+
+      <div className="h-20"></div>
+    </>
+
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+
+            </motion.div>;
+          </motion.div>)}
+      </AnimatePresence>;
+      {/* Spacer for fixed navigation */}
+      <div className='h - 20'></div>;
+    </>);
+}
+;
+export default UltraAdvancedNavigation2026;    </>);
+}
+export default UltraAdvancedNavigation2026;
+;
+
+
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
-}
+
 };
 
-export default UltraAdvancedNavigation2026;    </>
-  );
-}
-export default UltraAdvancedNavigation2026;
 
-export default UltraAdvancedNavigation2026;
-export default UltraAdvancedNavigation2026;

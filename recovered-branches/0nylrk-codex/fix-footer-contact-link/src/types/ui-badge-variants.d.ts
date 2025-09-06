@@ -1,14 +1,6 @@
 
 // Additional type declaration for the badge variants
 
-declare type BadgeVariant =
-  | "default"
-  | "secondary"
-  | "destructive"
-  | "outline"
-  | "success"
-  | "warning"
-  | "info";
 
   | "info",
 
@@ -22,3 +14,6 @@ declare type BadgeVariant =;
   | "warning";
 
   | "info",;
+
+
+

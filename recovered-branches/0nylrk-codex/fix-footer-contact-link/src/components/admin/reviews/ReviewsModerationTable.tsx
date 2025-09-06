@@ -1,9 +1,17 @@
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
+
+
+
+
+import {useState} from "react";
+import {useMutation} from "@tanstack/react-query";
+import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
+import {format} from "date-fns";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {Review, ReviewStatus} from "@/types/reviews";
+
+
+
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -11,12 +19,42 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
-export function ReviewsModerationTable({;
-  reviews;
-  isLoading;
-export function ReviewsModerationTable({
-  reviews,
-  isLoading,
+
+
+
+
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+interface ReviewsModerationTableProps {
+  reviews: Review[]
+  isLoading: boolean
+
+  onRefresh: () => void
+}
+
+
+
+
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
@@ -139,29 +177,7 @@ export function ReviewsModerationTable({
     )
   }
 
-  return (
-    <>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Reviewer</TableHead>
-            <TableHead>Rating</TableHead>
-            <TableHead>Date</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Reports</TableHead>
-            <TableHead className="text-right">Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {reviews.map((review) => (
-            <TableRow key={review.id}>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Avatar className="h-8 w-8">
-                    {review.reviewer_profile?.avatar_url ? (
-                      <AvatarImage
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name |""}
+
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -439,6 +455,9 @@ if ( {) {
 
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
+
+
+
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
                       />
@@ -643,6 +662,8 @@ if ( {) {
               </TableCell>;
 
             </TableRow>;
+
+
           ))}
 
         </TableBody>;

@@ -1,21 +1,8 @@
 import React from 'react';
 
-import {useState} from "react";
-import {BookOpen, Code, Copy, Terminal} from "lucide-react";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Alert, AlertDescription} from "@/components/ui/alert";
-import {Badge} from "@/components/ui/badge";
-import CodeBlock from "./CodeBlock";
-import { useState } from "react",
-import { BookOpen, Code, Copy, Terminal } from "lucide-react",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { Badge } from "@/components/ui/badge";
-import CodeBlock from "./CodeBlock";
-import { Badge } from "@/components/ui/badge",
-import CodeBlock from "./CodeBlock",
+
+
+
 export function ApiDocumentation() {
   return (
 
@@ -88,12 +75,10 @@ const data = await response.json(),
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-response = requests.get(
-    'https: //api.ziontechgroup.com/v1/jobs'
-    params={'limit': 10, 'category': 'development'}
+
     'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'};
+
     headers=headers
 )
 data = response.json()
@@ -208,6 +193,8 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+
+
               }}
               response_examples={{
                 success: `{
@@ -240,9 +227,7 @@ print(data)`;
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
-  ],
-  ];
-  ],
+
   "meta": {
     "total": 42
     "page": 1
@@ -371,6 +356,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+
               }}
               response_examples={{
                 success: `{
@@ -509,10 +495,10 @@ console.log (data), `;
 import json;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-payload = {
+
 
 payload = {;
+
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
 
@@ -602,6 +588,9 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
+
+
+
               }}
               response_examples={{
                 success: `{
@@ -674,12 +663,10 @@ const data = await response.json(),
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-}
-response = requests.get(
-    'https: //api.ziontechgroup.com/v1/talent'
-    params={'skills': 'react,typescript'}
+
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
+
     headers=headers
 )
 data = response.json()
@@ -759,6 +746,8 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+
+
               }}
               response_examples={{
                 success: `{
@@ -783,9 +772,7 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
-  ],
-  ];
-  ],
+
   "meta": {
     "total": 28
     "page": 1
@@ -908,6 +895,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+
               }}
               response_examples={{
                 success: `{
@@ -956,6 +944,16 @@ print(data)`;
         "image_url": "https://example.com / portfolio / 123.jpg";
       }
     ];
+    "certifications": [;
+      {
+        "name": "AWS Certified Developer";
+        "issuing_organization": "Amazon Web Services";
+        "issue_date": "2024 - 01 - 15";
+      }
+    ];
+
+
+
   }
 }`;
               }}
@@ -1496,6 +1494,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   }
 }`
               }}
+
+
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1579,8 +1579,9 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent - Type': 'application / json';
 }
 
-payload = {
-payload = {;
+
+
+
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -2213,16 +2214,7 @@ function EndpointSection(): any ({ ;
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;
         <div className="flex items-center">;
-          <Badge;
-            variant="outline";
-            className={;
-              method === 'GET';
-                ? "border-green-500 text-green-400 font-mono";
-                : method === 'POST';
-                ? "border-blue-500 text-blue-400 font-mono";
-                : method === 'PUT';
-                ? "border-yellow-500 text-yellow-400 font-mono";
-                : "border-red-500 text-red-400 font-mono";
+
             }
           >
             {method}
@@ -2374,3 +2366,57 @@ function EndpointSection() {
           />;
         </div>;
       )}
+
+                    {param.required && <span className="text - red - 500">*</span>}
+                  </td>;
+                  <td className="py - 2 text - sm text - zinc - 400">{param.type}</td>;
+                  <td className="py - 2 text - sm text - zinc - 400">{param.description}</td>;
+                </tr>))}
+            </tbody>;
+          </table>;
+        </div>)}
+      {code_examples && (
+        <div className="border - t border - zinc - 800 p - 4">;
+          <div className="flex items - center mb - 2">;
+            <h4 className="font - medium">Request Example</h4>;
+            <div className="ml - auto flex border border - zinc - 700 rounded - md overflow - hidden">;
+              {Object.keys (code_examples).map ((lang) => (
+                <button;
+                  key={lang}
+                  className={`px - 3 py - 1 text - xs font - medium ${
+                    active_tab === lang;
+                      ? "bg - zinc - 700 text - white";
+                      : "text - zinc - 400 hover:bg - zinc - 800";
+                  }`}
+                  on_click={() => setActiveTab (lang)}
+                >;
+                  {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
+                </button>))}
+            </div>;
+          </div>;
+          <CodeBlock;
+            code={code_examples[active_tab]}
+            language={active_tab === "curl" ? "bash" : active_tab}
+          />;
+        </div>)}
+      {response_examples && (
+        <div className="border - t border - zinc - 800 p - 4">;
+          <h4 className="font - medium mb - 2">Response</h4>;
+          <CodeBlock;
+            code={response_examples.success}
+            language="json";
+          />;
+        </div>)}
+    </div>);
+}
+;
+
+
+;
+
+    </div>;
+  );
+}
+;
+
+

@@ -1,4 +1,24 @@
 
+
+
+
+
+import {useState, useEffect} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Loader2} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Form} from "@/components/ui/form";
+import {DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {useToast} from "@/hooks/use-toast";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {generateContract} from "../utils/contractUtils";
+import {ProjectDetailsFields} from "./ProjectDetailsFields";
+import {PaymentTermsFields} from "./PaymentTermsFields";
+import {AdditionalClausesFields} from "./AdditionalClausesFields";
+import {DeploymentOptions} from "@/types/smart-contracts";
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -15,6 +35,9 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
+
+
+
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -66,6 +89,11 @@ interface ContractFormProps {
   deployOptions?: DeploymentOptions,
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
+
+
+
+  onDeployOptionsChange
+}: ContractFormProps) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
@@ -189,6 +217,7 @@ export function ContractForm({;
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]),
+
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
@@ -301,41 +330,29 @@ export function ContractForm({;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
-          Create a professional contract for your project with {talent.full_name}
-        </DialogDescription>
-      </DialogHeader>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          Create a professional contract for your project with {talent && talent.full_name}
+        </DialogDescription>;
+      </DialogHeader>;
+
+      <Form {...form}>;
+        <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
           <ProjectDetailsFields
-            form={form}
-          />
+            form={form} 
+          />;
+
+
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
           
+
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
-          />;
-          <AdditionalClausesFields;
-            form={form}
-          />
-          <AdditionalClausesFields
-            form={form}
-          />
-          <Button
-            type="submit"
-          />;
-          <AdditionalClausesFields;
-            form={form}
-          />
-          <AdditionalClausesFields 
-            form={form}
-          />
-          <Button 
-            type="submit" 
+
+
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;

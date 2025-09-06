@@ -1,3 +1,28 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -8,7 +33,35 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 origin/automation-improvements-final
 import {
+  Search
+  HelpCircle
+  BookOpen
+  MessageCircle
+  Phone
+  Mail
+  FileText
+  Video
+  Download
+  ExternalLink
+  ChevronDown
+  Cloud
+
+
+import {
+
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
   Cloud,;
+
 } from "lucide-react";
 
 const helpArticles = [
@@ -33,13 +86,33 @@ const helpArticles = [
         readTime: "8 min read"
         type: "Technical"
       }
-      {
-        title: "AI Best Practices",
-        description: "Tips and best practices for AI development",
-        readTime: "6 min read",
-        type: "Best Practice",
-      },
-    ],
+
+import React, { useState } from './react';
+import Head from './next / head';
+import Link from './next / link';
+import { motion, AnimatePresence  } from './framer-motion';
+import {
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,
+} from './lucide-react';
+;
+const help_articles = [;
+  {
+    id: "overview",
+    title: "Understanding Our Services",
+    description: "Overview of all available services and solutions",
+    read_time: "7 min read",
+    type: "Overview",
   },
   {
     id: "cloud-services",
@@ -82,10 +155,10 @@ origin/automation-improvements-final
 
     articles: [;
       {
-        title: "Cloud Security",
-        description: "Best practices for securing your cloud infrastructure",
-        readTime: "9 min read",
-        type: "Security",
+        title: "Cloud Migration Guide",
+        description: "Step - by - step guide to migrating to the cloud",
+        read_time: "12 min read",
+        type: "Guide",
       },
     ],
   },
@@ -122,16 +195,98 @@ const help_categories = [;
     color: "blue"
     articles: helpArticles
   }
+
 ];
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState("");
+
+
+
     color: 'blue',
     articles: helpArticles
   }
 ];
-export default function HelpPage() {
 
-export default function HelpPage() {;
+import {;
+  Search,;
+  HelpCircle,;
+  BookOpen,;
+  MessageCircle,;
+  Phone,;
+  Mail,;
+  FileText,;
+  Video,;
+  Download,;
+  ExternalLink,;
+  ChevronDown,;
+  Cloud,;
+} from "lucide-react";
+
+const helpArticles = [;
+  {;
+    id: "overview",;
+    title: "Understanding Our Services",;
+    description: "Overview of all available services and solutions",;
+    readTime: "7 min read",;
+    type: "Overview",;
+  },;
+  {;
+    id: "ai-services",;
+    title: "AI Services",;
+    description: "Everything about our AI and machine learning solutions.",;
+    icon: HelpCircle,;
+    color: "green",;
+    articles: [;
+      {;
+        title: "AI Implementation Guide",;
+        description: "How to implement AI solutions in your business",;
+        readTime: "10 min read",;
+        type: "Guide",;
+      },;
+      {;
+        title: "Machine Learning Models",;
+        description: "Understanding different ML models and their applications",;
+        readTime: "8 min read",;
+        type: "Technical",;
+      },;
+      {;
+        title: "AI Best Practices",;
+        description: "Tips and best practices for AI development",;
+        readTime: "6 min read",;
+        type: "Best Practice",;
+      },;
+    ],;
+  },;
+  {;
+    id: "cloud-services",;
+    title: "Cloud Services",;
+    description: "Cloud infrastructure and deployment solutions.",;
+    icon: Cloud,;
+    color: "blue",;
+    articles: [;
+      {;
+        title: "Cloud Migration Guide",;
+        description: "Step-by-step guide to migrating to the cloud",;
+        readTime: "12 min read",;
+        type: "Guide",;
+      },;
+      {;
+        title: "Cloud Security",;
+        description: "Best practices for securing your cloud infrastructure",;
+        readTime: "9 min read",;
+        type: "Security",;
+      },;
+    ],;
+  },;
+];
+
+const helpCategories = [;
+  {;
+    title: "Getting Started",;
+    description: "New to our platform? Start here.",;
+    icon: BookOpen,;
+    color: "blue",;
+    articles: helpArticles,;
+  },;
+];
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
@@ -168,6 +323,19 @@ origin/automation-improvements-final
     )
   })).filter(category => category.articles.length > 0);
 origin/automation-improvements-final
+
+  const filteredCategories = helpCategories;
+    .map((category) => ({;
+      ...category,;
+      articles: category && category.articles.filter(;
+        (article) =>;
+          article && article.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+          article && article.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()),;
+      ),;
+    }));
+    .filter((category) => category && category.articles.length > 0);
+
+
 
   return (
     <>;

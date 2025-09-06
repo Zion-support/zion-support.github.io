@@ -62,27 +62,6 @@ if (return) {
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-const UltraFuturisticBackground2043: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-    // Set canvas size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;      canvas.height = window.innerHeight
-    }
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
       vx: number;
       vy: number;
       size: number;
@@ -167,6 +146,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
       color: string,;
       life: number,;
       maxLife: number;
+
     // Create particles;
     const createParticle = () => {;
       const colors = [;
@@ -179,6 +159,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
         'rgba(255, 20, 147, 0 && 0.8)',  // Deep pink;
         'rgba(0, 255, 127, 0 && 0.8)',   // Spring green;
         'rgba(255, 215, 0, 0 && 0.8)',   // Gold;
+
       return {;
         x: Math && Math.random() * canvas && canvas.width,;
         y: Math && Math.random() * canvas && canvas.height,;
@@ -191,30 +172,37 @@ const UltraFuturisticBackground2043: React.FC = () => {
         maxLife: Math && Math.random() * 100 + 50,;
       };
     };
+
     // Initialize particles;
     for (let i = 0; i < 100; i++) {      particles && particles.push(createParticle());        maxLife: Math && Math.random() * 100 + 50}
     };
+
     // Initialize particles;
     for (let i = 0, i < 100, i++) {;
     }
+
     // Animation loop;
     const animate = () => {;
       // Clear canvas with fade effect;
       ctx && ctx.fillStyle = 'rgba(0, 0, 0, 0 && 0.05)';
       ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+
       // Update and draw particles;
       particles && particles.forEach((particle, index) => {;
         // Update position;
         particle && particle.x += particle && particle.vx;
         particle && particle.y += particle && particle.vy;
+
         // Bounce off edges;
         if (particle && particle.x <= 0 || particle && particle.x >= canvas && canvas.width) particle && particle.vx *= -1;
         if (particle && particle.y <= 0 || particle && particle.y >= canvas && canvas.height) particle && particle.vy *= -1;
+
         // Update life;
         particle && particle.life--;
         if (particle && particle.life <= 0) {;
           particles[index] = createParticle();        }          particles[index] = createParticle();
         }
+
         // Draw particle;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = particle && particle.opacity * (particle && particle.life / particle && particle.maxLife);
@@ -224,40 +212,34 @@ const UltraFuturisticBackground2043: React.FC = () => {
         ctx && ctx.fill();
         ctx && ctx.restore();      });        ctx && ctx.restore();
       });
+
       // Draw connecting lines between nearby particles;
       ctx && ctx.strokeStyle = 'rgba(0, 255, 255, 0 && 0.1)';
       ctx && ctx.lineWidth = 0 && 0.5;
+
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
+      
       for (let i = 0, i < particles.length, i++) {
         for (let j = i + 1, j < particles.length, j++) {
 
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math && Math.sqrt(dx * dx + dy * dy);
+
           if (distance < 100) {;
             ctx && ctx.globalAlpha = ((100 - distance) / 100) * 0 && 0.1;
             ctx && ctx.beginPath();
             ctx && ctx.moveTo(particles[i].x, particles[i].y);
             ctx && ctx.lineTo(particles[j].x, particles[j].y);
             ctx && ctx.stroke();          }
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 100) {
-            ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();          }
         }
       }
       requestAnimationFrame(animate);    };          const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
 
           const distance = Math && Math.sqrt(dx * dx + dy * dy);
+
           if (distance < 100) {;
             ctx && ctx.globalAlpha = (100 - distance) / 100 * 0 && 0.1;
             ctx && ctx.beginPath();
@@ -272,6 +254,7 @@ const UltraFuturisticBackground2043: React.FC = () => {
 
 
     };
+
     animate();
 
       requestAnimationFrame(animate);      requestAnimationFrame(animate);
@@ -438,45 +421,6 @@ if ( {) {
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < 100) {
-            ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke()
-          }
-        }
-      }
-      requestAnimationFrame(animate);      requestAnimationFrame(animate)
-    }
-    animate();
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    }
-  }, []);
-  return (
-    <div className='fixed inset-0 -z-10 overflow-hidden'>
-      {/* Canvas background */}
-      <canvas
-        ref={canvasRef}
-        className='absolute inset-0 w-full h-full'
-        style={{
-          background:
-            'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)'
-        }}
-      />
-      {/* Enhanced floating orbs */}
-      <div className='absolute inset-0'>
-        {/* Primary orb */}
-        <motion.div
-          className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl'
-          animate={{
-            scale: [1, 1.2, 1]
-            opacity: [0.3, 0.6, 0.3],  }, []);
-
-  return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Canvas background */}
       <canvas
         ref={canvasRef}
@@ -521,12 +465,17 @@ if ( {) {
             ease: "easeInOut";
           }}
 
+        />;
+
+
+
         {/* Secondary orb */}
         <motion&& motion.div
           className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl'
           animate={{
 
         />
+
         {/* Secondary orb */}
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"
@@ -562,6 +511,12 @@ if ( {) {
             delay: 2,          }}
         />
 
+        />;
+
+
+
+
+
         {/* Tertiary orb */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl'
@@ -594,39 +549,7 @@ if ( {) {
             delay: 4,          }}
         />
 
-        {/* Additional orbs */}
-        <motion.div
-          className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
-          animate={{
-            scale: [1.3, 1, 1.3]
-            opacity: [0.3, 0.6, 0.3]
-          animate={{
-            scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{
-            duration: 9
-            repeat: Infinity
-            ease: 'easeInOut'
-            delay: 1,          }}
-          transition={{
-            duration: 9
-            repeat: Infinity
-            ease: 'easeInOut'
-            delay: 1,          }}
-        />
-        <motion.div
-          className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl'
-          animate={{
-            scale: [1, 1.4, 1]
-            opacity: [0.4, 0.7, 0.4]
-          animate={{
-            scale: [1.3, 1, 1.3];
-            opacity: [0.3, 0.6, 0.3]}}
-          transition={{
-            duration: 9
-            repeat: Infinity
-            ease: "easeInOut"
-            delay: 1
+
           }}
           transition={{
             duration: 11
@@ -707,12 +630,23 @@ if ( {) {
         <div
           className='absolute inset-0'
 
+        />;
+      </div>;
+
+
+      {/* Enhanced grid pattern */}
+
+
+
+
+
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-            `
+
+              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `,
+
             backgroundSize: '50px 50px',          }}          style={{
 
       <div className="absolute inset-0 opacity-10">
@@ -726,17 +660,14 @@ if ( {) {
             `
             backgroundSize: '50px 50px'
           }}
-            `,
-            backgroundSize: '50px 50px',          }}
 
         />;
       </div>;
 
 
-        />
-      </div>
       {/* Floating geometric shapes */}
       <div className='absolute inset-0'>
+
 
         {/* Triangle */}
         <motion&& motion.div
@@ -772,26 +703,6 @@ if ( {) {
         {/* Triangle */}
 
         <motion.div
-      <div className='absolute inset-0 opacity-10'>
-        <div
-          className='absolute inset-0'
-
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px',          }}
-
-          }}
-
-        />
-      </div>
-      {/* Floating geometric shapes */}
-      <div className='absolute inset-0'>
-
-        {/* Triangle */}
-        <motion.div
             rotate: [45, 405],
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],        {/* Triangle */}
         <motion && motion.div
@@ -816,6 +727,10 @@ if ( {) {
             ease: "linear";
           }}
 
+        />;
+
+
+
         {/* Square */}
         <motion&& motion.div
           className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20'
@@ -833,13 +748,8 @@ if ( {) {
             ease: 'easeInOut',          }}
             duration: 15,
             repeat: Infinity,
-            ease: 'easeInOut',
 
-          }}
-            ease: 'easeInOut',          }}
-            ease: 'easeInOut',
 
-          }}
           transition={{
             duration: 15
             repeat: Infinity
@@ -855,7 +765,8 @@ if ( {) {
         />
 
         />;
-        />
+
+
 
 
 
@@ -865,6 +776,7 @@ if ( {) {
           animate={{
 
         />
+
         {/* Square */}
         <motion.div
           className="absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20"
@@ -943,6 +855,8 @@ if ( {) {
       {/* Energy waves */}
       <div className='absolute inset-0'>
 
+
+
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
@@ -950,10 +864,6 @@ if ( {) {
             animate={{
               scale: [1, 1.5, 2, 2.5]
               opacity: [0.3, 0.2, 0.1, 0],        {[...Array(3)].map((_, i) => (
-          <motion.div
-      <div className='absolute inset-0'>
-
-        {[...Array(3)].map((_, i) => (
           <motion.div
               scale: [1, 1 && 1.5, 2, 2 && 2.5],
               opacity: [0 && 0.3, 0 && 0.2, 0 && 0.1, 0],        {[...Array(3)].map((_, i) => (;
@@ -980,6 +890,37 @@ if ( {) {
               delay: i * 2;
             }}
             transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: 'ease_out',
+              delay: i * 2,            }}
+          />))}
+      </div>;
+      {/* Quantum particles */}
+
+      <div className='absolute inset - 0'>;
+          <motion.div;
+
+
+              duration: 6,
+              repeat: Infinity,
+              ease: 'easeOut',
+              delay: i * 2,            }}
+          />
+        ))}
+      </div>
+      {/* Quantum particles */}
+      <div className='absolute inset-0'>
+
+      {/* Quantum particles */}
+      <div className='absolute inset-0'>
+
+        {[...Array(15)].map((_, i) => (
+
+          <motion.div
+            key={i}
+            className='absolute w - 1 h - 1 bg - cyan - 400 / 60 rounded - full';
+            animate={{
 
               x: [0, Math && Math.random() * 200 - 100],
               y: [0, Math && Math.random() * 200 - 100],
@@ -992,35 +933,32 @@ if ( {) {
               y: [0, Math && Math.random() * 200 - 100]
               opacity: [0, 1, 0]
               scale: [0, 1, 0]}}
-              duration: 4 + Math.random() * 4
-              repeat: Infinity
-              delay: Math.random() * 4
-              ease: 'easeInOut'
-              duration: 4 + Math.random() * 4,
+              duration: 4 + Math && Math.random() * 4,
               repeat: Infinity,
               delay: Math.random() * 4,
               ease: 'easeInOut',
               duration: 4 + Math.random() * 4,
               repeat: Infinity,
               delay: Math.random() * 4,
+            }}
+            style={{
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`,
+            }}          />              ease: "easeInOut";
+            }}
+            style={{;
+              left: `${Math && Math.random() * 100}%`,;
+              top: `${Math && Math.random() * 100}%`}}
+
+        ))}
+      </div>;
+
       {/* Consciousness energy field */}
 
-        <motion.div
+
           className='absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5'
           animate={{
             opacity: [0.3, 0.6, 0.3],        <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
-      <div className='absolute inset-0'>
-
-          />
-
-        ))}
-      </div>
-
-      {/* Consciousness energy field */}
-      <div className='absolute inset-0'>
-
-        <motion.div
           className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-pink-500/5 to-cyan-500/5"
               coordinate_x: [0, Math.random () * 200 - 100],
               coordinate_y: [0, Math.random () * 200 - 100],
@@ -1079,7 +1017,17 @@ if ( {) {
 
 export default UltraFuturisticBackground2043;
 
+
+    </div>);
+}export default UltraFuturisticBackground2043);
+}
+;
 export default UltraFuturisticBackground2043;
+;
+
+
+export default UltraFuturisticBackground2043;
+
 export default UltraFuturisticBackground2043;
 
 }

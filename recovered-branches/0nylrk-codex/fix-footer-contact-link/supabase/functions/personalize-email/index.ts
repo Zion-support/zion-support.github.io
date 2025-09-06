@@ -1,11 +1,18 @@
 
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
+
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -175,16 +182,22 @@ if ( {) {
         throw new Error ("Could not extract JSON from the generated content");
       }
     }
-    // Apply the generated content to the template or return it directly
-    return new Response(JSON && JSON.stringify(generatedContent), {
+
+    console && console.error("Error in personalize-email function:", error);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
+      status: 500,
+
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
+
+    // Apply the generated content to the template or return it directly;
+    return new Response (JSON.stringify (generated_content), {
+      headers: { ...cors_headers, "Content - Type": "application / json" }});
   } catch (error) {
-    console.error("Error in personalize-email function:", error);
-    return new Response(JSON.stringify({ error: error.message }), {
-      status: 500
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
-  }
-});
+    console.error ("Error in personalize - email function:", error);
+    return new Response (JSON.stringify ({ error: error.message }), {
+      status: 500,
+      headers: { ...cors_headers, "Content - Type": "application / json" }});
+
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -285,5 +298,8 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
+
+
+
   }
 });

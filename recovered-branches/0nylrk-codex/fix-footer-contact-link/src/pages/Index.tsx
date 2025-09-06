@@ -1,6 +1,34 @@
 
-export default function Index() {
+
+
+
+
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {TrustedBySection} from "@/components/TrustedBySection";
+import {TestimonialCarousel} from "@/components/TestimonialCarousel";
+import {FloatingCTA} from "@/components/FloatingCTA";
+import {HeroSection} from "@/components/HeroSection";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {BenefitsSection} from "@/components/BenefitsSection";
+import {HowItWorksSection} from "@/components/HowItWorksSection";
+import {WaitlistSection} from "@/components/WaitlistSection";
+import {BlogSection} from "@/components/BlogSection";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
+import {FeaturesGuideSection} from "@/components/FeaturesGuideSection";
+import {SocialShareSection} from "@/components/SocialShareSection";
+import {useTranslation} from "react-i18next";
+import {useLanguage} from "@/context/LanguageContext";
+import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
+
+
+
 export default function Index() {;
+
+
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 import { Header } from "@/components/Header",
@@ -267,6 +295,8 @@ export default function Index() {;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
               </Link>;
+
+
             ))}
           </div>
         </div>

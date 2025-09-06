@@ -1,22 +1,18 @@
-import { render, screen  } from '@testing-library/react';
-import { MemoryRouter  } from 'react-router-dom';
-import { CategoryCard } from '@/components/CategoryCard';
-it('renders category card with link to slug', () => {
-  render(
-    <MemoryRouter>
-      <CategoryCard title="Test Category" slug="test-category" />
-    </MemoryRouter>
-  expect(link).toHaveAttribute('href/category/ai-tools')
-}),
-  );
-  expect(screen.getByText('Test Category')).toBeInTheDocument();
-});
+
+import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
+
 import {render, screen} from '@testing-library/react',
 import {MemoryRouter} from 'react-router-dom',
 import {CategoryCard} from '@/components/CategoryCard',
+
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
+
+
+
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
@@ -77,3 +73,4 @@ it('treats underscores as spaces in slug', () => {
 ;
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
+

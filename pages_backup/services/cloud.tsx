@@ -1,3 +1,30 @@
+
+
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
@@ -17,7 +44,52 @@ import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+
+
+
+const cloudServices = [;
+  {;
+    title: "Cloud Migration",;
+    description: "Seamless migration of your infrastructure to the cloud",;
+    icon: Cloud,;
+    features: ["Zero-downtime migration", "Cost optimization", "Performance improvement", "Scalability"],;
+    pricing: "$5,000 - $25,000/project";
+  },;
+  {;
+    title: "Cloud Infrastructure",;
+    description: "Design and implement scalable cloud infrastructure",;
+    icon: Server,;
+    features: ["Auto-scaling", "Load balancing", "High availability", "Disaster recovery"],;
+    pricing: "$2,000 - $10,000/month";
+  },;
+  {;
+    title: "Database Services",;
+    description: "Managed database services with high availability",;
+    icon: Database,;
+    features: ["Managed databases", "Backup & recovery", "Performance tuning", "Security"],;
+    pricing: "$1,000 - $5,000/month";
+  },;
+  {;
+    title: "Cloud Security",;
+    description: "Comprehensive security solutions for cloud environments",;
+    icon: Shield,;
+    features: ["Security audits", "Compliance", "Access control", "Monitoring"],;
+    pricing: "$1,500 - $8,000/month";
+  },;
+  {;
+    title: "DevOps Automation",;
+    description: "Automated deployment and infrastructure management",;
+    icon: Zap,;
+    features: ["CI/CD pipelines", "Infrastructure as code", "Monitoring", "Alerting"],;
+    pricing: "$2,500 - $12,000/month";
+  }
+];
+
+
+
 export default function CloudServicesPage() {
+export default function CloudServicesPage() {;
+export default function CloudServicesPage() {;
   const cloudServices = [;
     {}
       title: "Cloud Migration",";
@@ -97,8 +169,6 @@ const cloudServices = [;
 export default function CloudServicesPage() {
 ursor/fix-syntax-push-and-merge-to-main-40de
 export default function CloudServicesPage() {
-export default function CloudServicesPage() {;
-export default function CloudServicesPage() {;
   const cloudServices = [;
     {}
       title: "Cloud Migration",";

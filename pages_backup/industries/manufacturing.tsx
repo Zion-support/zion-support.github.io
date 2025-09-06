@@ -153,9 +153,11 @@ const benefits = [;
     title: 'Increased Efficiency,',;
     description: 'Automated processes and AI optimization improve production efficiency.,',;
     icon: Activity;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+    icon: Activity,;
 ];
 const benefits = [;
   {;

@@ -1,9 +1,13 @@
 
-import { supabase } from "@/integrations/supabase/client";
+
 import {supabase} from "@/integrations/supabase/client";
+
 import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
+
+
+
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -23,12 +27,16 @@ export const cleanupAuthState = () => {
     }
   });
   // Remove from sessionStorage if in use
-  Object.keys(sessionStorage |{}).forEach((key) => {
-    if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
-      sessionStorage.removeItem(key)
+
+  Object && Object.keys(sessionStorage || {}).forEach((key) => {
+    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
+      sessionStorage && sessionStorage.removeItem(key)
+
     }
   })
 }
+
+
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -48,6 +56,8 @@ export const cleanupAuthState = () => {;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
       sessionStorage.removeItem(key);
+
+
     }
   })
 },
@@ -154,17 +164,7 @@ if ( {) {
           campaign_type: "welcome_series",
           template_name: "welcome_email",
           template_data: {
-            user_id: user.id;
-            email_type: "welcome_series";
-            user_type: user.userType |"unknown"
-            display_name: user.displayName |user.email?.split("@")[0] |"User"
-          }
-        })
-    }
-  } catch (error) {
-    console.error("Error checking or scheduling welcome email:", error)
-  }
-}
+
 
             user_id: user.id,
             email_type: "welcome_series",
@@ -224,5 +224,8 @@ export const checkNewRegistration = async (user: UserDetails) => {;
     console.error("Error checking or scheduling welcome email:", error)
   } catch (error) {;
     console.error("Error checking or scheduling welcome email:", error);
+
+
+
   }
 };

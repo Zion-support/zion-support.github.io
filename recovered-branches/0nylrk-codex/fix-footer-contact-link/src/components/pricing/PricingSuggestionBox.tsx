@@ -1,20 +1,7 @@
 
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Info, ThumbsUp} from "lucide-react";
-import {PricingSuggestion} from "@/services/pricingSuggestionService";
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
-import { Card, CardContent } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Info, ThumbsUp } from "lucide-react";
-import { PricingSuggestion } from "@/services/pricingSuggestionService";
-import { Loader2, Info, ThumbsUp } from "lucide-react",
-import { PricingSuggestion } from "@/services/pricingSuggestionService",
+
+
+
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -30,6 +17,16 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
+
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, Info, ThumbsUp} from "lucide-react";
+import {PricingSuggestion} from "@/services/pricingSuggestionService";
+
+
 
   onApplySuggestion
   suggestion,
@@ -108,12 +105,14 @@ if ( {) {
             </p>;
           </div>;
         </CardContent>;
-      </Card>;
-    );
+
+
+
   }
-  if (!suggestion) {
-    return null
-  }
+
+
+
+
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
@@ -164,9 +163,15 @@ if ( {) {
       </CardContent>
     </Card>
   )
-}
+
+
+  if (!suggestion) {;
+    return null;
+  }
+
 
 };
+
 },
 ;
 
@@ -274,3 +279,5 @@ if ( {) {
 
 
 export default PricingSuggestionBox;
+
+

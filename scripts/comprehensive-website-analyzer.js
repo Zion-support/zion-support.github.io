@@ -264,7 +264,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       console && console.log(;,"});,"})
   '\n=== BROKEN LINKS ===');,"});,"})
       report && report.brokenLinks.forEach(link => {;,"});,"})
-        console && console.log(` ${link && link.url} - ${link && link.error}`);,"});,"})
+        console && console.log(`❌ ${link && link.url} - ${link && link.error}`);,"});,"})
       });,"});,"})
     }"});,"})
 ;,"});,"})
@@ -553,7 +553,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       console && console.log(,"}),"})
   '\n=== BROKEN LINKS ==='),"}),"})
       report && report.brokenLinks.forEach(link => {,"}),"})
-        console && console.log(` ${link && link.url} - ${link && link.error}`),"}),"})
+        console && console.log(`❌ ${link && link.url} - ${link && link.error}`),"}),"})
       }),"}),"})
     }"}),"})
 ,"}),"})
@@ -1259,7 +1259,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
   '\n=== BROKEN LINKS ===')';
       report && report.brokenLinks.forEach(link: => {
-        console && console.log(" ${link && link.url} - ${link && link.error}")})}
+        console && console.log("❌ ${link && link.url} - ${link && link.error}")})}
     if (report && report.recommendations.length > 0) {
       console && console.log(
   '\n=== RECOMMENDATIONS ===')';
@@ -1370,7 +1370,7 @@ async function main() {
       console && console.log("
   '\n=== BROKEN LINKS ===');
       report && report.brokenLinks.forEach(link => {'
-        console && console.log(` ${link && link.url} - ${link && link.error}`)})}
+        console && console.log(`❌ ${link && link.url} - ${link && link.error}`)})}
     if (report && report.recommendations.length > 0) {
       console && console.log("
   '\n=== RECOMMENDATIONS ===');
@@ -1386,7 +1386,7 @@ async function main() {
     if (report && report.brokenLinks.length > 0) {;
       console && console.log(';\n=== BROKEN LINKS ===');
       report && report.brokenLinks.forEach(link => {;
-        console && console.log(" ${link && link.url} - ${link && link.error}")})}
+        console && console.log("❌ ${link && link.url} - ${link && link.error}")})}
     if (report && report.recommendations.length > 0) {;
       console && console.log(';\n=== RECOMMENDATIONS ===');
       report && report.recommendations.forEach(rec => {;

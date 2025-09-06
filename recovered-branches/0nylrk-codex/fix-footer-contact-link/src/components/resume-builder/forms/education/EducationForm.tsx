@@ -1,6 +1,19 @@
 
-export function EducationForm({
+
+
+import {useState} from 'react';
+import {Button} from '@/components / ui / button';
+import {Education} from '@/types / resume';
+import {use_resume} from '@/hooks / use_resume';
+import {format} from 'date - fns';
+import {EducationFormProps} from './types';
+import {EducationList} from './EducationList';
+import {EducationFormFields} from './EducationFormFields';
+
+
 export function EducationForm({ ;
+
+
   resumeId;
   educationEntries
   onComplete
@@ -69,12 +82,16 @@ export function EducationForm({;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
+
+
+
+
     }
-    if (success) {
-      setEditingId(null)
-    }
-  }
+
+
   };
+
+
 
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
@@ -94,8 +111,10 @@ export function EducationForm({;
     if (success) {;
       setEditingId(null);
     }
-  }
+
+
   };
+
   },;
 
   const handleEdit = (edu: Education) => {;
@@ -117,13 +136,22 @@ export function EducationForm({;
     }
 
   },
-      <EducationList
-        educationEntries={educationEntries}
+
+
+
+
+  return (
+
+
       <EducationList 
         educationEntries={educationEntries} 
+
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
+
+
+
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">

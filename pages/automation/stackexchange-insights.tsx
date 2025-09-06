@@ -1,12 +1,5 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore
-import data from '../../data/stackexchange-insights.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/stackexchange-insights.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/stackexchange-insights.json',
+
+
 export default function StackExchangeInsightsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
@@ -21,9 +14,8 @@ export default function StackExchangeInsightsPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.link} target="_blank" rel="noreferrer" className="font-medium underline">
-                {it.title}
-              </a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Score {it.score} · Answers {it.answer_count} · Tags: {(it.tags |[]).join(', ')}</div>
+
+
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Score {it.score} · Answers {it.answer_count} · Tags: {(it.tags || []).join(', ')}</div>
 
             </li>
@@ -61,6 +53,7 @@ function StackExchangeInsightsPage() {
 }
   );
 };
+
                 {it.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -82,5 +75,6 @@ function StackExchangeInsightsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-}
+

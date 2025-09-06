@@ -461,7 +461,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       // Check common source directories
       const sourceDirs = ['pages', 'components', 'lib', 'hooks', 'utils';];
     const recentFiles = [];
-    const recentFiles = [];
     const recentFiles = [;];
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
     try {

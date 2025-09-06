@@ -1,6 +1,7 @@
 
 
 console && console.log('🔧 Performing selective merge of main source files...');
+
 // List of main source directories to merge
 const mainSourceDirs = [
 #!/usr / bin / env node;
@@ -28,16 +29,21 @@ const mainSourceDirs = [;
 
     // First, let's see what files are in the clean-merge-services-improvements branch
     console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
+    
     const files = execSync('git ls-tree -r --name-only origin/clean-merge-services-improvements', { encoding: 'utf8' });
-    const fileList = files.trim().split('\n');
+    const fileList = files && files.trim().split('\n');
+    
     // Filter for main source files
     const mainFiles = fileList.filter(file => {
       return mainSourceDirs.some(dir => file.startsWith(dir)) |;
              mainSourceDirs.includes(file);
     });
-    console.log(`Found ${mainFiles.length} main source files to potentially merge`);
+    
+    console && console.log(`Found ${mainFiles && mainFiles.length} main source files to potentially merge`);
+    
     // Try to cherry-pick specific commits or files
-    console.log(' Attempting to cherry-pick specific changes...');
+    console && console.log('🍒 Attempting to cherry-pick specific changes...');
+    
     // Get the latest commit from the clean-merge-services-improvements branch
     const latestCommit = execSync('git rev-parse origin/clean-merge-services-improvements', { encoding: 'utf8' }).trim();
     console && console.log(`Latest commit: ${latestCommit}`);
@@ -98,10 +104,12 @@ const mergeSpecificFiles = () =>: any {
 
   if (mergeSpecificFiles()) {
     console && console.log('✅ Selective merge completed');
+    
     // Add the merged files
     try {
       execSync('git add .', { stdio: 'inherit' });
-      console.log(' Files added to staging area');
+      console && console.log('📝 Files added to staging area');
+      
       // Commit the changes
       execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
       console && console.log('✅ Changes committed');

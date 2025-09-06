@@ -1,12 +1,5 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore
-import data from '../../data/npm-trends.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/npm-trends.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/npm-trends.json',
+
+
 export default function NpmTrendsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
@@ -21,9 +14,8 @@ export default function NpmTrendsPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.links?.npm} target="_blank" rel="noreferrer" className="font-medium underline">
-                {it.name}
-              </a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">v{it.version} · Score {Math.round((it.score |0) * 100) / 100}</div>
+
+
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">v{it.version} · Score {Math.round((it.score || 0) * 100) / 100}</div>
 
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
@@ -63,6 +55,7 @@ function NpmTrendsPage() {
 }
   );
 };
+
                 {it.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -85,5 +78,6 @@ function NpmTrendsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-}
+

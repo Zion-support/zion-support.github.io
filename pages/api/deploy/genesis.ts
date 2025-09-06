@@ -1,4 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 
 
 function summarizeModules(
@@ -236,27 +235,25 @@ if ( {) {
       access,
     });
 
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message |"Internal error" });
-    return res.status(500).json({ error: err.message || "Internal error" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  if (req.method !== 'POST') {
-    return res.status(405).json({
-      error: 'Method not allowed'
-    });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res && res.status(500).json({ error: err && err.message || "Internal error" });
+
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+      version: 'Zion OS v1.0.0'};
+
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
   try {
@@ -474,16 +471,30 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
+  } catch (err: any) {
+
+    return res && res.status(500).json({ error: err && err.message || "Internal error" });
+
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+      version: 'Zion OS v1.0.0'};
+
+    const operator = {
+      activeModulesSummary: summarizeModules(modules, bonusModules),
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
+
+    const access = {
+      roles: ['FounderSuperadminDAO Multisig'],
+      export: {
+        type: 'application/json',
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+
+    return res.status(200).json({ outputActions, deployLog, access, operator })
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message || 'Internal error' })
+  }
+}
+    return res.status (500).json ({ error: err.message || "Internal error" });
   }
 }

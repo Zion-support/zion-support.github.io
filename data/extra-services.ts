@@ -14,8 +14,8 @@ export interface ExtraService {
     email: string;
     address: string;
   };
-}
-}
+
+
 
     address: string;
   }
@@ -150,26 +150,6 @@ export const extraServices: ExtraService[] = [
     category: "Security",
     realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    }
-  }
-
-];
-
-;
     id: "cloud-migration-expert",
     name: "Cloud Migration Expert",
     tagline: "Seamless cloud migration and optimization",
@@ -210,6 +190,9 @@ export const extraServices: ExtraService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

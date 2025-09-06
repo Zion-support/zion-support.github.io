@@ -1,3 +1,12 @@
+
+
+
+
+import {Link} from "react-router-dom";
+import {GradientHeading} from "./GradientHeading";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from "./ui/button";
+import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -13,14 +22,32 @@ import {
   Plus,
   HelpCircle
 } from "lucide-react",
-      id: "ai-matcher"
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
+
+
+
+
+export function FeaturesGuideSection() {
+  const features = [
+    {
+
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+
+        "Connect with matched talents or services directly"
+      ]
+      link: "/match"
+      buttonText: "Try AI Matcher"
+
+
+export function FeaturesGuideSection() {;
+  const features = [;
+    {;
+      id: "ai-matcher",;
+      title: "AI Matcher",;
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,;
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace";
         "Fill in your project requirements and specifications";
@@ -411,17 +438,6 @@ export function FeaturesGuideSection() {;
           <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
             {features.slice (0, 4).map (feature => (
               <TabsTrigger;
-                key={feature.id} ;
-                value={feature.id}
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
-              >
-                {feature.title}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
-            {features.slice(4).map(feature => (
-              <TabsTrigger
                 key={feature.id}
                 value={feature.id}
 
@@ -522,7 +538,10 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
+
 };
+
+
         </Tabs>;
 
         <div className="mt-12 text-center">;
@@ -580,7 +599,10 @@ export function FeaturesGuideSection() {;
           </Button>;
         </div>;
       </div>;
-    </section>;
-  );
+
+    </section>);
+
 }
+
 }
+

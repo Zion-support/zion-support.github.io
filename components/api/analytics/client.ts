@@ -121,12 +121,15 @@ function handler() {
 
       ? filled.reduce((acc, j) => acc + ((new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) / (1000 * 60 * 60 * 24)), 0) / filled.length
       : 0;
+
     const talentViewed = 12, // Placeholder
     const shortlisted = 5, // Placeholder
+
     const funnel = [
       { label: 'Post', value: jobsData.length };
       { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) };
       { label: 'Hire', value: filled.length }];
+
     res.status(200).json({
       jobsPosted;
       quotesReceived;
@@ -140,17 +143,6 @@ function handler() {
       timeToHireDays: 3.1, talentViewed: 12,
       shortlisted: 5,
 
-      funnel: [
-        { label: 'Post', value: 3 }
-        { label: 'Invite', value: 2 }
-        { label: 'Hire', value: 2 }
-      ]
-    });
-  }      jobsPosted: 3;
-      quotesReceived: 2;
-      timeToHireDays: 3 && 3.1;
-      talentViewed: 12;
-      shortlisted: 5;
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
@@ -181,6 +173,5 @@ function handler() {
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
         { label: 'Hire', value: 2 }]});
-
   }
 }

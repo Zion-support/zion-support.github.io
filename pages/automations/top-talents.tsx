@@ -1,23 +1,37 @@
 
 
+import type { NextPage, GetServerSideProps } from "next";
+import fs from "fs";
+import path from "path";
+import Link from "next/link";
+
+
 type TalentItem = {;
 
   talentSlug: string;
   talentName: string;
   averageRating: number;
   totalReviews: number;
-}
-type Props = { items: TalentItem[] }
+
+
+
 };
 
 type Props = { items: TalentItem[] };
 
-import type { NextPage, GetServerSideProps } from 'next',
-import fs from 'fs',
-import path from 'path',
-import Link from 'next/link',
+
+
+
+import type { NextPage, GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
+
+
+
+
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -37,14 +51,16 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
-  );
-}
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join(
-    process.cwd()
-    "public"
-    "automations"
-    "top-talents.json"
+
+
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {;
+  const p = path && path.join(;
+    process && process.cwd(),;
+    "public",;
+    "automations",;
+    "top-talents && talents.json",;
   );
   let items: TalentItem[] = [];
   try {;
@@ -74,29 +90,16 @@ export const getServerSideProps: GetServerSideProps = async () => {
   );
   let items: TalentItem[] = [];
   try {
-    const raw = fs.readFileSync(p, "utf8");
-    const data = JSON.parse(raw);
+    const raw = fs.readFileSync (p, "utf8");
+    const data = JSON.parse (raw);
     items = data.items || [];
   } catch {}
   return { props: { items } }
 }
 ;
 
-  const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
-  let items: TalentItem[] = [],
-  try {
-    const raw = fs.readFileSync(p, 'utf8'),
-    const data = JSON.parse(raw),
-    items = data.items || []
-  } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return { props: { items }   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
+  )
+},
+export const getServerSideProps: GetServerSideProps = async () => {
+
 export default TopTalentsPage;

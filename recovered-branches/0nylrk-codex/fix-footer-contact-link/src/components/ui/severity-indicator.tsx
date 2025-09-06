@@ -1,11 +1,11 @@
 
+
+
+
+
 import React from "react";
 import {cn} from "@/lib/utils";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
-import React from "react",
-import { cn } from "@/lib/utils";
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
-interface SeverityIndicatorProps {
 
 interface SeverityIndicatorProps {;
   severity: "safe" | "suspicious" | "dangerous",;
@@ -82,7 +82,8 @@ export function SeverityIndicator(): any ({ ;
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
-}
+
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -130,6 +131,7 @@ export function SeverityIndicator({;
 
     </div>;
   );
+
 }
 import React from './react';
 import { cn } from '@/lib / utils';

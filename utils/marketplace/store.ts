@@ -1,5 +1,11 @@
-// Marketplace data store utilitiesexport interface Project {
+
+// Marketplace data store utilities
+
+export interface Project {
+
+
 // Marketplace data store utilitiesexport interface Project {;
+
   id: string;
   title: string;
   summary: string;
@@ -34,6 +40,25 @@
   }
   createdAt: string;
   updatedAt: string
+export interface Offer {
+}
+
+
+export interface Offer {;
+
+  id: string;
+  createdAtIso: string;
+  clientId: string;
+  talentSlug: string;
+  startDateIso: string;
+  scopeSummary: string;
+  paymentTerms: {
+    type: 'fixed' | 'hourly' | 'milestone';
+    amount?: number;
+    hourlyRate?: number;
+    milestones?: Array<{
+      title: string;
+      amount: number;
 
       dueDate: string
 
@@ -50,8 +75,50 @@
   expires_at?: string;
   notes?: string,
 }
+  notes?: string
+}
+
+
+export interface Application {;
+
+  id: string;
+  projectId: string;
+  talentSlug: string;
+  appliedAtIso: string;
+  status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
+  coverLetter?: string;
+  proposedRate?: number;
+  proposedTimeline?: string;
+  portfolioItems?: string[];
+  notes?: string
+}
+
+
+export interface Message {;
+
+  id: string;
+  conversationId: string;
+  senderId: string;
+  recipientId: string;
+  body: string;
+  linkUrl?: string;
+  attachmentBase64?: string;
+  attachmentName?: string;
+  context?: string;
+  sentAtIso: string;
+  readAtIso?: string;
   is_read: boolean,
 }
+  isRead: boolean
+}
+
+
+export interface Conversation {;
+
+  id: string;
+  participants: string[];
+  lastMessageAtIso: string;
+  lastMessageId?: string;
 
   createdAtIso: string
 
@@ -584,9 +651,10 @@ export async function getProject(id: string): Promise<Project | null> {
 }
   return marketplaceStore.getProject(id)
 }
-export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
+
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
+
   return marketplaceStore.updateProject(id, updates);
 }
 export async function deleteProject(id: string): Promise<boolean> {
@@ -605,9 +673,10 @@ export async function getOffer(id: string): Promise<Offer | null> {
 }
   return marketplaceStore.getOffer(id)
 }
-export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
+
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
+
   return marketplaceStore.updateOffer(id, updates);
 }
 export async function deleteOffer(id: string): Promise<boolean> {
@@ -626,9 +695,10 @@ export async function getApplication(id: string): Promise<Application | null> {
 }
   return marketplaceStore.getApplication(id)
 }
-export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
+
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
+
   return marketplaceStore.updateApplication(id, updates);
 }
 export async function deleteApplication(id: string): Promise<boolean> {
@@ -647,9 +717,10 @@ export async function getMessage(id: string): Promise<Message | null> {
 }
   return marketplaceStore.getMessage(id)
 }
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+
   return marketplaceStore.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -720,13 +791,58 @@ export function createMessageData(
     conversationId,
     senderId,
     recipientId,
+    title,
+    summary,
+    client_id,
+    startDateIso: new Date ().toISOString (),
+    status: 'DRAFT',
+    timeline: [],
+    documents: [],
+    ...additional_data;
+  }
+}
+export function createOfferData (
+  client_id: string,
+  talent_slug: string,
+  scope_summary: string,
+  payment_terms: Offer['payment_terms'],
+  additional_data?: Partial < Offer>): Omit < Offer, 'id' | 'createdAtIso'> {
+  return {
+    client_id,
+    talent_slug,
+    startDateIso: new Date ().toISOString (),
+    scope_summary,
+    payment_terms,
+    status: 'SENT',
+    ...additional_data;
+  }
+}
+export function createApplicationData (
+  project_id: string,
+  talent_slug: string,
+  additional_data?: Partial < Application>): Omit < Application, 'id' | 'appliedAtIso'> {
+  return {
+    project_id,
+    talent_slug,
+    status: 'PENDING',
+    ...additional_data;
+  }
+}
+export function createMessageData (
+  conversation_id: string,
+  sender_id: string,
+  recipient_id: string,
+  body: string,
+  additional_data?: Partial < Message>): Omit < Message, 'id' | 'sentAtIso'> {
+  return {
+    conversation_id,
+    sender_id,
+    recipient_id,
     body,
     isRead: false,
     ...additionalData;
   };
 }
-
-export function generateId(prefix: string = 'item'): string {;
-  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }

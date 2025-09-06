@@ -40,6 +40,7 @@ async function checkAutomationStatus() {
       
       statusReport.pm2Processes = [];
     }
+
     // Check automation scripts
     
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
@@ -52,6 +53,7 @@ async function checkAutomationStatus() {
       'automation/code-quality-monitor.cjs',
       'automation/performance-optimizer.cjs',
     ];
+
     for (const script of automationScripts) {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
@@ -91,29 +93,6 @@ async function checkAutomationStatus() {
       console.log('❌ Health check failed');
     }
 
-    const reportPath = path.join(
-      process.cwd(),
-      'automation-status-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
-
-    
-    
-    
-    
-    
-
-    return statusReport;
-    console.log('📋 Checking system health...');
-    try {
-      const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
-      statusReport.systemHealth.healthCheck = 'passed';
-      console.log('✅ Health check passed');
-    } catch (error) {
-      statusReport.systemHealth.healthCheck = 'failed';
-      console.log('❌ Health check failed');
-    }
-
     // Determine overall status
     const availableScripts = statusReport.automationScripts.filter(s => s.exists).length;
     const totalScripts = statusReport.automationScripts.length;
@@ -136,21 +115,6 @@ async function checkAutomationStatus() {
     console.log(`   Overall Status: ${statusReport.overallStatus.toUpperCase()}`);
 
     // Save report
-    const reportPath = path.join(
-      process.cwd(),
-      'automation-status-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
-
-    
-    
-    
-    
-    
-
-    return statusReport;
-  } catch (error) {
-    console.error('❌ Error checking automation "status": ', error.message);
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -159,6 +123,7 @@ async function checkAutomationStatus() {
     } catch (error) {
       console.log('⚠️  Could not save report file');
     }
+
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
     statusReport.overallStatus = 'error';
@@ -166,5 +131,27 @@ async function checkAutomationStatus() {
 
   return statusReport;
 }
+
 if (require.main === module) {
+module.exports = checkAutomationStatus;
+      console.error('Fatal "error": ', error);
+      process.exit(1);
+    });
+}
+module.exports = { checkAutomationStatus };
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+  console.log(' Checking Automation Status...')
+    "overallStatus"
+      const pm2List = execSync('pm2 jlist', { "encoding"})
+    console.log(' Status "Report")
+    console.error(' Error checking automation "status")
+      console.error('Fatal "error")
+  checkAutomationStatus().then(report => {
+    process.exit(report.overallStatus === 'healthy' ? 0 : 1);
+  });
+}
+
 module.exports = checkAutomationStatus;

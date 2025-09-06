@@ -11,15 +11,13 @@ const Page: NextPage = () => {
         <h1 className="text-3xl font-bold mb-6">Auto Update 2025-08-08T17-37-01-527Z</h1>
         {/* Page content */}
 
-export default Page,;
-        {/* Page content */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
       </div>;
 
     </>;
   );
 };
 export default Page;
+
+
+

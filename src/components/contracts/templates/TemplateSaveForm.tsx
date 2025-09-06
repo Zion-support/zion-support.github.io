@@ -173,6 +173,13 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 
+              <FormLabel>Template Name</FormLabel>
+              <FormControl>
+                <Input {...field} placeholder='Enter template name' />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+
             field: ControllerRenderProps<FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Template Name</FormLabel>;
@@ -228,27 +235,81 @@ if ( {) {
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
-              `${editTemplate ? 'Update' : 'Save'} Template`
-            )}
+
+
+            Cancel
+          </Button>
+          <Button type='submit' disabled={saving}>
+            field: ControllerRenderProps < FormValues, 'is_default'>;
+          }) => (
+            <FormItem className='flex items - center justify - between'>;
+              <FormLabel className='cursor - pointer'>;
+                Set as default template;
+              </FormLabel>;
+              <FormControl>;
+                <Switch;
+                  aria - label='Default template';
+                  checked={field.value}
+                  onCheckedChange={field.on_change}                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <div className='flex gap - 2 justify - end'>;
+          <Button type='button' variant='outline' on_click={on_cancel}>;
+            Cancel;
           </Button>;
-        </div>;
-      </form>;
-    </Form>);
-set_saving (true);
-try {
-  if (editTemplate) {
-  await updateTemplate.mutateAsync ({
-  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
-  ...field "
-}placeholder="Enter template name" />
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
-  editTemplate ? "Update" : "Save"
-}Template`)
-}</Button> </div> </form> </Form>)
-}"}
+          <Button type='submit' disabled={saving}>;
+            {saving ? (
+
+        />;
+
+        <div className='flex gap-2 justify-end'>;
+          <Button type='button' variant='outline' onClick={onCancel}>;
+            Cancel;
+          </Button>;
+          <Button type='submit' disabled={saving}>;
+            {saving ? (;
+              <>;
+                <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                Saving...;
+              </>;
+            ) : (;
+              `${editTemplate ? 'Update' : 'Save'} Template`;
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Saving...
+              </>
+            ) : (
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
+
+              `${editTemplate ? "Update" : "Save"} Template`
+
+            )}
+          </Button>;
+        </div>;
+      </form>;
+    </Form>;
+  );
+
+
+
+  // Check condition
+if ( {) {
+  $2
+}
+  await update_template.mutate_async ({
+  <FormItem> <FormLabel > Template Name</FormLabel> <FormControl> <Input {
+  ...field ";
+}placeholder="Enter template name" />;
+}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (`$ {";
+  edit_template ? "Update" : "Save";
+}Template`);
+}</Button> </div> </form> </Form>);
+}"}
+}
 ;

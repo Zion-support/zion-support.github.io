@@ -1,15 +1,7 @@
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-function fixDoubleCommas(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-    // Fix double commas in import statements
 
-    // Fix double commas in import statements;
-    const doubleCommaRegex = /,\s*,/g;
-    const fixedContent = content.replace(doubleCommaRegex, ",");
+    const fixedContent = content && content.replace(doubleCommaRegex, ",");
+
+
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 #!/usr / bin / env node;
@@ -39,10 +31,12 @@ if ( {) {
   } catch (error) {
 
     const items = fs && fs.readdirSync(currentDir);
+
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
+      const fullPath = path && path.join(currentDir, item);
+      const stat = fs && fs.statSync(fullPath);
+
+      if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
           [

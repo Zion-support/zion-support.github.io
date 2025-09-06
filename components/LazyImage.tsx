@@ -23,21 +23,7 @@ interface LazyImageProps {;
   onError?: () => void;
 }
 export default function LazyImage({
-  src
-  alt
-  width
-  height
-  className = ""
-  priority = false
-  placeholder = "empty"
-  blurDataURL
-  sizes
-  quality = 75
-  fill = false
-  style
-  onLoad
-  onError
-}: LazyImageProps) {
+
   src,
   alt,
   width,
@@ -53,6 +39,7 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
@@ -61,6 +48,7 @@ export default function LazyImage({
 
   useEffect(() => {;
     if (priority) return;
+
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
@@ -75,16 +63,20 @@ export default function LazyImage({
         rootMargin: "50px",;
       },;
     );
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+
+    if (imgRef && imgRef.current) {;
+      observer && observer.observe(imgRef && imgRef.current);
     }
-    return () => observer.disconnect();
+
+    return () => observer && observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {
+
+  const handleLoad = () => {;
     setIsLoaded(true);
     onLoad?.();
-  }
-  const handleError = () => {
+  };
+
+  const handleError = () => {;
     setHasError(true);
     onError?.();
   };

@@ -1,7 +1,7 @@
 
-
-export type ProjectStatus =
 export type ProjectStatus = 
+
+
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
@@ -15,9 +15,12 @@ export type ProjectStatus =;
   | 'in_progress';
   | 'completed';
   | 'canceled';
-export interface Project {
+
+
 
 export interface Project {;
+
+
   id: string;
   client_id: string;
   talent_id: string;
@@ -45,9 +48,12 @@ export interface Project {;
 
   }
 }
-export interface ProjectNote {
+
+
 
 export interface ProjectNote {;
+
+
   id: string;
   project_id: string;
   user_id: string;
@@ -87,17 +93,6 @@ export interface Project {;
   client_profile?: {;
     display_name: string,;
     avatar_url?: string;
-  }
-}
-;
-export interface ProjectNote {;
-  id: string,;
-  project_id: string,;
-  user_id: string,;
-  content: string,;
-  created_at: string,;
-  created_by_profile?: {;
-    display_name: string;
-    avatar_url?: string;
+
   }
 }

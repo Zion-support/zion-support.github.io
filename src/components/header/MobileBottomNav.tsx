@@ -58,91 +58,92 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
+
+
+    // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
+  }
+  const navItems = [
+    {
+      name: 'Home'
+      href: '/'
+      icon: Home
+      matches: (path: string) => path === '/',    }
+    {
+      name: 'Browse'
+      href: '/talent'
+      icon: Search
+      matches: (path: string) =>
+        path.startsWith('/talent') |
+        path.startsWith('/categories') |
+        path.startsWith('/marketplace'),    }
+    {
+      name: 'Community'
+      href: '/community'
+      icon: MessageCircle
+      matches: (path: string) =>
+        path.startsWith('/community') |path.startsWith('/forum'),    }
+    {
+      name: 'Wishlist'
+      href: '/wishlist'
+      icon: Heart
+      matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount
+      authRequired: true
+    }
+    {
+      name: 'Messages'
+      href: '/messages'
+      icon: MessageSquare
+      matches: (path: string) =>
+        path.startsWith('/messages') |path.startsWith('/inbox'),      badge: unreadCount
+      authRequired: true
+    }
+    {
+      name: 'Cart'
+      href: '/cart'
+      icon: ShoppingCart
+      matches: (path: string) => path.startsWith('/cart')
+      badge: cartCount,    }
+    {
+      name: 'Dashboard'
+      href: '/dashboard'
+      icon: User
+      matches: (path: string) => path.startsWith('/dashboard')
+      authRequired: true
+    }
+  ]
+  // Filter items based on auth status
+  const visibleItems = navItems.filter(
+    item => !item.authRequired |(item.authRequired && isAuthenticated)
+  )
       name: "Home",
       href: "/",
       icon: Home,
-      matches: (path: string) => path === "/"
-    },
-      matches: (path: string) => path === '/',    },
-      matches: (path: string) => path === "/"
-    },
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
-    },
-      matches: (path: string) =>
-        path.startsWith('/talent') ||
-        path.startsWith('/categories') ||
-        path.startsWith('/marketplace'),    },
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
-    },
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
-      matches: (path: string) =>
-        path.startsWith('/community') || path.startsWith('/forum'),    },
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
-      matches: (path: string) => path.startsWith("/wishlist"),
-      badge: favoritesCount,
-      authRequired: true
-      matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount,
-      authRequired: true,
-      matches: (path: string) => path.startsWith("/wishlist"),
-      badge: favoritesCount,
-      authRequired: true
     },
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
-      badge: unreadCount,
-      authRequired: true
-      matches: (path: string) =>
-        path.startsWith('/messages') || path.startsWith('/inbox'),      badge: unreadCount,
-      authRequired: true,
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
-      badge: unreadCount,
-      authRequired: true
     },
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
-      matches: (path: string) => path.startsWith("/cart"),
-      badge: cartCount
-    },
-      matches: (path: string) => path.startsWith('/cart'),
-      badge: cartCount,    },
-      matches: (path: string) => path.startsWith("/cart"),
-      badge: cartCount
-    },
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
-      matches: (path: string) => path.startsWith('/dashboard'),
-      authRequired: true,
-    },
-  ]
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(
-    item => !item.authRequired || (item.authRequired && isAuthenticated)
-  )
-      matches: (path: string) => path.startsWith("/dashboard"),
-      authRequired: true
-    }
-  ],
 
 
   return (
@@ -298,10 +299,16 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               <item.icon className="h-5 w-5 mb-1" aria-hidden="true" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
-      </div>
-    </nav>
-  )
-}
+
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+              )}
+            </div>;
+            <span className='hidden sm:block text-xs font-medium'>;
+              {item && item.name}
+            </span>;
+          </Link>;
+        ))}
 ;
 }
 
@@ -310,4 +317,3 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     </nav>;
   );
 }
-;

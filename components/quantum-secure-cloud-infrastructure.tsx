@@ -17,6 +17,8 @@ export default function QuantumSecureCloudInfrastructure() {
 				"HSM/KMS integrations and key rotation";
 				"Zero Trust + PQC reference designs";
 				"Threat modeling and validation";
+
+
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
@@ -31,16 +33,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -50,13 +56,6 @@ import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe
 import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {;
 	return (<ServiceLanding
- import React from 'react';
- import React from 'react';
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
-import SEO from '../components/SEO';
-export default function QuantumSecureCloudInfrastructure() {
-	return(<ServiceLanding
 			title="Quantum-Secure Cloud Infrastructure"
 			description="Future-proof your cloud with PQC, encrypted networking, and key management designed to resist quantum attacks."
 			subtitle="Protect data beyond the quantum horizon"
@@ -64,11 +63,11 @@ export default function QuantumSecureCloudInfrastructure() {
 			implementationWeeks="6-10 weeks"
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data"
 			features={[
-				"PQC algorithms for data at-rest and in-transit";
-				"Hybrid crypto transition plans";
-				"HSM/KMS integrations and key rotation";
-				"Zero Trust + PQC reference designs";
-				"Threat modeling and validation";
+				"PQC algorithms for data at-rest and in-transit"
+				"Hybrid crypto transition plans"
+				"HSM/KMS integrations and key rotation"
+				"Zero Trust + PQC reference designs"
+				"Threat modeling and validation"
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}

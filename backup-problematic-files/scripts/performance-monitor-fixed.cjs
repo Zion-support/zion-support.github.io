@@ -4,8 +4,6 @@
 #!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
 #!/usr/bin/env node;#!/usr/bin/env node;
-#!/usr/bin/env node;#!/usr/bin/env node;
-#!/usr/bin/env node;#!/usr/bin/env node;
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
       ""system": {        memory: {},        cpu": {},";        "process"
       "application": {"buildSize": 0,        "bundleSize": 0,,"loadTime": 0,,"}
@@ -505,5 +503,4 @@ class PerformanceMonitor {
   console.error("Fatal "error": ")  console.error("Fatal "error": ")
   console.error("Fatal "error": ")
   console.error("Fatal "error": ")
-  console.error("Fatal "error": ")  console.error("Fatal "error": ")
   console.error("Fatal "error": ")  console.error("Fatal "error": ")

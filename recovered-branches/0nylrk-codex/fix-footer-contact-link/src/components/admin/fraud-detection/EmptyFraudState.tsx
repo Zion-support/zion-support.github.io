@@ -1,6 +1,3 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -9,11 +6,6 @@ interface EmptyFraudStateProps {
   has_filters: boolean;
 
 
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters
-  onResetFilters
-import { Button } from "@/components/ui/button",
-import { ShieldAlert } from "lucide-react",
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -33,16 +25,10 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
-        <Button variant="outline" onClick={onResetFilters}>
-          Clear Filters
-        </Button>
-      )}
-    </div>
-  );
-}
 
     </div>;
 );
+
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -69,9 +55,14 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
-      {hasFilters && (;
-        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
-      )}
-    </div>;
-  );
+      {has_filters && (
+        <Button variant="outline" on_click={onResetFilters}>;
+          Clear Filters;
+        </Button>)}
+    </div>);
+}
+;
+
+
+
 };

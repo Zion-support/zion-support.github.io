@@ -53,6 +53,8 @@ interface QuoteDetails {;
   timeframe: string,;
   startDate?: string,;
   endDate?: string;
+
+
 }
 interface RequestBody {
   service: Service | null
@@ -63,6 +65,59 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+
+
+
+
+
+  try {
+
+    const { service, quoteDetails } = await req && req.json() as RequestBody;
+    
+
+    // Extract user identity if authenticated
+    let userId = null;
+    try {
+      // Get the JWT from the Authorization header
+      const authHeader = req && req.headers.get('Authorization');
+      if (authHeader) {
+        // Extract user information from the JWT
+        const token = authHeader && authHeader.replace('Bearer ', '');
+        const { data: { user }, error } = await supabase && supabase.auth.getUser(token);
+        if (!error && user) {
+
+          userId = user.id
+;
+  try {;
+    const { service, quoteDetails } = await req.json() as RequestBody,;
+    // Extract user identity if authenticated;
+    let userId = null,;
+    try {;
+      // Get the JWT from the Authorization header;
+      const authHeader = req.headers.get('Authorization'),;
+      if (authHeader) {;
+        // Extract user information from the JWT;
+        const token = authHeader.replace('Bearer ', ''),;
+        const { data: { user }, error } = await supabase.auth.getUser(token),;
+        if (!error && user) {;
+          userId = user.id;
+
+
+
+        }
+      }
+    } catch (authError) {
+      console && console.log("Auth error:", authError);
+      // Continue without user identity
+    }
+    // Generate a summary and tags using OpenAI
+    let aiAnalysis = null;
+    try {
+      if (openAIApiKey) {
+        const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST'
+          headers: {
+            'Authorization': `Bearer ${openAIApiKey}`;
             'Content-Type': 'application/json'};
           body: JSON && JSON.stringify({
 
@@ -78,9 +133,10 @@ serve(async (req) => {
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
-                Service: ${service?.title |'Custom Service'}
-                Category: ${service?.category |'N/A'}
+
+
                 
+
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -108,6 +164,9 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
+
+
+
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
@@ -130,6 +189,7 @@ serve(async (req) => {
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content;
+
         }
       }
     } catch (openAIError) {
@@ -219,3 +279,68 @@ if ( {) {
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+  }
+});
+
+          description: quote_details.description;
+          email: quote_details.email;
+          budget: quote_details.budget;
+          timeframe: quote_details.timeframe;
+          start_date: quote_details.start_date;
+          end_date: quote_details.end_date;
+          ai_analysis: ai_analysis,
+          status: 'pending';
+        }
+      ]);
+      .select ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return new Response (JSON.stringify ({ success: true, data }), {
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+  } catch (error) {
+    console.error ('Error in process - quote function:', error);
+    return new Response (JSON.stringify ({ success: false, error: error.message }), {
+      status: 500,
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+
+
+    } catch (openAIError) {;
+      console.error("OpenAI error:", openAIError),;
+      // Continue without AI analysis;
+    }
+;
+    // Store the quote request in the database;
+    const { data, error } = await supabase;
+      .from('service_quotes');
+      .insert([;
+        {;
+          user_id: userId,;
+          service_id: service?.id,;
+          service_title: service?.title || 'Custom Service',;
+          service_category: service?.category,;
+          description: quoteDetails.description,;
+          email: quoteDetails.email,;
+          budget: quoteDetails.budget,;
+          timeframe: quoteDetails.timeframe,;
+          start_date: quoteDetails.startDate,;
+          end_date: quoteDetails.endDate,;
+          ai_analysis: aiAnalysis,;
+          status: 'pending';
+        }
+      ]);
+      .select(),;
+    if (error) throw error,;
+    return new Response(JSON.stringify({ success: true, data }), {;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error in process-quote function:', error),;
+    return new Response(JSON.stringify({ success: false, error: error.message }), {;
+      status: 500,;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+
+
+  }
+});

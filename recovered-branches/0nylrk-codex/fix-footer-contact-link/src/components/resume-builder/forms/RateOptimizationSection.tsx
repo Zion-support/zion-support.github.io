@@ -1,11 +1,12 @@
 
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
+
+
 import {Control} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
+
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -31,6 +32,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
@@ -39,16 +41,8 @@ interface RateOptimizationSectionProps {
   location?: string,
   rateType: "hourly" | "fixed"
 }
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
-  control;
-  setValue;
-  skills;
-  yearsExperience;
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-  control;
-  setValue;
-  skills;
-  yearsExperience;
+
+
 
   location
   control,
@@ -166,6 +160,8 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 step="0.01";
 
                 placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
+
+
                 {...field}
               />;
             </FormControl>;
@@ -189,17 +185,17 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
-            rateType={rateType}
-          />
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
+
+
+
 
           />;
         </CardContent>;
       </Card>;
     </div>;
   );
+
+
+
+
 };

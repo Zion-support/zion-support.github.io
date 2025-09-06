@@ -11,7 +11,8 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
-;
+
+
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -38,6 +39,40 @@ export const SidebarProvider = React.forwardRef<;
   HTMLDivElement;
 export const SidebarProvider = React.forwardRef<
   HTMLDivElement,
+
+const SIDEBAR_COOKIE_NAME = "sidebar:state";
+const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
+const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+
+const SidebarContext = React && React.createContext<SidebarContextType | null>(null);
+
+export function useSidebar(): any (): SidebarContextType {;
+  const context = React && React.useContext(SidebarContext);
+  if (!context) {;
+    throw new Error("useSidebar must be used within a SidebarProvider.");
+  }
+
+  return context as SidebarContextType;
+}
+
+export interface SidebarProviderProps extends React && React.ComponentProps<"div"> {;
+  defaultOpen?: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+}
+
+export const SidebarProvider = React && React.forwardRef<;
+
+  HTMLDivElement;
+  SidebarProviderProps;
+>(;
+  (;
+    {;
+      defaultOpen = true;
+
+
+
+
   SidebarProviderProps
 >(
   (
@@ -75,6 +110,10 @@ export const SidebarProvider = React.forwardRef<
           _setOpen(openState)
         }
 
+
+
+
+
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -95,8 +134,9 @@ export const SidebarProvider = React.forwardRef<
         ) {
           event.preventDefault()
           toggleSidebar()
-        }
-      }
+
+
+
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -118,6 +158,9 @@ export const SidebarProvider = React.forwardRef<
         ) {;
           event.preventDefault();
           toggleSidebar();
+
+
+
         }
       }
 
@@ -257,7 +300,32 @@ if (
 SidebarProvider.displayName = "SidebarProvider"
 export { SidebarContext }
 
-export { SidebarContext };
-;
+        toggle_sidebar});
+      [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
+    return (
+      <SidebarContext.Provider value={context_value}>;
+        <TooltipProvider delay_duration={0}>;
+          <div;
+              style={
+              {
+                "--sidebar - width": "16rem";
+                "--sidebar - width - icon": "3rem";
+                ...style} as CSSProperties;
+              }
+            className={cn (
+              "group / sidebar - wrapper flex min - h-svh w - full has-[[data - variant = inset]]:bg - sidebar";
+              class_name)}
+            ref={ref}
+            {...props}
+          >;
+            {children}
+          </div>;
+        </TooltipProvider>;
+      </SidebarContext.Provider>);
+  }
+);
+SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
-;
+
+
+

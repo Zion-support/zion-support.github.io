@@ -20,11 +20,14 @@ interface AIMilestoneGeneratorProps {
 
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
-export function AIMilestoneGenerator({
+
+export function AIMilestoneGenerator(): any ({;
+
 
 
 
 export function AIMilestoneGenerator({;
+
   scope;
   startDate;
   endDate;
@@ -39,45 +42,9 @@ export function AIMilestoneGenerator({;
     if (!scope |!startDate |!projectType) {
       return
     }
-    const input: MilestoneInput = {
-      scope;
-      startDate;
-      endDate
-      projectType
-    }
-    await generateMilestones(input);
-    // Initially select all milestones
-    const initialSelection = {}
-    generatedMilestones.forEach((_, index) => {
-      initialSelection[index] = true
-    });
-    setSelectedMilestones(initialSelection)
-  }
-  const handleAddToProject = () => {
-    const selectedMilestonesList = generatedMilestones.filter((_, index) =>
-      selectedMilestones[index]
-    );
-    onAddMilestones(selectedMilestonesList);
-    clearGeneratedMilestones();
-    setSelectedMilestones({})
-  }
-  const toggleMilestoneSelection = (index: number) => {
-    setSelectedMilestones(prev => ({
-      ...prev
-      [index]: !prev[index]
-    }))
-  }
-  const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
-    onAddMilestone(milestone)
-  }
-  const formatDate = (dateString: string) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-    } catch (error) {
-      return dateString
-    }
-  }
+
   };
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -157,6 +124,20 @@ export function AIMilestoneGenerator({;
     }
 
   },
+
+
+
+
+  return (
+    <div className="space-y-4">;
+      <div className="flex items-center justify-between">;
+        <h3 className="text-lg font-medium flex items-center">;
+          <Sparkles className="w-5 h-5 mr-2 text-primary" />;
+          AI Milestone Generator;
+        </h3>;
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
 
           disabled={isGenerating || !scope || !startDate || !projectType}>;
           {isGenerating ? (;

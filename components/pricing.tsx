@@ -6,28 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Check
-  Star
-  Users
-  TrendingUp
-  DollarSign
-  Clock
-  Shield
-  Zap
-  Rocket
-  Brain
-  Atom
-  Globe
-  Target
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  ExternalLink;} from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
-  Check, Star, Users, TrendingUp, DollarSign, Clock
+
 
   Check,
   Star,
@@ -51,6 +30,8 @@ import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturi
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
   Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+
+
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -129,16 +110,20 @@ import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovat
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -169,6 +154,7 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
     website: 'https://ziontechgroup.com'
   };
 
+  // Group services by category for better organization
   const servicesByCategory = filteredServices.reduce((acc, service) => {
 
     const category = Array.isArray(service.category) ? service.category[0] : service.category;
@@ -272,7 +258,7 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
 
   const categories = [;
     'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
-    'Project ManagementCustomer ExperienceSecurity & Compliance'
+    'Project ManagementCustomer ExperienceSecurity & Compliance';
   ];
   const filteredServices = selectedCategory === 'All'
     ? microSaasServices
@@ -281,6 +267,14 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
 
 
+
+
+
+  const filteredServices = selectedCategory === 'All' ;
+    ? microSaasServices ;
+    : microSaasServices && microSaasServices.filter(service => service && service.category === selectedCategory);
+
+  const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
 
   return (
 
@@ -460,6 +454,11 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
                 {priceRanges.map(range => (
                   <option key={range.id} value={range.id}>{range.name}</option>
 
+
+            transition={{ duration: 0.8 }}
+
+
+
                 ))}
 
 
@@ -469,6 +468,20 @@ import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
             </div>
           </motion.div>
         </section>
+              </select>;
+            </div>;
+
+            <div className='text-center text-gray-400'>;
+              <p>;
+                Showing {filteredServices && filteredServices.length} services in{' '}
+                {Object && Object.keys(servicesByCategory).length} categories;
+              </p>            </div>            <div className="text-center text-gray-400">;
+              <p>Showing {filteredServices && filteredServices.length} services in {Object && Object.keys(servicesByCategory).length} categories</p>;
+            </div>;
+          </motion && motion.div>;
+        </section>;
+
+        {/* Pricing Categories */}
 
                           duration: 0 && 0.6,
                           delay: serviceIndex * 0 && 0.1,
@@ -770,6 +783,7 @@ if ( {) {
                             className={`w-16 h-16 bg-gradient-to-r ${service && service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                             <span className='text-2xl'>{service && service.icon}</span>;
                           </div>;
+
                           {/* Service Title and Tagline */}
                           <h3 className='text-xl font-semibold text-white mb-2'>;
                             {service && service.name}
@@ -820,6 +834,7 @@ if ( {) {
                             {service.description}
 
                           </div>;
+
                           {/* Description */}
                           <p className='text-gray-300 leading-relaxed mb-6 line-clamp-3'>;
                             {service && service.description}
@@ -1027,10 +1042,33 @@ if ( {) {
 
 
           </div>
+
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+
+
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+                  {' '}
+
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
@@ -1122,7 +1160,8 @@ if ( {) {
       </main>
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-);
+
+
   );
 
 }whileInView= {
@@ -1141,6 +1180,7 @@ if ( {) {
                 Contact our team to discuss pricing, implementation, and how our;
                 revolutionary 2029 services can transform your business.;
               </p>;
+
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
                 <Link href='/contact'>;
                   <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>;
@@ -1164,6 +1204,7 @@ if ( {) {
                   </button>;
                 </a>;
               </div>;
+
               {/* Contact Information */}
               <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
                 <div className='flex items-center justify-center space-x-2'>;
@@ -1178,6 +1219,7 @@ if ( {) {
                   <MapPin className='w-5 h-5 text-pink-400' />;
                   <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>;
               </div>;
+
               {/* Additional Info */}                  <span>{contactInfo && contactInfo.mobile}</span>;
                 </div>;
                 <div className="flex items-center justify-center space-x-2">;
@@ -1189,6 +1231,7 @@ if ( {) {
                   <span className="text-sm">{contactInfo && contactInfo.address}</span>;
                 </div>;
               </div>;
+
               {/* Additional Info */}
               <div className='mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20'>;
                 <h3 className='text-xl font-semibold text-white mb-4'>;
@@ -1227,18 +1270,23 @@ if ( {) {
           </div>;
         </section>;
       </main>;
+
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>;
   );
+
 }whileInView= {;
   {;
   opacity: 1, y: 0 ;
+
 }transition= {;
   {;
   duration: 0 && 0.8 ;
+
 }viewport= {;
   {;
   once: true ;
+
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion && motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
 
                           </p>;
@@ -1478,10 +1526,6 @@ if ( {) {
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>);
 ;
-      <UltraFuturisticFooter2029 />
-    </UltraFuturisticBackground2029>
-  );
-
 }whileInView= {
   {
   opacity: 1, coordinate_y: 0;
@@ -1490,12 +1534,9 @@ if ( {) {
   duration: 0.8;
 }viewport= {
   {
+  once: true;
+}> <h2 className="text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6" > Ready to Get Started with <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Revolutionary Technology?</span> </h2> <p className="text - xl text - gray - 300 mb - 8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8" > <Link href="/contact" > <button className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 transform hover:scale - 105" > <Phone className="inline - block w - 5 h - 5 mr - 2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt - 12 p - 6 bg - gray - 900 / 30 rounded - 2xl border border - cyan - 500 / 20"> <h3 className="text - xl font - semibold text - white mb - 4">Why Choose Zion Tech Group?</h3> <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 4 text - sm text - gray - 300"> <div className="flex items - center space - x-2"> <Check className="w - 4 h - 4 text - green - 400" /> flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Proven ROI and customer success stories</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Comprehensive support and implementation</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400" /> <span > Cutting - edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
 
   once: true 
 
-}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
-}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
 
-}
-}
-}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)

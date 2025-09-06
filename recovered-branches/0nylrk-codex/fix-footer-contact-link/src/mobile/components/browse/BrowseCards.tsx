@@ -1,33 +1,26 @@
 
+
+
+
+
 import React, { useState } from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-import React, { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-interface BrowseItem {
 
-  id: string
-  title: string
-  subtitle: string
-  description: string
-  location?: string;
-  badges: string[]
-
-  price?: string;
-  image?: string;
-  match?: number;
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+interface BrowseItem {;
+  id: string,;
+  title: string,;
+  subtitle: string,;
+  description: string,;
+import React, { useState } from './react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 
 interface BrowseItem {
   id: string,
@@ -44,13 +37,8 @@ interface BrowseItem {
 interface BrowseCardsProps {
 
 
-  onViewDetails: (id: string) => void
-}
 
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
-  const [savedItems, setSavedItems] = useState<string[]>([]);
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]);
+
 
   const [savedItems, setSavedItems] = useState<string[]>([]),
   
@@ -82,13 +70,18 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
-                  <div>
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
-                  </div>
-                </div>
+
+                  <div>;
+                    <h3 className="font-medium">{item && item.title}</h3>;
+                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
+                  </div>;
+                </div>;
+
+
                 <button
+
                 <button 
+
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -97,15 +90,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-                </button>
-              </div>
-              <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
-                  <Badge
-                    key={index}
-                    variant="outline"
-                    className="text-xs font-normal"
-                  >
+
+
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -184,6 +170,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+
+
                     {badge}
                   </Badge>;
                 ))}

@@ -1,4 +1,27 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -9,17 +32,6 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {;
   const { user } = useAuth();
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function EnterpriseBilling() {
-  const { user } = useAuth();
-  // Check if user has billing permissions
 
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" || ;
@@ -41,19 +53,9 @@ export default function EnterpriseBilling() {
     return <Navigate to="/unauthorized" />
   }
   return (
-    <ProtectedRoute>
-      <SEO
-        title="Enterprise Billing - Zion AI Marketplace"
-        description="Manage your subscription, view invoice history, and download billing statements."
-      />
-      <Header />
-      <main className="min-h-screen bg-background">
-        <BillingDashboard />
-      </main>
-      <Footer />
-    </ProtectedRoute>
-  )
-}
+
+
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -85,6 +87,10 @@ export default function EnterpriseBilling() {;
       <Footer />;
     </ProtectedRoute>;
   );
+
+
+
+
 }
 import React from './react';
 import { Header } from '@/components / Header';

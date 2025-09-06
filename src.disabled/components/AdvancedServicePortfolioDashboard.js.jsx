@@ -1,6 +1,4 @@
-:src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx
+
+
 import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from\';react\' const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [selectedStatus,setSelectedStatus] = useState(\'all\') const [selectedComplexity,setSelectedComplexity] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\') const [viewMode,setViewMode] = useState(\'overview\')\'';\';
-:temp_exclude/src.disabled/components/AdvancedServicePortfolioDashboard.js.jsx
 const React from";react" const AdvancedServicePortfolioDashboard = () => { const [selectedCategory,setSelectedCategory] = useState("all") const [selectedStatus,setSelectedStatus] = useState("all") const [selectedComplexity,setSelectedComplexity] = useState("all") const [searchTerm,setSearchTerm] = useState(") const [viewMode,setViewMode] = useState("overview")"";";''"

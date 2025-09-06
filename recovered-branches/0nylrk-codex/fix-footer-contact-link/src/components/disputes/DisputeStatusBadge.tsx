@@ -1,30 +1,32 @@
 
+import { Badge } from '@/components / ui / badge';
+import { ShieldAlert } from './lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
+
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+  switch (status) {
+    case 'under_review':
+
 import {Badge} from "@/components/ui/badge";
 import {ShieldAlert} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
-import { Badge } from "@/components/ui/badge",
-import { ShieldAlert } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-import { ShieldAlert } from "lucide-react",
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
 
-interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed'
+interface DisputeStatusBadgeProps {;
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
 }
-export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
-import { Badge } from "@/components/ui/badge",
-import { ShieldAlert } from "lucide-react",
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
-
-interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed'
-}
-export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
+export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute";
+
+  switch (status) {;
+    case 'under_review':;
+
+export /**
+ * DisputeStatusBadge - Function description
+ */
+function DisputeStatusBadge() {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
   let message = "This item has an open dispute",
   
@@ -73,7 +75,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>
     </Tooltip>
   )
-}
+
+
+
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -122,7 +126,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-    </Tooltip>;
-  );
+
+
+
+
 }
 ;

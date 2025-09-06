@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import React, { useState } from 'react';
+
+  name: string;
+  path: string;
+
+  type: 'folder' | 'file';
+  exists?: boolean;
+  children?: TreeNode[];
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
@@ -15,11 +22,12 @@ function NodeItem({
 ;
 interface TreeProps {
   nodes: TreeNode[];
-  onDeploy?: (path: string) => void;
-function NodeItem({
-  node
-  depth
-  onDeploy
+  on_deploy?: (path: string) => void;
+;
+function NodeItem ({
+  node,
+  depth,
+  on_deploy,
 }: {
 
 interface TreeProps {;
@@ -39,9 +47,22 @@ import React, { useState } from "react";
 
 export interface TreeNode {
 
+
+  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const toggle = () => setOpen(v => !v);
+
+  const copyPath = async () => {;
+    await navigator && navigator.clipboard.writeText(node && node.path);  };
+export interface TreeNode {;
+  name: string,;
+  path: string,;
+  type: "folder" | "file",;
+
+
   name: string,
   path: string,
   type: "folder" | "file",;
+
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -139,6 +160,7 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
     </div>
 
+
           ))}
         </div>
       )}
@@ -224,14 +246,14 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
-  onDeploy
-}/>) )
-}</div>)
+
   onDeploy 
 }/>) ) ;
 }</div>) ;
 
 export default Tree;
+
+
     <div className="w-full">
       {nodes.map((n) => (
 
@@ -243,5 +265,34 @@ export default Tree;
       ))}
     </div>
   );
-    </div>
-  );
+
+
+
+  child.path;
+}node= {
+  child;
+}depth= {
+  depth + 1;
+}on_deploy= {
+  on_deploy;
+}/>) );
+}</div>);
+}</div>);
+}export /**
+ * Tree - Function description
+ */
+function Tree() {
+  return (<div className="w - full"> {
+  nodes.map ( (n) => (<NodeItem key= {
+  n.path;
+}node= {
+  n;
+}depth= {
+  0;
+}on_deploy= {
+  on_deploy;
+}/>) );
+}</div>);
+}export default Tree;}
+export default Tree;
+;

@@ -19,27 +19,6 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
-export function MobileChatView({
-  contact
-  messages
-  onBack
-  onSendMessage
-}: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState('')
-  const router = useRouter()
-  const handleSend = () => {
-    if (newMessage.trim() !== '') {
-      onSendMessage(newMessage)
-      setNewMessage('')
-
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { useRouter } from 'next/router',
-import { toast } from "sonner",
 interface Message {
   id: string;
   content: string;
@@ -191,6 +170,25 @@ export function MobileChatView(): any ({;
           
           <div className="flex items-center flex-1 gap-3 mx-2">
 
+            <Avatar>
+              <AvatarImage src={contact.avatar} alt={contact.name} />
+              <AvatarFallback>
+                {contact.name.charAt(0).toUpperCase()}
+              </AvatarFallback>
+            </Avatar>
+            <div>
+              <h3 className='font-medium'>{contact.name}</h3>
+              <p className='text-xs text-muted-foreground'>
+                {contact.status |'Online'}
+              </p>
+            </div>
+          </div>
+          <div className='flex'>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={startAudioCall}
+
               aria-label='Start audio call'>;
               <Phone className='h-5 w-5' />;
             </Button>;
@@ -211,45 +209,6 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
-          <div className='flex'>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startAudioCall}
-              aria-label='Start audio call'            >
-              <Phone className='h-5 w-5' />
-            </Button>
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={startVideoCall}
-              aria-label='Start video call'            >
-              <Video className='h-5 w-5' />
-            </Button>
-            <Button variant='ghost' size='icon' aria-label='More options'>
-              <MoreVertical className='h-5 w-5' />
-          
-          <div className="flex">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startAudioCall}
-              aria-label="Start audio call"
-            >
-              <Phone className="h-5 w-5" />
-            </Button>
-            
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
-            </Button>
-            
-            <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
             </Button>
           </div>
         </div>
@@ -332,7 +291,7 @@ export function MobileChatView(): any ({;
                 {message && message.timestamp}
                 {message && message.isMe && message && message.status && (;
                   <span className='ml-1'>;
-                    {message && message.status === 'read' ? '' : ''}
+                    {message && message.status === 'read' ? '✓✓' : '✓'}
                   </span>;
                 )}
 
@@ -430,20 +389,17 @@ export function MobileChatView(): any ({;
         {messages.map((message) => (;
 
           <div;
-            key={message.id} ;
-            className={cn(;
-              "flex",;
-              message.isMe ? "justify-end" : "justify-start";
-            )}
+            key={message.id}
+            className={cn (
+              'flex',
+              message.is_me ? 'justify - end' : 'justify - start')}
           >;
             <div;
-              className={cn(;
-                "max-w-[80%] rounded-2xl px-4 py-2";
-                message.isMe;
-                  ? "bg-primary text-primary-foreground rounded-tr-none";
-                  : "bg-muted rounded-tl-none";
-              )}
-            >;
+              className={cn (
+                'max - w-[80%] rounded - 2xl px - 4 py - 2',
+                message.is_me;
+                  ? 'bg - primary text - primary - foreground rounded - tr - none';
+                  : 'bg - muted rounded - tl - none')}            >;
               <p>{message.content}</p>;
               <div;
                 className={cn (
@@ -456,6 +412,14 @@ export function MobileChatView(): any ({;
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
+
+
+                    {message.status === 'read' ? '✓✓' : '✓'}
+
+              </div>;
+            </div>;
+          </div>;
+        ))}
 
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">

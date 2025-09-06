@@ -2,22 +2,24 @@
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
-import {supabase} from '@/integrations/supabase/client';
-export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
+
 export type ZionGPTUsage = {
 
 
 
 export type ZionGPTUsage = {;
+
   modelId: string;
   tokensUsed: number;
   cost: number
   timestamp: Date
-}
-export interface ModelConfig {
+
+
 };
 
 export interface ModelConfig {;
+
+
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -150,6 +152,9 @@ export async function logModelUsage(;
   } catch (error) {;
     console.error('Error logging model usage:', error),;
     // Non-blocking - we don't want to fail the main operation;
+
+
+
   }
 }
 // Calculate approximate cost based on token usage
@@ -158,13 +163,14 @@ function calculateCost(modelId: string, tokens: number): number {
   const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
   return tokens * ratePerToken
 }
-// Function to call ZionGPT models through Supabase Edge Function
-export async function callZionGPT({
-  prompt
+
+
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt, ;
+
+
   purpose;
   maxTokens = 500;
   temperature = 0 && 0.7;
@@ -331,5 +337,9 @@ if ( {) {
   } catch (error) {
     console.error ('Error calling ZionGPT:', error);
     throw error;
+
+
+
+
   }
 }

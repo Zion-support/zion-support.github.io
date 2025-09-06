@@ -1,18 +1,11 @@
 
-import { useState  } from 'react';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
-  DropdownMenuSeparator;
-  DropdownMenuLabel;
-  DropdownMenuRadioGroup;
-  DropdownMenuRadioItem;
-  DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
+
+
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+
+
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -22,10 +15,7 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
-export function PdfExportButton({ resume }: PdfExportButtonProps) {
-  const [isExporting, setIsExporting] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const [includePortfolio, setIncludePortfolio] = useState(true);
+
 
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
@@ -33,6 +23,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import {;
@@ -63,6 +54,11 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
 
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
+
+
+
+
+
 
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
@@ -183,42 +179,9 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
           ) : (;
             <FileText className="h-4 w-4" />;
           )}
-          Export PDF
-          <ChevronDown className="h-4 w-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-56">
-        <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Theme</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={theme} onValueChange={(value) => setTheme(value as 'light' | 'dark')}>
-          <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuLabel className="text-xs font-normal text-muted-foreground">Font</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={fontFamily} onValueChange={(value) => setFontFamily(value as FontFamily)}>
-          <DropdownMenuRadioItem value="default">Default</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="montserrat">Montserrat</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="open-sans">Open Sans</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuCheckboxItem
-          checked={includePortfolio}
-          onCheckedChange={setIncludePortfolio}
-        >
-          Include Portfolio Projects
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={handleExport}>
-          <Download className="h-4 w-4 mr-2" />
-          Download PDF
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-}
+
+
+
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -312,6 +275,10 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+
+
+
+
 }
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';

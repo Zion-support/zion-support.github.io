@@ -1,4 +1,27 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -8,17 +31,7 @@ import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceDescriptionGenerator() {;
-  const { isAuthenticated, isLoading } = useAuth();
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function ServiceDescriptionGenerator() {
+
   const { isAuthenticated, isLoading } = useAuth();
 
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
@@ -65,19 +78,8 @@ export default function ServiceDescriptionGenerator() {
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
-              <GeneratedDescriptionDisplay
-              <GeneratedDescriptionDisplay 
-import React, { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",;
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
-import { SEO } from "@/components/SEO",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Navigate } from "react-router-dom",;
-export default function ServiceDescriptionGenerator() {;
-  const { isAuthenticated, isLoading } = useAuth(),;
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+
+
   // Show loading while checking authentication;
   if (isLoading) {;
     return (
@@ -118,7 +120,11 @@ export default function ServiceDescriptionGenerator() {;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
             {generatedDescription && (;
-              <GeneratedDescriptionDisplay;
+
+              <GeneratedDescriptionDisplay
+
+              <GeneratedDescriptionDisplay 
+
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;

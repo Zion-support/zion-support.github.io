@@ -1,6 +1,5 @@
-import Link from 'next/link';
-import Link from 'next/link',;
-import Link from 'next/link';
+
+
 export default function AdminIndex() {
   return (
     <div className="space-y-2">

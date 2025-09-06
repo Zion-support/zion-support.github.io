@@ -46,10 +46,7 @@ export const SidebarHeader = React.forwardRef<
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
+
 >((props, ref) => {
   return (
     <div;
@@ -67,10 +64,7 @@ export const SidebarFooter = React.forwardRef<
 SidebarHeader.displayName = "SidebarHeader"
 
 export const SidebarFooter = React.forwardRef<
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
+
 >((props, ref) => {
   return (
     <div;
@@ -115,10 +109,7 @@ export const SidebarContent = React.forwardRef<
 SidebarSeparator.displayName = "SidebarSeparator"
 
 export const SidebarContent = React.forwardRef<
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
+
 >((props, ref) => {
   return (
     <div;
@@ -141,10 +132,7 @@ export const SidebarGroup = React.forwardRef<
 SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-  HTMLDivElement,
-  React.ComponentProps<"div">
+
 >((props, ref) => {
   return (
     <div;

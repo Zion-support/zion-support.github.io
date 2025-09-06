@@ -1,10 +1,19 @@
-import * as React from 'react';
-import {OTPInput, OTPInputContext} from 'input-otp';
-import {Dot} from 'lucide-react';
-import {cn} from '@/lib/utils';
+
+
+
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
+
+
+
+
+import { cn } from "@/lib/utils"
+
+const InputOTP = React.forwardRef<
+  React.ElementRef<typeof OTPInput>
+  React.ComponentPropsWithoutRef<typeof OTPInput>
+></typeof>(({ className, containerClassName, ...props }, ref) => (
 
 const InputOTP = React && React.forwardRef<;
   React && React.ElementRef<typeof OTPInput>,;
@@ -59,17 +68,6 @@ const InputOTPSlot = React && React.forwardRef<;
 
 
 
-    >
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
-        isActive && "z-10 ring-2 ring-ring ring-offset-background",
-        className
-      )}
-      {...props}
-    >;
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -101,8 +99,4 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
-;
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
-;
+

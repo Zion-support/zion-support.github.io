@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 import {;
   Pagination,;
   PaginationContent,;
@@ -27,27 +27,11 @@ export function CountryTabs(): any ({;
   const countriesPerPage = 50;
 
 export function CountryTabs({
-
-  popularCountries
-  filteredCountries
-  handleCountrySelect
-  onQuote
-  searchQuery
-  setSearchQuery
-export function CountryTabs({
   popularCountries,
   filteredCountries,
   handleCountrySelect,
   onQuote,
   searchQuery,
-  setSearchQuery,
-}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const countriesPerPage = 50
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery])
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage)
   popularCountries,
   filteredCountries,
   handleCountrySelect,
@@ -80,6 +64,11 @@ export function CountryTabs({
     currentPage * countriesPerPage
   )
   ),
+
+  return (
+    <Tabs defaultValue='featured' className='w-full'>;
+      <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
+        <TabsTrigger
           value="featured"
           className="data-[state=active]:bg-zion-purple"
         >
@@ -96,6 +85,25 @@ export function CountryTabs({
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
+
+
+            Featured Service Locations
+          </h2>
+          <p className='text-zion-slate-light text-center mt-2'>
+            Browse our most popular service destinations
+          </p>
+        </div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {filteredCountries
+            .filter(country => popularCountries.includes(country.country))
+            .map(country => (              <CountryServiceCard
+                key = {country && country.country,}
+                country = {country,}
+                onSelect = {handleCountrySelect,}
+                onQuote = {onQuote,}
+                isPopular = {true,}
+              />;
+            ))}
 
         </div>;
       </TabsContent>;
@@ -203,6 +211,54 @@ export function CountryTabs({
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
+
+          ))}
+
+        </div>;
+
+        {totalPages > 1 && (;
+          <div className='mt-8'>;
+            <Pagination className='justify-center'>;
+              <PaginationContent>;
+                <PaginationItem>;
+                  <PaginationPrevious
+                    href={`?page=${currentPage - 1}`}
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setCurrentPage(Math && Math.max(1, currentPage - 1));
+                    }}
+                  />;
+                </PaginationItem>;
+                {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  page => (;
+                    <PaginationItem key={page}>;
+                      <PaginationButton
+                        page={page}
+                        isActive={page === currentPage}
+                        onClick={e => {;
+                          e && e.preventDefault();
+                          setCurrentPage(page);                        }}
+                      />;
+                    </PaginationItem>;
+                  );
+                )}
+                <PaginationItem>;
+                  <PaginationNext
+                    href={`?page=${currentPage + 1}`}
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
+                  />;
+                </PaginationItem>;
+              </PaginationContent>;
+            </Pagination>;
+          </div>;
+        )}
+      </TabsContent>;
+    </Tabs>;
+  );
+  );
+}
   );
 }
 
@@ -341,3 +397,18 @@ function CountryTabs() {
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
+
+
+                    }}
+                  />;
+                </PaginationItem>;
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(;
+                  (page) => (;
+                    <PaginationItem key={page}>;
+                      <PaginationButton;
+                        page={page}
+                        isActive={page === currentPage}
+                )}
+                <PaginationItem>;
+                  <PaginationNext;
+                    href={`?page=${currentPage + 1}`}

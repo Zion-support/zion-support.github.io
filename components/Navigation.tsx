@@ -55,11 +55,9 @@ import SearchModal from './SearchModal';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-origin/automation-improvements-final
+
+
+
 
   Menu
   X
@@ -296,6 +294,7 @@ function Navigation() {
       icon: Shield,;
     },;
   ];
+
   const solutions = [;
     {;
       name: "Enterprise Solutions",;
@@ -334,6 +333,7 @@ function Navigation() {
       icon: Users,;
     },;
   ];
+
   const industries = [;
     {;
       name: "Healthcare",;
@@ -371,6 +371,7 @@ function Navigation() {
       description: "Property technology",;
     },;
   ];
+
   const resources = [;
     { name: "Blog", href: "/blog", description: "Latest insights and updates" },;
     {;
@@ -400,6 +401,7 @@ function Navigation() {
     },;
     { name: "News", href: "/news", description: "Industry news and updates" },;
   ];
+
   const quickLinks = [;
     { name: "About Us", href: "/about" },;
     { name: "Our Team", href: "/team" },;
@@ -768,6 +770,8 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Pricing
               </Link>
             </div>
+
+
                 </AnimatePresence>;
               </div>;
 

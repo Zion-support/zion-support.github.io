@@ -380,12 +380,10 @@ import {;
     }
   ];
   const integrations = [
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-    {
-      name: 'Shopify'
-      icon: '🛒'
-      description: 'E-commerce content automation'
+
+      popular: false,;
+      color: 'border-purple-600',;
+      buttonColor: 'bg-purple-600 hover:bg-purple-700';
     }
 
   const useCases = [;
@@ -464,16 +462,92 @@ import {;
         'Dedicated support',
         'Unlimited API access',
         'Advanced analytics',
-        'White-label solution',
+        'White - label solution',
         'Custom integrations',
         'SLA guarantee',
       ],
       popular: false,
+      color: 'border - purple - 600',
+      button_color: 'bg - purple - 600 hover:bg - purple - 700',
+    },  ];        'Unlimited words_all templates + custom_full SEO suite_dedicated support_unlimited API access_advanced analytics_white - label solution_custom integrations';
+        'SLA guarantee';
+      ];
+      popular: false,
+      color: 'border - purple - 600',
+      button_color: 'bg - purple - 600 hover:bg - purple - 700';
+    }
+  const use_cases = [;
+    {
+      title: 'Blog Writing',
+      description:;
+        'Generate engaging blog posts, articles, and long - form content in minutes.',
+      examples: [;
+        'Tech reviews',
+        'How - to guides',
+        'Industry insights',
+        'Product comparisons',
+      ],
+    },
+    {
+      title: 'Marketing Copy',
+      description:;
+        'Create compelling ad copy, landing pages, and marketing materials.',
+      icon: '🎯',
+      examples: [;
+        'Facebook ads',
+        'Google ads',
+        'Landing pages',
+        'Email campaigns',
+      ],
+    },
+    {
+      title: 'Social Media',
+      description:;
+        'Generate engaging social media posts, captions, and hashtag suggestions.',
+      icon: '📱',
+      examples: [;
+        'Instagram posts',
+        'Twitter threads',
+        'LinkedIn articles',
+        'TikTok captions',
+      ],
+    },
+    {
+      title: 'E - commerce',
+      description:;
+        'Write product descriptions, category pages, and promotional content.',
+      icon: '🛍️',
+      examples: [;
+        'Product descriptions',
+        'Category pages',
+        'Promotional emails',
+        'FAQ sections',
+      ],
+    },  ];
+;
+  const integrations = [;
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },      examples: ['Product descriptions_category pages_promotional emailsFAQ sections'];
+    }
+  ];
+;
+  const integrations = [;
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    {
+      name: 'Shopify',
+      icon: '🛒',
+      description: 'E - commerce content automation',
+    },
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '🛒', description: 'E - commerce content automation' },
+    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
+    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
+    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
+    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
+
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
-  ];
-
-  ];
 
   return (
     <>;
@@ -643,36 +717,21 @@ import {;
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-              >
-                <div className="relative">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
-                    {feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {feature.description}
+                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
+                <div className="relative">;
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
+                    {feature && feature.icon}
+                  </div>;
+                </div>;
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">;
+                  {feature && feature.title}
+                </h3>;
+                <p className="text-gray-400 leading-relaxed">;
+                  {feature && feature.description}
+                </p>;
+              </Card>;
 
-                  {feature.description}
-
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className='py-24 bg-black relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Use Cases
-            </h2>
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
+              Everything you need to create exceptional content at scale
             </p>
           </div>
 
@@ -892,6 +951,7 @@ import {;
           </div>;
         </div>;
       </section>;
+
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -902,6 +962,7 @@ import {;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -911,6 +972,7 @@ import {;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
             {useCases && useCases.map((useCase, index) => (;
 
@@ -952,6 +1014,7 @@ import {;
               Versatile content creation for every industry and purpose
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <Card
@@ -973,9 +1036,11 @@ import {;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 
                           {example}
+                        </div>;
 
 
                           {example}
+
 
                         </div>
                       ))}
@@ -987,6 +1052,10 @@ import {;
           </div>
         </div>
       </section>
+
+
+
+
 
       {/* Pricing Section */}
 
@@ -1174,23 +1243,51 @@ import {;
                   </div>
                 )}
 
-                </ul>;
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-2'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='text-4xl font-bold text-white mb-2'>;
+                    {plan && plan.price}
+                    <span className='text-lg text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
+                  <p className="text-gray-400">{plan && plan.description}</p>;
+                </div>;
+
+                <ul className="space-y-4 mb-8">;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
 
 
-                <Button
-                  href='/contact'
-                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size='lg'>;
-                  Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size="lg";
-                >;
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </Button>;
-              </Card>;
-
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'
+                    >
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
+                  <p className="text-gray-400">{plan.description}</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
+
+
+
+
 
                     </li>
                   ))}
@@ -1210,6 +1307,10 @@ import {;
         </div>
       </section>
 
+
+
+
+
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1224,6 +1325,7 @@ import {;
           </div>;
         </div>;
       </section>;
+
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -1234,6 +1336,7 @@ import {;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms;
             </p>;
           </div>;
+
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -1243,6 +1346,7 @@ import {;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
 
@@ -1288,21 +1392,24 @@ import {;
 
               </Card>
 
-            ))}
-          </div>
-        </div>
-      </section>
 
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
 
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
+
 
             Ready to Transform Your Content Creation?
           </h2>
@@ -1375,7 +1482,9 @@ import {;
     </>
 
   );
+
+    </>);
 }
-}
-;
-}
+
+
+

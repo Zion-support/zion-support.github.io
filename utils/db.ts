@@ -16,9 +16,12 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   }
   return default_value;
 }
-export function writeJsonFile<T>(fileName: string, data: T): void {
+
+
 
 export function writeJsonFile<T>(fileName: string, data: T): void {;
+
+
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
@@ -100,8 +103,10 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
+
 import fs from 'fs';
 import path from 'path';
 
+
 }
-}
+

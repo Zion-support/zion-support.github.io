@@ -69,10 +69,6 @@ interface FilterGroup {;
             </div>
           ))}
         </div>
-      </div>
-    </>
-  )}
-'"`
 
 
   filters: FilterGroup[];
@@ -113,7 +109,5 @@ function FilterSidebar() {
             </div>))}
         </div>;
       </div>;
-    </>;
-  )};
+    </>)}
 '"`;
-export default FilterSidebar;

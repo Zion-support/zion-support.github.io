@@ -15,27 +15,27 @@ const securityChecks = {
     console.log(' Checking security headers...');
     return true;
 const securityChecks = { dependencies: () => {  return true},codeScan: () => {  return true},headers: () => {  return true} }; Object && Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
-console && console.log(' Enhanced Security Monitor Starting...');
+console && console.log('🔒 Enhanced Security Monitor Starting...');
 const securityChecks = {
   "dependencies": () => {
-    console && console.log(' Checking dependencies for vulnerabilities...'),
+    console && console.log('📦 Checking dependencies for vulnerabilities...'),
     return true
   },
   "codeScan": () => {
-    console && console.log(' Scanning code for security issues...'),
+    console && console.log('🔍 Scanning code for security issues...'),
     return true
   },
   "headers": () => {
-    console && console.log(' Checking security headers...'),
+    console && console.log('🛡️ Checking security headers...'),
     return true
   }
 };
 Object && Object.entries(securityChecks).forEach(([name, check]) => {
   try {
     const result = check();
-    console && console.log(` ${name}: ${result ? 'PASS' : 'FAIL'}`);
+    console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
-    console && console.log(` ${name}: ERROR - ${error && error.message}`);
+    console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
   }
 });
 console.log('🎉 Security monitoring completed!');

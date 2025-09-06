@@ -1,6 +1,5 @@
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
+
+
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -10,6 +9,8 @@ import type { DateRange } from '@/types/dateRange';
 
 export const useAdminQuotes = () => {
 export const useAdminQuotes = () => {;
+
+
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -51,6 +52,9 @@ export const useAdminQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
+
+
+
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -59,7 +63,11 @@ export const useAdminQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+
+
     
+
+
     // Search filter
     if (searchQuery) {
       const query = searchQuery && searchQuery.toLowerCase();
@@ -87,13 +95,10 @@ export const useAdminQuotes = () => {;
         return false
       }
     }
-    return true
-  });
-  // Update quote status mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
-      quoteRequestService.updateStatus(id, status);
+
+
     
+
 ;
     // Search filter;
     if (searchQuery) {;
@@ -125,6 +130,9 @@ export const useAdminQuotes = () => {;
       }
     }
     
+
+
+
     return true
   });
   // Update quote status mutation
@@ -200,10 +208,12 @@ export const useAdminQuotes = () => {;
       toast({
         title: "Quote deleted"
         description: "The quote request has been permanently deleted"
-      }),
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
-    }
+      });
+
+
     };
+
+
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -228,12 +238,10 @@ export const useAdminQuotes = () => {;
     setArchiveFilter;
     searchQuery;
     setSearchQuery;
-    dateRange;
-    setDateRange
-    updateStatus: (id: string, status: QuoteStatus) =>
-      updateStatusMutation.mutate({ id, status });
-    toggleArchive: (id: string, isArchived: boolean) =>
+
+
     toggleArchive: (id: string, isArchived: boolean) => 
+
     },
     onError: (error: Error) => {
       toast({
@@ -317,6 +325,9 @@ export const useAdminQuotes = () => {;
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
+
+
+
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }

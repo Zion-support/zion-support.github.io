@@ -1,106 +1,141 @@
-import fs from 'fs';
-import path from 'path';
-import { MultiverseState, InstanceConfig, SyncEvent } from './types';
+// Singleton instance
+export const syncStorage = new SyncStorage();
 
-interface SyncState {
-  config: InstanceConfig;
-  lastSyncedAt: string;
+// Main functions for external use
+export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'>): Promise<SyncJob> {
+  return syncStorage.createJob(job);
 }
 
-const defaultState: SyncState = {
-  config: {
-    instanceId: 'default-instance'
-    peers: []
-    scope: 'global'
-    optIn: false
-    paused: false
+export async function getJob(id: string): Promise<SyncJob | null> {
+  return syncStorage.getJob(id);
+}
+
+export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
+  return syncStorage.updateJob(id, updates);
+}
+
+export async function startJob(id: string): Promise<boolean> {
+  return syncStorage.startJob(id);
+}
+
+export async function completeJob(id: string, error?: string): Promise<boolean> {
+  return syncStorage.completeJob(id, error);
+}
+
+export async function updateJobProgress(id: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
+  return syncStorage.updateJobProgress(id, progress);
+}
+
+export async function createConnection(connection: Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncConnection> {
+  return syncStorage.createConnection(connection);
+}
+
+export async function getConnection(id: string): Promise<SyncConnection | null> {
+  return syncStorage.getConnection(id);
+}
+
+export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
+  return syncStorage.updateConnection(id, updates);
+}
+
+export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'>): Promise<SyncMapping> {
+  return syncStorage.createMapping(mapping);
+}
+
+export async function getMapping(id: string): Promise<SyncMapping | null> {
+  return syncStorage.getMapping(id);
+}
+
+export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
+  return syncStorage.updateMapping(id, updates);
+}
+
+export async function createLog(log: Omit<SyncLog, 'id' | 'timestamp'>): Promise<SyncLog> {
+  return syncStorage.createLog(log);
+}
+
+export async function getLogsByJob(jobId: string, limit?: number): Promise<SyncLog[]> {
+  return syncStorage.getLogsByJob(jobId, limit);
+}
+
+// Utility functions
+export function createSyncJob(
+  type: SyncJob['type'],
+  source: string,
+  destination: string,
+  config?: SyncJob['config']
+): Omit<SyncJob, 'id' | 'createdAt' | 'updatedAt' | 'progress'> {
+  return {
+    type,
+    status: 'pending',
+    source,
+    destination,
+    config: config || {}
+  };
+}
+
+export function createSyncConnection(
+  name: string,
+  type: SyncConnection['type'],
+  config: SyncConnection['config']
+): Omit<SyncConnection, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
+    name,
+    type,
+    config,
+    isActive: true
+  };
+}
+
+export function createSyncMapping(
+  name: string,
+  sourceConnectionId: string,
+  destinationConnectionId: string,
+  fieldMappings: Record<string, string>
+): Omit<SyncMapping, 'id' | 'createdAt' | 'updatedAt'> {
+  return {
+    name,
+    sourceConnectionId,
+    destinationConnectionId,
+    fieldMappings,
+    isActive: true
+  };
+}
+
+export function generateJobId(): string {
+  return `job_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function generateConnectionId(): string {
+  return `conn_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function generateMappingId(): string {
+  return `mapping_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function calculateProgress(processed: number, total: number): number {
+  if (total === 0) return 0;
+  return Math.round((processed / total) * 100);
+}
+
+export function formatDuration(startTime: string, endTime?: string): string {
+  const start = new Date(startTime);
+  const end = endTime ? new Date(endTime) : new Date();
+  const duration = end.getTime() - start.getTime();
+  
+  const seconds = Math.floor(duration / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  
+  if (hours > 0) {
+    return `${hours}h ${minutes % 60}m ${seconds % 60}s`;
+  } else if (minutes > 0) {
+    return `${minutes}m ${seconds % 60}s`;
+  } else {
+    return `${seconds}s`;
   }
-  lastSyncedAt: new Date().toISOString()
 }
-let state: SyncState = { ...defaultState }
-export function readState(): SyncState {
-  return { ...state }
-}
-export function updateState(updates: Partial<SyncState>): void {
-  state = { ...state, ...updates }
-};
-
-
-export function readState(): SyncState {;
-  return { ...state };
-}
-
-export function updateState(updates: Partial<SyncState>): void {;
-  state = { ...state, ...updates };
-}
-export function upsertEvent(
-  state: MultiverseState
-  event: SyncEvent
-): MultiverseState {
-  if (state.seenEventIds[event.eventId]) return state;
-  const entityId = getEntityId(event);
-  const currentVersion = state.latestVersionByEntityId[entityId] |0;
-  const isNewer = event.version > currentVersion;
-  if (event.type === 'proposal' && event.merkleRoot && isNewer) {
-    state.proposalMerkleById[entityId] = event.merkleRoot;
-  }
-  if (isNewer) {
-    state && state.latestVersionByEntityId[entityId] = event && event.version;
-  }
-  state.events.push(event);
-  state.seenEventIds[event.eventId] = true;
-  state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
-  return state;
-}
-
-export function getEntityId(event: SyncEvent): string {
-  switch (event && event.type) {
-    case 'proposal':
-      return (event && event.payload as any).proposalId;
-    case 'token_transfer':
-      return (event && event.payload as any).txId;
-    case 'talent_mobility':
-      return (
-        (event && event.payload as any).personId + ':' + (event && event.payload as any).startDate
-      );
-    case 'dao_endorsement':
-      return (event && event.payload as any).resolutionId;
-    case 'leaderboard_entry':
-      return (
-        (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period
-      );
-    default:
-      return (event.payload as any).id |event.eventId;
-  }
-}
-
-export function filterEventsByScope(
-  events: SyncEvent[]
-  scope: InstanceConfig['scope']
-): SyncEvent[] {
-  if (scope === 'full') return events;
-  if (scope === 'dao') {
-    return events.filter(
-      e => e.type === 'proposal' |e.type === 'dao_endorsement'
-    );
-  }
-  if (scope === 'marketplace') {
-    return events && events.filter(
-      e =>
-        e.type === 'token_transfer' |
-        e.type === 'talent_mobility' |
-        e.type === 'leaderboard_entry'
-    );
-  }
-  return events;export function resetState(): void {
-  state = { ...defaultState }
-}
-
-  return events;export function resetState(): void {;
-  state = { ...defaultState };
-}
-
-  lastSyncedAt: new Date().toISOString()
 
 
 

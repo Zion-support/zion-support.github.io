@@ -1,13 +1,7 @@
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Referral, ReferralStatus} from "@/types/referrals";
-import {Badge} from "@/components/ui/badge";
-import {formatDate} from "@/utils/referralUtils";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Referral, ReferralStatus } from "@/types/referrals",
-import { Badge } from "@/components/ui/badge";
-import { formatDate } from "@/utils/referralUtils";
-import { Badge } from "@/components/ui/badge",
-import { formatDate } from "@/utils/referralUtils",
+
+
+
+
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -58,30 +52,10 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </p>
       </div>
     )
-  }
-  return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>Date</TableHead>
-          <TableHead>Email</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>User Type</TableHead>
-          <TableHead>Completed On</TableHead>
-          <TableHead>Reward</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {referrals.map((referral) => (
-          <TableRow key={referral.id}>
-            <TableCell>{formatDate(referral.created_at)}</TableCell>
-            <TableCell>{referral.email |'-'}</TableCell>
-            <TableCell>{renderStatusBadge(referral.status)}</TableCell>
-            <TableCell>
-              {referral.referred_user_type
-                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1)
+
               {referral.referred_user_type 
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
@@ -147,6 +121,9 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
 
               {referral.referred_user_type;
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
+
+
+
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;

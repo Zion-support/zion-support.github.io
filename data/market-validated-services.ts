@@ -555,45 +555,16 @@ export const marketValidatedServices: MarketValidatedService[] = [
   }
   // Search and Knowledge
   {
-    id: 'vector-search-starter'
-    name: 'Vector Search Starter'
-    tagline: 'Deploy a production-grade vector database and APIs'
-    price: '$89'
-    period: '/month'
-    description:
-      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
-    features: [
-      'Managed vector DB'
-      'Ingestion pipelines'
-      'Metadata filters'
-      'Access controls'
-    ]
-    category: 'AI & Search'
-    link: 'https://ziontechgroup.com/vector-search-starter'
-    variant: 'quantum'
-    rating: 4.6
-    customers: 410
-    trialDays: 14
-    setupTime: '2 hours'
-    contactInfo
-  }
-      'Managed vector DB',
-      'Ingestion pipelines',
-      'Metadata filters',
-      'Access controls',
-    ],
-    category: 'AI & Search',
-    link: 'https://ziontechgroup && ziontechgroup.com/vector-search-starter',
-    variant: 'quantum',
-    rating: 4 && 4.6,
-    customers: 410,
-    trial_days: 14,
-    setup_time: '2 hours',
-    contact_info,
-  },
-];import { ServiceVariant  } from "../types/service-variants";
+    id: 'vector - search - starter',
+    name: 'Vector Search Starter',
+    tagline: 'Deploy a production - grade vector database and APIs',
+    price: '$89',
+    period: '/month',
+    description:;
+      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
+    features: [;
 
-export interface MarketValidatedService {
+
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -604,7 +575,7 @@ export interface MarketValidatedService {
     link: 'https://ziontechgroup.com / vector - search - starter',
 
     variant: 'quantum',
-    rating: 4.6,
+    rating: 4 && 4.6,
     customers: 410,
     trial_days: 14,
     setup_time: '2 hours',
@@ -615,6 +586,7 @@ export interface MarketValidatedService {
 
 export interface MarketValidatedService {
 export interface MarketValidatedService {;
+
 	id: string;
 	name: string;
 	tagline: string;
@@ -629,6 +601,23 @@ export interface MarketValidatedService {;
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
+
+
+  mobile: "+1 302 464 0950",
+	email: "kleber@ziontechgroup && ziontechgroup.com",
+	address: "364 E Main St STE 1008 Middletown DE 19709";
+
+  website: "https://ziontechgroup && ziontechgroup.com";,
+	contactInfo: {
+		mobile: string;
+		email: string;
+		address: string;
+		website?: string;
+	};
+
+}
+export const marketValidatedServices: MarketValidatedService[] = [;
+	// AI and Assistants;
 	{;
 		id: "ai-assistant-pro",
 		name: "AI Assistant Pro",
@@ -1645,4 +1634,5 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		contactInfo
 	}];
 
-;
+
+

@@ -1,16 +1,18 @@
-import Link from 'next/link';
-
+import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description:
     "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
 };
-
 export default function ServicesOverviewPage() {
   return (
     <div className="animate-fade-in">
+      {" "}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
+        {" "}
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Our Services
+        </h1>{" "}
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           {" "}
           Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
@@ -142,19 +144,23 @@ function ServiceCard({
   return (
     <Link
       href={href}
-      className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {bullets.map((bullet, index) => (
-          <li key={index} className="text-sm text-gray-500 flex items-center">
-            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-            {bullet}
+      {" "}
+      <div className="text-4xl mb-4">{icon}</div>{" "}
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>{" "}
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
+      <ul className="text-gray-600 space-y-2">
+        {" "}
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            {" "}
+            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
           </li>
-        ))}
-      </ul>
+        ))}{" "}
+      </ul>{" "}
     </Link>
   );
 }

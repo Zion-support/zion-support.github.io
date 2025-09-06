@@ -6,17 +6,11 @@ import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
 
 
-  markAsRead: (conversationId: string) => Promise<void>
-}
-export function ConversationsList({
-  conversations;
 
-  activeConversation
-  setActiveConversation
-  markAsRead
 
 export function ConversationsList({ ;
   conversations;
+
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -61,6 +55,7 @@ export function ConversationsList({
               onClick={() => {;
                 setActiveConversation(conversation);
                 markAsRead(conversation.id);
+
               }}
             />;
           ))}

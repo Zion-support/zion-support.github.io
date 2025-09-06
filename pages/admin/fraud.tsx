@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import React, { useEffect, useMemo, useState } from 'react',;
-;
-import React, { useEffect, useMemo, useState } from 'react';
+
+
+
+
 interface FraudItem {
 
 
@@ -118,6 +118,8 @@ function FraudAdminPage() {
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
+
+
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -137,12 +139,15 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-      {loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
+
+
+
 
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
@@ -154,6 +159,9 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -184,6 +192,8 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -213,5 +223,4 @@ function FraudAdminPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
+

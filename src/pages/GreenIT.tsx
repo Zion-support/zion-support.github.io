@@ -48,16 +48,6 @@ export default function GreenIT() {;
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
       icon: Cloud},
     {
-      title: 'Renewable Energy Integration',
-      description:
-        'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
-      icon: Leaf,
-    },
-  ]
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf}
-  ],
 
   return (
     <>;
@@ -82,6 +72,33 @@ export default function GreenIT() {;
           <div className="mb-16">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
+                    while maintaining performance and reliability.
+                  </p>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
+                    for reducing your carbon footprint.
+                  </p>
+                  <div className='mt-8'>
+                    <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>                      Explore Green IT Solutions
+                    </Button>
+                  </div>
+                </div>
+                  <div className="mt-8">
+                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+export default function GreenIT() {
+  const greenITSolutions = [
+    {
       title: 'Energy - Efficient Hardware',
       description:;
         'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',
@@ -230,30 +247,6 @@ export default function GreenIT() {;
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
-        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
-      />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Green IT Solutions</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Sustainable technology solutions that reduce environmental impact without compromising performance
-            </p>
-          </div>
-          <div className="mb-16">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
-                  <p className="text-zion-slate-light text-lg mb-6">
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.
-                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure
-                    while maintaining performance and reliability.
-                  </p>
-                  <p className="text-zion-slate-light text-lg mb-6">
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions
-                    for reducing your carbon footprint.
-                  </p>
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
@@ -329,10 +322,342 @@ export default function GreenIT() {;
                     </Button>;
                   </div>;
                 </div>;
-                <div className='rounded-lg overflow-hidden relative w-full h-full'>;
-                <div className="rounded-lg overflow-hidden relative w-full h-full">
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
+
+
+                <div className="rounded-lg overflow-hidden relative w-full h-full">
+
+                  <img
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
+                    alt="Green IT sustainability"
+                    className="object-cover"
+                </div>
+              </div>
+            </div>
+            <div className='mb-16'>
+              <h2 className='text-2xl font-bold text-white mb-8'>
+                Our Green IT Solutions
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+                {greenITSolutions.map((solution, index) => (
+                  <div
+                    key={index}
+                    className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors'
+                  >
+                    <div className='flex justify-center mb-4'>
+                      <solution.icon className='h-12 w-12 text-zion-cyan' />                    </div>
+                    <h3 className='text-white font-medium text-xl text-center mb-3'>
+                      {solution.title}
+                    </h3>
+                    <p className='text-zion-slate-light text-center'>
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
+import {
+  Leaf
+  Zap
+  Sun
+  Wind
+  Droplets
+  Recycle
+  TreePine
+  Globe
+  TrendingUp
+  Target
+  CheckCircle
+  Award
+  Users
+  Building2
+  Server
+  Monitor
+  Smartphone
+  Cloud
+  Database
+  Shield
+  BarChart3
+  Settings
+  ChevronDown
+  ChevronUp
+  Lightbulb
+  Cpu
+  HardDrive
+  Network
+  Smartphone as Mobile
+  Laptop
+  Tablet
+  Printer
+  Router
+  Camera
+  Speaker
+  Headphones
+  Keyboard
+  Mouse
+  ExternalHardDrive
+  Usb
+  Wifi
+  Bluetooth
+  Battery
+  Power
+  Save
+  Eco
+  Plant
+  Mountain
+  Ocean
+  Forest
+  MountainSnow
+  Thermometer
+  Gauge
+  Activity
+  LineChart
+  PieChart
+  Calculator
+  FileText
+  Calendar
+  Clock
+  Star
+  Heart
+  Eye
+  Search
+  Filter
+  ArrowRight
+  Mail
+  Phone
+  MapPin
+  Clock as Time
+  DollarSign
+  Percent
+  Plus
+  Minus
+  X
+  Check
+  AlertTriangle
+  Info
+  HelpCircle
+  ExternalLink
+  Download
+  BookOpen
+  Video
+  Play
+  Pause
+  SkipBack
+  SkipForward
+  Volume2
+  VolumeX
+  Maximize2
+  Minimize2
+  RotateCcw
+  RefreshCw
+  PowerOff
+  PowerOn
+  BatteryCharging
+  BatteryFull
+  BatteryLow
+  BatteryMedium
+  BatteryEmpty
+  WifiOff
+  WifiLow
+  WifiMedium
+  WifiHigh
+  Signal
+  SignalLow
+  SignalMedium
+  SignalHigh
+  SignalOff
+  WifiHigh as WifiStrong
+  WifiMedium as WifiMedium2
+  WifiLow as WifiWeak
+  WifiOff as WifiNone
+  SignalHigh as SignalStrong
+  SignalMedium as SignalMedium2
+  SignalLow as SignalWeak
+  SignalOff as SignalNone
+  SignalHigh as SignalFull
+  SignalMedium as SignalHalf
+  SignalLow as SignalQuarter
+  SignalOff as SignalEmpty
+  WifiHigh as WifiFull
+  WifiMedium as WifiHalf
+  WifiLow as WifiQuarter
+  WifiOff as WifiEmpty
+  BatteryCharging as BatteryCharging2
+  BatteryFull as BatteryFull2
+  BatteryLow as BatteryLow2
+  BatteryMedium as BatteryMedium2
+  BatteryEmpty as BatteryEmpty2
+  BatteryCharging as BatteryCharging3
+  BatteryFull as BatteryFull3
+  BatteryLow as BatteryLow3
+  BatteryMedium as BatteryMedium3
+  BatteryEmpty as BatteryEmpty3
+  BatteryCharging as BatteryCharging4
+  BatteryFull as BatteryFull4
+  BatteryLow as BatteryLow4
+  BatteryMedium as BatteryMedium4
+  BatteryEmpty as BatteryEmpty4
+  BatteryCharging as BatteryCharging5
+  BatteryFull as BatteryFull5
+  BatteryLow as BatteryLow5
+  BatteryMedium as BatteryMedium5
+  BatteryEmpty as BatteryEmpty5
+  BatteryCharging as BatteryCharging6
+  BatteryFull as BatteryFull6
+  BatteryLow as BatteryLow6
+  BatteryMedium as BatteryMedium6
+  BatteryEmpty as BatteryEmpty6
+  BatteryCharging as BatteryCharging7
+  BatteryFull as BatteryFull7
+  BatteryLow as BatteryLow7
+  BatteryMedium as BatteryMedium7
+  BatteryEmpty as BatteryEmpty7
+  BatteryCharging as BatteryCharging8
+  BatteryFull as BatteryFull8
+  BatteryLow as BatteryLow8
+  BatteryMedium as BatteryMedium8
+  BatteryEmpty as BatteryEmpty8
+  BatteryCharging as BatteryCharging9
+  BatteryFull as BatteryFull9
+  BatteryLow as BatteryLow9
+  BatteryMedium as BatteryMedium9
+  BatteryEmpty as BatteryEmpty9
+  BatteryCharging as BatteryCharging10
+  BatteryFull as BatteryFull10
+  BatteryLow as BatteryLow10
+  BatteryMedium as BatteryMedium10
+  BatteryEmpty as BatteryEmpty10
+} from 'lucide-react'
+export default function GreenIT(...args: unknown[]): unknown {
+  const [expandedSection, setExpandedSection] = useState<string | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const categories = [
+    { id: 'all', name: 'All Solutions', count: 12 }
+    { id: 'energy', name: 'Energy Efficiency', count: 4 }
+    { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 }
+    { id: 'data', name: 'Data Centers', count: 2 }
+  ]
+  const greenSolutions: unknown = [{}
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);'
+  const [selectedCategory, setSelectedCategory] = useState('all')}
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <SEO""
+        title="Green IT Solutions - Zion Tech Group""
+        description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
+      />
+"
+      {/* Hero Section */}""
+      <section className="relative py-20 overflow-hidden">""
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center"">""
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""
+              <Leaf className="w-10 h-10 text-green-400"  />"
+            </div>""
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""
+              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">'
+                Green IT''
+
+              </span>{' '}
+              Solutions"
+            </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Transform your technology infrastructure with sustainable
+              solutions that reduce energy consumption, lower costs, and
+              minimize environmental impact."
+            </p>""
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                Get Green IT Assessment"
+              </button>""
+              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">
+                View Case Studies
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+"
+      {/* Environmental Impact */}""
+      <section className="py-20">""
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16"">""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Our Environmental Impact"
+            </h2>""
+            <p className="text-xl text-gray-300">
+              Real results from implementing sustainable technology solutions
+            </p>
+          </motion.div>"
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {environmentalImpact.map((impact, index) => (
+              <motion.div
+                key={impact.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
+                className="text-center"">""
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""
+                  <impact.icon className="w-10 h-10 text-green-400" />"
+                </div>""
+                <div className="text-4xl font-bold text-white mb-2">
+                  {impact.metric}"
+                </div>""
+                <div className="text-lg font-semibold text-green-400 mb-2">
+                  {impact.label}"
+                </div>""
+                <p className="text-gray-300 text-sm">{impact.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+"
+      {/* Green IT Solutions */}""
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16"">""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Green IT Solutions"
+            </h2>""
+            <p className="text-xl text-gray-300">
+              Comprehensive sustainable technology solutions for your
+              organization
+            </p>
+          </motion.div>
+"
+          {/* Category Filter */}""
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map(category => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${}
+'
+''
+'''`
+                  selectedCategory === category.id'''`'`
+                    ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'''`'`'`
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'````
+}`}
+              >
+                {category.name} ({category.count}) </button>) ) }
+          </div>"
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index) => (
+              <motion.div
+                key={solution.id}
 
       id: 'energy - monitoring',;
       name: 'Smart Energy Monitoring',;
@@ -821,6 +1146,54 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
 
 
+
+                {greenITSolutions.map((solution, index) => (
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
+                    <div className="flex justify-center mb-4">
+                      <solution.icon className="h-12 w-12 text-zion-cyan" />
+                    </div>
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
+                    <p className="text-zion-slate-light text-center">{solution.description}</p>
+                  </div>
+                ))}
+              </div>;
+            </div>;
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
+                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
+                {greenITSolutions && greenITSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
+                    <div className="flex justify-center mb-4">;
+                      <solution && solution.icon className="h-12 w-12 text-zion-cyan" />;
+                    </div>;
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
+                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
+                  </div>;
+                ))}
+
+
+
+                    <li>• Decreased electronic waste through better lifecycle management</li>
+                    <li>• Support for renewable energy initiatives</li>
+                  </ul>
+                </div>
+                
+
+
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
+                  <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• Significant cost savings on energy and cooling</li>
+                    <li>• Enhanced brand reputation and stakeholder relations</li>
+                    <li>• Compliance with emerging environmental regulations</li>
+                    <li>• Improved operational efficiency and performance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
           
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
@@ -831,6 +1204,18 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               <Link href="/contact">Contact Our Team</Link>
 
             </Button>
+
+            </Button>
+
+          </div>
+        </div>
+      </main>
+    </>
+  )
+"                    {expandedSection === solution.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}'
+                        animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}"
                         transition={{ duration: 0.3 }}""
                         className="mt-4 pt-4 border-t border-slate-600/50"">""
@@ -988,19 +1373,5 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               </motion.div>) ) }
 
   )
-}
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT, GreenIT }
-}
 export { GreenIT, GreenIT };
 };
-
-  );
-}
-
-}
-}
-;

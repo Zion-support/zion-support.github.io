@@ -138,15 +138,17 @@ export default function VerifyPage() {
     setBusy(true);
 
     const res = await fetch('/api/kyc/submit', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId })
-    });
-    } else {;
-      setMessage(data.error || 'Upload failed');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId })}),
+    const data = await res.json();
+    if (data.ok) {
+      setProfile(data.profile);
+      setMessage('Submitted. AML check performed.')
+    } else {
+      setMessage(data.error || 'Submit failed')
+    }
+    setBusy(false)
   }
 
 
@@ -157,52 +159,129 @@ export default function VerifyPage() {
     const res = await fetch('/api/kyc/upload', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
-      body: JSON.stringify({ userId })}),;
-    const data = await res.json();
-    if (data.ok) {;
-      setProfile(data.profile);
-      setMessage('Submitted. AML check performed.');
-    } else {
-      setMessage(data.error |'Submit failed');
+      body: JSON && JSON.stringify({ userId, kind, filename }),;
+    });
+    const data = await res && res.json();
+    if (data && data.ok) {;
+      setProfile(data && data.profile);
+    } else {;
+      setMessage(data && data.error || 'Upload failed');
+    }
+    setBusy(false);  }
+
+
+    } else {;
+      setMessage(data && data.error || 'Submit failed');
+
     }
     setBusy(false);  }
   const labels = getBadgeLabels(profile |undefined);
-    } else {;
-      setMessage(data.error || 'Submit failed');
-    } else {;
-      setMessage(data.error || 'Submit failed');
-    }
-    setBusy(false);  }
-
-  const labels = getBadgeLabels(profile || undefined);
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    setBusy(false);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const labels = getBadgeLabels(profile || undefined),
   return (
-    <>
-      <Head>
-        <title>Verify Identity - Zion</title>
-        <meta name="description" content="Complete KYC/AML verification to secure marketplace trust" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <main className='max-w-3xl mx-auto px-4 py-8'>
-        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>
-        <p className='text-sm text-gray-600 mb-6'>
-          Guided step-by-step KYC/AML verification with progress tracking.
-        </p>
-      <main className="max-w-3xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-4">Identity Verification</h1>
-        <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
+    <>;
+      <Head>;
+        <title>Verify Identity - Zion</title>;
+        <meta
+          name='description'
+          content='Complete KYC/AML verification to secure marketplace trust'
+
+        />;
+        <meta name='viewport' content='width=device-width, initial-scale=1' />;
+      </Head>;
+      <main className='max-w-3xl mx-auto px-4 py-8'>;
+        <h1 className='text-2xl font-bold mb-4'>Identity Verification</h1>;
+        <p className='text-sm text-gray-600 mb-6'>;
+          Guided step-by-step KYC/AML verification with progress tracking.;
+        </p>;
+
+        {labels && labels.length > 0 && (;
+          <div className='mb-4'>            <VerifiedBadge labels={labels} />;
+          </div>;
+        )}
+
+        <div className='mb-6 grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <div>;
+            <label className='block text-sm font-medium'>User ID</label>;
+
+            <input
+              className='mt-1 w-full border rounded px-3 py-2'
+              value={userId}
+              onChange={e => setUserId(e && e.target.value)}
+            />;
+          </div>;
+          <div>;
+            <label className='block text-sm font-medium'>Role</label>;
+            <select
+              className='mt-1 w-full border rounded px-3 py-2'
+              value={role}
+              onChange={e => setRole(e && e.target.value as KycRole)}
+      set_message (data.error || 'Upload failed');
+    }
+    set_busy (false);  }
+  async /**
+ * submit - Function description
+ */
+function submit() {
+    set_busy (true);
+    const res = await fetch ('/api / kyc / submit', {
+      method: 'POST',
+      headers: { 'Content - Type': 'application / json' },
+      body: JSON.stringify ({ user_id }),
+    });
+    const data = await res.json ();
+    // Check condition
+if ( {) {
+  $2
+}
+      set_profile (data.profile);
+      set_message ('Submitted. AML check performed.');
+    } else {
+      set_message (data.error || 'Submit failed');
+    }
+    set_busy (false);  }
+  const labels = getBadgeLabels (profile || undefined);
+;
+  return (
+    <>;
+      <Head>;
+        <title > Verify Identity - Zion</title>;
+        <meta;
+          name='description';
+          content='Complete KYC / AML verification to secure marketplace trust';
+        />;
+        <meta name='viewport' content='width = device - width, initial - scale = 1' />;
+      </Head>;
+      <main className='max - w-3xl mx - auto px - 4 py - 8'>;
+        <h1 className='text - 2xl font - bold mb - 4'>Identity Verification</h1>;
+        <p className='text - sm text - gray - 600 mb - 6'>;
+          Guided step - by - step KYC / AML verification with progress tracking.;
+        </p>;
+        {labels.length > 0 && (
+          <div className='mb - 4'>            <VerifiedBadge labels={labels} />;
+          </div>)}
+        <div className='mb - 6 grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+          <div>;
+            <label className='block text - sm font - medium'>User ID</label>;
+            <input;
+              className='mt - 1 w - full border rounded px - 3 py - 2';
+              value={user_id}
+              on_change={e => setUserId (e.target.value)}
+            />;
+          </div>;
+          <div>;
+            <label className='block text - sm font - medium'>Role</label>;
+            <select;
+              className='mt - 1 w - full border rounded px - 3 py - 2';
+              value={role}
+              on_change={e => set_role (e.target.value as KycRole)}
+            >;
+              <option value='client'>Client</option>;
+              <option value='talent'>Talent</option>;
+              <option value='enterprise'>Enterprise</option>;
+            </select>;
+          </div>;
+
+          )}
+
         {labels.length > 0 && (
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
@@ -287,16 +366,69 @@ export default function VerifyPage() {
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
+
+
+
               </div>
             </div>
             <section>
-              <h2 className='font-semibold mb-2'>Required documents</h2>
-              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                {requiredDocs.map(k => {
-                  const hasIt = (profile.documents |[]).some(
-                    d => d.kind === k
+
+        </div>;
+
+        <div className='mb-6'>;
+          <button
+            disabled={busy}
+            onClick={start}
+            className='rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50'>;
+            Start/Update;
+          </button>;
+        </div>;
+
+        {profile && (;
+          <div className='space-y-6'>;
+            <div>;
+              <div className='flex items-center justify-between mb-2'>;
+                <span className='text-sm text-gray-600'>Progress</span>;
+                <span className='text-sm font-medium'>;
+                  {progress}% {profile && profile.status === 'submitted' && '→ Pending ID'}{' '}
+                  {profile && profile.status === 'approved' && '→ Approved'}
+                </span>;
+              </div>;
+              <div className='w-full bg-gray-100 rounded h-3 overflow-hidden'>;
+                <div
+                  className='bg-blue-600 h-3'
+                  style={{ width: `${progress}%` }}
+                />              </div>;
+            </div>;
+
+            <section>;
+              <h2 className='font-semibold mb-2'>Required documents</h2>;
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
+                {requiredDocs && requiredDocs.map(k => {;
+                  const hasIt = (profile && profile.documents || []).some(;
+                    d => d && d.kind === k;
                   );
-                    >
+
+                    >;
+                      <div>;
+                        <div className='text-sm font-medium'>{k}</div>;
+                        <div className='text-xs text-gray-500'>;
+
+                          {hasIt ? 'Uploaded' : 'Missing'}
+                        </div>;
+                      </div>;
+                      <button
+                        disabled={busy}
+                        onClick={() => upload(k)}
+                        className='text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50';
+                      >;
+                        {hasIt ? 'Replace' : 'Upload'}
+                      </button>;
+                    </div>;
+                  );                })}
+
+
+
               <h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
@@ -315,11 +447,18 @@ export default function VerifyPage() {
             </section>
             {optionalDocs.length > 0 && (
               <section>
-                <h2 className='font-semibold mb-2'>Optional documents</h2>
-                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
-                  {optionalDocs.map(k => {
-                    const hasIt = (profile.documents |[]).some(
-                      d => d.kind === k
+
+
+              </div>;
+            </section>;
+
+            {optionalDocs && optionalDocs.length > 0 && (;
+              <section>;
+                <h2 className='font-semibold mb-2'>Optional documents</h2>;
+                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>;
+                  {optionalDocs && optionalDocs.map(k => {;
+                    const hasIt = (profile && profile.documents || []).some(;
+                      d => d && d.kind === k;
                     );
                       >
 
@@ -355,28 +494,8 @@ export default function VerifyPage() {
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-                    );                  })}
-                </div>
-              </section>
-            )}
-            <div>
-              <button
-                disabled={
-                  busy |
-                  profile.status === 'submitted' |
-                  profile.status === 'approved'
-                }
-                onClick={submit}
-                className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
-              >
-                Submit for review
-              </button>
-            </div>
-            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
-        )}
-      </main>
-    </>
-);
+
+
 
                     )
 ;
@@ -604,17 +723,13 @@ export default function VerifyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
-            <div>
-              <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
-            </div>
-            {message && <div className='text-sm text-blue-700'>{message}</div>}          </div>
-        )}
-      </main>
-    </>
-);
+
+
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -634,3 +749,5 @@ export default function VerifyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

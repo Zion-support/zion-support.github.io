@@ -165,24 +165,6 @@ export function AIEnhancementPanel(): any ({;
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-      ...options
-      [field]: e.target.value
-      ...options,
-      [field]: e.target.value,
-    })
-  }
-  const handleApply = () => {
-    onApply(generatedContent)
-    if (onClose) onClose()
-  }
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-      ...options,
-      [field]: e.target.value})
-  },
 
 
   const handleCopy = () => {
@@ -235,14 +217,17 @@ export function AIEnhancementPanel(): any ({;
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
-              onChange={e => handleInputChange(e, 'instructions')}            />
-          </div>
-        )}
-        {/* Generate button */}
-        <Button
-          onClick={handleGenerate}
-          className='w-full'
-          disabled={isEnhancing |(!options.content && !options.context)}        >
+
+        {/* Instructions input (optional) */}
+        {showInstructions && (;
+          <div className='space-y-2'>;
+            <label className='text-sm font-medium'>;
+              Special instructions (optional);
+            </label>;
+            <Input
+
+              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              value={options.instructions}
           disabled={isEnhancing || (!options.content && !options.context)}        >
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
@@ -254,6 +239,21 @@ export function AIEnhancementPanel(): any ({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+
+
+
+          {isEnhancing ? (
+            <>
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+              Enhancing...
+            </>
+          ) : (
+            <>
+              <Sparkles className='mr-2 h-4 w-4' />
+              Generate Enhanced Content
+            </>
+          )}
+        </Button>
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
@@ -307,6 +307,14 @@ export function AIEnhancementPanel(): any ({;
         )}
       </CardContent>
       
+
+
+      {generatedContent && (
+        <CardFooter className='flex justify-between'>
+          {onClose && (
+            <Button variant='outline' onClick={onClose}>
+              Cancel
+            </Button>
       </CardContent>;
 
       {generatedContent && (;
@@ -316,11 +324,6 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-          <Button onClick={handleApply}>Apply to Form</Button>
-        </CardFooter>
-      )}
-    </Card>
-  )
 }
 
     <Card className='w - full max - w-2xl mx - auto'>;
@@ -417,4 +420,13 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 };
+
+          <Button onClick={handleApply}>;
+            Apply to Form;
+          </Button>;
+        </CardFooter>;
+      )}
+    </Card>;
+  );
+}
 ;

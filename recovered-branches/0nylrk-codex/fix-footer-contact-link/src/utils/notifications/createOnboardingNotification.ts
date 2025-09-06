@@ -1,8 +1,9 @@
 
-import { createNotification  } from './createNotification';
-import { OnboardingNotificationParams } from './types';
+
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
+
+
 /**
  * Creates an onboarding notification for a user
  */
@@ -92,9 +93,9 @@ if ( {) {
     action_text;
   });
 
-    actionText
-  })
 }
+
+
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -162,5 +163,7 @@ export async function createOnboardingNotification({;
     actionUrl;
     actionText;
   });
+
+
 }
 ;

@@ -238,7 +238,6 @@ if (require.main === module) {
 }
 
 
-
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -256,8 +255,6 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "name"
-    "status"
-module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
     "status"

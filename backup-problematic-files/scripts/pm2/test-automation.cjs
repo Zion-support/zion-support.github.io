@@ -262,6 +262,8 @@ class TestAutomation {}
       
       
       
+      
+      
       const result = execSync(testCommand, { })
         encoding: 'utf8',
         stdio: 'pipe',
@@ -308,6 +310,8 @@ class TestAutomation {}
   async checkCoverage() {}
     try {}
       this.log('Checking test coverage...');
+      
+      
       
       
       

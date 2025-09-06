@@ -3,8 +3,25 @@
 interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
-    <div className="space-y-6">
+
+
+export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
+  return (
+
+    <div className='space-y-6'>
       <div>
+
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData && formData.timeline === 'fixed'
+                  ? 'bg-zion-purple/20 border-zion-purple'
+                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
+              }`}
+              onClick={() => updateFormData({ timeline: 'fixed' })}            >
+              <h4 className='font-medium text-white'>Fixed Dates</h4>
+              <p className='text-sm text-zion-slate-light'>
+                I have specific start and end dates
+              </p>
+            </div>
             <div
 
               onClick={() => updateFormData({ timeline: "fixed" })}
@@ -14,6 +31,32 @@ interface TimelineStepProps {
             </div>
             
             <div 
+
+              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData && formData.timeline === 'flexible'
+                  ? 'bg-zion-purple/20 border-zion-purple'
+                  : 'bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50'
+              }`}
+              onClick={() => updateFormData({ timeline: "flexible" })}
+            >
+              <h4 className="font-medium text-white">Flexible Timeline</h4>
+              <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>
+            </div>
+          </div>
+          {formData.timeline === 'fixed' && (
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
+          
+          {formData.timeline === "fixed" && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+
+
+              <div>
+                <Label className='block mb-2 text-zion-slate-light'>
+                  Start Date
+                </Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
 
             >;
               <h4 className='font-medium text-white'>Flexible Timeline</h4>;
@@ -95,16 +138,21 @@ function TimelineStep() {
                       onSelect={(date) => updateFormData({ startDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
-                      variant='outline'
-                      className={cn(
-                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
-                        !formData.endDate && 'text-zion-slate-light'
-                      )}                    >
-                      <CalendarIcon className='mr-2 h-4 w-4' />
-                      {formData.endDate ? (
-                        format(formData.endDate, 'PPP')
-                      ) : (
-                        <span>Pick a date</span>
+
+                    />
+                  </PopoverContent>
+                </Popover>
+              </div>
+              
+
+
+              <div>
+                <Label className='block mb-2 text-zion-slate-light'>
+                  End Date
+                </Label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
 
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;

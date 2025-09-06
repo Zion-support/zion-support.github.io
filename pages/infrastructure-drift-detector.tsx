@@ -1,3 +1,24 @@
+
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/infrastructure-drift-detector'));
+  if (!service) return null;
+
+
+
+import React from 'react',;
+import Head from 'next/head',;
+import { Building, Phone, Mail, MapPin, Check, ArrowRight, GitPullRequest, Star } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
+
+import React from 'react'
+import Head from 'next/head'
+import { Building, Phone, Mail, MapPin, Check, ArrowRight, GitPullRequest, Star } from 'lucide-react',
+import Layout from '../components/layout/Layout'
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+
+
+export default function InfrastructureDriftDetectorPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/infrastructure-drift-detector'))
   if (!service) return null,
   return (
     <Layout>
@@ -25,6 +46,8 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">
@@ -45,6 +68,8 @@
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400 hover:text-white"><Phone /><a href={`tel:${service.contactInfo.mobile.replace(/[^+\\d]/g, '')}`} >{service.contactInfo.mobile}</Link></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400 hover:text-white"><Mail /><a href={`mailto:${service.contactInfo.email}`} >{service.contactInfo.email}</Link></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs hover:text-white"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(service.contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{service.contactInfo.address}</Link></div>
+
+
               </div>
             </div>
           </div>
@@ -58,6 +83,4 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-;
-;
+

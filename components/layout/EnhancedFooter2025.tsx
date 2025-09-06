@@ -3,29 +3,9 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import {
-  Phone
-  Mail
-  MapPin
-  Star
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Zap
-  Globe
-  Database
-  Lock
-  Cloud
-  BarChart3
-  Twitter
-  Linkedin
-  Github
-  Youtube
-  Instagram;} from 'lucide-react';import {
+import { 
+
+
   Phone,
   Mail,
   MapPin,
@@ -48,12 +28,14 @@ import {
   Github,
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
+
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
 
 } from 'lucide-react';
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -74,16 +56,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -117,12 +103,14 @@ import {;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram;
+
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
+
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -223,6 +211,101 @@ const serviceCategories = [;
   Twitter,
   Linkedin,
   Github,
+  Youtube,
+  Instagram,} from 'lucide-react';import {
+  Phone, Mail, MapPin, Star, ArrowRight;
+  Brain, Atom, Shield, Rocket, Target, Microscope;
+  Zap, Globe, Database, Lock, Cloud, BarChart3;
+  Twitter, Linkedin, Github, Youtube, Instagram;
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
+}
+;
+const service_categories = [;
+  {
+    title: 'AI & Consciousness',
+    icon: Brain,
+
+    services: [;
+      {
+        name: 'AI Consciousness Evolution',
+        href: '/ai - consciousness - evolution - 2029',
+      },
+      { name: 'Quantum AI Fusion', href: '/quantum - ai - fusion' },
+      {
+        name: 'Multimodal AI Orchestrator',
+        href: '/multimodal - ai - orchestrator',
+      },
+      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },
+      { name: 'AI Ethics & Governance', href: '/ai - ethics - governance' },
+    ],
+  },  {      { name: 'Quantum AI Fusion', href: '/quantum - ai - fusion' },
+      { name: 'Multimodal AI Orchestrator', href: '/multimodal - ai - orchestrator' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },
+      { name: 'AI Ethics & Governance', href: '/ai - ethics - governance' }
+    ];
+  }
+  {
+    title: 'Quantum & Emerging Tech',
+    icon: Atom,
+    services: [;
+      { name: 'Space Mining Platform', href: '/space - mining - platform' },
+      { name: 'Quantum Bio - Computing', href: '/quantum - bio - computing' },
+      { name: 'Brain - Computer Interface', href: '/brain - computer - interface' },
+      { name: 'Quantum Energy Platform', href: '/quantum - energy - platform' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous - vehicle - ai' },
+    ],
+  },  {
+    title: 'Enterprise IT',
+    icon: Shield,
+    services: [      { name: 'Autonomous Vehicle AI', href: '/autonomous - vehicle - ai' }
+    ];
+  }
+  {
+    title: 'Enterprise IT',
+    icon: Shield,
+    services: [;
+      {
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum - cloud - infrastructure',
+      },
+      {
+        name: 'Edge Computing Orchestrator',
+        href: '/edge - computing - orchestrator',
+      },
+      {
+        name: 'Zero Trust Security Platform',
+        href: '/zero - trust - security - platform',
+      },
+      {
+        name: 'Blockchain Enterprise Platform',
+        href: '/blockchain - enterprise - platform',
+      },
+      { name: 'AI - Powered DevOps', href: '/ai - powered - devops' },
+    ],
+  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum - cloud - infrastructure' },
+      { name: 'Edge Computing Orchestrator', href: '/edge - computing - orchestrator' },
+      { name: 'Zero Trust Security Platform', href: '/zero - trust - security - platform' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain - enterprise - platform' },
+      { name: 'AI - Powered DevOps', href: '/ai - powered - devops' }
+    ];
+  }
+    title: 'Micro SAAS',
+    icon: Target,
+    services: [;
+      { name: 'AI Content Factory Pro', href: '/ai - content - factory' },
+      { name: 'Quantum CRM Suite', href: '/quantum - crm' },
+      { name: 'CyberShield Pro', href: '/cyber - shield - pro' },
+      { name: 'DataVault Hub', href: '/data - vault - hub' },
+      { name: 'DevOps Automation Studio', href: '/devops - automation - studio' },
+    ],
+  }, ];      { name: 'DevOps Automation Studio', href: '/devops - automation - studio' }
+    ];
+  }
+];
 const companyLinks = [
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
@@ -282,6 +365,9 @@ const EnhancedFooter2025: React.FC = () => {
               </div>
             </div>
 
+
+
+
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -291,6 +377,7 @@ const EnhancedFooter2025: React.FC = () => {
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className='space-y-4'
+
 
               >
                 <div className='flex items-center space-x-3'>
@@ -324,6 +411,7 @@ const EnhancedFooter2025: React.FC = () => {
                     {category && category.title}
                   </h3>;
                 </div>;
+
                 <div className='space-y-2'>;
                   {category && category.services.map(service => (;
                     <Link
@@ -421,13 +509,13 @@ const EnhancedFooter2025: React.FC = () => {
 
                     >
 
+
                       {service.name}
-                    </Link>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+
+          </div>;
+
+
+
           {/* Additional Links */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
@@ -466,17 +554,12 @@ const EnhancedFooter2025: React.FC = () => {
 
                   >
 
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
 
                     {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+
+              </div>;
+            </div>;
+
 
             {/* Legal Links */}
 
@@ -509,6 +592,12 @@ const EnhancedFooter2025: React.FC = () => {
                 {socialLinks.map((social) => (
                   <a
 
+
+
+
+            {/* Social Links */}
+
+
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
@@ -517,11 +606,62 @@ const EnhancedFooter2025: React.FC = () => {
                     <social.icon className="w-5 h-5" />
                   </a>
 
+
+
+
+
                 ))}
               </div>
             </div>
           </div>
         </div>
+
+                  </Link>))}
+              </div>;
+            </div>;
+            {/* Legal Links */}
+            <div>;
+              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
+              <div className='space - y-2'>;
+                {legal_links.map (link => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}
+                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
+              <div className="space - y-2">;
+                {legal_links.map ((link) => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}
+                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
+                    {link.name}
+                  </Link>))}
+              </div>;
+            </div>;
+            {/* Social Links */}
+            <div>;
+              <h4 className='text - white font - semibold mb - 4'>Follow Us</h4>;
+              <div className='flex space - x-4'>;
+                {social_links.map (social => (                  <a              <h4 className="text - white font - semibold mb - 4">Follow Us</h4>;
+              <div className="flex space - x-4">;
+                {social_links.map ((social) => (
+                  <a;
+                    key={social.name}
+                    href={social.href}
+                    className={`w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gray - 700 / 50 rounded - lg flex items - center justify - center text - gray - 400 ${social.color} transition - all duration - 200 border border - gray - 700 hover:border - gray - 600`}
+                    aria - label={social.name}
+                  >;
+                    <social.icon className='w - 5 h - 5' />                  </a>                    <social.icon className="w - 5 h - 5" />;
+                  </a>))}
+
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+
+
+
+
 
         {/* Newsletter Section */}
         <div className='border-t border-gray-800/50'>
@@ -531,12 +671,17 @@ const EnhancedFooter2025: React.FC = () => {
             <div className="text-center">
               <motion.h3
 
+
+
+
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >
+
 
               >
                 Stay Ahead of the Future
@@ -548,12 +693,18 @@ const EnhancedFooter2025: React.FC = () => {
                 viewport={{ once: true }}
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'
 
+
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
               </motion.p>              >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
+                className="text-gray-400 mb-6 max-w-2xl mx-auto"
+              >
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              </motion.p>
+              
               <motion.div
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;
@@ -571,6 +722,7 @@ const EnhancedFooter2025: React.FC = () => {
                 viewport={{ once: true }}
                 className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 
+
               >
                 <input
                   type='email'
@@ -586,49 +738,27 @@ const EnhancedFooter2025: React.FC = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
-                  Subscribe
-                </button>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-        {/* Bottom Bar */}
-        <div className='border-t border-gray-800/50'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
-              <div className='text-gray-400 text-sm'>
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </div>
-              <div className='flex items-center space-x-6 text-sm text-gray-400'>                © {currentYear} Zion Tech Group. All rights reserved.
-              </div>
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <div className="flex items-center space-x-2">
-                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  <span>Trusted by 1000+ companies worldwide</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                  <span>Trusted by 1000+ companies worldwide</span>
-                </div>
-                <div className='flex items-center space-x-2'>
-                  <div className='w-2 h-2 bg-green-400 rounded-full'></div>                  <span>99.9% Uptime Guarantee</span>                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span>99.9% Uptime Guarantee</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+  )
+
 };
-export default EnhancedFooter2025;
 
 export default EnhancedFooter2025;
 
+
+    </footer>);
 }
 export default EnhancedFooter2025;
+;
+
+};
+
+

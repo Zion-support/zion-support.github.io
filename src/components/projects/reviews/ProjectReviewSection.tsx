@@ -54,6 +54,26 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
         </CardDescription>
       </CardHeader>
 
+
+
+      
+      <CardContent>
+        {isCompleted ? (
+          <div className="space-y-6">
+            {(isClient || isTalent) && (
+              <div className="border-b pb-4 mb-4">
+                {canLeaveReview ? (
+                  <div className="bg-muted/20 rounded-lg p-4 text-center">
+                    <h3 className="font-medium mb-2">Share your experience</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Your review will help build a trustworthy community
+                    </p>
+                    <Button onClick={() => setIsReviewModalOpen(true)}>
+                      Leave Review
+                    </Button>
+                  </div>
+                ) : hasLeftReview ? (
+
 import { useState } from 'react';
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>
@@ -142,6 +162,15 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                         Edit Review;
                       </Button>;
 
+
+
+                    )}
+
+            <ReviewsList
+              reviews = {reviews,}
+              isLoading = {isLoading,}
+              onReportReview = {reportReview,}
+
       </CardContent>;
 
       {/* Review Modal */}
@@ -175,21 +204,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             </p>
           </div>
         )}
-      </CardContent>
-      {/* Review Modal */}
-      {(isClient |isTalent) && (
-        <LeaveReviewModal
-          projectId = {project.id,}
-          revieweeId = {revieweeId,}
-          revieweeName = {revieweeName,}
-          isOpen = {isReviewModalOpen,}
-          onClose = {(,) => setIsReviewModalOpen(false),}
-        />
-      )}
-    </Card>
-  )
-}
-}
     </Card>;
   );
 };

@@ -335,6 +335,11 @@ export default function API() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
                 const IconComponent = feature.icon;
                 return (;
                   <motion.div);
@@ -354,6 +359,10 @@ export default function API() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
 =======
 >>>>>>> main
         {/* Features Section */}

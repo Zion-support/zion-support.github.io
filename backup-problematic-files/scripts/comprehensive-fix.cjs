@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-
 console.log('🔧 Comprehensive fix for all files...');
 
 // List of problematic files
@@ -14,7 +13,6 @@ const filesToFix = [
   'pages/services.tsx',
   'pages/talent.tsx'
 ];
-
 
 function fixFile(filePath) {
   try {
@@ -29,16 +27,12 @@ function fixFile(filePath) {
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
 
-
     let content = fs.readFileSync(filePath, 'utf8');
     // Remove all merge conflict markers
     content = content.replace(/<<<<<<< HEAD\n?/g, '');
     content = content.replace(/=======\n?/g, '');
     content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
     
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');
     content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
@@ -69,7 +63,5 @@ for (const file of filesToFix) {
     fixedCount++;
   }
 }
-
-console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);
 
 console.log(`\n🎉 Fixed ${fixedCount}/${filesToFix.length} files`);

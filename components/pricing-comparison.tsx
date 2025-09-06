@@ -22,17 +22,8 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
-            'Higher pricing'
-            'Limited customization'
-            'No unlimited plan'
-          ]
-          savings: 'Save $20/month with Zion'
-        },        {
-          name: 'Copy.ai'
-          pricing: '$36/month'
-          rating: '4.6/5'
-          pros: ['Unlimited words', 'Good value', 'Simple interface']
-          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+
+
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
@@ -60,6 +51,8 @@ export default function PricingComparisonPage() {
           savings: 'Save $17/month with Zion',
         },          pros: ['Unlimited wordsGood valueSimple interface'],
           cons: ['Basic featuresLimited templatesNo advanced SEO'],
+
+
           savings: 'Save $17/month with Zion'
         },        {
           name: 'Writesonic'
@@ -259,16 +252,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -335,6 +332,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
         <meta property="og:description" content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20">
@@ -362,7 +360,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 View Comparison
               </Button>
               <Button
-href="/pricing"
+                href="/pricing"
                 variant="outline"
                 size="lg"
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
@@ -481,9 +479,12 @@ href="/pricing"
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
+                  </div>;
+                  <p className={`text - lg font - semibold ${insight.color}`}>;
 
 
                     {insight.icon}
+
 
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
@@ -494,6 +495,10 @@ href="/pricing"
             </div>
           </div>
         </section>
+
+
+
+
 
         {/* Detailed Comparison */}
 
@@ -515,6 +520,7 @@ href="/pricing"
             </div>;
           </div>;
         </section>;
+
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -526,6 +532,7 @@ href="/pricing"
                 See exactly how each service compares in features, pricing, and;
                 value.              </p>;
             </div>;
+
             {serviceComparisons && serviceComparisons.map((service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-20">;
@@ -535,6 +542,7 @@ href="/pricing"
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
                 See exactly how each service compares in features, pricing, and value.;
             </div>;
+
             {serviceComparisons && serviceComparisons.map((service, serviceIndex) => (;
               <div key={serviceIndex} className='mb-24'>;
                 <div className='text-center mb-16'>;
@@ -690,6 +698,7 @@ href="/pricing"
 
                             {[...Array(5)].map((_, i) => (
 
+
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -702,6 +711,7 @@ href="/pricing"
                             <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
+
 
                           </div>
                           <div className='mb-4'>
@@ -732,10 +742,6 @@ href="/pricing"
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
 
                             <span className="text-sm text-gray-400 ml-2">{competitor.rating}</span>
-                            <span className='text-sm text-gray-400 ml-2'>
-                              {competitor.rating}
-                            </span>
-
                           </div>
                           <div className="mb-4">
                             <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
@@ -772,12 +778,20 @@ href="/pricing"
                         </div>
                       </Card>
                     </div>
+
                   ))}
-</div>;
+                </div>;
               </div>;
             ))}
           </div>
         </section>
+
+          </div>;
+        </section>;
+
+
+        {/* CTA Section */}
+
 
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
@@ -785,6 +799,7 @@ href="/pricing"
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
 
               Ready to Save Money and Get Better Features?
+
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -827,13 +842,19 @@ href="/pricing"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
+              >
+                Try AI Content Generator
+              </Button>
+              <Button
+                href="/cloud-monitoring"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+              >
                 Try Cloud Monitoring
               </Button>;
               <Button
-                href='/devops-automation'
-                variant='secondary'
-                size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
+                href="/devops-automation"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
@@ -1003,30 +1024,4 @@ href="/pricing"
                 Try AI Content Generator
               </Button>
               <Button
-                href='/cloud-monitoring'
-                variant='secondary'
-                size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/cloud-monitoring"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-indigo-600 hover:bg-gray-100"
-                Try Cloud Monitoring
-              </Button>
-              <Button
-                href='/devops-automation'
-                variant='secondary'
-                size='lg'
-                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-indigo-600 hover:bg-gray-100"
-                Try DevOps Automation
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-);
-}
-              <Button
+

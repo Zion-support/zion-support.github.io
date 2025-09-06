@@ -1,4 +1,17 @@
 
+
+
+
+
+import {useState} from "react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} from "./applications";
+
+interface JobApplicationsTableProps {;
+  jobId: string;
+}
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   const {
@@ -11,6 +24,13 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     isLoading, 
     error, 
     updateApplicationStatus, ;
+
+  const { 
+    applications, 
+    isLoading, 
+    error, 
+    updateApplicationStatus, ;
+
     markApplicationAsViewed;
     refetch;
   } = useJobApplications(jobId);
@@ -46,12 +66,19 @@ import {
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
+
+
+
+
       }
     } finally {;
       setProcessingId(null);
     }
-  }
+
+
   };
+
+
 
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
@@ -82,13 +109,6 @@ import {
 
   if (isLoading) {;
     return <LoadingState />;
-  }
-  if (error) {
-    return <ErrorState error={error} />
-  }
-  if (applications.length === 0) {
-    return <EmptyState />
-  }
 
   return (
     <>;

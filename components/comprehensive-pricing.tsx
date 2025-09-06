@@ -1,8 +1,48 @@
 
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+} from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+
+import {;
   revolutionaryMicroSaasServices,;
   revolutionaryServiceCategories,;
+
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
@@ -43,6 +83,7 @@ export default function ComprehensivePricingPage() {;
     })
 
   }
+
   // Search filter
   if (searchQuery) {
     filteredServices = filteredServices.filter(service =>
@@ -72,6 +113,7 @@ export default function ComprehensivePricingPage() {;
     ...revolutionaryMicroSaasServices,;
     ...enhancedMicroSaasServices,;
   ];  const allServices = [...revolutionaryMicroSaasServices, ...enhancedMicroSaasServices];
+
   const priceRanges = [;
     { value: 'All', label: 'All Prices' },;
     { value: '0-100', label: '$0 - $100' },;
@@ -83,6 +125,7 @@ export default function ComprehensivePricingPage() {;
     { value: '1001-2500', label: '$1,001 - $2,500' };
     { value: '2501-5000', label: '$2,501 - $5,000' };
     { value: '5001+', label: '$5,001+' }
+
   const sortOptions = [;
     { value: 'price', label: 'Price Low-High' },;
     { value: 'name', label: 'Name A-Z' },;
@@ -90,16 +133,20 @@ export default function ComprehensivePricingPage() {;
     { value: 'category', label: 'Category' },;
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
   ];
+
   // Filter and sort services;
   let filteredServices = allServices;
+
   // Category filter;
   if (selectedCategory !== 'All') {;
     filteredServices = filteredServices && filteredServices.filter(;
       service => service && service.category === selectedCategory;
     );  }
+
   // Price range filter;
   if (priceRange !== 'All') {    filteredServices = filteredServices && filteredServices.filter(service => service && service.category === selectedCategory);
   }
+
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
@@ -109,12 +156,14 @@ export default function ComprehensivePricingPage() {;
       const price = parseFloat(service && service.price.replace('$', '').replace(',', ''));
       return price >= min && (max === Infinity || price <= max);
     });  }
+
   // Search filter;
   if (searchQuery) {    const [min, max] = priceRange && priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = filteredServices && filteredServices.filter(service => {;
       const price = parseFloat(service && service.price.replace('$', '').replace(, ''));
       return price >= min && (max === Infinity || price <= max);
     });
+
   // Search filter;
   if (searchQuery) {;
     filteredServices = filteredServices && filteredServices.filter(;
@@ -128,6 +177,7 @@ export default function ComprehensivePricingPage() {;
       service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
   }
+
   // Sort services;
   filteredServices && filteredServices.sort((a, b) => {;
     switch (sortBy) {;
@@ -471,6 +521,8 @@ if ( {) {
       label: 'Average ROI',
       description: 'Proven business value',
 
+
+
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
@@ -574,13 +626,6 @@ if ( {) {
       label: 'Average ROI',
       description: 'Proven business value',
 
-      metric: '2000%+',
-      label: 'Average ROI',
-      description: 'Proven business value',
-      icon: <TrendingUp className='w-6 h-6' />,
-    },      icon: <TrendingUp className="w-6 h-6" />
-    }
-
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -609,9 +654,6 @@ if ( {) {
       },
     },
 
-  };
-
-  };
 
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
@@ -685,13 +727,15 @@ if ( {) {
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 
+
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                Transparent pricing for all our revolutionary micro SaaS
-                services. Choose the perfect plan for your business with
-                guaranteed ROI and enterprise-grade reliability.
+
+                Transparent pricing for all our revolutionary micro SaaS services. 
+                Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
               </motion.p>
               {/* Market Stats */}
               <motion.div
@@ -712,12 +756,15 @@ if ( {) {
                 services. Choose the perfect plan for your business with;
                 guaranteed ROI and enterprise-grade reliability.;
               </motion && motion.p>;
+
               {/* Market Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
+
               {/* Market Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -743,25 +790,26 @@ if ( {) {
                 ))}
               </motion.div>
 
+
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >              <motion.div
+
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
+
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+
               >              <motion.div 
+
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               >
 
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              >
+
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
                 <Button
                   variant='primary'
                   size='lg'
@@ -792,6 +840,7 @@ if ( {) {
                   </div>
                 ))}
               </motion.div>
+
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -854,6 +903,11 @@ if ( {) {
             <motion.div 
               className="text-center mb-16"
 
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+
                 >;
                   Browse All Services;
                   <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />;
@@ -862,6 +916,7 @@ if ( {) {
             </div>;
           </div>;
         </section>;
+
         {/* Contact Information Banner */}
         <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>;
           <div className='container mx-auto px-4'>;
@@ -884,6 +939,7 @@ if ( {) {
             </div>;
           </div>;
         </section>;
+
         {/* Pricing Tiers */}
         <section id='pricing-tiers' className='py-20'>;
           <div className='container mx-auto px-4'>;
@@ -913,16 +969,11 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
-                </span>
-                <br />
-                <span className="text-white">for Every Business</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
-              </p>
-            </motion.div>
-            <motion.div
+
+
+
             <motion.div 
+
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -940,6 +991,7 @@ if ( {) {
                       <div className="text-4xl font-bold text-cyan-400 mb-2">{tier && tier.price}</div>;
                       <div className="text-sm text-gray-400">{tier && tier.period}</div>;
                     </div>;
+
                     <div className="space-y-3 mb-8">;
                       {tier && tier.features.map((feature, idx) => (;
                         <div key={idx} className="flex items-center gap-2">;
@@ -948,6 +1000,7 @@ if ( {) {
                         </div>;
                       ))}
                     </div>;
+
                     <div className='text-center'>;
 
                       <Button
@@ -1002,6 +1055,8 @@ if ( {) {
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
+
+
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
@@ -1029,6 +1084,7 @@ if ( {) {
               className='mb-8'              initial={{ opacity: 0, y: 20 }}
 
               initial={{ opacity: 0, y: 20 }}
+
 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -1085,6 +1141,7 @@ if ( {) {
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64';
                     />;
                   </div>;
+
                   <div className='flex border border-gray-600 rounded-lg overflow-hidden'>                    <button
                       onClick={() => setViewMode('grid')}
                       className={`px-3 py-2 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -1101,26 +1158,19 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-                    >
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            {/* Services Display */}
-            <motion.div
-              className={
-                viewMode === 'grid'
-                  ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-                  : 'space-y-6'
-              }
-              variants={containerVariants}
-              initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
+
+
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+
+
+              className={viewMode === 'grid' 
+
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1137,8 +1187,12 @@ if ( {) {
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
-                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+
+                    variant={service.variant as any || 'quantum-advanced'}
+
+
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
 
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
@@ -1385,14 +1439,14 @@ if ( {) {
               ))}
 
             </motion && motion.div>;
+
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >              <motion.div
-                className="text-center py-16"
+                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
 
+                className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -1448,6 +1502,7 @@ if ( {) {
 
           </div>;
         </section>;
+
         {/* Contact Section */}
         <section className='py-20'>;
           <div className='container mx-auto px-4 text-center'>;
@@ -1537,6 +1592,7 @@ if ( {) {
 
                 </div>
 
+
               </div>
             </motion.div>
           </div>
@@ -1549,6 +1605,7 @@ if ( {) {
                   <Calendar className='ml-2 w-5 h-5' />;
                 </Button>;
               </div>;
+
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>;
                 <div>;
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />;
@@ -1574,6 +1631,7 @@ if ( {) {
               <p className="text-xl text-gray-300 mb-8">;
                 Contact our sales team to discuss pricing, custom plans, and implementation options.;
               </p>;
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
                 <Button
                   variant="primary" 
@@ -1592,6 +1650,7 @@ if ( {) {
                   <Calendar className="ml-2 w-5 h-5" />;
                 </Button>;
               </div>;
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">;
                 <div>;
                   <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />;
@@ -1815,3 +1874,4 @@ if ( {) {
 }
 
   );
+

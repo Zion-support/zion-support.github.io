@@ -59,11 +59,13 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r)
 }
+
 function matchesService(profile: TalentProfile, service?: string) {
   if (!service) return true;
   const s = service.toLowerCase();
   return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
 }
+
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
@@ -73,6 +75,7 @@ export default function TalentGrid({ region, service }: Props) {
   if (items.length === 0) {
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
   }
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {items.map((p) => (
@@ -133,17 +136,16 @@ if (return true) {
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
 }
-
-export default function TalentGrid({ region, service }: Props) {
-  const items = React.useMemo(
-    () =>
-      TALENT_PROFILES.filter(
-        (p) => matchesRegion(p, region) && matchesService(p, service)
-      )
-    [region, service]
-        (p) => matchesRegion(p, region) && matchesService(p, service),
+export default /**
+ * TalentGrid - Function description
+ */
+function TalentGrid() {
+  const items = React.useMemo (
+    () =>;
+      TALENT_PROFILES.filter (
+        (p) => matches_region (p, region) && matches_service (p, service),
       ),
-    [region, service],;
+    [region, service],
   );
 ;
   // Check condition

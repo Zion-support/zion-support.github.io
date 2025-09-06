@@ -100,11 +100,6 @@ const getStatusIcon = (status: string) => {
     default:
       return <Clock className="h-4 w-4" />;
   }
-}
-export default function OrderDetail() {
-};
-
-export default function OrderDetail() {;
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
@@ -246,17 +241,6 @@ if ( {) {
 
   if (isLoading || !order) {;
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Order not found</h1>
-          <Link href="/orders">
-            <Button>
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to orders
-            </Button>
-          </Link>
-        </div>
-      </div>
     );
   }
   return (
@@ -444,31 +428,30 @@ if ( {) {
           </Card>;
         </div>;
         {/* Order Status & Tracking */}
-        <div className="space-y-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Order Status</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Order placed</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Payment confirmed</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Processing</span>
-                </div>
+        <div className="space - y-6">;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Order Status</CardTitle>;
+            </CardHeader>;
+            <CardContent>;
+              <div className="space - y-4">;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Order placed</span>;
+                </div>;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Payment confirmed</span>;
+                </div>;
+                <div className="flex items - center space - x-3">;
+                  <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                  <span className="text - sm">Processing</span>;
+                </div>;
                 {order.status === 'shipped' && (
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm">Shipped</span>
-                  </div>
-                )}
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                    <span className="text - sm">Shipped</span>;
+                  </div>)}
                 {order.status === 'delivered' && (
 
     <div className='container max-w-3xl py-10 space-y-6'>;
@@ -519,5 +502,110 @@ if ( {) {
 
   );
 
+
+
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                    <span className="text - sm">Delivered</span>;
+                  </div>)}
+              </div>;
+            </CardContent>;
+          </Card>;
+          {order.tracking_number && (
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Tracking Information</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className="space - y-2">;
+                  <p className="text - sm text - gray - 600">Tracking Number:</p>;
+                  <p className="font - mono text - lg">{order.tracking_number}</p>;
+                  <Button className="w - full mt - 4">;
+                    Track Package;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>)}
+        </div>;
+      </div>;
+    </div>);
+;
+}
+
+
+
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+import { Button } from '@/components/ui/button',;
+import { Clipboard } from 'lucide-react';
+import Skeleton from '@/components/ui/skeleton',;
+import { useGetOrderQuery } from '@/hooks/useOrder',;
+import { generateInvoicePdf } from '@/utils/generateInvoicePdf',;
+import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { toast } from '@/hooks/use-toast',;
+import { OrderTimeline } from '@/components/orders/OrderTimeline',;
+export default function OrderDetailPage() {;
+  const router = useRouter(),;
+  const { orderId } = router.query as { orderId?: string },;
+  const { user } = useAuth(),;
+  const { data: order, isLoading } = useGetOrderQuery(orderId),;
+  const handleDownload = async () => {;
+    if (!order) return,;
+    const blob = await generateInvoicePdf(order),;
+    const url = URL.createObjectURL(blob),;
+    const link = document.createElement('a'),;
+    link.href = url,;
+    link.download = `invoice-${order.orderId}.pdf`,;
+    document.body.appendChild(link),;
+    link.click(),;
+    document.body.removeChild(link),;
+    URL.revokeObjectURL(url);
+  },;
+  const handleResend = async () => {;
+    if (!order || !user?.email) return,;
+    try {;
+      await supabase.functions.invoke('send-email', {;
+        body: {;
+          to: user.email,;
+          subject: `Receipt for order ${order.orderId}`,;
+          html: `<p>Thank you for your purchase. Total ${order.total}.</p>`;
+        }
+      }),;
+      toast({ title: 'Receipt sent!' });
+    } catch (err) {;
+      toast({ title: 'Failed to send receipt', variant: 'destructive' });
+    }
+  },
+
+  const handleCopySummary = async () => {
+    if (!order) return,
+    const summary = [
+      `Order #${order.orderId}`,
+      `Date: ${new Date(order.date).toLocaleDateString()}`,
+      '',
+      'Items:',
+      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
+      '',
+      `Total: $${order.total.toFixed(2)}`,
+      '',
+      'Shipping Address:',
+      order.shippingAddress.name,
+      order.shippingAddress.street,
+      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),
+
+    await navigator.clipboard.writeText(summary),
+    toast.success('Order summary copied to clipboard')
+  },
+
+  if (isLoading || !order) {
+    return (
+      <div className="container max-w-3xl py-10">
+        <Skeleton className="h-6 w-full" />
+
+
+      </div>
+    )
+  }
 
   return (

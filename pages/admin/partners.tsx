@@ -1,4 +1,12 @@
 
+
+import React, { useState, useEffect } from 'react';
+
+import Head from 'next / head';
+;
+
+interface Partner {
+
 interface Partner {;
   id: string;
   code: string;
@@ -55,30 +63,12 @@ const AdminPartnersPage: React.FC = () => {;
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-  useEffect(() => {
-    // Simulate loading partners
-    setTimeout(() => {
-      setPartners(mockPartners);
-      setLoading(false);
-    }, 1000);  }, []);
-  async function updatePartner(code: string, updates: any) {
-    await fetch('/api/admin/partners/update', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ code, ...updates })
-    });
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners |[]);  }
-  async function viewFlags(code: string) {
-    setSelected(code)
-    const res = await fetch(
-      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
-    );
+
     const json = await res.json();
     setFlags(json.flags |[]);
 
-  }
+
+
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -142,74 +132,77 @@ export default function AdminPartners() {
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+
+
+
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
 
-}
+
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
-      <div className="overflow-auto">
-        <table className="min-w-full text-sm">
-          <thead>
-            <tr className="text-left border-b">
-              <th className="py-2 pr-4">Code</th>
-              <th className="py-2 pr-4">Name</th>
-              <th className="py-2 pr-4">Status</th>
-              <th className="py-2 pr-4">Commission</th>
-              <th className="py-2 pr-4">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {partners.map((p) => (
-              <tr key={p.code} className="border-b">
-                <td className="py-2 pr-4">{p.code}</td>
-                <td className="py-2 pr-4">{p.name}</td>
-                <td className="py-2 pr-4">{p.status}</td>
-                <td className="py-2 pr-4">
+    <div className='space-y-6'>;
+      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
+      <div className='overflow-auto'>;
+        <table className='min-w-full text-sm'>;
+          <thead>;
+            <tr className='text-left border-b'>;
+              <th className='py-2 pr-4'>Code</th>;
+              <th className='py-2 pr-4'>Name</th>;
+              <th className='py-2 pr-4'>Status</th>;
+              <th className='py-2 pr-4'>Commission</th>;
+              <th className='py-2 pr-4'>Actions</th>;
+            </tr>;
+          </thead>;
+          <tbody>;
+            {partners && partners.map(p => (;
+              <tr key={p && p.code} className='border-b'>;
+                <td className='py-2 pr-4'>{p && p.code}</td>;
+                <td className='py-2 pr-4'>{p && p.name}</td>;
+                <td className='py-2 pr-4'>{p && p.status}</td>;
+                <td className='py-2 pr-4'>;
                   <input
-                    type='number'                    defaultValue={p.commission_rate}
-                    min={0}
-                    max={1}
-                    step={0.01}
-                    onBlur={e =>
-                      updatePartner(p.code, {
-                        commission_rate: Number(e.target.value)
-                      })
+
+
                     }
-                    className='w-24 border rounded px-2 py-1'
-                    type="number"
-                    defaultValue={p.commission_rate  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    min={0  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    max={1  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    step={0.01  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className="w-24 border rounded px-2 py-1"
+                    className='w-24 border rounded px-2 py-1';
+                  />;
+                </td>;
+                <td className='py-2 pr-4 space-x-2'>;
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>;
+                      updatePartner(p && p.code, { status: 'approved' });
+
+                    on_blur={e =>;
+                      update_partner (p.code, {
+                        commission_rate: Number (e.target.value),
+                      });
+                    }
+                    className='w - 24 border rounded px - 2 py - 1';
+                  />;
+                </td>;
+                <td className='py - 2 pr - 4 space - x-2'>;
+                  <button;
+                    className='px - 2 py - 1 rounded border';
+                    on_click={() =>;
+                      update_partner (p.code, { status: 'approved' });
+
+                    }
+                  >;
+                    Approve;
+                  </button>;
+
+
+                    }
+                  >;
+                    Reject;
+                  </button>;
+
+
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -218,57 +211,51 @@ export default function AdminPartners() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </tbody>
-        </table>
-      </div>
-      {selected && (
-        <div className="p-4 rounded border">
-          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
-          <ul className="list-disc pl-6">
-            {flags.map((f, idx) => (
-              <li key={idx}>
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </li>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </ul>
-        </div>
-{/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
-            <p className="text-2xl font-bold">{totalPartners}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>
-            <p className="text-2xl font-bold text-green-600">{activePartners}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>
-            <p className="text-2xl font-bold">{totalReferrals}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>
-            <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
-          </div>
-        </div>
+            ))}
+
+          </tbody>;
+        </table>;
+      </div>;
+
+      {selected && (;
+        <div className='p-4 rounded border'>;
+          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>;
+          <ul className='list-disc pl-6'>;
+            {flags && flags.map((f, idx) => (;
+              <li key={idx}>;
+                <span className='font-medium'>{f && f.type}</span> — {f && f.severity}{' '}
+                {f && f.note && <span className='text-gray-500'>({f && f.note})</span>}
+              </li>;
+
+            ))}
+            {flags && flags.length === 0 && (;
+              <li className='text-gray-500 list-none'>No flags</li>;
+            )}
+
+          </ul>;
+        </div>;
+
+        {/* Stats Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>;
+            <p className="text-2xl font-bold">{totalPartners}</p>;
+          </div>;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Active Partners</h3>;
+            <p className="text-2xl font-bold text-green-600">{activePartners}</p>;
+          </div>;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Total Referrals</h3>;
+            <p className="text-2xl font-bold">{totalReferrals}</p>;
+          </div>;
+          <div className="bg-white rounded-lg shadow p-4">;
+            <h3 className="text-sm font-medium text-gray-500">Total Earnings</h3>;
+            <p className="text-2xl font-bold text-blue-600">${totalEarnings && totalEarnings.toLocaleString()}</p>;
+          </div>;
+        </div>;
+
+
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -538,25 +525,60 @@ export default function AdminPartners() {
                               Activate;
                             </button>;
                           )}
-                          <button className="text-blue-600 hover:text-blue-900">
-                            Edit
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </div>
-      </main>
-    </>
+                          <button className="text-blue-600 hover:text-blue-900">;
+                            <>;
+                              <button;
+                                on_click={() => handleStatusChange (partner.id, 'active')}
+                                className="text - green - 600 hover:text - green - 900";
+                              >;
+                                Approve;
+                              </button>;
+                              <button;
+                                on_click={() => handleStatusChange (partner.id, 'inactive')}
+                                className="text - red - 600 hover:text - red - 900";
+                              >;
+                                Reject;
+                              </button>;
+                            </>)}
+                          {partner.status === 'active' && (
+                            <button;
+                              on_click={() => handleStatusChange (partner.id, 'inactive')}
+                              className="text - red - 600 hover:text - red - 900";
+                            >;
+                              Deactivate;
+                            </button>)}
+                          {partner.status === 'inactive' && (
+                            <button;
+                              on_click={() => handleStatusChange (partner.id, 'active')}
+                              className="text - green - 600 hover:text - green - 900";
+                            >;
+                              Activate;
+                            </button>)}
+                          <button className="text - blue - 600 hover:text - blue - 900">;
+                            Edit;
+                          </button>;
+                        </div>;
+                      </td>;
+
+        </div>;
+      </main>;
+    </>;
   );
+
+                    </tr>))}
+                </tbody>;
+              </table>;
+            </div>)}
+        </div>;
+      </main>;
+    </>);
+;
+
 
 }
 }
 }
+
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -569,3 +591,5 @@ export default function AdminPartners() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

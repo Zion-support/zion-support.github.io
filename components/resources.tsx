@@ -1,11 +1,3 @@
-import React from 'react',
-import SEO from '../components/SEO',
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
-export default function ResourcesPage() {
-  return (
 
 
 class ErrorBoundary extends React.Component {
@@ -30,8 +22,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-export default ResourcesPage;
-
 import React from 'react';
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
@@ -42,6 +32,8 @@ export default ResourcesPage;
 import React from 'react';
 
 };
+
+
 export default ResourcesPage;
 
               name: 'Market Pricing',

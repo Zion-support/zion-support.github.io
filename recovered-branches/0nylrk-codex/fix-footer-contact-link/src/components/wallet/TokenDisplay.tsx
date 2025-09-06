@@ -1,15 +1,12 @@
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
-import React from "react";
-import {BadgeDollarSign} from "lucide-react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Skeleton} from "@/components/ui/skeleton";
 
-export function TokenDisplay() {
+
 export function TokenDisplay() {;
+
+
+
   const { wallet, loading } = useWallet();
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
@@ -129,3 +126,4 @@ function TokenDisplay() {
 }
 }
 ;
+

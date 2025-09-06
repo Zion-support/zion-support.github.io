@@ -1,5 +1,15 @@
 
 
+}
+ canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
+canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
+if (ctx) {;
+
+export default function UltraFuturisticBackground2035(): any ({;
+  children,;
+}: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+
+
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
@@ -19,8 +29,10 @@
     const prefersReducedMotion = window && window.matchMedia(;
       '(prefers-reduced-motion: reduce)';
     ).matches;    const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
+
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
+
     canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
     canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
     if (ctx) {;
@@ -92,6 +104,7 @@ if ( {) {
       type: 'quantum' | 'hologram' | 'neon' | 'energy',;
       life: number,;
       maxLife: number;
+
     // Initialize particles with enhanced types;
     const initParticles = () => {;
 
@@ -109,6 +122,7 @@ if ( {) {
     }
       ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
     }
+
     let animationFrameId: number,
     let particles: Array<{
       x: number,
@@ -259,6 +273,7 @@ if ( {) {
       if (animationFrameId) {
 
       });
+
     // Handle window resize;
     const handleResize = () => {;
       canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
@@ -270,9 +285,11 @@ if ( {) {
       }
       initParticles();
     };
+
     window && window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
+
     return () => {;
       window && window.removeEventListener('resize', handleResize);
       if (animationFrameId) {;
@@ -745,16 +762,13 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `,
               backgroundSize: '50px 50px',
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-            `
-              backgroundSize: '50px 50px'
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
           <divclassName="h-full w-full" style={{
 
         />
+        
         {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">
           <div className="h-full w-full" style={{
@@ -784,6 +798,7 @@ if ( {) {
           style={{ filter: 'blur(0.5px)' }}
 
         />
+
 
         {/* Floating neon orbs */}
 
@@ -847,6 +862,7 @@ if ( {) {
           }}
 
         />;
+
         <motion&& motion.div
           className='absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20'
           animate={{
@@ -880,10 +896,10 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
+
             duration: 8
             repeat: Infinity
-            duration: 8,
-            repeat: Infinity,
+
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -911,10 +927,12 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
-            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-            animate={{
-              y: [-100, 100, -100];
-              opacity: [0, 0.3, 0]
+              y: [-100, 100, -100],
+              opacity: [0, 0 && 0.3, 0],            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+
 
             duration: 8,
             repeat: Infinity,
@@ -1000,3 +1018,4 @@ if ( {) {
     </>);
 }
       </div>
+

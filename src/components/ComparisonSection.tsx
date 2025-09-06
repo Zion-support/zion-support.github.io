@@ -202,6 +202,13 @@ export function ComparisonSection() {
 
                   </TableRow>
 
+                  </TableRow>
+
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+
 
 
 
@@ -217,15 +224,13 @@ export function ComparisonSection() {
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
 
               Calculate Your Savings
-    </section>;
-  );
-};
-}
-    </section>
-  )
-}
-import { GradientHeading } from "./GradientHeading",;
-import { Button } from "./ui/button",;
+
+              Calculate Your Savings
+
+            </Button>
+          </div>
+        </div>
+      </div>
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;
@@ -378,4 +383,7 @@ export function ComparisonSection() {;
       </div>;
 
   );
+}
+
+    </section>);
 }

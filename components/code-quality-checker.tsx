@@ -28,9 +28,6 @@ import {
   Shield,
   Clock,;
   TrendingUp,;
-} from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-export default function CodeQualityCheckerPage() {;
-} from 'lucide-react';
 
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -140,6 +137,17 @@ export default function CodeQualityCheckerPage() {
     { name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },
     { name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+
+
+
+
+  const pricing = [
+    {
+      name: 'Developer'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for individual developers and small projects'
+      features: [
 
 
   const features = [;
@@ -354,6 +362,7 @@ export default function CodeQualityCheckerPage() {
 
 
         metrics: {
+      
           complexity: 'Medium',
           maintainability: 'Good',
 
@@ -447,21 +456,15 @@ export default function CodeQualityCheckerPage() {
         </title>;
 
         />;
-        <meta
-          property='og:title'
-          content='Code Quality Checker - Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Professional code quality analysis tool with multi-language support and security scanning.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,184,166,0 && 0.08),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(20,184,166,0 && 0.06),transparent_50%)]' />;
         <div className='absolute inset-0 bg-grid opacity-10' />;
+
         <div className='relative z-10 container-cursor text-center'>;
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-sm font-medium mb-6'>;
             <Code className='w-4 h-4 mr-2' />;
@@ -562,7 +565,7 @@ export default function CodeQualityCheckerPage() {
               View Pricing
             </Button>
             <Button
-href="/contact"
+              href="/contact"
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
@@ -574,6 +577,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+
       {/* Features Section */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -706,11 +710,6 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -783,11 +782,19 @@ href="/contact"
         </div>
       </section>
 
+
+
+
+
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Multi-Language Support
             </h2>
@@ -801,6 +808,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -813,45 +821,9 @@ href="/contact"
               language-specific analysis rules and best practices.;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {supportedLanguages && supportedLanguages.map((language, index) => (;
-                      {feature.icon}
-                    </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-4 text-white">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-
-                      {feature.description}
-
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Supported Languages Section */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-              Multi-Language Support
-            </h2>
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              We support a wide range of programming languages with
-              language-specific analysis rules and best practices.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {supportedLanguages.map((language, index) => (
               <Card
                 key={index}
                 className='card-hover border-gradient-teal'
@@ -893,16 +865,8 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-teal"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">{language.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{language.name}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {language.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />
+
+
                       {feature}
                     </li>
                   ))}
@@ -913,12 +877,17 @@ href="/contact"
         </div>
       </section>
 
+
+
+
+
       {/* Demo Analysis Results */}
       {analysisResults && (
 
           </div>;
         </div>;
       </section>;
+
       {/* Demo Analysis Results */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -994,10 +963,6 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-          </div>
-        </div>
-      </section>
-
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1104,6 +1069,10 @@ href="/contact"
                 </div>
               </Card>
 
+
+
+
+
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1115,6 +1084,10 @@ href="/contact"
                     <span className='text-orange-400 font-bold'>
                       {analysisResults.metrics.complexity}
                     </span>
+
+
+
+
 
                   </div>
                   <div className='flex justify-between items-center'>
@@ -1134,6 +1107,13 @@ href="/contact"
                     <span className='text-green-400 font-bold'>
                       {analysisResults.metrics.securityScore}
                     </span>                  </div>                  </div>
+              <Card className="border-gradient-teal">
+                <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Complexity</span>
+                    <span className="text-orange-400 font-bold">{analysisResults.metrics.complexity}</span>
+                  </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Maintainability</span>
                     <span className="text-green-400 font-bold">{analysisResults.metrics.maintainability}</span>
@@ -1152,6 +1132,7 @@ href="/contact"
 
                 </div>;
               </Card>;
+
             {/* Recommendations */}
             <Card className="border-gradient-teal">
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
@@ -1181,6 +1162,8 @@ href="/contact"
 
                   </div>
 
+
+
                 ))}
               </div>
             </Card>
@@ -1202,6 +1185,11 @@ href="/contact"
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
+      <section id="pricing" className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the code quality analysis plan that best fits your development needs.
@@ -1432,7 +1420,60 @@ href="/contact"
                   </div>
                 )}
 
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='mb-6'>;
+                    <span className='text-4xl font-bold text-white'>;
+                      {plan && plan.price}
+                    </span>;
+                    <span className='text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'>;
+                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
+                  <p className="text-gray-400">{plan && plan.description}</p>;
+                </div>;
+
+                <ul className="space-y-4 mb-8">;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />;
+
                       {feature}
+                    </li>;
+
+
+
+
+
+                    </li>
+                  ))}
+
+                </ul>;
+
+
+                <Button
+                  href='/contact'
+                  size='lg'
+
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
                 <Button
                   href="/contact"
                   size="lg"
@@ -1444,17 +1485,18 @@ href="/contact"
 
                 </Button>
 
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
 
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
@@ -1463,6 +1505,7 @@ href="/contact"
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
             Ready to Improve Your Code Quality?
+
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
@@ -1480,20 +1523,16 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'            >              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl"
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
+
+
+              Schedule Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
   );
 }
-  );
-}
-  );
+    </>);
 }

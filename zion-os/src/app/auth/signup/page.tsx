@@ -84,43 +84,23 @@ if ( {) {
 }
       set_error ("Passwords do not match"),
       setIsLoading (false);
-"use client",;
-import { useState } from "react",;
-import Link from "next/link",;
-import { useAuth } from "@/contexts/AuthContext",;
-export default function SignUpPage() {;
-  const [name, setName] = useState(""),;
-  const [email, setEmail] = useState(""),;
-  const [password, setPassword] = useState(""),;
-  const [confirmPassword, setConfirmPassword] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState(""),;
-  const { register } = useAuth(),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsLoading(true),;
-    setError(""),;
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match"),;
-      setIsLoading(false);
       return;
     }
-;
-    try {;
-      await register(name, email, password);
-    } catch (error) {;
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {;
-      setIsLoading(false);
+    try {
+      await register (name, email, password);
+    } catch (error) {
+      set_error (error instanceof Error ? error.message : "Registration failed");
+    } finally {
+      setIsLoading (false);
     }
-  };
-  return (;
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
-      <div className="max-w-md w-full space-y-8 p-8">;
-        <div className="text-center">;
-          <h1 className="text-3xl font-bold text-white mb-2">Join Zion OS</h1>;
-          <p className="text-zinc-400 mb-4">;
-            Start your free trial and launch sovereign AI-powered digital economies;
+  }
+  return (
+    <div className="min - h-screen flex items - center justify - center bg - gradient - to - br from - zinc - 900 to - zinc - 800">;
+      <div className="max - w-md w - full space - y-8 p - 8">;
+        <div className="text - center">;
+          <h1 className="text - 3xl font - bold text - white mb - 2">Join Zion OS</h1>;
+          <p className="text - zinc - 400 mb - 4">;
+            Start your free trial and launch sovereign AI - powered digital economies;
           </p>;
           {/* Free Trial Badge */}
           <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 border border - green - 500 / 20 rounded - full">;

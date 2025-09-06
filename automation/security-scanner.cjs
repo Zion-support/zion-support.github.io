@@ -1,63 +1,3 @@
-
-console.log('🔒 Starting Security Scanner...');
-
-class SecurityScanner {
-  constructor() {
-    this.reportsDir = path.join(process.cwd(), 'automation-reports');
-    this.ensureReportsDir();
-  }
-
-  ensureReportsDir() {
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async runSecurityScan() {
-    const securityChecks = [
-      { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
-      { name: 'Security Fix', command: 'npm audit fix --force', description: 'Fixing security vulnerabilities' },
-      { name: 'Dependency Check', command: 'npm outdated', description: 'Checking for outdated dependencies' },
-      { name: 'License Check', command: 'npm audit --audit-level moderate', description: 'Checking license compliance' }
-    ];
-
-    const results = [];
-    let passedChecks = 0;
-
-    for (const check of securityChecks) {
-      try {
-        this.log(`🔍 Running ${check.name}...`);
-        this.log(`📝 ${check.description}`);
-        
-        execSync(check.command, { stdio: 'pipe' });
-#!/usr/bin/env node
-
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
-/**
- * Security Scanner
- * Comprehensive security scanning and enhancement automation
- */
-class SecurityScanner {
-  constructor() {
-    this.projectRoot = process.cwd();
-    this.startTime = new Date();
-    this.results = {
-      dependencyAudit: { success: false, vulnerabilities: 0, fixes: [] },
-      codeSecurity: { success: false, issues: [], fixes: [] },
-      headersSecurity: { success: false, headers: [], recommendations: [] },
-      contentSecurityPolicy: { success: false, policy: '', recommendations: [] },
-      authenticationSecurity: { success: false, checks: [], recommendations: [] }
-    };
-  }
-
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -86,6 +26,7 @@ class SecurityScanner {
     const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
+
   async runCommand(command, description, options = {}) {
     this.log(`Running: ${description}`);
     try {
@@ -229,23 +170,6 @@ class SecurityScanner {
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-  async runSecurityScan() {
-    const securityChecks = [
-      { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
-      { name: 'Security Fix', command: 'npm audit fix --force', description: 'Fixing security vulnerabilities' },
-      { name: 'Dependency Check', command: 'npm outdated', description: 'Checking for outdated dependencies' },
-      { name: 'License Check', command: 'npm audit --audit-level moderate', description: 'Checking license compliance' }
-    ];
-
-    const results = [];
-    let passedChecks = 0;
-
-    for (const check of securityChecks) {
-      try {
-        this.log(`🔍 Running ${check.name}...`);
-        this.log(`📝 ${check.description}`);
-        
-        execSync(check.command, { stdio: 'pipe' });
         
         console.log(`✅ ${check.name} completed successfully`);
         results.push({ 
@@ -536,6 +460,7 @@ if (securityReport.status === 'vulnerable') {
     process.exit(2);
 } else {
     process.exit(0);
+}
 }
 }
   }

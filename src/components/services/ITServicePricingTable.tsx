@@ -24,14 +24,6 @@ export function ITServicePricingTable() {;
     direction: 'ascending',;
   });
 
-  const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing],
-    
-    // Filter by search query
-    if (searchQuery) {
-      filteredData = filteredData.filter(item => 
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      )
     }
     
     // Sort data
@@ -39,14 +31,11 @@ export function ITServicePricingTable() {;
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === 'ascending' ? -1 : 1
       }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
+      if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
+        return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
       }
-      return 0
-    }),
-    
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
+      return 0;
+    });
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
@@ -112,6 +101,14 @@ export function ITServicePricingTable() {;
       </div>
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
+
+        <Table>
+          <TableHeader className='bg-zion-blue'>
+            <TableRow>
+              <TableHead className='text-zion-cyan font-medium'>
+                <Button
+                  variant='ghost'
+                  onClick={() => handleSort('country')}
                   className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
               <TableHead className="text-zion-cyan font-medium">
                 <Button 
@@ -119,7 +116,3 @@ export function ITServicePricingTable() {;
                   onClick={() => handleSort("country")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
-                  <span>Country</span>
-                  <ArrowUpDown className="h-4 w-4" />
-                </Button>
-              </TableHead>

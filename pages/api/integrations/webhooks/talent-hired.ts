@@ -1,4 +1,13 @@
 
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../../lib/integrations/fileStore";
+import { ats } from "../../../../lib/integrations/connectors";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+
   try {
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -55,12 +64,8 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-  res.status(200).json({ ok: true, results });
-}
-res.status(200).json({ ok: true, results });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
+  res && res.status(200).json({ ok: true, results });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
@@ -111,4 +116,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }

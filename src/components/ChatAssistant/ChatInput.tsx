@@ -123,8 +123,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 
         disabled={!message.trim() |disabled}
 
-    }
-  },
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -171,7 +169,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     </form>
   )
 }
-        disabled={!message.trim() |disabled}
         disabled={!message.trim() || disabled}
 
       >

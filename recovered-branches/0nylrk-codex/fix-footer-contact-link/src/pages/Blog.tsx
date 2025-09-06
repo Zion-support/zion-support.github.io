@@ -1,60 +1,68 @@
 
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {SEO} from "@/components/SEO";
-import {Card, CardContent, CardFooter} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {BlogPost} from "@/types/blog";
-import {Search} from "lucide-react";
-import { useState } from "react",
-import { Link } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { BlogPost } from "@/types/blog";
-import { Search } from "lucide-react";
+
+
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
-import { BlogPost } from "@/types/blog",
-import { Search } from "lucide-react",
-// Sample blog data - in a real app this would come from an API or CMS
-const BLOG_POSTS: BlogPost[] = [
-  {
-
-    id: "ai-trends-2025"
-    title: "10 Emerging AI Trends to Watch in 2025"
-    slug: "ai-trends-2025"
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
-
+    id: "ai-trends-2025",
+    title: "10 Emerging AI Trends to Watch in 2025",
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+
+
+
+
+
+<h2>1. Multimodal AI Systems</h2>
+<p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
+<h2>2. Neuromorphic Computing</h2>
+<p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>
+<h2>3. Federated Learning at Scale</h2>
+<p>Privacy concerns continue to drive adoption of federated learning approaches, where models are trained across multiple devices without exchanging raw data. In 2025, we're seeing enterprise-scale deployments that maintain privacy while delivering powerful insights.</p>
+<h2>4. Quantum AI</h2>
+<p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
+<h2>5. AI for Climate Solutions</h2>
+<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
+    author: {
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-    }
-    publishedDate: "Apr 15, 2025";
-    readTime: "5 min read"
-    category: "Trends"
-    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
-    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630"
+    },
+    publishedDate: "Apr 15, 2025",
+    readTime: "5 min read",
+    category: "Trends",
+    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
+    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630",
     isFeatured: true
-  }
+  },
   {
-    id: "optimize-ai-listings"
-    title: "How to Optimize Your AI Service Listings for Maximum Visibility"
-    slug: "optimize-ai-listings"
-    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
+    id: "optimize-ai-listings",
+    title: "How to Optimize Your AI Service Listings for Maximum Visibility",
+    slug: "optimize-ai-listings",
+    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
+
+
+<h2>Crafting an Irresistible Service Title</h2>
+<p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
+<h2>Compelling Service Descriptions That Convert</h2>
+<p>Beyond explaining features, your description should emphasize benefits and outcomes. Use client-centered language, incorporate relevant technical terms for searchability, and structure your content with headers and bullet points for easy scanning.</p>
+<h2>Showcase Your Expertise with Case Studies</h2>
+<p>Nothing builds credibility like proven results. Include mini case studies that highlight specific problems you've solved, the approach you took, and quantifiable outcomes you achieved. This transforms abstract services into concrete value.</p>
+<h2>Strategic Pricing and Package Structure</h2>
+<p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p>
+<h2>Leveraging Reviews and Testimonials</h2>
+<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`;
+    author: {
+      name: "Marcus Johnson"
+      title: "Marketing Strategist"
+      avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
+    }
+    publishedDate: "Apr 10, 2025";
+    readTime: "8 min read"
+    category: "Marketing"
+    tags: ["Marketing", "AI Services", "Visibility", "SEO"];
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
   }
   {
@@ -77,6 +85,7 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
+
 
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
@@ -503,6 +512,9 @@ export default function Blog() {;
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>;
           </div>;
+
+
+
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
             <div className="mb-16">;
@@ -816,13 +828,8 @@ function Blog() {
                 Clear all filters
               </Button>
             </div>
-          )}
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
+
+
                     </p>;
                     <div className="flex items-center">;
                       <img;
@@ -847,6 +854,9 @@ function Blog() {
                 </Card>;
               ))}
             </div>
+
+
+
           )}
         </div>;
       </div>;

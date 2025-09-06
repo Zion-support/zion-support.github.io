@@ -1,9 +1,12 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
 
 export function ReferralGuide() {
 
@@ -18,13 +21,11 @@ function ReferralGuide() {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
-      title: "They sign up"
-      description: "When someone clicks your link and creates an account, they're tagged as your referral"}
-    {
-      title: "They complete onboarding"
-      description: "Once they complete their profile setup, your referral is confirmed"}
+
+
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
     {
@@ -54,12 +55,8 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
+
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 export function ReferralGuide() {;
@@ -88,5 +85,9 @@ export function ReferralGuide() {;
           {steps && steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
+
+
+
+
 }
 ;

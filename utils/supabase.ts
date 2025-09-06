@@ -62,6 +62,11 @@ export const supabase = createSupabaseClient(supabaseConfig);
     }),
     insert: (data: any) => ({
       select: (columns: string) => ({
+        single: () => null;
+      });
+    });
+  });
         single: () => null
       })
     })
+

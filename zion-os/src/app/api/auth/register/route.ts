@@ -14,6 +14,7 @@ function POST() {
   try {
     const body = await request.json (),
     const { name, email, password } = register_schema.parse (body),
+    // Check if user already exists;
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
     // Check condition

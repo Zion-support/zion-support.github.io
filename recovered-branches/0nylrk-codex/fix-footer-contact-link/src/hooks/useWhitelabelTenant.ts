@@ -1,9 +1,13 @@
-import { useState, useEffect  } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+
 export interface WhitelabelTenant {
+
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+
   id: string;
   brand_name: string;
   subdomain: string;
@@ -25,13 +29,11 @@ export interface WhitelabelTenant {;
 
   dns_verified: boolean
 
-  email_template_override: Record<string, any> | null
-}
-export function useWhitelabelTenant(externalSubdomain?: string) {
-  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+
+
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -142,6 +144,9 @@ if ( {) {
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
+
+
+
         }
         if (data.tenant) {
           setTenant(data.tenant)
@@ -299,5 +304,7 @@ if ( {) {
     }
     checkAdminStatus()
   }, [tenantId]);
+
+
   return { isAdmin, isLoading }
 }

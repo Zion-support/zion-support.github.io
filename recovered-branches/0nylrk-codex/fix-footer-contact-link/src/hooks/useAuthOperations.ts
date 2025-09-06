@@ -1,20 +1,7 @@
 
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import type { UserProfile } from "@/types/auth";
-import {toast} from "@/hooks/use-toast";
-import {trackReferral, checkUrlForReferralCode} from "@/utils/referralUtils";
-import {cleanupAuthState} from "@/utils/authUtils";
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import type { UserProfile } from "@/types/auth";
-import { toast } from "@/hooks/use-toast";
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
-import { cleanupAuthState } from "@/utils/authUtils";
-import type { UserProfile } from "@/types/auth",
-import { toast } from "@/hooks/use-toast",
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
-import { cleanupAuthState } from "@/utils/authUtils",
+
+
+
 export function useAuthOperations(
 
   setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,
@@ -106,10 +93,8 @@ export function useAuthOperations(
         toast({
           variant: "destructive",
           title: "Error during signup",
-          description: error.message}),
-        return { data: null, error: error.message }
-          variant: "destructive",
-          title: "Error during signup",
+
+
           description: error.message});
         return { data: null, error: error.message }
           title: "Error during signup",
@@ -286,18 +271,8 @@ if ( {) {
           variant: "destructive",
           title: "Failed to update profile",
           description: error.message});
-        return { error: error.message };
-        return { error: error.message }
-      }
-      // Optimistically update the local user state
-      setUser((prevUser) => {
-        if (prevUser) {
-        return { error: error.message };
-      }
-;
-      // Optimistically update the local user state;
-      setUser((prevUser) => {;
-        if (prevUser) {;
+
+
           return { ...prevUser, ...profileData }
         }
         return prevUser
@@ -350,43 +325,7 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-      }
-    } finally {
-      setIsLoading(false)
-    }
-  };
-        return prevUser;
-      }),;
-      toast({;
-        title: "Profile updated!",;
-        description: "Your profile has been successfully updated."}),;
-      return { error: null }
-    } catch (error) {;
-      console.error("Profile update failed:", error),;
-      toast({;
-        variant: "destructive",;
-        title: "Profile update failed",;
-        description: "There was an issue updating your profile. Please try again."}),;
-      return { error: "Failed to update profile." }
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  const loginWithGoogle = async () => {;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.auth.signInWithOAuth({;
-        provider: "google"}),;
-      if (error) {;
-        toast({;
-          variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
-          description: error.message});
-      }
-    } finally {;
-      setIsLoading(false);
-    }
-  },
+
 
   const loginWithFacebook = async () => {
     setIsLoading (true);
@@ -405,25 +344,41 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-  },;
-  const loginWithFacebook = async () => {;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.auth.signInWithOAuth({;
-        provider: "facebook"}),;
-      if (error) {;
-        toast({;
-          variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
-          description: error.message});
+
       }
     } finally {
       setIsLoading (false);
     }
-  }
+
+;
+
+  const loginWithTwitter = async () => {
+    setIsLoading (true);
+    try {
+
+          title: "Oh no! Something went wrong.",
+          description: error && error.message})
+
+      const { data, error } = await supabase.auth.signInWithOAuth ({
+        provider: "twitter"});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          variant: "destructive";
+          title: "Oh no! Something went wrong.",
+          description: error.message});
+
   },
   };
   },
+
+  const loginWithTwitter = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "twitter"});
       if (error) {
         toast({
@@ -437,25 +392,13 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
-  },;
-  const loginWithTwitter = async () => {;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.auth.signInWithOAuth({;
-        provider: "twitter"}),;
-      if (error) {;
-        toast({;
-          variant: "destructive",;
-          title: "Oh no! Something went wrong.",;
-          description: error.message});
+
       }
     } finally {
       setIsLoading (false);
     }
-  }
-  },
-  };
-  },
+
+;
 
   const loginWithWeb3 = async () => {
     setIsLoading (true);
@@ -564,6 +507,7 @@ if ( {) {
     resetPassword,;
     updateProfile,;
     loginWithGoogle,;
+
     loginWithFacebook;
     loginWithTwitter;
 

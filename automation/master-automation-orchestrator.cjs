@@ -304,12 +304,8 @@ async function runAllAutomations() {
       }
     }
   }
-  return { results, successCount, failureCount };
-}
 
   return { results, successCount, failureCount };
-    }
-  }
 }
 
 // Generate comprehensive report

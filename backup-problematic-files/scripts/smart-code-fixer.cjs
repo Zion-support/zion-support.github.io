@@ -45,7 +45,6 @@ function fixSpecificIssues(content, filePath) {
     modified = true;
   }
 
-
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
     content = content.replace(/console\.log\([^)]*\);?/g, '');
@@ -53,7 +52,6 @@ function fixSpecificIssues(content, filePath) {
       modified = true;
     }
   }
-
 
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
@@ -146,7 +144,6 @@ function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
   
-  
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   
@@ -180,7 +177,5 @@ function main() {
 if (require.main === module) {
   main();
 }
-
-module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };

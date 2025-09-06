@@ -1,22 +1,5 @@
-'use client';
-import React, { useState } from 'react';
-export default function OSDeployPage() {
 
-export default function OSDeployPage() {;
-const [loading, setLoading] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    // Simulate deployment
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }
-  const [message, setMessage] = useState('');
-  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
-  // Mock feature keys and functions
-  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-  const labelFor = (key: string) => {
+
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -74,6 +57,7 @@ export default function OSDeployPage() {;
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
         </div>;
+
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -81,6 +65,7 @@ export default function OSDeployPage() {;
               <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>;
               Basic Configuration;
             </h2>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
@@ -95,6 +80,7 @@ export default function OSDeployPage() {;
 
                 />;
               </div>;
+
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Vertical</label>;
 
@@ -165,6 +151,7 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="zion && zion.example.com"
                 />;
               </div>;
+
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>;
 
@@ -177,6 +164,7 @@ ai: 'Advanced AI capabilities and automation',
 
                 />;
               </div>;
+
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Default Language</label>;
 
@@ -188,6 +176,7 @@ ai: 'Advanced AI capabilities and automation',
 
                 />;
               </div>;
+
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Region</label>;
 
@@ -303,6 +292,7 @@ ai: 'Advanced AI capabilities and automation',
 
                 />;
               </div>;
+
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Payment Gateway</label>;
 
@@ -320,14 +310,16 @@ ai: 'Advanced AI capabilities and automation',
               </div>;
             </div>;
           </div>;
+
           {/* Feature Selection */}
-          <div className="glass-effect rounded-2xl p-8">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm"></span>
-              Feature Selection
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {FeatureKeys.map((k) => (
+          <div className="glass-effect rounded-2xl p-8">;
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
+              <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>;
+              Feature Selection;
+            </h2>;
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
+              {FeatureKeys && FeatureKeys.map((k) => (;
                 <label
                   key={k}
                   className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
@@ -380,12 +372,14 @@ ai: 'Advanced AI capabilities and automation',
 
             </div>;
           </div>;
+
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">;
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>;
               Additional Features;
             </h2>;
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
@@ -934,6 +928,9 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
+
+
+
                 {message}
               </div>;
             )}
@@ -990,3 +987,5 @@ function getFeatureDescription(key: string) {;
   }
 }
 }
+
+

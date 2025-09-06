@@ -1,17 +1,7 @@
 
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {JobApplication} from "@/types/jobs";
-import {ApplicationScoreCard} from "../ApplicationScoreCard";
-import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle
-} from "@/components/ui/dialog",
-import { JobApplication } from "@/types/jobs";
-import { ApplicationScoreCard } from "../ApplicationScoreCard";
-import { JobApplication } from "@/types/jobs",
-import { ApplicationScoreCard } from "../ApplicationScoreCard",
+
+
+
 interface ScoreDialogProps {
 
   open: boolean
@@ -20,16 +10,10 @@ interface ScoreDialogProps {
 
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
-          <ApplicationScoreCard
-          <ApplicationScoreCard 
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogHeader,;
-  DialogTitle;
-} from "@/components/ui/dialog",;
-import { JobApplication } from "@/types/jobs",;
-import { ApplicationScoreCard } from "../ApplicationScoreCard",;
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {JobApplication} from "@/types/jobs";
+import {ApplicationScoreCard} from "../ApplicationScoreCard";
 interface ScoreDialogProps {;
   open: boolean,;
   onOpenChange: (open: boolean) => void,;
@@ -66,7 +50,11 @@ export function ScoreDialog(): any ({;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
-          <ApplicationScoreCard;
+
+          <ApplicationScoreCard
+
+          <ApplicationScoreCard 
+
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;

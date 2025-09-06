@@ -1,14 +1,7 @@
 
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CategoriesSection} from "@/components/CategoriesSection";
-import {GradientHeading} from "@/components/GradientHeading";
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { GradientHeading } from "@/components/GradientHeading";
-import { CategoriesSection } from "@/components/CategoriesSection",
-import { GradientHeading } from "@/components/GradientHeading",
+
+
+
 export default function Categories() {
   return (
     <>
@@ -76,6 +69,9 @@ function Categories() {
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
+
+
+
           {/* Reuse the Categories Section component */}
           <CategoriesSection showTitle={false} />
         </div>
@@ -83,6 +79,7 @@ function Categories() {
       <Footer />
     </>
   )
-}
+
 }
 ;
+

@@ -1,3 +1,5 @@
+
+
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -5,6 +7,8 @@ import { useRouter } from 'next/router',;
 export default function CaseStudyResourcePage() {
   const router = useRouter(),
   const { id } = router.query,
+
+
 
 import React from 'react';
 import Head from 'next/head';
@@ -187,13 +191,15 @@ export default function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
-  ]
-  const caseStudy = caseStudies.find(study => study.id === id)
+
+
+
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -375,6 +381,8 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
   if (!caseStudy) {
@@ -390,9 +398,10 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
-              <Link
-              <Link 
-              <Link
+
+
+
+
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -430,6 +439,8 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -441,25 +452,10 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-              <div 
-                className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-              />
-            </div>
-            <div className="text-center">
-              <Link 
-              <div
-                className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              />
-            </div>
-            <div className="text-center">
-              <Link
+
+
+
+
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -470,13 +466,67 @@ export default function CaseStudyResourcePage(req, res) {
         </main>
       </div>
     </>
-  );
-};
-  )
-  ];
-  const caseStudy = caseStudies.find(study => study.id === id);
-  if (!caseStudy) {;
-    return (;
+
+}
+
+      description: 'Building self - healing, auto - scaling cloud infrastructure.',
+      full_content: `;
+        <h2 > Executive Summary</h2>;
+        <p > This case study demonstrates how intelligent cloud infrastructure optimization can dramatically;
+        reduce costs while improving performance and reliability for high - traffic applications.</p>;
+        <h2 > Background</h2>;
+        <p > A growing e - commerce platform was experiencing skyrocketing cloud costs and frequent outages.;
+        Their infrastructure was not scaling efficiently with their business growth, leading to poor customer;
+        experience and high operational expenses.</p>;
+        <h2 > Challenge</h2>;
+        <p > The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.;
+        They required a solution that could automatically adapt to traffic patterns, prevent outages, and;
+        optimize resource allocation in real - time.</p>;
+        <h2 > Solution</h2>;
+        <p > We designed and implemented a comprehensive cloud optimization system:</p>;
+        <ul>;
+          <li><strong > Auto - scaling Infrastructure:</strong> Intelligent resource allocation based on demand</li>;
+          <li><strong > Self - healing Systems:</strong> Automatic failure detection and recovery</li>;
+          <li><strong > Cost Optimization:</strong> AI algorithms for resource cost management</li>;
+          <li><strong > Performance Monitoring:</strong> Real - time metrics and alerting systems</li>;
+        </ul>;
+        <h2 > Implementation</h2>;
+        <p > The project was completed in 8 months with careful planning:</p>;
+        <ul>;
+          <li><strong > Months 1 - 2:</strong> Infrastructure analysis and design</li>;
+          <li><strong > Months 3 - 4:</strong> Core optimization systems deployment</li>;
+          <li><strong > Months 5 - 6:</strong> Integration and testing</li>;
+          <li><strong > Months 7 - 8:</strong> Gradual migration and optimization</li>;
+        </ul>;
+        <h2 > Results</h2>;
+        <p > The optimization delivered outstanding results:</p>;
+        <ul>;
+          <li><strong > 50% reduction in cloud costs</strong> - Intelligent resource allocation eliminated waste</li>;
+          <li><strong > 99.9% uptime achieved</strong> - Self - healing systems prevented outages</li>;
+          <li><strong > 3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>;
+          <li><strong > 40% faster page load times</strong> - Optimized resource delivery improved user experience</li>;
+        </ul>;
+        <h2 > Key Learnings</h2>;
+        <p > This project revealed several important insights:</p>;
+        <ul>;
+          <li > Gradual migration reduces risk and improves system stability</li>;
+          <li > Real - time monitoring is essential for optimization</li>;
+          <li > Cost optimization requires continuous monitoring and adjustment</li>;
+          <li > Self - healing systems significantly improve reliability</li>;
+        </ul>;
+        <h2 > Conclusion</h2>;
+        <p > The cloud infrastructure optimization project transformed the platform's performance and cost structure.;
+        The self - healing, auto - scaling infrastructure now supports continued business growth while maintaining;
+        optimal performance and cost efficiency.</p>;
+      `;
+    }
+  ],
+  const case_study = case_studies.find (study => study.id === id),
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
       <>;
         <Head>;
           <title > Case Study Resource Not Found | Zion Tech Group</title>;
@@ -546,11 +596,7 @@ export default function CaseStudyResourcePage(req, res) {
           </div>;
         </main>;
       </div>;
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </>);
 }
-}
+
+

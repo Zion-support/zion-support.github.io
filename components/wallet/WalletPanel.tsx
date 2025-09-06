@@ -1,13 +1,9 @@
 
-import React, { useEffect, useMemo, useState } from 'react';
-import Badges from './Badges';
-import React, { useEffect, useMemo, useState } from 'react';
-import Badges from './Badges';
 
-import React, { useEffect, useMemo, useState } from 'react';
-import Badges from './Badges';
-import React, { useEffect, useMemo, useState } from 'react';
-import Badges from './Badges';
+
+
+
+
 
 type Tx = {
 class ErrorBoundary extends React.Component {
@@ -34,17 +30,15 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
-type Tx = {;
-import React, { useEffect, useMemo, useState } from 'react';
-import Badges from './Badges';
 
-type Tx = {
+type Tx = {;
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
   reason: string;
 
 };
+
 type Summary = {;
   wallet: { userId: string; balance: number };
   transactions: Tx[];
@@ -58,9 +52,12 @@ function getUserId(): any (): string {;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
-export default function WalletPanel() {
+
+
 
 export default function WalletPanel() {;
+
+
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -75,8 +72,53 @@ type Tx = {
   created_at: string;
 }
 type Summary = {
-  wallet: { userId: string, balance: number }
-  transactions: Tx[]
+  wallet: { user_id: string; balance: number }
+  transactions: Tx[];
+  config: { usdPerToken: number; symbol: string }
+}
+;
+function getUserId (): string {
+  // Check condition
+if (return 'demo - user') {
+  $2
+}
+  const from_storage = window.local_storage.get_item ('zion_user_id');
+  // Check condition
+if (return from_storage) {
+  $2
+}
+  const generated = 'demo - user';
+  window.local_storage.set_item ('zion_user_id', generated);
+  return generated;
+;
+export default /**
+ * WalletPanel - Function description
+ */
+function WalletPanel() {
+  const [summary, set_summary] = useState < Summary | null>(null);
+  const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
+    'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
+  id: string,
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",
+  amount: number,
+  reason: string,
+
+
+export default function WalletPanel() {;
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
+    'earnings';
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {;
+  id: string,;
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
+  amount: number,;
+  reason: string,;
+  createdAt: string;
+};
+
+type Summary = {;
+  wallet: { userId: string, balance: number },;
+  transactions: Tx[],;
   config: { usdPerToken: number, symbol: string }
 };
 function getUserId(): any (): string {;
@@ -91,6 +133,9 @@ function getUserId(): any (): string {;
 export default function WalletPanel() {
 
 export default function WalletPanel() {;
+
+
+
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -127,6 +172,7 @@ export default function WalletPanel() {;
   useEffect(() => {;
     refresh();
   }, []);
+
   const balance = summary?.wallet && wallet.balance ?? 0;
   const symbol = summary?.config && config.symbol ?? 'ZION$';
   const earnings = (summary?.transactions || []).filter(t =>;
@@ -134,9 +180,11 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions || []).filter(t =>;
     ['burn', 'revoke', 'redeem'].includes(t && t.type)  );  }
+
   useEffect(() => {;
     refresh();
   }, []);
+
   const balance = summary?.wallet && wallet.balance ?? 0;
   const symbol = summary?.config && config.symbol ?? "ZION$";
   const earnings = (summary?.transactions || []).filter((t) =>;
@@ -146,9 +194,8 @@ export default function WalletPanel() {;
     ["burn", "revoke", "redeem"].includes(t && t.type);
 
   );
+
   const nextBadgeThreshold = useMemo(() => {;
-  );
-  const nextBadgeThreshold = useMemo(() => {
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
@@ -218,6 +265,7 @@ if ( {) {
 
     };
   }
+
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return;
 
@@ -337,6 +385,7 @@ if ( {) {
           <Badges balance={balance} />;
         </div>;
       </div>;
+
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>;
         <div className='flex gap-3 mb-4 text-sm'>;
 
@@ -553,105 +602,7 @@ if ( {) {
               <button className="px-3 py-1 rounded border" onClick={() => redeem(100)}>Redeem 100</button>
               <button className="px-3 py-1 rounded border" onClick={() => redeem(250)}>Redeem 250</button>
               <button className="px-3 py-1 rounded border" onClick={() => redeem(500)}>Redeem 500</button>
-
-type Summary = {
-  wallet: { userId: string, balance: number },
-  transactions: Tx[],
-  config: { usdPerToken: number, symbol: string }
-},
-
-function getUserId(): string {
-  if (typeof window === "undefined") return "demo-user",
-  const fromStorage = window.localStorage.getItem("zion_user_id")
-  if (fromStorage) return fromStorage,
-  const generated = "demo-user"
-  window.localStorage.setItem("zion_user_id", generated),
-  return generated
-}
-
-export default function WalletPanel() {
-  const [summary, setSummary] = useState<Summary | null>(null),
-  const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings"),
-  const [ethAddress, setEthAddress] = useState<string | null>(null),
-
-  const userId = useMemo(() => getUserId(), []),
-
-  async function refresh() {
-    const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`)
-    const data = await res.json()
-    setSummary(data)
-  }
-
-  useEffect(() => {
-    refresh()
-  }, []),
-
-  const balance = summary?.wallet.balance ?? 0
-  const symbol = summary?.config.symbol ?? "ZION$"
-  const earnings = (summary?.transactions || []).filter((t) =>
-    ["earn", "issue"].includes(t.type)
-  ),
-  const spending = (summary?.transactions || []).filter((t) =>
-    ["burn", "revoke", "redeem"].includes(t.type)
-  ),
-    ["burn", "revoke", "redeem"].includes(t.type)
-  ),
-  const balance = summary?.wallet.balance ?? 0;
-  const symbol = summary?.config.symbol ?? &quot;ZION$&quot;;
-  const earnings = (summary?.transactions || []).filter((t) =>
-    [&quot;earn&quot;, &quot;issue&quot;].includes(t.type)
-  );
-  const spending = (summary?.transactions || []).filter((t) =>
-    [&quot;burn&quot;, &quot;revoke&quot;, &quot;redeem&quot;].includes(t.type)
-  );
-
-  const nextBadgeThreshold = useMemo(() => {
-    if (balance < 50) return 50,
-    if (balance < 200) return 200,
-    if (balance < 500) return 500,
-    if (balance < 1000) return 1000,
-    return balance
-  }, [balance]),
-
-  const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100)),
-
-  async function connectWallet() {
-    return balance;
-  }, [balance]);
-  const progress = Math.min(
-    100
-    Math.floor((balance / nextBadgeThreshold) * 100)
-  );
-  async function connectWallet() {
-    if (typeof window === 'undefined') return;
-    const eth = (window as any).ethereum;
-    if (!eth) {
-      alert('No Ethereum wallet detected. Please install MetaMask.');
-      return;
-    }
-    try {
-      const accounts = await eth.request({ method: 'eth_requestAccounts' });
-      setEthAddress(accounts?.[0] |null);
-    } catch (e) {
-      console.error(e);
-    }  }
-  async function redeem(amount: number) {
-    if (!amount |amount <= 0) return;  }, [balance]);
-  const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100));
-  async function connectWallet() {
-    if (typeof window === "undefined") return;
-    const eth = (window as any).ethereum;
-    if (!eth) {
-      alert("No Ethereum wallet detected. Please install MetaMask.");
-      return
-    }
-    try {
-      const accounts = await eth.request({ method: "eth_requestAccounts" })
-      setEthAddress(accounts?.[0] |null)
-    } catch (e) {
-      console.error(e)
-    }
-  }
+            </div>
             <div className='text-gray-600'>
               Rate: 1 {symbol} = $
               {summary?.config.usdPerToken?.toFixed(2) ?? '0.00'}
@@ -681,9 +632,19 @@ export default function WalletPanel() {
             </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
           </div>
         )}
-      </div>
-    </div>
-);
+
+
+}
+
+
+}
+
+            <div className='text - xs text - gray - 500'>;
+              Coming soon: Redeem for branded perks and courses.;
+            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
+          </div>)}
+      </div>;
+    </div>);
 }
 
           </div>
@@ -694,9 +655,3 @@ export default function WalletPanel() {
 );
 }
 
-          </div>
-
-        )}
-      </div>
-    </div>
-  );

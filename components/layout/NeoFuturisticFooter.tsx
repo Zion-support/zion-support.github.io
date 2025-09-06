@@ -40,17 +40,20 @@ import {
   Github,
   Linkedin,;
   ExternalLink,;
-} from 'lucide-react';
-
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+
+
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};
+
 export default function NeoFuturisticFooter() {;
   return (  website: 'https://ziontechgroup && ziontechgroup.com';
 };
+
+
 export default function NeoFuturisticFooter() {;
   return (
 
@@ -72,6 +75,7 @@ export default function NeoFuturisticFooter() {;
               </a>;
             </div>;
           </div>;
+
           <div className='space-y-2 text-sm'>;
             <div className='font-semibold text-slate-100 mb-2'>Resources</div>;
 
@@ -104,7 +108,8 @@ export default function NeoFuturisticFooter() {;
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
         <div className="absolute inset-0 bg-neural-dots opacity-20 animate-shimmer" />
-</div>
+      </div>
+
       <div className="relative container mx-auto px-4 py-12 text-slate-200">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
@@ -142,7 +147,7 @@ export default function NeoFuturisticFooter() {;
         </div>
       </div>
     </footer>
-);
+  );
 }
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
@@ -279,8 +284,5 @@ export default function NeoFuturisticFooter() {;
     </footer>);
 }
 ;
-  return (
 
 
-export default function NeoFuturisticFooter() {
-  return (

@@ -1,5 +1,5 @@
-export interface ModerationFlag {
-export interface ModerationFlag {;
+
+
   id: string;
   contentId: string;
   contentType: string;
@@ -9,6 +9,15 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
 }
 
 ;
@@ -31,6 +40,15 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 }
 
+// Moderation database utilities
+export interface ModerationFlag {
+  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
+  content: string, reporterId: string,
+  reportedUserId?: string;
+  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
+  updatedAt: Date, moderatorId?: string,
+  notes?: string;
+}
 
 
 

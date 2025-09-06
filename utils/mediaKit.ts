@@ -1,8 +1,18 @@
-      path: ''
-      filename: 'legal/jurisdictional-disclosures.md'
-      type: 'text'
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
-    }
+
+
+  };
+}
+
+
+  }
+
+
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [
+    {
+
+
+
       path: '',
 
       filename: 'legal / terms - of - use.md',
@@ -11,6 +21,7 @@
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
+
   ];
   const web3Extras: MediaAsset[] = [
 
@@ -43,6 +54,30 @@
 
 
 export function buildPressRelease(
+  type: PressReleaseType
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+  params: {
+    company_name: string;
+export function buildPressRelease(
+
+  type: PressReleaseType,
+  params: {;
+
+    companyName: string;
+    date: string;
+    raiseAmount?: string;
+    tokenName?: string;
+    anchors?: string[];
+  }
+): string {
 
   const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
   const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
@@ -79,6 +114,14 @@ function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+
+
+function titleCase(s: string) {
+
+  return s && s.replace(
+    /\w\S*/g,
+    w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
+
   );}
 
 

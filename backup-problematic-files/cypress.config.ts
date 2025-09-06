@@ -17,22 +17,13 @@ supportFile: cypress/support/e2e.ts',;
 import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { baseUrl: 'http: supportFile: 'cypress/support/e2e.ts',specPattern: 'cypress/e2e*.cy.{js,jsx,ts,tsx}',viewportWidth: 1280,viewportHeight: 720,video: false,screenshotOnRunFailure: true,defaultCommandTimeout: 10000,requestTimeout: 10000,responseTimeout: 10000,setupNodeEvents() { },},component: { devServer: { framework: 'react',bundler: 'vite',},},});
 import { defineConfig } from 'cypress';
 
-export default defineConfig({
-  e2e: {
-    baseUrl: 'http://localhost:5000',
-    supportFile: false,
-import { defineConfig } from 'cypress;
-;
-export default defineConfig({,";
-  e2e: {,'
-  baseUrl: 'http://localhost:3000',
-    supportFile: cypress/support/e2e.ts',
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+
+
+
+
+
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: cypress/support/e2e.ts',    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-ursor/fix-lint-push-and-merge-to-main-ae4e
     viewportWidth: 1280,
     viewportHeight: 720,
   base_url: 'http://localhost:3000',
@@ -62,17 +53,6 @@ origin/automation-improvements-final
     }
   }
 }),
-    specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
-  },
-});
-origin/chore/fix-build-nav-links
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-import { defineConfig } from 'cypress;
-}),
-ursor/fix-lint-push-and-merge-to-main-ae4e
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
 export default defineConfig({
   e2e: {
   baseUrl: 'http://localhost:3000'

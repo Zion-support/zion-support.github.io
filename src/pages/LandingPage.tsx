@@ -34,6 +34,13 @@ export default function LandingPage() {
   
 
 
+
+  // Tools and features showcase
+
+  const toolsFeatures = [
+    {
+
+
   // Tools and features showcase;
   const toolsFeatures = [;
     {;
@@ -240,24 +247,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
   return (
-    <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
-        keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
-    <div className="min-h-screen bg-zion-blue text-white">
-      <SEO 
-        title={t("home.seo_title")} 
-        description={t("home.seo_description")} 
-        keywords={t("home.seo_keywords")}
-        canonical="https://app.ziontechgroup.com/"
-      />
-      <Header />
-      <HeroSection />
-      
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -287,6 +276,16 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+
+
+
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <span>{t("general.explore")}</span>
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
               </Link>
             ))}
           </div>
@@ -309,4 +308,28 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
+
+
+          </div>;
+        </div>;
+      </section>;
+
+      <CategoriesSection />;
+      <BenefitsSection />;
+      <CategoriesSection />;
+      <BenefitsSection />;
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+      <CategoriesSection />;
+      <BenefitsSection />;
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+
+
+
 ;

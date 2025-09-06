@@ -1,22 +1,7 @@
 import React from 'react';
 
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio  } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
+
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -29,6 +14,8 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
+
+
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -57,10 +44,13 @@ interface ProjectFormProps {;
   onSuccess: () => void,;
   onCancel: () => void;
 }
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
+
+export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
 
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -189,17 +179,20 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (success) {;
         onSuccess();
         form.reset();
+
+
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);
     } finally {;
       setIsLoading(false);
     }
-  }
 
+  };
   },
   };
   },
+
   
   return (
     <Form {...form}>;

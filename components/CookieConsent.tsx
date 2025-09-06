@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { X, Cookie, Settings } from "lucide-react";
-export default function CookieConsent() {
+
 
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
@@ -37,24 +35,19 @@ export default function CookieConsent() {;
       // Add your analytics initialization code here;
       console && console.log("Analytics initialized");
     }
-  }
-  const acceptSelected = () => {
-    localStorage.setItem("cookie-consent", JSON.stringify(preferences));
+  };
+
+  const acceptSelected = () => {;
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(preferences));
     setIsVisible(false);
-    // Initialize analytics if accepted
-    if (preferences.analytics) {
-      // Add your analytics initialization code here
-      console.log("Analytics initialized");
-    }
-  }
-  const rejectAll = () => {
-    const onlyNecessary = {
-      necessary: true
-      analytics: false
-      marketing: false
-      functional: false
+
+    // Initialize analytics if accepted;
+    if (preferences && preferences.analytics) {;
+      // Add your analytics initialization code here;
+      console && console.log("Analytics initialized");
     }
   };
+
   const rejectAll = () => {;
     const onlyNecessary = {;
       necessary: true,;
@@ -68,6 +61,7 @@ export default function CookieConsent() {;
     setIsVisible(false);
 
   };
+
   if (!isVisible) {;
 
     return null;
@@ -200,6 +194,7 @@ if ( {) {
                 Accept All;
               </button>;
             </div>;
+
             <div className="space-y-4 mb-6">;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
@@ -219,6 +214,7 @@ if ( {) {
 
                 />;
               </div>;
+
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
                 <div>;
                   <h4 className="font-medium text-gray-900">;
@@ -237,19 +233,20 @@ if ( {) {
                       analytics: e.target.checked
                     }))
                   }
-                  className="w-4 h-4 text-blue-600 rounded"
-                />
-              </div>
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Marketing Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Used to track visitors across websites for advertising
-                    purposes
-                  </p>
-                </div>
+                  className="w-4 h-4 text-blue-600 rounded";
+                />;
+              </div>;
+
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
+                <div>;
+                  <h4 className="font-medium text-gray-900">;
+                    Marketing Cookies;
+                  </h4>;
+                  <p className="text-sm text-gray-600">;
+                    Used to track visitors across websites for advertising;
+                    purposes;
+                  </p>;
+                </div>;
                 <input
                   type="checkbox"
                   checked={preferences.marketing}
@@ -259,18 +256,19 @@ if ( {) {
                       marketing: e.target.checked
                     }))
                   }
-                  className="w-4 h-4 text-blue-600 rounded"
-                />
-              </div>
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Functional Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Enable enhanced functionality and personalization
-                  </p>
-                </div>
+                  className="w-4 h-4 text-blue-600 rounded";
+                />;
+              </div>;
+
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
+                <div>;
+                  <h4 className="font-medium text-gray-900">;
+                    Functional Cookies;
+                  </h4>;
+                  <p className="text-sm text-gray-600">;
+                    Enable enhanced functionality and personalization;
+                  </p>;
+                </div>;
                 <input
                   type="checkbox"
                   checked={preferences.functional}

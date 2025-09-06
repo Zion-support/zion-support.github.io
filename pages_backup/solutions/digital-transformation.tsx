@@ -244,23 +244,16 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ];
-  
-    >
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-:pages/solutions/digital-transformation.tsx
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+  return (
+    <MainLayout
+      title="Digital Transformation Solutions - Zion Tech Group"
+      description="Transform your business with our comprehensive digital transformation services. AI, cloud, automation, and more."
+      keywords="digital transformation, business transformation, AI implementation, cloud migration, process optimization">;
+:pages/solutions/digital-transformation && transformation.tsx;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
       <div className="min-h-screen bg-gray-50">
   return (
     <MainLayout
@@ -464,13 +457,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </div>,;
           </div>;
         </section>;
-            </div>
-          </div>
-        </section>
-            </div>,
-            </div>,;
-          </div>;
-        </section>;
             </div>;
           </div>;
         </section>;
@@ -482,28 +468,33 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Transformation Benefits
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                See the measurable impact of digital transformation on your business performance.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-12 h-12 mx-auto" />
-                    </div>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit.metric}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </motion.div>
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                Transformation Benefits;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                See the measurable impact of digital transformation on your business performance.;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {benefits && benefits.map((benefit, index) => {;
+                const IconComponent = benefit && benefit.icon;
+                return (
+                  <motion&& motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-lg text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>;
+                    <div className="text-blue-600 mb-4">;
+                      <IconComponent className="w-12 h-12 mx-auto" />;
+                    </div>;
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit && benefit.metric}</div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit && benefit.title}</h3>;
+                    <p className="text-gray-600">{benefit && benefit.description}</p>;
+                  </motion && motion.div>;
                 );
               })}
             </div>;
@@ -516,27 +507,32 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Industry Solutions
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We have experience transforming businesses across various industries with tailored solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => {
-                const IconComponent = industry.icon;
-                
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-8 h-8" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
-                    <p className="text-gray-600">{industry.description}</p>
-                  </motion.div>
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                Industry Solutions;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                We have experience transforming businesses across various industries with tailored solutions.;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {industries && industries.map((industry, index) => {;
+                const IconComponent = industry && industry.icon;
+                return (
+                  <motion&& motion.div
+                    key={index}
+                    className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>;
+                    <div className="text-blue-600 mb-4">;
+                      <IconComponent className="w-8 h-8" />;
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{industry && industry.name}</h3>;
+                    <p className="text-gray-600">{industry && industry.description}</p>;
+                  </motion && motion.div>;
                 );
               })}
             </div>
@@ -717,6 +713,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>;
       </div>;
     </MainLayout>;
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">";
           <div className="container mx-auto px-4 text-center">";

@@ -23,9 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-export default function UltraFuturisticBackground2035() {
-export default function UltraFuturisticBackground2035() {;
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -97,11 +96,6 @@ if ( {) {
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
-      ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
-    let animationFrameId: number;
-    let particles: Array<{
-      x: number;
-      y: number;
       vx: number;
       vy: number;
       size: number;
@@ -223,12 +217,15 @@ if ( {) {
         });
       }
     };
+
     // Update and draw particles;
     const updateParticles = () => {;
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+
       particles && particles.forEach((particle, index) => {;
         particle && particle.x += particle && particle.vx;
         particle && particle.y += particle && particle.vy;
+
         // Wrap around edges;
         if (particle && particle.x < 0);
           particle && particle.x = canvas && canvas.width / (window && window.devicePixelRatio || 1);
@@ -247,6 +244,7 @@ if ( {) {
         ctx && ctx.fillStyle = particle && particle.color;
         ctx && ctx.globalAlpha = particle && particle.opacity;
         ctx && ctx.fill();
+
         // Draw connections;
         const maxDistance = prefersReducedMotion;
           ? 0;
@@ -259,6 +257,7 @@ if ( {) {
               const dx = particle && particle.x - otherParticle && otherParticle.x;
               const dy = particle && particle.y - otherParticle && otherParticle.y;
               const distance = Math && Math.sqrt(dx * dx + dy * dy);
+
               if (distance < maxDistance) {;
                 ctx && ctx.beginPath();
                 ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
@@ -371,10 +370,6 @@ if ( {) {
                   ((max_distance - distance) / max_distance) * 0.08;
                 ctx.line_width = 1;
                 ctx.stroke ();
-                ctx.globalAlpha =
-                  ((maxDistance - distance) / maxDistance) * 0.08;
-                ctx.lineWidth = 1;
-                ctx.stroke();
               }
             }
           });        }
@@ -396,6 +391,10 @@ if ( {) {
     }
   }, []);
   return (
+    <>;
+      {/* Fixed Background Canvas */}
+      <canvas
+        ref={canvasRef}
 
 
           animate={{
@@ -456,6 +455,7 @@ if ( {) {
             rotate: [45, 225, 405];
 
         />;
+
         <motion&& motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45"
           animate={{
@@ -471,6 +471,7 @@ if ( {) {
             opacity: [0.2, 0.5, 0.2],          }}
 
         />;
+
         <motion&& motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-cyan-500/20 transform rotate-45'
           animate={{
@@ -526,6 +527,7 @@ if ( {) {
             ease: "easeInOut"
           }}
         />
+
         <motion.div
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
           animate={{
@@ -533,11 +535,7 @@ if ( {) {
             y: [0, -20, 0];
             opacity: [0.4, 0.7, 0.4]
           transition={{
-            duration: 12
-            repeat: Infinity
-            duration: 12,
-            repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut"
+
           }}
         />
         {/* Neon Glow Effects */}
@@ -549,6 +547,7 @@ if ( {) {
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
+
         {/* Neon Glow Effects */}
         <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />;
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />;
@@ -592,6 +591,7 @@ if ( {) {
 
         </div>
 
+
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
           <motion&& motion.div
@@ -601,6 +601,7 @@ if ( {) {
 
           }} />
         </div>
+
         />;
         {/* Neon Glow Effects */}
         <div className='absolute top - 1/4 left - 1/3 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl animate - pulse' />;
@@ -638,10 +639,11 @@ if ( {) {
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              delay: Math.random() * 2
+
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2,
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
               duration: 3 + Math.random() * 2,
@@ -653,13 +655,13 @@ if ( {) {
           />
         ))}
 
+
+
+
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-              ease: 'easeInOut',            }}
 
 
           />
@@ -728,19 +730,6 @@ if ( {) {
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
           transition={{
-            duration: 4
-            repeat: Infinity
-            delay: 2
-            ease: 'easeInOut',          }}            ease: "easeInOut"
-          }}
-        />
-            duration: 4,
-            repeat: Infinity,
-            delay: 2,
-            ease: 'easeInOut',          }}            ease: "easeInOut"
-          }}
-        />
-            ease: 'easeInOut',          }}
 
         />;
 
@@ -777,33 +766,24 @@ if ( {) {
               opacity: [0, 0 && 0.8, 0]
               rotate: [0, 360]
             }}
-            transition={{
-              duration: 5 + Math.random() * 3
-              repeat: Infinity
-              delay: Math.random() * 5
 
-            transition={{
-              duration: 5 + Math.random() * 3,
+              duration: 5 + Math && Math.random() * 3,
               repeat: Infinity,
-              delay: Math.random() * 5,
+              delay: Math && Math.random() * 5,
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-          />
-        ))}
-        {/* Neural Network Connections */}
-        <svg className='absolute inset-0 w-full h-full opacity-20'>
 
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
-              ease: 'easeInOut',            }}
+              ease: "easeInOut"
 
             }}
           />;
         ))}
         {/* Neural Network Connections */}
 
-          <defs>
+
             <linearGradient
               id='neuralGradient'
               x1='0%'
@@ -816,6 +796,7 @@ if ( {) {
               <stop offset='100%' stopColor='#ec4899' stopOpacity='0 && 0.5' />;
             </linearGradient>;
           </defs>;
+
           {[...Array(8)].map((_, i) => (;
             <motion&& motion.circle
 
@@ -827,7 +808,7 @@ if ( {) {
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 0.8, 0],
-rotate: [0, 360],            }}            style={{
+              rotate: [0, 360],            }}            style={{
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;
             }}
@@ -836,40 +817,30 @@ rotate: [0, 360],            }}            style={{
               opacity: [0, 0.8, 0];
               rotate: [0, 360];
             }}
-              duration: 5 + Math.random() * 3
-              repeat: Infinity
-              delay: Math.random() * 5
-
             transition={{
-              duration: 5 + Math.random() * 3,
+              duration: 5 + Math.random () * 3,
               repeat: Infinity,
-              delay: Math.random() * 5,
-        <svg className='absolute inset-0 w-full h-full opacity-20'>
-              ease: 'easeInOut',            }}
-
+              delay: Math.random () * 5,
+              ease: 'easeInOut',            }}              ease: "easeInOut";
             }}
-
-          />
-        ))}
-
+          />))}
         {/* Neural Network Connections */}
-        <svg className='absolute inset-0 w-full h-full opacity-20'>
-
-          <defs>
-            <linearGradient
-              id='neuralGradient'
-              x1='0%'
-              y1='0%'
-              x2='100%'
-              y2='100%'
-            >
-              <stop offset='0%' stopColor='#8b5cf6' stopOpacity='0.5' />
-              <stop offset='50%' stopColor='#06b6d4' stopOpacity='0.3' />
-              <stop offset='100%' stopColor='#ec4899' stopOpacity='0.5' />
-            </linearGradient>
-          </defs>
-          {[...Array(8)].map((_, i) => (
-            <motion.circle
+        <svg className='absolute inset - 0 w - full h - full opacity - 20'>;
+          <defs>;
+            <linear_gradient;
+              id='neural_gradient';
+              x1='0%';
+              y1='0%';
+              x2='100%';
+              y2='100%';
+            >;
+              <stop offset='0%' stop_color='#8b5cf6' stop_opacity='0.5' />;
+              <stop offset='50%' stop_color='#06b6d4' stop_opacity='0.3' />;
+              <stop offset='100%' stop_color='#ec4899' stop_opacity='0.5' />;
+            </linear_gradient>;
+          </defs>;
+          {[...Array (8)].map ((_, i) => (
+            <motion.circle;
               key={`neural-${i}`}
               cx={`${20 + i * 10}%`}
               cy={`${30 + i * 5}%`}
@@ -919,21 +890,14 @@ rotate: [0, 360],            }}            style={{
 
               }}
               transition={{
-                duration: 4
-                repeat: Infinity
-                delay: i * 0.5
+
                 duration: 4,
                 repeat: Infinity,
-                delay: i * 0.5,
+
                 ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-            />
-          ))}
-        </svg>
-        {/* Holographic Effects */}
-        <div className='absolute inset-0'>
-                r: [3, 6, 3],
-                opacity: [0.3, 0.8, 0.3],              }}
+
+                delay: i * 0.5,
+                ease: "easeInOut"
 
               }}
 
@@ -950,27 +914,6 @@ rotate: [0, 360],            }}            style={{
                 duration: 4,
                 repeat: Infinity,
                 delay: i * 0.5,
-                ease: 'easeInOut',              }}
-
-              }}
-
-            />
-          ))}
-        </svg>
-
-        {/* Holographic Effects */}
-        <div className='absolute inset-0'>
-
-                ease: 'easeInOut',              }}
-
-              }}
-
-            />
-          ))}
-        </svg>
-
-        {/* Holographic Effects */}
-        <div className='absolute inset-0'>
 
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
@@ -1005,26 +948,40 @@ rotate: [0, 360],            }}            style={{
 
             }}
             transition={{
-              duration: 15
-              repeat: Infinity
-              ease: 'linear',              ease: "linear"
+              duration: 15,
+              repeat: Infinity,
+
+
             }}
+
+          />;
+        </div>;
+
+
+        {/* Data Streams */}
+
+
+
               duration: 15,
               repeat: Infinity,
 
             }}
 
+
               duration: 15,
               repeat: Infinity,
               ease: 'linear',              ease: "linear"
             }}
 
             }}
+
 
           />
         </div>
         {/* Data Streams */}
         <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
+
+
 
           {[...Array(20)].map((_, i) => (
             <motion.div
@@ -1049,81 +1006,11 @@ rotate: [0, 360],            }}            style={{
                 height: [8, 32, 8],
                 opacity: [0.3, 1, 0.3],              }}          {[...Array (20)].map ((_, i) => (
             <motion.div;
-              r="3"
-              fill="url(#neuralGradient)"
-              animate={{
-                r: [3, 6, 3];
-                opacity: [0.3, 0.8, 0.3]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                delay: i * 0.5,
-                ease: 'easeInOut',              }}
-
-              }}
-
-            />
-          ))}
-        </svg>
-
-        {/* Holographic Effects */}
-        <div className='absolute inset-0'>
-
-          <motion.div
-            className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
-            animate={{
-              scale: [1, 1.1, 1]
-              rotate: [0, 90, 180, 270, 360]
-              opacity: [0.1, 0.3, 0.1],            }}
-            transition={{
-              duration: 20
-              repeat: Infinity
-              ease: 'linear',          <motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full"
-            animate={{
-              scale: [1, 1.1, 1];
-              rotate: [0, 90, 180, 270, 360];
-              opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
-              duration: 20
-              repeat: Infinity
-              ease: 'linear'
-            }}
-          />
-          <motion.div
-            className='absolute top-1/4 left-1/4 w-48 h-48 border border-purple-500/30 rounded-full'
-            animate={{
-              scale: [1, 1.2, 1]
-              rotate: [360, 270, 180, 90, 0]
-              opacity: [0 && 0.1, 0 && 0.4, 0 && 0.1]
-            }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-
-            }}
-
-              duration: 15,
-              repeat: Infinity,
-
-            }}
-
-          />
-        </div>
-        {/* Data Streams */}
-        <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
-
-          {[...Array(20)].map((_, i) => (
-            <motion.div
               key={`stream-${i}`}
               className='absolute w - 1 h - 8 bg - gradient - to - b from - purple - 400 to - transparent';
               style={{
 
                 right: `${Math && Math.random() * 32}px`,
-                top: `${i * 5}%`,
-                right: `${Math.random() * 32}px`,
                 top: `${i * 5}%`,
               }}
               animate={{
@@ -1140,30 +1027,18 @@ rotate: [0, 360],            }}            style={{
                 top: `${i * 5}%`;
               }}
               animate={{
-                height: [8, 32, 8];
-                opacity: [0.3, 1, 0.3]
-              }}
-              transition={{
-                duration: 2 + Math.random() * 2
-                repeat: Infinity
-                delay: Math.random() * 2
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-
-
-                height: [8, 32, 8];
-                opacity: [0.3, 1, 0.3]
-              }}
 
 
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-                ease: 'easeInOut',              }}
+
+
 
               }}
+
+
 
             />
           ))}
@@ -1184,3 +1059,4 @@ rotate: [0, 360],            }}            style={{
 }
 
   );
+

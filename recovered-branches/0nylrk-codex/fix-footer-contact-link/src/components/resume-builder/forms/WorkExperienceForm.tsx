@@ -1,24 +1,5 @@
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { format } from 'date-fns';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { WorkExperience  } from '@/types/resume';
-import { Loader2, Edit, Trash2  } from 'lucide-react';
-import { useResume  } from '@/hooks/useResume';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Card, CardContent  } from '@/components/ui/card';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -35,6 +16,8 @@ import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+
+
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -52,9 +35,12 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
+
+
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+
+
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -184,12 +170,18 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: '',;
           location: ''}),;
         setEditingId(null);
+
+
+
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-  }
+
+
   };
+
+
 
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
@@ -202,11 +194,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
-  }
-  const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent)
-  }
+
+
   };
+
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -220,6 +211,43 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
+
+
+
+
+  const handleEnhanceDescription = (enhancedContent: string) => {
+    form.setValue('description', enhancedContent)
+  },
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
+        <p className="text-muted-foreground">
+          Add your work history to showcase your professional experience.
+        </p>
+      </div>
+      {workExperiences.length > 0 && (
+        <div className="space-y-4">
+          <h3 className="text-md font-medium">Added Experience</h3>
+          {workExperiences.map((work) => (
+            <Card key={work.id} className="bg-muted/40">
+              <CardContent className="pt-6">
+                <div className="flex justify-between">
+                  <div>
+                    <h4 className="font-medium">{work.role_title}</h4>
+                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {typeof work.start_date === 'string'
+                        ? work.start_date
+                        : format(work.start_date, 'MMM yyyy')} - {work.is_current
+                        ? 'Present'
+                        : (work.end_date ? (typeof work.end_date === 'string'
+                          ? work.end_date
+                          : format(work.end_date, 'MMM yyyy')) : '')}
+                    </p>
+                    {work.location && (
+                      <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>;
                   <div className="flex gap-2">;

@@ -1,12 +1,5 @@
-import React from "react";
-import Link from "next/link";
-export default function AutomationsPage() {
-import React from 'react';
-import Link from 'next/link';
 
 
-import React from 'react';
-import Link from 'next/link';
 
   return (
 

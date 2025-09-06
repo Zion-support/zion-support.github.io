@@ -1,3 +1,7 @@
+
+
+export default function EmergingTechPage() {
+  const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
@@ -31,6 +35,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+
+
             </div>
           </header>
           <section>
@@ -51,16 +57,11 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-                </a>
-              ))}
-            </div>
-          </section>
-        </div>
-      </div>
-    </Layout>
-  )
+
+
   );
 };
+
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -136,5 +137,7 @@ function EmergingTechPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-}
+
+

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import { useState } from 'react'
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -34,6 +33,14 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           variant='outline'
           size='sm'
           onClick={handleCopy}
-          aria-label='Copy prompt'>;
-          {copied ? 'Copied' : <Copy className='w-4 h-4' />}
+
+
+}
+  );
+}
+
+import { useState } from 'react';
+import { Copy, Send } from 'lucide-react';
+}
+
 ;

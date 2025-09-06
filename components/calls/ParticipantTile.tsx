@@ -23,18 +23,10 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef } from 'react';
 
-import type {
-  RemoteParticipant
-  LocalParticipant
-  TrackPublication
-  Track;
-  RemoteParticipant,
-  LocalParticipant,
-  TrackPublication,;
-  Track,;
-import type {
-  RemoteParticipant,
-  LocalParticipant,
+
+import type {;
+  RemoteParticipant,;
+  LocalParticipant,;
   TrackPublication,;
   Track,;
 } from 'livekit-client';
@@ -43,30 +35,27 @@ type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
-}
-export default function ParticipantTile({
-  participant
-  isLocal
-  displayName
-  participant,
-  isLocal,
-  displayName,;
-}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
-type Props = {
-  participant: RemoteParticipant | LocalParticipant
-  isLocal?: boolean;
-  displayName?: string
-}
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
 };
 
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  useEffect(() => {
-    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-      if (track.kind === 'video' && videoRef.current) {
-        track.attach(videoRef.current);
+export default function ParticipantTile(): any ({;
+  participant,;
+  isLocal,;
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {;
+  participant: RemoteParticipant | LocalParticipant,;
+
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+
+type Props = {
+  participant: RemoteParticipant | LocalParticipant,
+
+  isLocal?: boolean;
+  displayName?: string;
+};
+
+
+
       }
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.attach(audioRef && audioRef.current);      }
@@ -106,12 +95,15 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       if (track && track.kind === 'audio' && audioRef && audioRef.current) {;
         track && track.detach(audioRef && audioRef.current);
     };
+
     participant && participant.tracks.forEach(pub => {;
       const track = pub && pub.track;
       if (track) handleTrackSubscribed(pub, track);    });      if (track) handleTrackSubscribed(pub, track);
     });
+
     participant && participant.on('trackSubscribed', handleTrackSubscribed);
     participant && participant.on('trackUnsubscribed', handleTrackUnsubscribed);
+
     return () => {;
       participant && participant.off('trackSubscribed', handleTrackSubscribed);
       participant && participant.off('trackUnsubscribed', handleTrackUnsubscribed);
@@ -120,11 +112,6 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
-      participant.off('trackUnsubscribed', handleTrackUnsubscribed);
-    }
-  }, [participant]);
-  return (
-    <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
       <video
         ref={videoRef}
         autoPlay
@@ -286,3 +273,4 @@ if ( {) {
 );
 }
   );
+

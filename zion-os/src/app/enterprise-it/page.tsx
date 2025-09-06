@@ -22,14 +22,6 @@ export default /**
 function EnterpriseITPage() {
   return (
     <div className="min - h-screen">;
-import Link from "next/link",;
-export const metadata = {;
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
-export default function EnterpriseITPage() {;
-  return (;
-    <div className="min-h-screen">;
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

@@ -1,23 +1,11 @@
-import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface Report {
-  generatedAt: string;
-  commits: { last7d: number, last30d: number },
-  changes: { last7dFiles: string[] },
-  largestFiles: { file: string, bytes: number }[],
-  stalePages: { file: string, lastCommitAt: string }[]
-}
- 
 
- 
 
- 
+
 
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {;
+  try {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
@@ -45,6 +33,8 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   }
 }
 };
+
+
 export default function RepoHealth(): any ({ report }: Props) {;
 
 

@@ -1,15 +1,10 @@
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
-  skills: string[]
-  yearsExperience: number
-  location?: string
-  onSuggestionApplied: (value: number,) => void
   skills: string[],
   yearsExperience: number,
   location?: string,
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
-}
 
       // Track this suggestion application
       if (user && user.id) {
@@ -118,6 +113,17 @@ if ( {) {
   }
   },
 
+
+
+  return (
+    <div className="space-y-4">
+      <div>
+        {!suggestion && !isLoading ? (
+          <Button
+            type="button"
+            variant="outline"
+            onClick = {generateSuggestion,}
+            disabled = {skills.length === 0 |yearsExperience <= 0,}
             onClick={generateSuggestion}
             disabled={skills.length === 0 || yearsExperience <= 0}
             className="w-full"
@@ -139,4 +145,39 @@ if ( {) {
 };
 '"};
 };
+
+            suggestion={suggestion}
+            isLoading={isLoading}
+            onApplySuggestion={handleApplySuggestion}
+            rateType={rateType}
+          />;
+        )}
+
+      </div>;
+    </div>;
+  );
+};
+
+
+
+    <div className="space - y-4">;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type="button";
+            variant="outline";
+            on_click = {generate_suggestion, }
+            disabled = {skills.length === 0 || years_experience <= 0, }
+            className="w - full";
+          >;
+            <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
+          </Button>) : (
+          <PricingSuggestionBox;
+            suggestion = {suggestion, }
+            is_loading = {is_loading, }
+            onApplySuggestion = {handleApplySuggestion, }
+            rate_type = {rate_type, }
+          />)}
+      </div>;
+    </div>);
 }

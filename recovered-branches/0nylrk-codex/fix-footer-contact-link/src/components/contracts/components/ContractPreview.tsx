@@ -1,4 +1,44 @@
 
+import React from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {TalentProfile} from "@/types/talent";
+import {SmartContractInfo} from "@/types/smart-contracts";
+interface ContractPreviewProps {;
+  contractContent?: string;
+  generatedContract?: string, // Added to support both naming conventions;
+import React from './react';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { TalentProfile } from '@/types / talent';
+import { SmartContractInfo } from '@/types / smart - contracts';
+interface ContractPreviewProps {
+  contract_content?: string;
+  generated_contract?: string, // Added to support both naming conventions;
+
+  status?: 'draft' | 'ready' | 'pending';
+  talent?: TalentProfile;
+
+  on_deploy?: () => void;
+  on_sign?: () => void;
+  on_close?: () => void;
+  deploy_status?: string;
+  deployment_info?: SmartContractInfo | null;
+}
+export /**
+ * ContractPreview - Function description
+ */
+function ContractPreview() {
+  // Use either contract_content or generated_contract, whichever is provided;
+  const display_content = contract_content || generated_contract || "";
+;
+
+
+
+interface ContractPreviewProps {
+  contractContent?: string,
+  generatedContract?: string, // Added to support both naming conventions
+  status?: 'draft' | 'ready' | 'pending',
   talent?: TalentProfile;
   onDeploy?: () => void;
   onSign?: () => void;
@@ -119,6 +159,9 @@ export function ContractPreview({;
           </Badge>;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
+
+
+
         )}
 
       </div>;

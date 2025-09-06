@@ -8,15 +8,17 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-  CardTitle
+
   Card,
   CardContent,
   CardFooter,
   CardHeader,
+
+  key_points: string[];
+
+}
+interface GeneratedContentDisplayProps {
+interface GeneratedContentDisplayProps {;
   CardTitle,;
 } from "@/components/ui/card";
 
@@ -25,6 +27,9 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+
 
 interface GeneratedContent {
   description: string,
@@ -58,6 +63,7 @@ interface GeneratedContent {;
 }
 ;
 interface GeneratedContentDisplayProps {;
+
   content: GeneratedContent;
   onApply: () => void
 }
@@ -80,6 +86,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <p className="text-white">{content.description}</p>
         </div>
         
+
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -91,12 +99,15 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
                 className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30"
               >
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
+
                 {tag}
               </Badge>;
             ))}
           </div>
         </div>
         
+
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -107,6 +118,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           </p>
         </div>
         
+
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -195,15 +208,8 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
     </Card>
-  );
-}
-  )
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
-        >;
-          Apply to My Listing;
-          <ArrowRight className="ml-2 h-4 w-4" />;
-        </Button>;
-      </CardFooter>;
+
+
     </Card>;
   );
 }

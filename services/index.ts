@@ -11,35 +11,51 @@ export type {;
   ClickEvent;
   CreateShortUrlRequest;
 } from './urlShortenerService';
+
+;
+
 export type {
 
 
 export type {;
+
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
 } from './passwordGeneratorService';
+
+;
+
 export type {
 
 
 export type {;
+
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
 } from './qrCodeService';
+
+;
+
 export type {
 
 
 export type {;
+
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo;
 } from './fileConverterService';
+
+;
+
 export type {
 
 
 export type {;
+
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -72,9 +88,12 @@ export const SERVICE_CATEGORIES = {
 ;
 // Service metadata for the application;
 export const SERVICES_METADATA = {
-  urlShortener: {
-    name: 'URL Shortener'
+  url_shortener: {
+    name: 'URL Shortener',
+
+
     name: 'URL Shortener',;
+
     description: 'Create short, trackable URLs with analytics';
     icon: '';
     category: 'UTILITIES';
@@ -145,16 +164,15 @@ export const SERVICES_METADATA = {
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
-  return {
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+
+
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
+
+
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
@@ -170,19 +188,15 @@ export const getServiceStats = () => {
     totalRequests: 2847500;
     averageResponseTime: 125
     services: {
-      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
-      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
-      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
-      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 }
-      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
-    }
-  }
-}
+
+    pricing: 'Free (Basic) / $19.99 / month (Pro)',
+    api_endpoint: '/api / text - analysis';
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
+
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
 export { passwordGeneratorService } from './passwordGeneratorService',;
@@ -265,6 +279,9 @@ export const getServiceStats = () => {;
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },;
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
+
+
+
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
   }

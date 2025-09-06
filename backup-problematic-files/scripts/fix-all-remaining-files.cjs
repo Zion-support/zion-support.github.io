@@ -18,4 +18,3 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
     "confirmPassword"
     console.log('Signup "attempt")
         <meta name="description" content="
-        <meta name="description" content="

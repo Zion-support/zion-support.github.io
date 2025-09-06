@@ -24,15 +24,6 @@ function Navigation() {
   const [isServicesOpen, setIsServicesOpen] = useState (false);
   const [is_scrolled, setIsScrolled] = useState (false);
   return (
-"use client",;
-import { useState, useEffect, useRef } from "react",;
-import Link from "next/link",;
-export function Navigation() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
-  const [isSearchOpen, setIsSearchOpen] = useState(false),;
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  return (;
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;

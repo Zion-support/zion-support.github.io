@@ -1,4 +1,24 @@
 
+
+
+
+
+import React from "react";
+import {Brain, Clock, Award, Zap} from "lucide-react";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import React from "react",
+import { Brain, Clock, Award, Zap } from "lucide-react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+
+
+
+
+const features = [
+  {
+    icon: <Brain className="h-10 w-10 text-zion-cyan" />
+    title: "AI Talent Matching"
+    description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
+  }
   },
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />
@@ -41,12 +61,9 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+
+
+
 
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;

@@ -1,8 +1,37 @@
 
-import { Switch } from "@/components/ui/switch";
-import { Review } from "@/types/reviews";
-import { Switch } from "@/components/ui/switch",
-import { Review } from "@/types/reviews",
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {useForm} from "react-hook-form";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Switch} from "@/components/ui/switch";
+import {Review} from "@/types/reviews";
+interface ReviewFormValues {;
+
+import { useState } from './react';
+import { Star } from './lucide-react';
+import { use_form } from './react - hook - form';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
+import { Switch } from '@/components / ui / switch';
+import { Review } from '@/types / reviews';
+interface ReviewFormValues {
+  rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
+  is_anonymous?: boolean;
+}
+
+
+
+
 interface ReviewFormValues {
   rating?: number,
   review_text?: string,
@@ -32,6 +61,8 @@ export function ReviewForm(): any ({;
   revieweeName;
   onSubmit;
   defaultValues;
+
+
 import { useState } from "react",;
 import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
@@ -95,10 +126,8 @@ export function ReviewForm({
       timeliness_rating: undefined
       would_work_again: undefined
       is_anonymous: false}
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-  }),;
+  });
+
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
@@ -110,13 +139,15 @@ export function ReviewForm({
     if (success) {;
       form && form.reset();
     }
-  },
-  
-  const watchRating = form.watch("rating"),
-  
+
+  };
+
+  const watchRating = form && form.watch("rating");
+
+
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+    <Form {...form}>;
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -156,37 +187,12 @@ export function ReviewForm({
               </div>;
             </FormItem>;
           )}
-        />
-      rating: 0,
-      review_text: "",
-      communication_rating: undefined,
-      quality_rating: undefined,
-      timeliness_rating: undefined,
-      would_work_again: undefined,
-      is_anonymous: false}
-  }),;
-  const handleSubmit = async (values: ReviewFormValues) => {;
-    const formattedData = {;
-      ...values,;
-      project_id: projectId,;
-      reviewee_id: revieweeId},;
-    const success = await onSubmit(formattedData),;
-    if (success) {;
-      form.reset();
-    }
-  },
-  
-  const watchRating = form.watch("rating"),
-  
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-        
-  },;
-  const watchRating = form.watch("rating"),;
-  return (;
-    <Form {...form}>;
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
+
+        />;
+
+
+
+
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -319,6 +325,7 @@ if ( {) {
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
             
+
             {/* Communication */}
             <FormField
               control={form && form.control}

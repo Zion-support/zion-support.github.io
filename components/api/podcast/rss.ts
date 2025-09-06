@@ -33,10 +33,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
+
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+
   const items = episodes
     .filter(e => e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
@@ -82,8 +84,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
-  items
-}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+
+  items 
+}</channel> </rss>`;  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })
+
 }
 ;
 const EPISODES_PATH = path.join (
@@ -170,24 +174,6 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 }/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
   items;
 }</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' });
-    })
-    .join('\n'),
-
-  const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
-<rss version=&quot;2.0&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;>
-  <channel>
-    <title>Zion Podcast</title>
-    <link>${_siteUrl}/media/podcast</link>
-    <language>en-us</language>
-    <itunes:author>Zion</itunes:author>
-    <description>Zion interviews builders, founders, and contributors.</description>
-    ${_items}
-  </channel>
-</rss>`,
-
-  fs.writeFileSync(RSS_PATH, xml, 'utf8'),
-  return res.status(200).json({ ok: true, path: '/podcast.xml' })
-
 }
 
   items 
@@ -195,10 +181,4 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 
   items 
 }</channel> </rss>`;
-  items 
-}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
-}
 
-}
-}
-}</channel> </rss>`;

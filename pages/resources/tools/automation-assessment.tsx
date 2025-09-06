@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -5,6 +7,13 @@ export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
+
+
+
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function ToolPage() {
 
 
   const questions = [
@@ -30,31 +39,25 @@ export default function ToolPage() {
   ]
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
-  }
-  const calculateScore = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0)
-    const maxScore = questions.length * 5
-    const percentage = (totalScore / maxScore) * 100
-    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' }
-    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' }
-    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' }
-    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' }
-  }
+
+
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
-    } else {
-      setShowResults(true)
-    }
-  }
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function ToolPage(req, res) {
-  try {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
-  const [showResults, setShowResults] = useState(false);
+
+
+
+
+import React, { useState } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * ToolPage - Function description
+ */
+function ToolPage() {
+  const [current_question, setCurrentQuestion] = useState (0),
+  const [answers, set_answers] = useState<{ [key: string]: number }>({}),
+  const [show_results, setShowResults] = useState (false),
   const questions = [;
     {
       id: 'current - automation',
@@ -123,6 +126,47 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
+  },
+  const calculate_score = () =>: any {
+    const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
+    const max_score = questions.length * 5,
+    const percentage = (total_score / max_score) * 100,
+    // Check condition
+if (return { level: 'Advanced', color: 'text - green - 400', description: 'Your organization is well - positioned for advanced automation initiatives.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Intermediate', color: 'text - yellow - 400', description: 'You have a solid foundation and can move forward with strategic automation.' }, ) {
+  $2
+}
+    // Check condition
+if (return { level: 'Beginner', color: 'text - orange - 400', description: 'You have some groundwork to do before major automation projects.' }, ) {
+  $2
+}
+    return { level: 'Foundation', color: 'text - red - 400', description: 'Focus on building fundamentals before automation projects.' }
+  },
+  const next_question = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentQuestion (current_question + 1);
+    } else {
+      setShowResults (true);
+    }
+
+    setCurrentQuestion(0);
+    setAnswers({});
+    setShowResults(false)
+  };
+
+
+
+
+
   },
   const resetAssessment = () => {
     setCurrentQuestion(0)
@@ -165,23 +209,26 @@ export default function ToolPage(req, res) {
                   ))}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+                      <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <button 
 
                     onClick={resetAssessment}
-                  <button
-                    onClick={resetAssessment}
-                    onClick={resetAssessment  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
-                  <Link
-                  <Link 
-                  <Link
+
+
+
+
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
                   >
@@ -225,6 +272,8 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               </div>
             </div>
 
@@ -364,6 +413,8 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -373,49 +424,15 @@ export default function ToolPage(req, res) {
 
 
               <div className="flex justify-between">
-                <button 
-                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
-                  disabled={currentQuestion === 0}
-                <button
-                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
-                  disabled={currentQuestion === 0}
-                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  disabled={currentQuestion === 0  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
+
+
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
-                <button
-                  onClick={nextQuestion}
-                  disabled={!answers[currentQ.id]}
-                <button 
-                  onClick={nextQuestion}
-                  disabled={!answers[currentQ.id]}
-                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
-                </button>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    </>
-  );
-};
-                <button
-                  onClick={nextQuestion  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
 
   },
@@ -499,5 +516,7 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
-}
+
+

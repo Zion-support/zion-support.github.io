@@ -1,3 +1,5 @@
+
+import React from 'react';
 import {useState} from "react";
 import {toast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -6,15 +8,8 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles, Search } from "lucide-react";
-interface AIMatchmakerProps {
+
+interface AIMatchmakerProps {;
   serviceType?: string;
   onMatchSelect?: (match: any) => void,;
   className?: string;
@@ -37,6 +32,9 @@ interface AIMatchmakerProps {
   onMatchSelect?: (match: any) => void,
   className?: string
 }
+
+
+
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -101,22 +99,11 @@ interface AIMatchmakerProps {
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
+
       setIsMatchmaking(false)
-    }
-  }
-  const handleItemSelect = (item: any) => {
-    if (onMatchSelect) {
-      // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id)
-      if (matchResult) {
-        onMatchSelect(matchResult)
-      }
-    }
-  }
-  // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item);
 
   };
+
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -154,6 +141,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       }
     }
   },
+
+
+
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),

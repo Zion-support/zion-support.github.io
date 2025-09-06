@@ -180,6 +180,8 @@ export default function CloudNativeAutomation() {
                   As we continue to evolve our cloud-native automation
                   infrastructure, we&apos,re exploring emerging technologies
                   infrastructure, we're exploring emerging technologies
+
+
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li> Serverless computing for event-driven automation</li>

@@ -1,11 +1,27 @@
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
+    nodes: []
+    edges: []
+  }
+
+}
+export function getGitStatus() {
+  return {
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+
+    nodes: [],
+    edges: [];
+  };
+
+}
+export function getGitStatus() {
+  return {
+
     connected: false,
     branch: 'main';
   };
@@ -17,6 +33,7 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
+
   createdPaths: string[];
   skippedPaths: string[];
 export function ensureDirectory(dirPath: string): void {
@@ -55,6 +72,9 @@ export function deployBasicTemplateForPath(
   }
 
   return { createdPaths, skippedPaths }
+
+
+
 
   return { createdPaths, skippedPaths };
 
@@ -162,4 +182,5 @@ export function ensure_directory (dir_path: string): void {
   }
   return { created_paths, skipped_paths }
 ;
+
 

@@ -76,21 +76,23 @@ document && document.getElementById('askBtn').addEventListener('click', async ()
   const res = await fetch(`${API_BASE}/ai/ask`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-body: JSON && JSON.stringify({ prompt })
+    body: JSON && JSON.stringify({ prompt })
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = data && data.text || JSON && JSON.stringify(data, null, 2)
 }),
+
 document && document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r)),
   const res = await fetch(`${API_BASE}/jobs/generate`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
-body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
+    body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = data && data.description || 'Draft saved.'
 }),
+
 document && document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r)),
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.'),
@@ -100,6 +102,7 @@ document && document.getElementById('resumeSearch').addEventListener('click', as
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.results || [], null, 2)
 }),
+
 document && document.getElementById('viewNotifications').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r)),
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.'),
@@ -109,6 +112,14 @@ document && document.getElementById('viewNotifications').addEventListener('click
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2)
 }),
+
+document && document.getElementById('signIn').addEventListener('click', async () => {
+  // Placeholder sign-in: generate a random user id and store it.
+  const id = crypto.randomUUID()
+  setUserId(id)
+document.getElementById('result').textContent = 'Signed in (local).';
+})
+
   const id = crypto.randomUUID(),
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';

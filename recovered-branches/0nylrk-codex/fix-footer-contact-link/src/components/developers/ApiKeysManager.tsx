@@ -7,24 +7,26 @@ import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-  const {
-    keys;
 
-    loading
-    newApiKey;
-    fetchApiKeys
-    createApiKey
-    regenerateApiKey
 
-    revokeApiKey;
-    clearNewApiKey
-  } = useApiKeys();
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
 
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Label } from "@/components/ui/label",
+import { Badge } from "@/components/ui/badge",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
+
+import CodeBlock from "./CodeBlock",
+export function ApiKeysManager() {
+
   const { ;
     keys;
+
   const { 
     keys,
     loading, 
@@ -155,46 +157,7 @@ import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={scope.value}
-                        <Checkbox 
-                          id={scope.value} 
-import { useState } from "react",;
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
-import { format } from "date-fns",;
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Input } from "@/components/ui/input",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Label } from "@/components/ui/label",;
-import { Badge } from "@/components/ui/badge",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
-import CodeBlock from "./CodeBlock",;
-export function ApiKeysManager() {;
-  const {;
-    keys,;
-    loading,;
-    newApiKey,;
-    fetchApiKeys,;
-    createApiKey,;
-    regenerateApiKey,;
-    revokeApiKey,;
-    clearNewApiKey;
-  } = useApiKeys(),;
-  const [showCreateDialog, setShowCreateDialog] = useState(false),;
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
-  // Create key form state;
-  const [keyName, setKeyName] = useState(""),;
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
-  // Load keys on mount;
-  useState(() => {;
-    fetchApiKeys();
-  }),;
+
   const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
 
@@ -288,10 +251,18 @@ export function ApiKeysManager() {;
                 <div className="space-y-2">;
                   <Label>Scopes</Label>;
                   <div className="grid gap-2 pt-2">;
-                    {scopeOptions.map((scope) => (;
-                      <div key={scope.value} className="flex items-center space-x-2">;
-                        <Checkbox;
-                          id={scope.value} ;
+                    {scopeOptions && scopeOptions.map((scope) => (;
+                      <div key={scope && scope.value} className="flex items-center space-x-2">;
+                        <Checkbox
+                          id={scope && scope.value} 
+                          checked={selectedScopes && selectedScopes.includes(scope && scope.value)}
+                          onCheckedChange={() => toggleScope(scope && scope.value)}
+                        />;
+
+
+                        <Checkbox 
+                          id={scope.value} 
+
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -532,23 +503,28 @@ function ApiKeysManager() {
                       <div className="flex items - center space - x-2 mt - 1">;
                         <span className="text - sm text - zinc - 400 font - mono">{key.key_prefix}••••••••••••</span>;
                         {key.is_active ? (
-                          <Badge className="bg-green-700 text-white">Active</Badge>
-                        ) : (
-                          <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
-                        <MoreVertical size={16} />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
-                      <DropdownMenuItem
-                        onClick={() => setShowRegenerateConfirm(key.id)}
-                        className="cursor-pointer"
+                          <Badge className="bg - green - 700 text - white">Active</Badge>) : (
+                          <Badge variant="secondary" className="bg - red - 900 text - white border - red - 800">Revoked</Badge>)}
+                      </div>;
+                    </div>;
+                  </div>;
+                  <DropdownMenu>;
+                    <DropdownMenuTrigger as_child>;
+
+                      <Button variant="ghost" size="icon">;
+                        <MoreVertical size={16} />;
+                      </Button>;
+                    </DropdownMenuTrigger>;
+
+                        onClick={() => setShowDeleteConfirm(key && key.id)}
+                        className="cursor-pointer text-red-500";
+                        disabled={!key && key.is_active}
+                      >;
+                        <X size={14} className="mr-2" /> Revoke;
+                    <DropdownMenuContent align="end" className="bg - zinc - 900 border - zinc - 800 text - white">;
+                      <DropdownMenuItem;
+                        on_click={() => setShowRegenerateConfirm (key.id)}
+                        className="cursor - pointer";
                         disabled={!key.is_active}
                       >
                         <RefreshCw size={14} className="mr-2" /> Regenerate
@@ -609,6 +585,10 @@ function ApiKeysManager() {
           Refresh
         </Button>
       </CardFooter>
+
+
+
+
 
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog

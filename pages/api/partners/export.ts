@@ -1,4 +1,18 @@
 
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+  const code = (req.query.code as string)?.toLowerCase();
+  if (!code) return res.status(400).json({ error: "Missing code" });
+
+  const usingPlaceholder =
+
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
@@ -31,8 +45,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
+    return res && res.status(500).json({ error: e?.message });
+
   }
+
 }
 }
   const using_placeholder =;
@@ -96,3 +112,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

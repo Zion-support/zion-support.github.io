@@ -1,12 +1,6 @@
 
-import React from 'react';
-import { Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-import { AIEnhancementPanel  } from './AIEnhancementPanel';
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {
+
+
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -21,6 +15,7 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
+
 import React from 'react',;
 import {;
   Dialog,;

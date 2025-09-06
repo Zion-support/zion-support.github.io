@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  if (req.method !== 'POST')
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
+
   const {
     slug
     name
@@ -102,8 +98,5 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
-
-    res.status(500).json({ error: e.message });
-  }    res.status(500).json({ error: e.message })
   }
 }

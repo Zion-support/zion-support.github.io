@@ -4,13 +4,12 @@ interface UltraFuturisticBackground2037Props {intensity?: 'low' | 'medium' | 'hi
   theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-neon';
   children?: React.ReactNode;
 }
-:components/broken/UltraFuturisticBackground2037.tsx
-export default function UltraFuturisticBackground2037({intensity = 'medium';
-  theme = 'quantum-neon';
+
 ;
 export default function UltraFuturisticBackground2037({;
   intensity = 'medium',;
   theme = 'quantum-neon',;
+
   children;
 }: UltraFuturisticBackground2037Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {;

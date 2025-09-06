@@ -397,6 +397,8 @@ class SecurityScanner {}
       
       
       
+      
+      
       // Run npm audit;
       const auditResult = execSync('npm audit --json', { })
         encoding: 'utf8',
@@ -404,6 +406,8 @@ class SecurityScanner {}
         cwd: process.cwd();
       }
 });
+
+
 
 
 
@@ -463,6 +467,8 @@ class SecurityScanner {}
 
 
 
+
+
       const sourceFiles = this.getSourceFiles();
       for (const file of sourceFiles) {}
         try {}
@@ -487,6 +493,8 @@ class SecurityScanner {}
 
 
 
+
+
       return {}
         scanned: true,
         issues: securityIssues,
@@ -504,6 +512,8 @@ class SecurityScanner {}
     };
     try {}
       this.log('Scanning configuration files...');
+      
+      
       
       
       
@@ -553,6 +563,8 @@ class SecurityScanner {}
 
 
 
+
+
       return {}
         scanned: true,
         issues: configIssues,
@@ -569,12 +581,16 @@ class SecurityScanner {}
 
 
 
+
+
     const scanDir = (dir) => {}
       try {}
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
+          
+          
           
           
           
@@ -588,6 +604,8 @@ class SecurityScanner {}
         // Skip directories that can't be read;
       };
     };
+
+
 
 
 
@@ -644,6 +662,8 @@ class SecurityScanner {}
         this.log('Security scan completed - no issues found');
       } else {}
         this.log(`Security scan completed - found ${totalIssues} issues`);
+        
+        
         
         
         

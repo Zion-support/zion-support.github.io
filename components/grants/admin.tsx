@@ -5,6 +5,26 @@ import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 
+  const [token, setToken] = useState('');
+
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [selected, setSelected] = useState<GrantApplication | null>(null);
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+
+
+  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
+
+
+  const load = () => {
+    fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
+  }
+  useEffect(() => {
+    load()
+  }, []);
+  const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
+    await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
+    load()
+
 
   const headers = useMemo(;
     () =>;
@@ -16,11 +36,13 @@ import type { GrantApplication, Milestone } from '../../types/grants';
         : { 'Content-Type': 'application/json' },;
     [token];
   );
+
   const load = () => {;
     fetch('/api/grants?status=Submitted');
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
   };
+
   const saveMilestones = async () => {
     if (!selected) return;
     await fetch(`/api/grants/${selected.id}/milestones`, {
@@ -32,7 +54,8 @@ import type { GrantApplication, Milestone } from '../../types/grants';
   const markComplete = async (milestoneId: string) => {
     if (!selected) return;    await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) })
     alert('Milestones saved')
-  }
+  };
+
   const markComplete = async (milestoneId: string) => {
     if (!selected) return;
     await fetch(
@@ -450,7 +473,7 @@ if (return) {
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <div className="mb-3 flex items-center gap-2">
-<input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
+            <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
           </div>
           <div className="grid gap-3">
             {items.map((g) => (
@@ -465,12 +488,11 @@ if (return) {
                     <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
                     <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
                     <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
-
                   </div>
                 </div>
               </div>
             ))}
-{items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
+            {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
 
         </div>
@@ -503,10 +525,52 @@ if (return) {
 
             )}
 
+
           </div>
         </div>
       </div>
     </EnhancedLayout>
+
+                    onClick={saveMilestones}>;
+                    Save Milestones;
+                  </button>;
+                </div>;
+              </div>;
+            ) : (;
+              <div className='text-sm text-gray-600'>;
+                Select a grant to plan milestones.;
+              </div>            )}          </div>;
+        </div>;
+        <div>;
+          <div className="border rounded p-3">;
+            <h2 className="font-medium mb-2">Milestone Planner</h2>;
+            {selected ? (;
+              <div className="space-y-2">;
+                {(milestones && milestones.length === 0 ? (selected && selected.milestones || []) : milestones).map((m, idx) => (;
+                  <div key={m && m.id || idx} className="border rounded p-2">;
+                    <input className="w-full border rounded p-2 mb-2" placeholder="Title" value={m && m.title} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e && e.target.value }, return copy })} />;
+                    <textarea className="w-full border rounded p-2 mb-2" placeholder="Description" value={m && m.description || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e && e.target.value }, return copy })} />;
+                    <div className="grid grid-cols-2 gap-2">;
+                      <input className="border rounded p-2" placeholder="Due date (YYYY-MM-DD)" value={m && m.dueDate || ''} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], dueDate: e && e.target.value }, return copy })} />;
+                      <input className="border rounded p-2" placeholder="Tranche (amount)" type="number" value={m && m.trancheAmount || 0} onChange={(e) => setMilestones((ms) => { const copy = (ms && ms.length ? [...ms] : [...(selected && selected.milestones || [])]), copy[idx] = { ...copy[idx], trancheAmount: Number(e && e.target.value) }, return copy })} />;
+                    </div>;
+                    <div className="mt-2 flex items-center gap-2">;
+                      <button className="px-2 py-1 border rounded" onClick={() => markComplete(m && m.id!)} disabled={!m && m.id}>Mark Complete</button>;
+                    </div>;
+                  </div>;
+                ))}
+                <div className="flex gap-2 mt-2">;
+                  <button className="px-2 py-1 border rounded" onClick={() => setMilestones((ms) => [...(ms && ms.length ? ms : (selected && selected.milestones || [])), { id: `${Date && Date.now()}-${Math && Math.random()}`, title: '', trancheAmount: 0, trancheCurrency: 'USDC' } as any])}>Add Milestone</button>;
+                  <button className="px-2 py-1 bg-blue-600 text-white rounded" onClick={saveMilestones}>Save Milestones</button>;
+                </div>;
+              </div>;
+            ) : (;
+              <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>;
+            )}
+          </div>;
+        </div>;
+      </div>;
+    </EnhancedLayout>;
   );
 
   );
@@ -554,6 +618,4 @@ if (return) {
         </div>;
       </div>;
     </EnhancedLayout>);
-}
-  );
 }

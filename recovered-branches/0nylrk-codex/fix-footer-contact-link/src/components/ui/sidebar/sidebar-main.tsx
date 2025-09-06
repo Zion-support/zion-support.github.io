@@ -23,13 +23,10 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-  if (props.collapsible === &quot;none&quot;) {
-    return (
-      <div
-        className={cn(
-          &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
+
 ;
   if (props.collapsible === &quot;none&quot;) {
+
 
   if (props.collapsible === "none") {
     return (
@@ -95,9 +92,7 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
   return (;
     <div;
       ref={ref}
-      className="group peer hidden md:block text-sidebar-foreground"
-className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
-      className="group peer hidden md:block text-sidebar-foreground"
+
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -159,10 +154,8 @@ export const SidebarRail = React.forwardRef<
 Sidebar.displayName = "Sidebar"
 
 export const SidebarRail = React.forwardRef<
-  HTMLButtonElement,;
-  React.ComponentProps<&quot;button&quot;>
-  HTMLButtonElement,
-  React.ComponentProps<"button">
+
+
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -199,10 +192,8 @@ export const SidebarInset = React.forwardRef<
 SidebarRail.displayName = "SidebarRail"
 
 export const SidebarInset = React.forwardRef<
-  HTMLDivElement,;
-  React.ComponentProps<&quot;main">
-  HTMLDivElement,
-  React.ComponentProps<"main">
+
+
 >((props, ref) => {
   return (
     <main

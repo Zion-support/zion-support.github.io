@@ -121,11 +121,7 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   });
   return { items }
 });
-const port = Number(process.env.API_PORT |4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-app.log.error(err);
-app.log.error(err);
-  app.log.error(err);
+
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
@@ -151,3 +147,6 @@ app.get('/notifications', async (req: any, reply: any) => {
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+  app.log.error(err);
+  (process as any).exit(1)
+});

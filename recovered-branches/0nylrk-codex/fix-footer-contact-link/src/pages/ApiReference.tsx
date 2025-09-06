@@ -1,18 +1,5 @@
 
-import React, { useState } from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-export function ApiReference() {;
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-import React, { useState } from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-import { CodeBlock } from "@/components/developers/CodeBlock",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
 
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
@@ -234,74 +221,7 @@ function ApiReference() {
         "201": {
           description: "Job created successfully"
           example: `{
-  "id": "job-456",
-  "title": "UX Designer",
-  "description": "Looking for a UX designer with 3+ years experience...",
-  "category": "design",
-  "budget": {
-    "min": 3000;
-    "max": 5000
-    "currency": "USD"
-  },
-  "status": "open",
-  "created_at": "2023-05-15T10:12:00Z"
-}`
-        }
-    "min": 3000,
-    "max": 5000,
-    "currency": "USD"
-  },
-  "status": "open",
-  "created_at": "2023-05-15T10:12:00Z"
-}`
-        },
-        "400": {
-          description: "Bad request"
-          example: `{
-  "error": "validation_error",
-  "message": "Invalid input",
-  "details": [
-    {
-      "field": "title"
-      "error": "Title is required"
-    }
-  ]
-}`
-        }
-      }
-      "field": "title",
-      "error": "Title is required"
-      };
-import React, { useState } from "react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-import { CodeBlock } from "@/components/developers/CodeBlock",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-export function ApiReference() {;
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;
-  // Sample endpoint data;
-  const endpoints = [;
-    {;
-      id: "get-jobs",;
-      method: "GET",;
-      path: "/api/jobs",;
-      description: "Retrieve a list of job postings with optional filtering",;
-      parameters: [;
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },;
-        { name: "category", type: "string", description: "Filter by job category" },;
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
-      responses: {;
-        "200": {;
-          description: "A list of jobs",;
-          example: `{;
-  "jobs": [;
-    {;
-      "id": "job-123",;
-      "title": "Senior React Developer",;
-      "description": "We're looking for an experienced React developer...",;
-      "category": "development",;
-      "budget": {;
-        "min": 5000,;
+
         "max": 10000,;
         "currency": "USD";
       };
@@ -398,7 +318,32 @@ export function ApiReference() {;
   ];
 }`;
         }
-      },
+
+  "id": "job-456",
+  "title": "UX Designer",
+  "description": "Looking for a UX designer with 3+ years experience...",
+  "category": "design",
+  "budget": {
+
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        },
+
+        "400": {
+          description: "Bad request"
+          example: `{
+  "error": "validation_error",
+  "message": "Invalid input",
+  "details": [
+    {
+
+
+
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -656,15 +601,39 @@ export function ApiReference() {;
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
+
+                    <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
+                    <CodeBlock
+                      code={activeEndpointData && activeEndpointData.requestExample} 
+                      language="bash"
+                      showLineNumbers={true}
+                    />;
+                  </div>;
+
+                  {/* Response section */}
+                  <div>;
+                    <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>;
+
+                    {Object && Object.entries(activeEndpointData && activeEndpointData.responses).map(([status, response]) => (;
+                      <div key={status} className="mb-6">;
+                        <div className="flex items-center mb-3">;
+                          <spanclassName={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
+                            status && status.startsWith('2') ? 'bg-green-950 text-green-500' : 
+                            status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' : 
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
-                          </span>
-                          <span className="text-white">{response.description}</span>
-                        </div>
+
+                          </span>;
+                          <span className="text-white">{response && response.description}</span>;
+                        </div>;
+
                         <CodeBlock
-                          code={response.example}
+                          code={response && response.example} 
+
+
                         
+
                         <CodeBlock 
                           code={response.example} 
                           language="json"
@@ -781,8 +750,6 @@ export default ApiReference;
     </ApiDocsLayout>;
   );
 }
-
-;
 export default ApiReference;
 
 ;

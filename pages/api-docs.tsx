@@ -1,21 +1,19 @@
-import React from 'react';
-origin/automation-improvements-final
+
+
 import { motion } from 'framer-motion';
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {
-  ArrowRight
-  Server
-  Lock
-  Brain
-  Cloud
+
+
 import { 
   ArrowRight,
   Server,
   Lock,
   Brain,
   Cloud;
+
+
 } from 'lucide-react';
 const apiEndpoints = [
   {
@@ -101,10 +99,16 @@ export default function ApiDocsPage() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
-ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/main
-origin/automation-improvements-final
+
+export default function APIDocsPage() {;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
+      <Head>;
+        <title>API Documentation - Zion Tech Group | Developer Resources</title>;
+        <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />;
+        <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />;
+      </Head>;
 
       {/* Hero Section */}
 
@@ -296,20 +300,9 @@ function APIDocsPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Our developer support team is here to help you integrate our APIs successfully.
-            </p>
-            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-              Contact Developer Support
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+
+
+
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -321,36 +314,57 @@ function APIDocsPage() {
         </p>
       </div>
     </Layout>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
+
   );
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
-        <meta name='description' content='API reference and guides.' />
-<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
-        <meta name='description' content='API reference and guides.' />
-<link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+
+
+
+
+import React from 'react',
+import Head from 'next/head',
+export default function ApiDocsPage() {
+  return (
+    <>
+      <Head>
+        <title>API Docs | Zion Tech Group</title>
+
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+
+
+
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
-      <div className='container mx-auto px-4 py-16 text-gray-200'>
-        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
-        <p className='text-gray-300'>
-          See{' '}
-          <a href='/api-docs' className='text-cyan-400 underline'>
-            API Documentation
-          </a>{' '}
-          for the full reference.
-        </p>
-ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
-    </Layout>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>;
+            <p className="text-xl mb-8 max-w-2xl mx-auto">;
+              Our developer support team is here to help you integrate our APIs successfully.;
+            </p>;
+            <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
+              Contact Developer Support;
+            </Link>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+}
+import Layout from '../components/Layout';
+
+export default function APIDocsPage() {;
+export default function ApiDocsPage() {;
+  return (
+
+
+
   );
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
@@ -394,3 +408,90 @@ export default function ApiDocsPage(req, res) {
     </>;
   );
 }
+
+
+                <motion.div;
+                  key={index}
+                  className="bg - white rounded - xl shadow - lg p - 8 border border - gray - 100";
+                  initial={{ opacity: 0, coordinate_y: 30 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >;
+                  <div className="flex items - center mb - 4">;
+                    <div className="bg - blue - 100 p - 3 rounded - lg mr - 4">;
+                      <IconComponent className="w - 6 h - 6 text - blue - 600" />;
+                    </div>;
+                    <div>;
+                      <h3 className="text - xl font - semibold text - gray - 900">{endpoint.title}</h3>;
+                      <code className="text - sm text - blue - 600">{endpoint.endpoint}</code>;
+                    </div>;
+                  </div>;
+                  <p className="text - gray - 600 mb - 4">{endpoint.description}</p>;
+                  <div className="mb - 4">;
+                    <h4 className="text - sm font - semibold text - gray - 900 mb - 2">Supported Methods:</h4>;
+                    <div className="flex flex - wrap gap - 2">;
+                      {endpoint.methods.map ((method, idx) => (
+                        <span key={idx} className="bg - green - 100 text - green - 800 text - xs px - 2 py - 1 rounded">;
+                          {method}
+                        </span>))}
+                    </div>;
+                  </div>;
+                  <Link;
+                    href={`/api - docs/${endpoint.endpoint.replace ('/api/', '')}`}
+                    className="inline - flex items - center text - blue - 600 hover:text - blue - 800 font - semibold transition - colors";
+                  >;
+                    View Documentation;
+                    <ArrowRight className="w - 4 h - 4 ml - 1" />;
+                  </Link>;
+                </motion.div>);
+            })}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py - 20 bg - gradient - to - r from - purple - 600 to - indigo - 600 text - white">;
+        <div className="container mx - auto px - 4 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">Need Help with Integration?</h2>;
+            <p className="text - xl mb - 8 max - w-2xl mx - auto">;
+              Our developer support team is here to help you integrate our APIs successfully.;
+            </p>;
+            <Link href="/contact" className="px - 8 py - 4 bg - white text - purple - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold">;
+              Contact Developer Support;
+            </Link>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>);
+}
+import Layout from '../components / Layout';
+;
+export default /**
+ * APIDocsPage - Function description
+ */
+function APIDocsPage() {
+export default /**
+ * ApiDocsPage - Function description
+ */
+function ApiDocsPage() {
+  return (
+    <>;
+      <Head>;
+        <title > API Docs | Zion Tech Group</title>;
+        <meta name='description' content='API reference and guides.' />;
+<link rel='canonical' href='https://ziontechgroup.com / api - docs' />;
+      </Head>;
+      <div className="container mx - auto px - 4 py - 16 text - gray - 200">;
+        <h1 className="text - 4xl md:text - 6xl font - bold mb - 4">API Docs</h1>;
+        <p className="text - gray - 300">See <a href="/api - docs" className="text - cyan - 400 underline">API Documentation</a> for the full reference.</p>;
+      </div>;
+    </Layout>);
+    </>);
+}
+

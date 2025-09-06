@@ -1,4 +1,13 @@
 
+
+
+
+interface InterviewRequestFormProps {
+
+  talent: TalentProfile
+  onClose: () => void
+  userDetails?: UserProfile
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -17,27 +26,47 @@ import {format, addDays} from "date-fns";
 import {CalendarIcon, Check, Clock} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
-import { TalentProfile } from "@/types/talent",
-import { UserProfile } from "@/types/auth",
-import { cn } from "@/lib/utils",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { format, addDays } from "date-fns",
-import { CalendarIcon, Check, Clock } from "lucide-react",
-import { toast } from "@/components/ui/use-toast";
-import { useInterviews } from "@/hooks/useInterviews";
-import { toast } from "@/components/ui/use-toast",
-import { useInterviews } from "@/hooks/useInterviews",
-interface InterviewRequestFormProps {
+interface InterviewRequestFormProps {;
+  talent: TalentProfile,;
+  onClose: () => void,;
+  userDetails?: UserProfile;
+}
+
+const formSchema = z && z.object({;
+  date: z && z.date({;
+    required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {;
+    message: "Interview date must be in the future";
+  });
+  time: z && z.string().min(1, "Please select a time for the interview.");
+  duration: z && z.string().min(1, "Please select the interview duration.");
+  platform: z && z.string().min(1, "Please select a meeting platform.");
+  meetingLink: z && z.string().optional(),;
+  title: z && z.string().min(3, "Please provide a brief title for the interview.");
+  notes: z && z.string().optional()}),;
+
+export function InterviewRequestForm(): any ({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
+  const { requestInterview } = useInterviews();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<z && z.infer<typeof formSchema>>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      title: `Interview with ${talent && talent.full_name}`,;
+      duration: "30",;
+      platform: "zoom",;
+      notes: "",;
+      meetingLink: ""}}),;
+
+  async function onSubmit(): any (values: z && z.infer<typeof formSchema>) {;
+    if (!userDetails?.id) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please log in to schedule an interview",;
+        variant: "destructive"}),;
+      return;
+
+    }
+    setIsSubmitting(true);
 
 }
 const formSchema = z.object({
@@ -591,6 +620,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormMessage />;
 
               </FormItem>;
+
+
             )}
           />;
 

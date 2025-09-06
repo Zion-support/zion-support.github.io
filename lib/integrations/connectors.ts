@@ -1,9 +1,3 @@
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-import { ProviderConnection, SyncLogEntry } from "./types";
-import { v4 as uuidv4 } from "uuid";
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
 
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
@@ -18,30 +12,56 @@ async function mockProviderCall<T>(
 }
 // CRM actions;
 export const crm = {
-  async syncContact(
-    connection: ProviderConnection
-    contact: Record<string, any>
-  ) {
-    connection: ProviderConnection,
-    contact: Record<string, any>,
-  ) {;
-    return mockProviderCall(connection, "sync_contact", { contact });
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 
 };
 
 // ATS actions
 export const ats = {
-  async updateStatus(
-    connection: ProviderConnection
-    status: Record<string, any>
-  ) {
+
+  async pushApplicant($2) {
+    return simulateAction($3);
+  },
+  async uploadResume($2) {
+    return simulateAction($3);
+  },
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+    return simulateAction(connection, 'ats.updateStatus', { change })
+  }};
+
+  async sync_contact (
     connection: ProviderConnection,
-    status: Record<string, any>,
-  ) {;
-    return mockProviderCall(connection, "update_status", { status });
-  }
+    contact: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "sync_contact", { contact });
+  },
+  async addEmailTouchpoint (
+    connection: ProviderConnection,
+    touchpoint: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "add_email_touchpoint", { touchpoint });
+  },
+  async addProjectNote (
+    connection: ProviderConnection,
+    note: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "add_project_note", { note });
+  },
 }
+;
+// ATS actions;
+export const ats = {
+  async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "update_status", { status });
+  },
+}
+;
 
   async createCandidate(
     connection: ProviderConnection,
@@ -50,3 +70,4 @@ export const ats = {
     return executeProviderAction(connection, 'createCandidate', { candidate });
   },
 };
+

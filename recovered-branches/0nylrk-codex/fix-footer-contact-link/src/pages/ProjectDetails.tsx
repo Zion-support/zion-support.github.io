@@ -1,7 +1,34 @@
-function ProjectDetailsContent() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string }
+
+
+
+
+import {useState, useEffect} from "react";
+import {useParams, useNavigate, Link} from "react-router-dom";
+import {format} from "date-fns";
+import {useAuth} from "@/hooks/useAuth";
+import {useProjects} from "@/hooks/useProjects";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {Project, ProjectStatus} from "@/types/projects";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog";
+import {Avatar} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Textarea} from "@/components/ui/textarea";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
+import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
+
+
+function ProjectDetailsContent() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { projectId } = useParams() as { projectId?: string };
   const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
@@ -13,14 +40,9 @@ function ProjectDetailsContent() {
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
-  // Load project data
-  useEffect(() => {
-    async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
-      if (projectData) {
-        setProject(projectData);
+
+
+
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -71,6 +93,34 @@ import {
   Video,
   User,
   XCircle} from "lucide-react",
+
+
+
+
+function ProjectDetailsContent() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { projectId } = useParams() as { projectId?: string },
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
+  const { getProjectById, updateProjectStatus } = useProjects(),
+  
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState(""),
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+  const [activeTab, setActiveTab] = useState("details"),
+  
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+      if (!projectId) return,
+      
+      setIsLoading(true),
+      const projectData = await getProjectById(projectId),
+      
+      if (projectData) {
         setProject(projectData),
         
         // Now fetch notes
@@ -291,6 +341,9 @@ if ( {) {
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+
+
+
       }
 
       setIsLoading(false);
@@ -1590,9 +1643,7 @@ if ( {) {
 
                     </div>;
                   </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
+
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1739,3 +1790,4 @@ export default function ProjectDetails() {;
   );
 }
 ;
+

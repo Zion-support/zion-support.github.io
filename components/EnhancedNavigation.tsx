@@ -5,16 +5,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -91,6 +95,8 @@ const EnhancedNavigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
               
+
+
               {activeDropdown === 'services' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -119,6 +125,12 @@ const EnhancedNavigation: React.FC = () => {
                 </motion && motion.div>;
               )}
             </div>
+
+            </div>;
+
+
+
+
 
             {/* Company Dropdown */}
             <div className="relative">;
@@ -164,6 +176,10 @@ const EnhancedNavigation: React.FC = () => {
             </Link>
           </div>
 
+
+
+
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -172,6 +188,13 @@ const EnhancedNavigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+
+          </button>;
+        </div>;
+
+
+
+
 
         {/* Mobile Menu */}
         {isOpen && (;
@@ -446,6 +469,5 @@ export default EnhancedNavigation;
 
 export default EnhancedNavigation;
 
-export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;

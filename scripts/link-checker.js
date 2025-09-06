@@ -19,7 +19,7 @@ const __filename = fileURLToPath(import && import.meta.url),"}),"})
 const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
 console && console.log(,"}),"})
-  ' Link Checker Started'),"}),"})
+  '🔗 Link Checker Started'),"}),"})
 ,"}),"})
 class LinkChecker {,"}),"})
   constructor() {,"}),"})
@@ -31,7 +31,7 @@ class LinkChecker {,"}),"})
 ,"}),"})
   async checkLinks() {,"}),"})
     try {,"}),"})
-      console && console.log(' Scanning project for links...,"}),"})
+      console && console.log('📁 Scanning project for links...,"}),"})
   '),"}),"})
 ,"}),"})
       // Check HTML files for links,"}),"})
@@ -43,21 +43,21 @@ class LinkChecker {,"}),"})
       // Check package && package.json for repository links,"}),"})
       await this && this.checkPackageLinks(),"}),"})
 ,"}),"})
-      console && console.log(` Link check completed. Checked ${this && this.checkedLinks} links.`),"}),"})
+      console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`),"}),"})
 ,"}),"})
       if (this && this.brokenLinks.length > 0) {,"}),"})
-        console && console.log(`  Found ${this && this.brokenLinks.length} potentially broken "links": `),"}),"})
+        console && console.log(`⚠️  Found ${this && this.brokenLinks.length} potentially broken "links": `),"}),"})
         this && this.brokenLinks.forEach(link => {,"}),"})
           console && console.log(`   - ${link}`),"}),"})
         }),"}),"})
       } else {,"}),"})
         console && console.log(,,"}),"})
-   All links appear to be valid!,"}),"})
+  🎉 All links appear to be valid!,"}),"})
   '),"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      console && console.error(' Error during link "checking": error && error.message),"}),"})
+      console && console.error('❌ Error during link "checking": error && error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -129,7 +129,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }"}),"})
     } catch (error) {,"}),"})
       console && console.warn(,,"}),"})
-    Could not check package && package.json "links": error && error.message),"}),"})
+  ⚠️  Could not check package && package.json "links": error && error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -220,7 +220,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Run the link checker,"}),"})
 const linkChecker = new LinkChecker(),"}),"})
 linkChecker && linkChecker.checkLinks().then(() => {,"}),"})
-  console && console.log(' Link Checker Completed,"}),"})
+  console && console.log('🔗 Link Checker Completed,"}),"})
   '),"}),"})
   process && process.exit(0),"}),"})
 }).catch((error) => {,"}),"})
@@ -239,23 +239,23 @@ class LinkChecker {;
     this && this.checkedLinks = 0}
   async checkLinks() {
     try {'
-      console && console.log(' Scanning project for links...';);
+      console && console.log('📁 Scanning project for links...';);
       // Check HTML files for links;
       await this && this.scanHtmlFiles();
       // Check markdown files for links;
       await this && this.scanMarkdownFiles();
       // Check package && package.json for repository links;
       await this && this.checkPackageLinks();
-      console && console.log(` Link check completed. Checked ${this && this.checkedLinks} links.`);
+      console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`);
       if (this && this.brokenLinks.length > 0) {"
-        console && console.log("  Found ${this && this.brokenLinks.length} potentially broken "links": ");
+        console && console.log("⚠️  Found ${this && this.brokenLinks.length} potentially broken "links": ");
         this && this.brokenLinks.forEach(link => {"
           console && console.log(`   - ${link}`)})} else {
         console && console.log(
-   All links appear to be valid!;"
+  🎉 All links appear to be valid!;"
   ')}
     } catch (error) {'
-      console && console.error(' Error during link "checking": error && error.message)}
+      console && console.error('❌ Error during link "checking": error && error.message)}
   }
   async scanHtmlFiles() {'
     const htmlFiles = this.findFiles('.html';);
@@ -302,7 +302,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       }
     } catch (error) {;
       console && console.warn(,
-    Could not check package && package.json "links": error && error.message)}
+  ⚠️  Could not check package && package.json "links": error && error.message)}
   }
   findFiles(extension) {
     const files = [];

@@ -1,24 +1,6 @@
 // Categories for filtering
 
 const CATEGORIES = [
-  'All Categories'
-  'Trends'
-  'Marketing'
-  'Sustainability'
-  'Ethics'
-  'Recruitment'
-  'Infrastructure'
-]
-export interface BlogProps {
-  posts?: BlogPost[]
-export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts })
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('All Categories')
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts])
-  const query = useDebounce(searchQuery, 300)
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
   "All Categories",
   "Trends",
   "Marketing",
@@ -41,9 +23,55 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
+
+  // Reset state when navigating away to avoid cross-page leakage
+  useEffect(() => {
+    return () => {
+      setSearchQuery('')
+      setSelectedCategory('All Categories')
+      setPosts([...initialPosts])
     }
-    fetchPosts()
-  }, [query])
+  }, [router.asPath, initialPosts]);
+  // useEffect(() => {;
+  //   const interval = setInterval(() => {;
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
+  //   }, 120000); // every 2 minutes
+  //   return () => clearInterval(interval)
+  // }, [])
+  useEffect((,) => {
+    const fetchPosts = async () => {
+      setIsLoading(true)
+      try {
+        const data: BlogPost[] = await fetchWithRetry(
+          `/api/blog?query=${encodeURIComponent(query)}`
+        )
+      setSearchQuery(""),
+      setSelectedCategory("All Categories"),
+      setPosts([...initialPosts])
+    }
+  }, [router.asPath, initialPosts]),
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]),
+  //   }, 120000), // every 2 minutes
+  //   return () => clearInterval(interval),
+  // }, []),
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setIsLoading(true),
+      try {
+        const data: BlogPost[] = await fetchWithRetry(
+          `/api/blog?query=${encodeURIComponent(query)}`
+        ),
+
+        setPosts(data)
+      } catch (err) {
+        logErrorToProduction ('Failed to fetch blog posts', { data: err });
+      } finally {
+        setIsLoading (false);
+      }
     },
 
     fetchPosts()
@@ -53,7 +81,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === 'All Categories' |
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
@@ -99,122 +126,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
-              Expert perspectives on artificial intelligence, tech innovation
-              and digital transformation
-            </p>
-          </div>
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 &&
-            (() => {
-              const featuredPost = featuredPosts[0]
-              if (!featuredPost) return null
-              return (
-                <div className='mb-16'>
-                  <h2 className='text-2xl font-bold text-white mb-6'>
-                    Featured Article
-                  </h2>
-                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                    <div className='aspect-video overflow-hidden rounded-lg'>
-                      <img
-                        src={featuredPost.featuredImage}
-                        alt={
-                          featuredPost.featuredImageAlt |featuredPost.title
-                        }
-                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
-                        onError={e => {
-                          const target = e.currentTarget as HTMLImageElement
-                          target.src = '/images/blog-placeholder.svg'
-                        }}
-                      />
-                    </div>
-                    <div className='flex flex-col justify-center'>
-                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>
-                        {featuredPost.category}
-                      </span>
-                      <h3 className='text-3xl font-bold text-white mb-4'>
-                        {featuredPost.title}
-                      </h3>
-                      <p className='text-zion-slate-light mb-6'>
-                        {featuredPost.excerpt}                      </p>
-                      <div className='flex items-center mb-6'>
-                        <img
-                          src={featuredPost.author.avatarUrl}
-                          alt={featuredPost.author.name}
-                          className='w-10 h-10 rounded-full mr-3'
-                          onError={e => {
-                            const target = e.currentTarget as HTMLImageElement
-                            target.src = '/images/blog-placeholder.svg'
-                          }}
-                        />
-                        <div>
-                          <p className='text-white font-medium'>
-                            {featuredPost.author.name}
-                          </p>
-                          <p className='text-sm text-zion-slate-light'>
-                            {featuredPost.publishedDate} •{' '}
-                            {featuredPost.readTime}
-                          </p>
-                        </div>
-                      </div>
-                      <Button
-                        asChild
-                        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'
-                      >
-                        <Link href={`/blog/${featuredPost.slug}`}>
-                          Read Article
-                        </Link>
-                      </Button>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
-            </p>
-          </div>
-          
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0],
-            if (!featuredPost) return null,
-            
-            return (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src={featuredPost.featuredImage}
-                    alt={featuredPost.featuredImageAlt || featuredPost.title}
-                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement,
-                      target.src = "/images/blog-placeholder.svg"
-                    }}
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
-                    {featuredPost.category}
-                  </span>
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    {featuredPost.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6">
-                    {featuredPost.excerpt}
-                  </p>
-                  <div className="flex items-center mb-6">
-                    <img
-                      src={featuredPost.author.avatarUrl}
-                      alt={featuredPost.author.name}
-                      className="w-10 h-10 rounded-full mr-3"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement,
-                        target.src = "/images/blog-placeholder.svg"
-                      }}
-                    />
-                    <div>
-                      <p className="text-white font-medium">{featuredPost.author.name}</p>
-                      <p className="text-sm text-zion-slate-light">
-                        {featuredPost.publishedDate} • {featuredPost.readTime}
-                      </p>
                     </div>
                   </div>
                   <Button 
@@ -474,7 +385,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                             {featuredPost && featuredPost.author.name}
                           </p>;
                           <p className='text-sm text-zion-slate-light'>;
-                            {featuredPost && featuredPost.publishedDate} {' '}
+                            {featuredPost && featuredPost.publishedDate} •{' '}
                             {featuredPost && featuredPost.readTime}
                           </p>;
                         </div>;
@@ -569,6 +480,33 @@ if (return null) {
                       value={category}
                       className='text-white'>                      {category}
                     </SelectItem>;
+
+
+
+                  ))}
+                </SelectContent>;
+              </Select>;
+            </div>;
+            {isLoading && (;
+              <div className='text-center py-4 text-white'>;
+                Loading articles...;
+              </div>;
+            )}
+
+          </div>;
+
+
+          {/* Blog Posts Grid */}
+
+          {!isLoading && filteredPosts.length > 0 ? (
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {filteredPosts.map(post => (                <Card
+                  key = {post.id,}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
+                <Card
+                  key={post.id}
+                  asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
                   <Link href={`/blog/${post.slug}`} className='block group'>
@@ -616,15 +554,22 @@ if (return null) {
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
-                        </span>
-                        <div className='text-xs text-zion-slate-light'>
-                          {post.publishedDate} • {post.readTime}
-                        </div>
-                      </div>
-                      <h3 className='text-xl font-bold text-white mb-3'>
+
+                      />
+                    </div>
+                    <CardContent className='p-6'>
+                      <div className='flex items-center justify-between mb-3'>
+                        <span className='text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full'>
+                          {post.category}
+                        </span>;
+                        <div className='text - xs text - zion - slate - light'>;
+                          {post.published_date} • {post.read_time}
+                        </div>;
+                      </div>;
+                      <h3 className='text - xl font - bold text - white mb - 3'>;
                         {post.title}
-                      </h3>
-                      <p className='text-zion-slate-light mb-4 line-clamp-3'>
+                      </h3>;
+                      <p className='text - zion - slate - light mb - 4 line - clamp - 3'>;
                         {post.excerpt}
 
                         src={post && post.featuredImage}
@@ -690,32 +635,7 @@ if (return null) {
                       <span className='text - zion - cyan group - hover:text - zion - purple'>;
                         Read More ;
                       </span>;
-                      <div className="text-xs text-zion-slate-light">;
-                        {post.publishedDate} • {post.readTime}
-                      </div>;
-                    </div>;
-                    <h3 className="text-xl font-bold text-white mb-3">;
-                      {post.title}
-                    </h3>;
-                    <p className="text-zion-slate-light mb-4 line-clamp-3">;
-                      {post.excerpt}
-                    </p>;
-                    <div className="flex items-center">;
-                      <img;
-                        src={post.author.avatarUrl}
-                        alt={post.author.name}
-                        className="w-8 h-8 rounded-full mr-2";
-                        onError={(e) => {;
-                          const target = e.currentTarget as HTMLImageElement;
-                          target.src = "/images/blog-placeholder.svg";
-                        }}
-                      />;
-                      <span className="text-sm text-white">{post.author.name}</span>;
-                    </div>;
-                  </CardContent>;
-                  <CardFooter className="p-6 pt-0">;
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>;
-                  </CardFooter>;
+                    </CardFooter>;
                   </Link>;
 
 
@@ -778,10 +698,20 @@ if (return null) {
                   </CardFooter>;
                   </Link>;
                 </Card>;
-          {!isLoading && filteredPosts.length === 0 && (
-            <div className="text-center py-16">
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
+
+
+              ))}
+            </div>;
+          ) : null}
+          {/* No Results Message - Show only if not loading and no posts */}
+          {!isLoading && filteredPosts && filteredPosts.length === 0 && (;
+            <div className='text-center py-16'>;
+              <h3 className='text-xl font-bold text-white mb-2'>;
+                No articles found;
+              </h3>;
+              <p className='text-zion-slate-light mb-6'>;
+                Try adjusting your search or filter criteria;
+              </p>;
               <Button
                 variant='outline'
                 onClick={() => {
@@ -836,8 +766,8 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
   featured_post.published_date;
 
 }• {
-  featuredPost.readTime "
-}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"> <Link href= {
+  featured_post.read_time ";
+}bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit"> <Link href= {
   `/blog/$ {
 
   featured_post.slug;
@@ -907,23 +837,6 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
                     className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
                   >;
                     {category.name}
-                  </span>
-export default function Blog() {
-  const blogPosts = [], image: "/api/placeholder/600/400"
-  {"
-      id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions","
-      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen","
-      date: "2025-01-15", readTime: "8 min read","
-      category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400"
-      featured: true}, { id: 2}, {
-      id: 2
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot
-      author: &quot,Prof. Michael Rodriguez&quot
-      date: &quot,2025-01-12&quot
-      readTime: &quot,12 min read&quot
-      category: &quot,Quantum Computing&quot
-      tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -1650,4 +1563,3 @@ key = "{post && post.id}
                         <spanclassName="&quottext-sm" text-gray-400&quot>{category && category.count}&quot;</span>;
                       </Link>;
                     ))}
-;

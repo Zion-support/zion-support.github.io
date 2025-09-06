@@ -1,16 +1,7 @@
 
-import React from "react";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {cn} from "@/lib/utils";
-import {format} from "date-fns";
-import {useTheme} from "@/hooks/useTheme";
-import React from "react",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { cn } from "@/lib/utils",
-import { format } from "date-fns";
-import { useTheme } from "@/hooks/useTheme";
-import { format } from "date-fns",
-import { useTheme } from "@/hooks/useTheme",
+
+
+
 interface ChatMessageProps {
 
   message: string
@@ -18,12 +9,11 @@ interface ChatMessageProps {
 
   timestamp: Date
 }
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
-  const { theme } = useTheme();
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme();
-  const { theme } = useTheme(),
-  
+
+
+
+
+
   return (
 
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -90,7 +80,10 @@ function formatMessageWithLinks(message: string): string {
   )
 
   return formattedMessage
-}
+
+
+
+
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -164,6 +157,10 @@ function formatMessageWithLinks(): any (message: string): string {;
   ),;
 
   return formattedMessage;
+
+
+
+
 }
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';

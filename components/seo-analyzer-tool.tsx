@@ -28,9 +28,6 @@ import {
   Globe,
   Smartphone,;
   Zap,;
-} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-export default function SEOAnalyzerToolPage() {;
-} from 'lucide-react';
 
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -331,100 +328,6 @@ export default function SEOAnalyzerToolPage() {
         'Custom integrations',
       ],
       popular: false,
-    {
-      category: 'Technical SEO'
-      factors: [
-        'Page load speed'
-        'Mobile responsiveness'
-        'XML sitemap'
-        'Robots.txt configuration'
-        'SSL certificate'
-        'Core Web Vitals'
-      ]
-      icon: ''
-      color: 'text-blue-400'
-    }
-    {
-      category: 'Content SEO'
-      factors: [
-        'Keyword density'
-        'Content relevance'
-        'Readability scores'
-        'Content freshness'
-        'Multimedia optimization'
-        'Schema markup'
-      ]
-      icon: ''
-      color: 'text-purple-400'
-    }
-    {
-      category: 'Local SEO'
-      factors: [
-        'Google My Business'
-        'Local citations'
-        'Review management'
-        'Local keyword targeting'
-        'Location-based content'
-        'Local link building'
-      ]
-      icon: ''
-      color: 'text-orange-400'
-    },  ];      color: 'text-orange-400'
-    }
-  ];
-  const pricing = [
-    {
-      name: 'Starter'
-      price: '$39'
-      period: '/month'
-      description: 'Perfect for small businesses and bloggers'
-      features: [
-        '10 website analyses/month'
-        'Basic SEO metrics'
-        'Keyword research (100 keywords)'
-        'On-page SEO analysis'
-        'Email support'
-        'Basic reporting'
-      ]
-      popular: false
-    },    {        '10 website analyses/monthBasic SEO metricsKeyword research (100 keywords)On-page SEO analysisEmail supportBasic reporting'
-      ];
-      popular: false
-    }
-      name: 'Professional'
-      price: '$89'
-      period: '/month'
-      description: 'Ideal for growing businesses and agencies'
-      features: [
-        '50 website analyses/month'
-        'Advanced SEO metrics'
-        'Keyword research (500 keywords)'
-        'Competitive analysis'
-        'Priority support'
-        'Advanced reporting'
-        'API access'
-        'Team collaboration'
-      ]
-      popular: true
-    },    {        '50 website analyses/monthAdvanced SEO metricsKeyword research (500 keywords)Competitive analysisPriority supportAdvanced reportingAPI accessTeam collaboration'
-      ];
-      popular: true
-    }
-      name: 'Enterprise'
-      price: '$249'
-      period: '/month'
-      description: 'For large organizations and SEO agencies'
-      features: [
-        'Unlimited analyses'
-        'Enterprise SEO metrics'
-        'Unlimited keyword research'
-        'Advanced competitive analysis'
-        '24/7 dedicated support'
-        'Custom reporting'
-        'White-label options'
-        'Custom integrations'
-      ]
-      popular: false
     },  ];
   const handleAnalyzeSEO = async () => {
     if () return) {
@@ -628,7 +531,6 @@ export default function SEOAnalyzerToolPage() {
 
       setIsAnalyzing(false);
     }, 4000);
-  };
 
   };
 
@@ -742,21 +644,15 @@ export default function SEOAnalyzerToolPage() {
         </title>;
 
         />;
-        <meta
-          property='og:title'
-          content='SEO Analyzer Tool - Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Professional SEO analysis tool with comprehensive insights and optimization recommendations.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0 && 0.06),transparent_50%)]' />;
         <div className='absolute inset-0 bg-grid opacity-10' />;
+
         <div className='relative z-10 container-cursor text-center'>;
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>;
             <Search className='w-4 h-4 mr-2' />;
@@ -875,7 +771,7 @@ export default function SEOAnalyzerToolPage() {
               View Pricing
             </Button>
             <Button
-href="/contact"
+              href="/contact"
               variant="outline"
               size="lg"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
@@ -887,6 +783,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+
       {/* Features Section */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -991,11 +888,6 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -1068,11 +960,19 @@ href="/contact"
         </div>
       </section>
 
+
+
+
+
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+
+
+
 
               Comprehensive SEO Analysis
             </h2>
@@ -1086,6 +986,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -1118,27 +1019,6 @@ href="/contact"
         <div className="container-cursor">
           <div className="text-center mb-20">
             <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-
-                      {feature.description}
-
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SEO Factors Section */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
               Comprehensive SEO Analysis
 
             </h2>
@@ -1161,16 +1041,8 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-center mb-6">
-                  <div className="text-3xl mr-4">{category.icon}</div>
-                  <h3 className={`text-xl font-bold ${category.color}`}>{category.category}</h3>
-                </div>
-                <ul className="space-y-3">
-                  {category.factors.map((factor, factorIndex) => (
-                    <li key={factorIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+
+
                       {factor}
                     </li>
                   ))}
@@ -1181,12 +1053,17 @@ href="/contact"
         </div>
       </section>
 
+
+
+
+
       {/* Demo Analysis Results */}
       {analysisResults && (
 
           </div>;
         </div>;
       </section>;
+
       {/* Demo Analysis Results */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -1243,10 +1120,6 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-          </div>
-        </div>
-      </section>
-
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1339,6 +1212,7 @@ href="/contact"
                 </div>;
                 <p className="text-gray-400">Good SEO foundation with room for improvement</p>;
               </Card>;
+
               {/* Detailed Scores */}
               <Card className="border-gradient-green">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Detailed Scores</h3>;
@@ -1378,14 +1252,94 @@ href="/contact"
                       ) : (;
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
                       )}
+                      <div>;
+                        <span className='text-gray-300'>{issue && issue.message}</span>;
+                        <div className='text-xs text-gray-500 mt-1'>;
+                          Priority: {issue && issue.priority}
+                        </div>                      </div>                  {analysisResults && analysisResults.issues.map((issue, index) => (;
+                    <div key={index} className="flex items-start space-x-3">;
+                      {issue && issue.type === 'error' ? (;
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />;
+                      ) : issue && issue.type === 'warning' ? (;
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />;
+                      ) : (;
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
+                      )}
+                      <div>;
+                        <span className="text-gray-300">{issue && issue.message}</span>;
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue && issue.priority}</div>;
+                      </div>;
+                    </div>;
+
+
+              {/* Issues */}
+              <Card className="border-gradient-green">
+                <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
+                <div className="space-y-3">
+                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      )}
+                      <div>
+                        <span className="text-gray-300">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+                      </div>
+              {/* Issues */}
+              <Card className='border-gradient-green'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Issues Found
+                </h3>
+                <div className='space-y-3'>
+                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className='flex items-start space-x-3'>
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className='w-5 h-5 text-red-400 mt-1 flex-shrink-0' />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />
+                      ) : (
+                        <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
+                      )}
                       <div>
                         <span className='text-gray-300'>{issue.message}</span>
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
+                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      )}
+                      <div>
+                        <span className="text-gray-300">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+                      </div>
+                        </div>                      </div>
+
+                      </div>
+
+
+
+                    </div>
                   ))}
                 </div>
               </Card>
             </div>
+
+                </div>;
+              </Card>;
+            </div>;
+
+
+
+
 
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
@@ -1405,10 +1359,7 @@ href="/contact"
                     <div key={index} className="flex items-start space-x-3">;
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                       <span className="text-gray-300">{rec}</span>;
-                  ))}
-                </div>
-              </Card>
-            </div>
+
 
             {/* Recommendations and Keywords */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -1425,6 +1376,7 @@ href="/contact"
 
                 </div>;
               </Card>;
+
               <Card className='border-gradient-green'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
                   Keyword Opportunities;
@@ -1481,8 +1433,6 @@ href="/contact"
                           keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
                           'bg-red-500/20 text-red-400'
                         }`}>
-
-                          {keyword.difficulty}
 
                         </span>
                       </div>
@@ -1699,6 +1649,11 @@ href="/contact"
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
+      <section id="pricing" className="section-padding bg-gradient-cursor">
+        <div className="container-cursor">
+          <div className="text-center mb-20">
+            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
+              Simple Pricing
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the SEO analysis plan that best fits your business needs and goals.
@@ -1778,7 +1733,60 @@ href="/contact"
                   </div>
                 )}
 
+
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                    {plan && plan.name}
+                  </h3>;
+                  <div className='mb-6'>;
+                    <span className='text-4xl font-bold text-white'>;
+                      {plan && plan.price}
+                    </span>;
+                    <span className='text-gray-400'>{plan && plan.period}</span>;
+                  </div>;
+                  <p className='text-gray-400'>{plan && plan.description}</p>;
+                </div>;
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li
+                      key={featureIndex}
+                      className='flex items-center text-gray-300'>;
+                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
+                  <p className="text-gray-400">{plan && plan.description}</p>;
+                </div>;
+
+                <ul className="space-y-4 mb-8">;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+                    <li key={featureIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
+
                       {feature}
+                    </li>;
+
+
+
+
+
+                    </li>
+                  ))}
+
+                </ul>;
+
+
+                <Button
+                  href='/contact'
+                  size='lg'
+
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
                 <Button
                   href="/contact"
                   size="lg"
@@ -1790,17 +1798,18 @@ href="/contact"
 
                 </Button>
 
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
 
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
@@ -1809,6 +1818,7 @@ href="/contact"
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
             Ready to Improve Your SEO Rankings?
+
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
@@ -1826,19 +1836,16 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
+
+
+              Schedule Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
   );
 }
-}
-  );
+    </>);
 }

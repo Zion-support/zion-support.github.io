@@ -1,6 +1,8 @@
 
-import { ReactNode } from 'react';
+
 import {ReactNode} from 'react';
+
+
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
 import {ReactNode} from 'react';
@@ -99,5 +101,6 @@ declare module '@/components / ProductListingCard' {
     view: any;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
+
   }
 }

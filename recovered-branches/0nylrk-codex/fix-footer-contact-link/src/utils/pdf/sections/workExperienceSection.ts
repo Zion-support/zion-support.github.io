@@ -1,19 +1,16 @@
 
-import { jsPDF  } from 'jspdf';
-import { WorkExperience  } from '@/types/resume';
-import { PdfThemeColors  } from '../themeConfig';
-import { formatDate } from '../formatters';
-export function addWorkExperienceSection(
+import {jsPDF} from 'jspdf';
+import {WorkExperience} from '@/types / resume';
+import {PdfThemeColors} from '../theme_config';
+import {format_date} from '../formatters';
+export function addWorkExperienceSection (
+
+
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
-  doc: jsPDF;
-  workExperience: WorkExperience[];
-  colors: PdfThemeColors;
-  startY: number
-): number {
 
   doc: jsPDF;
   work_experience: WorkExperience[];
@@ -148,6 +145,9 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+
+
+
     }
   }
   return yPos + 5

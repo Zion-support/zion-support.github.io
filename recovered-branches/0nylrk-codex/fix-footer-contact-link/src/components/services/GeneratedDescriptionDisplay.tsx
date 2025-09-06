@@ -1,19 +1,11 @@
 
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
+
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
+
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -21,29 +13,38 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from "lucide-react",
 
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
+
+
+
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
 }
 
-export function GeneratedDescriptionDisplay({
-  description
-  onSave
 
-export function GeneratedDescriptionDisplay({ 
-  description, 
-  onSave 
+interface GeneratedDescriptionDisplayProps {;
+  description: string,;
+  onSave: (editedDescription: string) => void;
+}
+
+export function GeneratedDescriptionDisplay(): any ({ ;
+  description, ;
+  onSave ;
 }: GeneratedDescriptionDisplayProps) {;
 
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-}: GeneratedDescriptionDisplayProps) {
-  const { toast } = useToast(),
-  const [isEditing, setIsEditing] = useState(false),
-  const [editedDescription, setEditedDescription] = useState(description),
+
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+
+
+  const handleSave = () => {;
+    onSave(editedDescription);
+    setIsEditing(false);
+
 
   const handleSave = () => {
     onSave(editedDescription),
@@ -127,6 +128,9 @@ export function GeneratedDescriptionDisplay({;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
+
+
+
             )}
 import React, { useState } from './react';
 import { use_toast  } from '@/hooks / use - toast';

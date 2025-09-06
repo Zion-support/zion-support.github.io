@@ -25,8 +25,10 @@ import { Button  } from '@/components / ui / button';
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
-
-export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
+export /**
+ * NoJobsCard - Function description
+ */
+function NoJobsCard() {
   return (
     <Card className="bg - muted / 30 border border - dashed">;
       <CardContent className="p - 6 text - center">;
@@ -35,16 +37,19 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
           AI - matched jobs.;
         </p>;
         {onUpdateProfile && (
-          <Button variant="outline" className="mt-4" asChild>
-            <a href="/profile">Update Profile</a>
-          </Button>
-        )}
-      </CardContent>
-    </Card>
-  );
+          <Button variant="outline" className="mt - 4" as_child>;
+            <a href="/profile">Update Profile</a>;
+          </Button>)}
+      </CardContent>;
+    </Card>);
 }
 
+
+
+
+
     </Card>;
+
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 interface NoJobsCardProps {
@@ -53,4 +58,5 @@ interface NoJobsCardProps {
 
   );
 }
-;
+
+

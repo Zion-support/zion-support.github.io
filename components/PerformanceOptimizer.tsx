@@ -33,6 +33,8 @@ import {
   Cpu,
   Database,;
   Network,;
+
+
 } from 'lucide-react';
 
 interface PerformanceMetrics {;
@@ -47,7 +49,6 @@ interface PerformanceMetrics {;
 
   Database,;
   Network,;
-} from 'lucide-react';
 
 
 } from 'lucide-react';
@@ -97,6 +98,7 @@ interface PerformanceOptimizerProps {
   //Add lazy loading img && img.loading = 'lazy';
 //Add responsive sizes if not present if (!img && img.sizes) {;
   optimizedCount++ ;
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
   className = '',;
 }) => {  const [metrics, setMetrics] = useState<PerformanceMetrics>({;
@@ -108,9 +110,11 @@ interface PerformanceMetrics {;
   firstInputDelay: number,;
   timeToInteractive: number;
 }
+
 interface PerformanceOptimizerProps {;
   className?: string;
 }
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
     loadTime: 0,;
@@ -169,10 +173,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 
       const fcp = paintEntries && paintEntries.find(entry => entry && entry.name === 'first-contentful-paint');
       const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0];
+
       const fcp = paintEntries && paintEntries.find(;
         entry => entry && entry.name === 'first-contentful-paint';
       );
       const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0];
+
       const newMetrics: PerformanceMetrics = {;
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,;
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,;
@@ -182,6 +188,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         timeToInteractive:;
           navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart,;
       };
+
       setMetrics(newMetrics);    }        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart;
       };
       setMetrics(newMetrics);
@@ -256,7 +263,7 @@ if ( {) {
   // Optimize fonts;
   const optimizeFonts = useCallback(async () => {;
     setIsOptimizing(true);
-    setOptimizationStatus('Optimizing images...');
+    setOptimizationStatus('Optimizing fonts...');
 
     try {;
       // Add font-display: swap to improve font loading;
@@ -374,27 +381,28 @@ if ( {) {
   const optimizeCode = useCallback(async () => {;
     setIsOptimizing(true);
     setOptimizationStatus('Optimizing code...');
-    try {
-      // Add resource hints for critical resources
-      const preloadLinks = [
-        {
-          rel: 'preload'
-          href: '/fonts/inter-var.woff2'
-          as: 'font'
-          type: 'font/woff2'
-          crossorigin: 'anonymous'
-        }
-        {
-          rel: 'preload'
-          href: '/fonts/jetbrains-mono-var.woff2'
-          as: 'font'
-          type: 'font/woff2'
-          crossorigin: 'anonymous'
-        },      ];        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+
+    try {;
+      // Add resource hints for critical resources;
+      const preloadLinks = [;
+        {;
+          rel: 'preload',;
+          href: '/fonts/inter-var && var.woff2',;
+          as: 'font',;
+          type: 'font/woff2',;
+          crossorigin: 'anonymous',;
+        },;
+        {;
+          rel: 'preload',;
+          href: '/fonts/jetbrains-mono-var && var.woff2',;
+          as: 'font',;
+          type: 'font/woff2',;
+          crossorigin: 'anonymous',;
+        },      ];        { rel: 'preload', href: '/fonts/inter-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },;
+        { rel: 'preload', href: '/fonts/jetbrains-mono-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
+        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
 
-      ];
-      preloadLinks.forEach(linkAttrs => {
       ];
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
@@ -519,6 +527,7 @@ if ( {) {
   const runAllOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     setOptimizationStatus('Starting comprehensive optimization...');
+
     try {;
 
       await optimizeImages();
@@ -541,6 +550,7 @@ if ( {) {
     if (typeof window !== 'undefined') {;
       // Measure initial performance;
       window && window.addEventListener('load', measurePerformance);
+
       // Monitor for performance issues;
       const observer = new PerformanceObserver(list => {;
         for (const entry of list && list.getEntries()) {;
@@ -562,23 +572,6 @@ if ( {) {
 
       
       // Monitor for performance issues
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
-  // Initialize performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Measure initial performance
-      window.addEventListener('load', measurePerformance);
-      // Monitor for performance issues
-      const observer = new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            if (lcp > 2500) {
-              // LCP should be under 2.5s
-              console.warn('LCP is too slow:', lcp);            }
-          }
-        }
-      });      // Monitor for performance issues
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -731,10 +724,6 @@ if ( { // LCP should be under 2.5s) {
   };
 
   const getPerformanceGrade = (score: number): string => {;
-    return Math.max(0, score);  }
-    return Math.max(0, score)
-  }
-  const getPerformanceGrade = (score: number): string => {
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -768,6 +757,7 @@ if ( { // LCP should be under 2.5s) {
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-xl font-bold text-white flex items-center gap-2">
           <Gauge className="w-5 h-5 text-cyan-400" />
+          Performance Optimizer
         </h3>
         <button
           onClick={() => setShowMetrics(!showMetrics)}
@@ -777,6 +767,11 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
+          className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
+        >;
+          {showMetrics ? 'Hide' : 'Show'} Metrics;
+        </button>;
+      </div>;
       {/* Performance Score */}
 
       <div className="mb-6">
@@ -815,6 +810,7 @@ if ( { // LCP should be under 2.5s) {
 
       </div>
 
+
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -823,7 +819,7 @@ if ( { // LCP should be under 2.5s) {
           exit={{ opacity: 0, height: 0 }}
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
 
-        >
+
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -865,6 +861,38 @@ if ( { // LCP should be under 2.5s) {
               {Math.round(metrics.firstInputDelay)}ms
             </div>
             <div className='text-xs text-white/60'>FID</div>          </div>
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
+        >
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.loadTime)}ms</div>
+            <div className="text-xs text-white/60">Load Time</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Activity className="w-6 h-6 text-green-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.firstContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">FCP</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <TrendingUp className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.largestContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">LCP</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Cpu className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.timeToInteractive)}ms</div>
+            <div className="text-xs text-white/60">TTI</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Database className="w-6 h-6 text-orange-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{metrics.cumulativeLayoutShift.toFixed(3)}</div>
+            <div className="text-xs text-white/60">CLS</div>
+          </div>
+          
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
@@ -929,17 +957,11 @@ if ( { // LCP should be under 2.5s) {
           </div>
         </motion.div>
       )}
-      {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">
+
         <button
 
 
       {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-      <div className='space-y-3'>        <button
-
-        <button
 
           onClick={runAllOptimizations}
           disabled={isOptimizing}
@@ -953,6 +975,7 @@ if ( { // LCP should be under 2.5s) {
           </div>
 
         </button>;
+
         {optimizationStatus !== 'idle' && (;
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <div className='text-sm text-white/80'>{optimizationStatus}</div>          </div>          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">;
@@ -1001,6 +1024,7 @@ addResourceHint(image, 'image');
       {preloadImages && preloadImages.map((image, index) => (;
         <link
 key={`preload-image-${index}}          rel="preload""          as="image""          href={image}"        />))}
+
       {preloadFonts && preloadFonts.map((font, index) => (;
         <link
 key={`preload-font-${index}`}          rel="preload""          as="style""          href={font}"          onLoad={() => {;
@@ -1024,14 +1048,7 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
   );
 
 };
-
-      {/* Performance Tips */}
-      <div className="mt-6 pt-4 border-t border-white/10">
-        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
-        <ul className="text-xs text-white/60 space-y-1">
-
-        )}
-      </div>
+  );
 
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
@@ -1041,6 +1058,8 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
         )}
       </div>
+
+
 
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
@@ -1051,6 +1070,7 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
+
 
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
@@ -1259,9 +1279,168 @@ if (return 'D') {
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
-  );
+      // Preload critical resources;
+      preloadImages.forEach(image => {addResourceHint(image, 'image');
+'      });';
+      preloadFonts.forEach(font => {addResourceHint(font, 'style');
+'      });'    }}, [preloadImages, preloadFonts]);
+  return (;
+    <Head>;
+      {/* Critical CSS inlined for above - the - fold content */}
+      {criticalCSS && (
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
       {/* Critical CSS inlined for above-the-fold content */}
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
+
+{/* Preload critical resources */}
+      {preload_images.map ((image, index) => (
+        <link;
+key={`preload - image-${index}}          rel="preload""          as="image""          href={image}"        />))}
+      {preload_fonts.map ((font, index) => (
+        <link;
+key={`preload - font-${index}`}          rel="preload""          as="style""          href={font}"          on_load={() => {
+            const link = document.query_selector (link[href="${font}"]`);
+"            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {
+  $2
+}
+}'          }}`        />))}
+      {/* Performance hints */}
+      <meta http_equiv="x - dns - prefetch - control" content="on" />"      "      {/* Service Worker registration */}
+      <script;
+        dangerouslySetInnerHTML={{
+          __html:             // Check condition
+if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {
+  $2
+}
+'                  })'                  .catch (function (registration_error) {
+                    console.log ('SW registration failed: ', registration_error);'                  });'              });
+}
+          ``        }}/>;
+    </Head>);
+}
+  );
+}
+;
+export default PerformanceOptimizer;
+;
+interface PerformanceMetrics {
+
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  memory?: {;
+    used: number;
+    total: number;
+    limit: number;
+  }
+}
+
+
+interface PerformanceOptimizerProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enable_reporting?: boolean;
+}
+
+
+interface PerformanceOptimizerProps {;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  enableReporting?: boolean;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
+  onMetricsUpdate,;
+  enableReporting = false;
+}) => {;
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
+  const measureWebVitals = useCallback(() => {;
+    if (typeof window === 'undefined' || !('performance' in window)) return;
+
+    const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance && performance.getEntriesByType('paint');
+
+    // Core Web Vitals;
+    const fcp = paint && paint.find(entry => entry && entry.name === 'first-contentful-paint')?.startTime || 0;
+    const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
+    const ttfb = navigation && navigation.responseStart - navigation && navigation.requestStart;
+
+    // Memory usage (if available);
+    const memory = (performance as any).memory ? {;
+      used: (performance as any).memory && memory.usedJSHeapSize,;
+      total: (performance as any).memory && memory.totalJSHeapSize,;
+      limit: (performance as any).memory && memory.jsHeapSizeLimit;
+    } : undefined;
+
+    const newMetrics: PerformanceMetrics = {;
+      fcp,;
+      lcp,;
+      fid: 0, // First Input Delay - would need user interaction to measure;
+      cls: 0, // Cumulative Layout Shift - would need observer;
+      ttfb,;
+      memory;
+    };
+
+    setMetrics(newMetrics);
+
+    if (onMetricsUpdate) {;
+      onMetricsUpdate(newMetrics);
+    }
+
+    if (enableReporting && process && process.env.NODE_ENV === 'development') {;
+      console && console.log('Performance Metrics:', newMetrics);
+    }
+  }, [onMetricsUpdate, enableReporting]);
+
+  useEffect(() => {;
+    if (document && document.readyState === 'complete') {;
+
+      measureWebVitals();
+    } else {;
+      window && window.addEventListener('load', measureWebVitals);
+    }
+
+
+    return () => {;
+      window && window.removeEventListener('load', measureWebVitals);
+    };
+  }, [measureWebVitals]);
+
+  // Monitor for performance issues;
+  useEffect(() => {;
+
+    if (!metrics) return;
+    const warnings: string[] = [];
+
+
+    if (metrics && metrics.fcp > 1800) warnings && warnings.push('First Contentful Paint is slow (>1 && 1.8s)');
+    if (metrics && metrics.lcp > 2500) warnings && warnings.push('Largest Contentful Paint is slow (>2 && 2.5s)');
+    if (metrics && metrics.ttfb > 600) warnings && warnings.push('Time to First Byte is slow (>600ms)');
+
+    if (metrics && metrics.memory) {;
+      const memoryUsage = (metrics && metrics.memory.used / metrics && metrics.memory.limit) * 100;
+      if (memoryUsage > 80) warnings && warnings.push('High memory usage detected');
+    }
+
+    if (warnings && warnings.length > 0 && enableReporting) {;
+      console && console.warn('Performance Issues Detected:', warnings);
+
+    }
+  }, [metrics, enableReporting]);
+  return null;
+
+}
+
+export default PerformanceOptimizer;
+
+};export default PerformanceOptimizer;
+
+export default PerformanceOptimizer;
+;
+  );
+
+
 

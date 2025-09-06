@@ -1,12 +1,6 @@
 
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
-import {Award, Share, Star, TrendingUp} from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from "lucide-react";
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",
-import { Award, Share, Star, TrendingUp } from "lucide-react",
+
+
 
 interface ReferralStatsProps {
   stats: ReferralStatsType;
@@ -40,21 +34,22 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: "Credits earned from referrals"
     }
   ];
-;
+
   return (
-    <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
-      {stat_cards.map ((card, i) => (
-        <Card key={i}>;
-          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
-            <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {statCards.map((card, i) => (
+        <Card key={i}>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
             {card.icon}
-          </CardHeader>;
-          <CardContent>;
-            {is_loading ? (
-              <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : (
-              <>;
-                <div className="text - 2xl font - bold">{card.value}</div>;
-                <p className="text - xs text - muted - foreground">;
+          </CardHeader>
+          <CardContent>
+            {isLoading ? (
+              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+            ) : (
+              <>
+                <div className="text-2xl font-bold">{card.value}</div>
+                <p className="text-xs text-muted-foreground">
                   {card.description}
                 </p>
               </>
@@ -106,13 +101,16 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
+
+
+
             )}
           </CardContent>;
         </Card>;
       ))}
     </div>
-  );
-}
+
   )
 }
 ;
+

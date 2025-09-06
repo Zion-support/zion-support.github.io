@@ -1,17 +1,21 @@
 
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
-export default function SavedTalentsPage() {
+import {useState, useEffect} from "react";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {TalentCard} from "@/components/talent/TalentCard";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/components/ui/use-toast";
+import {useNavigate} from "react-router-dom";
+export default function SavedTalentsPage() {;
+
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-import { toast } from "@/components/ui/use-toast",
-import { useNavigate } from "react-router-dom",
-export default function SavedTalentsPage() {
-  const { user } = useAuth(),
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const navigate = useNavigate(),
+
+
 
 
   useEffect(() => {;
@@ -119,17 +123,9 @@ if ( {) {
       if (!user) {
         console.warn("User not authenticated.")
         return
-      }
-      if (isCurrentlySaved) {
-        // Remove from saved talents
-        const { error } = await supabase
-          .from('saved_talents')
-          .delete()
-          .eq('user_id', user.id)
-          .eq('talent_id', talentId);
-        if (error) {
-          throw error
-        }
+
+
+
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
@@ -167,6 +163,9 @@ if ( {) {
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
+
+
+
         }
   
         setSavedTalents(prevTalents =>
@@ -516,6 +515,8 @@ if ( {) {
               <TalentCard;
             {savedTalents.map((talent) => (;
               <TalentCard;
+
+
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}

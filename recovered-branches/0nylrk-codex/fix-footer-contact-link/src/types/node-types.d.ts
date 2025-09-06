@@ -19,10 +19,4 @@ interface Process {;
   }
 }
 
-declare let process: Process,
-declare let console: Console,
-declare let __dirname: string,
-;
-declare let process: Process,;
-declare let console: Console,;
-declare let __dirname: string,;
+

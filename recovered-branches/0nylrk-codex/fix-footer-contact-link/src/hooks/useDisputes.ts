@@ -1,30 +1,7 @@
 
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
-import {toast} from "sonner";
-export function useDisputes() {;
-  const { user } = useAuth();
-  const [disputes, setDisputes] = useState<Dispute[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
-import { toast } from "sonner";
-export function useDisputes() {
-  const { user } = useAuth();
-  const [disputes, setDisputes] = useState<Dispute[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",
-import { toast } from "sonner",
-export function useDisputes() {
-  const { user } = useAuth(),
-  const [disputes, setDisputes] = useState<Dispute[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
+
+
+
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -201,11 +178,12 @@ export function useDisputes() {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
-    }
-  }
-  const resolveDispute = async (
-    disputeId: string
+
+      console.error ("Error fetching dispute:", err);
+      toast.error ("Failed to fetch dispute details");
+
     disputeId: string, 
+
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -360,6 +338,9 @@ if (throw error) {
   },;
   const resolveDispute = async (;
     disputeId: string,;
+
+
+
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
@@ -530,9 +511,12 @@ if ( {) {
     create_dispute;
     updateDisputeStatus;
 
-    addDisputeMessage
-  }
-}
+    resolve_dispute;
+    getDisputeMessages,
+    addDisputeMessage;
+
+
+
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -626,6 +610,8 @@ if ( {) {
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
+
+
   }
 }
 ;

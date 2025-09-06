@@ -1,33 +1,19 @@
 
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { ensureAdminFromApi } from "../../../../utils/auth";
+import OpenAI from "openai";
+const client = new OpenAI({
+
   apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
 
 });
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+
+
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-  const { allowed } = await ensureAdminFromApi(req);
-  if (!allowed) return res.status(403).json({ error: "Forbidden" });
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method Not Allowed" });
-  const { operatorPrompt, inputs, metrics } = req.body |{}
-  const seed = [
-    "Problem & Opportunity"
-    "Solution & Product"
-    "Market Size (TAM/SAM/SOM)"
-    "Traction & Metrics"
-    "Business Model"
-    "Go-To-Market"
-    "Team"
-    "Roadmap"
-    "Token Strategy"
-    "Ask & Call to Action"
-  ];
-  try {
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 
   const { allowed } = await ensureAdminFromApi(req);
@@ -47,8 +33,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   ];
 ;
   try {
-    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
-Operator Prompt: ${operatorPrompt}
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
@@ -143,6 +131,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -180,3 +169,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

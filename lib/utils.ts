@@ -1,9 +1,8 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-export function cn(...inputs: ClassValue[]) {
+
 
 
 export function cn(...inputs: ClassValue[]) {;
+
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
@@ -37,6 +36,7 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 }
 }
 }
+
 import { type ClassValue, clsx  } from './clsx';
 import { tw_merge  } from './tailwind - merge';
 ;
@@ -55,15 +55,11 @@ export function format_currency (amount: number, currency = "USD"): string {
     style: "currency", currency,
   }).format (amount);
 }
-
-
-};
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 }
+;
+},
 
-origin/main
+
 
 
 };

@@ -20,12 +20,14 @@ import { useEffect, useMemo, useState } from 'react';
 export default function Dashboard() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') || '';
+
 export default function Dashboard() {;
   const params =;
     typeof window !== 'undefined';
       ? new URLSearchParams(window && window.location.search);
       : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
+
   const [branding, setBranding] = useState<{;
     name: string;
     primaryColor?: string;
@@ -48,49 +50,15 @@ export default function Dashboard() {;
     }
     fetchBranding();
 
-import {useEffect, useMemo, useState} from 'react';
 
-export default function Dashboard() {
-
-  const params =
-    typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search);
-      : new URLSearchParams();
-  const tenantId = params.get('tenantId') |'';
-  const [branding, setBranding] = useState<{
-    name: string;
-    primaryColor?: string;
-    logoUrl?: string;
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
-  const tenantId = params.get('tenantId') |'';
-
-export default function Dashboard() {;
-  const params =;
-    typeof window !== 'undefined';
-      ? new URLSearchParams(window && window.location.search);
-      : new URLSearchParams();
-  const tenantId = params && params.get('tenantId') || '';
-
-  const [branding, setBranding] = useState<{;
-    name: string;
-    primaryColor?: string;
-    logoUrl?: string;
-  } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
-  const tenantId = params && params.get('tenantId') || '';
-
-  const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);
   useEffect(() => {
     async function fetchBranding() {
       try {
         const resp = await fetch('/api/tenants');
         const data = await resp.json();
-        const t = (data.tenants |[]).find((x: any) => x.id === tenantId);
-        setBranding(t?.branding |{ name: 'Zion Hire AI' });
+        const t = (data.tenants || []).find((x: any) => x.id === tenantId),
+        setBranding(t?.branding || { name: 'Zion Hire AI' })
       } catch {
-        setBranding({ name: 'Zion Hire AI' });
-      }
-    }
-    fetchBranding();  }, [tenantId]);      } catch {
         setBranding({ name: 'Zion Hire AI' })
       }
     }
@@ -98,6 +66,14 @@ export default function Dashboard() {;
 
   }, [tenantId]);
   const accent = branding?.primaryColor |'#111827';
+
+  return (
+
+
+              Save;
+            </button>;
+          </form>;
+        </section>;
 
     <div className="min-h-screen bg-gray-50">
       <header className="px-6 py-4 bg-white border-b flex items-center gap-3">
@@ -205,6 +181,11 @@ export default function Dashboard() {;
       </main>
     </div>
   );
+}
+  );
+  );
+}
+
   );
 
 }fetchBranding () 

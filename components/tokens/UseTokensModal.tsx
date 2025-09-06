@@ -1,21 +1,13 @@
 
-import React, { useEffect, useState } from "react";
-import { connectMetaMask, getAccounts } from "../../utils/wallet";
-export type RedemptionType =
-  | "boost_profile"
-  | "promote_listing";
-  | "premium_support";
-export default function UseTokensModal({
-  isOpen
-  onClose
-  serviceId
-  defaultType
-}: {
+
+
+
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -25,13 +17,11 @@ export default function UseTokensModal({
 
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
-export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
-
 export default function UseTokensModal({
   isOpen,
   onClose,
   serviceId,
-defaultType
+  defaultType
 }: {
   isOpen: boolean,
   onClose: () => void,
@@ -77,6 +67,7 @@ defaultType
     const accs = await connectMetaMask();
     if (accs && accs.length > 0) setAccount(accs[0]);
   }
+
   async function redeem() {;
     setIsSubmitting(true);
     try {;
@@ -121,6 +112,7 @@ defaultType
             />;
             <div className="opacity-70 mt-1">Approx. ${usdValue} USD</div>;
           </div>;
+
           <div className="text-sm">;
             <div className="mb-1">Wallet</div>;
             {account ? (;
@@ -141,6 +133,7 @@ defaultType
 
           </div>;
         </div>;
+
         <div className="mt-4 flex items-center justify-between">;
           <div className="text-xs opacity-70">;
             You can spend tokens to boost visibility, promote listings, or;
@@ -200,14 +193,7 @@ defaultType
         </div>
       </div>
     </div>
-  );
-);
-  );
+
 }
     </div>);
-        </div>
-      </div>
-    </div>
-  )
-
 }

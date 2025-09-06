@@ -346,14 +346,12 @@ export default function Industries() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
+          <div className="absolute inset-0">;
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
+          </div>;
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -472,22 +470,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <motion&& motion.div
               className="text-center mb-16"
               className="text-center"">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">",;
                 Industry-Specific{' '}',;
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
                   Technology Solutions;
                 </span>;
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                We understand the unique challenges and requirements of different industries. Our specialized solutions;
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">", We understand the unique challenges and requirements of different industries. Our specialized solutions,;
                 are designed to address sector-specific needs while ensuring compliance, security, and scalability.,;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">",;
                   Get Industry Consultation;
                 </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">";
-                  View All Solutions;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-gray-900 transition-all duration-300 font-semibold">", View All Solutions,;
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -496,19 +491,19 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         {/* Industries Grid */}
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
-            <motion.div;
-              className="text-center mb-16"";
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Industry Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Specialized technology solutions tailored to meet the unique challenges and opportunities across different industries.
-              </p>
-            </motion.div>
-          </div>
-        </section>
+            <motion&& motion.div
+              className="text-center mb-16""
+              className="text-center">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Industry Solutions;
+              </h1>;
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
+                Specialized technology solutions tailored to meet the unique challenges and opportunities across different industries.;
+              </p>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
         {/* Industries Grid */}
         <section className="py-20">;
           <div className="container mx-auto px-4">;
@@ -701,24 +696,48 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
                       <div className="flex flex-wrap gap-2">
                         {industry.features.map((feature, idx) => (
+                    whileHover={{ y: -5 }}>;
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry && industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>;
+                      <IconComponent className="w-8 h-8 text-white" />;
+                    </div>;
+                  >,;
+                    <div className={`w-16 h-16 bg-gradient-to-r ${industry && industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>,;
+                      <IconComponent className="w-8 h-8 text-white" />";
+                    </div>;
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">;
+                      {industry && industry.name}
+                    </h3>;
+                    <p className="text-gray-600 mb-6 leading-relaxed">;
+                    <p className="text-gray-600 mb-6 leading-relaxed">";
+                  >;
+                    <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">;
+                      <IconComponent className="w-12 h-12" />;
+                    </div>;
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">;
+                      {industry && industry.title}
+                    </h3>;
+                    <p className="text-gray-300 mb-6 leading-relaxed">;
+                      {industry && industry.description}
+                    </p>;
+                    <div className="mb-6">;
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>;
+                      <div className="flex flex-wrap gap-2">;
+                        {industry && industry.features.map((feature, idx) => (;
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                          >
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">;
                     <div className="mb-6">";
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
-                      <div className="flex flex-wrap gap-2">";
-                        {industry.features.map((feature, idx) => (,
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions: </h4>", <div className="flex flex-wrap gap-2">",;
+                        {industry && industry.features.map((feature, idx) => (,;
                           <span}),
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full""
-                          >;
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"">;
                             {feature}
-                          </span>
+                          </span>;
                         ))}
-                      </div>
-                    </div>
-                      </div>,
+                      </div>;
+                    </div>;
+                      </div>,;
                     </div>;
                     <Link
                       href={industry.href}
@@ -743,7 +762,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </motion && motion.div>;
                 ),;
               })}
-            </div>;
+            </div>,;
           </div>;
         </section>;
         {/* Why Choose Us Section */}
@@ -1113,7 +1132,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   Explore Solutions;
                 </Link>;
               </div>;
-            </motion.div>;
+            </motion && motion.div>;
           </div>;
         </section>;
       </div>;

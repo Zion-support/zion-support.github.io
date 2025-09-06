@@ -243,6 +243,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       }
 
 
+
       // Fix import statements
       if (content.includes('React.') && !content.includes("import React")) {;
         content = `import React from 'react';\n${content}`;
@@ -328,8 +329,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       });
     }
 ursor/integrate-build-improve-and-re-verify-8f7d
-    scanDirectory(pagesDir);
-    // Remove duplicate .js files if .tsx exists
     scanDirectory(pagesDir);
     // Remove duplicate .js files if .tsx exists
     for (const duplicate of duplicates) {

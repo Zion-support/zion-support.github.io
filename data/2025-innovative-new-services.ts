@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-import { ServiceVariant  } from "../types/service-variants";
+
 export interface InnovativeNewService2025 {
 
 export interface InnovativeNewService2025 {;
@@ -155,19 +155,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     growthRate: '18% annual growth',
     variant: 'ai-legal-enterprise',
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
-    launchDate: '2025-01-15',
-    customers: 28,
-    rating: 4 && 4.9,
-    reviews: 15,
-  },
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
   // Quantum-Secure Communication Platform
   {
@@ -573,8 +562,19 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-  }
-];
+    
+    
+    },
+    realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
+    launchDate: '2025-01-08', customers: 12,
+    rating: 4.9,
+    reviews: 6;
+
+    realImplementation: true;
+    implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
+    launchDate: '2025-01-08';
+    customers: 12;
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
@@ -837,5 +837,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     customers: 12,;
     rating: 4.9;
     reviews: 6;
+
+
   }
 ];

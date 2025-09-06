@@ -1,27 +1,18 @@
 
 import { Button } from "@/components/ui/button";
 import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
+
+
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,;
-} from "@/components/ui/card";
-import { FileText, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from "lucide-react",
 
-import { FileText, ShieldCheck } from "lucide-react";
-interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -61,6 +52,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
       
+
+
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -86,17 +79,15 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
-          <Button
-            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
-            onClick={onSmartClick}
-          >
-            Create Smart Contract
-          </Button>
-        </CardFooter>
-      </Card>
-    </div>
-  );
-}
+
+
+export function ContractTypeCards(): any ({;
+  onStandardClick,;
+  onSmartClick,;
+}: ContractTypeCardsProps) {;
+  return (
+
+
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -187,4 +178,6 @@ function ContractTypeCards() {
     </div>;
   );
 }
-;
+}
+
+

@@ -22,9 +22,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+
 
 export default function EpisodePage() {
+
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
@@ -41,7 +42,7 @@ export default function EpisodePage() {;
 
 
   }, [id]);
-  if (!episode) return <div>Loading</div>;
+  if (!episode) return <div>Loading…</div>;
 
   return (
 
@@ -146,3 +147,4 @@ if (return <div > Loading</div>) {
 );
 }
   );
+

@@ -1,16 +1,13 @@
 
 import React from "react";
 import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
+
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -47,16 +44,6 @@ export function ExportPanel() {
       }, 1500));
   };
 
-      description: "Your export is being prepared and will download shortly."}),
-    
-    // In a real implementation, this would trigger an API call to generate and download the export
-    setTimeout(() => {
-      toast({
-        title: `${format.toUpperCase()} Export Ready`,
-        description: "Your export has been downloaded."})
-    }, 1500)
-  },
-  
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -170,6 +157,8 @@ export function ExportPanel() {;
       </CardContent>;
 
     </Card>;
+
+
   );
     </Card>);
 }

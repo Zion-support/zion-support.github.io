@@ -20,12 +20,8 @@ describe('Analytics', () => {'}
   test('applies correct styling', () => {'}
     render(<Analytics />);,
   });
-});
-});
-});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/fix-syntax-push-and-merge-to-main-40de
+
+
 import _React from 'react'
 '
 import '@testing-library/jest-dom';

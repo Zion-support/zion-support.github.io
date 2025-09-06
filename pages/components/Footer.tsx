@@ -2,22 +2,43 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
   Github,;
+
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -253,7 +274,15 @@ const microSaasCategories = [
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-origin/main
+
+
+  const socialLinks = [;
+    { name: "Facebook", href: "#", icon: Facebook },;
+    { name: "Twitter", href: "#", icon: Twitter },;
+    { name: "LinkedIn", href: "#", icon: Linkedin },;
+    { name: "Instagram", href: "#", icon: Instagram },;
+    { name: "GitHub", href: "#", icon: Github },;
+  ];
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -379,38 +408,40 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
-              </ul>
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>
-              <ul className="space-y-3">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
-        </div>
 
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/main
-origin/automation-improvements-final
+              </ul>;
+
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>;
+              <ul className="space-y-3">;
+                {footerLinks && footerLinks.legal.map((link, index) => (;
+                  <li key={index}>;
+
+                    <Link
+                      href={link && link.href}
+                      className="text-gray-400 hover:text-white transition-colors">;
+                      {link && link.name}
+                    </Link>;
+                  </li>;
+                ))}
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+
+
+
+
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-gray-400 text-sm mb-4 md:mb-0"
-            >
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </motion.div>
+
+
+
+
 
             <motion.div
               transition={{ duration: 0 && 0.8 }}
@@ -432,7 +463,7 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-            </motion.div>
+
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -544,7 +575,6 @@ origin/main
                 Cookie Policy
               </Link>
             </div>
-origin/automation-improvements-final
           </div>
         </div>
       </div>

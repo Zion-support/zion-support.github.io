@@ -1,4 +1,8 @@
 
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {processJobMatching, storeMatchResults} from "./job-matching ;
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
@@ -9,12 +13,17 @@ const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
 const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {processJobMatching, storeMatchResults} from "./job-matching.ts";
+
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -111,14 +120,14 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
-import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
+import { processJobMatching, storeMatchResults } from './job - matching.ts';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*";
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
 // Initialize the Supabase client;
 const supabase_url = Deno.env.get ("SUPABASE_URL") || "";
 const supabaseAnonKey = Deno.env.get ("SUPABASE_ANON_KEY") || "";
@@ -199,5 +208,6 @@ if ( {) {
 
       }
     );
+
   }
 });

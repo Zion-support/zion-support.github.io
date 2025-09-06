@@ -1,8 +1,13 @@
 import React from 'react';
 
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
-export function ProjectOfferBanner() {
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Bell, Calendar, X} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {useProjects} from "@/hooks/useProjects";
+import {Project} from "@/types/projects";
+export function ProjectOfferBanner() {;
 
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
@@ -20,23 +25,9 @@ export function ProjectOfferBanner() {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
-    }
-  }, [projects, isLoading]);
-  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    setDismissed(prev => {
-      const updated = new Set(prev);
-      updated.add(projectId)
-      return updated
-    })
-  }
-  const handleViewOffer = (projectId: string) => {
-    navigate(`/project/${projectId}`)
-  }
-  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
-    return null
-  }
+
+
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -68,6 +59,9 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+
+
+
   }
   
   return (

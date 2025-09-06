@@ -13,16 +13,19 @@ const SEOAudit: NextPage = () => {
         <div>
           <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</a></Link>
           <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</Link></Link>
+
+
         </div>
       </main>
     </div>
   )
-}
-export default SEOAudit;
+
+
+
+},
+export default SEOAudit,
 
 },
 export default SEOAudit,
 },
-},
-export default SEOAudit,
-},
+

@@ -1,15 +1,18 @@
+
+
+
  export default function AIServices () {
 export default function AIServices () {
  export default function AIServices () {
+
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
 }</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 
 }</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
-  opacity: 0, y: 20 
-  opacity: 0, y: 20
-  opacity: 0, y: 20 
+
+
 
 export default function AIServices () {
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
@@ -32,7 +35,7 @@ const aiServices = [
   {
     title: 'AI Consciousness Evolution',
     description: 'Advanced AI systems with evolving consciousness and emotional intelligence',
-icon: <Brain className="w-8 h-8 text-cyan-400" />,
+    icon: <Brain className="w-8 h-8 text-cyan-400" />,
     href: '/ai-consciousness-evolution-2029',
     features: ['Emotional IntelligenceConsciousness DevelopmentEthical AI Framework']
   };
@@ -72,6 +75,7 @@ icon: <Brain className="w-8 h-8 text-cyan-400" />,
     features: ['Ethical GuidelinesGovernance FrameworkCompliance Monitoring']
   }
 ];
+
 export default function AIServices() {
 
   return (
@@ -159,6 +163,7 @@ export default function AIServices() {
 
 
 
+
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -175,6 +180,7 @@ export default function AIServices() {
                 Comprehensive AI solutions designed to transform your business and accelerate innovation;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {aiServices && aiServices.map((service, index) => (;
                 <motion&& motion.div
@@ -212,6 +218,14 @@ export default function AIServices() {
             </div>
           </div>
         </section>
+
+            </div>;
+          </div>;
+        </section>;
+
+
+
+
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -393,6 +407,4 @@ function AIServices() {
     </>),
 }
   ),
-};
-;
-}
+

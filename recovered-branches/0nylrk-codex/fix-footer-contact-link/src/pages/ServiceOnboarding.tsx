@@ -1,4 +1,27 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React from "react";
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import {Header} from "@/components/Header";
@@ -7,18 +30,12 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceOnboarding() {;
   const { user, isLoading } = useAuth();
-import React from "react",
-import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function ServiceOnboarding() {
-  const { user, isLoading } = useAuth();
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
-export default function ServiceOnboarding() {
-  const { user, isLoading } = useAuth(),
+
+  // If not authenticated, redirect to login;
+  if (!isLoading && !user) {;
+    return <Navigate to="/login" replace />;
+
+
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
@@ -106,3 +123,4 @@ if ( {) {
     </>);
 }
 ;
+

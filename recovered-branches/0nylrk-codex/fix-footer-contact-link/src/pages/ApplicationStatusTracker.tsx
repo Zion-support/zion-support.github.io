@@ -1,23 +1,8 @@
 
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {ApplicationsTracker} from "@/components/jobs/applications";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Briefcase, Inbox} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useIsMobile} from "@/hooks/use-mobile";
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { ApplicationsTracker } from "@/components/jobs/applications",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Briefcase, Inbox } from "lucide-react",
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {
 
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useIsMobile } from "@/hooks/use-mobile",
+
+
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
@@ -49,16 +34,16 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
-}
-export default function ApplicationStatusTracker() {
-  return (
-    <ProtectedRoute>
-      <AppLayout>
-        <ApplicationStatusTrackerContent />
-      </AppLayout>
-    </ProtectedRoute>
-  )
-}
+
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+
+
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -100,7 +85,19 @@ function ApplicationStatusTrackerContent() {;
       </div>;
     </>;
   );
-}
+
+import { AppLayout } from '@/layout / AppLayout';
+import { SEO } from '@/components / SEO';
+import { ApplicationsTracker } from '@/components / jobs / applications';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
+import { Briefcase, Inbox } from './lucide-react';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { useIsMobile } from '@/hooks / use - mobile';
+/**
+ * ApplicationStatusTrackerContent - Function description
+ */
+function ApplicationStatusTrackerContent() {
+  const is_mobile = useIsMobile ();
 ;
   return (
     <>;
@@ -136,3 +133,18 @@ export default /**
 function ApplicationStatusTracker() {
   return (
 
+    <ProtectedRoute>;
+      <AppLayout>;
+        <ApplicationStatusTrackerContent />;
+      </AppLayout>;
+    </ProtectedRoute>;
+  );
+}
+;
+}
+
+    </ProtectedRoute>);
+
+
+
+}

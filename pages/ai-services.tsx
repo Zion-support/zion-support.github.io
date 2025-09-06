@@ -1,3 +1,28 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React from "react";
 import Layout from "../components/Layout";
 export default function AIServices() {
@@ -42,7 +67,6 @@ import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
-origin/main
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -105,6 +129,8 @@ function AIServices() {
 
     </Layout>;
   );
+
+
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -295,7 +321,9 @@ export default function AIServices() {
           </section>
 
           {/* Category Filter */}
+
 }
+
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -554,6 +582,7 @@ export default function AIServices() {
             </div>
           </section>
 
+
           {/* CTA Section */}
           {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -658,15 +687,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
-origin/main
-origin/automation-improvements-final
-}
-}
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    </Layout>);
 }
 
           <section className="py-16 px-4 bg-slate-900/40">;
@@ -805,3 +826,6 @@ export default function AIServicesPage(req, res) {
   }
 }
 ;
+
+
+

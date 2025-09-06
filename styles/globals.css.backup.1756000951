@@ -120,14 +120,10 @@
 <<<<<<< HEAD
 >>>>>>> main
 /* Enhanced Scrollbar */
-
-<<<<<<< HEAD
-::-webkit-scrollbar {
-/* Enhanced Scrollbar */::-webkit-scrollbar {
-
-::-webkit-scrollbar {
-
 =======
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 /* Global styles */
 html,
 body {
@@ -237,7 +233,7 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #0891b2, #7c3aed);
-
+>>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 }
 =======
 =======

@@ -1,16 +1,3 @@
-export interface SpaceMetaverseService {
-export interface SpaceMetaverseService {;
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    currency: string;
-    trialDays: number;
-    setupTime: string;
 
 
   {
@@ -329,17 +316,7 @@ export interface SpaceMetaverseService {;
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
-    ]
-    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
-    icon: '🥽'
-    color: 'from-orange-500 to-red-600'
-    popular: true
-    launchDate: '2024-01-20'
-    customers: 1800
-    rating: 4.7
-    reviews: 1400
-  }
+
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
@@ -423,10 +400,12 @@ export interface SpaceMetaverseService {;
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string,
     enterprise: string
+  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,
@@ -456,6 +435,10 @@ export interface SpaceMetaverseService {;
     rating: 4 && 4.7,
 
     reviews: 1400
+    rating: 4.7,
+    reviews: 1400;
+  }
+
 
 export interface SpaceMetaverseService {;
 
@@ -724,6 +707,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     launchDate: '2024-01-20',;
     customers: 1800,;
     rating: 4.7,;
+    reviews: 1400;
+    rating: 4.7,
     reviews: 1400;
   }
 ];

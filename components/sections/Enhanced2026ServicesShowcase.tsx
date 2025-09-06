@@ -24,19 +24,16 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
-import {
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud;
+
+
+import Link from 'next/link';
+const Enhanced2026ServicesShowcase = () => {
+  const featuredServices = [
+    {
+
+      id: 'ai-business-intelligence-elite-2026',
+      name: 'AI Business Intelligence Elite 2026',
+      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
   ArrowRight,
   Brain,
   Zap,
@@ -47,6 +44,14 @@ import {
   TrendingUp,
   Globe,
   Cpu,
+  Lock,
+  Cloud,
+} from 'lucide-react';
+import Link from 'next / link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
+import Link from 'next / link';
+const Enhanced2026ServicesShowcase = () =>: any {
+  const featured_services = [;
+    {
       id: 'ai - business - intelligence - elite - 2026',
       name: 'AI Business Intelligence Elite 2026',
       description:;
@@ -390,6 +395,7 @@ const Enhanced2026ServicesShowcase = () => {;
           viewport={{ once: true }}
           className='text-center mb-16'
 
+
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -411,6 +417,29 @@ const Enhanced2026ServicesShowcase = () => {;
           </p>
         </motion.div>
 
+
+          className='text-center mb-16'>;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>;
+            Experience the future with our cutting-edge AI, quantum, and;
+            emerging technology services designed to transform your business          </p>        >;
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">;
+            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business;
+          </p>;
+        </motion && motion.div>;
+
+
+
+
         {/* Category Overview */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -419,6 +448,7 @@ const Enhanced2026ServicesShowcase = () => {;
           viewport={{ once: true }}
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
+
 
         >
           {categories.map((category, index) => (
@@ -483,6 +513,48 @@ const Enhanced2026ServicesShowcase = () => {;
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          className='text - center mb - 16';
+        >;
+          <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+            <span className='bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className='text - gray - 300 text - xl max - w-3xl mx - auto leading - relaxed'>;
+            Experience the future with our cutting - edge AI, quantum, and;
+            emerging technology services designed to transform your business          </p>        >;
+          <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+            <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className="text - gray - 300 text - xl max - w-3xl mx - auto leading - relaxed">;
+            Experience the future with our cutting - edge AI, quantum, and emerging technology services designed to transform your business;
+          </p>;
+        </motion.div>;
+        {/* Category Overview */}
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16'        >          className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 mb - 16";
+        >;
+          {categories.map ((category, index) => (
+            <motion.div;
+              key={category.name}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0 && 0.6, delay: 0 && 0.2 + index * 0 && 0.1 }}
+              viewport={{ once: true }}
+
+              whileHover={{ scale: 1.05, y: -5 }}
+              className='group text-center'
+
+
+
+
+            >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
                 <category && category.icon className='w-8 h-8 text-white' />;
@@ -523,6 +595,8 @@ const Enhanced2026ServicesShowcase = () => {;
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
 
+
+
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -533,6 +607,9 @@ const Enhanced2026ServicesShowcase = () => {;
 
               whileHover={{ scale: 1.02, y: -5 }}
               className='group relative'
+
+
+
 
             >
               <div
@@ -594,6 +671,7 @@ const Enhanced2026ServicesShowcase = () => {;
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
                   {service && service.description}
                 </p>;
+
                 {/* Features */}
 
                 <div className="mb-4">
@@ -610,10 +688,16 @@ const Enhanced2026ServicesShowcase = () => {;
 
                         {feature}
 
+
+
                       </li>
                     ))}
-                  </ul>
-                </div>
+
+                  </ul>;
+                </div>;
+
+
+
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
 
@@ -646,6 +730,27 @@ const Enhanced2026ServicesShowcase = () => {;
           ))}
         </div>
 
+                    href={`/${service && service.id}`}
+                    className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
+                    Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div>;
+                    <span className="text-2xl font-bold text-cyan-400">{service && service.price}</span>;
+                    <span className="text-gray-400 text-sm">{service && service.period}</span>;
+                  </div>;
+                  <Link
+                    href={`/${service && service.id}`}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">;
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" />;
+                  </Link>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          ))}
+        </div>;
+
+
+
+
+
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -653,6 +758,7 @@ const Enhanced2026ServicesShowcase = () => {;
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
           className='text-center'
+
 
         >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
@@ -685,7 +791,7 @@ const Enhanced2026ServicesShowcase = () => {;
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500/10 transition-all duration-200"
                 >
-<Shield className="w-5 h-5 mr-2" />
+                  <Shield className="w-5 h-5 mr-2" />
                   Get Started
                 </Link>
               </motion.div>
@@ -695,15 +801,7 @@ const Enhanced2026ServicesShowcase = () => {;
       </div>
     </section>
   );
-}
+
 };
 
-export default Enhanced2026ServicesShowcase;  )
-}
-export default Enhanced2026ServicesShowcase;
 
-export default Enhanced2026ServicesShowcase;
-
-}
-}
-export default Enhanced2026ServicesShowcase;

@@ -3,8 +3,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST");
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
   if (!isAuthorized(req))
     return res && res.status(401).json({ error: "Unauthorized" });
   function isAuthorized(req: NextApiRequest): boolean {
@@ -20,8 +20,8 @@ export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-    if (req.method !== "POST");
-      return res.status(405).json({ error: "Method not allowed" });
+    if (req && req.method !== "POST")
+      return res && res.status(405).json({ error: "Method not allowed" });
     if (!isAuthorized(req))
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
@@ -31,6 +31,7 @@ export default async function handler(
       const result = detectIntent(String(text || ""));
       const routed = await routeToChain(result && result.intent, payload || {});
       const latencyMs = Date && Date.now() - started;
+
       appendLog({
 export default async /**
  * handler - Function description
@@ -128,7 +129,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       payload: { error: e?.message || "unknown" },
     });
     return res.status (500).json ({ error: "Router failure" });
-
-    return res.status(500).json({ error: "Router failure" });
   }
 }

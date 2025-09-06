@@ -49,9 +49,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   test('applies correct styling', () => {
     render(<OptimizedImagedynamic />);
     // Test styling
-  });
-});
-origin/main
+
+
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'

@@ -1,4 +1,28 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+
 
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
@@ -34,6 +58,9 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
+
+
+
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -176,14 +203,19 @@ const NotificationCard: React.FC<{;
 
     if (!notification.read) {;
       onMarkAsRead(notification.id);
+
+
     }
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-  }
+
+
   },
   };
   },
+
+
   
   return (
     <divclassName={cn(

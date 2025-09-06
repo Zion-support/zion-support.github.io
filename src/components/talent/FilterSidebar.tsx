@@ -5,9 +5,6 @@ import { SkillsFilter } from "./filters/SkillsFilter",
 import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
-export function FilterSidebar({
 
 
 import React from 'react';
@@ -65,6 +62,57 @@ export function FilterSidebar(): any ({;
   setSortOption;
   clearFilters;
 
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+  isMobileFilterOpen,}: FilterSidebarProps) {
+
+  return (
+    <>
+      {/* Filter header */}
+          Filters
+        </h3>
+        <Button
+          variant="ghost"
+          size="sm"
+
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
 export function FilterSidebar({
@@ -94,6 +142,19 @@ export function FilterSidebar({
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+
+
+          Filters
+        </h3>
+        <Button 
+          variant="ghost" 
+          size="sm" 
+          onClick={clearFilters}
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+        >
+          Clear All
+        </Button>
+      </div>
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -143,6 +204,12 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+
+
+      {/* Search */}
+      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      {/* Sorting */}
+      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
           className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
           Clear All;
         </Button>;
@@ -335,15 +402,19 @@ function FilterSidebar() {
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
       {isMobileFilterOpen && (
-        <Button 
         isMobileFilterOpen={isMobileFilterOpen}
       />;
 
       {isMobileFilterOpen && (;
         <Button;
-    </>
-  )
-}
+
+
+
+          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
+          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
+        >
+          Apply Filters
+        </Button>
+      )}
     </>;
   );
-;

@@ -831,12 +831,6 @@ class SEOAccessibility {}
       
       const performanceIssues = [];
       
-      
-      const performanceIssues = [];
-      
-      
-      const performanceIssues = [];
-      
       const performanceIssues = [];
       
       const performanceIssues = [];
@@ -1068,7 +1062,5 @@ module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
-module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;
 module.exports = SEOAccessibility;module.exports = SEOAccessibility;

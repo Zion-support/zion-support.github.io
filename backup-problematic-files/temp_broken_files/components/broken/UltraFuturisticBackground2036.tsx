@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from 'react';
 interface UltraFuturisticBackground2036Props {variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber';
   intensity?: 'low' | 'medium' | 'high';
 }
-:components/broken/UltraFuturisticBackground2036.tsx
-export default function UltraFuturisticBackground2036({variant = 'default';
+
 ;
 export default function UltraFuturisticBackground2036({;
   variant = 'default',;
+
   intensity = 'medium';
 }: UltraFuturisticBackground2036Props) {const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -211,10 +211,8 @@ export default function UltraFuturisticBackground2036({;
     animate();
     return () => {if (animationRef.current) {;
         cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
-    }
-}, [variant, intensity])
+
+
 
 export default function UltraFuturisticBackground2036({ 
   variant = 'default',

@@ -1,9 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Starting Enhanced App Improvement Automation')
 console.log('======')
@@ -33,5 +30,4 @@ console.log('======')
     execSync('npm run build', { "stdio"})
       execSync('npm run export', { "stdio"})
   "status"
-    console.error('� Automation "failed")
     console.error('� Automation "failed")

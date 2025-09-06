@@ -25,6 +25,7 @@ import React from 'react';
 
 
 interface OptimizedImageProps {;
+
   src: string, alt: string,;
 
 import Image from 'next / image';
@@ -56,20 +57,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 }) => {;
   if (fill) {;
 
-const OptimizedImage: React.FC < OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-  quality = 85,
-  fill = false,
-  style
-
-}) => {
-  if (fill) {
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
   src,
   alt,
@@ -115,23 +102,19 @@ if ( {) {
       className={class_name}
       priority={priority}
       sizes={sizes}
-quality={quality}
-      style={style}
-  );
-}
-export default OptimizedImage;
+
+
+
       quality={quality}
       style={style}
+
+
+
 
   );
 };
 
 export default OptimizedImage;
-      quality={quality}
-      style={style}
-
-  );
-};
-
+;
 export default OptimizedImage;
 ;

@@ -1,24 +1,11 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
+
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [disputeId, setDisputeId] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false),
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
-  const [isLoading, setIsLoading] = useState(true),
 
   useEffect(() => {
 
@@ -132,17 +119,9 @@ if ( {) {
         setDisputeId(null)
       } finally {
         setIsLoading(false)
-      }
-    }
-    checkDispute()
-  }, [projectId, milestoneId]);
-  return {
-    isUnderDispute
-    disputeStatus
-    disputeId;
-    isLoading
 
     isLoading 
+
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -192,5 +171,8 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
+
+
+
   }
 }

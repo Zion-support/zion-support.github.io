@@ -12,11 +12,15 @@ interface MilestoneCreatorProps {
   projectEndDate?: string | null;
   projectType?: string;
 }
-export function MilestoneCreator({
+
+
+export function MilestoneCreator(): any ({;
+
 
 
 
 export function MilestoneCreator({;
+
   onSubmit;
   isSubmitting;
   onCancel;
@@ -27,8 +31,9 @@ export function MilestoneCreator({;
   projectType
 }: MilestoneCreatorProps) {
   return (
-    <AddMilestoneForm
+
     <AddMilestoneForm 
+
 import React from 'react',;
 import { AddMilestoneForm } from '../AddMilestoneForm',;
 interface MilestoneCreatorProps {;
@@ -52,6 +57,9 @@ export function MilestoneCreator({;
 }: MilestoneCreatorProps) {;
   return (;
     <AddMilestoneForm;
+
+
+
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}

@@ -24,33 +24,11 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import {
-  FaRocket
-  FaBrain
-  FaCloud
-  FaShieldAlt
-  FaChartLine
-  FaCogs
-  FaLightbulb
-  FaGlobe
-  FaMobile
-  FaDatabase
-  FaNetworkWired
-  FaRobot
-  FaSearch;
-import {
-  SiNextdotjs
-  SiReact
-  SiTypescript
-  SiTailwindcss
-  SiPrisma
-  SiSupabase
-  SiVercel
-  SiDocker
-  SiKubernetes
-  SiAws
-  SiGooglecloud
-  SiMicrosoftazure;
+
+} from 'react-icons/si';
+
+interface Service {;
+
   FaRocket,
   FaBrain,
   FaCloud,
@@ -62,9 +40,23 @@ import {
   FaMobile,
   FaDatabase,
   FaNetworkWired,
+  FaRobot,
+  FaSearch,
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiSupabase,
+  SiVercel,
+  SiDocker,
+  SiKubernetes,
+  SiAws,
 
   SiGooglecloud,;
   SiMicrosoftazure,;
+
 } from 'react-icons/si';
 
 
@@ -85,19 +77,42 @@ interface Service {
   benefits: string[];
 
 ;
-
 interface ServiceCategory {
 
   id: string;
   name: string;
   description: string;
-  icon: React.ReactNode;
-  color: string;  id: string,
-  name: string,
-  description: string,
-  icon: React.ReactNode,
-  color: string
-}
+
+import { 
+  FaRocket;
+  FaBrain, 
+  FaCloud, 
+  FaShieldAlt, 
+  FaChartLine, 
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
+  FaSearch
+} from 'react-icons/fa';
+import { 
+  SiNextdotjs;
+  SiReact, 
+  SiTypescript, 
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
+  SiMicrosoftazure
+} from 'react-icons/si';
+
 
   color: string;  id: string
   name: string
@@ -106,6 +121,15 @@ interface ServiceCategory {
 
   color: string
 }
+
+
+  color: string;  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
+}
+
 
 const serviceCategories: ServiceCategory[] = [
   color: string;  id: string,
@@ -449,11 +473,12 @@ const serviceCategories: ServiceCategory[] = [;
       'Intelligent workflow automation',
       'Natural language processing',
       'Predictive analytics',
-      'Real-time decision making',
+      'Real - time decision making',
       'Custom AI model training',
       'Multi - platform integration',
     ],
     pricing: {
+      
       starter: 299,
       professional: 799,
       enterprise: 1999
@@ -461,9 +486,6 @@ const serviceCategories: ServiceCategory[] = [;
     },
 
     technologies: [;
-      enterprise: 1999,
-    },
-    technologies: [
       'TensorFlow',
       'PyTorch',
       'OpenAI',
@@ -471,24 +493,25 @@ const serviceCategories: ServiceCategory[] = [;
       'React',
       'Node.js',
     ],
-    benefits: [
+    benefits: [;
       'Reduce manual tasks by 80%',
       'Improve accuracy by 95%',
-      '24/7 automated operations',
+      '24 / 7 automated operations',
       'Scalable AI infrastructure',
     ],
   },
 
   {
-    id: 'quantum-computing-platform',
+    id: 'quantum - computing - platform',
     title: 'Quantum Computing Platform',
-    description:
-      'Next-generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className='w-6 h-6' />,
-    category: 'ai-ml',
-    features: [
+
+    description:;
+      'Next - generation quantum computing solutions for complex problem solving',
+    icon: <FaBrain className='w - 6 h - 6' />,
+    category: 'ai - ml',
+    features: [;
       'Quantum algorithm optimization',
-      'Hybrid classical-quantum computing',
+      'Hybrid classical - quantum computing',
       'Quantum machine learning',
       'Cryptographic solutions',
       'Quantum simulation tools',
@@ -496,6 +519,7 @@ const serviceCategories: ServiceCategory[] = [;
     ],
 
     pricing: {
+      
       starter: 999,
       professional: 2499,
       enterprise: 4999
@@ -507,18 +531,34 @@ const serviceCategories: ServiceCategory[] = [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
       'Future - proof technology',
-      enterprise: 4999,
-    },
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
-    benefits: [
-      'Solve previously impossible problems',
-      'Exponential speed improvements',
-      'Future-proof technology',
       'Research and development support',
     ],
   },
 
   {
+    id: 'edge - ai - platform',
+    title: 'Edge AI Computing Platform',
+
+    description:;
+      'Distributed artificial intelligence at the edge for real - time processing',
+    icon: <FaNetworkWired className='w - 6 h - 6' />,
+    category: 'iot',
+    features: [;
+      'Edge device optimization',
+      'Real - time AI inference',
+      'Distributed learning',
+      'Low - latency processing',
+      'Offline AI capabilities',
+      'Edge - to - cloud synchronization',
+    ],
+
+    pricing: {
+      
+      starter: 199,
+      professional: 599,
+      enterprise: 1499
+    
+    },
 
     technologies: [;
       'TensorFlow Lite',
@@ -527,7 +567,7 @@ const serviceCategories: ServiceCategory[] = [;
       'Raspberry Pi',
       'Arduino',
     ],
-    benefits: [
+    benefits: [;
       'Reduced latency by 90%',
       'Lower bandwidth costs',
       'Enhanced privacy',
@@ -536,6 +576,13 @@ const serviceCategories: ServiceCategory[] = [;
   },
 
   {
+    id: 'quantum - cybersecurity',
+    title: 'Quantum Cybersecurity Suite',
+
+    description:;
+      'Advanced security solutions leveraging quantum - resistant cryptography',
+    icon: <FaShieldAlt className='w - 6 h - 6' />,
+    category: 'security',
     features: [;
       'Post - quantum cryptography',
       'Quantum key distribution',
@@ -543,22 +590,10 @@ const serviceCategories: ServiceCategory[] = [;
       'Zero - trust architecture',
       'Compliance frameworks',
       'Real - time monitoring',
-    id: 'quantum-cybersecurity',
-    title: 'Quantum Cybersecurity Suite',
-    description:
-      'Advanced security solutions leveraging quantum-resistant cryptography',
-    icon: <FaShieldAlt className='w-6 h-6' />,
-    category: 'security',
-    features: [
-      'Post-quantum cryptography',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Zero-trust architecture',
-      'Compliance frameworks',
-      'Real-time monitoring',
     ],
 
     pricing: {
+      
       starter: 399,
       professional: 999,
       enterprise: 2499
@@ -569,40 +604,30 @@ const serviceCategories: ServiceCategory[] = [;
     benefits: [;
       'Future - proof security',
       'Quantum - resistant encryption',
-      enterprise: 2499,
-    },
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
-    benefits: [
-      'Future-proof security',
-      'Quantum-resistant encryption',
       'Comprehensive compliance',
       'Advanced threat protection',
     ],
   },
 
   {
+    id: 'data - fabric - platform',
+    title: 'Intelligent Data Fabric Platform',
+
+    description:;
+      'Unified data management and analytics across all sources and formats',
+    icon: <FaDatabase className='w - 6 h - 6' />,
+    category: 'data',
     features: [;
       'Unified data access',
       'Real - time analytics',
       'Data governance',
       'AI - powered insights',
       'Multi - cloud support',
-    id: 'data-fabric-platform',
-    title: 'Intelligent Data Fabric Platform',
-    description:
-      'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className='w-6 h-6' />,
-    category: 'data',
-    features: [
-      'Unified data access',
-      'Real-time analytics',
-      'Data governance',
-      'AI-powered insights',
-      'Multi-cloud support',
       'Data lineage tracking',
     ],
 
     pricing: {
+      
       starter: 299,
       professional: 799,
       enterprise: 1999
@@ -616,13 +641,18 @@ const serviceCategories: ServiceCategory[] = [;
       'Databricks',
       'Airflow',
     ],
-    benefits: [
+    benefits: [;
       'Unified data view',
-      'Real-time insights',
+      'Real - time insights',
       'Improved data quality',
       'Reduced integration costs',
     ],
   },  {
+    id: 'cloud - native - platform',
+    title: 'Cloud - Native Development Platform',
+    description: 'Modern cloud - native development and deployment platform',
+    icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
+    ];
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
@@ -632,6 +662,14 @@ const serviceCategories: ServiceCategory[] = [;
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
+  }
+  {
+
+  {
+    id: 'cloud-native-platform',
+    title: 'Cloud-Native Development Platform',
+    description: 'Modern cloud-native development and deployment platform',
+
 ];
 
 const services: Service[] = [;
@@ -855,6 +893,18 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       )
     }
 
+    return filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'price':
+          return a.pricing.starter - b.pricing.starter;
+        case 'category':
+          return a.category.localeCompare(b.category);
+        default:
+          return a.title.localeCompare(b.title);
+      }
+    });
+  }, [selectedCategory, searchTerm, sortBy]);
+
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service);
   }
@@ -867,6 +917,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service && service.technologies.some(tech => tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
       );
     }
+
     return filtered && filtered.sort((a, b) => {;
       switch (sortBy) {;
         case 'price':;
@@ -878,9 +929,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       }
     });
   }, [selectedCategory, searchTerm, sortBy]);
+
   const handleServiceSelect = (service: Service) => {;
     setSelectedService(service);
   };
+
   const closeModal = () => {;
     setSelectedService(null);
   }
@@ -895,9 +948,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     })
 
   }, [selectedCategory, searchTerm, sortBy])
+
   const handleServiceSelect = (service: Service) => {;
     setSelectedService(service);
   };
+
   const closeModal = () => {;
     setSelectedService(null);
   };
@@ -915,12 +970,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       }
     })
   }, [selectedCategory, searchTerm, sortBy]);
+
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service)
   };
+
   const closeModal = () => {
     setSelectedService(null)
   };
+
 ;
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selected_category, setSelectedCategory] = useState < string>('all');
@@ -1010,12 +1068,44 @@ if ( {) {
           </p>
         </motion.div>
 
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
+      {/* Header */}
+      <div className="container mx - auto px - 4 py - 16">;
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8 }}
+
+          transition={{ duration: 0 && 0.8 }}
+          className='text-center mb-16'>;
+          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+            2025 Services Showcase;
+          </h1>;
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Discover our cutting-edge technology solutions designed for the;
+            future. From AI-powered automation to quantum computing, we're;
+            building tomorrow's innovations today.          </p>        >;
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+            2025 Services Showcase;
+          </h1>;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+            Discover our cutting-edge technology solutions designed for the future. ;
+            From AI-powered automation to quantum computing, we're building tomorrow's innovations today.;
+          </p>;
+        </motion && motion.div>;
+
+
+
+
+
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-12'
+
 
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
@@ -1104,6 +1194,8 @@ if ( {) {
           </div>
         </motion.div>
 
+
+
         {/* Category Tabs */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1114,17 +1206,23 @@ if ( {) {
           <div className="flex flex-wrap justify-center gap-4">;
             <button
 
+
+
+
+
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
-            >
-              All Services
-            </button>
-            {serviceCategories.map(category => (              <button            {serviceCategories.map((category) => (
+
+
               <button
+
+
+
+
 
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -1141,6 +1239,13 @@ if ( {) {
           </div>
         </motion.div>
 
+          </div>;
+        </motion && motion.div>;
+
+
+
+
+
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1148,6 +1253,7 @@ if ( {) {
           transition={{ duration: 0.8, delay: 0.6 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
+
 
         >
           {filteredServices.map((service, index) => (
@@ -1158,6 +1264,10 @@ if ( {) {
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               whileHover={{ y: -5, scale: 1 && 1.02 }}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
+
+
+
+
 
               onClick={() => handleServiceSelect(service)}
             >;
@@ -1328,6 +1438,8 @@ if ( {) {
 
 
 
+
+
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1355,6 +1467,7 @@ if ( {) {
         )}
       </div>
 
+
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1371,9 +1484,13 @@ if ( {) {
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              exit={{ scale: 0 && 0.9, opacity: 0 }}
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
+
               onClick={e => e.stopPropagation()}
+
+
+
 
             >
               <div className='flex items-start justify-between mb-6'>
@@ -1391,21 +1508,21 @@ if ( {) {
                           c => c.id === selectedService.category
                         )?.name
                       }
-                    </p>                  </div>
-                </div>
+                    </p>                  </div>;
+                </div>;
                 <button
                   onClick={closeModal}
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'            >
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
-                    {selectedService.icon}
-                  </div>
-                  <div>
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>
-                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
-                  </div>
-                </div>
+                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'>;
+              <div className="flex items-start justify-between mb-6">;
+                <div className="flex items-center gap-4">;
+                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">;
+                    {selectedService && selectedService.icon}
+                  </div>;
+                  <div>;
+                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService && selectedService.title}</h2>;
+                    <p className="text-gray-400">{serviceCategories && serviceCategories.find(c => c && c.id === selectedService && selectedService.category)?.name}</p>;
+                  </div>;
+                </div>;
                 <button
                   onClick={closeModal}
                   className='p-2 hover:bg-white/10 rounded-lg transition-colors'
@@ -1418,12 +1535,12 @@ if ( {) {
               </p>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                 {/* Features */}
-                <div>
-                  <h3 className='text-xl font-bold text-white mb-4'>
-                    Key Features
-                  </h3>
-                  <ul className='space-y-2'>
-                    {selectedService.features.map((feature, index) => (
+                <div>;
+                  <h3 className='text-xl font-bold text-white mb-4'>;
+                    Key Features;
+                  </h3>;
+                  <ul className='space-y-2'>;
+                    {selectedService && selectedService.features.map((feature, index) => (;
                       <li
                         key={index}
 
@@ -1441,14 +1558,23 @@ if ( {) {
 
 
                         {feature}
+                      </li>;
 
 
                         {feature}
+
 
                       </li>
                     ))}
                   </ul>
                 </div>
+
+                  </ul>;
+                </div>;
+
+
+
+
 
                 {/* Benefits */}
 
@@ -1457,6 +1583,14 @@ if ( {) {
                   </ul>
                 </div>
               </div>
+
+                  </ul>;
+                </div>;
+              </div>;
+
+
+
+
 
               {/* Technologies */}
               <div className='mt-8'>
@@ -1478,11 +1612,19 @@ if ( {) {
 
                     >
 
+
                       {tech}
                     </span>;
                   ))}
                 </div>
               </div>
+
+                </div>;
+              </div>;
+
+
+
+
 
               {/* Pricing */}
               <div className='mt-8'>
@@ -1521,15 +1663,26 @@ if ( {) {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
-    </div>
-);
-}
+
+      </AnimatePresence>;
+    </div>;
+  );
+
 };
+
 export default EnhancedServicesShowcase2025;  );
   )
 };
+
+export default EnhancedServicesShowcase2025;
+
+
+
 export default EnhancedServicesShowcase2025;
 
 export default EnhancedServicesShowcase2025;
-export default EnhancedServicesShowcase2025;
+;
+
+};
+
+

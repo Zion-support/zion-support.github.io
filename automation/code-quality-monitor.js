@@ -43,6 +43,7 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 ;
 
 
+
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -56,8 +57,8 @@ class CodeQualityMonitor {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(logMessage.trim());
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
 ursor/integrate-build-improve-and-re-verify-8f7d
   }
@@ -243,8 +244,11 @@ class CodeQualityMonitor {,
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
 
+
+
 }
 }
+
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -338,3 +342,5 @@ class CodeQualityMonitor {,;
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),;
       return null;
     },;
+
+

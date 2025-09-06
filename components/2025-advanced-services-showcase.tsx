@@ -34,6 +34,7 @@ const allServices = [
   ...cuttingEdgeITInfrastructureServices
 
 ];
+
 const categories = [
   {
     id: 'all',
@@ -111,6 +112,7 @@ const getServicePricing = (service: any) => {
   Mail,;
   MapPin,;
 } from 'lucide-react';
+
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
   {;
@@ -125,6 +127,7 @@ const advancedEnterpriseServices2025 = [;
     icon: "🤖",;
   },;
 ];
+
 const innovativeMicroSaasExpansion2025 = [;
   {;
     id: "micro-1",;
@@ -138,6 +141,7 @@ const innovativeMicroSaasExpansion2025 = [;
     icon: "⚡",;
   },;
 ];
+
 const cuttingEdgeITInfrastructureServices = [;
   {;
     id: "infra-1",;
@@ -160,6 +164,7 @@ import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-i
   website: 'https://ziontechgroup && ziontechgroup.com',;
   return 'Contact for pricing'
 };
+
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
@@ -189,6 +194,7 @@ export default function AdvancedServicesShowcase() {
 
   useEffect(() => {;
     let filtered = allServices;
+
     // Filter by category;
     if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => {;
@@ -196,9 +202,6 @@ export default function AdvancedServicesShowcase() {
         const category = getServiceCategory(service).toLowerCase();
 
 
-  }, [selectedCategory, searchTerm]);
-  const ServiceCard = ({ service }: { service: any }) => (
-    <motion.div
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
@@ -885,6 +888,7 @@ if ( {) {
                 />;
               </div>;
             </div>;
+
             <div className='flex items-center gap-4'>;
               <div className='flex items-center gap-2'>;
 
@@ -937,9 +941,82 @@ if ( {) {
               </div>
             </div>
           </div>
+          
+          {/* Category Filters */}
+          <div className="mt-6">
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <button
+      {/* Main Content */}
+      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
+        {/* Filters and Search */}
+        <div className='mb - 8'>;
+          <div className='flex flex - col lg:flex - row gap - 6 items - start lg:items - center justify - between'>;
+            <div className='flex - 1'>;
+              <div className='relative max - w-md'>;
+                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
+                <input;
+                  type='text';
+                  placeholder='Search services...';
+                  value={search_term}
+                  on_change={e => setSearchTerm (e.target.value)}
+                  className='w - full pl - 10 pr - 4 py - 3 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 800 text - gray - 900 dark:text - white placeholder - gray - 500 dark:placeholder - gray - 400 focus:ring - 2 focus:ring - blue - 500 focus:border - transparent';
+                />;
+              </div>;
+            </div>;
+            <div className='flex items - center gap - 4'>;
+              <div className='flex items - center gap - 2'>;
+                <button;
+                  on_click={() => setViewMode ('grid')}
+                  className={`p - 2 rounded - lg transition - all duration - 300 ${
+                    view_mode === 'grid';
+                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
+                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
+                  }`}
+                >;
+                  <Grid className='w - 5 h - 5' />                </button>                <button;
+                  on_click={() => setViewMode ('list')}
+                  className={`p - 2 rounded - lg transition - all duration - 300 ${
+                    view_mode === 'grid';
+                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
+                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
+                  }`}
+                >;
+                  <Grid className="w - 5 h - 5" />;
+                </button>;
+                <button;
+                  on_click={() => setViewMode ('list')}
+                  className={`p - 2 rounded - lg transition - all duration - 300 ${
+                    view_mode === 'list';
+                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
+                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
+                  }`}
+                >;
+                  <List className='w - 5 h - 5' />                </button>;
+              </div>;
+            </div>;
+          </div>                    view_mode === 'list';
+                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
+                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
+                  }`}
+                >;
+                  <List className="w - 5 h - 5" />;
+              </div>;
+            </div>;
+          </div>;
+          {/* Category Filters */}
+          <div className='mt - 6'>;
+            <div className='flex flex - wrap gap - 3'>;
+              {categories.map (category => (                <button;
+          {/* Category Filters */}
+          <div className="mt - 6">;
+            <div className="flex flex - wrap gap - 3">;
+              {categories.map ((category) => (
+
 
 
                 <button
+
 
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
@@ -956,6 +1033,14 @@ if ( {) {
             </div>
           </div>
         </div>
+
+            </div>;
+          </div>;
+        </div>;
+
+
+
+
 
         {/* Results Summary */}
 
@@ -1000,12 +1085,19 @@ if ( {) {
 
                     <ServiceList key={service.id} service={service} />
 
+
                   ))}
                 </div>;
               )}
             </AnimatePresence>;
           )}
         </div>
+
+        </div>;
+
+
+
+
 
         {/* Call to Action */}
         <div className='mt-16 text-center'>;
@@ -1157,3 +1249,4 @@ if ( {) {
   );
 }
           </div>
+

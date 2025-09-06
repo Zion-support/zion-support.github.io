@@ -1,16 +1,13 @@
 
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { WorkExperience  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useWorkExperience() {
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {WorkExperience} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useWorkExperience() {;
+
+
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,9 +16,9 @@ export function useWorkExperience() {;
     if (!user) {
       setError('You must be logged in to update work experience')
       return false
-    }
-    setIsLoading(true);
-    setError(null);
+
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { WorkExperience } from '@/types/resume',;
@@ -35,6 +32,9 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -81,15 +81,8 @@ export function useWorkExperience() {;
       return handleResumeError(e, 'Could not add work experience')
     } finally {
       setIsLoading(false)
-    }
-  }
-  const updateWorkExperience = async (workId: string, work: WorkExperience): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update work experience')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -119,6 +112,9 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -165,15 +161,8 @@ export function useWorkExperience() {;
       return handleResumeError(e, 'Could not update work experience')
     } finally {
       setIsLoading(false)
-    }
-  }
-  const deleteWorkExperience = async (workId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete work experience')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -203,6 +192,9 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -250,9 +242,11 @@ if (throw error) {
     addWorkExperience;
     updateWorkExperience;
 
-    deleteWorkExperience
-  }
-}
+    deleteWorkExperience;
+
+      setIsLoading(false)
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -275,6 +269,8 @@ if (throw error) {
     addWorkExperience;
     updateWorkExperience;
     deleteWorkExperience;
+
+
   }
 }
 ;

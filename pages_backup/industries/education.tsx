@@ -150,9 +150,11 @@ const benefits = [;
     title: 'Improved Learning Outcomes,',;
     description: 'Personalized learning experiences lead to better student performance.,',;
     icon: GraduationCap;
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+
+    icon: GraduationCap,;
 ];
 const benefits = [;
   {;
@@ -281,13 +283,11 @@ export default function EducationPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-              className="text-center mb-16""
-            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Education Technology Services;
+
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-16"">;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Education Technology Services,;
+
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive edtech solutions designed for schools, universities, ;

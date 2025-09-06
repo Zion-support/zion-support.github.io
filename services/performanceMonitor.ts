@@ -1,17 +1,3 @@
-export interface PerformanceMetrics {
-export interface PerformanceMetrics {;
-  url: string;
-  timestamp: Date;
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  timeToInteractive: number;
-  totalBlockingTime: number;
-  speedIndex: number;
-  performanceScore: number;
-  accessibilityScore: number;
 
   speed_index: number;
   performance_score: number;
@@ -20,111 +6,39 @@ export interface PerformanceMetrics {;
   seo_score: number;
 
 }
+export interface PerformanceAlert {
+  id: string;
+  url: string;
+  type: 'critical' | 'warning' | 'info';
+  message: string;
+  metric: string;
+  threshold: number;
 
   current_value: number;
   timestamp: Date,
   resolved: boolean;
 
 }
+export interface MonitoringConfig {
+  urls: string[];
+  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
+  thresholds: {
+    load_time: number;
+    firstContentfulPaint: number;
+
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-    cumulativeLayoutShift: number
-  }
-  notifications: {
-    email: boolean;
-
-    slack: boolean
-
-    webhook: boolean
-  }
-}
-export class PerformanceMonitorService {
-
-export class PerformanceMonitorService {;
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
-      const response = await fetch(`${this.baseUrl}/performance/monitor`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ url })});
-      if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`)
+
+
 export interface PerformanceMetrics {;
-  url: string,;
-  timestamp: Date,;
-  loadTime: number,;
-  firstContentfulPaint: number,;
-  largestContentfulPaint: number,;
-  cumulativeLayoutShift: number,;
-  firstInputDelay: number,;
-  timeToInteractive: number,;
-  totalBlockingTime: number,;
-  speedIndex: number,;
-  performanceScore: number,;
-  accessibilityScore: number,;
-  bestPracticesScore: number,;
-  seoScore: number;
-}
-;
-export interface PerformanceAlert {;
-  id: string,;
-  url: string,;
-  type: 'critical' | 'warning' | 'info',;
-  message: string,;
-  metric: string,;
-  threshold: number,;
-  currentValue: number,;
-  timestamp: Date,;
-  resolved: boolean;
-}
-;
-export interface MonitoringConfig {;
-  urls: string[],;
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
-  thresholds: {;
-    loadTime: number,;
-    firstContentfulPaint: number,;
-    largestContentfulPaint: number,;
-    cumulativeLayoutShift: number;
-  },;
-  notifications: {;
-    email: boolean,;
-    slack: boolean,;
-    webhook: boolean;
-  }
-}
-;
-export class PerformanceMonitorService {;
-  private apiKey: string,;
-  private baseUrl: string,;
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
-    this.apiKey = apiKey,;
-    this.baseUrl = baseUrl;
-  }
-;
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
-    try {;
-      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
-      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${this.apiKey}`,;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify({ url })}),;
-      if (!response.ok) {;
-        throw new Error(`Performance monitoring failed: ${response.statusText}`);
+
+
       }
       return await response.json()
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
@@ -144,6 +58,15 @@ export class PerformanceMonitorService {;
       return this && this.generateMockMetrics(url)
     }
   }
+
+
+
+
+
+  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
+    try {
+      const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
+        headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
@@ -155,6 +78,9 @@ export class PerformanceMonitorService {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+
+
+
       }
       return await response.json()
           'Authorization': `Bearer ${this && this.apiKey}`}});
@@ -169,6 +95,35 @@ export class PerformanceMonitorService {;
       return this && this.generateMockHistoricalData(url, days)
     }
   }
+
+
+
+
+
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+    try {
+
+      const response = await fetch(`${this && this.baseUrl}/performance/config`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify(config)});
+
+      if (!response && response.ok) {
+        throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
+
+      }
+    } catch (error) {
+      console && console.error('Failed to set monitoring config:', error);
+      throw error
+    }
+  }
+  async getAlerts(url?: string): Promise<PerformanceAlert[]> {
+    try {
+      const params = url ? `?url=${encodeURIComponent(url)}` : '';
+      const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
+        headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
@@ -198,6 +153,9 @@ export class PerformanceMonitorService {;
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
+
+
+
       }
       return await response.json()
           'Authorization': `Bearer ${this && this.apiKey}`}});
@@ -212,6 +170,25 @@ export class PerformanceMonitorService {;
       return this && this.generateMockAlerts(url)
     }
   }
+
+
+
+
+
+  async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
+    summary: {
+      averageLoadTime: number;
+      averagePerformanceScore: number;
+      uptime: number
+      alertsCount: number
+    }
+    trends: {
+      loadTime: number[];
+      performanceScore: number[]
+      dates: string[]
+    }
+    recommendations: string[]
+  }> {
 
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
     
@@ -360,9 +337,14 @@ export class PerformanceMonitorService {;
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,;
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
+
+
+
     }
     return data
   }
+
+
 
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
@@ -568,12 +550,10 @@ if ( {) {
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
-        currentValue: 85;
-        timestamp: new Date()
-        resolved: true
-      }
-    ];
-    return url ? alerts.filter(a => a.url === url) : alerts
+
+
+    return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
+
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -613,6 +593,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149;
     period: '/month';
 
+
+
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -646,6 +628,10 @@ export const PERFORMANCE_MONITOR_PRICING = {
     features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
+
+
+
+
     ];
   }
 }

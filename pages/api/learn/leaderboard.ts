@@ -1,10 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import fs from 'fs',;
-import path from 'path',;
-const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+
+
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -14,18 +9,14 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 
     res.status(200).json({ leaderboard: top })
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
-  };
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
-export default function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+import path from 'path',
+const users_path = path.join (process.cwd (), 'datalearnusers.json'),
+export default /**
+ * handler - Function description
+ */
+function handler() {
   try {
     const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),
     const entries = Object.values (users as any).map ((u: any) => ({
@@ -45,18 +36,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }
-}
+;
+
+

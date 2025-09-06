@@ -265,6 +265,9 @@ const path = require("path")
   }
     return files}
     return files}
+  }
+    return files}
+    return files}
     
     return files;
   }
@@ -411,6 +414,9 @@ class PerformanceMonitor {
     
     return size;
   }}
+  }
+    return size}
+    return size}
   }
     return size}
     return size}

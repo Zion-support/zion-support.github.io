@@ -1,4 +1,29 @@
 
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {useAuth} from "@/hooks/useAuth";
+import {Wallet} from "@/components/icons";
+import {toast} from "sonner";
+export function Web3Login() {;
+
+  const { loginWithWeb3 } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleWeb3Login = async () => {;
+    try {;
+      setIsLoading(true);
+
+
+
+export function Web3Login() {
+  const { loginWithWeb3 } = useAuth(),
+  const [isLoading, setIsLoading] = useState(false),
+
+  const handleWeb3Login = async () => {
+    try {
+      setIsLoading(true);
+      setIsLoading(true),
+      
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
@@ -58,10 +83,8 @@
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
-      )}
-    </Button>
-  )
-}
+
+
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -112,6 +135,10 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
+
+
+
+
       )}
 
     </Button>;

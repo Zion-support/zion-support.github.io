@@ -3,6 +3,11 @@ import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
 
+  if (id) {
+    const updates = readJsonFile("updates && updates.json", [] as any[]);
+    const idx = updates && updates.findIndex((x: any) => x && x.id === id);
+    if (idx >= 0) {
+
   const id = String(req.query.id || '');
   if (id) {
     const updates = readJsonFile('updates.json', [] as any[]);
@@ -53,20 +58,6 @@ if ( {) {
 }
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile ("updates.json", updates);
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  const id = String(req.query.id |"");
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const id = String(req.query.id || "");
-
-  if (id) {
-    const updates = readJsonFile("updates.json", [] as any[]);
-    const idx = updates.findIndex((x: any) => x.id === id);
-    if (idx >= 0) {
-      updates[idx].opens = (updates[idx].opens |0) + 1;
-      writeJsonFile("updates.json", updates);
-
     }
   }
   const pixel = Buffer.from (

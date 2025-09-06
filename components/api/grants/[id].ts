@@ -1,28 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import type {
-  GrantApplication
-  UpdateGrantPayload;
-  GrantApplication,;
-  UpdateGrantPayload,;
-} from '../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  }
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true })
-  }
-}
-function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);
-}
-function readGrant(id: string): GrantApplication | null {
-  ensureDir();
 
 
 function ensureDir() {
@@ -68,10 +46,14 @@ function writeGrant(record: GrantApplication) {
 
   ensureDir(),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-  ensureDir()
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req && req.query as { id: string };
+
+  if (!id) {
+    res && res.status(400).json({ error: 'Missing id' });
+    return;  }    return
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
@@ -81,8 +63,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string }
-  const { id } = req.query as { id: string };
+
+
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return

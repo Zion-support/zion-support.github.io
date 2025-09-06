@@ -4,58 +4,35 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Brain
-  Rocket
-  Target
-  Shield
-  Cpu
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  MessageCircle
-  Star
-  Zap
-  Sparkles
-  Home
-  Users
-  Briefcase
-  BookOpen
-  TrendingUp
-  MessageSquare
-  Calendar
-  GraduationCap
-  ShieldCheck
-  Eye
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Globe2
-  Bot
-  Crown
-  Infinity;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, ArrowRight
-  Brain, Rocket, Target, Shield, Cpu
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+import {
 
   Phone,
   Mail,
@@ -110,6 +87,8 @@ import {
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, ;
+
+
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -205,6 +184,11 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
+
+
+
+const mainNavigation = [
+
   }, ];      { name: 'AI Business Intelligence', href: '/services / ai - business - intelligence - suite' },
       { name: 'Smart Supply Chain', href: '/services / smart - supply - chain - optimization' },
       { name: 'Intelligent HR Management', href: '/services / intelligent - hr - management - system' },
@@ -226,9 +210,12 @@ const main_navigation = [;
 
 
 const quickLinks = [
+  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+];
+;
+const quick_links = [;
   { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-
+  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
   { name: 'Blog', href: '/blog', icon: BookOpen },
   { name: 'News', href: '/news', icon: TrendingUp },
   { name: 'Careers', href: '/careers', icon: GraduationCap },
@@ -265,20 +252,6 @@ const company = [;
 
 
 
-];
-
-const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home }
-  { name: 'Services', href: '/services', icon: Briefcase }
-  { name: 'AI Solutions', href: '/ai-solutions', icon: Brain }
-  { name: 'Quantum Tech', href: '/quantum-tech', icon: Globe }
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Cpu }
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket }
-  { name: 'Micro SAAS', href: '/micro-saas', icon: Target }
-  { name: 'Innovations', href: '/innovations', icon: Sparkles }
-  { name: 'About', href: '/about', icon: Users }
-  { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
 const footerSections = [
   {
     title: 'Services'
@@ -406,7 +379,14 @@ const footer_sections = [;
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>;
       { name: 'Research', href: '/research' }
     ]
+  }, ];
+;
+export default /**
+ * UltraFuturisticFooter2029V2 - Function description
+ */
+function UltraFuturisticFooter2029V2() {
   },];
+  return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
   }
@@ -432,6 +412,7 @@ export default function UltraFuturisticFooter2029V2() {
   return (
 
             <motion.div
+
 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -558,6 +539,8 @@ export default function UltraFuturisticFooter2029V2() {
 
 
 
+
+
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -597,6 +580,7 @@ export default function UltraFuturisticFooter2029V2() {
           ))}
         </div>
 
+
         {/* Service Showcase */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -604,6 +588,7 @@ export default function UltraFuturisticFooter2029V2() {
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
           className='mt-16 pt-12 border-t border-gray-800'
+
 
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -632,15 +617,19 @@ export default function UltraFuturisticFooter2029V2() {
           <h3 className="text-2xl font-bold text-white text-center mb-8">;
             Featured 2029 Services;
           </h3>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {serviceCategories && serviceCategories.map((category, index) => (;
-              <motion&& motion.div
-                key={category && category.title}
-                initial={{ opacity: 0, scale: 0 && 0.9 }}
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
+            {service_categories.map ((category, index) => (
+              <motion.div;
+                key={category.title}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
                 className='group'
+
+
+
 
               >
                 <div
@@ -679,28 +668,6 @@ export default function UltraFuturisticFooter2029V2() {
 
                 className="group"
               >
-                className='group'
-
-              >
-                <div
-                  className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
-                >
-                  <div className='flex items-center space-x-3 mb-3'>
-                    <div
-                      className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
-                    >
-                      <category.icon className='w-5 h-5 text-white' />
-                    </div>
-                    <h4 className='font-semibold text-white text-sm'>
-                      {category.title}
-                    </h4>
-                  </div>
-                  <ul className='space-y-2'>
-                    {category.services.slice(0, 3).map(service => (
-                      <li key={service.name}>
-                        <Link
-                          href={service.href}
-                          className='text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block'                        >              >
                 <div className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}>
                   <div className="flex items-center space-x-3 mb-3">
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -760,6 +727,14 @@ export default function UltraFuturisticFooter2029V2() {
         </motion.div>
       </div>
 
+          </div>;
+        </motion && motion.div>;
+      </div>;
+
+
+
+
+
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
@@ -767,19 +742,6 @@ export default function UltraFuturisticFooter2029V2() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">;
 
-                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs block"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
@@ -813,6 +775,7 @@ export default function UltraFuturisticFooter2029V2() {
 
             </motion.div>
 
+
             {/* Social Links */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -820,6 +783,7 @@ export default function UltraFuturisticFooter2029V2() {
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
               className='flex items-center space-x-4'
+
 
             >
               {socialLinks.map(social => (
@@ -848,11 +812,21 @@ export default function UltraFuturisticFooter2029V2() {
 
                 </Link>
 
+
               ))}
             </motion.div>
           </div>
         </div>
       </div>
+
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
 
       {/* Newsletter Signup */}
       <motion&& motion.div
@@ -861,6 +835,7 @@ export default function UltraFuturisticFooter2029V2() {
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
         viewport={{ once: true }}
         className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
+
 
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -906,39 +881,26 @@ export default function UltraFuturisticFooter2029V2() {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </footer>
-);
+
+
+                Subscribe;
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+
+
   );
 }
       </motion.div>;
     </footer>);
-              <input
-                type=&quot;email&quot;
-                placeholder=&quot;Enter your email&quot;
-                className=&quot;flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50&quot;
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+}
+
+  );
+
+}
+
+    </footer>
   );
 }
+

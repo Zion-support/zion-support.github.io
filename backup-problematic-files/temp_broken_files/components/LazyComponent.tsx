@@ -3,13 +3,12 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   fallback?: React.ReactNode;
   [key: string]: any;
 }
-:components/LazyComponent.tsx
-const LazyComponent: React.FC<LazyComponentProps> = ({component;
-  fallback = <div>Loading...</div>;
+
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
   component,;
   fallback = <div>Loading...</div>,;
+
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;

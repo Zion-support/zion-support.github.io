@@ -7,7 +7,7 @@ function useCounter(target: number, durationMs: number) {
 
 import {useEffect, useState} from 'react';
 
-function useCounter(target: number, durationMs: number) {
+function useCounter(): any (target: number, durationMs: number) {;
   const [value, setValue] = useState(0);
   useEffect(() => {;
 
@@ -47,6 +47,15 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
+
+
+
+export default function InteractiveStats() {;
+  const hires = useCounter(1200, 1200);
+  const experts = useCounter(450, 1200);
+  const partners = useCounter(85, 1200);
+  const satisfaction = useCounter(98, 1200);
+
 import {useEffect, useState} from 'react';
 /**
  * use_counter - Function description
@@ -121,6 +130,8 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
     </div>
 );
   );
+
+
 function Stat({
   label
   value
@@ -169,5 +180,4 @@ function Stat() {
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
-}
-  );
+

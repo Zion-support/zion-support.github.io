@@ -40,24 +40,24 @@ try {
   // Check build size
   if (fs && fs.existsSync('.next')) {
     const buildSize = execSync('du -sh .next', { "encoding": 'utf8' }).trim();
-    console && console.log(` Build "size": ${buildSize}`);
+    console && console.log(`✅ Build "size": ${buildSize}`);
     // Check if build size is reasonable (less than 50MB)
     const sizeInMB = parseInt(buildSize && buildSize.split('\t')[0]);
     if (sizeInMB < 50) {
-      console && console.log(' Build size is within acceptable limits');
+      console && console.log('✅ Build size is within acceptable limits');
     } else {
-      console && console.log('  Build size is large, consider optimization');
+      console && console.log('⚠️  Build size is large, consider optimization');
     }
   }
 try {
   // Bundle analysis
-  console && console.log(' Analyzing bundle...');
+  console && console.log('📋 Analyzing bundle...');
   const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { "encoding": 'utf8' });
   console.log('✅ Bundle analysis completed');
 ursor/fix-syntax-push-and-merge-to-main-40de
   performanceChecks.bundleAnalysis = true;
 } catch (error) {
-  console && console.log('  Bundle analysis not available (install @next/bundle-analyzer)');
+  console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -67,9 +67,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   performanceChecks.bundleAnalysis = true} catch (error) {
-  console.log('  Bundle analysis not available (install @next/bundle-analyzer)')}
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
   performanceChecks && performanceChecks.bundleAnalysis = true} catch (error) {
-  console && console.log('  Bundle analysis not available (install @next/bundle-analyzer)')}
+  console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
 try {
   // Check if app is running and get basic metrics
   const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" "http": //localhost:3000', { "encoding": 'utf8' });
@@ -81,15 +81,21 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     console.log('✅ Application is running on localhost: 3000');,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log('✅ Application is running on "localhost": 3000'),
+    console && console.log('✅ Application is running on localhost: 3000');,
+    console && console.log('✅ Application is running on localhost: 3000');,
+    console && console.log('✅ Application is running on localhost: 3000');,
+    console && console.log('✅ Application is running on localhost: 3000');,
+    console && console.log('✅ Application is running on "localhost": 3000'),
     // Get response time
     const responseTime = execSync('curl -s -o /dev/null -w "%{time_total}" "http": //localhost:3000', { "encoding": 'utf8' });
-    console && console.log(` Response "time": ${parseFloat(responseTime) * 1000}ms`);
+    console && console.log(`✅ Response "time": ${parseFloat(responseTime) * 1000}ms`);
     if (parseFloat(responseTime) < 1) {
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('✅ Response time is good');
+      console && console.log('✅ Response time is good');
     } else {
-      console && console.log('  Response time could be improved');
+      console && console.log('⚠️  Response time could be improved');
     }
     performanceChecks && performanceChecks.loadTime = true;
   } else {
@@ -101,13 +107,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('✅ Response time is good')} else {
       console.log('⚠️  Response time could be improved')}
     performanceChecks.loadTime = true} else {
-    console.log('  Application not running on "localhost": 3000')}
-    console && console.log('  Application not running on localhost: 3000'),,
+    console.log('⚠️  Application not running on "localhost": 3000')}
+    console && console.log('⚠️  Application not running on localhost: 3000'),,
   }
-      console && console.log(' Response time is good')} else {
-      console && console.log('  Response time could be improved')}
+      console && console.log('✅ Response time is good')} else {
+      console && console.log('⚠️  Response time could be improved')}
     performanceChecks && performanceChecks.loadTime = true} else {
-    console && console.log('  Application not running on "localhost": 3000')}
+    console && console.log('⚠️  Application not running on "localhost": 3000')}
   measureMemoryUsage() {
     const usage = process && process.memoryUsage();
     this && this.metrics.memoryUsage = Math && Math.round(usage && usage.heapUsed / 1024 / 1024); // MB
@@ -172,7 +178,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const totalChecks = Object && Object.keys(performanceChecks).length;
 const passedChecks = Object && Object.values(performanceChecks).filter(Boolean).length;
 const performanceScore = Math && Math.round((passedChecks / totalChecks) * 100);
-console && console.log(`\n Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
+console && console.log(`\n📊 Performance "Score": ${performanceScore}% (${passedChecks}/${totalChecks})`);
 // Save performance report
 const report = {
 ursor/fix-syntax-push-and-merge-to-main-40de

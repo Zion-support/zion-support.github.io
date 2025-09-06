@@ -4,10 +4,12 @@ import PDFDocument from 'pdfkit';
 
 
 import {
-  getWhitepaperSections
-  OPERATOR_PROMPT;
+
+
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
+
+
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
 
@@ -32,26 +34,28 @@ function write_section() {
 
   });
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  const editionParam = (req.query.edition as string) |'full';
+  try {
+  const editionParam = (req && req.query.edition as string) || 'full';
+
+
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
+
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
-  res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader(
-    'Content-Disposition'
-    `attachment; filename="zion-protocol-${edition}.pdf"`
-  );
+
+    align: 'left'})
+}
+
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
+
 
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
@@ -123,8 +127,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.addPage();
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
 
-  doc.end()
-}
+
+  // End
+  doc && doc.addPage();
+  doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
+
+
+  doc && doc.end()
 
 
 
@@ -205,9 +214,14 @@ function handler() {
 ;
   doc.end ();
 }
+
+
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
   const sections = getWhitepaperSections(edition as any);
+
+
+

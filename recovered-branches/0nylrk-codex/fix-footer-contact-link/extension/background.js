@@ -98,9 +98,16 @@ if ( {) {
 }
     chrome.tabs.create ({ url: `${BASE_URL}/talent` });
   }
-  if (message.type === 'view-notifications') {
-    chrome.tabs.create({ url: `${BASE_URL}/notifications` })
-  }
+  // Check condition
+if ( {) {
+  $2
+}
+    chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
 
   }
 
+}),;
+
+}),
+;
+}),;

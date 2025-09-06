@@ -1,8 +1,15 @@
-import { TalentProfile } from '@/types/talent';
 
-import { TalentProfile } from "@/types/talent";
-// Sample talent profiles with realistic data for the talent directory
-export const TALENT_PROFILES: TalentProfile[] = [
+
+      {
+
+          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+        title: 'Real - Time Analytics Dashboard',
+        description:;
+          'Built a real - time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+
+      },
+    ],
+  },
   {
     id: 't-006'
     user_id: 'user-006'
@@ -391,7 +398,6 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
 
 
-import { TalentProfile } from "@/types/talent",
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -627,17 +633,14 @@ export const TALENT_PROFILES: TalentProfile[] = [
         description: "Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates."
       };
       {
-title: 'Cancer Treatment Response Prediction',
-        description:
-          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
-      },
-    ],
-  },;
-];
-}];
         title: "Cancer Treatment Response Prediction",
         description: "Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes."
       }
     ]
   }
 ];
+
+
+;
+
+

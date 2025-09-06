@@ -44,23 +44,134 @@ import { Project, ProjectStatus  } from '@/types / projects';
 import { Button  } from '@/components / ui / button';
 import {logErrorToProduction} from '@/utils / production_logger';
 
-                                <span className="font-medium text-sm">
-                                  {note.created_by_profile?.display_name || "User"}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
-                                  {format(new Date(note.created_at), "PPp")}
-                                </span>
-                              </div>
-                              <p className="text-sm whitespace-pre-wrap">{note.content}</p>
-                            </div>
-                          ))
-                        ) : (
-                          <div className="text-center py-8">
-                            <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                            <p className="text-muted-foreground">
-                              No notes yet. Add the first note to this project.
-                            </p>
-                          </div>
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+
+} from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+
+
+
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+
+import { logErrorToProduction } from '@/utils/productionLogger';import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {;
+  AlertDialog,;
+  AlertDialogAction,;
+  AlertDialogCancel,;
+  AlertDialogContent,;
+  AlertDialogDescription,;
+  AlertDialogFooter,;
+  AlertDialogHeader,;
+  AlertDialogTitle,;
+  AlertDialogTrigger,;
+
+} from '@/components/ui/alert-dialog';
+import { Avatar } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection';
+
+} from '@/components / ui / alert - dialog';
+import { Avatar } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Textarea } from '@/components / ui / textarea';
+import { toast } from '@/hooks / use - toast';
+import { supabase } from '@/integrations / supabase / client';
+import { ProjectReviewSection } from '@/components / projects / reviews / ProjectReviewSection';
+
+  AlertCircle,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Layers,
+  MessageSquare,
+  Video,
+  User,
+  XCircle,
+} from 'lucide-react';
+
+import { useRouter  } from 'next/router';
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
+  AlertDialogTrigger
+} from '@/components/ui/alert-dialog'
+import { Avatar } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { Textarea } from '@/components/ui/textarea'
+import { toast } from '@/hooks/use-toast'
+import { supabase } from '@/integrations/supabase/client'
+import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection'
+  AlertCircle
+  Calendar
+  CheckCircle2
+  Clock
+  FileText
+  Layers
+  MessageSquare
+  Video
+  User
+  XCircle
+} from 'lucide-react'
+
+function ProjectDetailsContent() {
                         )}
 
                       </div>;
@@ -93,59 +204,50 @@ import {logErrorToProduction} from '@/utils / production_logger';
                           </div>
                         )}
                       </div>
+
+
+                      
+                      {isOfferAccepted && (
+                        <div>
+                          <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
-                      {project.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-                          loading='lazy'                        />
-                          loading="lazy"
-                        />
-                      ) : (
-                        <User className="h-6 w-6" />
-                      )}
-                    </Avatar>
-                    <div>
-                      <h3 className='font-semibold'>
-                        {project.talent_profile?.full_name |'Talent'}
-                      </h3>
-                      <p className='text-sm text-muted-foreground'>
-                        {project.talent_profile?.professional_title |
-                          'Professional'}
-                      </p>
-                      {isClient && (
-                        <Button
-                          variant='outline'
-                          size='sm'
-                          className='mt-2'
-                          onClick={() =>
-                            router.push(
-                              `/messages?talentId=${project.talent_id}`
-                            )
-                          }                        >
-                          <MessageSquare className='mr-1 h-3 w-3' /> Message
-                      <h3 className="font-semibold">
-                        {project.talent_profile?.full_name || "Talent"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {project.talent_profile?.professional_title || "Professional"}
-                      </p>
-                      {isClient && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
-                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
-                        >
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message
-                        </Button>
+
+
+                          <Button
+                            onClick={handleSubmitNote}
+                            disabled={!newNote.trim() || isSubmittingNote}
+                          >
+                            {isSubmittingNote ? "Posting..." : "Post Note"}
+                          </Button>
+                        </div>
                       )}
                     </div>
-                  </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+              <TabsContent value='reviews'>
+              
+              <TabsContent value="reviews">
+
+
+                <ProjectReviewSection project={project} />
+              </TabsContent>
+            </Tabs>
+          </div>
+          <div className='order-1 lg:order-2 lg:col-span-1'>
+          
+          <div className="order-1 lg:order-2 lg:col-span-1">
+
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Project Participants</CardTitle>
+              </CardHeader>
+              <CardContent>
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                         <Button variant='outline' size='sm' as_child>;
@@ -244,12 +346,19 @@ import {logErrorToProduction} from '@/utils / production_logger';
                   <div className='flex items - start gap - 4'>;
                     <Avatar className='h - 10 w - 10'>;
                       {project.talent_profile?.profile_picture_url ? (
-                        <img
+                        <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading='lazy'                        />
                           loading="lazy"
                         />
+
+
+                      ) : (
+                        <User className='h-6 w-6' />
+                      )}
+                    </Avatar>
+                    <div>
 
                     </div>;
                   </CardContent>;
@@ -288,8 +397,8 @@ import {logErrorToProduction} from '@/utils / production_logger';
                         {project && project.talent_profile?.professional_title ||;
 
                           'Professional'}
-                      </p>
-                      {isClient && (
+                      </p>;
+                      {isClient && (;
                         <Button
                           variant='outline'
                           size='sm'
@@ -346,7 +455,7 @@ import {logErrorToProduction} from '@/utils / production_logger';
 
 
                       ) : (
-                        <User className="h-6 w-6" />
+                        <User className='h-6 w-6' />
                       )}
                     </Avatar>
                     <div>
@@ -915,6 +1024,21 @@ import {logErrorToProduction} from '@/utils / production_logger';
             </Card>;
             {/* Project Status Card */}
             <Card className="mt-6">
+
+
+              <CardHeader>
+                <CardTitle>Project Status</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className='space-y-2'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-sm font-medium'>Current Status:</span>
+                    <div>{getStatusBadge(project.status)}</div>
+                  </div>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-sm font-medium'>Creation Date:</span>
+                    <span className='text-sm'>
+                      {format(new Date(project.created_at), 'PPP')}
                     </span>
                   </div>
                   <div className='flex justify-between items-center'>
@@ -933,6 +1057,12 @@ import {logErrorToProduction} from '@/utils / production_logger';
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
+
+
+                    </span>
+                  </div>
+                </div>
+              </CardContent>
 
                           onClick={() =>;
                             router && router.push(;
@@ -1032,6 +1162,27 @@ import {logErrorToProduction} from '@/utils / production_logger';
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
+
+
+                  <Button 
+                    variant="outline"
+                    onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                    className="w-full"
+                  >
+                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+
+
+                  </Button>
+                </CardFooter>
+              )}
+              
+              {project.status === "offer_sent" && isClient && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-muted-foreground">
+                    Waiting for the talent to accept your offer.
+                  </p>
+                </CardFooter>
+              )}
               {project.status === 'completed' && (
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-green-600 flex items-center gap-1'>
@@ -1108,6 +1259,17 @@ import {logErrorToProduction} from '@/utils / production_logger';
         </div>;
       </main>;
 
+            </Card>
+          </div>
+        </div>
+      </main>
+    </>
+  )
+    </>);
+
+}
+setIsSubmittingNote (true);
+try {
 
   // Check condition
 if (throw error) {
@@ -1149,20 +1311,6 @@ case "in progress": return <Badge className="bg - blue - 100 text - blue - 800">
 case "completed": return <Badge variant="default">Completed</Badge>;";
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;";
 default: return <Badge variant="outline"> {
-  status
-  status 
-}</Badge>
-};'"
-<p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
-  () => router.push ("/dashboard")
-}> Return to Dashboard </Button> </CardContent> </Card> </div>) "
-}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
-  () => handleStatusChange (" offer accepted")
-}> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) "
-}<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
-  () => handleStatusChange (" completed")
-}> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>)
-}<Link href= {
   `/project/[id]/milestones` "
 }> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>) ;
 }<Linkhref= {
@@ -1303,4 +1451,3 @@ const ProjectDetails = () => {
               </Link>
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
-              </Link>

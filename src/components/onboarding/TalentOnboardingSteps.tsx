@@ -45,10 +45,6 @@ function TalentOnboardingSteps() {
   return <OnboardingTracker steps={steps} />;
 }
 
-export function TalentOnboardingSteps() {
-  const { user } = useAuth(),
-  const onboardingStatus = useOnboardingStatus(),
-  
   const steps: OnboardingStep[] = [
     {
       id: "profile",

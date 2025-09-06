@@ -74,7 +74,7 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-max_life: number;
+      max_life: number;
       type: 'quantum' | 'neural' | 'data' | 'energy';      coordinate_x: number,
       coordinate_y: number,
 
@@ -83,7 +83,7 @@ max_life: number;
       size: number,
       color: string,
       life: number,
-max_life: number,
+      max_life: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
 
       type: 'quantum' | 'neural' | 'data' | 'energy';      x: number,;
@@ -102,10 +102,12 @@ max_life: number,
         this && this.size = Math && Math.random() * 3 + 1;
         this && this.life = Math && Math.random() * 100;
         this && this.maxLife = 100;
+
         const types = ['quantum', 'neural', 'data', 'energy'];
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;        ;
         const types = ['quantumneuraldataenergy'];
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;
+
           case 'quantum':;
             this && this.color = `hsl(${180 + Math && Math.random() * 60}, 70%, 60%)`;
 
@@ -123,6 +125,7 @@ max_life: number,
         
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
+        
         switch (this.type) {
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
@@ -167,14 +170,15 @@ max_life: number,
           case 'data':
             this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
             break;
-          case 'energy':
-            this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
-            break;        }            break
-        }
-      }
+
+
+
             break;        }
 
         }
+
+
+
 
       }
 
@@ -311,6 +315,7 @@ max_life: number,
             ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
             ctx && ctx.fillStyle = this && this.color;
             ctx && ctx.fill();
+
             // Neural connections;
             particlesRef && particlesRef.current.forEach(particle => {;
               if (particle && particle.type === 'neural' && particle !== this) {;
@@ -332,8 +337,6 @@ max_life: number,
             break;                  ctx && ctx.stroke();
 
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
-                  Math.pow(this.x - particle.x, 2) +
-                    Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
                 );
                 if (distance < 100) {
                   ctx.beginPath();
@@ -1051,3 +1054,29 @@ export default UltraFuturisticBackground2046;  );
 
 
 export default UltraFuturisticBackground2046;
+
+
+
+    </div>
+
+              duration: Math.random () * 6 + 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.8,
+            }}          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2046;              ease: "easeInOut",
+              delay: i * 0.8}}
+          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2046);
+}
+;
+export default UltraFuturisticBackground2046;
+;

@@ -1,6 +1,9 @@
-export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
   if (typeof window === 'undefined' || !window.ethereum) {;
+
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -23,9 +26,12 @@ if ( {) {
     throw new Error ('Failed to connect to MetaMask');
   }
 }
-export async function getAccounts(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
   if (typeof window === 'undefined' || !window.ethereum) {;
+
     return [];
   }
   try {
@@ -48,9 +54,12 @@ if ( {) {
     return [];
   }
 }
-export async function getBalance(address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
   if (typeof window === 'undefined' || !window.ethereum) {;
+
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -74,9 +83,12 @@ if ( {) {
     throw new Error ('Failed to get balance');
   }
 }
-export async function signMessage(message: string, address: string): Promise<string> {
-  if (typeof window === 'undefined' |!window.ethereum) {
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
   if (typeof window === 'undefined' || !window.ethereum) {;
+
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -109,7 +121,8 @@ declare global {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
-    }
+
+
 
     };
 

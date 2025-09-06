@@ -1,18 +1,16 @@
 
+
+
+
+
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
-import React, { useState, useEffect, useRef } from "react",
-import { Search, X } from "lucide-react",
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-interface EnhancedSearchInputProps {
-
-  value: string
-  onChange: (value: string) => void
+interface EnhancedSearchInputProps {;
+  value: string,;
+  onChange: (value: string) => void,;
 
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
@@ -30,8 +28,7 @@ export function EnhancedSearchInput(): any ({ ;
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
+
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -58,33 +55,8 @@ export function EnhancedSearchInput({
       // Show recent searches when input is empty
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
       return
-    }
-    const filtered = searchSuggestions.filter(suggestion =>
-      suggestion.text.toLowerCase().includes(value.toLowerCase())
-    );
-    // Sort suggestions to prioritize those that start with the search term
-    filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      return aStartsWith - bStartsWith
-    });
-    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
-  }, [value, searchSuggestions]);
-  // Handle clicks outside the component to close suggestions
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsFocused(false)
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, []);
-  const handleSelectSuggestion = (suggestion: string) => {
-    onChange(suggestion);
-    setIsFocused(false)
-    inputRef.current?.blur()
-  }
+
+
 
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
@@ -132,6 +104,9 @@ export function EnhancedSearchInput({;
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
+
+
+
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -217,6 +192,8 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
+
+
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}

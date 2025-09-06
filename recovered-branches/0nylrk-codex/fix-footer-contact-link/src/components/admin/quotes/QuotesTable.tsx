@@ -1,33 +1,90 @@
 
-import React from "react";
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
-import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow 
-} from "@/components/ui/table",
-import { Button } from "@/components/ui/button";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu",
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { formatDate } from "@/utils/dateUtils";
-interface QuotesTableProps {
-
-  quotes: QuoteRequest[]
+import {formatDate} from "@/utils/dateUtils";
+interface QuotesTableProps {;
+  quotes: QuoteRequest[],;
   isArchived?: boolean;
   isLoading: boolean
   updateStatus: (id: string, status: QuoteStatus) => void
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
 
+
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
+import { 
+  Table,
+  TableBody, 
+  TableCell, 
+  TableHead, 
+  TableHeader, 
+  TableRow 
+} from "@/components/ui/table",
+import { Button } from "@/components/ui/button",
+import { 
+  DropdownMenu,
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
+
+
+
+interface QuotesTableProps {
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
+  onViewDetails: (quote: QuoteRequest) => void
+}
+
+
+
+  onViewDetails
+}) => {
+  return (
+    <div className="overflow-x-auto">
+      <Table>
+        <TableHeader>
+          <TableRow className="border-zion-blue-light hover:bg-zion-blue">
+            <TableHead className="text-zion-slate-light">Talent</TableHead>
+            <TableHead className="text-zion-slate-light">Requester</TableHead>
+            <TableHead className="text-zion-slate-light">Project</TableHead>
+            <TableHead className="text-zion-slate-light">Budget</TableHead>
+            <TableHead className="text-zion-slate-light">Date</TableHead>
+            <TableHead className="text-zion-slate-light">Status</TableHead>
+            <TableHead className="text-zion-slate-light">Actions</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {isLoading ? (
+            <TableRow>
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+                Loading quote requests...
+              </TableCell>
+            </TableRow>
+          ) : quotes.length === 0 ? (
+            <TableRow>
+              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
+                {isArchived
+                  ? "No archived quote requests found."
+                  : "No quote requests found."}
+              </TableCell>
+            </TableRow>
+          ) : (
+            quotes.map(quote => (
+              <TableRow
+                key={quote.id}
+                className="border-zion-blue-light hover:bg-zion-blue"
+              >
+                <TableCell className="text-white">
+                  {quote.talent_name |'Unknown Talent'}
+                </TableCell>
+                <TableCell className="text-white">
 import React from './react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from './lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -378,20 +435,25 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
+
+
+
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
-        </TableBody>
-      </Table>
-    </div>
-  )
-}
+
+
+
 
         </TableBody>;
       </Table>;
     </div>;
   );
+
+
+
+
 };

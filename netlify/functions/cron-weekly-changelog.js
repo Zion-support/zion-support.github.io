@@ -22,6 +22,7 @@ exports.handler = async function () {
 
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.json();
+
 exports && exports.handler = async function () {
   try {
     const owner = process && process.env.GITHUB_OWNER;
@@ -33,6 +34,7 @@ exports && exports.handler = async function () {
         body: JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' })
       }
     }
+
     const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
 

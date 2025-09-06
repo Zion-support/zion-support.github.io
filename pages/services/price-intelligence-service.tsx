@@ -15,12 +15,13 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
-}
-export default PriceIntelligenceService;
+
+
+
+},
+export default PriceIntelligenceService,
 
 },
 export default PriceIntelligenceService,
 },
-},
-export default PriceIntelligenceService,
-},
+

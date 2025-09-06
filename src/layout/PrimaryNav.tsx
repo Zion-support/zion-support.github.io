@@ -34,6 +34,11 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
 
+import { Menu, X } from 'lucide-react'
+import { useTranslation  } from 'react-i18next';
+import { CartDrawer  } from '@/components/cart/CartDrawer';
+import { LoginModal } from '@/components/auth/LoginModal';
+
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
 import Link from 'next / link';
@@ -77,9 +82,6 @@ function PrimaryNav() {
   } catch {
 
     // context not available
-  }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
@@ -178,6 +180,15 @@ export function PrimaryNav() {;
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
+
+          {/* Actions container with responsive layout */}
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+            {/* Search form with clamped width */}
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+              <EnhancedSearchInput
+                value={query}
+                onChange={setQuery}
+                onSelectSuggestion={sugg => {
                   log_debug ('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
                   });                  // Handle different suggestion types with proper navigation;
@@ -380,6 +391,38 @@ if ( {) {
                       setLoginOpen(true);
                     }}
                   >;
+
+
+                    {t('auth.login')}
+                  </Link>
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setLoginOpen(true);                    }}
+                  >;
+                    {t('auth && auth.login')}
+                  </Link>;
+                  <Link
+                    href="/signup"
+                    className="text-sm hover:text-primary whitespace-nowrap"
+                  >
+                    {t('auth.signup')}
+                  </Link>
+                </>
+              )}
+              {isLoggedIn && <UserMenu />}
+
+
+
+            </div>;
+          </div>;
+
+          {/* Tablet view (md to lg) - simplified controls */}
+
+          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+            <ModeToggle />
+            <LanguageSelector />
+            {!isLoggedIn && (
+              <Link
                 href='/auth/login'
                 className='text-sm hover:text-primary'
                 data-testid='login-link'
@@ -407,6 +450,11 @@ if ( {) {
                   setLoginOpen(true);
                 }}
               >;
+
+                {t('auth.login')}
+              </Link>
+            )}
+            {isLoggedIn && <UserMenu />}
 
                 onClick={e => {;
                   e && e.preventDefault();
@@ -542,6 +590,22 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
+}/>
+}<LoginModal isOpen= {
+  loginOpen
+}onOpenChange= {
+  setLoginOpen
+}/> </>)
+}'"  { opacity: 0
+  height: 0
+}}
+              animate = {
+  { opacity: 1
+  height: 'auto'
+}}
+              exit = {
+  { opacity: 0
+  height: 0
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
@@ -551,65 +615,6 @@ setLoginOpen (true)
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
           </button>;
-}}
-              transition={{ duration: 0.3 }}"
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
-              <div className="px-4 py-6 space-y-4">
-                {services.map((category, index) => (
-                  <div key={index}>"
-                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">
-                      {category.category}
-                    </h3>"
-                    <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown
-                        <Link
-                          key={serviceIndex}
-                          to={service.path}"
-                          className="block text-gray-300 hover:text-white transition-colors duration-200"
-                          onClick={( setIsOpen(false)}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-                <div className="pt-4 border-t border-white/10 space-y-2">
-                  <Link                    to="/solutions"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Solutions
-                  </Link>
-                  <Link                    to="/about"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    About
-                  </Link>
-                  <Link                    to="/blog"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Blog
-                  </Link>
-                  <Link                    to="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </header>
-  )}
-'"`
-}
-;
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"

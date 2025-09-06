@@ -39,8 +39,6 @@
 }
 main();
 #!/usr/bin/env node;
-
-main();#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -90,5 +88,4 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
-      log('info', 'Monitoring "Recommendations")
       log('info', 'Monitoring "Recommendations")

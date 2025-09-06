@@ -1,4 +1,6 @@
 
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm ;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -9,6 +11,7 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -97,6 +100,8 @@ serve(async (req) => {;
     data.forEach((event) => {;
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
+
+
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
@@ -138,22 +143,7 @@ serve(async (req) => {;
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
-;
-      eventsByDate[date][event.event_type]++;
-    }),;
-    // Convert to array for easier consumption by frontend;
-    const result = Object.values(eventsByDate).sort((a, b) => a.date.localeCompare(b.date)),;
-    return new Response(JSON.stringify(result), {;
-      headers: {;
-        ...corsHeaders,;
-        "Content-Type": "application/json"},;
-      status: 200});
-  } catch (error) {;
-    console.error("Error:", error.message),;
-    return new Response(JSON.stringify({ error: error.message }), {;
-      headers: {;
-        ...corsHeaders,;
-        "Content-Type": "application/json"},;
-      status: 500});
+
+
   }
 });

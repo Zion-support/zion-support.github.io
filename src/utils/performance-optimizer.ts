@@ -7,19 +7,6 @@ const images = document && document.querySelectorAll('img');
       img.decoding = 'async'
     }
   });
-};
-
-export const preloadCriticalResources = null;
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-  });
 }
 export const optimizeBundleSize = () =>: any {
   // Dynamic imports for non - critical components;
@@ -55,3 +42,5 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';

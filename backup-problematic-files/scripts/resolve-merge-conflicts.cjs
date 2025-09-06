@@ -194,4 +194,3 @@ try {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
 }
-}

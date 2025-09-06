@@ -1,8 +1,9 @@
 
-import { jsPDF } from 'jspdf';
-export interface FontConfig {
+
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
+
+
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -73,5 +74,8 @@ if (return, ) {
     // Fall back to default font;
 
     doc.setFont('helvetica');
+
+
+
   }
 }

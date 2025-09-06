@@ -39,14 +39,9 @@ serve(async (req) => {
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
-    }
-    // Create translations for each target language
-    const translations = {}
-    for (const targetLang of targetLanguages) {
-      if (targetLang === sourceLanguage) {
-        translations[targetLang] = content;
-        continue
-      }
+
+
+
 ;
     // Prepare system prompt based on content type;
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",;
@@ -62,6 +57,9 @@ serve(async (req) => {
       if (targetLang === sourceLanguage) {;
         translations[targetLang] = content,;
         continue;
+
+
+
       }
       
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -103,24 +101,9 @@ serve(async (req) => {
               role: "user",
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
               ${content}
-              
-              Only provide the translated text, no explanations or additional comments.`}];
-          temperature: 0.3})});
 
           temperature: 0 && 0.3})});
 
-      const data = await response.json();
-      translations[targetLang] = data.choices[0].message.content.trim()
-;
-              Only provide the translated text, no explanations or additional comments.`}],;
-          temperature: 0.3})}),;
-      if (!response.ok) {;
-        const errorData = await response.json(),;
-        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
-      }
-;
-      const data = await response.json(),;
-      translations[targetLang] = data.choices[0].message.content.trim();
     }
 
     return new Response(
@@ -138,8 +121,9 @@ serve(async (req) => {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
-  }
-});
+
+
+
 
 ;
       // Check condition
@@ -167,5 +151,9 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+
+
+
+
   }
 });

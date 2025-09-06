@@ -1367,10 +1367,6 @@ module.exports = GitWorkflowAutomator;
 ;
 
 module.exports = GitWorkflowAutomator;
-},;
-,;
-if (require.main === module) {,;
-  main();
-},;
-,;
-module.exports = GitWorkflowAutomator,;
+
+
+

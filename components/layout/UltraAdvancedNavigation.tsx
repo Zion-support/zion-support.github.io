@@ -24,36 +24,8 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import {
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Brain
-  Rocket
-  Dna
-  Globe
-  Shield
-  Wifi
-  Package
-  Bot
-  Car
-  Building2
-  DollarSign
-  Monitor
-  Users
-  Cpu
-  Zap
-  Atom
-  Database
-  Cloud
-  Lock
-  Code;
-} from 'lucide-react';
-import Link from 'next/link';import {
+
+
   Menu,
   X,
   ChevronDown,
@@ -79,6 +51,17 @@ import Link from 'next/link';import {
   Atom,
   Database,
   Cloud,
+  Lock,
+  Code,
+} from 'lucide-react';
+
+import Link from 'next/link';import { ;
+
+
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
 
   Cpu, Zap, Atom, Database, Cloud, Lock, Code;
 } from 'lucide-react';
@@ -199,11 +182,14 @@ import Link from 'next / link';
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 50);
     };
+
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 50);
     };
+
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
+
   const navigationItems = [;
     {;
       name: 'Home',;
@@ -441,12 +427,15 @@ import Link from 'next / link';
     },  ];      icon: null;
     }
   ];
+
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
 
   };
+
+
     >;
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
@@ -463,6 +452,7 @@ import Link from 'next / link';
             transition={{ duration: 0.5 }}
             className='flex items-center'
 
+
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -475,6 +465,16 @@ import Link from 'next / link';
                 <div className='text-xs text-gray-400'>
                   Revolutionary Technology
                 </div>              </div>          >
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center"
+          >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-white" />
@@ -512,6 +512,7 @@ import Link from 'next / link';
               </div>;
             </Link>;
           </motion && motion.div>;
+
           {/* Desktop Navigation */}
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -564,15 +565,14 @@ import Link from 'next / link';
             </Link>;
           </motion.div>;
           {/* Desktop Navigation */}
-          <div className='hidden lg:flex items-center space-x-8'>;
-            {navigationItems && navigationItems.map((item, index) => (;
-              <div key={item && item.name} className='relative group'>;
-                {item && item.dropdown ? (;
-                  <button
-                    onClick={() =>;
-                      setActiveDropdown(;
-                        activeDropdown === item && item.name ? null : item && item.name;
-                      );
+          <div className='hidden lg:flex items - center space - x-8'>;
+            {navigation_items.map ((item, index) => (
+              <div key={item.name} className='relative group'>;
+                {item.dropdown ? (
+                  <button;
+                    on_click={() =>;
+                      setActiveDropdown (
+                        active_dropdown === item.name ? null : item.name);
                     }
                     className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2';
                   >;
@@ -624,8 +624,9 @@ import Link from 'next / link';
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
-                  </Link>
-                )}
+
+
+
 
 
                   </Link>
@@ -642,6 +643,7 @@ import Link from 'next / link';
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
+
                       >
                         <div className="p-4">
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>
@@ -650,7 +652,7 @@ import Link from 'next / link';
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
-className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
+                                className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group"
                               >
                                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                                   <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
@@ -662,64 +664,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                   <div className="text-sm text-gray-400">{dropdownItem.description}</div>
                                 </div>
                                 <div className="text-sm font-semibold text-cyan-400">
-                  <button
-                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-                  >
-                    {item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{item.name}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                  >
-                    {item.icon && <item.icon className='w-4 h-4' />}                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
-                  >
-                    {item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{item.name}</span>
-
-
-                  </Link>
-                )}
-
-                {/* Dropdown Menu */}
-                {item.dropdown && (
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-
-                      >
-                        <div className='p-4'>
-                          <div className='text-sm text-gray-400 mb-3'>
-                            {item.description}
-                          </div>
-                          <div className='space-y-2'>
-                            {item.dropdown.map(dropdownItem => (
-                              <Link
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
-                                className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-colors duration-200 group'
-                              >
-                                <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200'>
-                                  <dropdownItem.icon className='w-5 h-5 text-cyan-400' />
-                                </div>
-                                <div className='flex-1'>
-                                  <div className='text-white font-medium group-hover:text-cyan-400 transition-colors duration-200'>
-                                    {dropdownItem.name}
-                                  </div>
-                                  <div className='text-sm text-gray-400'>
-                                    {dropdownItem.description}                                  </div>
-                                </div>
-                                <div className='text-sm font-semibold text-cyan-400'>                                  {dropdownItem.price}                                <div className="text-sm font-semibold text-cyan-400">
                                   {dropdownItem.price}
                                 </div>
                               </Link>
@@ -734,6 +678,12 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
             ))}
           </div>
 
+          </div>;
+
+
+
+
+
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -744,6 +694,9 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
               >
                 <Phone className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
+
+
+
 
               </a>
               <a
@@ -779,6 +732,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <span className='hidden xl:inline'>{contactInfo && contactInfo.email}</span>;
               </a>;
             </div>;
+
             <motion&& motion.a
               href='/contact'
               whileHover={{ scale: 1 && 1.05 }}
@@ -789,6 +743,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
               </a>;
             </div>;
+
             <motion&& motion.a
               href="/contact"
               whileHover={{ scale: 1 && 1.05 }}
@@ -801,6 +756,8 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
+
+
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -811,16 +768,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <X className='w-6 h-6' />;
               ) : (;
                 <Menu className='w-6 h-6' />;
-          {/* Mobile Menu Button */}
-          <div className='lg:hidden'>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className='text-gray-300 hover:text-white transition-colors duration-200'
-            >
-              {isOpen ? (
-                <X className='w-6 h-6' />
-              ) : (
-                <Menu className='w-6 h-6' />
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white transition-colors duration-200"
@@ -830,6 +777,16 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
           </div>
         </div>
       </div>
+
+
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
 
       {/* Mobile Menu */}
       <AnimatePresence>;
@@ -869,7 +826,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                     <div>
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
+                        className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3"
                       >
                         <div className="flex items-center space-x-3">
                           {item.icon && <item.icon className="w-5 h-5" />}
@@ -879,59 +836,15 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
+                      
                       {activeDropdown === item.name && (
                         <div className="ml-8 mt-2 space-y-2">
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden'
-          >
-            <div className='px-4 py-6 space-y-4'>
-              {navigationItems.map(item => (                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <button            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden"
-          >
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                  {item.dropdown ? (
-                    <div>
-                      <button
-                        onClick={() =>
-                          setActiveDropdown(
-                            activeDropdown === item.name ? null : item.name
-                          )
-                        }
-                        className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
-                        <div className='flex items-center space-x-3'>
-                          {item.icon && <item.icon className='w-5 h-5' />}
-                          <span>{item.name}</span>
-                        </div>
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item.name ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
-                      {activeDropdown === item.name && (
-                        <div className='ml-8 mt-2 space-y-2'>
-                          {item.dropdown.map(dropdownItem => (                            <Link
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
-                              onClick={() => setIsOpen(false)}
-                              className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                            >                        <div className="ml-8 mt-2 space-y-2">
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               onClick={() => setIsOpen(false)}
-                              className='block py-2 text-gray-400 hover:text-white transition-colors duration-200'                              className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
+                              className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
                             >
                               {dropdownItem.name}
                             </Link>
@@ -988,6 +901,7 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                     <span>{contactInfo && contactInfo.address}</span>;
                   </div>;
                 </div>;
+
                 <motion&& motion.a
                   href='/contact'
                   whileHover={{ scale: 1 && 1.05 }}
@@ -1023,12 +937,23 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
       </AnimatePresence>;
     </nav>;
   );
-}
+
+
 };
+
 export default UltraAdvancedNavigation;  );
 };
 
 export default UltraAdvancedNavigation;
 
+
+
 export default UltraAdvancedNavigation;
+
 export default UltraAdvancedNavigation;
+;
+  );
+
+};
+
+

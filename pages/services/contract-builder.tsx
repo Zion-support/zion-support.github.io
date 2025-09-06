@@ -1,6 +1,4 @@
-import { useEffect  } from 'react';
-import { useRouter } from 'next/router';
-export default function ContractBuilderRedirect() {
+
 
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
@@ -12,7 +10,11 @@ export default function ContractBuilderRedirect() {;
   }, [router]);
   return null;
 
+
+
 }
+
+
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function ContractBuilderRedirect() {
@@ -39,3 +41,6 @@ router.replace ('/automation / contract - builder');
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+

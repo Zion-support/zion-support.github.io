@@ -2,9 +2,6 @@
   const onSubmit = async (values: ServiceFormValues,) => {
     if (serviceTags.length === 0) {
       toast({
-        title: 'Services required'
-        description: 'Please add at least one service to your profile.'
-        variant: 'destructive'
         title: 'Services required',
         description: 'Please add at least one service to your profile.',
         variant: 'destructive',
@@ -19,9 +16,12 @@
     }
     setIsSubmitting (true);
     try {
-      // For actual implementation with Supabase
-      if (!user?.id) {
-        throw new Error('User not authenticated')
+      // For actual implementation with Supabase;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error ('User not authenticated');
       }
 
       // Enhance profile if not already done;
@@ -168,6 +168,19 @@ if ( {) {
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
+
+
+
+      // Create the service profile
+      const { data: profileData, error } = await supabase
+        .from('profiles')
+        .update({
+          display_name: values.name
+          bio: finalSummary
+          user_type: 'creator', // Set as service provider
+          profile_complete: true
+          updated_at: new Date().toISOString()
+          headline: values.title
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
@@ -182,9 +195,6 @@ if ( {) {
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
-        .select()
-      if (error) throw error
-        .select(),
 
 
       // Store service-specific data in service_profiles table
@@ -205,14 +215,6 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
-          website: values.website || null}),
-
-      if (serviceError) throw serviceError,
-          website: values.website || null})
-      if (serviceError) throw serviceError
-          website: values.website || null}),
-
-      if (serviceError) throw serviceError,
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
@@ -276,92 +278,80 @@ if ( {) {
               to: userEmail,
               subject: "Your Zion Service Profile Is Ready",
               html: `
-              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
-                <h2 style="color: #6D28D9,">Service Profile Created!</h2>
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <h2 style="color: #6D28D9;">Service Profile Created!</h2>
                 <p>Your service provider profile has been successfully created and published.</p>
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>
                 <p>You can now start receiving service requests and connecting with clients.</p>
-                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
-                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                  <p style="color: #666; font-size: 12px;">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
-              `
-            }
-              `,
-            },
-          })
-        } catch (emailError) {
-          logErrorToProduction('Failed to send notification email:', {
-            data: emailError
-          })
-          // Continue with submission even if email fails
-        }
-      }
-    }
-  }
-              `
-;
       // Get user email for notification;
-      const { data: userData } = await supabase.auth.getUser(),;
-      const userEmail = (userData as any).user?.email,;
+      const { data: userData } = await supabase && supabase.auth.getUser();
+      const userEmail = (userData as any).user?.email;
+
       // Create the service profile;
       const { data: profileData, error } = await supabase;
         .from('profiles');
         .update({;
-          display_name: values.name,;
+          display_name: values && values.name,;
           bio: finalSummary,;
-          user_type: "creator", // Set as service provider;
+          user_type: 'creator', // Set as service provider;
           profile_complete: true,;
           updated_at: new Date().toISOString(),;
-          headline: values.title,;
+          headline: values && values.title,;
           // Additional fields that might be in profiles table;
         });
-        .eq('id', user.id);
-        .select(),;
-      if (error) throw error,;
+        .eq('id', user && user.id);
+        .select();
+
+      if (error) throw error;
+
       // Store service-specific data in service_profiles table;
       // (This assumes you have a service_profiles table in your database);
+
       /*;
       const { error: serviceError } = await supabase;
         .from('service_profiles');
         .insert({;
-          user_id: user.id,;
+          user_id: user && user.id,;
           services: finalServices,;
-          hourly_rate: Number(values.hourlyRate),;
-          availability_status: values.availability,;
-          location: values.location,;
-          website: values.website || null}),;
-      if (serviceError) throw serviceError,;
+          hourly_rate: Number(values && values.hourlyRate),;
+          availability_status: values && values.availability,;
+          location: values && values.location,;
+          website: values && values.website || null});
+
+      if (serviceError) throw serviceError;
       */;
+
       // Send notification email if available;
-      if (userEmail && values.enhancedProfile) {;
+      if (userEmail && values && values.enhancedProfile) {;
         try {;
-          await supabase.functions.invoke('send-email', {;
+          await supabase && supabase.functions.invoke('send-email', {;
             body: {;
               to: userEmail,;
-              subject: "Your Zion Service Profile Is Ready",;
+              subject: 'Your Zion Service Profile Is Ready',;
               html: `;
-              <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;
-                <h2 style="color: #6D28D9,">Service Profile Created!</h2>;
+              <divstyle="font-family: Arial, sans-serif max-width: 600px margin: 0 auto">;
+                <h2style="color: #6D28D9">Service Profile Created!</h2>;
                 <p>Your service provider profile has been successfully created and published.</p>;
                 <p>We've enhanced your profile with AI to help you stand out to potential clients.</p>;
                 <p>You can now start receiving service requests and connecting with clients.</p>;
-                <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">;
-                  <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
+                <divstyle="margin-top: 30px padding-top: 20px border-top: 1px solid #eee">;
+                  <pstyle="color: #666 font-size: 12px">© ${new Date().getFullYear()} Zion Marketplace</p>;
                 </div>;
               </div>;
-              `;
-            }
+              `,;
+            },;
           });
         } catch (emailError) {;
-          logErrorToProduction('Failed to send notification email:', { data: emailError }),;
+          logErrorToProduction('Failed to send notification email:', {;
+            data: emailError,;
+          });
           // Continue with submission even if email fails;
         }
       }
-      
-      toast({
-        title: "Profile Created Successfully",
-        description: "Your service provider profile has been published and is now visible in the directory."}),
 
       toast({;
         title: 'Profile Created Successfully',;
@@ -426,7 +416,6 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
-  },
 
 
 
@@ -485,6 +474,22 @@ if ( {) {
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
+
+                          <FormControl>
+                            <div className="relative">
+                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Input
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+                                placeholder="e.g., Creative Design Studio"
+                                {...field}
+                              />
+                            </div>
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -501,6 +506,22 @@ if ( {) {
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
+
+                          <FormControl>
+                            <div className="relative">
+                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Input
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+                                placeholder="City, State/Province, Country"
+                                {...field}
+                              />
+                            </div>
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
                   <div className='col-span-1'>
                     <FormField
                       control={form.control}
@@ -517,6 +538,19 @@ if ( {) {
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
+
+                          <FormControl>
+                            <div className="relative">
+                              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Input
+                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+                                placeholder="https://yourwebsite.com"
+                                {...field}
+                              />
+                            </div>
+                          </FormControl>
+                          <FormMessage className="text-red-400" />
+                        </FormItem>
                       )}
                     />
                   </div>
@@ -562,27 +596,48 @@ if ( {) {
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
               {/* Basic Information */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="col-span-1">
+              <div className='space-y-4'>;
+                <h3 className='text-lg font-medium text-white'>;
+                  Basic Information;
+                </h3>;
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
+                  <div className='col-span-1'>;
                     <FormField
                       control={form.control}
-                />;
-                {/* AI Enhancement Option */}
-                <FormField;
                   control={form.control}
                   name='enhanced_profile';
                   render={({ field }: { field: any }) => (
+                    <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
+                      <div className='space - y-0.5'>;
+                        <FormLabel className='text - white flex items - center'>;
+                          <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />                          AI Profile Enhancement;
+                        </FormLabel>;
+                        <FormDescription className='text - zion - slate - light'>;
+                          Let AI help optimize your service description for;
+                          better visibility and client engagement;
+                        </FormDescription>;
+                      </div>;
+                      <FormControl>;
+
+                />;
+
+                {form && form.watch('enhancedProfile') && (;
+                  <div className='flex justify-end'>;
+
+                    <Button
+                      type='button'
+                      variant='outline'
+                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+                      onClick={generateEnhancedProfile}
+                      disabled={isGenerating}>;
+                      <Sparkles className='mr-2 h-4 w-4' />;
+                      {isGenerating;
+                        ? 'Generating...';
+                        : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
 
 
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
-                      <div className="space-y-0.5">
-                        <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                          AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement
@@ -599,13 +654,22 @@ if ( {) {
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
                         />
-                {generatedContent && (
-                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                        AI-Generated Content
-                      </h4>
+
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+                    </Button>
+                  </div>
+                )}
+                {/* Generated Content Display */}
+                {generatedContent && (;
+                  <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
+                    <div className='flex items-center justify-between mb-3'>;
+                      <h4 className='text-white font-medium flex items-center'>;
+                        <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
+                        AI-Generated Content;
+                      </h4>;
                       <Button
                         type='button'
                         size='sm'
@@ -625,6 +689,34 @@ if ( {) {
                     </div>
                     
                     <div className="space-y-4">
+
+
+                      <div>
+                        <h5 className='text-zion-slate-light text-sm mb-1'>
+                          Professional Summary
+                        </h5>
+                        <p className='text-zion-slate italic'>
+                          {generatedContent.summary}
+                        </p>
+                      </div>
+                      {generatedContent.services &&
+                        generatedContent.services.length > 0 && (
+                          <div>
+                            <h5 className='text-zion-slate-light text-sm mb-1'>
+                              Suggested Services
+                            </h5>
+                            <div className='flex flex-wrap gap-2 mt-1'>
+                              {generatedContent.services.map(
+                                (service, index) => (
+                                  <Badge
+                                    key={index}
+                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'>;
+                                    {service}
+                                  </Badge>;
+                                );
+                              )}
+                            </div>                          </div>;
+                        )}
 
                       
                       {generatedContent.services && generatedContent.services.length > 0 && (
@@ -648,15 +740,42 @@ if ( {) {
 
               </div>;
 
-              <Separator className="bg-zion-blue-light/50" />
+              <Separator className='bg-zion-blue-light/50' />;
 
 
 
               <Separator className="bg-zion-blue-light/50" />
 
-                              onKeyDown={handleServiceKeyPress}
-                            />
-                          </FormControl>
+
+              {/* Services and Availability */}
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
+                {/* Services Section */}
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-medium text-white'>;
+                    Services Offered;
+                  </h3>;
+                  <FormField
+
+                    control={form.control}
+                    name='services'
+                    render={({ field }: { field: any }) => (                      <FormItem>
+                        <FormLabel className='text-zion-slate-light'>
+                          Services
+                        </FormLabel>
+                        <div className='flex gap-2'>
+                    name="services"
+                    render={({ field }: { field: any }) => (
+                      <FormItem>
+                        <FormLabel className="text-zion-slate-light">Services</FormLabel>
+                        <div className="flex gap-2">
+                          <FormControl>
+                            <Input
+                              className='flex-1 bg-zion-blue border-zion-blue-light text-white'
+                              placeholder='Add a service...'
+                              {...field}
+                              onKeyDown = {handleServiceKeyPress,}
+                            />;
+                          </FormControl>;
                           <Button
 
                   />;
@@ -825,32 +944,17 @@ if ( {) {
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                             onClick={handleAddService}
                           >
-                  <div className='flex flex-wrap gap-2 mt-2'>
-                    {serviceTags.map(service => (
-                      <Badge
-                        key={service}
-                        className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
-                      >
-                        {service}
-                        <button
-                          type='button'
-                          onClick={() => handleRemoveService(service)}
-                          className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'                        >
-                          <X className='h-3 w-3' />
 
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {serviceTags.map(service => (
-                      <Badge
-                        key={service}
-                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
-                      >
-                        {service}
-                        <button
-                          type="button"
-                          onClick={() => handleRemoveService(service)}
-                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
-                        >
-                          <X className="h-3 w-3" />
+                            Add
+                          </Button>
+                        </div>
+                        <FormDescription className="text-zion-slate">
+                          Press Enter or click Add to include a service
+                        </FormDescription>
+                        <FormMessage className="text-red-400" />
+                      </FormItem>
+                    )}
+                  />
                         </button>
                       </Badge>
                     ))}
@@ -878,9 +982,11 @@ if ( {) {
                   </div>;
                 </div>;
                 {/* Pricing and Availability Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>
-                  <FormField
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - medium text - white'>;
+                    Pricing & Availability;
+                  </h3>;
+                  <FormField;
                     control={form.control}
 
                     name="hourlyRate"
@@ -969,7 +1075,7 @@ if ( {) {
                   />;
                   <FormField;
                     control={form.control}
-                    name="availability"
+                    name='availability';
                     render={({ field }: { field: any }) => (
 
                       <FormItem className="space-y-4">
@@ -1058,9 +1164,30 @@ if ( {) {
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
+
+                </Button>
+              </div>
+            </CardFooter>
+          </form>
+        </Form>
+      </Card>
+    </div>
+  )
+}
+//Handle removing service tags const handleRemoveService = (service: string) => {
+  setServiceTags (serviceTags.filter ( (s) => s !== service) )
+}
 //Handle removing service tags const handleRemoveService = (service: string) =>: any {
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
+}
+//Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
+}
+//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+  const file = e.target.files?.[0];
+// Check condition
+if ( {) {
+  $2
 }
   const reader = new FileReader ();
 reader.onloadend = () => {
@@ -1111,7 +1238,7 @@ if ( {) {
 }
   toast ({
   return;
-}setIsSubmitting (true)
+}setIsSubmitting (true);
 try {
   //For actual implementation with Supabase // Check condition
 if ( {) {
@@ -1124,27 +1251,6 @@ try {
   data: ai_data ';
 }= await supabase.functions.invoke ('service - profile - enhancer', {
   body: {
-  providerData: {
-  name: values.name, title: values.title, bio: values.bio,  services: serviceTags, location: values.location
-})
-//Create the service profile const {
-  data: profileData, error '
-}= await supabase .from ('profiles') .eq ('id', user.id) .select ()
-if (error) throw error
-//Store service-specific data in service profiles table // (This assumes you have a service profiles table in your database) /* const {
-  error: serviceError '
-}= await supabase .from ('service profiles') if (serviceError) throw serviceError
-*/ //Send notification email if available if (userEmail && values.enhancedProfile) {
-  try {'
-  await supabase.functions.invoke ('send-email', {
-  body: {'
-  <p>Your service provider profile has been successfully created and published.</p> <p>We've enhanced your profile with AI to help you stand out to potential clients.</p> <p>You can now start receiving service requests and connecting with clients.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
-  new Date () .getFullYear ()
-}Zion Marketplace</p>
-}//Continue with submission even if email fails
-  new Date () .getFullYear () 
-}Zion Marketplace</p>
-}//Continue with submission even if email fails 
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')
 }, 1500)

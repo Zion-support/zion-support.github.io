@@ -1,6 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
-// Use the shared icon wrapper
+// Use the shared icon wrapper;
 
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
@@ -27,6 +26,8 @@ export const NotificationCenter: React.FC = () => {;
   const [error, setError] = useState<string | null>(null);
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
+
+
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -176,6 +177,8 @@ export const NotificationCenter: React.FC = () => {;
           {unreadCount > 0 && (;
 
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
+
+
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
@@ -186,8 +189,8 @@ export const NotificationCenter: React.FC = () => {;
         <NotificationHeader
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
-        />
-        <NotificationFilter
+        />;
+        <NotificationFilter;
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
         />
@@ -197,19 +200,15 @@ export const NotificationCenter: React.FC = () => {;
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
+
         <NotificationList 
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
-          onDismiss={dismissNotification}
-          onRetry={fetchNotifications}
-        />
-        <NotificationFooter onClose={() => setOpen(false)} />
-      </PopoverContent>
-    </Popover>
-  )
-}
+
+
+
 
         />;
 
@@ -217,4 +216,8 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverContent>;
     </Popover>;
   );
+
+
+
+
 };

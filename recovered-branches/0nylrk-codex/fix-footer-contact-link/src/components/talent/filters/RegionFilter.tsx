@@ -1,13 +1,7 @@
 
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {RegionFilterProps} from "@/types/filters";
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
 
-import { Checkbox } from "@/components/ui/checkbox",
-import { RegionFilterProps } from "@/types/filters",
+
+
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
@@ -92,13 +86,16 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+
+
                 {region.label}
               </label>
             </div>
           ))}
         </div>;
       )}
-    </div>
+
+    </div>;
   );
 }
   )
@@ -116,3 +113,6 @@ const REGION_OPTIONS = [;
   { id: "Africa", label: "Africa" },
 ];
 ;
+
+
+

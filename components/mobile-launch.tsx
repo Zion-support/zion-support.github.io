@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
+
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -49,6 +50,7 @@ function AppleBadge(): any ({ href }: { href: string }) {;
 
 
 function GoogleBadge(): any ({ href }: { href: string }) {;
+
     >;
       <svg width='24' height='24' viewBox='0 0 24 24' aria-hidden>;
         <defs>;
@@ -392,7 +394,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
   if (!visible) return null;
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i && i.test(navigator && navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;
   return (
     <div className="fixed inset-x-0 top-0 z-50">;
@@ -418,6 +420,18 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
       </div>
     </div>
   );
+
+
+            >;
+              ✕;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
 
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
@@ -445,14 +459,8 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
-export default function MobileLaunchPage() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<
-    'idle' | 'loading' | 'success' | 'error'
-  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
-export default function MobileLaunchPage() {
+
+
 
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
@@ -462,6 +470,8 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
+
+
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -483,14 +493,41 @@ export default function MobileLaunchPage() {;
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
+const IOS_APP_URL =;
+  process && process.env.NEXT_PUBLIC_IOS_APP_URL ||;
+  'https://apps && apps.apple.com/app/id0000000000';
+const ANDROID_APP_URL =;
+  process && process.env.NEXT_PUBLIC_ANDROID_APP_URL ||;
+  'https://play && play.google.com/store/apps/details?id=com && com.zion.app';
+const DEEP_LINK_URL = process && process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
+const SITE_BASE_URL = process && process.env.NEXT_PUBLIC_SITE_URL || '';
+
+const testimonials = [;
+  {;
+    name: 'Priya K.',;
+    role: 'Startup Founder',;
+    quote: 'We filled a remote role in 48 hours. The app made it effortless.',;
+  },;
+  {;
+    name: 'Marco V.',;
+    role: 'CTO',;
+    quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.',;
+  },;
+  {;
+    name: 'Amira H.',;
+    role: 'Project Lead',;
+    quote:;
+      'I love tracking milestones on the go. Clear visibility and fewer meetings.',;
+  },;
+];
 
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<
-    'idle' | 'loading' | 'success' | 'error'
-  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+  const [status, setStatus] = useState<;
+    'idle' | 'loading' | 'success' | 'error';
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },;
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },;
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],;
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
@@ -538,12 +575,14 @@ export default function MobileLaunchPage() {
     const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000);
     return () => clearInterval(t)
   }, []);
+
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
     const encoded = encodeURIComponent(target);
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
 
   }, []);
+
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL;
       ? `${SITE_BASE_URL}/download`;
@@ -576,16 +615,21 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+
+      setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
+
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
       setStatus('success');
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
-      setError(err?.message |'Something went wrong.')
 
-      setError(err?.message || 'Something went wrong.')
-      setError(err?.message || 'Something went wrong.');    }
+      setError(err?.message || 'Something went wrong.');
+
+    }
+  }
+
 
     }
   }
@@ -626,6 +670,7 @@ export default function MobileLaunchPage() {
           </p>;
           <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40' />        </div>;
       </section>;
+
       {/* Trust & Community */}
 
 
@@ -702,8 +747,19 @@ export default function MobileLaunchPage() {
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 
+
+          >
+            {status === 'loading' ? 'Submitting…' : 'Notify me'}
+          </button>;
+        </form>;
+        {status === 'success' && (;
+          <div className='mt-2 text-sm text-emerald-600'>;
+            Thanks! You’re on the list.;
+          </div>;
+        )}
+
+            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -730,6 +786,7 @@ export default function MobileLaunchPage() {
           </div>;
         )}
       </section>;
+
       {/* Helper links */}
       <section className='mt-10 text-sm opacity-80'>;
         <div className='flex flex-wrap items-center gap-4'>;
@@ -743,6 +800,7 @@ export default function MobileLaunchPage() {
       </section>;
     </EnhancedLayout>;
   );      </section>;
+
       {/* Helper links */}
       <section className="mt-10 text-sm opacity-80">;
         <div className="flex flex-wrap items-center gap-4">;
@@ -857,3 +915,4 @@ export default function MobileLaunchPage() {
   status === 'loading' ? 'Submitting…' : 'Notify me'
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
   );
+

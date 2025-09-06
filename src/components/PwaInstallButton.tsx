@@ -5,4 +5,3 @@ const in_standalone = window.match_media ('(display - mode: standalone)').matche
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
-export default PwaInstallButton,

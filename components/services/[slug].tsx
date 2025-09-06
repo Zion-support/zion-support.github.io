@@ -1,18 +1,14 @@
-  service.name
-}| Zion Tech Group</title>
-}
-null;
-2)
-}/> </Head> </li>) )
-}</ul> </div>) )
-}</ul> </div> <div>) )
+
+
+}function getAllServices () : Service[] {
+
+
 2) 
   service.name 
 }| Zion Tech Group</title> ;
 };
 null;
-2)
-2) 
+
 
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
@@ -39,16 +35,15 @@ null;
   /* Market Position & ROI */
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
-  service.marketPosition
-}</p>
-}{
-  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
-  service.roi
+
+
   service.marketPosition 
 }</p>
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
+
+
 }</p>
 }{
   service.competitors?.length ? () : null
@@ -65,6 +60,4 @@ export default ServiceDetail
 };
 export default ServiceDetail 
 export default ServiceDetail
-};
-;
-}
+

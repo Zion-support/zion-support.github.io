@@ -11,7 +11,6 @@ const options: RequestInit = {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json"},
       // Add timeout to prevent hanging
-      signal: AbortSignal.timeout(15000)},
 
       try {
         options.body = JSON.stringify (JSON.parse (body));
@@ -163,16 +162,16 @@ export function ApiPlayground(): any ({;
 
   },
 
+
+
+  return (
+    <div className='space-y-4'>;
+      <Input
+        value={apiKey}
         onChange={e => setApiKey(e.target.value)}
         placeholder='API Key'
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
-      />
-      {params.map(p => (
-        <Input
-          key={p.name}
-          value={paramValues[p.name] |''}
-          value={paramValues[p.name] || ''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
@@ -251,10 +250,6 @@ if () {) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
-  p.name
-}</div>)
-}export default ApiPlayground
-'"
 
 
     </div>;
@@ -297,4 +292,24 @@ if (contentType?.includes ('application/json') ) {;
 }export default ApiPlayground;
 '";
 }
+
+          value={paramValues[p.name] || ""}
+          onChange={(e) => handleParamChange(p.name, e.target.value)}
+        />;
+      ))}
+      {method !== "GET" && method !== "DELETE" && (
+        <Textarea
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+      {response && <CodeBlock code={response} language="json" />}
+    </div>
+  )
+}
+;
 export default ApiPlayground;

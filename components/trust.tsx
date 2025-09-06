@@ -22,27 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-import TrustBadge from '../components/ui/TrustBadge';
-import TrustRadar from '../components/ui/TrustRadar';
-import RiskIndicator from '../components/ui/RiskIndicator';
-export default function TrustPage() {
-  const [userId, setUserId] = useState<string>('demo-user'),
-  const [data, setData] = useState<any>(null),
-export default function TrustPage() {;
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [showLogic, setShowLogic] = useState<boolean>(false);
-  useEffect(() => {
-import React, { useEffect, useState } from 'react';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-import TrustBadge from '../components/ui/TrustBadge';
-import TrustRadar from '../components/ui/TrustRadar';
-import RiskIndicator from '../components/ui/RiskIndicator';
-export default function TrustPage() {;
-  const [userId, setUserId] = useState<string>('demo-user');
-  const [data, setData] = useState<any>(null);
+
+
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -71,12 +52,6 @@ export default function TrustPage() {;
     });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
-      setLoading(true);
-      const res = await fetch(
-        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
-      );
-      const json = await res && res.json();
-      setData(json);
       setLoading(false);
     }
     load();
@@ -84,6 +59,7 @@ export default function TrustPage() {;
 
 
   }
+
   async function submitAppeal(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     const form = e && e.target as HTMLFormElement;
@@ -97,12 +73,12 @@ export default function TrustPage() {;
     });
     alert('Appeal submitted');
     form && form.reset();  }
-  return (
-    <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
-    alert('Appeal submitted');
 
-    form.reset()
+  return (
     <EnhancedLayout>
+
+
+    form && form.reset();
 
   }
   return (
@@ -193,11 +169,24 @@ export default function TrustPage() {;
                         <span>{Math && Math.round(c && c.raw * 100)} / weighted {c && c.weighted.toFixed(3)}</span>;
                       </li>;
 
-                        <span>{c.key}</span>
-                        <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
-                      </li>
+
+
+  }
+  return (
+    <EnhancedLayout>
+
+
 
                       </li>
+
+                    ))}
+                  </ul>;
+                </div>;
+              )}
+              {data && data.reasonSummary && (;
+                <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
+                </div>;
+              )}
 
                     ))}
                   </ul>
@@ -272,6 +261,12 @@ export default function TrustPage() {;
                 </div>
               )}
             </div>
+
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+
   );
 }
 import EnhancedLayout from '../components / layout / EnhancedLayout';

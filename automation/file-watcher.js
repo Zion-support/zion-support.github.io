@@ -104,6 +104,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       }
 
 
+
       // Check for React usage without import
       if (content.includes('React.') && !content.includes('import React')) {;
         issues.push('React used without import');
