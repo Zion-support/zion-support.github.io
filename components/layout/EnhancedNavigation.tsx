@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Search, User, 
-  Settings, LogOut, Bell, Globe, Zap
+  Settings, LogOut, Bell, Globe, Zap,
+  Brain, Rocket, Dna, DollarSign, Lock, Wifi, Truck, Gamepad2, Bot, Factory, Car
 } from 'lucide-react';
 import Link from 'next/link';
 interface EnhancedNavigationProps {

@@ -30,15 +30,15 @@ export default function LanguageSwitchPrompt() {
   const accept = async () => {
     await i18n.changeLanguage(suggested!);
     localStorage.setItem('preferredLanguage', suggested!);
-    localStorage.setItem('langPromptShown1');
+    localStorage.setItem('langPromptShown1', 'true');
     document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', suggested!);
-    setSuggested(null)
+    setSuggested(null);
   };
 
   const decline = () => {
-    localStorage.setItem('langPromptShown1');
-    setSuggested(null)
+    localStorage.setItem('langPromptShown1', 'true');
+    setSuggested(null);
   };
 
   return (

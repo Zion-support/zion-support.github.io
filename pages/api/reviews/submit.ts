@@ -67,9 +67,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       categories,
       anonymous: Boolean(anonymous),
       approved: false, // requires admin approval
-      reported: false, reports: [],
+      reported: false,
+      reports: [],
       removed: false,
-      createdAt: now};
+      createdAt: now
+    };
 
     await upsertReview(review);
 
